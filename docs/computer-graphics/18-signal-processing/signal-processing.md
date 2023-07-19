@@ -19,7 +19,7 @@ The higher sample results in much better signal but require more bandwidth.
 ![Sampling a continous signal](./sampling-continous-signal.png)  
 Source : [https://www.tutorialspoint.com/digital_communication/digital_communication_sampling.htm](https://www.tutorialspoint.com/digital_communication/digital_communication_sampling.htm)
 
-If the sampling rate is too low, it can result in **aliasing**, ****which occurs when high-frequency components of the signal are incorrectly represented as lower-frequency components. Aliasing can introduce distortion into the signal and reduce the quality of the sound.
+If the sampling rate is too low, it can result in **aliasing**, which occurs when high-frequency components of the signal are incorrectly represented as lower-frequency components. Aliasing can introduce distortion into the signal and reduce the quality of the sound.
 
 Here, we try to approximate the missing sample but it actually causes undersampling.
 

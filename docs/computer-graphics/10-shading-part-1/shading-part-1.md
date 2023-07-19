@@ -60,12 +60,12 @@ The reflected light is scattered evenly in all directions, resulting in a **diff
 ![An equation for calculating light reflection from a plane with specific angle](./lambertian-material.png)  
 Source : [https://youtu.be/Xg6KEmhqHCY?t=1065](https://youtu.be/Xg6KEmhqHCY?t=1065)
 
-- n : The normal line.
-- ω : Omega represents the light direction.
-- Kd : Diffuse reflectance coefficient, represents the amount of light that is reflected diffusely from a surface. A material with a high Kd value appears brighter and more reflective than a material with alow Kd value.
-- θ : The angle between light source and light reflected.
-- I : The light source intensity.
-- C : The resulting pixel color.
+- $n$ : The normal line.
+- $\omega$ : Omega represents the light direction.
+- $K_d$ : Diffuse reflectance coefficient, represents the amount of light that is reflected diffusely from a surface. A material with a high Kd value appears brighter and more reflective than a material with alow Kd value.
+- $\theta$ : The angle between light source and light reflected.
+- $I$ : The light source intensity.
+- $C$ : The resulting pixel color.
 
 ### Phong Material Model
 
@@ -74,12 +74,12 @@ Phong material model used both the diffuse and specular components of a material
 ![An equation for calculating light reflection from a plane outgoes to camera](./phong-material.png)  
 Source : [https://youtu.be/Xg6KEmhqHCY?t=1948](https://youtu.be/Xg6KEmhqHCY?t=1948)
 
-- r : The direction light is reflected.
-- v : The camera direction.
-- φ : Angle between the reflection vector and the direction of the viewer.
-- Ks : The specular reflectance coefficient of the surface, and represents the amount of light that is reflected in a single direction from the surface.
-- α : The specular exponent, which controls the size and sharpness of the specular highlights. Higher values of alpha result in smaller and sharper highlights.
-- Kd + Ks : The combined diffuse and specular components.
+- $r$ : The direction light is reflected.
+- $v$ : The camera direction.
+- $\phi$ : Angle between the reflection vector and the direction of the viewer.
+- $K_s$ : The specular reflectance coefficient of the surface, and represents the amount of light that is reflected in a single direction from the surface.
+- $\alpha$ : The specular exponent, which controls the size and sharpness of the specular highlights. Higher values of alpha result in smaller and sharper highlights.
+- $K_d + K_s$ : The combined diffuse and specular components.
 
 ### Blinn-Phong Material Model
 

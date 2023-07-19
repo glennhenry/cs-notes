@@ -23,7 +23,7 @@ The typical FPS for some display are :
     - North America, NTSC (National Television Standards Committee) - 30 FPS
     - Europe, PAL (Phase Alternate Lines) - 25 FPS
 - Movies : The standard is 24 FPS, sometimes 48 - 120 FPS
-- Computer Monitor : 60 fps, high-end gaming monitors can support frame rates of 120 fps or higher.
+- Computer Monitor : 60 FPS, high-end gaming monitors can support frame rates of 120 FPS or higher.
 
 Computer monitor also have **refresh rate**, which is the measurement of how many times per  second the screen is updated with new image data. It is typically measured in Hertz (Hz), which represents the number of cycles per second.
 
@@ -51,7 +51,7 @@ Source : [https://commons.wikimedia.org/wiki/File:YouTube-resolution-comparison.
 Video contains data related to the digital information that makes up a video file. This can include information about :
 
 - **Resolution :** The number of pixels in image, e.g. 1920x1080 (also known as "1080p").
-- F**rame Rate :** Number of individual frames or images that are displayed per second, a video with 60 fps will be smoother but also stores larger data than a 24 fps video.
+- **Frame Rate :** Number of individual frames or images that are displayed per second, a video with 60 FPS will be smoother but also stores larger data than a 24 fps video.
 - **Color Depth** : Number of colors that can be represented in each pixel of the image. A video with 8-bit color depth can represent up to 256 different colors per pixel, while a video with 10-bit color depth can represent up to 1024 different colors per pixel.
 - **Compression** : The process of reducing the amount of data required to store and transmit a video file. Common compression are H.264 and AVC.
 - **Actual content such as visual and audio**

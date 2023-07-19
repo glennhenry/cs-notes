@@ -1,7 +1,7 @@
 ---
 slug: /
-id: home
-title: Home
+id: intro
+title: Intro
 description: CS Notes
 ---
 # CS Notes 

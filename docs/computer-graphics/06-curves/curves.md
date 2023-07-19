@@ -10,12 +10,14 @@ description: Curves
 
 **Curves** is a continuous line or a path that can be defined by a mathematical equation or a set of points. Curves provide a flexible means of representing complex shapes using a limited set of mathematical equations or points.
 
+
+
 Curve can be represented in various ways such as :
 
-- **Analytic Representation**, for example, a circle can be represented by the equation x^2 + y^2 = r^2. Representing a curve using this may not be suitable for representing complex shapes and curves with irregular shapes.
-- **Implicit Representation**, curve is represented as the set of points that satisfy a certain equation or inequality. For example, a circle can be represented implicitly by the equation x^2 + y^2 - r^2 = 0. It require more computation to extract the curve itself from the equation.
+- **Analytic Representation**, for example, a circle can be represented by the equation $x^2 + y^2 = r^2$. Representing a curve using this may not be suitable for representing complex shapes and curves with irregular shapes.
+- **Implicit Representation**, curve is represented as the set of points that satisfy a certain equation or inequality. For example, a circle can be represented implicitly by the equation $x^2 + y^2 - r^2 = 0$. It require more computation to extract the curve itself from the equation.
 - **Control Point Representation**, represent curves using a set of set of discrete points, called control points, which determine its shape. Those point are later connected by line that pass and
-- **Parametric Representation**, in this method, a curve is represented using a set of parametric equations. Parametric equation are defined using function like (x(t), y(t)), where x(t) and y(t) represent position in x and y respectively.
+- **Parametric Representation**, in this method, a curve is represented using a set of parametric equations. Parametric equation are defined using function like $(x(t), y(t))$, where $x(t)$ and $y(t)$ represent position in $x$ and $y$ respectively.
 
 ![Example of control point representation forming a wave](./control-point-representation.png)  
 Source : [http://what-when-how.com/advanced-methods-in-computer-graphics/curves-and-surfaces-advanced-methods-in-computer-graphics-part-5/](http://what-when-how.com/advanced-methods-in-computer-graphics/curves-and-surfaces-advanced-methods-in-computer-graphics-part-5/)
@@ -27,11 +29,11 @@ Source : [https://xaktly.com/ParametricEquations.html](https://xaktly.com/Parame
 
 Curve Continuity refers to the **smoothness of the curve** and how well it connects with the adjacent segments. 
 
-- **C0 continuity**, also known as **position continuity**, means that two adjacent segments of a curve meet at their endpoints, but may not have the same tangent direction. This can result in a sharp corner or kink where the two segments meet.
-- **C1 continuity**, also known as **tangent continuity**, means that two adjacent segments of a curve meet at their endpoints and have the same tangent direction. This results in a smooth connection between the two segments, without any kinks or sharp corners.
-- **C2 continuity**, also known as **curvature continuity**, means that two adjacent segments of a curve meet at their endpoints and have the same curvature. This results in a very smooth and seamless connection between the two segments, with no noticeable change in the curvature of the curve.
+- **$C^0$ continuity**, also known as **position continuity**, means that two adjacent segments of a curve meet at their endpoints, but may not have the same tangent direction. This can result in a sharp corner or kink where the two segments meet.
+- **$C^1$ continuity**, also known as **tangent continuity**, means that two adjacent segments of a curve meet at their endpoints and have the same tangent direction. This results in a smooth connection between the two segments, without any kinks or sharp corners.
+- **$C^2$ continuity**, also known as **curvature continuity**, means that two adjacent segments of a curve meet at their endpoints and have the same curvature. This results in a very smooth and seamless connection between the two segments, with no noticeable change in the curvature of the curve.
 
-There are also higher-order continuity, such as C3, C4, and so on with additional constraint and smoothness.
+There are also higher-order continuity, such as $C^3$, $C^4$, and so on with additional constraint and smoothness.
 
 ![A v-shaped curve with continuity 0, a hook-shaped curve with continuity 1, and a u-shaped curve with continuity 2](./curves-continuity-type.png)  
 Source : [https://slideplayer.com/slide/12715113/](https://slideplayer.com/slide/12715113/)

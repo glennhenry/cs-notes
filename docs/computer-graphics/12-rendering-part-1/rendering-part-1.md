@@ -25,9 +25,9 @@ In the step 2, there is an equation that describes how light interacts with surf
 ![The rendering equation](./rendering-equation.png)  
 Source : [https://youtu.be/GOfzX7kRwys?t=154](https://youtu.be/GOfzX7kRwys?t=154)
 
-- L_o(\omega_o) : Outgoing radiance at some point in direction \omega_o, which represents the amount of light leaving the surface in that direction.
-- int_omega L_i(\omega_i) : Incoming radiance at a point on a surface from all light sources in the scene. Also weighted by the cosine of the angle between the surface normal and the incoming light direction.
-- f_r(\omega_i, \omega_o) : BRDF function which describes how light is reflected from a surface in direction \omega_i reflected to direction \omega_o.
+- $L_o(\omega_o)$ : Outgoing radiance at some point in direction \omega_o, which represents the amount of light leaving the surface in that direction.
+- $\int_{\Omega} L_i(\omega_i)$ : Incoming radiance at a point on a surface from all light sources in the scene. Also weighted by the cosine of the angle between the surface normal and the incoming light direction.
+- $f_r(\omega_i, \omega_o)$ : BRDF function which describes how light is reflected from a surface in direction \omega_i reflected to direction \omega_o.
 
 ### BRDF (Bidirectional Reflectance Distribution Function)
 
@@ -46,7 +46,7 @@ Source : [https://youtu.be/GOfzX7kRwys?t=1587](https://youtu.be/GOfzX7kRwys?t=15
 
 Because of the surface structure, light will be reflected in many direction. To take account of all the light reflected, rendering equation uses integral to calculate all the light direction which forming a hemisphere on the surface. The sum of outgoing light should be less than the incoming light.
 
-![Source : [https://youtu.be/GOfzX7kRwys?t=1980](https://youtu.be/GOfzX7kRwys?t=1980)](./hemipshere-of-light.png)
+![Source : [https://youtu.be/GOfzX7kRwys?t=1980](https://youtu.be/GOfzX7kRwys?t=1980)](./hemipshere-of-light.png)  
 Source : [https://youtu.be/GOfzX7kRwys?t=1980](https://youtu.be/GOfzX7kRwys?t=1980)
 
 The rendering equation also takes into account the contribution of all light sources in the scene and this is also calculated using integral.
