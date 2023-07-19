@@ -7,12 +7,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'Computer Graphics',
-      link: {type: 'doc', id: 'computer-graphics'},
+      link: {type: 'doc', id: 'computer-graphics/computer-graphics'},
       items: [
         'computer-graphics/computer-images-part-1/computer-images-part-1',
         'computer-graphics/computer-images-part-2/computer-images-part-2',
-        'computer-graphics/3-2d-transformation/2d-transformation',
-        'computer-graphics/4-3d-transformation/3d-transformation',
+        'computer-graphics/03-2d-transformation/2d-transformation',
+        'computer-graphics/04-3d-transformation/3d-transformation',
         'computer-graphics/gpu-pipeline/gpu-pipeline',
         'computer-graphics/curves/curves',
         'computer-graphics/surfaces/surfaces',

@@ -1,5 +1,5 @@
 ---
-slug: computer-graphics
+slug: /computer-graphics
 id: computer-graphics
 title: Computer Graphics
 description: Computer Graphics Notes

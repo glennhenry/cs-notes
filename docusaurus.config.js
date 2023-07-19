@@ -4,20 +4,21 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const organizationName = "glennhenry";
+const projectName = "cs-notes";
+const baseUrl = `/${projectName}/`;
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'CS Notes',
   tagline: 'My CS notes from various online course, tutorial and lectures',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  url: `https://${organizationName}.github.io`,
+  baseUrl: baseUrl,
 
-  organizationName: 'glennhenry',
-  projectName: 'computer-science-notes',
+  organizationName: organizationName,
+  projectName: projectName,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -49,11 +50,23 @@ const config = {
     ({
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Docs',
+        title: 'Notes',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
-        }
+        },
+        items: [
+          {
+            label: 'Github',
+            href: 'https://github.com/glennhenry/cs-notes',
+            position: 'left',
+          },
+          {
+            label: 'Docusaurus',
+            href: 'https://github.com/facebook/docusaurus',
+            position: 'right',
+          },
+        ],
       },
       footer: {
         style: 'dark',
