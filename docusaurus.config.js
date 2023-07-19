@@ -19,6 +19,7 @@ const config = {
 
   organizationName: organizationName,
   projectName: projectName,
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
