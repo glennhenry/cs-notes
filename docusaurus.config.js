@@ -36,7 +36,8 @@ const config = {
       ({
         docs: {
           routeBasePath: '/', 
-          sidebarPath: require.resolve('./sidebars.js')
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/glennhenry/cs-notes/tree/main',
         },
         blog: false,
         theme: {
