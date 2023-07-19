@@ -1,1 +1,1 @@
-To better see the notes, check out [my website](http://localhost:3000/)
+Not intended to be public, but why not? Check out [my website](http://localhost:3000/)
