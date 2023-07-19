@@ -1,1 +1,1 @@
-To see the website [CS Notes](http://localhost:3000/)
+To better see the notes, check out [my website](http://localhost:3000/)
