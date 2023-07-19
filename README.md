@@ -1,2 +1,1 @@
 I didn't originally intend for this to be public, but since I've hosted it on GitHub Pages, it's now publicly accessible. Feel free to check out my personal <a href="https://glennhenry.github.io/cs-notes/" target="_blank">Computer Science notes website</a>.
-<a href="http://example.com/" target="_blank">Hello, world!</a>
