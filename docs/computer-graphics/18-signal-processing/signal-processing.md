@@ -4,6 +4,7 @@ id: signal-processing
 title: Signal Processing
 description: Signal Processing
 ---
+
 # Signal Processing
 
 **Main Source : [Intro to Graphics 22 - Signal Processing](https://youtu.be/UQl6ttthfXE)**
@@ -28,7 +29,7 @@ Source : [https://www.ni.com/docs/en-US/bundle/labview/page/lvanlsconcepts/alias
 
 ### Smooth Edges
 
-In raster images, the colors between pixels can be thought of as a continuous signal. The color and intensity can change rapidly or has sharp transitions between the pixel often referred as **high-frequency image**. 
+In raster images, the colors between pixels can be thought of as a continuous signal. The color and intensity can change rapidly or has sharp transitions between the pixel often referred as **high-frequency image**.
 
 To achieve smoother appearance in raster images, we can use signal processing techniques similar to those used for smoothing or filtering signals.
 
@@ -62,7 +63,7 @@ There are various image filter technique such as :
 - Median Filter, non-linear filter meaning the filter might change depending on the pixel in the image. Used for noise reduction in an image by taking median of neighboring pixels.
 
 ![Comparison between each filter](./image-filters-example.png)  
-Source : 
+Source :
 [https://www.computerhope.com/jargon/p/photoshop-gaussian-blur.htm](https://www.computerhope.com/jargon/p/photoshop-gaussian-blur.htm)
 [https://medium.datadriveninvestor.com/understanding-edge-detection-sobel-operator-2aada303b900](https://medium.datadriveninvestor.com/understanding-edge-detection-sobel-operator-2aada303b900)
 [http://community.photostockplus.com/tag/sharpen-filters/](http://community.photostockplus.com/tag/sharpen-filters/)

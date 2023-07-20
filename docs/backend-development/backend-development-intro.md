@@ -10,7 +10,7 @@ General backend
 
 **Source : Various online resources that is included in each section**
 
-### All topics
+### All pages
 
 - HTTP & HTTPS (ref to networking)
 - Server (ref to networking)
@@ -25,7 +25,7 @@ General backend
         - Document
         - Graph
         - Vector
-- Security (some ref to networking)
+- Security ("ref to computer security")
 - Backend Frameworks
     - Express JS
     - Spring Boot Java

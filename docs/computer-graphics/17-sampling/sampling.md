@@ -4,11 +4,12 @@ id: sampling
 title: Sampling
 description: Sampling
 ---
+
 # Sampling
 
 **Main Source : [Intro to Graphics 21 - Sampling](https://youtu.be/qgdDu-K0pZ4)**
 
-**Sampling** is a technique of **taking some representative data from a group of data**. In computer graphics, sampling is often used in the context of rendering, which is the process of generating a 2D image or a series of images from a 3D scene. 
+**Sampling** is a technique of **taking some representative data from a group of data**. In computer graphics, sampling is often used in the context of rendering, which is the process of generating a 2D image or a series of images from a 3D scene.
 
 When rendering an image, the renderer needs to determine the color of each pixel in the final image by simulating the interaction of light with the objects in the scene. This process involves sampling the scene at various points and computing the color of the corresponding pixel.
 
@@ -24,7 +25,7 @@ Source : [https://www.racoon-artworks.de/cgbasics/sampling.php](https://www.raco
 
 ### Monte Carlo Ray Tracing
 
-In the rendering equation, we calculate the outgoing light taking account from all light source in the scene. The equation itself involves integral and can’t be solved because it’s a recursive integration. 
+In the rendering equation, we calculate the outgoing light taking account from all light source in the scene. The equation itself involves integral and can’t be solved because it’s a recursive integration.
 
 To solve this, we can approximate the solution, one of the technique is **Monte Carlo Sampling** approximate a value by taking random samples. This method randomly sample the directions of incoming light and use these samples to estimate the integral in the rendering equation.
 

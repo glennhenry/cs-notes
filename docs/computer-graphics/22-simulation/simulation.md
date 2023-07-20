@@ -4,6 +4,7 @@ id: simulation
 title: Simulation
 description: Simulation
 ---
+
 # Simulation
 
 **Main Source : [Intro to Graphics 25 - Simulation in Graphics](https://youtu.be/iZ1e_1tnLgI)**
@@ -33,7 +34,7 @@ Source : [https://link.springer.com/chapter/10.1007/978-1-4471-4417-5_5](https:/
 - **Mesh Modelling** : The cloth is first modeled as a mesh of triangles. Each triangle is made up of three vertices, which are points in space.
 - **Properties Modelling** : Physical properties of the cloth are then defined, such as its mass, elasticity, and friction.
 - **Calculation** : The cloth is then simulated over time using a physics engine. The
-physics engine calculates the forces acting on each vertex of the mesh, such as gravity, wind, and friction. After that the position and velocity of each vertex of the mesh will be updated.
+  physics engine calculates the forces acting on each vertex of the mesh, such as gravity, wind, and friction. After that the position and velocity of each vertex of the mesh will be updated.
 
 ![Complex cloth shape worn by human mannequin model](./cloth-simulation.png)  
 Source : [https://min-tang.github.io/home/PCloth/](https://min-tang.github.io/home/PCloth/)

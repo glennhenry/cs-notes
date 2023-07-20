@@ -4,6 +4,7 @@ id: rendering-part-2
 title: Rendering (Part 2)
 description: Rendering (Part 2)
 ---
+
 # Rendering (Part 2)
 
 **Main Source : [Intro to Graphics 18 - Rendering Algorithms](https://youtu.be/0WrzyD8nBlk?t=233)**
@@ -13,6 +14,7 @@ description: Rendering (Part 2)
 Rendering process which include rasterization, uses several algorithm :
 
 Rasterization :
+
 - Painter Algorithm
 - Z-Buffer Rasterization
 - A-Buffer Rasterization
@@ -46,7 +48,7 @@ Source : [https://youtu.be/0WrzyD8nBlk?t=730](https://youtu.be/0WrzyD8nBlk?t=730
 
 ### Z-Buffer Rasterization
 
-Z-buffer algorithm works by **keeping track of the depth value of each pixel** in the image plane during the rasterization process. The depth value represents the distance from the camera to the closest object at that pixel. 
+Z-buffer algorithm works by **keeping track of the depth value of each pixel** in the image plane during the rasterization process. The depth value represents the distance from the camera to the closest object at that pixel.
 
 The depth value is used to determine which object to draw in front. This algorithm allows for efficient and accurate rendering of 3D scenes, because it allows objects to be rendered in any order and still produce correct results.
 
@@ -69,7 +71,7 @@ Source : [https://www.geeksforgeeks.org/a-buffer-method/](https://www.geeksforge
 
 ### REYES (Renders Everything You Ever Saw)
 
-REYES is a graphics rendering algorithm that was developed by Pixar in the late 1980s for use in their animated films. 
+REYES is a graphics rendering algorithm that was developed by Pixar in the late 1980s for use in their animated films.
 
 The REYES algorithm works by dividing the scene into small patches, typically 16x16 pixels in size. Each patch is then subdivided into small micropolygons, which are typically 2x2 or 4x4 pixels in size. For each micropolygon, the algorithm computes the shading and other attributes of the object, such as texture mapping and lighting.
 

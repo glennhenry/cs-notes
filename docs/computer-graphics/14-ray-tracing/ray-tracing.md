@@ -4,9 +4,10 @@ id: ray-tracing
 title: Ray Tracing
 description: Ray Tracing
 ---
+
 # Ray Tracing
 
-**Main Source :** 
+**Main Source :**
 
 - **[Intro to Graphics 18 - Rendering Algorithms](https://youtu.be/0WrzyD8nBlk)**
 - **[Intro to Graphics 19 - Ray Tracing](https://youtu.be/gGKup9tUSrU)**

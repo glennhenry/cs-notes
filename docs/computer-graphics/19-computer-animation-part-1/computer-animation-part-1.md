@@ -4,6 +4,7 @@ id: computer-animation-part-1
 title: Computer Animation (Part 1)
 description: Computer Animation (Part 1)
 ---
+
 # Computer Animation (Part 1)
 
 **Main Source : [Intro to Graphics 23 - Computer Animation](https://youtu.be/lhK7ZMcW5pU)**
@@ -20,12 +21,12 @@ Source : [https://www.animotica.com/blog/fps-in-video-editing/](https://www.anim
 The typical FPS for some display are :
 
 - Television :
-    - North America, NTSC (National Television Standards Committee) - 30 FPS
-    - Europe, PAL (Phase Alternate Lines) - 25 FPS
+  - North America, NTSC (National Television Standards Committee) - 30 FPS
+  - Europe, PAL (Phase Alternate Lines) - 25 FPS
 - Movies : The standard is 24 FPS, sometimes 48 - 120 FPS
 - Computer Monitor : 60 FPS, high-end gaming monitors can support frame rates of 120 FPS or higher.
 
-Computer monitor also have **refresh rate**, which is the measurement of how many times per  second the screen is updated with new image data. It is typically measured in Hertz (Hz), which represents the number of cycles per second.
+Computer monitor also have **refresh rate**, which is the measurement of how many times per second the screen is updated with new image data. It is typically measured in Hertz (Hz), which represents the number of cycles per second.
 
 Common refresh rates for monitors are 60 Hz, 120 Hz, and 144 Hz, although some high-end gaming monitors can support even higher refresh rates, such as 240 Hz or 360 Hz.
 
@@ -60,7 +61,7 @@ Video contains data related to the digital information that makes up a video fil
 
 **Video Compression** is essential for efficient storage, transmission, and playback of video content, particularly over networks with limited bandwidth or storage capacity.
 
-Compressing a video may results in losing an information, accuracy, and detail. This is called **lossy compression**, which reduce significant amount of data with some negative drawbacks. 
+Compressing a video may results in losing an information, accuracy, and detail. This is called **lossy compression**, which reduce significant amount of data with some negative drawbacks.
 
 There is **Lossless Compression** which is a compression technique that reduces the size of a file without losing any information. This make lossless compression reduce the data lesser than the lossy one.
 

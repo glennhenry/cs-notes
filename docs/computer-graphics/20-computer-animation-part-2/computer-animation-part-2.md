@@ -4,6 +4,7 @@ id: computer-animation-part-2
 title: Computer Animation (Part 2)
 description: Computer Animation (Part 2)
 ---
+
 # Computer Animation (Part 2)
 
 **Main Source : [Intro to Graphics 23 - Computer Animation](https://youtu.be/lhK7ZMcW5pU)**
@@ -38,7 +39,7 @@ Source : [https://www.semanticscholar.org/paper/Procedural-Animation-of-3D-Human
 ![A ball bouncing with keyframes](./keyframing.png)  
 Source : [https://filmora.wondershare.co.id/video-editing-tips/what-is-keyframing.html](https://filmora.wondershare.co.id/video-editing-tips/what-is-keyframing.html)
 
-A keyframing animation that involves transforming one object or shape into another over time is called **Morphing**. 
+A keyframing animation that involves transforming one object or shape into another over time is called **Morphing**.
 
 ![A face is morphed creating a different expression in each time](./morph.png)  
 Source : [https://youtu.be/lhK7ZMcW5pU?t=1971](https://youtu.be/lhK7ZMcW5pU?t=1971)

@@ -5,11 +5,14 @@ const sidebars = {
   sidebar: [
     "intro",
 
-    // Computer Networking
+    // Digital Signal Processing
     {
       type: "category",
-      label: "Signal Processing",
-      link: { type: "doc", id: "signal-processing/signal-processing" },
+      label: "Digital Signal Processing",
+      link: {
+        type: "doc",
+        id: "digital-signal-processing/digital-signal-processing",
+      },
       items: [],
     },
 
@@ -26,7 +29,31 @@ const sidebars = {
       type: "category",
       label: "Web Development",
       link: { type: "doc", id: "web-development/web-development" },
-      items: [],
+      items: [
+        "web-development/html/html",
+        "web-development/html-dom/html-dom",
+        "web-development/css/css",
+        "web-development/responsive-design/responsive-design",
+        "web-development/javascript/javascript",
+        "web-development/json/json",
+        "web-development/html-css-javascript/html-css-javascript",
+        "web-development/browser/browser",
+        "web-development/static-and-dynamic-site/static-and-dynamic-site",
+        "web-development/web-hosting/web-hosting",
+        "web-development/web-security/web-security",
+        "web-development/npm/npm",
+        "web-development/node-js/node-js",
+        {
+          type: "category",
+          label: "Web Frameworks",
+          link: { type: "doc", id: "web-development/web-frameworks/web-frameworks" },
+          items: [
+            "web-development/web-frameworks/react-js/react-js",
+            "web-development/web-frameworks/python-django/python-django",
+          ],
+        },
+        "web-development/docker-and-kubernates/docker-and-kubernates",
+      ],
     },
 
     // Backend Development
@@ -35,6 +62,14 @@ const sidebars = {
       label: "Backend Development",
       link: { type: "doc", id: "backend-development/backend-development" },
       items: [],
+    },
+
+    // Computer Security
+    {
+      type: "category",
+      label: "Computer Security",
+      link: { type: "doc", id: "computer-security/computer-security" },
+      items: ["computer-security/xx-web-security/web-security"],
     },
 
     // Computer Graphics

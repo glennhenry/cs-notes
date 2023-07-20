@@ -33,7 +33,7 @@ description: Computer Networking Notes
 - DNS
 - FTP
 - SMTP
-- Security
+- Security ("ref to computer security")
     - Firewall
     - DDoS
     - Proxy & VPN

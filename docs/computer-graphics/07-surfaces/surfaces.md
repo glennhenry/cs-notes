@@ -4,14 +4,15 @@ id: surfaces
 title: Surfaces
 description: Surfaces
 ---
+
 # Surfaces
 
-**Main Source :** 
+**Main Source :**
 
 - [**Intro to Graphics 11 - Surfaces**](https://youtu.be/EM73mJwfwLw)
 - [**Intro to Graphics 12 - Triangular Meshes**](https://youtu.be/HV2dKIQcp6k)
 
-**Surfaces** is outermost layer of a 3D object that is visible to the viewer. It is the part of the object that interacts with light and is therefore responsible for determining its appearance. 
+**Surfaces** is outermost layer of a 3D object that is visible to the viewer. It is the part of the object that interacts with light and is therefore responsible for determining its appearance.
 
 Surface are represented in some ways such as :
 
@@ -49,7 +50,7 @@ Polygonal mesh can have a smoother surface and the technique is called **Subdivi
 One of the common used algorithm is **Catmull-Clark Subdivision.** It works by dividing each polygon into four smaller polygons, and then smoothing the resulting mesh to create a smoother surface.
 
 ![A detergent pack is modeled to small polygon and compared with higher level subdivision level](./catmull-clark-subdivision.png)  
-Source : [https://download.autodesk.com/us/maya/2009help/index.html?url=Subdivision_surfaces_overview_What_are_subdivision_surfaces_.htm,topicNumber=d0e248732](https://download.autodesk.com/us/maya/2009help/index.html?url=Subdivision_surfaces_overview_What_are_subdivision_surfaces_.htm,topicNumber=d0e248732)
+Source : [https://download.autodesk.com/us/maya/2009help/index.html?url=Subdivision*surfaces_overview_What_are_subdivision_surfaces*.htm,topicNumber=d0e248732](https://download.autodesk.com/us/maya/2009help/index.html?url=Subdivision_surfaces_overview_What_are_subdivision_surfaces_.htm,topicNumber=d0e248732)
 
 ### Triangular Meshes
 
@@ -58,9 +59,9 @@ Triangular Meshes are subtype of polygonal mesh which is a triangle. The reason 
 ![A human face modeled using triangular meshes](./triangular-meshes.png)  
 Source : [https://www.graphics.rwth-aachen.de/publication/03149/](https://www.graphics.rwth-aachen.de/publication/03149/)
 
-Triangle are defined using 3 vertices and edges, these vertices describe information such as position and color. Using triangle also provide us a way to represent a point called **Barycentric Coordinates**. 
+Triangle are defined using 3 vertices and edges, these vertices describe information such as position and color. Using triangle also provide us a way to represent a point called **Barycentric Coordinates**.
 
-Barycentric Coordinates uses weighted sum of 3 points and we can represent a point by the combination of these 3 points. This way we can use interpolating technique to determine value or attribute of a point inside it. 
+Barycentric Coordinates uses weighted sum of 3 points and we can represent a point by the combination of these 3 points. This way we can use interpolating technique to determine value or attribute of a point inside it.
 
 For example, we determine the color by interpolating between these 3 vertices colors.
 

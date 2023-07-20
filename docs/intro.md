@@ -4,7 +4,8 @@ id: intro
 title: Intro
 description: CS Notes
 ---
-# CS Notes 
+
+# CS Notes
 
 My Computer Science notes from various online courses, tutorial, and lectures. I wanted to make my notes into a documentation-style layout to improve the overall readability and presentation.
 
@@ -14,7 +15,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 #### Site Generator
 
-- This site is made using [Docusaurus](https://docusaurus.io/) an open source static site generator made by Meta with React.  
+- This site is made using [Docusaurus](https://docusaurus.io/) an open source static site generator made by Meta with React.
 
 #### AI Chatbot Software
 
@@ -28,7 +29,11 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 - [GitHub](https://github.com/) - For storing and hosting this site.
 
-
 ### All topics
+
+- [Digital Signal Processing](digital-signal-processing)
+- [Computer Networking](computer-networking)
+- [Web Development](web-development)
+- [Backend Development](backend-development)
+- [Computer Security](computer-security)
 - [Computer Graphics](computer-graphics)
-- [Frontend Web Development](frontend-web-development)

@@ -4,6 +4,7 @@ id: rendering-part-1
 title: Rendering (Part 1)
 description: Rendering (Part 1)
 ---
+
 # Rendering (Part 1)
 
 **Main Source : [Intro to Graphics 17 - The Rendering Equation](https://youtu.be/GOfzX7kRwys)**
@@ -14,7 +15,7 @@ Rendering process at high level include :
 
 1. **Geometry Processing** : The 3D scene is first represented as a collection of geometric primitives, such as triangles or polygons. This step typically involves various preprocessing operations such as mesh smoothing, tessellation, and geometric transformations.
 2. **Lighting and Shading** : Once the geometry is processed, the scene is illuminated with virtual light sources and the surfaces of the objects are shaded to produce a realistic
-appearance. This involves calculating the color and intensity of each pixel in the final image based on the position and orientation of the virtual camera, the lighting conditions, and the material properties of the objects.
+   appearance. This involves calculating the color and intensity of each pixel in the final image based on the position and orientation of the virtual camera, the lighting conditions, and the material properties of the objects.
 3. **Rasterization** : The shaded 3D scene is then projected onto a 2D image plane, which involves converting the 3D coordinates of each vertex into 2D screen coordinates. This results in a collection of pixels that represent the final image.
 4. **Post-processing** : Finally, the image may undergo post-processing operations such as compositing, filtering, and color correction to further enhance its appearance.
 
@@ -37,7 +38,7 @@ An object surface wouldn’t always have the perfect surface. Having a perfect s
 Source : [https://youtu.be/GOfzX7kRwys?t=595](https://youtu.be/GOfzX7kRwys?t=595)
 
 BRDF describes how light is reflected from a surface in different directions. It takes two vectors as input : the incoming light direction (ωi) and the outgoing light direction (ωo).
-The output is a scalar value that represents the **fraction of light** that is reflected in the outgoing direction. 
+The output is a scalar value that represents the **fraction of light** that is reflected in the outgoing direction.
 
 In other words, it describes **how much light is reflected in a particular direction relative to the amount of light that is incident on the surface**.
 

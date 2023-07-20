@@ -4,13 +4,12 @@ id: curves
 title: Curves
 description: Curves
 ---
+
 # Curves
 
 **Main Source : [Intro to Graphics 09 - Curves (Part 1)](https://youtu.be/6jjLSkp0Y7I)**
 
 **Curves** is a continuous line or a path that can be defined by a mathematical equation or a set of points. Curves provide a flexible means of representing complex shapes using a limited set of mathematical equations or points.
-
-
 
 Curve can be represented in various ways such as :
 
@@ -27,7 +26,7 @@ Source : [https://xaktly.com/ParametricEquations.html](https://xaktly.com/Parame
 
 ### Curve Continuity
 
-Curve Continuity refers to the **smoothness of the curve** and how well it connects with the adjacent segments. 
+Curve Continuity refers to the **smoothness of the curve** and how well it connects with the adjacent segments.
 
 - **$C^0$ continuity**, also known as **position continuity**, means that two adjacent segments of a curve meet at their endpoints, but may not have the same tangent direction. This can result in a sharp corner or kink where the two segments meet.
 - **$C^1$ continuity**, also known as **tangent continuity**, means that two adjacent segments of a curve meet at their endpoints and have the same tangent direction. This results in a smooth connection between the two segments, without any kinks or sharp corners.
@@ -68,7 +67,7 @@ Unlike Bezier curves, which use a fixed degree polynomial function to generate t
 In spline, moving a single point would move the entire curve, this is because polynomial segments are connected end-to-end.
 
 ![Example of spline forming a half circle](./spline.png)  
-Source : [https://en.wikipedia.org/wiki/Spline_(mathematics)](https://en.wikipedia.org/wiki/Spline_%28mathematics%29)
+Source : [https://en.wikipedia.org/wiki/Spline\_(mathematics)](https://en.wikipedia.org/wiki/Spline_%28mathematics%29)
 
 ### B-Spline
 

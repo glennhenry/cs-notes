@@ -4,6 +4,7 @@ id: gpu-pipeline
 title: GPU Pipeline
 description: GPU Pipeline
 ---
+
 # GPU Pipeline
 
 **Main Source : [Intro to Graphics 07 - GPU Pipeline](https://youtu.be/UzlnprHSbUw)**
@@ -25,7 +26,7 @@ Source : [https://youtu.be/UzlnprHSbUw?t=1704](https://youtu.be/UzlnprHSbUw?t=17
 
 ### Scene Data
 
-Graphics application interact with graphics API such as OpenGL or DirectX. Graphics API produce a 3D object by modeling the object using primitives such as point, lines, curve, and triangle. These modeling represent the position and connection over objects. 
+Graphics application interact with graphics API such as OpenGL or DirectX. Graphics API produce a 3D object by modeling the object using primitives such as point, lines, curve, and triangle. These modeling represent the position and connection over objects.
 
 After objects are modelled, they are put into the 3D world and this is called **scene data** which represent 3D environment of the world. Scene data contains geometry, color, materials, lighting, and other properties of the objects in the scene.
 
@@ -45,13 +46,13 @@ Source : [https://learnopengl.com/Getting-started/Hello-Triangle](https://learno
 
 This stage, GPU takes the 2D object and conver them into raster images or in other words it “pixelize” the object. Rasterizer draw pixel on the triangle path and also clips the object if it’s outside of the screen.
 
-![A triangle modelled using line is rasterized](./rasterization.png)   
+![A triangle modelled using line is rasterized](./rasterization.png)  
 Source : [https://www.techspot.com/article/1888-how-to-3d-rendering-rasterization-ray-tracing/](https://www.techspot.com/article/1888-how-to-3d-rendering-rasterization-ray-tracing/)  
 \* The red color is not the actual color shown
 
 ### Fragment Shader
 
-Fragment shader are responsible for coloring each pixel and performs operations such as lighting 
+Fragment shader are responsible for coloring each pixel and performs operations such as lighting
 calculations, texture mapping, and other effects.
 
 For example in the image below, between the 3 vertices, color interpolation are done to determine the color for any pixel inside the triangle.

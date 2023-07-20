@@ -11,28 +11,26 @@ description: Web Development Notes
 
 **Web Development** is the process of building, creating, and maintaining websites and web applications. Web development is typically divided into two : **Frontend Web Development** and **Backend Web Development**.
 
-**Frontend Web Development** is the process of making user interface and experience of website for web application. Developers uses tools like "HTML, CSS, Javascript" to create the visual and interactive elements of a website that users see and interact with in their "web browsers".
+**Frontend Web Development** is the process of making user interface and experience of website for web application. Developers uses tools like [HTML](web-development/html), [CSS](web-development/css), [Javascript](web-development/javascript) to create the visual and interactive elements of a website that users see and interact with in their [web browsers](web-development/browser).
 
-**Backend Web Development** on the other hand is part of web development that deals with the server-side of web applications such as "server logic, APIs, database". Backend developers use programming languages such as Python, Ruby, Java, and Node.js.
+**Backend Web Development** on the other hand is part of web development that deals with the server-side of web applications such as [server logic and APIs](backend-development/server-logic-and-api), [database](backend-development/database). Backend developers use programming languages such as Python, Ruby, Java, and Node.js.
 
-### All topics
+### All pages
 
-- HTML
-- HTML DOM
-- CSS
+- [HTML](https://glennhenry.github.io/cs-notes/web-development/html)
+- [HTML DOM](web-development/html-dom)
+- [CSS](/web-development/css)
 - Responsive Design
 - Javascript
 - JSON
 - HTML + CSS + Javascript (DOM Manipulation)
 - Browser
-- Static Site & Dynamic Site
+- Static & Dynamic Site
 - Web Hosting
-- Web Security
+- Web Security ("ref to computer security")
 - NPM (Node Package Manager)
 - Node JS
 - Web Frameworks
     - React JS
     - Python Django
 - Docker & Kubernates
-
-Making a web can be a lot of works especially while making a complex web app. Fortunately, older developer has made a set of ready to use tools to be able to make web app easily and faster, these are called **Web Frameworks**. Some popular frontend web frameworks include React, Angular, and Vue.js, while popular backend web frameworks include Django (Python), Ruby on Rails (Ruby), Express.js (JavaScript), and Laravel (PHP).

@@ -4,6 +4,7 @@ id: shading-part-1
 title: Shading (Part 1)
 description: Shading (Part 1)
 ---
+
 # Shading (Part 1)
 
 **Main Source : [Intro to Graphics 15 - Shading](https://youtu.be/Xg6KEmhqHCY)**
@@ -12,10 +13,10 @@ description: Shading (Part 1)
 
 ### Light
 
-The basic principle behind light calculations is that light interacts with objects in the scene and is either absorbed, reflected, or refracted by those objects, depending on the 
+The basic principle behind light calculations is that light interacts with objects in the scene and is either absorbed, reflected, or refracted by those objects, depending on the
 properties of the object's surface and the characteristics of the light.
 
-There are also some component we use to describe the appearance of objects under different lighting conditions, which is called **Light Reflectance**. 
+There are also some component we use to describe the appearance of objects under different lighting conditions, which is called **Light Reflectance**.
 
 Three commonly used are :
 
@@ -50,10 +51,10 @@ Some common material models are :
 
 ### Lambertian Material
 
-The Lambertian model assumes that **light is reflected equally in all directions** from a 
-surface, regardless of the angle of incidence or the direction of the light source. 
+The Lambertian model assumes that **light is reflected equally in all directions** from a
+surface, regardless of the angle of incidence or the direction of the light source.
 
-This means that the amount of light reflected from a surface is proportional to the cosine of the angle between the surface normal and the direction of the light source. 
+This means that the amount of light reflected from a surface is proportional to the cosine of the angle between the surface normal and the direction of the light source.
 
 The reflected light is scattered evenly in all directions, resulting in a **diffuse, a matte appearance, with no glossy highlights or reflections**.
 
@@ -101,7 +102,7 @@ Blinn-Phong may appear more blurry or softer appearance for the specular highlig
 
 ### Image Based Lightning
 
-Image-based lighting (IBL) is a lighting technique used to simulate the lighting of a virtual scene using a high dynamic range image or a set of images. 
+Image-based lighting (IBL) is a lighting technique used to simulate the lighting of a virtual scene using a high dynamic range image or a set of images.
 
 High dynamic range image (HDRI) is used to capture the lighting information from the real world environment, such as a photograph of a physical location or a rendered image of a virtual environment.
 

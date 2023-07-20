@@ -4,13 +4,14 @@ id: shadows
 title: Shadows
 description: Shadows
 ---
+
 # Shadows
 
 **Main Source : [Intro to Graphics 20 - Shadows & Reflections](https://youtu.be/l_iVdRbA_4s)**
 
 **Shadow** is a dark area where light from a light source is blocked by an object. Shadow exists in a scene when an object blocks or partially blocks the path of a light source, causing an area of darkness to form on a surface behind the object.
 
-When light travels from a source, it travels in straight lines until it encounters an object. If the object is opaque and blocks the path of the light, the area behind the object will be in shadow. 
+When light travels from a source, it travels in straight lines until it encounters an object. If the object is opaque and blocks the path of the light, the area behind the object will be in shadow.
 
 The size, shape, and position of the shadow will depend on the position and shape of the object and the direction and intensity of the light source.
 
@@ -24,7 +25,7 @@ Source : [http://www.it.hiof.no/~borres/j3d/explain/shadow/p-shadow.html](http:/
 ![Ray creating typical shadows](./shadow-ray.png)  
 Source : [https://youtu.be/l_iVdRbA_4s?t=393](https://youtu.be/l_iVdRbA_4s?t=393)
 
-Sometimes shadows may appear incorrect or contain artifacts in some areas of the scene. This is because there is some error in shadow calcuation. 
+Sometimes shadows may appear incorrect or contain artifacts in some areas of the scene. This is because there is some error in shadow calcuation.
 
 ![An incorrect appearance of shadow resulting in noised shadow](./shadow-ray-problem.png)  
 Source : [https://youtu.be/l_iVdRbA_4s?t=481](https://youtu.be/l_iVdRbA_4s?t=481)

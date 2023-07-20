@@ -4,11 +4,12 @@ id: textures-part-1
 title: Textures (Part 1)
 description: Textures (Part 1)
 ---
+
 # Textures (Part 1)
 
 **Main Source : [Intro to Graphics 13 - Textures](https://youtu.be/Yjv6hc4Zqjk)**
 
-**Texture** refers to the surface characteristics of an object that are used to create its visual appearance. Texture can be thought of as a pattern or a image that is applied to the surface of a 3D model to create the appearance of different materials or surfaces, such as wood, metal, fabric, or skin. 
+**Texture** refers to the surface characteristics of an object that are used to create its visual appearance. Texture can be thought of as a pattern or a image that is applied to the surface of a 3D model to create the appearance of different materials or surfaces, such as wood, metal, fabric, or skin.
 
 The smallest unit of information is called pixel, in texture we call this **texel.** The process of accessing a specific texel in a texture map to determine the color or other properties of a surface at a specific point are called **Texture Sampling**.
 
@@ -21,7 +22,7 @@ We have a texture and we want to map it to a point, we take a texel in the textu
 ![A point inside a triangle is pointing to specific texels](./texture-filtering.png)  
 Source : [https://youtu.be/Yjv6hc4Zqjk?t=1345](https://youtu.be/Yjv6hc4Zqjk?t=1345)
 
-**Texture Filtering** is the process of interpolating between adjacent texels in a texture map to create a smooth appearance when the texture is applied to a 3D object. Texture is not directly mapped but it is just an approximation of the appearance of a surface. 
+**Texture Filtering** is the process of interpolating between adjacent texels in a texture map to create a smooth appearance when the texture is applied to a 3D object. Texture is not directly mapped but it is just an approximation of the appearance of a surface.
 
 There are some technique to address this issue :
 

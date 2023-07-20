@@ -4,6 +4,7 @@ id: computer-images-part-2
 title: Computer Images (Part 2)
 description: Computer Images (Part 2)
 ---
+
 # Computer Images (Part 2)
 
 ### Raster Image
@@ -39,7 +40,7 @@ Human eye does not perceive brightness in a linear way. Instead, our eyes percei
 
 **Gamma** is a measure of the contrast between the darker and lighter parts of an image. A higher gamma value means that the darker parts of the image will appear darker, while a lower gamma value means that the darker parts of the image will appear lighter.
 
-**Gamma correction** is used to compensate for this non-linear perception of brightness and 
+**Gamma correction** is used to compensate for this non-linear perception of brightness and
 ensure that images are displayed correctly on a wide range of display devices. One of a common gamma correction is 2.2 and 2.4.
 
 ![Before and after gamma correction comparison](./gamma-comparison.png)  
@@ -51,7 +52,7 @@ Source : [https://doc.stride3d.net/4.0/en/manual/graphics/post-effects/color-tra
 
 A usual image would have RGB color channel. If an image supports transparency, there will be one more channel for alpha value. RGB becomes RGBA, alpha can also be stored in separated channel.
 
-A transparent image is able to be combined with the background color. Combining two or more images or layers is called **Alpha Blending** also called **Alpha Compositing.** 
+A transparent image is able to be combined with the background color. Combining two or more images or layers is called **Alpha Blending** also called **Alpha Compositing.**
 
 Alpha blending works by interpolating color between both foreground and background color and alpha value.
 

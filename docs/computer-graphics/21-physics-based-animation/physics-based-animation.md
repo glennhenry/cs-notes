@@ -4,6 +4,7 @@ id: physics-based-animation
 title: Physics-Based Animation
 description: Physics-Based Animation
 ---
+
 # Physics-Based Animation
 
 **Main Source : [Intro to Graphics 24 - Physics Based Animation](https://youtu.be/F9TP48yXs3s)**
@@ -23,24 +24,25 @@ This mean we also need to model our object to have their own mass, size, shape a
 ![Newton law equation with varying external force source](./newton-law-equation.png)  
 Source : [https://youtu.be/F9TP48yXs3s?t=671](https://youtu.be/F9TP48yXs3s?t=671)
 
-The position of an object at a given time can be represented as a vector, and we can use integrals to calculate the change in position over time. However, solving these integrals analytically can be 
+The position of an object at a given time can be represented as a vector, and we can use integrals to calculate the change in position over time. However, solving these integrals analytically can be
 difficult or impossible, so numerical integration methods such as **Euler Integration** are often used instead.
 
 ### Euler Integration
 
-**Euler Integration** is a numerical method used in physics animation to approximate the motion of objects over time. Euler Integration assumes that the **acceleration of the object remains constant** **over the time step**, and does not take into account any changes in acceleration that may occur. While this sound leading to inaccuracy, it is actually accurate as long as the time step is very small. 
+**Euler Integration** is a numerical method used in physics animation to approximate the motion of objects over time. Euler Integration assumes that the **acceleration of the object remains constant** **over the time step**, and does not take into account any changes in acceleration that may occur. While this sound leading to inaccuracy, it is actually accurate as long as the time step is very small.
 
 ![Showing the euler integration less inaccuracy between the exact solution](./euler-integration.png)  
 Source : [https://pythonnumericalmethods.berkeley.edu/notebooks/chapter22.03-The-Euler-Method.html](https://pythonnumericalmethods.berkeley.edu/notebooks/chapter22.03-The-Euler-Method.html)
 
 Euler integration can be divided into three types :
 
-- **Explicit** : It calculates the new position and velocity of an object at each time step based on the 
-object's current position, velocity, and acceleration.
+- **Explicit** : It calculates the new position and velocity of an object at each time step based on the
+  object's current position, velocity, and acceleration.
 - **Implicit** : This is more advanced method that updates the new position and velocity of an object at the end of a time step. To calculate the acceleration, we need to know the force acting on the object. However, to calculate the force, we need to know the velocity or position of the object. This lead to a recursive problem, it will be difficult to calculate, but it will also lead to more accurate results.
 - **Semi-Implicit** : In this type, accelaration is calculated explicitly which means it uses the current force and it is available at the current time. By knowing the accelaration, we can calculate the implicit velocity and use it to update the object position.
 
-![Semi impilcit euler integration](./semi-implicit-euler-integration.png)  
+![Semi impilcit euler integration](./semi-implicit-euler-integration.png)
+
 ### Gravity Force
 
 Gravity is also an important force to create a more realistic animation. Gravity force is based on the object affected masses and also the gravitational accelaration. An object affected by gravity force will accelerate towards the gravitational field.

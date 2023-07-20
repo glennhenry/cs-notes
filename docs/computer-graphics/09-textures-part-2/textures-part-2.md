@@ -4,6 +4,7 @@ id: textures-part-2
 title: Textures (Part 2)
 description: Textures (Part 2)
 ---
+
 # Textures (Part 2)
 
 **Main Source : [Intro to Graphics 14 - Textures on the GPU](https://youtu.be/WULOKMqEGA0)**

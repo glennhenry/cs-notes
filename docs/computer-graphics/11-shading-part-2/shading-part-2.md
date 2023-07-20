@@ -4,6 +4,7 @@ id: shading-part-2
 title: Shading (Part 2)
 description: Shading (Part 2)
 ---
+
 # Shading (Part 2)
 
 **Main Source : [Intro to Graphics 16 - Shading Transformations](https://youtu.be/Q_TYQvZS6WE)**
@@ -32,7 +33,7 @@ Source : [https://youtu.be/Q_TYQvZS6WE?t=250](https://youtu.be/Q_TYQvZS6WE?t=250
 
 ### Gouraud Shading
 
-In Gouraud Shading, the surface color of **each polygon or triangle of the object is determined at its vertices**, and then interpolated across the surface of the polygon using linear interpolation. 
+In Gouraud Shading, the surface color of **each polygon or triangle of the object is determined at its vertices**, and then interpolated across the surface of the polygon using linear interpolation.
 
 The color at each vertex is calculated based on the lighting and material properties of the object, such as the direction of the light and the surface normal, and can also take into account any textures or material maps that are applied to the surface of the object.
 
@@ -43,7 +44,7 @@ Source : [https://youtu.be/Q_TYQvZS6WE?t=384](https://youtu.be/Q_TYQvZS6WE?t=384
 
 ### Phong Shading
 
-In Phong shading, the surface color of each pixel of the object is determined using an interpolation of the **vertex normals line**, rather than the surface normals used in Gouraud shading. 
+In Phong shading, the surface color of each pixel of the object is determined using an interpolation of the **vertex normals line**, rather than the surface normals used in Gouraud shading.
 
 The vertex normals are calculated by averaging the surface normals at each vertex of the polygon or triangle, and then interpolated across the surface of the polygon using linear interpolation.
 
@@ -52,13 +53,11 @@ Phong shading may be more computationally expensive than Gouraud shading because
 ![A line is connected between surface normals](./phong-shading.png)  
 Source : [https://youtu.be/Q_TYQvZS6WE?t=1118](https://youtu.be/Q_TYQvZS6WE?t=1118)
 
-
-:::tip 
+:::tip
 In summary, Flat shading assigns a single color to each polygon or triangle of the object while Gouraud calculates the surface color at each vertex of the object using interpolation, this mean Gouraud takes account neighbor polygon.
 
 On the other hand, phong shading uses vertex normals instead of surface normals in Gouraud shading.
 :::
-
 
 ### Shading Transformation
 
