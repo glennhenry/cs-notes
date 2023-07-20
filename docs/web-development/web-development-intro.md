@@ -17,9 +17,9 @@ description: Web Development Notes
 
 ### All pages
 
-- [HTML](https://glennhenry.github.io/cs-notes/web-development/html)
+- [HTML](web-development/html)
 - [HTML DOM](web-development/html-dom)
-- [CSS](/web-development/css)
+- [CSS](web-development/css)
 - Responsive Design
 - Javascript
 - JSON
