@@ -44,6 +44,8 @@ const config = {
           editUrl: 'https://github.com/glennhenry/cs-notes/tree/main',
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: false,
         theme: {
