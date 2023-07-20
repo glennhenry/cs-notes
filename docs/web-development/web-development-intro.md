@@ -13,7 +13,7 @@ description: Web Development Notes
 
 **Frontend Web Development** is the process of making user interface and experience of website for web application. Developers uses tools like [HTML](web-development/html), [CSS](web-development/css), [Javascript](web-development/javascript) to create the visual and interactive elements of a website that users see and interact with in their [web browsers](web-development/browser).
 
-**Backend Web Development** on the other hand is part of web development that deals with the server-side of web applications such as [server logic and APIs](backend-development/server-logic-and-api), [database](backend-development/database). Backend developers use programming languages such as Python, Ruby, Java, and Node.js.
+**Backend Web Development** on the other hand is part of web development that deals with the server-side of web applications such as "server logic and APIs (backend-development/server-logic-and-api)", "database (backend-development/database)". Backend developers use programming languages such as Python, Ruby, Java, and Node.js.
 
 ### All pages
 
