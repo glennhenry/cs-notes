@@ -17,7 +17,7 @@ The overview of computer graphics process involve these 3 :
 - **Rendering**, generating 2D images from 3D object to be shown in computer screen. Rendering also simulate virtual environment such as lighting. Involves a combination of techniques such as ray tracing, rasterization, and shading.
 - **Animation**, manipulating movement and object in 3D models to produce illusion of life and action. This can be done with keyframe, motion capture, etc.
 
-All pages :
+### All pages
 
 - [Computer Images (Part 1)](https://glennhenry.github.io/cs-notes/computer-graphics/computer-images-part-1)
 

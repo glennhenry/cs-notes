@@ -8,6 +8,8 @@ description: CS Notes
 
 My Computer Science notes from various online courses, tutorial, and lectures. I wanted to make my notes into a documentation-style layout to improve the overall readability and presentation.
 
+\* Most of the topics covers more on the theoretical side and less on the technical side.
+
 ### Credits
 
 #### Site Generator
@@ -29,3 +31,4 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 ### All topics
 - [Computer Graphics](computer-graphics)
+- [Frontend Web Development](frontend-web-development)
