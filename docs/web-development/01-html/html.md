@@ -24,7 +24,7 @@ For example creating heading looks like below :
 This is the basic HTML structure that is essential for defining the structure and content of an HTML document :
 
 ![Example of HTML basic page structure](./html-example.png)  
-Source : (https://www.geeksforgeeks.org/html/)
+Source : https://www.geeksforgeeks.org/html/
 
 HTML may also contains :
 

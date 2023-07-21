@@ -12,6 +12,8 @@ description: HTML DOM
 
 **HTML DOM** stands for HTML Document Object Model. It is a programming interface for HTML documents that provides a hierarchical representation of the document structure, along with a set of methods and properties for manipulating the content and structure of the document.
 
+Web browser is responsible for parsing HTML when you visit a web page, during parsing the browser reads the HTML code and creates a Document Object Model (DOM), which represents the structure of the web page.
+
 :::tip
 DOM is not limited to HTML it is also used in **[Extensible Markup Language (XML)](https://en.wikipedia.org/wiki/XML)** which is markup language used to store and transport data in a structured format. XML allows developers to define their own custom tags and elements, making it highly extensible and adaptable to a wide range of applications.
 :::
@@ -24,7 +26,7 @@ Objects and properties make each HTML element in the document possible to be acc
 
 Developers can use JavaScript to access and modify individual elements in the document, change their attributes and styles, add or remove elements from the document, and respond to user interactions.
 
-Find out more about [DOM Manipulation](/web-development/html-css-javascript#dom-manipulation)
+See how Javascript access the DOM : [DOM Manipulation](/web-development/html-css-javascript#dom-manipulation)
 
 ![HTML represented in tree structure with html tags as the root and has head and body as children which also contains another children elements such as p, ul, li](./dom-tree.png)  
 Source : https://www.tutorialstonight.com/js/js-dom-introduction

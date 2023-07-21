@@ -32,7 +32,7 @@ CSS selectors are used to apply styles to specific elements or groups of element
 - **Descendant Selectors** : These selectors target elements that are descendants of other elements, such as `<ul>` elements inside `<li>` elements.
 - **Child Selectors** : These selectors target elements that are direct children of other elements, such as `<li>` elements that are direct children of `<ul>` elements.
 - **Attribute Selectors** : These selectors target elements with a specific attribute or attribute value. For example using `input[type="text"]` means that it will apply style to all input elements which has type of text.
-- **Pseudo-Selectors** : These selectors target elements based on their state or position, such as :hover or :first-child. For example defining a style on :hover means that style will be applied if such elements is hovered.
+- **Pseudo-Selectors** : These selectors target elements based on their state or position, such as `:hover` or `:first-child.` For example defining a style on :hover means that style will be applied if such elements is hovered.
 
 ### Applying Styles
 
