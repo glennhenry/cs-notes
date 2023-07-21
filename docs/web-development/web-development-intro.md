@@ -20,17 +20,16 @@ description: Web Development Notes
 - [HTML](web-development/html)
 - [HTML DOM](web-development/html-dom)
 - [CSS](web-development/css)
-- Responsive Design
-- Javascript
-- JSON
-- HTML + CSS + Javascript (DOM Manipulation)
-- Browser
-- Static & Dynamic Site
-- Web Hosting
-- Web Security ("ref to computer security")
-- NPM (Node Package Manager)
-- Node JS
-- Web Frameworks
-    - React JS
-    - Python Django
-- Docker & Kubernates
+- [Javascript](web-development/javascript)
+- [JSON](web-development/json)
+- [HTML + CSS + Javascript](web-development/html-css-javascript)
+- [Browser](web-development/browser)
+- [Static & Dynamic Site](web-development/static-and-dynamic-site)
+- [Web Hosting](web-development/web-hosting)
+- [Web Security](web-development/web-security)
+- [NPM (Node Package Manager)](web-development/npm)
+- [Node JS](web-development/node-js)
+- [Web Frameworks](web-development/web-frameworks)
+    - [React JS](web-development/web-frameworks/react-js)
+    - [Python Django](web-development/web-frameworks/python-django)
+- [Docker & Kubernates](web-development/docker-and-kubernates)

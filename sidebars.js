@@ -33,7 +33,6 @@ const sidebars = {
         "web-development/html/html",
         "web-development/html-dom/html-dom",
         "web-development/css/css",
-        "web-development/responsive-design/responsive-design",
         "web-development/javascript/javascript",
         "web-development/json/json",
         "web-development/html-css-javascript/html-css-javascript",

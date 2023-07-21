@@ -6,3 +6,5 @@ description: HTML + CSS + Javascript
 ---
 
 HTML + CSS + Javascript
+
+DOM manipulation

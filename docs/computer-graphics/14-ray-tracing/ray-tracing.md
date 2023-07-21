@@ -75,7 +75,7 @@ The possible outcomes of the quadratic roots are :
 Source : [https://youtu.be/gGKup9tUSrU?t=969](https://youtu.be/gGKup9tUSrU?t=969)
 
 :::tip
-💡 In summary, ray tracing process involves iterating every ray, the ray is tracked until it finds an object, if we found an object, we will check if it intersect and also the closest intersection from the camera. If all of that is true, we start shading the object
+In summary, ray tracing process involves iterating every ray, the ray is tracked until it finds an object, if we found an object, we will check if it intersect and also the closest intersection from the camera. If all of that is true, we start shading the object
 :::
 
 ### Ray Tracing Accelaration
