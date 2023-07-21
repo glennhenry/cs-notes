@@ -21,7 +21,12 @@ const sidebars = {
       type: "category",
       label: "Computer Networking",
       link: { type: "doc", id: "computer-networking/computer-networking" },
-      items: [],
+      items: [
+        "computer-networking/xx-dns/dns",
+        "computer-networking/xx2-ip-address/ip-address",
+        "computer-networking/xx3-ports/ports",
+        "computer-networking/xx4-http-and-https/http-and-https",
+      ],
     },
 
     // Web Development
@@ -36,7 +41,9 @@ const sidebars = {
         "web-development/javascript/javascript",
         "web-development/json/json",
         "web-development/html-css-javascript/html-css-javascript",
-        "web-development/browser/browser",
+        "web-development/web-url/web-url",
+        "web-development/web-browser/web-browser",
+        "web-development/search-engine/search-engine",
         "web-development/static-and-dynamic-site/static-and-dynamic-site",
         "web-development/web-hosting/web-hosting",
         "web-development/web-security/web-security",
@@ -101,6 +108,18 @@ const sidebars = {
         "computer-graphics/simulation/simulation",
       ],
     },
+
+    // Extras
+    {
+      type: "category",
+      label: "Extras",
+      link: { type: "doc", id: "extras/extras" },
+      items: [
+        "extras/deepweb-and-darkweb/deepweb-and-darkweb",
+        "extras/tor-browser/tor-browser",
+      ],
+    },
+
   ],
 };
 

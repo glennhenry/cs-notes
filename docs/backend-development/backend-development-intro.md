@@ -16,7 +16,6 @@ General backend
 - Server (ref to networking)
 - Ports (ref to networking)
 - Web Hosting
-- Search Engine & SEO
 - APIs & Server Logic
 - REST API
 - Database

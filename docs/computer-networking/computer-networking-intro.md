@@ -37,4 +37,3 @@ description: Computer Networking Notes
     - Firewall
     - DDoS
     - Proxy & VPN
-    - Tor Browser
