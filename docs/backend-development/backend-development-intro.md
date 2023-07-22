@@ -13,7 +13,7 @@ General backend
 ### All pages
 
 - HTTP & HTTPS (ref to networking)
-- Server (ref to networking)
+- Server (ref to networking) "load balancing"
 - Ports (ref to networking)
 - Web Hosting
 - APIs & Server Logic
@@ -21,7 +21,8 @@ General backend
 - Database
     - Relational DB & SQL
     - Non-Relational DB
-        - Document
+        - Document / Key & Value Pairs
+            - Redis Caching
         - Graph
         - Vector
 - Security ("ref to computer security")

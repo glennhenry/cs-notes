@@ -26,6 +26,17 @@ const sidebars = {
         "computer-networking/xx2-ip-address/ip-address",
         "computer-networking/xx3-ports/ports",
         "computer-networking/xx4-http-and-https/http-and-https",
+        "computer-networking/xx5-server/server",
+      ],
+    },
+
+    // Software Engineering
+    {
+      type: "category",
+      label: "Software Engineering",
+      link: { type: "doc", id: "software-engineering/software-engineering" },
+      items: [
+        "software-engineering/xx1-package-manager/package-manager",
       ],
     },
 
@@ -47,8 +58,8 @@ const sidebars = {
         "web-development/static-and-dynamic-site/static-and-dynamic-site",
         "web-development/web-hosting/web-hosting",
         "web-development/web-security/web-security",
-        "web-development/npm/npm",
         "web-development/node-js/node-js",
+        "web-development/npm/npm",
         {
           type: "category",
           label: "Web Frameworks",
@@ -75,7 +86,11 @@ const sidebars = {
       type: "category",
       label: "Computer Security",
       link: { type: "doc", id: "computer-security/computer-security" },
-      items: ["computer-security/xx-web-security/web-security"],
+      items: [
+        "computer-security/xx-web-security/web-security",
+        "computer-security/xx1-phising/phising",
+        "computer-security/xx2-social-engineering/social-engineering",
+      ],
     },
 
     // Computer Graphics

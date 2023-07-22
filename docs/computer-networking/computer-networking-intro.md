@@ -13,6 +13,7 @@ description: Computer Networking Notes
 - Ethernet
 - Network Topology
 - Network Protocol
+- OSI Model
 - TCP/IP
 - UDP
 - SSL
