@@ -5,6 +5,10 @@ title: Web Security
 description: Web Security
 ---
 
+This is the same notes as :
+
+- [Computer Security > Web Security](/computer-security/web-security)
+
 **Main Source :**
 
 - [OWASP Cross Site Scripting](https://owasp.org/www-community/attacks/xss/)
@@ -12,10 +16,6 @@ description: Web Security
 - [OWASP Cross Site Request Forgery](https://owasp.org/www-community/attacks/csrf)
 - [Wikipedia Denial-of-service attack](https://en.wikipedia.org/wiki/Denial-of-service_attack)
 - [Wikipedia Session hijacking](https://en.wikipedia.org/wiki/Session_hijacking)
-
-This is the same notes as :
-
-- [Computer Security > Web Security](/computer-security/web-security)
 
 **Web security** refers to the practice of protecting websites and web applications from unauthorized access, data theft, and other types of malicious activity. Some websites can be vulnerable to attacks due to bugs and variety of reasons, hackers try to exploit them such as unauthorized access or steal sensitive data.
 

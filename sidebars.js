@@ -60,16 +60,8 @@ const sidebars = {
         "web-development/web-security/web-security",
         "web-development/node-js/node-js",
         "web-development/npm/npm",
-        {
-          type: "category",
-          label: "Web Frameworks",
-          link: { type: "doc", id: "web-development/web-frameworks/web-frameworks" },
-          items: [
-            "web-development/web-frameworks/react-js/react-js",
-            "web-development/web-frameworks/python-django/python-django",
-          ],
-        },
-        "web-development/docker-and-kubernates/docker-and-kubernates",
+        "web-development/react-js/react-js",
+        "web-development/docker-and-kubernetes/docker-and-kubernetes",
       ],
     },
 
@@ -90,6 +82,17 @@ const sidebars = {
         "computer-security/xx-web-security/web-security",
         "computer-security/xx1-phising/phising",
         "computer-security/xx2-social-engineering/social-engineering",
+      ],
+    },
+
+    // Cloud Computing
+    {
+      type: "category",
+      label: "Cloud Computing",
+      link: { type: "doc", id: "cloud-computing/cloud-computing" },
+      items: [
+        "cloud-computing/xx-virtualization/virtualization",
+        "cloud-computing/xx1-docker-and-kubernetes/docker-and-kubernetes",
       ],
     },
 
