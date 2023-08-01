@@ -1,7 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-// Latex for formula
+// Latex for math formula
 const math = require('remark-math');
 const katex = require('rehype-katex');
 
@@ -72,7 +72,7 @@ const config = {
       navbar: {
         title: 'Notes',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Docusaurus Logo',
           src: 'img/logo.svg',
         },
         items: [

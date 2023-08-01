@@ -5,6 +5,16 @@ const sidebars = {
   sidebar: [
     "intro",
 
+    // Template
+    // {
+    //   type: "category",
+    //   label: "Title",
+
+    //   // Link is used only if it has md file
+    //   link: { type: "doc", id: "kebab-title/kebab-title" },
+    //   items: ["kebab-title/kebab-content"],
+    // },
+
     // Digital Signal Processing
     {
       type: "category",
@@ -13,7 +23,48 @@ const sidebars = {
         type: "doc",
         id: "digital-signal-processing/digital-signal-processing",
       },
-      items: [],
+      items: [
+        {
+          type: "category",
+          label: "Fourier Analysis",
+          items: [
+            "digital-signal-processing/fourier-series/fourier-series",
+            "digital-signal-processing/fourier-transform/fourier-transform",
+            "digital-signal-processing/convolution/convolution",
+            "digital-signal-processing/discrete-fourier-transform/discrete-fourier-transform",
+            "digital-signal-processing/discrete-cosine-transform/discrete-cosine-transform",
+            "digital-signal-processing/fast-fourier-transform/fast-fourier-transform",
+            "digital-signal-processing/wavelets/wavelets",
+            "digital-signal-processing/laplace-transform/laplace-transform",
+            "digital-signal-processing/z-transform/z-transform",
+          ],
+        },
+        "digital-signal-processing/signal/signal",
+        "digital-signal-processing/continous-discrete-signal/continous-discrete-signal",
+        "digital-signal-processing/analog-digital-signal/analog-digital-signal",
+        {
+          type: "category",
+          label: "Signal Transmission",
+          items: [
+            "digital-signal-processing/sampling/sampling",
+            "digital-signal-processing/quantization/quantization",
+            "digital-signal-processing/coding/coding",
+            "digital-signal-processing/multiplexing/multiplexing",
+          ],
+        },
+        {
+          type: "category",
+          label: "Signal Processing",
+          items: [
+            "digital-signal-processing/filtering/filtering",
+            "digital-signal-processing/modeling/modeling",
+            "digital-signal-processing/compression/compression",
+            "digital-signal-processing/estimation/estimation",
+            "digital-signal-processing/denoising/denoising",
+          ],
+        },
+        "digital-signal-processing/adaptive-signal-processing/adaptive-signal-processing",
+      ],
     },
 
     // Computer Networking
@@ -35,9 +86,7 @@ const sidebars = {
       type: "category",
       label: "Software Engineering",
       link: { type: "doc", id: "software-engineering/software-engineering" },
-      items: [
-        "software-engineering/xx1-package-manager/package-manager",
-      ],
+      items: ["software-engineering/xx1-package-manager/package-manager"],
     },
 
     // Web Development
@@ -85,17 +134,6 @@ const sidebars = {
       ],
     },
 
-    // Cloud Computing
-    {
-      type: "category",
-      label: "Cloud Computing",
-      link: { type: "doc", id: "cloud-computing/cloud-computing" },
-      items: [
-        "cloud-computing/xx-virtualization/virtualization",
-        "cloud-computing/xx1-docker-and-kubernetes/docker-and-kubernetes",
-      ],
-    },
-
     // Computer Graphics
     {
       type: "category",
@@ -127,6 +165,17 @@ const sidebars = {
       ],
     },
 
+    // Cloud Computing
+    {
+      type: "category",
+      label: "Cloud Computing",
+      link: { type: "doc", id: "cloud-computing/cloud-computing" },
+      items: [
+        "cloud-computing/xx-virtualization/virtualization",
+        "cloud-computing/xx1-docker-and-kubernetes/docker-and-kubernetes",
+      ],
+    },
+
     // Extras
     {
       type: "category",
@@ -137,7 +186,6 @@ const sidebars = {
         "extras/tor-browser/tor-browser",
       ],
     },
-
   ],
 };
 

@@ -11,6 +11,22 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 \* Most of the topics covers more on the theoretical side and less on the technical side.
 
+### All topics
+
+- [Digital Signal Processing](digital-signal-processing)
+- [Computer Networking](computer-networking)
+- [Web Development](web-development)
+- [Backend Development](backend-development)
+- [Computer Security](computer-security)
+- [Computer Graphics](computer-graphics)
+
+TODO :
+
+- CG / Computer Display (monitor)
+- CG / pixel scaling / image upscaling
+- CG / abstract graphics
+- CG / scanline rendering
+
 ### Credits
 
 #### Site Generator
@@ -28,12 +44,3 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 #### Additional Resources
 
 - [GitHub](https://github.com/) - For storing and hosting this site.
-
-### All topics
-
-- [Digital Signal Processing](digital-signal-processing)
-- [Computer Networking](computer-networking)
-- [Web Development](web-development)
-- [Backend Development](backend-development)
-- [Computer Security](computer-security)
-- [Computer Graphics](computer-graphics)

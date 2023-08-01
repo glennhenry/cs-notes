@@ -39,7 +39,7 @@ Semantic HTML is the practice of using HTML markup to convey the meaning and str
 
 Using just traditional `div` container would works fine, but using semantic HTML provide a clear and meaningful structure to web pages, which can improve **accessibility**, **search engine optimization (SEO)**, and **user experience**.
 
-![Showing how semantic elements use varying tags while non-semantic mostly just use div tags](./semantic-html.png)
+![Showing how semantic elements use varying tags while non-semantic mostly just use div tags](./semantic-html.png)  
 Source : https://www.semrush.com/blog/semantic-html5-guide/
 
 ### XHTML
