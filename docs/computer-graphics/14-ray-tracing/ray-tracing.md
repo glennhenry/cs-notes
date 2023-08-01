@@ -12,16 +12,14 @@ description: Ray Tracing
 - **[Intro to Graphics 18 - Rendering Algorithms](https://youtu.be/0WrzyD8nBlk)**
 - **[Intro to Graphics 19 - Ray Tracing](https://youtu.be/gGKup9tUSrU)**
 
-**Ray Tracing** is a technique used in computer graphics to produce highly realistic images by simulating the behavior of light as it interacts with objects in a 3D scene. Ray tracing works together with rasterization as the primary visibility and ray tracing is for secondary effect such as reflections of light and shadows.
-
-Ray tracing works by tracing the path of light rays from the camera through each pixel in the image plane and into the scene, where they interact with objects and produce reflections, shadows, and other lighting effects.
-
-By tracing light rays from the camera, it helps simulating more realistic and accurate renderings.
+**Ray Tracing** is a technique used in computer graphics to produce highly realistic images by simulating the behavior of light as it interacts with objects in a 3D scene. Ray tracing works by tracing the path of light rays from the camera through each pixel in the image plane and into the scene, where they interact with objects and produce reflections, shadows, and other lighting effects.
 
 ![Ray comes from camera and bounces between object](./ray-tracing-example.png)  
 Source : [https://math.hws.edu/graphicsbook/c8/s1.html](https://math.hws.edu/graphicsbook/c8/s1.html)
 
-Ray tracing **simulates the physical behavior of light,** compared to Phong lightning model which is based on simplified mathematical models of how light interacts with surfaces, ray tracing is much more computationally expensive and can require significant processing power to achieve real-time performance.
+Ray tracing **simulates the physical behavior of light**, this means that light is traced everywhere and calculated through each reflection making a very realistic display. Compared to Phong lightning model which is based on simplified mathematical models of how light interacts with surfaces, ray tracing is much more computationally expensive and can require significant processing power to achieve real-time performance.
+
+The reason why light is traced from the camera is to reduce computation. If all light source were to be calculated, then this would be much more computationally expensive than just a light from camera, it could also be overkill because some reflected light may not be seen by the camera.
 
 Ray tracing also consider for **different pixel samples at different positions that will result in different calculations for the rays that are traced**.
 
@@ -88,3 +86,10 @@ The improvement come from intersection testing, if the ray does not intersect th
 
 ![Several sphere are bounded into two rectangles](./bvh-algorithm.png)  
 Source : [https://youtu.be/gGKup9tUSrU?t=2883](https://youtu.be/gGKup9tUSrU?t=2883)
+
+### Ray Casting
+
+There is also a much more lighter version of ray tracing, this is called **Ray Casting**, as it does not account for reflections, shadows, or other complex lighting effects. The only thing ray casting do is just tracing the light from the camera and check if it intersect with an object to determine which objects are visible. Ray casting can also create an illusion of depth or distance, for example a closer wall might be more bright than the further wall.
+
+![Ray casting creates an illusion of depth in a 2D wall](./ray-casting.png)  
+Source : https://id.wikipedia.org/wiki/Raycasting
