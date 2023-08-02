@@ -73,6 +73,7 @@ These coefficient can be thought of as how we will represent the amplitude and p
 ### Complex Fourier Series
 
 Fourier series is represented in sine and cosine wave, we can represent this as a sum of complex exponential functions using Euler's formula.  
+
 ![Euler formula connecting exponential function with sine and cosine terms](./euler-formula.png)  
 The formula for complex Fourier series with period of $2\pi$ :  
 ![Formula for complex fourier series involving imaginary terms](./complex-fourier-series-formula.png)  
