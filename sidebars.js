@@ -12,7 +12,7 @@ const sidebars = {
 
     //   // Link is used only if it has md file
     //   link: { type: "doc", id: "kebab-title/kebab-title" },
-    //   items: ["kebab-title/kebab-content"],
+    //   items: ["kebab-title/kebab-content/kebab-content"],
     // },
 
     // Digital Signal Processing
@@ -64,6 +64,18 @@ const sidebars = {
           ],
         },
         "digital-signal-processing/adaptive-signal-processing/adaptive-signal-processing",
+      ],
+    },
+
+    // Digital Media Processing
+    {
+      type: "category",
+      label: "Digital Media Processing",
+
+      // Link is used only if it has md file
+      link: { type: "doc", id: "digital-media-processing/digital-media-processing" },
+      items: [
+        "digital-media-processing/xx-huffman-encoding/huffman-encoding",
       ],
     },
 

@@ -37,3 +37,16 @@ Source : https://towardsdatascience.com/fast-fourier-transform-937926e591cb
 
 After dividing into sub problems, each computation of the sub problem is the original matrix multiplication.  
 So in summary, FFT provides a significant improvement over original DFT by using its properties and the nature of wave.
+
+### FFT Output
+
+A signal can have a various frequency in different time, using FFT we can split all the wave based on their frequency. The x-axis of FFT output shows the frequency bin or the frequency group. The y-axis represent the magnitude of corresponding frequency. Magnitude means how strong or how significant is the contribution of that wave.
+
+For example, if in the x-axis = 100 there is a peak or high magnitude, this means that the wave with frequency 100Hz contribute the most to the original signal.
+
+With the information from the FFT output, we can filter out the signal. For example, we can remove noise or unwanted signals by identifying high magnitudes in the output. If the majority of the output magnitudes range from 0 to 20, but there is one frequency with a magnitude of 100, a simple filter can be used to eliminate the infrequent magnitude.
+
+A high magnitude or peak in the output can be interpreted as a wave that contribute the most or a noise which is unwanted signal. Because of this, a further analysis such as spectral shape, examining the relative magnitudes of different peaks are used to distinguish.
+
+![Fourier transform output](./fft-output.png)  
+Source : https://learn.adafruit.com/fft-fun-with-fourier-transforms/background
