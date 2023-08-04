@@ -14,7 +14,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 ### All topics
 
 - [Digital Signal Processing](digital-signal-processing)
+- [Digital Media Processing](digital-media-processing)
 - [Computer Networking](computer-networking)
+- [Software Engineering](software-engineering)
 - [Web Development](web-development)
 - [Backend Development](backend-development)
 - [Computer Security](computer-security)

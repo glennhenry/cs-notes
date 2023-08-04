@@ -26,6 +26,16 @@ const sidebars = {
       items: [
         {
           type: "category",
+          label: "Signal",
+          link: { type: "doc", id: "digital-signal-processing/signal/signal" },
+          items: [
+            "digital-signal-processing/continous-discrete-signal/continous-discrete-signal",
+            "digital-signal-processing/analog-digital-signal/analog-digital-signal",
+          ],
+        },
+
+        {
+          type: "category",
           label: "Fourier Analysis",
           items: [
             "digital-signal-processing/fourier-series/fourier-series",
@@ -39,9 +49,6 @@ const sidebars = {
             "digital-signal-processing/z-transform/z-transform",
           ],
         },
-        "digital-signal-processing/signal/signal",
-        "digital-signal-processing/continous-discrete-signal/continous-discrete-signal",
-        "digital-signal-processing/analog-digital-signal/analog-digital-signal",
         {
           type: "category",
           label: "Signal Transmission",
@@ -61,9 +68,9 @@ const sidebars = {
             "digital-signal-processing/compression/compression",
             "digital-signal-processing/estimation/estimation",
             "digital-signal-processing/denoising/denoising",
+            "digital-signal-processing/adaptive-signal-processing/adaptive-signal-processing",
           ],
         },
-        "digital-signal-processing/adaptive-signal-processing/adaptive-signal-processing",
       ],
     },
 
@@ -73,10 +80,11 @@ const sidebars = {
       label: "Digital Media Processing",
 
       // Link is used only if it has md file
-      link: { type: "doc", id: "digital-media-processing/digital-media-processing" },
-      items: [
-        "digital-media-processing/xx-huffman-encoding/huffman-encoding",
-      ],
+      link: {
+        type: "doc",
+        id: "digital-media-processing/digital-media-processing",
+      },
+      items: ["digital-media-processing/xx-huffman-encoding/huffman-encoding"],
     },
 
     // Computer Networking
