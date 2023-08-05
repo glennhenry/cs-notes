@@ -24,16 +24,7 @@ const sidebars = {
         id: "digital-signal-processing/digital-signal-processing",
       },
       items: [
-        {
-          type: "category",
-          label: "Signal",
-          link: { type: "doc", id: "digital-signal-processing/signal/signal" },
-          items: [
-            "digital-signal-processing/continous-discrete-signal/continous-discrete-signal",
-            "digital-signal-processing/analog-digital-signal/analog-digital-signal",
-          ],
-        },
-
+        "digital-signal-processing/signal/signal",
         {
           type: "category",
           label: "Fourier Analysis",
