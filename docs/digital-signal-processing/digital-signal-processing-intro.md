@@ -14,8 +14,6 @@ This topic will mostly covers the theory, the application will be included more 
 ### All topics
 
 - [Signal](digital-signal-processing/signal)
-  - [Continous Discrete Signal](digital-signal-processing/continous-discrete-signal)
-  - [Analog Digital Signal](digital-signal-processing/analog-digital-signal)
 - Fourier Analysis
   - [Fourier Series](digital-signal-processing/fourier-series)
   - [Fourier Transform](digital-signal-processing/fourier-transform)
