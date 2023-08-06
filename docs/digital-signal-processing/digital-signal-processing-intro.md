@@ -9,6 +9,10 @@ description: Digital Signal Processing Notes
 
 This topic will mostly covers the theory, the application will be included more in [Digital Media Processing](/digital-media-processing).
 
+:::tip
+Find out more about signal processing related to image in [here](/computer-graphics/signal-processing)
+:::
+
 **Source : Various online resources that is included in each section**
 
 ### All topics
