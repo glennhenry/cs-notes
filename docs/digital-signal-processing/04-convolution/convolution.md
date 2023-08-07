@@ -5,7 +5,7 @@ title: Convolution
 description: Convolution
 ---
 
-**Main Source : Various source from Google**
+**Main Source : Various source from Google and Youtube**
 
 **Convolution** is a mathematical operation that is often used in signal processing and other fields to combine two functions in the time-domain to produce a third function that describes their interaction.
 

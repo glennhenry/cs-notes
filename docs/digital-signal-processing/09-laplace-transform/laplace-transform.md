@@ -5,7 +5,7 @@ title: Laplace Transform
 description: Laplace Transform
 ---
 
-**Main Source : Various source from Google**
+**Main Source : Various source from Google and Youtube**
 
 **Laplace Transform** is a mathematical operation that converts a function of a real variable (time) $f(t)$ to a function of a complex variable (frequency) $F(s)$.
 

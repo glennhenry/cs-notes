@@ -48,6 +48,7 @@ const sidebars = {
             "digital-signal-processing/quantization/quantization",
             "digital-signal-processing/coding/coding",
             "digital-signal-processing/multiplexing/multiplexing",
+            "digital-signal-processing/signal-transmission-medium/signal-transmission-medium",
           ],
         },
         {
@@ -55,7 +56,6 @@ const sidebars = {
           label: "Signal Processing",
           items: [
             "digital-signal-processing/filtering/filtering",
-            "digital-signal-processing/modeling/modeling",
             "digital-signal-processing/compression/compression",
             "digital-signal-processing/estimation/estimation",
             "digital-signal-processing/denoising/denoising",
@@ -75,7 +75,9 @@ const sidebars = {
         type: "doc",
         id: "digital-media-processing/digital-media-processing",
       },
-      items: ["digital-media-processing/xx-huffman-encoding/huffman-encoding"],
+      items: [
+        
+      ],
     },
 
     // Computer Networking
@@ -89,6 +91,18 @@ const sidebars = {
         "computer-networking/xx3-ports/ports",
         "computer-networking/xx4-http-and-https/http-and-https",
         "computer-networking/xx5-server/server",
+      ],
+    },
+
+    // Data Structures & Algorithm
+    {
+      type: "category",
+      label: "Title",
+      link: { type: "doc", id: "data-structures-and-algorithm/data-structures-and-algorithm" },
+      items: [
+        "data-structures-and-algorithm/xx-tree/tree",
+        "data-structures-and-algorithm/xx1-binary-tree/binary-tree",
+        "data-structures-and-algorithm/xx2-heap/heap",
       ],
     },
 

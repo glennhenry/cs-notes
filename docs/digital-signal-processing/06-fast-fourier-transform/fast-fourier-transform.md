@@ -5,7 +5,7 @@ title: Fast Fourier Transform
 description: Fast Fourier Transform
 ---
 
-**Main Source : Various source from Google**
+**Main Source : Various source from Google and Youtube**
 
 **Fast Fourier Transform (FFT)** algorithm is a fast and efficient algorithm for computing the Discrete Fourier Transform (DFT) of a sequence of N complex numbers. FFT is able to make improvement from an $O(N^2)$ algorithm to an $O(N \: log (N))$.
 

@@ -5,7 +5,7 @@ title: Discrete Fourier Transform
 description: Discrete Fourier Transform
 ---
 
-**Main Source : Various source from Google**
+**Main Source : Various source from Google and Youtube**
 
 **Discrete Fourier Transform (DFT)** is the version of the Fourier Transform for discrete periodic signal. DFT is widely used in digital signal processing because computers can only process discrete signals. With DFT, we can Fourier transform digital signal such as audio to filter out signal to remove noises or some specific frequencies.
 

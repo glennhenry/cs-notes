@@ -5,7 +5,7 @@ title: Z-Transform
 description: Z-Transform
 ---
 
-**Main Source : Various source from Google**
+**Main Source : Various source from Google and Youtube**
 
 **Z-Transform** is the discrete version of [Laplace transform](/digital-signal-processing/laplace-transform). The discrete input of signal makes Z-transform usable in the digital world.
 

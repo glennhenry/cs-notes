@@ -8,7 +8,7 @@ description: Fourier Series
 **Main Source :**
 
 - **[Dr. Trefor Bazett, Intro to Fourier Series](https://youtu.be/wmCIrpLBFds)**
-- **Various source from Google**
+- **Various source from Google and Youtube**
 
 **Fourier Series** is a mathematical method for representing a periodic function as a sum of sine and cosine functions with different frequencies.
 

@@ -8,7 +8,7 @@ description: Sampling
 **Main Source :**
 
 - **[0612 TV w/ NERDfirst Sampling, Aliasing & Nyquist Theorem](https://youtu.be/yWqrx08UeUs)**
-- **Other sources from Google**
+- **Other sources from Google and Youtube**
 
 **Sampling** is a technique of taking some representative data from a group of data. In digital signal processing, sampling refers to the process of converting a continuous-time signal into a discrete-time signal.
 

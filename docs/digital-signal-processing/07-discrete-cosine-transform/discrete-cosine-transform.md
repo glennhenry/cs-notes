@@ -49,7 +49,7 @@ We can use the coefficient to filter out the data we don't need. For example, we
 
 The DCT coefficients represent the frequency content of an 8x8 block of image pixels, with the lower-frequency coefficients corresponding to the overall shape or structure of the block, and the higher-frequency coefficients corresponding to the fine details. Removing the higher frequency can helps reducing the amount of data that needs to be stored or transmitted.
 
-The last step of DCT is [Huffman Encoding](/digital-media-processing/huffman-encoding). Huffman encoding is a lossless data compression technique that is used to further reduce the number of bits needed to represent the quantized DCT coefficients.
+The last step of DCT is [Huffman Encoding](/digital-signal-processing/compression#huffman-encoding). Huffman encoding is a lossless data compression technique that is used to further reduce the number of bits needed to represent the quantized DCT coefficients.
 
 ![The process of DCT compression](./dct-compression.png)  
 Source : https://www.researchgate.net/figure/Algorithm-and-procedure-of-the-JPEG-image-compression-The-original-image-is-compressed_fig1_338524056

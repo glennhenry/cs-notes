@@ -8,7 +8,7 @@ description: Coding
 **Main Source :**
 
 - **[Encoding & Decoding - Christopher Kalodikis](https://youtu.be/qSEmEpv5ct8)**
-- **Other sources from Google**
+- **Other sources from Google and Youtube**
 
 In digital signal processing, **Coding** refers to the process of representing a signal or data in a specific format or code. Coding is used to convert analog signals or continuous data into a discrete digital representation that can be processed, transmitted, stored, or interpreted by digital systems.
 

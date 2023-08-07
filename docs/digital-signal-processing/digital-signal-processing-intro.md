@@ -33,9 +33,9 @@ Find out more about signal processing related to image in [here](/computer-graph
   - [Quantization](digital-signal-processing/quantization)
   - [Coding](digital-signal-processing/coding)
   - [Multiplexing](digital-signal-processing/multiplexing)
+  - [Signal Transmission Medium](digital-signal-processing/signal-transmission-medium)
 - Signal Processing
   - [Filtering](digital-signal-processing/filtering)
-  - [Modeling](digital-signal-processing/modeling)
   - [Compression](digital-signal-processing/compression)
   - [Estimation](digital-signal-processing/estimation)
   - [Denoising](digital-signal-processing/denoising)
