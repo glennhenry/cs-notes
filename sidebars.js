@@ -57,9 +57,7 @@ const sidebars = {
           items: [
             "digital-signal-processing/filtering/filtering",
             "digital-signal-processing/compression/compression",
-            "digital-signal-processing/estimation/estimation",
             "digital-signal-processing/denoising/denoising",
-            "digital-signal-processing/adaptive-signal-processing/adaptive-signal-processing",
           ],
         },
       ],
@@ -97,7 +95,7 @@ const sidebars = {
     // Data Structures & Algorithm
     {
       type: "category",
-      label: "Title",
+      label: "Data Structures & Algorithm",
       link: { type: "doc", id: "data-structures-and-algorithm/data-structures-and-algorithm" },
       items: [
         "data-structures-and-algorithm/xx-tree/tree",
@@ -187,6 +185,36 @@ const sidebars = {
         "computer-graphics/computer-animation-part-2/computer-animation-part-2",
         "computer-graphics/physics-based-animation/physics-based-animation",
         "computer-graphics/simulation/simulation",
+      ],
+    },
+
+    // Data Science
+    {
+      type: "category",
+      label: "Data Science",
+      link: { type: "doc", id: "data-science/data-science" },
+      items: [
+
+      ],
+    },
+
+    // Machine Learning
+    {
+      type: "category",
+      label: "Machine Learning",
+      link: { type: "doc", id: "machine-learning/machine-learning" },
+      items: [
+
+      ],
+    },
+
+    // Deep Learning
+    {
+      type: "category",
+      label: "Deep Learning",
+      link: { type: "doc", id: "deep-learning/deep-learning" },
+      items: [
+
       ],
     },
 

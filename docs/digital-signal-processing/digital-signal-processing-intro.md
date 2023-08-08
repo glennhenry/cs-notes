@@ -37,6 +37,4 @@ Find out more about signal processing related to image in [here](/computer-graph
 - Signal Processing
   - [Filtering](digital-signal-processing/filtering)
   - [Compression](digital-signal-processing/compression)
-  - [Estimation](digital-signal-processing/estimation)
   - [Denoising](digital-signal-processing/denoising)
-- [Adaptive Signal Processing](digital-signal-processing/adaptive-signal-processing)

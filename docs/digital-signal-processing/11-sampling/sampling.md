@@ -79,3 +79,7 @@ Downsampling reduces the sampling rate of a signal by removing samples from the 
 
 ![A discrete signal is upsampled in the middle of each samples](./updown-sample.png)  
 Source : https://www.divilabs.com/2014/07/upsampling-interpolation-of-discrete.html
+
+:::tip
+Find out more about anti-aliasing for image in [here](/computer-graphics/sampling)
+:::

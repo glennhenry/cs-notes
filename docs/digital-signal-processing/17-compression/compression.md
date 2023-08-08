@@ -7,7 +7,7 @@ description: Compression
 
 **Main Source : [Compression - CrashCourse Computer Science #21](https://youtu.be/OtDxDvCpPL4)**
 
-**Signal Compression** also known as data compression or source coding, is the process of reducing the size or bit rate required to represent a signal while preserving as much of the original information as possible.
+**Compression** is the process of reducing the size or bit rate required to represent a signal while preserving as much of the original information as possible.
 
 By removing data redundancies, it can lead to benefits such as reduced storage requirements, faster transmission, and improved resource utilization.
 
@@ -57,14 +57,13 @@ Lossy compression algorithms aim to achieve higher compression ratios by allowin
 
 For example in an image, a color that is similar to the neighbour color can be discarded and changed with the similar one as it won't affect the overall image.
 
+Lossy compression techniques are typically designed and optimized for specific types of data, such as images, audio, or video. The general algorithm for lossy compression is Transform Coding. The idea is we will discard data that doesn't have significant contribution to the overall data.
+
 #### Transform Coding
 
-DCT
+Transform Coding is a lossy compression method that works by transforming data or signal using a function and it will output some coefficient. The coefficient contains information about the original data that can later be analyzed to achieve desired result.
+
+The most commonly used transform function in transform coding is the [Discrete Cosine Transform (DCT)](/digital-signal-processing/discrete-cosine-transform), [Discrete Fourier Transform (DFT)](/digital-signal-processing/discrete-fourier-transform) and [Wavelet Transform](/digital-signal-processing/wavelets).
 
 ![An image is compressed with 3 different setting with different quality results](./transform-coding.gif)  
 Source : https://www.dspguide.com/ch27/6.htm
-
-#### Wavelet Transform
-
-![A fingerprint data is quantized using wavelet transform](./wavelet-transform.gif)  
-Source : https://www.mathworks.com/help/wavelet/ug/wavelet-compression-for-images.html
