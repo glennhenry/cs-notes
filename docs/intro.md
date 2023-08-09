@@ -16,12 +16,17 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - [Digital Signal Processing](digital-signal-processing)
 - [Digital Media Processing](digital-media-processing)
 - [Computer Networking](computer-networking)
-- [Data Structures & Algorithm](data-structures-and-algorithm)
+- [Data Structures & Algorithms](data-structures-and-algorithms)
 - [Software Engineering](software-engineering)
 - [Web Development](web-development)
 - [Backend Development](backend-development)
 - [Computer Security](computer-security)
 - [Computer Graphics](computer-graphics)
+- [Data Science](data-science)
+- [Machine Learning](machine-learing)
+- [Deep Learning](deep-learing)
+- [Cloud Computing](cloud-computing)
+- [Extras](extras)
 
 TODO :
 

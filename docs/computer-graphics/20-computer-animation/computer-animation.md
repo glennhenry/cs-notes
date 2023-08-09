@@ -1,13 +1,17 @@
 ---
-slug: /computer-graphics/computer-animation-part-2
-id: computer-animation-part-2
-title: Computer Animation (Part 2)
-description: Computer Animation (Part 2)
+slug: /computer-graphics/computer-animation
+id: computer-animation
+title: Computer Animation
+description: Computer Animation
 ---
 
-# Computer Animation (Part 2)
+# Computer Animation
 
 **Main Source : [Intro to Graphics 23 - Computer Animation](https://youtu.be/lhK7ZMcW5pU)**
+
+**Animation** refers to the process of creating moving images using a computer. Animation manipulate the digital models and objects to create the illusion of movement. Animators can use a variety of techniques to achieve this, including **keyframing, motion capture, and procedural animation**.
+
+While not all video are computer animations, video also try to create illusion of motion by creating a sequence of still images that are played back in quick succession. It works by capturing a series of individual frames, each representing a small moment in time.
 
 Animation is typically classified into two :
 

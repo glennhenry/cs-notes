@@ -34,9 +34,9 @@ Huffman encoding is a technique that assigns some codes to input based on their 
 
    ![Map of each character to its frequency](./huffman-frequency-table.png)
 
-2. **Huffman Tree Construction** : With the frequency table, we will construct a [binary tree](/data-structures-and-algorithm/binary-tree) where the child-most node is the less frequent data and the top most is the most frequent data. From the bottom child node, we will merge the two of lowest frequency to create the parent node representing their frequency sum. We will keep doing this up to the top most node.
+2. **Huffman Tree Construction** : With the frequency table, we will construct a [binary tree](/data-structures-and-algorithms/binary-tree) where the child-most node is the less frequent data and the top most is the most frequent data. From the bottom child node, we will merge the two of lowest frequency to create the parent node representing their frequency sum. We will keep doing this up to the top most node.
 
-   Constructing the tree includes the use of [min-heap](/data-structures-and-algorithm/heap) by comparing all the parent node frequency with the smallest frequency we are left off in the frequency table.
+   Constructing the tree includes the use of [min-heap](/data-structures-and-algorithms/heap) by comparing all the parent node frequency with the smallest frequency we are left off in the frequency table.
 
    ![Huffman binary tree construction in gif](./huffman-tree-construction.gif)  
     Source : https://commons.wikimedia.org/wiki/File:Huffman_huff_demo.gif (with speed modification)

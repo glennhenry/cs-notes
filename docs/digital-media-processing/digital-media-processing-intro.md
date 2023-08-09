@@ -5,25 +5,60 @@ title: Digital Media Processing
 description: Digital Media Processing Notes
 ---
 
-Digital Media Processing
+**Main Source : Various source that is included in each topics**
 
-- Image
-    - BMP
-    - JPG
-    - PNG
-    - WebP
-    - GIF
-    - SVG
-- Audio
-    - MP3
-    - OGG
-    - WAV
-- Video
-    - 3GP
-    - AVI
-    - MP4 (H.265)
-    - WebM
-- Document
-    - TXT
-    - PDF
-- Flash Player SWF
+**Digital Media Processing** is the manipulation of digital data that represents multimedia content, such as images, video, and audio. This topic will covers media processing and some common format including how do they works.
+
+Most of the fundamental concepts are covered in [Digital Signal Processing](/digital-signal-processing). Some concept about image and graphics are also in [Computer Graphics](/computer-graphics). With these other topic, most of the topic here are addition or application.
+
+- Image Processing
+    - Image Enhancement (brightness, contrast, gamma , etc)
+    - Image Filtering & Noise Reduction
+    - Image Scaling
+    - Image Acquisition & Sensing (fingerprint, face recog, self dirivng cars)
+    - Image Segmentation
+    - Edge Detection
+    - Image Restoration
+    - Image Editing (photoshop)
+
+- Audio Processing
+    - Audio Properties (spectogram)
+    - Audio Input & Output
+    - Audio Filtering & Equalization (dithering)
+    - Audio Effect & Synthesis
+    - Audio Editing (audacity)
+    - Speech Recognition
+
+- Video Processing
+    - Video Representation (fps, ref to computer display and animation)
+    - Video Recording (obs)
+    - Video Enhancement
+    - Video Editing (premiere pro)
+    - Video Streaming (bitrate)
+    - Flash Player SWF
+    - VR & AR
+
+- Digital Media Formats
+    - Image
+        - BMP
+        - JPG
+        - PNG
+        - WebP
+        - SVG
+        - GIF
+    - Audio
+        - WAV
+        - OGG
+        - MP3
+    - Video
+        - 3GP
+        - AVI
+        - MP4 (H.265)
+        - WebM
+    - Document
+        - TXT
+        - PDF
+
+:::tip
+Click [here](/computer-graphics/computer-animation) to know more about computer animation.
+:::

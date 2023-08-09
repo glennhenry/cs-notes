@@ -5,7 +5,7 @@ title: Denoising
 description: Denoising
 ---
 
-**Main Source : **
+**Main Source : Various source from Google and Youtube**
 
 **Noise** is any unwanted or interfering signal that is added to the original signal while being processed, transmitted, or captured. This noise can come from a variety of sources, including the sampling device, the environment, or the signal itself.
 

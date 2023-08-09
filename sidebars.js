@@ -74,7 +74,66 @@ const sidebars = {
         id: "digital-media-processing/digital-media-processing",
       },
       items: [
-        
+
+      {
+        type: "category",
+        label: "Image Processing",
+        items: [
+          
+        ],
+      },
+
+      {
+        type: "category",
+        label: "Audio Processing",
+        items: [
+          
+        ],
+      },
+
+      {
+        type: "category",
+        label: "Video Processing",
+        items: [
+          
+        ],
+      },
+
+      {
+        type: "category",
+        label: "Digital Media Formats",
+        items: [
+          {
+            type: "category",
+            label: "Image",
+            items: [
+              
+            ],
+          },
+          {
+            type: "category",
+            label: "Audio",
+            items: [
+              
+            ],
+          },
+          {
+            type: "category",
+            label: "Video",
+            items: [
+              
+            ],
+          },
+          {
+            type: "category",
+            label: "Document",
+            items: [
+              
+            ],
+          },
+        ],
+      },
+
       ],
     },
 
@@ -92,15 +151,15 @@ const sidebars = {
       ],
     },
 
-    // Data Structures & Algorithm
+    // Data Structures & Algorithms
     {
       type: "category",
-      label: "Data Structures & Algorithm",
-      link: { type: "doc", id: "data-structures-and-algorithm/data-structures-and-algorithm" },
+      label: "Data Structures & Algorithms",
+      link: { type: "doc", id: "data-structures-and-algorithms/data-structures-and-algorithms" },
       items: [
-        "data-structures-and-algorithm/xx-tree/tree",
-        "data-structures-and-algorithm/xx1-binary-tree/binary-tree",
-        "data-structures-and-algorithm/xx2-heap/heap",
+        "data-structures-and-algorithms/xx-tree/tree",
+        "data-structures-and-algorithms/xx1-binary-tree/binary-tree",
+        "data-structures-and-algorithms/xx2-heap/heap",
       ],
     },
 
@@ -181,8 +240,8 @@ const sidebars = {
         "computer-graphics/reflections/reflections",
         "computer-graphics/sampling/sampling",
         "computer-graphics/signal-processing/signal-processing",
-        "computer-graphics/computer-animation-part-1/computer-animation-part-1",
-        "computer-graphics/computer-animation-part-2/computer-animation-part-2",
+        "computer-graphics/computer-display/computer-display",
+        "computer-graphics/computer-animation/computer-animation",
         "computer-graphics/physics-based-animation/physics-based-animation",
         "computer-graphics/simulation/simulation",
       ],

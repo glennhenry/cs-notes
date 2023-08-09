@@ -5,7 +5,7 @@ title: Filtering
 description: Filtering
 ---
 
-**Main Source : **
+**Main Source : Various source from Google and Youtube**
 
 In digital signal processing, **Filtering** refers to the process of modifying or manipulating a digital signal to remove unwanted components or extract specific information from the signal.
 
@@ -25,3 +25,7 @@ Some common filtering includes :
 
 ![Common filter type including lowpass, highpass, bandstop, and bandpass](./filter-type.png)  
 Source : https://en.wikipedia.org/wiki/Filter_(signal_processing)
+
+:::tip
+Find out more about filter related to image in [here](/computer-graphics/signal-processing#image-filters).
+:::

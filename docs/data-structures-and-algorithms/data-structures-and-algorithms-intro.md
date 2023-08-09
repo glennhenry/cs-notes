@@ -1,8 +1,8 @@
 ---
-slug: /data-structures-and-algorithm
-id: data-structures-and-algorithm
-title: Data Structures & Algorithm
-description: Data Structures & Algorithm Notes
+slug: /data-structures-and-algorithms
+id: data-structures-and-algorithms
+title: Data Structures & Algorithms
+description: Data Structures & Algorithms Notes
 ---
 
 ### All topics

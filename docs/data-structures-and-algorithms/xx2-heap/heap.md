@@ -1,5 +1,5 @@
 ---
-slug: /data-structures-and-algorithm/heap
+slug: /data-structures-and-algorithms/heap
 id: heap
 title: Heap
 description: Heap

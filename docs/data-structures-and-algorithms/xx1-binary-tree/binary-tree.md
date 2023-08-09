@@ -1,5 +1,5 @@
 ---
-slug: /data-structures-and-algorithm/binary-tree
+slug: /data-structures-and-algorithms/binary-tree
 id: binary-tree
 title: Binary Tree
 description: Binary Tree
