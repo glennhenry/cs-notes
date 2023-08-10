@@ -43,7 +43,7 @@ TODO :
 
 #### AI Chatbot Software
 
-- Assisted with few AI tools [Sage Poe](https://poe.com), [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/)
+- Assisted with few AI tools [Sage Poe](https://poe.com), [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/). Many of the notes here are also from AI.
 
 #### Online Courses and Media Source
 

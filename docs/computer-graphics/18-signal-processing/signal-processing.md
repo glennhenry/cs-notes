@@ -58,9 +58,9 @@ Source : [https://youtu.be/UQl6ttthfXE?t=1779](https://youtu.be/UQl6ttthfXE?t=17
 There are various image filter technique such as :
 
 - Gaussian Filter, is used for blurring, smoothing, and noise reduction in an image.
-- Sobel Filter, used to detect edge.
 - Sharpening Filter, enhances contrast between pixels.
 - Median Filter, non-linear filter meaning the filter might change depending on the pixel in the image. Used for noise reduction in an image by taking median of neighboring pixels.
+- Sobel Filter, used to detect edge.
 
 ![Comparison between each filter](./image-filters-example.png)  
 Source :
@@ -68,3 +68,22 @@ Source :
 [https://medium.datadriveninvestor.com/understanding-edge-detection-sobel-operator-2aada303b900](https://medium.datadriveninvestor.com/understanding-edge-detection-sobel-operator-2aada303b900)
 [http://community.photostockplus.com/tag/sharpen-filters/](http://community.photostockplus.com/tag/sharpen-filters/)
 [https://en.wikipedia.org/wiki/Median_filter](https://en.wikipedia.org/wiki/Median_filter)
+
+### Edge Detection
+
+Edge detection identifies the boundaries or transitions between different objects or regions in an image. The idea is edges have significant changes in intensity or color. The purpose of finding the edge is to provide important information about the structure and shape of objects in the image.
+
+Identifying overall structure of an object is useful in many task such as robotics, video surveillance systems by detecting motion, medical imaging to detect tumor or organ segmentation.
+
+Common methods includes :
+
+- **Sobel Operator** : It uses two 3x3 kernels to calculate the gradient of an image. The gradient is a measure of how quickly the brightness or color of an image changes in a particular direction.
+- **Prewitt Operator** : The Prewitt operator is similar to the Sobel operator, but it uses different kernels to calculate the gradient. The Prewitt operator is sometimes preferred over the Sobel operator because it is less sensitive to noise.
+- **Canny Edge Detector** : The Canny edge detector is a more sophisticated edge detection technique than the Sobel operator, and the Prewitt operator. It is able to find edges more accurately, but it is also more computationally expensive. The Canny edge detector uses a variety of steps to find edges, including :
+  - Gaussian Smoothing : The image is smoothed to remove noise.
+  - Gradient Calculation : The gradient of the image is calculated.
+  - Non-maximum Suppression : Edges that are not the strongest in their neighborhood are suppressed.
+  - Hysteresis Thresholding : Edges are classified as either strong or weak. Strong edges are kept, and weak edges are only kept if they are connected to strong edges.
+
+  ![House and wall edges are detected using different methods](./edge-detection.jpeg)  
+  Source : https://www.researchgate.net/figure/Edge-detection-by-different-methods-a-Test-image-b-Cannys-method-c-Sobel-method_fig3_314204625

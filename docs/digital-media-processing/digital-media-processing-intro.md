@@ -9,17 +9,14 @@ description: Digital Media Processing Notes
 
 **Digital Media Processing** is the manipulation of digital data that represents multimedia content, such as images, video, and audio. This topic will covers media processing and some common format including how do they works.
 
-Most of the fundamental concepts are covered in [Digital Signal Processing](/digital-signal-processing). Some concept about image and graphics are also in [Computer Graphics](/computer-graphics). With these other topic, most of the topic here are addition or application.
+Most of the fundamental concepts are covered in [Digital Signal Processing](/digital-signal-processing). Some concept about image and graphics are also in [Computer Graphics](/computer-graphics). With these other topic, most of the topic here are addition or application, so there may be many reference to other pages.
 
 - Image Processing
-    - Image Enhancement (brightness, contrast, gamma , etc)
-    - Image Filtering & Noise Reduction
-    - Image Scaling
-    - Image Acquisition & Sensing (fingerprint, face recog, self dirivng cars)
-    - Image Segmentation
-    - Edge Detection
+    - [Image Properties](digital-media-processing/image-properties)
+    - [Image Enhancement](digital-media-processing/image-enhancement)
+    - [Image Acquisition & Sensing](digital-media-processing/image-acquisition-sensing)
     - Image Restoration
-    - Image Editing (photoshop)
+    - Image Editor (photoshop, how it works)
 
 - Audio Processing
     - Audio Properties (spectogram)

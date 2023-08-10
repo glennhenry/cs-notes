@@ -74,66 +74,66 @@ const sidebars = {
         id: "digital-media-processing/digital-media-processing",
       },
       items: [
+        {
+          type: "category",
+          label: "Image Processing",
+          items: [
+            "digital-media-processing/image-properties/image-properties",
+            "digital-media-processing/image-enhancement/image-enhancement",
+            "digital-media-processing/image-acquisition-sensing/image-acquisition-sensing",
+          ],
+        },
 
-      {
-        type: "category",
-        label: "Image Processing",
-        items: [
-          
-        ],
-      },
+        // {
+        //   type: "category",
+        //   label: "Audio Processing",
+        //   items: [
 
-      {
-        type: "category",
-        label: "Audio Processing",
-        items: [
-          
-        ],
-      },
+        //   ],
+        // },
 
-      {
-        type: "category",
-        label: "Video Processing",
-        items: [
-          
-        ],
-      },
+        // {
+        //   type: "category",
+        //   label: "Video Processing",
+        //   items: [
 
-      {
-        type: "category",
-        label: "Digital Media Formats",
-        items: [
-          {
-            type: "category",
-            label: "Image",
-            items: [
-              
-            ],
-          },
-          {
-            type: "category",
-            label: "Audio",
-            items: [
-              
-            ],
-          },
-          {
-            type: "category",
-            label: "Video",
-            items: [
-              
-            ],
-          },
-          {
-            type: "category",
-            label: "Document",
-            items: [
-              
-            ],
-          },
-        ],
-      },
+        //   ],
+        // },
 
+        // {
+        //   type: "category",
+        //   label: "Digital Media Formats",
+        //   items: [
+        //     {
+        //       type: "category",
+        //       label: "Image",
+        //       items: [
+
+        //       ],
+        //     },
+        //     {
+        //       type: "category",
+        //       label: "Audio",
+        //       items: [
+
+        //       ],
+        //     },
+        //     {
+        //       type: "category",
+        //       label: "Video",
+        //       items: [
+
+        //       ],
+        //     },
+        //     {
+        //       type: "category",
+        //       label: "Document",
+        //       items: [
+
+        //       ],
+        //     },
+        //   ],
+        // },
       ],
     },
 
@@ -155,7 +155,10 @@ const sidebars = {
     {
       type: "category",
       label: "Data Structures & Algorithms",
-      link: { type: "doc", id: "data-structures-and-algorithms/data-structures-and-algorithms" },
+      link: {
+        type: "doc",
+        id: "data-structures-and-algorithms/data-structures-and-algorithms",
+      },
       items: [
         "data-structures-and-algorithms/xx-tree/tree",
         "data-structures-and-algorithms/xx1-binary-tree/binary-tree",
@@ -252,9 +255,7 @@ const sidebars = {
       type: "category",
       label: "Data Science",
       link: { type: "doc", id: "data-science/data-science" },
-      items: [
-
-      ],
+      items: [],
     },
 
     // Machine Learning
@@ -262,9 +263,7 @@ const sidebars = {
       type: "category",
       label: "Machine Learning",
       link: { type: "doc", id: "machine-learning/machine-learning" },
-      items: [
-
-      ],
+      items: [],
     },
 
     // Deep Learning
@@ -272,9 +271,7 @@ const sidebars = {
       type: "category",
       label: "Deep Learning",
       link: { type: "doc", id: "deep-learning/deep-learning" },
-      items: [
-
-      ],
+      items: [],
     },
 
     // Cloud Computing
