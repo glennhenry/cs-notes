@@ -12,49 +12,52 @@ description: Digital Media Processing Notes
 Most of the fundamental concepts are covered in [Digital Signal Processing](/digital-signal-processing). Some concept about image and graphics are also in [Computer Graphics](/computer-graphics). With these other topic, most of the topic here are addition or application, so there may be many reference to other pages.
 
 - Image Processing
-    - [Image Properties](digital-media-processing/image-properties)
-    - [Image Enhancement](digital-media-processing/image-enhancement)
-    - [Image Acquisition & Sensing](digital-media-processing/image-acquisition-sensing)
-    - Image Restoration
-    - Image Editor (photoshop, how it works)
+
+  - [Image Properties](digital-media-processing/image-properties)
+  - [Image Enhancement](digital-media-processing/image-enhancement)
+  - [Image Acquisition & Sensing](digital-media-processing/image-acquisition-sensing)
+  - [Image Restoration](digital-media-processing/image-restoration)
+  - [Image Editing](digital-media-processing/image-editing)
 
 - Audio Processing
-    - Audio Properties (spectogram)
-    - Audio Input & Output
-    - Audio Filtering & Equalization (dithering)
-    - Audio Effect & Synthesis
-    - Audio Editing (audacity)
-    - Speech Recognition
+
+  - [Sound & Audio Properties](digital-media-processing/sound-audio-properties)
+  - [Audio Input & Output](digital-media-processing/audio-input-output)
+  - [Audio Equalization](digital-media-processing/equalization)
+  - [Audio Effects](digital-media-processing/audio-effects)
+  - [Audio Editing](digital-media-processing/audio-editing)
+  - [Speech Recognition](digital-media-processing/speech-recognition)
 
 - Video Processing
-    - Video Representation (fps, ref to computer display and animation)
-    - Video Recording (obs)
-    - Video Enhancement
-    - Video Editing (premiere pro)
-    - Video Streaming (bitrate)
-    - Flash Player SWF
-    - VR & AR
+
+  - Video Representation (fps, ref to computer display and animation)
+  - Video Recording (obs)
+  - Video Enhancement
+  - Video Editing (premiere pro)
+  - Video Streaming (bitrate)
+  - Flash Player SWF
+  - VR & AR
 
 - Digital Media Formats
-    - Image
-        - BMP
-        - JPG
-        - PNG
-        - WebP
-        - SVG
-        - GIF
-    - Audio
-        - WAV
-        - OGG
-        - MP3
-    - Video
-        - 3GP
-        - AVI
-        - MP4 (H.265)
-        - WebM
-    - Document
-        - TXT
-        - PDF
+  - Image
+    - BMP
+    - JPG
+    - PNG
+    - WebP
+    - SVG
+    - GIF
+  - Audio
+    - WAV
+    - OGG
+    - MP3
+  - Video
+    - 3GP
+    - AVI
+    - MP4 (H.265)
+    - WebM
+  - Document
+    - TXT
+    - PDF
 
 :::tip
 Click [here](/computer-graphics/computer-animation) to know more about computer animation.

@@ -81,16 +81,23 @@ const sidebars = {
             "digital-media-processing/image-properties/image-properties",
             "digital-media-processing/image-enhancement/image-enhancement",
             "digital-media-processing/image-acquisition-sensing/image-acquisition-sensing",
+            "digital-media-processing/image-restoration/image-restoration",
+            "digital-media-processing/image-editing/image-editing",
           ],
         },
 
-        // {
-        //   type: "category",
-        //   label: "Audio Processing",
-        //   items: [
-
-        //   ],
-        // },
+        {
+          type: "category",
+          label: "Audio Processing",
+          items: [
+            "digital-media-processing/sound-audio-properties/sound-audio-properties",
+            "digital-media-processing/audio-input-output/audio-input-output",
+            "digital-media-processing/audio-effects/audio-effects",
+            "digital-media-processing/audio-equalization/audio-equalization",
+            "digital-media-processing/audio-editing/audio-editing",
+            "digital-media-processing/speech-processing/speech-processing",
+          ],
+        },
 
         // {
         //   type: "category",

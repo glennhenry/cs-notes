@@ -9,7 +9,7 @@ description: Image Enhancement
 
 **Image Enhancement** is the process of improving the visual quality of an image by adjusting its properties. There are many properties to be adjusted and many techniques to use.
 
-Image enhancement is different with image editing. Image editing includes changing the content of an image such as removing objects or changing the background. On the other hand image enhancement doesn't change the content, it adjusts the properties of image.
+Image enhancement is different with image editing. Image editing is a bigger term that includes changing the content of an image such as removing objects or changing the background. On the other hand image enhancement doesn't change the content, it adjusts the properties of image.
 
 ![Comparison before and after image is enhanced](./image-enhancement.jpeg)  
 Source : https://www.behance.net/gallery/115047653/PORTRAIT-EDIT-BEFORE-AFTER
