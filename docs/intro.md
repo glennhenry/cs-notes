@@ -23,8 +23,8 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - [Computer Security](computer-security)
 - [Computer Graphics](computer-graphics)
 - [Data Science](data-science)
-- [Machine Learning](machine-learing)
-- [Deep Learning](deep-learing)
+- [Machine Learning](machine-learning)
+- [Deep Learning](deep-learning)
 - [Cloud Computing](cloud-computing)
 - [Extras](extras)
 

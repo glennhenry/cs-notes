@@ -23,10 +23,10 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
 
   - [Sound & Audio Properties](digital-media-processing/sound-audio-properties)
   - [Audio Input & Output](digital-media-processing/audio-input-output)
-  - [Audio Equalization](digital-media-processing/equalization)
+  - [Audio Equalization](digital-media-processing/audio-equalization)
   - [Audio Effects](digital-media-processing/audio-effects)
   - [Audio Editing](digital-media-processing/audio-editing)
-  - [Speech Recognition](digital-media-processing/speech-recognition)
+  - [Speech Processing](digital-media-processing/speech-processing)
 
 - Video Processing
 

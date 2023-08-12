@@ -7,6 +7,6 @@ description: Data Structures & Algorithms Notes
 
 ### All topics
 
-- [Tree](data-structures-and-algorithm/tree)
-  - [Binary Tree](data-structures-and-algorithm/binary-tree)
-- [Heap](data-structures-and-algorithm/heap)
+- [Tree](data-structures-and-algorithms/tree)
+  - [Binary Tree](data-structures-and-algorithms/binary-tree)
+- [Heap](data-structures-and-algorithms/heap)
