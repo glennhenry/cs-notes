@@ -11,7 +11,7 @@ description: GPU Pipeline
 
 ### GPU
 
-**GPU (Graphics Processing Unit)**, is specialized cpu designed to do graphics calculation. GPU has many small core and are optimized for parallel processing or performing many calculations simultaneously. Parallel processing are used extensively in graphics where many things happen at once and all need to be updated.
+**GPU (Graphics Processing Unit)**, is specialized cpu designed to do graphics calculation. GPU has many small core and are optimized for parallel processing or performing many calculations simultaneously. Parallel processing are used extensively in graphics where many things happen at once and all need to be updated. The use of specialized hardware components like GPU is called hardware accelaration.
 
 ![Video card and GPU](./videocard-gpu.png)  
 Source : [https://www.electronicshub.org/apu-vs-cpu/](https://www.electronicshub.org/apu-vs-cpu/)

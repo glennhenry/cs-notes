@@ -28,13 +28,6 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - [Cloud Computing](cloud-computing)
 - [Extras](extras)
 
-TODO :
-
-- CG / Computer Display (monitor)
-- CG / pixel scaling / image upscaling
-- CG / abstract graphics
-- CG / scanline rendering
-
 ### Credits
 
 #### Site Generator

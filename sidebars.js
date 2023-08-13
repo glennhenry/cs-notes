@@ -237,6 +237,7 @@ const sidebars = {
         "computer-graphics/03-2d-transformation/2d-transformation",
         "computer-graphics/04-3d-transformation/3d-transformation",
         "computer-graphics/gpu-pipeline/gpu-pipeline",
+        "computer-graphics/low-level-graphics/low-level-graphics",
         "computer-graphics/curves/curves",
         "computer-graphics/surfaces/surfaces",
         "computer-graphics/textures-part-1/textures-part-1",
@@ -270,7 +271,9 @@ const sidebars = {
       type: "category",
       label: "Machine Learning",
       link: { type: "doc", id: "machine-learning/machine-learning" },
-      items: [],
+      items: [
+        "machine-learning/xx-natural-language-processing/natural-language-processing",
+      ],
     },
 
     // Deep Learning

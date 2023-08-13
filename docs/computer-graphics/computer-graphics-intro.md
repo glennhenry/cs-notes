@@ -9,6 +9,8 @@ description: Computer Graphics Notes
 
 **Main source : [Cem Yuksel Introduction to Computer Graphics](https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh)**
 
+This may includes source outside the main source.
+
 **Computer Graphics** is the branch of computer science that deals with creating, manipulating, and displaying visual content using computers.
 
 The overview of computer graphics process involve these 3 :
@@ -24,6 +26,7 @@ The overview of computer graphics process involve these 3 :
 - [2D Transformation](computer-graphics/2d-transformation)
 - [3D Transformation](computer-graphics/3d-transformation)
 - [GPU Pipeline](computer-graphics/gpu-pipeline)
+- [GPU Pipeline](computer-graphics/low-level-graphics)
 - [Curves](computer-graphics/curves)
 - [Surfaces](computer-graphics/surfaces)
 - [Textures (Part 1)](computer-graphics/textures-part-1)

@@ -13,9 +13,58 @@ Computer generates information, the process of displaying the information is cal
 
 Computer can generate complex visual like animation and video, computer is able to do this by creating illusion of motion. In fact those motion are created by sequence of image that is displayed and updated bunch of times per seconds.
 
+https://youtu.be/yxygknX1AiE
+
 ### Type of Computer Display
 
-...CRT, LCD, LED, VGA, HDMI, display port
+#### Cathode Ray Tube (CRT)
+
+CRT is the oldest monitor display, it uses 3 color electron gun (red, green, blue). The electron gun will rapidly fire to the screen creating a combination of colors. The rate of fire or the re-drawing is called **refresh rate**. For example a refresh rate of 60 Hz means that the display will be re-drawn 60 times per second.
+
+![Electron gun firing to screen to display image of building](./crt.png)  
+Source : https://youtu.be/yxygknX1AiE?t=101
+
+#### Liquid Crystal Display (LCD)
+
+LCD displays is a flat display that consist of a layer of liquid crystal material, in front of that there exists an RGB color filter to produce the different color we need. An LCD monitor needs a light source behind.
+
+![Layer of LCD monitor](./lcd.png)  
+Source : https://youtu.be/yxygknX1AiE?t=162
+
+#### Light Emitting Diode (LED)
+
+An LED display is a type of LCD display which use light-emitting diodes (LEDs) light as the light source.
+
+![Comparison of light source between LCD and LED](./led.png)  
+Source : https://youtu.be/yxygknX1AiE?t=215
+
+#### Flat Panel Types
+
+- **Twisted Nematic (TN)** : TN panels use liquid crystals that twist in response to an applied electric current. TN has a good response time, however, TN panels have limited viewing angles, meaning that color and image quality degrade when viewed from off-center angles.
+
+- **In-Plane Switching (IPS)** : IPS uses liquid crystals that move horizontally between two glass plates. They are arranged in a parallel orientation between the glass plates. IPS offers wider viewing angles compared to TN panels, while also ensuring consistent colors and image quality even when viewed from different angles.
+
+- **Vertical Alignment (VA)** : VA panels use liquid crystals that align vertically between two glass plates. Liquid crystals in VA panels can tilt and align in different angles to control the passage of light.
+
+![Comparison between flat panel types](./panel-type.png)  
+Source : https://www.benq.com/en-us/knowledge-center/knowledge/how-to-choose-between-tn-va-and-ips-panels-for-the-games-you-play.html
+
+### Video Interface
+
+A video interfaaces is used for transferring display signals from a device (such as a CPU or GPU) to a monitor or display. After the CPU and GPU generate graphics, the binary data representing the images or video is sent from the device to the display using one of these interfaces.
+
+**VGA** : VGA is an analog video display interface meaning it can only transfer analog data, it is commonly found on older computers, monitors, and projectors.
+
+**DVI** : DVI is made to succeed the VGA, it has 3 types, DVI-A which only sends analog signal, DVI-D that sends digital signal and DVI-I which is able to send both analog and digital signal.
+
+**HDMI** : HDMI is a popular use nowadays, it transmit high-definition audio, video, and network communication signals in a single cable.
+
+**DisplayPort** : DisplayPort is primarily used for video, however it can also be used for transfering USB data and audio. DisplayPort is able to send display by chaining from monitors to monitors, it is called daisy chaining.
+
+**Thunderbolt** : Thunderbolt is relatively new technology released in 2011. Thunderbolt is used in Apple technologies, it offers high bandwidth and up to 6 daisy chaining.
+
+![Comparison between video interfaces](./video-interface.png)  
+Source : https://www.jagadmedia.id/2020/11/perbedaan-dvi-hdmi-displayport-vga.html
 
 ### Display Measurement
 

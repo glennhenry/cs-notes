@@ -15,6 +15,7 @@ Rendering process which include rasterization, uses several algorithm :
 
 Rasterization :
 
+- Scanline Rendering
 - Painter Algorithm
 - Z-Buffer Rasterization
 - A-Buffer Rasterization
@@ -31,6 +32,13 @@ There is also an improvement for Anti-Aliasing (AA) which is **Multi Sample Anti
 
 ![A triangle is sampled four times in each pixel](./multi-sample-anti-aliasing.png)  
 Source : [https://youtu.be/0WrzyD8nBlk?t=1425](https://youtu.be/0WrzyD8nBlk?t=1425)
+
+### Scanline Rendering
+
+**Scanline Rendering** is a technique used in computer graphics to generate images by processing one horizontal line of pixels, known as a scanline, at a time. It involves determining the intersection points of geometric primitives (such as triangles or polygons) with each scanline and then shading those pixels to produce the final image.
+
+![A gif of scanline rendering scanning through a triangle](./scanline-rendering.gif)  
+Source : https://youtu.be/TEAtmCYYKZA
 
 ### Painter Algorithm
 

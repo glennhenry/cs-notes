@@ -11,6 +11,8 @@ description: Digital Media Processing Notes
 
 Most of the fundamental concepts are covered in [Digital Signal Processing](/digital-signal-processing). Some concept about image and graphics are also in [Computer Graphics](/computer-graphics). With these other topic, most of the topic here are addition or application, so there may be many reference to other pages.
 
+### All pages
+
 - Image Processing
 
   - [Image Properties](digital-media-processing/image-properties)
