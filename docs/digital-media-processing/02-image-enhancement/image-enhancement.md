@@ -27,6 +27,7 @@ Source : https://www.behance.net/gallery/115047653/PORTRAIT-EDIT-BEFORE-AFTER
 2.  **Contrast Enhancement** : It aims to improve the visual contrast and distinguishability of details in an image. The method are : linear contrast transformation, histogram equalization like the previous.
 
     - Linear Contrast Stretching : maps original pixel values to a new range of values. For example a color ranging between 0 to 255 will be mapped to 50 to 255. This effect will be an increase in brightness or lightness of the image.
+    
       ![A graph centered on middle is spread out](./linear-contrast-stretching.png)  
       Source : https://theailearner.com/2019/01/30/contrast-stretching/
 
@@ -38,6 +39,7 @@ Source : https://www.behance.net/gallery/115047653/PORTRAIT-EDIT-BEFORE-AFTER
     Source : https://www.studiobinder.com/blog/color-grading-vs-color-correction-process/
 
 4.  **Image Filtering** : Applies a set of filters which is a mathematical function to the pixel values of the image. Find out more in [Computer Graphics Image Filters](/computer-graphics/signal-processing#image-filters).
+
     ![Various filter are applied to same image](./image-filter.jpg)  
     Source : https://www.cosmo.ph/entertainment/how-to-choose-the-best-instagram-filter
 
@@ -47,5 +49,6 @@ Source : https://www.behance.net/gallery/115047653/PORTRAIT-EDIT-BEFORE-AFTER
     Source : https://ai.stanford.edu/~syyeung/cvweb/tutorial1.html
 
 6.  **Noise Reduction** : Process of reducing or removing unwanted noise from an image. Noise is an unwanted signal or data, in the case of image, the random pixel color that degrades image quality and affect visual clarity. Find out more in [DSP Denoising](/digital-signal-processing/denoising)
+
     ![An image with random dots/noise that disrupts the image is removed](./noise-reduction.jpeg)  
     Source : https://www.dvdfab.cn/resource/video/denoise

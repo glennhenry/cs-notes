@@ -99,13 +99,15 @@ const sidebars = {
           ],
         },
 
-        // {
-        //   type: "category",
-        //   label: "Video Processing",
-        //   items: [
-
-        //   ],
-        // },
+        {
+          type: "category",
+          label: "Video Processing",
+          items: [
+            "digital-media-processing/video-representation/video-representation",
+            "digital-media-processing/video-recording/video-recording",
+            "digital-media-processing/video-effects-enhancement/video-effects-enhancement",
+          ],
+        },
 
         // {
         //   type: "category",
@@ -155,6 +157,8 @@ const sidebars = {
         "computer-networking/xx3-ports/ports",
         "computer-networking/xx4-http-and-https/http-and-https",
         "computer-networking/xx5-server/server",
+        "computer-networking/xx6-packet-sniffing/packet-sniffing",
+        "computer-networking/xx7-real-time-communication/real-time-communication",
       ],
     },
 

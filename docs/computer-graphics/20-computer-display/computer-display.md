@@ -13,9 +13,9 @@ Computer generates information, the process of displaying the information is cal
 
 Computer can generate complex visual like animation and video, computer is able to do this by creating illusion of motion. In fact those motion are created by sequence of image that is displayed and updated bunch of times per seconds.
 
-https://youtu.be/yxygknX1AiE
-
 ### Type of Computer Display
+
+**Source : [PowerCert](https://youtu.be/yxygknX1AiE)**
 
 #### Cathode Ray Tube (CRT)
 

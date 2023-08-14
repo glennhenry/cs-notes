@@ -34,6 +34,7 @@ description: Computer Networking Notes
 - DNS
 - FTP
 - SMTP
+- Real Time Communication (RTC) (rtp, rtmp, rtc webrtc)
 - Security ("ref to computer security")
     - Firewall
     - DDoS

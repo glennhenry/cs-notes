@@ -32,11 +32,10 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
 
 - Video Processing
 
-  - Video Representation (fps, ref to computer display and animation)
-  - Video Recording (obs)
-  - Video Enhancement
+  - [Video Representation](digital-media-processing/video-representation)
+  - [Video Recording](digital-media-processing/video-recording)
+  - [Video Effects & Enhancement](digital-media-processing/video-effects-enhancement)
   - Video Editing (premiere pro)
-  - Video Streaming (bitrate)
   - Flash Player SWF
   - VR & AR
 
