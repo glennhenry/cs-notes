@@ -35,9 +35,7 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
   - [Video Representation](digital-media-processing/video-representation)
   - [Video Recording](digital-media-processing/video-recording)
   - [Video Effects & Enhancement](digital-media-processing/video-effects-enhancement)
-  - Video Editing (premiere pro)
-  - Flash Player SWF
-  - VR & AR
+  - [Flash Player SWF](digital-media-processing/flash-player-swf)
 
 - Digital Media Formats
   - Image

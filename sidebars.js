@@ -106,6 +106,7 @@ const sidebars = {
             "digital-media-processing/video-representation/video-representation",
             "digital-media-processing/video-recording/video-recording",
             "digital-media-processing/video-effects-enhancement/video-effects-enhancement",
+            "digital-media-processing/flash-player-swf/flash-player-swf",
           ],
         },
 
@@ -307,6 +308,7 @@ const sidebars = {
       items: [
         "extras/deepweb-and-darkweb/deepweb-and-darkweb",
         "extras/tor-browser/tor-browser",
+        "extras/vr-ar/vr-ar",
       ],
     },
   ],

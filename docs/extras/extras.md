@@ -7,9 +7,10 @@ description: Extras
 
 **Main Source : Usually [Wikipedia](https://www.wikipedia.org/)**
 
-Contains some extra topics that is either not a very big topics or not very important in computer science but still related. I feel like some of these are interesting so why don't I also note it?
+Contains some additional topics that are either not very extensive or of lesser significance in computer science, but still related. I find some of these topics interesting, so I thought of noting it aswell.
 
 ### All pages
 
 - [Deep Web & Dark Web](extras/deepweb-and-darkweb)
 - [Tor Browser](extras/tor-browser)
+- [VR & AR](extras/vr-ar)
