@@ -41,9 +41,9 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
   - MIME Type
   - Image
     - [Bitmap (BMP)](digital-media-processing/bitmap-bmp)
-    - [JPG / JPEG](/digital-media-processing/jpg-jpeg)
-    - [PNG](/digital-media-processing/png)
-    - [WebP](/digital-media-processing/webp)
+    - [JPG / JPEG](digital-media-processing/jpg-jpeg)
+    - [PNG](digital-media-processing/png)
+    - [WebP](digital-media-processing/webp)
     - SVG
     - GIF
   - Audio
