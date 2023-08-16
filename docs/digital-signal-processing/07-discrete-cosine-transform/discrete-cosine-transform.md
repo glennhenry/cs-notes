@@ -53,3 +53,7 @@ The last step of DCT is [Huffman Encoding](/digital-signal-processing/compressio
 
 ![The process of DCT compression](./dct-compression.png)  
 Source : https://www.researchgate.net/figure/Algorithm-and-procedure-of-the-JPEG-image-compression-The-original-image-is-compressed_fig1_338524056
+
+:::tip
+Find out more about JPG compression [here](/digital-media-processing/jpg-jpeg)
+:::

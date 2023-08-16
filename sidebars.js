@@ -67,8 +67,6 @@ const sidebars = {
     {
       type: "category",
       label: "Digital Media Processing",
-
-      // Link is used only if it has md file
       link: {
         type: "doc",
         id: "digital-media-processing/digital-media-processing",
@@ -110,17 +108,24 @@ const sidebars = {
           ],
         },
 
-        // {
-        //   type: "category",
-        //   label: "Digital Media Formats",
-        //   items: [
-        //     {
-        //       type: "category",
-        //       label: "Image",
-        //       items: [
+        {
+          type: "category",
+          label: "Digital Media Formats",
+          items: [
+            "digital-media-processing/mime-type/mime-type",
+            {
+              type: "category",
+              label: "Image",
+              items: [
+                "digital-media-processing/bitmap-bmp/bitmap-bmp",
+                "digital-media-processing/jpg-jpeg/jpg-jpeg",
+                "digital-media-processing/png/png",
+                "digital-media-processing/webp/webp",
+              ],
+            },
+          ]
+        }
 
-        //       ],
-        //     },
         //     {
         //       type: "category",
         //       label: "Audio",

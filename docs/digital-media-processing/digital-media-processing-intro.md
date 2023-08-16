@@ -38,11 +38,12 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
   - [Flash Player SWF](digital-media-processing/flash-player-swf)
 
 - Digital Media Formats
+  - MIME Type
   - Image
-    - BMP
-    - JPG
-    - PNG
-    - WebP
+    - [Bitmap (BMP)](digital-media-processing/bitmap-bmp)
+    - [JPG / JPEG](/digital-media-processing/jpg-jpeg)
+    - [PNG](/digital-media-processing/png)
+    - [WebP](/digital-media-processing/webp)
     - SVG
     - GIF
   - Audio
