@@ -38,26 +38,27 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
   - [Flash Player SWF](digital-media-processing/flash-player-swf)
 
 - Digital Media Formats
-  - MIME Type
+  - [MIME Type](digital-media-processing/mime-type)
   - Image
     - [Bitmap (BMP)](digital-media-processing/bitmap-bmp)
     - [JPG / JPEG](digital-media-processing/jpg-jpeg)
     - [PNG](digital-media-processing/png)
     - [WebP](digital-media-processing/webp)
-    - SVG
-    - GIF
+    - [SVG](digital-media-processing/svg)
+    - [GIF](digital-media-processing/gif)
   - Audio
-    - WAV
-    - OGG
-    - MP3
+    - [WAV](digital-media-processing/wav)
+    - [OGG](digital-media-processing/ogg)
+    - [MP3](digital-media-processing/mp3)
   - Video
-    - 3GP
-    - AVI
-    - MP4 (H.265)
-    - WebM
+    - [AVI](digital-media-processing/avi)
+    - [MP4](digital-media-processing/mp4)
+    - [WebM](digital-media-processing/webm)
   - Document
-    - TXT
-    - PDF
+    - [XML](digital-media-processing/xml)
+    - [MD](digital-media-processing/md)
+    - [TXT](digital-media-processing/txt)
+    - [PDF](digital-media-processing/pdf)
 
 :::tip
 Click [here](/computer-graphics/computer-animation) to know more about computer animation.

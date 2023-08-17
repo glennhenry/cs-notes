@@ -40,7 +40,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 #### Online Courses and Media Source
 
-- Various online resource were used in the creation of this site, I included all resource in each section.
+- Various online resource were used in the creation of this site, I try to include all resource in each section.
 
 #### Additional Resources
 

@@ -121,34 +121,40 @@ const sidebars = {
                 "digital-media-processing/jpg-jpeg/jpg-jpeg",
                 "digital-media-processing/png/png",
                 "digital-media-processing/webp/webp",
+                "digital-media-processing/svg/svg",
+                "digital-media-processing/gif/gif",
+              ],
+            },
+            {
+              type: "category",
+              label: "Audio",
+              items: [
+                "digital-media-processing/wav/wav",
+                "digital-media-processing/mp3/mp3",
+                "digital-media-processing/ogg/ogg",
+              ],
+            },
+            {
+              type: "category",
+              label: "Video",
+              items: [
+                "digital-media-processing/avi/avi",
+                "digital-media-processing/mp4/mp4",
+                "digital-media-processing/webm/webm",
+              ],
+            },
+            {
+              type: "category",
+              label: "Document",
+              items: [
+                "digital-media-processing/xml/xml",
+                "digital-media-processing/md/md",
+                "digital-media-processing/txt/txt",
+                "digital-media-processing/pdf/pdf",
               ],
             },
           ]
-        }
-
-        //     {
-        //       type: "category",
-        //       label: "Audio",
-        //       items: [
-
-        //       ],
-        //     },
-        //     {
-        //       type: "category",
-        //       label: "Video",
-        //       items: [
-
-        //       ],
-        //     },
-        //     {
-        //       type: "category",
-        //       label: "Document",
-        //       items: [
-
-        //       ],
-        //     },
-        //   ],
-        // },
+        },
       ],
     },
 
