@@ -130,8 +130,8 @@ const sidebars = {
               label: "Audio",
               items: [
                 "digital-media-processing/wav/wav",
+                "digital-media-processing/ogg-vorbis/ogg-vorbis",
                 "digital-media-processing/mp3/mp3",
-                "digital-media-processing/ogg/ogg",
               ],
             },
             {

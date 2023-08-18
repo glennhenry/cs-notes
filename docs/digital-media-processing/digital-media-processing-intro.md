@@ -48,7 +48,7 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
     - [GIF](digital-media-processing/gif)
   - Audio
     - [WAV](digital-media-processing/wav)
-    - [OGG](digital-media-processing/ogg)
+    - [OGG Vorbis](digital-media-processing/ogg-vorbis)
     - [MP3](digital-media-processing/mp3)
   - Video
     - [AVI](digital-media-processing/avi)

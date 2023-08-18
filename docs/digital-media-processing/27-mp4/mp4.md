@@ -6,3 +6,5 @@ description: MP4
 ---
 
 **MP4** is...
+
+aac codecs
