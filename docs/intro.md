@@ -31,7 +31,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 TODO :
 
 1. Virtualization operating system and cloud computing (probably will be the same notes) (virtualbox as example)
-2. OGG Vorbis should refer to cryptography hash function
+2. OGG Vorbis should refer to cryptography or cybersecurity hash function
+3. Text File (txt) should refer to UTF-8
+4. PDF maybe? refer to AES encryption in crpytography or cybersecurity
 
 ### Credits
 

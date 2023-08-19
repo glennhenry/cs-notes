@@ -53,11 +53,10 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
   - Video
     - [AVI](digital-media-processing/avi)
     - [MP4](digital-media-processing/mp4)
-    - [WebM](digital-media-processing/webm)
   - Document
     - [XML](digital-media-processing/xml)
-    - [MD](digital-media-processing/md)
-    - [TXT](digital-media-processing/txt)
+    - [Markdown (MD)](digital-media-processing/markdown-md)
+    - [Text File (txt)](digital-media-processing/text-file-txt)
     - [PDF](digital-media-processing/pdf)
 
 :::tip

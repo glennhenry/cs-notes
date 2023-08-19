@@ -140,7 +140,6 @@ const sidebars = {
               items: [
                 "digital-media-processing/avi/avi",
                 "digital-media-processing/mp4/mp4",
-                "digital-media-processing/webm/webm",
               ],
             },
             {
@@ -148,8 +147,8 @@ const sidebars = {
               label: "Document",
               items: [
                 "digital-media-processing/xml/xml",
-                "digital-media-processing/md/md",
-                "digital-media-processing/txt/txt",
+                "digital-media-processing/markdown-md/markdown-md",
+                "digital-media-processing/text-file-txt/text-file-txt",
                 "digital-media-processing/pdf/pdf",
               ],
             },
