@@ -152,7 +152,7 @@ const sidebars = {
                 "digital-media-processing/pdf/pdf",
               ],
             },
-          ]
+          ],
         },
       ],
     },
@@ -163,13 +163,110 @@ const sidebars = {
       label: "Computer Networking",
       link: { type: "doc", id: "computer-networking/computer-networking" },
       items: [
-        "computer-networking/xx-dns/dns",
-        "computer-networking/xx2-ip-address/ip-address",
-        "computer-networking/xx3-ports/ports",
-        "computer-networking/xx4-http-and-https/http-and-https",
-        "computer-networking/xx5-server/server",
-        "computer-networking/xx6-packet-sniffing/packet-sniffing",
-        "computer-networking/xx7-real-time-communication/real-time-communication",
+        {
+          type: "category",
+          label: "Network Standard",
+          items: [
+            "computer-networking/osi-model/osi-model",
+            "computer-networking/tcp-ip-model/tcp-ip-model",
+          ],
+        },
+        {
+          type: "category",
+          label: "Network Fundamental",
+          items: [
+            {
+              type: "category",
+              label: "Network Addressing",
+              items: [
+                "computer-networking/ip-address/ip-address",
+                "computer-networking/mac-address/mac-address",
+                "computer-networking/ipv4-ipv6/ipv4-ipv6",
+                "computer-networking/subnet-mask/subnet-mask",
+                "computer-networking/routing/routing",
+                "computer-networking/gateway/gateway",
+              ],
+            },
+
+            {
+              type: "category",
+              label: "Network Device",
+              items: [
+                "computer-networking/ports/ports",
+                "computer-networking/socket/socket",
+                "computer-networking/hubs/hubs",
+                "computer-networking/switch/switch",
+                "computer-networking/router/router",
+                "computer-networking/modem/modem",
+              ],
+            },
+
+            {
+              type: "category",
+              label: "Computer Connection",
+              items: [
+                "computer-networking/dial-up/dial-up",
+                "computer-networking/broadband/broadband",
+                "computer-networking/ethernet/ethernet",
+                "computer-networking/lan-wan/lan-wan",
+                "computer-networking/server/server",
+              ],
+            },
+          ],
+        },
+        "computer-networking/network-topology/network-topology",
+        {
+          type: "category",
+          label: "Network Services & Protocol",
+          items: [
+            "computer-networking/dns/dns",
+            "computer-networking/udp/udp",
+            "computer-networking/dhcp/dhcp",
+            "computer-networking/nat/nat",
+            "computer-networking/proxy/proxy",
+            "computer-networking/vpn/vpn",
+            {
+              type: "category",
+              label: "Network Protocol",
+              items: [
+                "computer-networking/tcp-protocol/tcp-protocol",
+                "computer-networking/ftp/ftp",
+                "computer-networking/smtp/smtp",
+                "computer-networking/rtp/rtp",
+                "computer-networking/http-https/http-https",
+              ],
+            },
+          ],
+        }, 
+        "computer-networking/real-time-communication-rtc/real-time-communication-rtc",
+        {
+          type: "category",
+          label: "Wireless Networking",
+          items: [
+            "computer-networking/wi-fi/wi-fi",
+            "computer-networking/hotspot/hotspot",
+            "computer-networking/bluetooth/bluetooth",
+          ],
+        },
+
+        {
+          type: "category",
+          label: "Mobile Networking",
+          items: [
+            "computer-networking/cellular-networking/cellular-networking",
+            "computer-networking/sim-card/sim-card",
+          ],
+        },
+        
+        {
+          type: "category",
+          label: "Network Security",
+          items: [
+            "computer-networking/firewall/firewall",
+            "computer-networking/ddos/ddos",
+            "computer-networking/network-encryption/network-encryption",
+          ],
+        },
       ],
     },
 
