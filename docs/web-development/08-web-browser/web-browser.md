@@ -14,7 +14,7 @@ A web browser, is a software application used to access and view websites and ot
 
 - **Connect to Server** : Browsers connects a server or website first by sending a [web address or URL (Uniform Resource Locator)](/web-development/web-url) entered by user to [DNS](/computer-networking/dns) to find the [IP address](/computer-networking/ip-address) of the web server that hosts the requested web page.
 
-- **Communicate with Server** : After that browser will sends a request to the web server for the specific web page or resource that the user requested, using the [HTTP or HTTPS](/computer-networking/http-and-https) protocol. The web server responds by sending the requested web page or resource back to the browser.
+- **Communicate with Server** : After that browser will sends a request to the web server for the specific web page or resource that the user requested, using the [HTTP or HTTPS](/computer-networking/http-https) protocol. The web server responds by sending the requested web page or resource back to the browser.
 
 - **Render Pages** : The received page and resource are then rendered to user, meaning browser will interpret the content of a webpage defined by [HTML, CSS, and Javascript](/web-development/html-css-javascript) code for the page from the web server and uses a [rendering engine](/web-development/javascript#v8-javascript-engine) to translate that code into a visual representation that can be displayed on the screen.
 
