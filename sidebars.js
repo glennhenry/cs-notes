@@ -180,9 +180,8 @@ const sidebars = {
               label: "Network Addressing",
               items: [
                 "computer-networking/ip-address/ip-address",
-                "computer-networking/mac-address/mac-address",
-                "computer-networking/ipv4-ipv6/ipv4-ipv6",
                 "computer-networking/subnet-mask/subnet-mask",
+                "computer-networking/mac-address/mac-address",
                 "computer-networking/routing/routing",
                 "computer-networking/gateway/gateway",
               ],

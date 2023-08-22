@@ -13,15 +13,16 @@ description: Computer Networking Notes
 
 ### All topics
 
+ipconfig, ping
+
 - Network Standard (explain all layer function and how they interact)
   - [OSI Model](computer-networking/osi-model)
   - [TCP/IP Model](computer-networking/tcp-ip-model)
 - Network Fundamental (explain what are they and how do they work)
   - Network Addressing
     - [IP Address](computer-networking/ip-address) (public private IP)
-    - [MAC Address](computer-networking/mac-address)
-    - [IPv4 & IPv6](computer-networking/ipv4-ipv6)
     - [Subnet Mask](computer-networking/subnet-mask)
+    - [MAC Address](computer-networking/mac-address)
     - [Routing](computer-networking/routing) (explain packets, extra packet sniffing)
     - [Gateway](computer-networking/gateway)
   - Network Device

@@ -32,8 +32,10 @@ TODO :
 
 1. Virtualization operating system and cloud computing (probably will be the same notes) (virtualbox as example)
 2. OGG Vorbis should refer to cryptography or cybersecurity hash function
-3. Text File (txt) should refer to UTF-8
+3. Text File (txt) should refer to UTF-8 somewhere
 4. PDF maybe? refer to AES encryption in crpytography or cybersecurity
+5. IP Address maybe refer to binary format and hexadecimal somewhere
+6. subnet mask maybe refer to bitwise operation AND
 
 ### Credits
 
