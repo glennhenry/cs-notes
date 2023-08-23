@@ -184,6 +184,7 @@ const sidebars = {
                 "computer-networking/mac-address/mac-address",
                 "computer-networking/routing/routing",
                 "computer-networking/gateway/gateway",
+                "computer-networking/ports/ports",
               ],
             },
 
@@ -191,19 +192,18 @@ const sidebars = {
               type: "category",
               label: "Network Device",
               items: [
-                "computer-networking/ports/ports",
-                "computer-networking/socket/socket",
-                "computer-networking/hubs/hubs",
-                "computer-networking/switch/switch",
                 "computer-networking/router/router",
+                "computer-networking/switch/switch",
+                "computer-networking/hubs/hubs",
                 "computer-networking/modem/modem",
               ],
             },
-
+            
             {
               type: "category",
               label: "Computer Connection",
               items: [
+                "computer-networking/socket/socket",
                 "computer-networking/dial-up/dial-up",
                 "computer-networking/broadband/broadband",
                 "computer-networking/ethernet/ethernet",

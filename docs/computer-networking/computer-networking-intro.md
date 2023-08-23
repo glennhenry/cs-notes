@@ -15,24 +15,24 @@ description: Computer Networking Notes
 
 ipconfig, ping
 
-- Network Standard (explain all layer function and how they interact)
+- Network Standard
   - [OSI Model](computer-networking/osi-model)
   - [TCP/IP Model](computer-networking/tcp-ip-model)
-- Network Fundamental (explain what are they and how do they work)
+- Network Fundamental
   - Network Addressing
-    - [IP Address](computer-networking/ip-address) (public private IP)
+    - [IP Address](computer-networking/ip-address)
     - [Subnet Mask](computer-networking/subnet-mask)
     - [MAC Address](computer-networking/mac-address)
-    - [Routing](computer-networking/routing) (explain packets, extra packet sniffing)
+    - [Routing](computer-networking/routing)
     - [Gateway](computer-networking/gateway)
+    - [Ports](computer-networking/ports)
   - Network Device
-    - [Ports](computer-networking/ports) (port forwarding)
-    - [Socket](computer-networking/socket)
-    - [Hubs](computer-networking/hubs)
-    - [Switch](computer-networking/switch)
     - [Router](computer-networking/router)
+    - [Switch](computer-networking/switch)
+    - [Hubs](computer-networking/hubs)
     - [Modem](computer-networking/modem)
   - Computer Connection
+    - [Socket](computer-networking/socket)
     - [Dial-up](computer-networking/dial-up)
     - [Broadband](computer-networking/broadband)
     - [Ethernet](computer-networking/ethernet)
