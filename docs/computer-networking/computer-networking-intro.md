@@ -63,3 +63,4 @@ ipconfig, ping
   - [Firewall](computer-networking/firewall)
   - [DDoS](computer-networking/ddos)
   - [Network Encryption](computer-networking/network-encryption) (SSH, SSL, TLS)
+- [Networking Command](computer-networking/networking-command) (ipconfig, ping, tracert, netstat, ssh)

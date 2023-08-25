@@ -265,6 +265,7 @@ const sidebars = {
             "computer-networking/network-encryption/network-encryption",
           ],
         },
+        "computer-networking/networking-command/networking-command",
       ],
     },
 
