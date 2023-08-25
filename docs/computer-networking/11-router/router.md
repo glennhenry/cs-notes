@@ -5,7 +5,10 @@ title: Router
 description: Router
 ---
 
-**Main Source : [Wikipedia Router (computing)](<https://en.wikipedia.org/wiki/Router_(computing)>)**
+**Main Source :**
+
+- **[Wikipedia Router (computing)](<https://en.wikipedia.org/wiki/Router_(computing)>)**
+- **[Hub, Switch, & Router Explained | PowerCert](https://youtu.be/1z0ULvg_pW8?si=6F-oF8maBovN6VnN)**
 
 **Router** is a networking device that connects multiple computer networks together, and directs network traffic between them. It uses uses [IP addresses](/computer-networking/ip-address) to make decisions on how to forward data packets across networks.
 
@@ -23,3 +26,14 @@ Source : https://www.mytechlogy.com/IT-blogs/22654/essential-settings-for-home-n
 :::tip
 Find out more about how routers forward or send data to another routers [here](/computer-networking/routing)
 :::
+
+### Hub & Switch vs Router
+
+[Hub](/computer-networking/hub) and [switch](/computer-networking/switch) are networking device used for local or private network, it can't sends data to external network. This is because hub and switch doesn't have public IP address, as you need it to communicate with external network like internet.
+
+A network may have hub or switch to connects the local device and have a router to externally connect with other network. Data transmission from the local network won't be forwarded to external network by router. Only if the local device wants to send it outside using the destination IP address.
+
+Hubs and switches can be thought as the device you use to make network, while routers are used to connect them.
+
+![Several local network connected with switch and externally connected with router](./hub-switch-vs-router.png)  
+Source : https://youtu.be/1z0ULvg_pW8?si=GkDgO98d3d0uKt43&t=401

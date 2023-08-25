@@ -192,10 +192,10 @@ const sidebars = {
               type: "category",
               label: "Network Device",
               items: [
-                "computer-networking/router/router",
-                "computer-networking/switch/switch",
                 "computer-networking/hubs/hubs",
-                "computer-networking/modem/modem",
+                "computer-networking/switch/switch",
+                "computer-networking/router/router",
+                "computer-networking/dial-up-modem/dial-up-modem",
               ],
             },
             
@@ -204,7 +204,6 @@ const sidebars = {
               label: "Computer Connection",
               items: [
                 "computer-networking/socket/socket",
-                "computer-networking/dial-up/dial-up",
                 "computer-networking/broadband/broadband",
                 "computer-networking/ethernet/ethernet",
                 "computer-networking/lan-wan/lan-wan",

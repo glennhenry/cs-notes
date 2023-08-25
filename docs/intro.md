@@ -45,11 +45,11 @@ TODO :
 
 #### AI Chatbot Software
 
-- Assisted with few AI tools [Sage Poe](https://poe.com), [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/). **Most of the source here are are also from AI**.
+- Assisted with few AI tools [Sage Poe](https://poe.com), [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/). **Most of the source here are are also from AI**. I combined what the resources says with extra explanation from AI bots.
 
 #### Online Courses and Media Source
 
-- Various online resource were used in the creation of this site, I try to include all resource in each section. These resource act as the curriculum of what should I learn and the structure of what a topic contains. I combined what the resources says with extra explanation from AI bots.
+- Various online resource were used in the creation of this site, I try to include all resource in each section. These resource act as the curriculum of what should I learn and the structure of what a topic contains. 
 
 #### Additional Resources
 
