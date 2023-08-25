@@ -29,7 +29,7 @@ Find out more about how routers forward or send data to another routers [here](/
 
 ### Hub & Switch vs Router
 
-[Hub](/computer-networking/hub) and [switch](/computer-networking/switch) are networking device used for local or private network, it can't sends data to external network. This is because hub and switch doesn't have public IP address, as you need it to communicate with external network like internet.
+[Hub](/computer-networking/hubs) and [switch](/computer-networking/switch) are networking device used for local or private network, it can't sends data to external network. This is because hub and switch doesn't have public IP address, as you need it to communicate with external network like internet.
 
 A network may have hub or switch to connects the local device and have a router to externally connect with other network. Data transmission from the local network won't be forwarded to external network by router. Only if the local device wants to send it outside using the destination IP address.
 

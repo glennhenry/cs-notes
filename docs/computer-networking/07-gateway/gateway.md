@@ -14,7 +14,7 @@ description: Gateway
 
 Gateway is different with [routers](/computer-networking/router), gateway is a more broader term that refers to any device or software that acts as bridge between networks. Router is a more specific device, it is a type of gateway.
 
-Although, a gateway can be a combination of router, [switch](/computer-networking/switch), and [modem](/computer-networking/modem). Basically it act as a device that connects to external network while also able to connect device inside the local network. It communicate with external networks by using telephone lines just like modem.
+Although, a gateway can be a combination of router, [switch](/computer-networking/switch), and [modem](/computer-networking/dial-up-modem). Basically it act as a device that connects to external network while also able to connect device inside the local network. It communicate with external networks by using telephone lines just like modem.
 
 ![4 Computer are connected to router as gateway that connects to server](./gateway-example.png)  
 Source : https://www.teachoo.com/16666/3775/Question-5/category/Past-Year---1-Mark-Questions/

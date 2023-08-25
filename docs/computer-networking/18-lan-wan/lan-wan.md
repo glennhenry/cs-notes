@@ -8,3 +8,6 @@ description: LAN & WAN
 **Main Source : **
 
 LAN & WAN page
+
+### Virtual Local Area Network (VLAN)
+

@@ -29,7 +29,7 @@ Switch allows administrators to control access to the network by limiting the de
 
 #### Network Segmentation
 
-Switch also supports network segmentation through the use of [Virtual Local Area Network (VLAN)](/computer-networking/lan-wan/vlan). VLAN is a a technology that divide a single physical switch into multiple virtual switches or networks. Each VLAN operates as a separate broadcast domain, allowing devices within the same VLAN to communicate as if they were connected to the same physical network, even if they are physically connected to different switch ports. This also reduce the risk of network attacks.
+Switch also supports network segmentation through the use of [Virtual Local Area Network (VLAN)](/computer-networking/lan-wan#virtual-local-area-network-vlan). VLAN is a a technology that divide a single physical switch into multiple virtual switches or networks. Each VLAN operates as a separate broadcast domain, allowing devices within the same VLAN to communicate as if they were connected to the same physical network, even if they are physically connected to different switch ports. This also reduce the risk of network attacks.
 
 ![Configuring a port security](./switch-security.png)  
 Source : https://www.ciscopress.com/articles/article.asp?p=2181836&seqNum=7
