@@ -1,5 +1,5 @@
 ---
-slug: /machine-learning/natural-language-processing
+slug: /deep-learning/natural-language-processing
 id: natural-language-processing
 title: Natural Language Processing
 description: Natural Language Processing

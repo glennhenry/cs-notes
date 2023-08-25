@@ -382,9 +382,7 @@ const sidebars = {
       type: "category",
       label: "Machine Learning",
       link: { type: "doc", id: "machine-learning/machine-learning" },
-      items: [
-        "machine-learning/xx-natural-language-processing/natural-language-processing",
-      ],
+      items: [],
     },
 
     // Deep Learning
@@ -392,7 +390,10 @@ const sidebars = {
       type: "category",
       label: "Deep Learning",
       link: { type: "doc", id: "deep-learning/deep-learning" },
-      items: [],
+      items: [
+        "deep-learning/xx-natural-language-processing/natural-language-processing",
+        "deep-learning/xx1-computer-vision/computer-vision",
+      ],
     },
 
     // Cloud Computing

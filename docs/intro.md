@@ -49,7 +49,7 @@ TODO :
 
 #### Online Courses and Media Source
 
-- Various online resource were used in the creation of this site, I try to include all resource in each section.
+- Various online resource were used in the creation of this site, I try to include all resource in each section. These resource act as the curriculum of what should I learn and the structure of what a topic contains. I combined what the resources says with extra explanation from AI bots.
 
 #### Additional Resources
 
