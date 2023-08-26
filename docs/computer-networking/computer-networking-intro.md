@@ -34,9 +34,9 @@ ipconfig, ping
   - Computer Connection
     - [Socket](computer-networking/socket)
     - [Broadband](computer-networking/broadband)
-    - [Ethernet](computer-networking/ethernet) (ethernet hub)
-    - [LAN & WAN](computer-networking/lan-wan) (extra VLAN)
-    - [Server](computer-networking/server) (extra server optimization technique)
+    - [Ethernet](computer-networking/ethernet)
+    - [LAN & WAN](computer-networking/lan-wan)
+    - [Server](computer-networking/server)
   - [Network Topology](computer-networking/network-topology)
 - Network Services & Protocol
   - [DNS](computer-networking/dns)
@@ -53,6 +53,7 @@ ipconfig, ping
     - [HTTP & HTTPS](computer-networking/http-https)
   - [Real Time Communication (RTC)](computer-networking/real-time-communication-rtc) (webrtc example)
 - Wireless Networking
+  - [Wireless Access Point (WAP)](computer-networking/wireless-access-point-wap)
   - [Wi-Fi](computer-networking/wi-fi)
   - [Hotspot](computer-networking/hotspot)
   - [Bluetooth](computer-networking/bluetooth)
