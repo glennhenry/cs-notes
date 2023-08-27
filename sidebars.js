@@ -218,7 +218,6 @@ const sidebars = {
           label: "Network Services & Protocol",
           items: [
             "computer-networking/dns/dns",
-            "computer-networking/udp/udp",
             "computer-networking/dhcp/dhcp",
             "computer-networking/nat/nat",
             "computer-networking/proxy/proxy",
@@ -228,6 +227,7 @@ const sidebars = {
               label: "Network Protocol",
               items: [
                 "computer-networking/tcp-protocol/tcp-protocol",
+                "computer-networking/udp/udp",
                 "computer-networking/ftp/ftp",
                 "computer-networking/smtp/smtp",
                 "computer-networking/rtp/rtp",

@@ -13,8 +13,6 @@ description: Computer Networking Notes
 
 ### All topics
 
-ipconfig, ping
-
 - Network Standard
   - [OSI Model](computer-networking/osi-model)
   - [TCP/IP Model](computer-networking/tcp-ip-model)
@@ -40,13 +38,13 @@ ipconfig, ping
   - [Network Topology](computer-networking/network-topology)
 - Network Services & Protocol
   - [DNS](computer-networking/dns)
-  - [UDP](computer-networking/udp)
   - [DHCP](computer-networking/dhcp)
   - [NAT](computer-networking/nat)
   - [Proxy](computer-networking/proxy)
   - [VPN](computer-networking/vpn)
   - Network Protocol
     - [TCP Protocol](computer-networking/tcp-protocol)
+    - [UDP](computer-networking/udp)
     - [FTP](computer-networking/ftp)
     - [SMTP](computer-networking/smtp)
     - [RTP](computer-networking/rtp)
