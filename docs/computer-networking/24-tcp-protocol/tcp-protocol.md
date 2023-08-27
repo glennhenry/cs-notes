@@ -10,7 +10,7 @@ description: TCP Protocol
 - **[Wikipedia Transmission Control Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)**
 - **[TCP vs UDP Comparison | PowerCert](https://youtu.be/uwoD5YsGACg?si=Hy4bdZ6vr2khFBd2)**
 
-**Transmission Control Protocol (TCP)** is a protocol or set of rules used in the [TCP/IP](/computer-networking/tcp-ip) standard for internet communication and forms the basis for many applications, such as web browsing, email, file transfers, and more.
+**Transmission Control Protocol (TCP)** is a protocol or set of rules used in the [TCP/IP](/computer-networking/tcp-ip-model) standard for internet communication and forms the basis for many applications, such as web browsing, email, file transfers, and more.
 
 The TCP/IP standard refers to a suite of network protocols, TCP is one of the protocol used there. TCP is a connection-oriented protocol, meaning two devices must establish a reliable connection first before transferring any data. Both client and server need to "approve" or agree while sending the data. The connection is called **TCP connection**, there will be several steps involves to ensure that data connection is reliable and data will be sent and received correctly.
 
