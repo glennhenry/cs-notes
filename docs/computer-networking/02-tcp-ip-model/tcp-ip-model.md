@@ -36,7 +36,7 @@ Source : https://workat.tech/core-cs/tutorial/tcp-ip-reference-model-in-computer
 
    - [Hypertext Transfer Protocol (HTTP)](/computer-networking/http-https#http)
    - [File Transfer Protocol (FTP)](/computer-networking/ftp)
-   - [Simple Mail Transfer Protocol (SMTP)](/computer-networking/smtp)
+   - [Simple Mail Transfer Protocol (SMTP)](/computer-networking/email-protocol#smtp)
    - [Dynamic Host Configuration Protocol (DHCP)](/computer-networking/dhcp)
 
    ![An example of application layer protocol : smtp](./application-layer.webp)  

@@ -56,7 +56,7 @@ Source : https://community.fs.com/blog/tcpip-vs-osi-whats-the-difference-between
    ![A text is encoded and encrypted](./presentation-layer.png)  
    Source : https://realpars.com/osi/
 
-7. **Application** : After data is received, it can be presented into user that is able to interpret data received from transmission such as web browser. This layer is responsible for providing network services directly to the end-user or application. It uses internet protocols including [HTTP (Hypertext Transfer Protocol)](/computer-networking/http-https#http) for web browsing, [SMTP (Simple Mail Transfer Protocol)](/computer-networking/smtp) for email communication, [FTP (File Transfer Protocol)](/computer-networking/ftp) for file transfer, and many more.
+7. **Application** : After data is received, it can be presented into user that is able to interpret data received from transmission such as web browser. This layer is responsible for providing network services directly to the end-user or application. It uses internet protocols including [HTTP (Hypertext Transfer Protocol)](/computer-networking/http-https#http) for web browsing, [SMTP (Simple Mail Transfer Protocol)](/computer-networking/email-protocol#smtp) for email communication, [FTP (File Transfer Protocol)](/computer-networking/ftp) for file transfer, and many more.
 
    ![A browser that receives HTML pages from server](./application-layer.png)  
    Source : https://www.corelangs.com/html/introduction/first-page.html, https://jenkov.com/tutorials/html4/the-web.html
