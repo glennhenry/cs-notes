@@ -229,7 +229,7 @@ const sidebars = {
                 "computer-networking/tcp-protocol/tcp-protocol",
                 "computer-networking/udp/udp",
                 "computer-networking/ftp/ftp",
-                "computer-networking/smtp/smtp",
+                "computer-networking/email-protocol/email-protocol",
                 "computer-networking/rtp/rtp",
                 "computer-networking/http-https/http-https",
               ],

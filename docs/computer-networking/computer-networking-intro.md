@@ -46,7 +46,7 @@ description: Computer Networking Notes
     - [TCP Protocol](computer-networking/tcp-protocol)
     - [UDP](computer-networking/udp)
     - [FTP](computer-networking/ftp)
-    - [SMTP](computer-networking/smtp)
+    - [Email Protocol](computer-networking/email-protocol)
     - [RTP](computer-networking/rtp)
     - [HTTP & HTTPS](computer-networking/http-https)
   - [Real Time Communication (RTC)](computer-networking/real-time-communication-rtc) (webrtc example)
