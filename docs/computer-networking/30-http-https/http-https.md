@@ -20,12 +20,12 @@ HTTP operates on top of the [TCP/IP protocol suite](/computer-networking/tcp-ip-
 
 HTTP is a stateless protocol, meaning that each request from the client is independent of previous requests. To maintain state and enable more complex interactions, web applications often use cookies or session tokens to track user sessions.
 
-The protocol follows a client-server model, where the client, typically a [web browser](web-development/web-browser), sends requests to the server, and the server responds with the requested data.
+The protocol follows a client-server model, where the client, typically a [web browser](/web-development/web-browser), sends requests to the server, and the server responds with the requested data.
 
 ![HTTP client-server mechanism](./client-server-mechanism-http.png)  
 Source : https://www.freecodecamp.org/news/what-is-http/
 
-HTTP requests consist of a method that indicates the type of request, a [Uniform Resource Locator (URL)](/web-development/web-development/web-url) that specifies the resource being requested, and optional headers that provide additional information about the request.
+HTTP requests consist of a method that indicates the type of request, a [Uniform Resource Locator (URL)](/web-development/web-url) that specifies the resource being requested, and optional headers that provide additional information about the request.
 
 Some common method are :
 
