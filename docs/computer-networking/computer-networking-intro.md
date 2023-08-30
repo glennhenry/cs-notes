@@ -48,8 +48,8 @@ description: Computer Networking Notes
     - [FTP](computer-networking/ftp)
     - [Email Protocol](computer-networking/email-protocol)
     - [RTP](computer-networking/rtp)
+    - [RTC](computer-networking/rtc)
     - [HTTP & HTTPS](computer-networking/http-https)
-  - [Real Time Communication (RTC)](computer-networking/real-time-communication-rtc) (webrtc example)
 - Wireless Networking
   - [Wireless Access Point (WAP)](computer-networking/wireless-access-point-wap)
   - [Wi-Fi](computer-networking/wi-fi)

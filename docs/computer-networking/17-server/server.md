@@ -11,6 +11,7 @@ description: Server
 - **[What is a Server? Servers vs Desktops Explained | PowerCert](https://youtu.be/UjCDWCeHCzY?si=BsG1UnE7fWlNjpZx)**
 - **[Caching - Simply Explained](https://youtu.be/6FyXURRVmR0?si=xPJK4Vr46tW55wOa)**
 - **[Cloudflare CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)**
+- **[What is localhost | freeCodeCamp](https://www.freecodecamp.org/news/what-is-localhost/)**
 
 A **Server** is a dedicated computer or a system that provides resources, services, or functionality to other computers or devices on a network. It is designed to respond the requests from client devices (device that requests and consumes services or resources from a server) and deliver the requested data or perform the specified tasks.
 
@@ -57,3 +58,11 @@ Source : https://www.networkstraining.com/different-types-of-servers/
 
   ![3 user requests are handled by 3 server](./load-balancing.png)  
    Source : https://herza.id/blog/load-balancing-pengertian-cara-kerja-jenis-metode-kelebihan-dan-kekurangan/
+
+### Localhost
+
+As said before, we can even use our own computer as server. We can use it as a public server, where people could connect to us. We can also use it for ourselves, meaning our computer will be a server and the one who connect is ourselves. It is referred as loopback network, where we send or request and receive data within the same device, without going through a network.
+
+Localhost need an IP address as well as normal website, the IP is `127.0.0.1`. We can also specify a port, for example, `localhost:4000` or `127.0.0.1:3500` if using the actual IP address. These ports are used to identify specific services or applications running on your device.
+
+![Example of localhost that shows this cs notes website](./localhost-example.png)

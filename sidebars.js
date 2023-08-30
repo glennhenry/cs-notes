@@ -198,7 +198,7 @@ const sidebars = {
                 "computer-networking/dial-up-modem/dial-up-modem",
               ],
             },
-            
+
             {
               type: "category",
               label: "Computer Connection",
@@ -231,12 +231,12 @@ const sidebars = {
                 "computer-networking/ftp/ftp",
                 "computer-networking/email-protocol/email-protocol",
                 "computer-networking/rtp/rtp",
+                "computer-networking/rtc/rtc",
                 "computer-networking/http-https/http-https",
               ],
             },
           ],
-        }, 
-        "computer-networking/real-time-communication-rtc/real-time-communication-rtc",
+        },
         {
           type: "category",
           label: "Wireless Networking",
@@ -256,7 +256,7 @@ const sidebars = {
             "computer-networking/sim-card/sim-card",
           ],
         },
-        
+
         {
           type: "category",
           label: "Network Security",
