@@ -36,6 +36,8 @@ TODO :
 4. PDF maybe? refer to AES encryption in crpytography or cybersecurity
 5. IP Address maybe refer to binary format and hexadecimal somewhere
 6. subnet mask maybe refer to bitwise operation AND
+7. HTTP/HTTPS refer to eavesdropping, man in the middle attack in computer security and key exchange (symmetric + asymmetric + diffie hellman + rsa) in computer security-cryptography
+8. wifi refer to eavesdropping in computer security
 
 ### Credits
 

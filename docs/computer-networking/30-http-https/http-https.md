@@ -9,6 +9,9 @@ description: HTTP & HTTPS
 
 - **[Wikipedia HTTP](https://en.wikipedia.org/wiki/HTTP)**
 - **[HTTP/1 to HTTP/2 to HTTP/3 - ByteByteGo](https://youtu.be/a-sBfyiXysI?si=n6bBk0HLpwe4AgWU)**
+- **[Wikipedia HTTPS](https://en.wikipedia.org/wiki/HTTPS)**
+- **[SSL, TLS, HTTP, HTTPS Explained | PowerCert](https://youtu.be/hExRDVZHhig?si=b5j-OTUwBCKu-jsG)**
+- **[SSL, TLS, HTTPS Explained - ByteByteGo](https://youtu.be/j9QmMEWmcfo?si=twR9U2aksGKskmmh)**
 
 ## HTTP
 
@@ -142,4 +145,31 @@ Source : https://www.researchgate.net/figure/Comparison-of-HTTP-versions_fig1_31
 
 ## HTTPS
 
-**Hypertext Transfer Protocol Secure (HTTPS)** is ...
+While using HTTP as protocol to retrieve webpage, the information are sent in plain text. This means while information are transmitted, it can be read easily by anyone who has access to the network traffic, this is called eavesdropping. Another bad thing that could happen is someone could manipulate the sensitive information or injecting a malicious code, this is called Man-in-the-Middle Attacks (MITM).
+
+The browsing behavior and activities of users can be easily monitored and tracked by various entities, including internet service providers (ISPs), advertisers, and malicious actors. This compromises user privacy and can lead to targeted advertising, profiling, or misuse of personal information.
+
+**Hypertext Transfer Protocol Secure (HTTPS)** is the secure version of HTTP. It employs encryption mechanisms to ensure secure transmission of data over a computer network. HTTPS uses an encryption protocol called [Transport Secure Layer (TLS)](/computer-networking/network-encryption#tls).
+
+### HTTPS Process
+
+TLS protocol involves a handshake process, after connection is established or the three-way TCP handshakes in HTTP is done. TLS handshakes is required to establish a secure connection, in the process there will be some information exchange including TLS protocol version, server's identity or certificate, and exchanging cryptographic keys.
+
+Here is a high-level explanation for HTTPS process :
+
+1. **TCP Handshake** : TCP handshakes which is the same as the beginning of HTTP process, this include sending SYN and ACK message.
+
+2. **Certificate Check** : The client will send a "Client Hello" message to the server, indicating the TLS protocol versions and cryptographic algorithms it supports to encrypt the data. The server will respond with a "Server Hello" message, selecting the highest SSL/TLS version and cryptographic algorithms that both the client and server support.
+
+   The server presents its digital certificate, which is a digital document that provide authenticity and trustworthiness of a website or server. The client verifies the certificate's authenticity and checks if it is issued by a trusted Certificate Authority (CA).
+
+   After the certificate exchange, the server sends a "Server Hello Done" message to indicate that it has completed its part of the handshake. This message serves as a signal to the client that it can proceed with the next step.
+
+3. **Key Exchange** : In the next step, there will be an asymmetric key exchange where the client and server exchange keys. This key exchange process includes sending the necessary information required to encrypt the data. This information typically includes the key exchange algorithm, encryption algorithm, and hash function to be used for the TLS protocol.
+
+4. **Data Transmission** : After the key exchange, a session key is generated. The session key is a symmetric encryption key used to encrypt and decrypt the data. The client possesses the public key, while the server has the corresponding private key. In simple terms, the session key can only be used with the public and private keys owned by the client and server. The data is encrypted using the session key, enabling secure transmission between the client and server.
+
+HTTPS is the combination of symmetric and asymmetric encryption algorithm. Asymmetric only happens from certificate check to the key exchange process. During data transmission, symmetric algorithm will be used.
+
+![HTTPS Process](./https-process.png)  
+Source : https://blog.bytebytego.com/p/how-does-https-work-episode-6

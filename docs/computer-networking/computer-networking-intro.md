@@ -51,9 +51,7 @@ description: Computer Networking Notes
     - [RTC](computer-networking/rtc)
     - [HTTP & HTTPS](computer-networking/http-https)
 - Wireless Networking
-  - [Wireless Access Point (WAP)](computer-networking/wireless-access-point-wap)
   - [Wi-Fi](computer-networking/wi-fi)
-  - [Hotspot](computer-networking/hotspot)
   - [Bluetooth](computer-networking/bluetooth)
 - Mobile Networking
   - [Cellular Networks](computer-networking/cellular-networking) (1G, 2G...)

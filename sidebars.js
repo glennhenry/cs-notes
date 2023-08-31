@@ -241,9 +241,7 @@ const sidebars = {
           type: "category",
           label: "Wireless Networking",
           items: [
-            "computer-networking/wireless-access-point-wap/wireless-access-point-wap",
             "computer-networking/wi-fi/wi-fi",
-            "computer-networking/hotspot/hotspot",
             "computer-networking/bluetooth/bluetooth",
           ],
         },
