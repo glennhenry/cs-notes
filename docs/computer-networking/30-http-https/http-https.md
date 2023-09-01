@@ -149,7 +149,7 @@ While using HTTP as protocol to retrieve webpage, the information are sent in pl
 
 The browsing behavior and activities of users can be easily monitored and tracked by various entities, including internet service providers (ISPs), advertisers, and malicious actors. This compromises user privacy and can lead to targeted advertising, profiling, or misuse of personal information.
 
-**Hypertext Transfer Protocol Secure (HTTPS)** is the secure version of HTTP. It employs encryption mechanisms to ensure secure transmission of data over a computer network. HTTPS uses an encryption protocol called [Transport Secure Layer (TLS)](/computer-networking/network-encryption#tls).
+**Hypertext Transfer Protocol Secure (HTTPS)** is the secure version of HTTP. It employs encryption mechanisms to ensure secure transmission of data over a computer network. HTTPS uses an encryption protocol called [Transport Secure Layer (TLS)](/computer-networking/network-encryption#ssltls).
 
 ### HTTPS Process
 
@@ -159,7 +159,7 @@ Here is a high-level explanation for HTTPS process :
 
 1. **TCP Handshake** : TCP handshakes which is the same as the beginning of HTTP process, this include sending SYN and ACK message.
 
-2. **Certificate Check** : The client will send a "Client Hello" message to the server, indicating the TLS protocol versions and cryptographic algorithms it supports to encrypt the data. The server will respond with a "Server Hello" message, selecting the highest SSL/TLS version and cryptographic algorithms that both the client and server support.
+2. **Certificate Check** : The client will send a "Client Hello" message to the server, indicating the TLS protocol versions and cryptographic algorithms it supports to encrypt the data. The server will respond with a "Server Hello" message, selecting the highest TLS version and cryptographic algorithms that both the client and server support.
 
    The server presents its digital certificate, which is a digital document that provide authenticity and trustworthiness of a website or server. The client verifies the certificate's authenticity and checks if it is issued by a trusted Certificate Authority (CA).
 

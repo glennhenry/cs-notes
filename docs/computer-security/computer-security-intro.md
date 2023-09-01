@@ -9,4 +9,11 @@ Empty
 
 ### All topics
 
-- Empty
+- Web Security (same as in web-development)
+    - Cross-Site Scripting
+    - SQL Injection
+    - Cross-Site Request Forgery
+    - DDoS Attack
+    - Cookie Hijacking
+- Firewall (same as in computer-networking)
+- Network Encryption (TLS, SSL, SSH) (same as in computer-networking)

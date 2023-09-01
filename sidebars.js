@@ -239,17 +239,10 @@ const sidebars = {
         },
         {
           type: "category",
-          label: "Wireless Networking",
+          label: "Wireless & Mobile Networking",
           items: [
             "computer-networking/wi-fi/wi-fi",
             "computer-networking/bluetooth/bluetooth",
-          ],
-        },
-
-        {
-          type: "category",
-          label: "Mobile Networking",
-          items: [
             "computer-networking/cellular-networking/cellular-networking",
             "computer-networking/sim-card/sim-card",
           ],
@@ -259,8 +252,8 @@ const sidebars = {
           type: "category",
           label: "Network Security",
           items: [
+            "computer-networking/ddos-attack/ddos-attack",
             "computer-networking/firewall/firewall",
-            "computer-networking/ddos/ddos",
             "computer-networking/network-encryption/network-encryption",
           ],
         },
@@ -333,6 +326,8 @@ const sidebars = {
         "computer-security/xx-web-security/web-security",
         "computer-security/xx1-phising/phising",
         "computer-security/xx2-social-engineering/social-engineering",
+        "computer-security/xx3-firewall/firewall",
+        "computer-security/xx4-network-encryption/network-encryption",
       ],
     },
 

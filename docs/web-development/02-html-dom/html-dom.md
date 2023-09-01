@@ -15,7 +15,7 @@ description: HTML DOM
 Web browser is responsible for parsing HTML when you visit a web page, during parsing the browser reads the HTML code and creates a Document Object Model (DOM), which represents the structure of the web page.
 
 :::tip
-DOM is not limited to HTML it is also used in **[Extensible Markup Language (XML)](https://en.wikipedia.org/wiki/XML)** which is markup language used to store and transport data in a structured format. XML allows developers to define their own custom tags and elements, making it highly extensible and adaptable to a wide range of applications.
+DOM is not limited to HTML it is also used in **[Extensible Markup Language (XML)](/digital-media-processing/xml)** which is markup language used to store and transport data in a structured format. XML allows developers to define their own custom tags and elements, making it highly extensible and adaptable to a wide range of applications.
 :::
 
 ### DOM Tree

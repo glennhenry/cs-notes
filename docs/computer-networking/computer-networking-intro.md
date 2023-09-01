@@ -8,6 +8,7 @@ description: Computer Networking Notes
 **Computer Networking** is the study about connecting between two or more computer or device to share resource and communicate with each other. Computer networking can be a small connection in a house such as connecting your phone to your desktop or as big as the internet where billions of device connects together.
 
 **Main Source :**
+
 - **[PowerCert Networking Playlist](https://www.youtube.com/playlist?list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg)**
 - **[Wikipedia](https://www.wikipedia.org/)**
 
@@ -50,14 +51,13 @@ description: Computer Networking Notes
     - [RTP](computer-networking/rtp)
     - [RTC](computer-networking/rtc)
     - [HTTP & HTTPS](computer-networking/http-https)
-- Wireless Networking
+- Wireless & Mobile Networking
   - [Wi-Fi](computer-networking/wi-fi)
   - [Bluetooth](computer-networking/bluetooth)
-- Mobile Networking
-  - [Cellular Networks](computer-networking/cellular-networking) (1G, 2G...)
+  - [Cellular Networks](computer-networking/cellular-networking)
   - [Sim Card](computer-networking/sim-card)
-- Security (probably same docs as computer security)
+- Security
+  - [DDoS Attack](computer-networking/ddos-attack)
   - [Firewall](computer-networking/firewall)
-  - [DDoS](computer-networking/ddos)
-  - [Network Encryption](computer-networking/network-encryption) (SSH, SSL, TLS)
-- [Networking Command](computer-networking/networking-command) (ipconfig, ping, tracert, netstat, ssh)
+  - [Network Encryption](computer-networking/network-encryption)
+- [Networking Command](computer-networking/networking-command)
