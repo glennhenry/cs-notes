@@ -5,10 +5,6 @@ title: Web Security
 description: Web Security
 ---
 
-This is the same notes as :
-
-- [Web Development > Web Security](/frontend-web-development/web-security)
-
 **Main Source :**
 
 - **[OWASP Cross Site Scripting](https://owasp.org/www-community/attacks/xss/)**
