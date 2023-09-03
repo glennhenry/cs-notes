@@ -28,7 +28,7 @@ The protocol follows a client-server model, where the client, typically a [web b
 ![HTTP client-server mechanism](./client-server-mechanism-http.png)  
 Source : https://www.freecodecamp.org/news/what-is-http/
 
-HTTP requests consist of a method that indicates the type of request, a [Uniform Resource Locator (URL)](/web-development/web-url) that specifies the resource being requested, and optional headers that provide additional information about the request.
+HTTP requests consist of a method that indicates the type of request, a [Uniform Resource Locator (URL)](/frontend-web-development/web-url) that specifies the resource being requested, and optional headers that provide additional information about the request.
 
 Some common method are :
 

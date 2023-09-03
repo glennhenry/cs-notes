@@ -9,7 +9,7 @@ description: HTML
 
 **HTML (Hypertext Markup Language)** is a markup language used to create the structure and content of web pages. It is the basic building block of a webpage, consisting a series of tags or elements, which are used to define the structure and content of a web page.
 
-Find out more about [how HTML works](/web-development/web-browser#page-rendering)
+Find out more about [how HTML works](/frontend-web-development/web-browser#page-rendering)
 
 HTML documents are text files that can be created using any text editor, and have a .html file extension.
 

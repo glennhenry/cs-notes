@@ -20,7 +20,7 @@ However, the browser doesn't understand the domain name entered by user. To reso
 Source : https://www.geeksforgeeks.org/working-of-domain-name-system-dns-server/
 
 :::tip
-Find out in [here](/web-development/web-url) to know more about domain name or URL
+Find out in [here](/frontend-web-development/web-url) to know more about domain name or URL
 :::
 
 ### DNS Record

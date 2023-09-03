@@ -11,7 +11,7 @@ description: Javascript
 - **[Wikipedia V8 (Javascript Engine)](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>)**
 - **[V8 Hidden Classes](https://blog.bitsrc.io/secret-behind-javascript-performance-v8-hidden-classes-ba4d0ebfb89d)**
 
-**JavaScript** is a high-level programming language first introduced in 1995, it is mostly used for web development. JavaScript was specifically created to be run in web browsers, which means it can integrate with the browser and access the [DOM (Document Object Model)](/web-development/html-dom) to change or manipulate it such as adding or deleting elements, changing style like color, modify content and etc.
+**JavaScript** is a high-level programming language first introduced in 1995, it is mostly used for web development. JavaScript was specifically created to be run in web browsers, which means it can integrate with the browser and access the [DOM (Document Object Model)](/frontend-web-development/html-dom) to change or manipulate it such as adding or deleting elements, changing style like color, modify content and etc.
 
 Javascript is based on ECMAScript (ES) which is a scripting language specification or the standard that defines Javascript language. Javascript is now based on the ES6 (ECMAScript 2015) which was released in 2015.
 

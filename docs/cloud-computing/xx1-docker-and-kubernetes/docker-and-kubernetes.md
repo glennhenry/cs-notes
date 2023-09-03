@@ -7,7 +7,7 @@ description: Docker & Kubernetes
 
 This is the same note as :
 
-- [Web Development > Docker & Kubernetes](/web-development/docker-and-kubernetes)
+- [Web Development > Docker & Kubernetes](/frontend-web-development/docker-and-kubernetes)
 
 **Main Source :**
 

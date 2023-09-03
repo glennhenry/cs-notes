@@ -7,7 +7,7 @@ description: Web Security
 
 This is the same notes as :
 
-- [Web Development > Web Security](/web-development/web-security)
+- [Web Development > Web Security](/frontend-web-development/web-security)
 
 **Main Source :**
 
