@@ -145,7 +145,7 @@ Source : https://www.researchgate.net/figure/Comparison-of-HTTP-versions_fig1_31
 
 ## HTTPS
 
-While using HTTP as protocol to retrieve webpage, the information are sent in plain text. This means while information are transmitted, it can be read easily by anyone who has access to the network traffic, this is called eavesdropping. Another bad thing that could happen is someone could manipulate the sensitive information or injecting a malicious code, this is called Man-in-the-Middle Attacks (MITM).
+While using HTTP as protocol to retrieve webpage, the information are sent in plain text. This means while information are transmitted, it can be read easily by anyone who has access to the network traffic, this is called [eavesdropping](/computer-security/eavesdropping). Another bad thing that could happen is someone could manipulate the sensitive information or injecting a malicious code, this is called [Man-in-the-Middle Attack (MITM)](/computer-security/man-in-the-middle-attack).
 
 The browsing behavior and activities of users can be easily monitored and tracked by various entities, including internet service providers (ISPs), advertisers, and malicious actors. This compromises user privacy and can lead to targeted advertising, profiling, or misuse of personal information.
 
@@ -165,11 +165,15 @@ Here is a high-level explanation for HTTPS process :
 
    After the certificate exchange, the server sends a "Server Hello Done" message to indicate that it has completed its part of the handshake. This message serves as a signal to the client that it can proceed with the next step.
 
-3. **Key Exchange** : In the next step, there will be an asymmetric key exchange where the client and server exchange keys. This key exchange process includes sending the necessary information required to encrypt the data. This information typically includes the key exchange algorithm, encryption algorithm, and hash function to be used for the TLS protocol.
+3. **Key Exchange** : In the next step, there will be an [asymmetric key exchange](/computer-security/asymmetric-encryption#key-exchange) where the client and server exchange keys. This key exchange process includes sending the necessary information required to encrypt the data. This information typically includes the [key exchange algorithm](/computer-security/encryption#key-exchange), encryption algorithm, and [hash function](/computer-security/hash-function) to be used for the TLS protocol.
 
-4. **Data Transmission** : After the key exchange, a session key is generated. The session key is a symmetric encryption key used to encrypt and decrypt the data. The client possesses the public key, while the server has the corresponding private key. In simple terms, the session key can only be used with the public and private keys owned by the client and server. The data is encrypted using the session key, enabling secure transmission between the client and server.
+4. **Data Transmission** : After the key exchange, a session key is generated. The session key is a [symmetric encryption](/computer-security/symmetric-encryption) key used to encrypt and decrypt the data. The client possesses the public key, while the server has the corresponding private key. In simple terms, the session key can only be used with the public and private keys owned by the client and server. The data is encrypted using the session key, enabling secure transmission between the client and server.
 
 HTTPS is the combination of symmetric and asymmetric encryption algorithm. Asymmetric only happens from certificate check to the key exchange process. During data transmission, symmetric algorithm will be used.
 
 ![HTTPS Process](./https-process.png)  
 Source : https://blog.bytebytego.com/p/how-does-https-work-episode-6
+
+:::tip
+Find more about general [encryption](/computer-security/encryption) and its terminology including [public and private key](/computer-security/encryption#public-and-private-key), [key exchange](/computer-security/encryption#key-exchange). Also about [symmetric](/computer-security/symmetric-encryption) and [asymmetric](/computer-security/asymmetric-encryption) encryption.
+:::

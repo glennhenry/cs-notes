@@ -22,7 +22,7 @@ One of the application of network encryption is the [HTTPS](/computer-networking
 
 ### SSL/TLS
 
-**Secure Sockets Layer (SSL)** is one of the first cryptographic protocols to provide secure communication over a computer network. It uses public key encryption, also known as asymmetric encryption. There will be public and private key, these key are a piece of information that is used to "lock" or "unlock" data, just like a key in real life.
+**Secure Sockets Layer (SSL)** is one of the first cryptographic protocols to provide secure communication over a computer network. It uses public key encryption, also known as [asymmetric encryption](/computer-security/asymmetric-encryption). There will be [public and private key](/computer-security/encryption#public-and-private-key), these key are a piece of information that is used to "lock" or "unlock" data, just like a key in real life.
 
 1. **Handshakes (Client & Server Hello)** : To establish a connection, SSL protocol involves a handshaking process. Handshaking indicates that the client wants to communicate with the server, they will also exchange some required information.
 
@@ -65,7 +65,7 @@ SSH supports password-based authentication and public key encryption, it encrypt
 
 1. **Connection Initialization** : The client initiates a connection request to the SSH server. The server listens on a designated port (typically port 22) for incoming SSH connections.
 
-2. **Key Exchange** : The client and server perform a key exchange process to establish a session key which is a symmetric encryption used for encrypting and decrypting of the data (typically uses the asymmetric encryption).
+2. **[Key Exchange](/computer-security/encryption#key-exchange)** : The client and server perform a key exchange process to establish a session key which is a [symmetric encryption](/computer-security/symmetric-encryption) used for encrypting and decrypting of the data (typically uses the [asymmetric encryption](/computer-security/asymmetric-encryption)).
 
 3. **Encryption** : Once the session key is established, the client and server use symmetric encryption algorithms to encrypt the data transmitted between them. This ensures the confidentiality of the information. Additionally, SSH provides integrity checks using cryptographic hash functions to detect any tampering or modification of the data during transmission.
 

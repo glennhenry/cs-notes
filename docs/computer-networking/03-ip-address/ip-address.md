@@ -27,7 +27,7 @@ There are two types of IP address, IPv4 and IPv6. The difference between them is
 
 In IPv4, an IP address consist of four sets of decimal number ranging from 0 to 255 separated by period. Each set of number represents 8 bits, resulting in total 32 bits for the entire address. For example, `192.168.0.1`, `192.168.123.132`, `102.168.212.226`.
 
-Computer will then convert the IP address to binary format that only uses 0 and 1. Find out more "here" to know how to convert decimal to binary or the opposite.
+Computer will then convert the IP address to binary format that only uses 0 and 1. Find out more [here](/computer-and-programming-fundamentals/number-system) to know how to convert decimal to binary or the opposite.
 
 An IPv4 IP Address is 32 bits, this mean if we try all possible combination between each set of number, there is $256^4$ or approximately 4.3 billion unique combination possible.
 
@@ -38,7 +38,7 @@ Source : https://id.wikipedia.org/wiki/Alamat_IP_versi_4
 
 Even though IPv4 has so many unique combination, in the modern day of networking, 4.3 billion is not enough to uniquely identify all device.
 
-The difference is, IPv6 consist of eight segment of 16-bit hexadecimal value, allowing for a total of 4 "hexadecimal" digits per segment (1 hexadecimal digit = 4 bit), each separated by colon. For example, `2001:0db8:3a4c:0012:0000:8a2e:0370:abcd`, `fe80:0000:0000:0000:1234:5678:abcd:ef01`, `2a02:abcd:1234:5678:9abc:def0:fedc:ba09`.
+The difference is, IPv6 consist of eight segment of 16-bit hexadecimal value, allowing for a total of 4 [hexadecimal](/computer-and-programming-fundamentals/number-system#hexadecimal) digits per segment (1 hexadecimal digit = 4 bit), each separated by colon. For example, `2001:0db8:3a4c:0012:0000:8a2e:0370:abcd`, `fe80:0000:0000:0000:1234:5678:abcd:ef01`, `2a02:abcd:1234:5678:9abc:def0:fedc:ba09`.
 
 The full address results in $16\text{-bit} \times 8 = 128\text{-bit}$. With 128 bit, we will be able to generate $2^{128}$ or approximately 340 undecillion of unique IP address.
 

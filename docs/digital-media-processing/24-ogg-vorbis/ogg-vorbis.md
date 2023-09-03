@@ -30,7 +30,7 @@ OGG file consists of a sequence of pages. Each page begins with a 27-byte header
 
 4. **Page Segments** : The page segments section follows the packet data and specifies the sizes of the individual packets within the page. It allows for variable-sized packets within a fixed-sized page.
 
-5. **Page CRC Checksum** : Each page concludes with a cyclic redundancy checksum (CRC) value, which is used for error detection. In simple term, a data is calculated using mathematical function called hash function to produce a value. The checksum is when we check if the produced value is the same as the value of the data that should be.
+5. **Page CRC Checksum** : Each page concludes with a cyclic redundancy checksum (CRC) value, which is used for error detection. In simple term, a data is calculated using mathematical function called [hash function](/computer-security/hash-function) to produce a value. The checksum is when we check if the produced value is the same as the value of the data that should be.
 
 6. **Metadata** : Metadata can include details such as track titles, artist/author information, album/movie information, genres, and more. The metadata is typically stored in dedicated packets within the stream.
 

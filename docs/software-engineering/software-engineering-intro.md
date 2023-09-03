@@ -7,6 +7,17 @@ description: Software Engineering Notes
 
 Software Engineering
 
-All pages
+### All pages
 
 - Package Manager
+- Software Design & Architecture
+- Software Infrastructure
+- System Design
+    - a
+    - b
+    - c
+- Software testing
+- Software Process / Methodology
+- a
+- b
+- c

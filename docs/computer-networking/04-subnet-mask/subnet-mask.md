@@ -18,7 +18,7 @@ And now, the purpose of dividing IP address into two part that consist of networ
 
 ### Subnet Mask Calculation
 
-To determine the network address, subnet mask and IP address needs to be converted into binary format first if they are in decimal number. Subnet mask is applied to an IP address using a "bitwise AND operation", the result is the network address.
+To determine the network address, subnet mask and IP address needs to be converted into binary format first if they are in decimal number. Subnet mask is applied to an IP address using a [bitwise AND operation](/computer-and-programming-fundamentals/bitwise-operation#and), the result is the network address.
 
 The last 1 from the binary number of subnet mask define the last part of network portion.
 

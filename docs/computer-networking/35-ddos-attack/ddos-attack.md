@@ -7,8 +7,7 @@ description: DDoS Attack
 
 This is the same notes as :
 
-- **[Web Development > Web Security > DDoS](/web-development/web-security#ddos-attack)**
-- **[Computer Security > Web Security > DDoS](/computer-security/web-security#ddos-attack)**
+- **[Computer Security > DDoS](/computer-security/ddos-attack)**
 
 **Main Source :**
 

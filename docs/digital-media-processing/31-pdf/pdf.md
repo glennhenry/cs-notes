@@ -11,7 +11,7 @@ description: PDF
 
 The content of PDF itself is in binary format, it encode all the content using ASCII.
 
-PDF use variety of compression algorithm such as LZW (Lempel-Ziv-Welch), FLATE (ZIP, in PDF 1.2), JPEG. PDF also supports encryption with 256-bit AES encryption in Cipher Block Chaining Encryption (CBC) mode for securing the content of the file.
+PDF use variety of compression algorithm such as LZW (Lempel-Ziv-Welch), FLATE (ZIP, in PDF 1.2), JPEG. PDF also supports encryption with 256-bit [AES encryption](/computer-security/aes) in Cipher Block Chaining Encryption (CBC) mode for securing the content of the file.
 
 ![PDF icon and an example of PDF document](./pdf-example.png)  
 Source : https://en.wikipedia.org/wiki/PDF

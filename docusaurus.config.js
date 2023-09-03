@@ -33,6 +33,8 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
+
   presets: [
     [
       'classic',
@@ -68,9 +70,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Notes',
+        title: 'Notes',style:'dark' ,
         logo: {
           alt: 'Docusaurus Logo',
           src: 'img/logo.svg',

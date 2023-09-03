@@ -5,16 +5,6 @@ const sidebars = {
   sidebar: [
     "intro",
 
-    // Template
-    // {
-    //   type: "category",
-    //   label: "Title",
-
-    //   // Link is used only if it has md file
-    //   link: { type: "doc", id: "kebab-title/kebab-title" },
-    //   items: ["kebab-title/kebab-content/kebab-content"],
-    // },
-
     // Digital Signal Processing
     {
       type: "category",
@@ -60,6 +50,21 @@ const sidebars = {
             "digital-signal-processing/denoising/denoising",
           ],
         },
+      ],
+    },
+
+    // Computer & Programming Fundamentals
+    {
+      type: "category",
+      label: "Computer & Programming Fundamentals",
+      link: {
+        type: "doc",
+        id: "computer-and-programming-fundamentals/computer-and-programming-fundamentals",
+      },
+      items: [
+        "computer-and-programming-fundamentals/xx-computer-representation/computer-representation",
+        "computer-and-programming-fundamentals/xx1-number-system/number-system",
+        "computer-and-programming-fundamentals/xx2-bitwise-operation/bitwise-operation",
       ],
     },
 
@@ -276,59 +281,69 @@ const sidebars = {
       ],
     },
 
-    // Software Engineering
+    // Computer Organization & Architecture
     {
       type: "category",
-      label: "Software Engineering",
-      link: { type: "doc", id: "software-engineering/software-engineering" },
-      items: ["software-engineering/xx1-package-manager/package-manager"],
-    },
-
-    // Web Development
-    {
-      type: "category",
-      label: "Web Development",
-      link: { type: "doc", id: "web-development/web-development" },
-      items: [
-        "web-development/html/html",
-        "web-development/html-dom/html-dom",
-        "web-development/css/css",
-        "web-development/javascript/javascript",
-        "web-development/json/json",
-        "web-development/html-css-javascript/html-css-javascript",
-        "web-development/web-url/web-url",
-        "web-development/web-browser/web-browser",
-        "web-development/search-engine/search-engine",
-        "web-development/static-and-dynamic-site/static-and-dynamic-site",
-        "web-development/web-hosting/web-hosting",
-        "web-development/web-security/web-security",
-        "web-development/node-js/node-js",
-        "web-development/npm/npm",
-        "web-development/react-js/react-js",
-        "web-development/docker-and-kubernetes/docker-and-kubernetes",
-      ],
-    },
-
-    // Backend Development
-    {
-      type: "category",
-      label: "Backend Development",
-      link: { type: "doc", id: "backend-development/backend-development" },
+      label: "Computer Organization & Architecture",
+      link: {
+        type: "doc",
+        id: "computer-organization-and-architecture/computer-organization-and-architecture",
+      },
       items: [],
     },
 
-    // Computer Security
+    // Operating System
     {
       type: "category",
-      label: "Computer Security",
-      link: { type: "doc", id: "computer-security/computer-security" },
-      items: [
-        "computer-security/xx-web-security/web-security",
-        "computer-security/xx1-phising/phising",
-        "computer-security/xx2-social-engineering/social-engineering",
-        "computer-security/xx3-firewall/firewall",
-        "computer-security/xx4-network-encryption/network-encryption",
-      ],
+      label: "Operating System",
+      link: { type: "doc", id: "operating-system/operating-system" },
+      items: ["operating-system/xx-virtualization/virtualization"],
+    },
+
+    // Theory of Computation & Automata Theory
+    {
+      type: "category",
+      label: "Theory of Computation & Automata Theory",
+      link: {
+        type: "doc",
+        id: "theory-of-computation-and-automata-theory/theory-of-computation-and-automata-theory",
+      },
+      items: [],
+    },
+
+    // Compiler Design
+    {
+      type: "category",
+      label: "Compiler Design",
+      link: { type: "doc", id: "compiler-design/compiler-design" },
+      items: [],
+    },
+
+    // Programming Language Theory
+    {
+      type: "category",
+      label: "Programming Language Theory",
+      link: {
+        type: "doc",
+        id: "programming-language-theory/programming-language-theory",
+      },
+      items: [],
+    },
+
+    // System Programming
+    {
+      type: "category",
+      label: "System Programming",
+      link: { type: "doc", id: "system-programming/system-programming" },
+      items: [],
+    },
+
+    // Database System
+    {
+      type: "category",
+      label: "Database System",
+      link: { type: "doc", id: "database-system/database-system" },
+      items: [],
     },
 
     // Computer Graphics
@@ -363,12 +378,68 @@ const sidebars = {
       ],
     },
 
-    // Data Science
+    // Frontend Web Development
     {
       type: "category",
-      label: "Data Science",
-      link: { type: "doc", id: "data-science/data-science" },
+      label: "Frontend Web Development",
+      link: { type: "doc", id: "frontend-web-development/frontend-web-development" },
+      items: [
+        "frontend-web-development/html/html",
+        "frontend-web-development/html-dom/html-dom",
+        "frontend-web-development/css/css",
+        "frontend-web-development/javascript/javascript",
+        "frontend-web-development/json/json",
+        "frontend-web-development/html-css-javascript/html-css-javascript",
+        "frontend-web-development/web-url/web-url",
+        "frontend-web-development/web-browser/web-browser",
+        "frontend-web-development/search-engine/search-engine",
+        "frontend-web-development/static-and-dynamic-site/static-and-dynamic-site",
+        "frontend-web-development/web-hosting/web-hosting",
+        "frontend-web-development/node-js/node-js",
+        "frontend-web-development/npm/npm",
+        "frontend-web-development/react-js/react-js",
+        "frontend-web-development/docker-and-kubernetes/docker-and-kubernetes",
+      ],
+    },
+
+    // Backend Development
+    {
+      type: "category",
+      label: "Backend Development",
+      link: { type: "doc", id: "backend-development/backend-development" },
       items: [],
+    },
+
+    // Computer Security
+    {
+      type: "category",
+      label: "Computer Security",
+      link: { type: "doc", id: "computer-security/computer-security" },
+      items: [
+        "computer-security/xx-web-security/web-security",
+        {
+          type: "category",
+          label: "Web Security",
+          items: ["computer-security/xx-web-security/web-security"],
+        },
+        "computer-security/xx1-phising/phising",
+        "computer-security/xx2-social-engineering/social-engineering",
+        "computer-security/xx3-firewall/firewall",
+        "computer-security/xx4-network-encryption/network-encryption",
+        "computer-security/xx5-ddos-attack/ddos-attack",
+        "computer-security/xx6-hash-function/hash-function",
+        "computer-security/xx7-aes/aes",
+        "computer-security/xx8-eavesdropping/eavesdropping",
+        "computer-security/xx9-man-in-the-middle-attack/man-in-the-middle-attack",
+        "computer-security/xx10-symmetric-encryption/symmetric-encryption",
+        "computer-security/xx11-asymmetric-encryption/asymmetric-encryption",
+        "computer-security/xx12-des/des",
+        "computer-security/xx13-rsa/rsa",
+        "computer-security/xx14-diffie-hellman/diffie-hellman",
+        "computer-security/xx15-sha/sha",
+        "computer-security/xx16-elliptic-curve/elliptic-curve",
+        "computer-security/xx17-encryption/encryption",
+      ],
     },
 
     // Machine Learning
@@ -388,6 +459,14 @@ const sidebars = {
         "deep-learning/xx-natural-language-processing/natural-language-processing",
         "deep-learning/xx1-computer-vision/computer-vision",
       ],
+    },
+
+    // Software Engineering
+    {
+      type: "category",
+      label: "Software Engineering",
+      link: { type: "doc", id: "software-engineering/software-engineering" },
+      items: ["software-engineering/xx1-package-manager/package-manager"],
     },
 
     // Cloud Computing

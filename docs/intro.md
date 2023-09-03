@@ -14,35 +14,39 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 ### All topics
 
 - **[Digital Signal Processing](digital-signal-processing)**
+- [Computer & Programming Fundamentals](computer-and-programming-fundamentals)
 - **[Digital Media Processing](digital-media-processing)**
 - **[Computer Networking](computer-networking)**
 - [Data Structures & Algorithms](data-structures-and-algorithms)
-- [Software Engineering](software-engineering)
-- **[Web Development](web-development)**
+- [Computer Organization & Architecture](computer-organization-and-architecture)
+- [Operating System](operating-system)
+- [Theory of Computation & Automata Theory](theory-of-computation-and-automatatheory)
+- [Compiler Design](compiler-design)
+- [Programming Language Theory](programming-language-theory)
+- [System Programming](system-programming)
+- [Database System](database-system)
+- **[Computer Graphics](computer-graphics)**
+- **[Frontend Web Development](frontend-web-development)**
 - [Backend Development](backend-development)
 - [Computer Security](computer-security)
-- **[Computer Graphics](computer-graphics)**
-- [Data Science](data-science)
 - [Machine Learning](machine-learning)
 - [Deep Learning](deep-learning)
+- [Software Engineering](software-engineering)
 - [Cloud Computing](cloud-computing)
 - [Extras](extras)
 
 \*Bolded : completed
 
-TODO :
+#### TODO :
 
-- searchbar, change color?
+- **[add]** : add new notes
+- **[update]** : update / add extra notes
+- **[edit]** : edit notes
+- **[ref]** : add reference to particular notes
 
-1. Virtualization operating system and cloud computing (probably will be the same notes) (virtualbox as example)
-2. OGG Vorbis should refer to cryptography or cybersecurity hash function
-3. Text File (txt) should refer to UTF-8 somewhere
-4. PDF maybe? refer to AES encryption in crpytography or cybersecurity
-5. IP Address maybe refer to binary format and hexadecimal somewhere
-6. subnet mask maybe refer to bitwise operation AND
-7. HTTP/HTTPS refer to eavesdropping, man in the middle attack in computer security and key exchange (symmetric + asymmetric + diffie hellman + rsa) in computer security-cryptography
-8. wifi refer to eavesdropping in computer security
-9. network encryption in computer networking and computers security refers to assymetric encryption, hash function and refers to eavesdropping in computer security.
+1. **[add]** Tor Browser : Extras
+2. **[add]** Crawler : Web Development -> Search Engine
+3. **[add]** Wayback Machine : Extras
 
 ### Credits
 

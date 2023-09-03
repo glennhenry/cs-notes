@@ -61,7 +61,7 @@ Source : https://youtu.be/OxiY4yf6GGg?si=-tqndmm07MA2bh6j&t=178
 
 **Hotspot** is a location or an area where wireless internet access is provided, typically using Wi-Fi technology.
 
-Hotspot can be public or private, a public hotspots are Wi-Fi networks that are available for use by anyone within range. Examples include Wi-Fi networks in cafes, airports, libraries, and parks. Public hotspots are designed to be easily accessible to the general public and provide internet connectivity for visitors or customers. However, using public hotspot may be dangerous as anyone can access it. A malicious actor could intercepts and captures the network traffic transmitted between a user's device and the hotspot, this is called eavesdropping.
+Hotspot can be public or private, a public hotspots are Wi-Fi networks that are available for use by anyone within range. Examples include Wi-Fi networks in cafes, airports, libraries, and parks. Public hotspots are designed to be easily accessible to the general public and provide internet connectivity for visitors or customers. However, using public hotspot may be dangerous as anyone can access it. A malicious actor could intercepts and captures the network traffic transmitted between a user's device and the hotspot, this is called [eavesdropping](/computer-security/eavesdropping).
 
 Private hotspots, also known as tethering, are Wi-Fi networks created by individuals using their smartphones, tablets, or dedicated mobile hotspot devices. These hotspots are intended for personal use and are secured with a password. Only those who know the password can connect to the network and access the internet through it. Private hotspots are commonly used when a person wants to share their data connection with other devices.
 
