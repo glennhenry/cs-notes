@@ -300,18 +300,18 @@ const sidebars = {
       items: ["operating-system/xx-virtualization/virtualization"],
     },
 
-    // Theory of Computation & Automata Theory
+    // Theory of Computation & Automata
     {
       type: "category",
-      label: "Theory of Computation & Automata Theory",
+      label: "Theory of Computation & Automata",
       link: {
         type: "doc",
-        id: "theory-of-computation-and-automata-theory/theory-of-computation-and-automata-theory",
+        id: "theory-of-computation-and-automata/theory-of-computation-and-automata",
       },
       items: [],
     },
 
-    // Compiler Design
+    // Compilers
     {
       type: "category",
       label: "Compiler Design",

@@ -9,8 +9,15 @@ deep learning!
 
 ### All pages
 
-- [Natural Language Processing (NLP)](/deep-learning/natural-language-processing)
+- [Neural Network]
 - [Computer Vision (CV)](/deep-learning/computer-vision)
-- a
-- b
-- c
+    - Conv net...
+    - and so on...
+- [Natural Language Processing (NLP)](/deep-learning/natural-language-processing)
+    - RNN
+    - Transformers
+    - and so on...
+- and so on...
+- Time Series
+- Audio
+- 

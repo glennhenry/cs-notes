@@ -11,13 +11,6 @@ description: Linear Regression
 - [source b]
 - [source c]
 
-**Algorithm Implementation :**
-
-- 1 Dependent + 1 Independent Regression
-- 2 Dependent + 1 Independent Regression
-- 2 Dependent + 1 Independent (Gradient Descent) Regression
-- later... (this should be a link to github repo [.ipnyb] file)
-
 **Linear Regression** is...
 
 ### 1 Dependent + 1 Independent Regression
