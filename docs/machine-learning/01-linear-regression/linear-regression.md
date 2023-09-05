@@ -21,10 +21,8 @@ description: Linear Regression
 
 ### Other Regression
 
-These are other form of regression that I don't implement myself for a reason. There are actually many other form than specified here.
+There are still many form of linear regression, the example are :
 
-#### 2 Dependent + Multi/n-Independent Regression
-
-#### Multi/n-Dependent + Multi/n-Independent Regression
+#### Multiple Regression
 
 #### Polynomial Regression

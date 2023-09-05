@@ -314,8 +314,8 @@ const sidebars = {
     // Compilers
     {
       type: "category",
-      label: "Compiler Design",
-      link: { type: "doc", id: "compiler-design/compiler-design" },
+      label: "Compilers",
+      link: { type: "doc", id: "compilers/compilers" },
       items: [],
     },
 
@@ -447,7 +447,10 @@ const sidebars = {
       type: "category",
       label: "Machine Learning",
       link: { type: "doc", id: "machine-learning/machine-learning" },
-      items: [],
+      items: [
+        "machine-learning/linear-regression/linear-regression",
+        "machine-learning/logistic-regression/logistic-regression",
+      ],
     },
 
     // Deep Learning
@@ -456,7 +459,15 @@ const sidebars = {
       label: "Deep Learning",
       link: { type: "doc", id: "deep-learning/deep-learning" },
       items: [
-        "deep-learning/xx-natural-language-processing/natural-language-processing",
+        {
+          type: "category",
+          label: "NLP",
+          link: { type: "doc", id: "deep-learning/xx-natural-language-processing/natural-language-processing" },
+          items: [
+            "deep-learning/xx-natural-language-processing/xx-example/example"
+          ],
+        },
+        
         "deep-learning/xx1-computer-vision/computer-vision",
       ],
     },
