@@ -54,7 +54,7 @@ But this will probably result in bad prediction, the difference between the actu
 The error is calculated by calculating the difference between actual data and prediction data. These error will be summed up for each points. Error is used to measure how bad or good a regression line is, the more error means the worse line. 
 
 :::note
-There are many technique to measure the line error, an example is the Sum of Squared Errors (SSE), where the error is calculated by squaring the difference, the formula is $SSE = \sum(y_i - ŷ_i)^2$  
+There are many technique to measure the line error, an example is the Sum of Squared Errors (SSE), where the error is calculated by squaring the difference, the formula is $SSE = \sum(y_i - \hat{y}_i)^2$  
 $y_i$ = actual y value data  
 $\hat{y}_i$ = predicted y value data
 :::
