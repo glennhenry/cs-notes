@@ -8,7 +8,7 @@ description: Networking Command
 **Main Source :**
 
 - **[IPCONFIG Explained - Flush DNS Cache | PowerCert](https://youtu.be/ZKhorleA5aA?si=ryGAucxqelZAEB4r)**
-  **[Traceroute (tracert) Explained - Network Troubleshooting | PowerCert](https://youtu.be/up3bcBLZS74?si=dcs7Jog1w_AyEhMh)**
+- **[Traceroute (tracert) Explained - Network Troubleshooting | PowerCert](https://youtu.be/up3bcBLZS74?si=dcs7Jog1w_AyEhMh)**
 - **[PING Command - Troubleshooting Networks | PowerCert](https://youtu.be/IIicPE38O-s?si=bvzJYh_-lNDtqp3W)**
 - **[NETSTAT Command Explained | PowerCert](https://youtu.be/8UZFpCQeXnM?si=RKd7IngyMP2zx0A-)**
 
