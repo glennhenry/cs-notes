@@ -451,6 +451,8 @@ const sidebars = {
         "machine-learning/linear-regression/linear-regression",
         "machine-learning/logistic-regression/logistic-regression",
         "machine-learning/naive-bayes/naive-bayes",
+        "machine-learning/k-nearest-neighbors/k-nearest-neighbors",
+        "machine-learning/decision-trees/decision-trees",
       ],
     },
 

@@ -27,8 +27,8 @@ This notes will include explanation about traditional ML algorithms (implementat
 - [Linear Regression](machine-learning/linear-regression)
 - [Logistic Regression](machine-learning/logistic-regression)
 - [Naive Bayes](machine-learning/naive-bayes)
-- K-Nearest Neighbors
-- Decision Trees
+- [K-Nearest Neighbors](machine-learning/k-nearest-neighbors)
+- [Decision Trees](machine-learning/decision-trees)
 - Random Forest
 - Gradient Boosting Machines
 - Support Vector Machines

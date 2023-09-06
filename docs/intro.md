@@ -47,6 +47,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 1. **[add]** Tor Browser : Extras
 2. **[add]** Crawler : Web Development -> Search Engine
 3. **[add]** Wayback Machine : Extras
+4. **[update]** Logistic Regresion : Machine Learning, add about binary cross entropy cost function
 
 ### Credits
 
