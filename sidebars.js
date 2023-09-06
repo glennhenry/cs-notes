@@ -450,6 +450,7 @@ const sidebars = {
       items: [
         "machine-learning/linear-regression/linear-regression",
         "machine-learning/logistic-regression/logistic-regression",
+        "machine-learning/naive-bayes/naive-bayes",
       ],
     },
 

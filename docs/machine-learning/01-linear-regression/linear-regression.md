@@ -107,6 +107,8 @@ Where :
 - $k$ : step size or learning rate, used to measure of how far we want to go to the negative direction of function. The learning rate is somewhat important, a smaller rate may slow down computation but a higher rate may make us "go to far" in the minimum direction.
 - $\frac{d}{dm} E(m)$ : The derivative of the function $E(m)$, where $E(m)$ itself is the error function we graphed before
 
+The subtraction between the slope and the derivative indicates that we are moving in the opposite (negative) direction of the derivative. The slope is gradually adjusted through iterations. The speed and effectiveness of the learning process can vary depending on factors such as the function, the data, and the learning rate. This variability can result in slow or fast learning and lead to either favorable or unfavorable outcomes.
+
 After using gradient descent to optimize the slope, we may achieve a better fitting line. However, we can still improve this by also taking account the y-intercept of the line.
 
 #### Gradient Descent in 3D
