@@ -456,6 +456,8 @@ const sidebars = {
         "machine-learning/random-forest/random-forest",
         "machine-learning/gradient-boosting-machine/gradient-boosting-machine",
         "machine-learning/support-vector-machine/support-vector-machine",
+        "machine-learning/principal-component-analysis/principal-component-analysis",
+        "machine-learning/k-means-clustering/k-means-clustering",
       ],
     },
 

@@ -19,8 +19,10 @@ This notes will include explanation about traditional ML algorithms (implementat
 
 **Main Source :**
 
-- **Various source from google, blogs, youtube, and etc.**
-- will include later
+- **[StatQuest](https://www.youtube.com/@statquest)**
+- **[Normalized Nerd](https://www.youtube.com/@NormalizedNerd)**
+- **[Visually Explained](https://www.youtube.com/@VisuallyExplained)**
+- **Other source from google, blogs, youtube, and etc.**
 
 ### All pages
 
@@ -32,5 +34,5 @@ This notes will include explanation about traditional ML algorithms (implementat
 - [Random Forest](machine-learning/random-forest)
 - [Gradient Boosting Machines](machine-learning/gradient-boosting-machine)
 - [Support Vector Machine](machine-learning/support-vector-machine)
-- Principal Component Analysis
-- k-Means Clustering
+- [Principal Component Analysis](machine-learning/principal-component-analysis)
+- [k-Means Clustering](machine-learning/k-means-clustering)
