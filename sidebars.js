@@ -453,6 +453,9 @@ const sidebars = {
         "machine-learning/naive-bayes/naive-bayes",
         "machine-learning/k-nearest-neighbors/k-nearest-neighbors",
         "machine-learning/decision-trees/decision-trees",
+        "machine-learning/random-forest/random-forest",
+        "machine-learning/gradient-boosting-machine/gradient-boosting-machine",
+        "machine-learning/support-vector-machine/support-vector-machine",
       ],
     },
 

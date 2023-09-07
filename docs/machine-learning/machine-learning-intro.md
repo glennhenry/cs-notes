@@ -29,8 +29,8 @@ This notes will include explanation about traditional ML algorithms (implementat
 - [Naive Bayes](machine-learning/naive-bayes)
 - [K-Nearest Neighbors](machine-learning/k-nearest-neighbors)
 - [Decision Trees](machine-learning/decision-trees)
-- Random Forest
-- Gradient Boosting Machines
-- Support Vector Machines
+- [Random Forest](machine-learning/random-forest)
+- [Gradient Boosting Machines](machine-learning/gradient-boosting-machine)
+- [Support Vector Machine](machine-learning/support-vector-machine)
 - Principal Component Analysis
 - k-Means Clustering

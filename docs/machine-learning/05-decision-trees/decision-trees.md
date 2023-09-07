@@ -1,5 +1,5 @@
 ---
-slug: /decision-trees
+slug: /machine-learning/decision-trees
 id: decision-trees
 title: Decision Trees
 description: Decision Trees
