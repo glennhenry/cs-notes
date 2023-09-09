@@ -74,12 +74,12 @@ For simplicity, we will use a simpler data and we will ignore the y-intercept fo
 ![Example of the simpler data](./regression-simple-example.png)  
 Source : https://youtu.be/Rt6beTKDtqY?si=heJuep-IpaK_V6ki&t=108
 
-The approach of fitting the best line is to try to draw a line with particular slope and calculate the error to see how it performs. We keep trying this for a several times, the result can be graphed where the x-axis is the particular slope of the line and the y-axis is the error. If we see the graph, the smallest possible error we can get is by drawing a line with a slope of 1.68.
+The approach of fitting the best line is to try to draw a line with particular slope and calculate the error to see how it performs. We keep trying this for a several times, the result can be visualized where the x-axis is the particular slope of the line and the y-axis is the error. If we see the graph, the smallest possible error we can get is by drawing a line with a slope of 1.68.
 
 ![Slope calculation](./slope-calculation.png)  
 Source : https://youtu.be/Rt6beTKDtqY?si=9_O7XygkvOvZRjiq&t=202
 
-This approach sounds good, but how do we know what slope to try next?
+This approach sounds good, but how do we know what slope to try next? Also, in real case, we can't visualize it as we need to try a bunch of times to be able to draw a perfect graph like above. This makes us not sure if increasing or decreasing slope will decrease the error or not.
 
 The point of this is to find the corresponding x value for the minimum y value. Mathematically speaking, we are trying to find the minima of a function. The concept of minima is often used in optimization problems, where the goal is to find the input value(s) that minimize a given function. The commonly used technique to minimize the error in linear regression and other machine learning technique is the **Gradient Descent** algorithm.
 

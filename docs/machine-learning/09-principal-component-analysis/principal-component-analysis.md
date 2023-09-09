@@ -33,9 +33,9 @@ The point of PCA is to project a data while also preserving info. PCA uses the o
 
 To make it simple, lets take an example in 2-d. A projection can range from 0 to 1, where 0 means the point we are projecting is perpendicular with the line below. Where 1 means we fully project it to the line.
 
-In PCA, because we want to capture all the information, we should make the projection result as high as possible. If all the data is considered as a vector, we want the vector projection to be 1 as the constraint.
+In PCA, the data are considered as vector where the vector magnitude represent the features a data have. We want to capture all the information, we should make the projection result as high as possible. We want the vector projection to be 1 as the constraint.
 
-Not only a single data, we want all data to also have a high projection. This becomes an optimization problem, the goal is to maximize the variance of the projected data along each features or the principal component.
+Not only a single data, we want all data to also have a high projection. This becomes an optimization problem, the goal is to maximize the information variety or the variance of the projected data along each features or the principal component.
 
 ![Projection](./projection.png)
 

@@ -469,40 +469,55 @@ const sidebars = {
       items: [
         "deep-learning/deep-learning-foundation/deep-learning-foundation",
         "deep-learning/neural-network/neural-network",
-        {
-          type: "category",
-          label: "Natural Language Processing",
-          link: { type: "doc", id: "deep-learning/03-natural-language-processing/natural-language-processing" },
-          items: [
-            "deep-learning/03-natural-language-processing/01-rnn/rnn",
-            "deep-learning/03-natural-language-processing/02-lstm/lstm",
-            "deep-learning/03-natural-language-processing/03-gru/gru",
-            {
-              type: "category",
-              label: "Transformers (NLP)",
-              link: { type: "doc", id: "deep-learning/03-natural-language-processing/04-transformers-nlp/transformers-nlp" },
-              items: [
-                "deep-learning/03-natural-language-processing/04-transformers-nlp/01-example1/example1",
-              ],
-            },
-            "deep-learning/03-natural-language-processing/05-gpt/gpt",
-          ],
-        },
         "deep-learning/random-forests/random-forests",
         "deep-learning/collaborative-filtering/collaborative-filtering",
         {
           type: "category",
-          label: "Computer Vision",
-          link: { type: "doc", id: "deep-learning/06-computer-vision/computer-vision" },
+          label: "Natural Language Processing (NLP)",
+          link: { type: "doc", id: "deep-learning/natural-language-processing/natural-language-processing" },
           items: [
-            "deep-learning/03-natural-language-processing/01-cnn/cnn",
-            "deep-learning/03-natural-language-processing/02-gan/gan",
+            "deep-learning/natural-language-processing/rnn/rnn",
+            "deep-learning/natural-language-processing/lstm/lstm",
+            "deep-learning/natural-language-processing/gru/gru",
+            {
+              type: "category",
+              label: "Transformers (NLP)",
+              link: { type: "doc", id: "deep-learning/natural-language-processing/transformers-nlp/transformers-nlp" },
+              items: [
+                "deep-learning/natural-language-processing/transformers-nlp/example1/example1",
+              ],
+            },
+            {
+              type: "category",
+              label: "Large Language Model (LLM)",
+              link: { type: "doc", id: "deep-learning/natural-language-processing/llm/llm" },
+              items: [
+                "deep-learning/natural-language-processing/llm/xx-gpt/gpt",
+              ],
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Transformers (Audio)",
+          link: { type: "doc", id: "deep-learning/transformers-audio/transformers-audio" },
+          items: [
+            "deep-learning/transformers-audio/example4/example4",
+          ],
+        },
+        {
+          type: "category",
+          label: "Computer Vision (CV)",
+          link: { type: "doc", id: "deep-learning/computer-vision/computer-vision" },
+          items: [
+            "deep-learning/computer-vision/cnn/cnn",
+            "deep-learning/computer-vision/gan/gan",
             {
               type: "category",
               label: "Stable Diffusion",
-              link: { type: "doc", id: "deep-learning/06-computer-vision/03-stable-diffusion/stable-diffusion" },
+              link: { type: "doc", id: "deep-learning/computer-vision/stable-diffusion/stable-diffusion" },
               items: [
-                "deep-learning/06-computer-vision/03-stable-diffusion/01-example2/example2",
+                "deep-learning/computer-vision/stable-diffusion/example2/example2",
               ],
             },
           ],
@@ -510,17 +525,9 @@ const sidebars = {
         {
           type: "category",
           label: "Reinforcement Learning",
-          link: { type: "doc", id: "deep-learning/07-reinforcement-learning/reinforcement-learning" },
+          link: { type: "doc", id: "deep-learning/reinforcement-learning/reinforcement-learning" },
           items: [
-            "deep-learning/07-reinforcement-learning/01-example3/example3",
-          ],
-        },
-        {
-          type: "category",
-          label: "Transformers (Audio)",
-          link: { type: "doc", id: "deep-learning/08-transformers-audio/transformers-audio" },
-          items: [
-            "deep-learning/08-transformers-audio/01-example4/example4",
+            "deep-learning/reinforcement-learning/example3/example3",
           ],
         },
       ],
