@@ -29,7 +29,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[Frontend Web Development](frontend-web-development)**
 - [Backend Development](backend-development)
 - [Computer Security](computer-security)
-- [Machine Learning](machine-learning)
+- **[Machine Learning](machine-learning)**
 - [Deep Learning](deep-learning)
 - [Software Engineering](software-engineering)
 - [Cloud Computing](cloud-computing)
@@ -47,7 +47,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 1. **[add]** Tor Browser : Extras
 2. **[add]** Crawler : Web Development -> Search Engine
 3. **[add]** Wayback Machine : Extras
-4. **[update]** Logistic Regresion : Machine Learning, add about binary cross entropy cost function
+4. **[ref]** Logistic Regresion : Machine Learning, ref to binary cross entropy cost function in Deep Learning
+5. **[update]** Linear Regression, Gradient Descent : Machine Learning, update gradient descent
+6. **[update]** Principal Component Analysis : Machine Learning, update about vector of data
 
 ### Credits
 
