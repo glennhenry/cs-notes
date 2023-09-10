@@ -13,4 +13,4 @@ description: Natural Language Processing
 - [LSTM](natural-language-processing/lstm)
 - [GRU](natural-language-processing/gru)
 - [Transformers (NLP)](natural-language-processing/transformers-nlp)
-- [GPT](natural-language-processing/gpt)
+- [GPT](natural-language-processing/llm/gpt)
