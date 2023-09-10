@@ -10,6 +10,8 @@ description: Operating System Notes
 ### All pages
 
 - [Virtualization](/operating-system/virtualization) (probably same as cloud computing)
-- a
-- b
-- c
+- kernel
+- unix
+- linux (linux kernel)
+- windows
+- android
