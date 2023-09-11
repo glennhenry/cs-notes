@@ -9,6 +9,7 @@ description: Deep Learning Foundation
 
 - **[Mengenal Cross Entropy Loss - Anak AI](https://youtu.be/rBKWVHhFqGU?si=K8imDow_FIeEfvXq)**
 - **[Deep learning lesson 3 - fastai](https://youtu.be/hBBOjCiFcuo?si=DZdZmAXYcw_M49zC)**
+- **[The Unreasonable Effectiveness of Stochastic Gradient Descent (in 3 minutes) - Visually Explained](https://youtu.be/UmathvAKj80?si=_OhMXYlZYrCc0xIp)**
 
 ### Loss Function
 
@@ -17,17 +18,11 @@ description: Deep Learning Foundation
 ![MSE formula](./mse.png)  
 Source : https://suboptimal.wiki/explanation/mse/
 
-Basically it sums all the error or the difference between actual and predicted value and then square it and get the average. In the case of MSE, the larger means the worse performance and the lower means the better.
+The model predict what may be the y value for specific x value. It sums all the error or the difference between actual and predicted value and then square it and get the average. In the case of MSE, the larger means the worse performance and the lower means the better.
 
 The point of machine learning is we keep measuring the performance of our model and adjust our model to make it performs better. The less result we get from the loss function (or more depending on the loss function itself) reflect of how our model performs. We need to optimize the loss function, there are many way to optimize it, such as the [gradient descent algorithm](/machine-learning/linear-regression#gradient-descent)
 
 ![Machine learning flow](./machine-learning-flow.png)
-
-### Stochastic Gradient Descent
-
-**Stochastic Gradient Descent (SGD)** is
-
-### ReLU
 
 ### Entropy
 
@@ -69,3 +64,39 @@ The cross entropy function explained before can be used to calculate a loss func
 Binary cross entropy loss is another form of cross entropy loss which is used for binary classifcation, or a classification that only has 2 output. The formula is below :
 
 $L(y, \hat{y}) = - (y \log(\hat{y}) + (1 - y) \log(1 - \hat{y}))$
+
+### Stochastic Gradient Descent
+
+In traditional gradient descent, model's parameter (e.g. the slope and y-intercept in linear regression) are updated every iteration, this can be slow for large datasets. Traditional gradient descent "walks" slowly, it may reach a bad local minima or even stuck at saddle point.
+
+**Stochastic Gradient Descent (SGD)** is a variant of [gradient descent](/machine-learning/linear-regression#gradient-descent) which is suited for larger datasets. The idea of SGD is, instead of considering all dataset to calculate the gradient and update the parameters, SGD randomly selects a single data point (or a small batch of data points) at each iteration and calculate that particular gradient and use it to update the model's parameters.
+
+By not considering all the data, SGD may not be stable. However, with the faster computation, we can update more and eventually catch up with traditional gradient descent.
+
+![SGD comparison with traditional gradient descent](./stochastic-gradient-descent.png)  
+Source : https://youtu.be/UmathvAKj80?si=jHExCTVk7diEA6_6&t=92
+
+With randomness, SGD able to escape saddle point or bad local minima, this is because it allows the algorithm to explore different directions and not get stuck in a single negative curvature.
+
+![Escaping saddle point](./escape-saddle-point.png)  
+Source : https://youtu.be/UmathvAKj80?si=Tpo1K5_hXo94UGJh&t=107
+
+### Activation Function
+
+While predicting in machine learning, we often find that the relationship between dependent and independent variable is non-linear. Sometimes, it can't be easily approximated using line in linear regression. Remember that the point is to predict by fitting a line, so we must construct a complex function that fits the data.
+
+We can construct any complex function that captures non-linear relationship by summing up several function or lines. However, we may not achieve a desired function just by summing up all the line.
+
+This is where an **activation function** comes, an activation function is used to filter or "decide" which line should we sum, this way we control the sum and make any function we want. This is when we use activation function to introduce non-linearity and constructing complex function.
+
+There are many activation function, for example **Rectified Linear Unit (ReLU)** is a simple linear activation function that defined as : $\text{ReLU(x)} = \text{max(0, x)}$, in other word, it filters any negative value.
+
+In image below, we summed 2 relu function, it now looks like an elbow like graph which obviously can't be constructed by linear function. However, if we sum all the linear function and only takes what we need, we may be able to construct it.
+
+The relu line is defined with the $mx + b$, we can sum as many relu as we want, and in a more complex problem, the equation may also involve more variable.
+
+![2 relu summed](./relu-sum.png)  
+Source : https://youtu.be/hBBOjCiFcuo?si=B8PDlJRj4QTa99k-&t=2721
+
+![Activation function example](./activation-function.png)  
+Source : https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep-learning-9689331ba092

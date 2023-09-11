@@ -47,6 +47,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 1. **[add]** Tor Browser : Extras
 2. **[add]** Crawler : Web Development -> Search Engine
 3. **[add]** Wayback Machine : Extras
+4. **[update]** Computer Display : Computer Graphics, add vsync (frame buffer, back buffer)
 
 ### Credits
 
