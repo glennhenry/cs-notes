@@ -10,6 +10,7 @@ description: Deep Learning Foundation
 - **[Mengenal Cross Entropy Loss - Anak AI](https://youtu.be/rBKWVHhFqGU?si=K8imDow_FIeEfvXq)**
 - **[Deep learning lesson 3 - fastai](https://youtu.be/hBBOjCiFcuo?si=DZdZmAXYcw_M49zC)**
 - **[The Unreasonable Effectiveness of Stochastic Gradient Descent (in 3 minutes) - Visually Explained](https://youtu.be/UmathvAKj80?si=_OhMXYlZYrCc0xIp)**
+- **[Deep Learning Crash Course for Beginners - freeCodeCamp](https://youtu.be/VyWAvY2CF9c?si=254TjhySXqspex_B)**
 
 ### Loss Function
 
@@ -100,3 +101,24 @@ Source : https://youtu.be/hBBOjCiFcuo?si=B8PDlJRj4QTa99k-&t=2721
 
 ![Activation function example](./activation-function.png)  
 Source : https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep-learning-9689331ba092
+
+### Terminology
+
+- **Hyperparameter** : Settings or configuration choices that are set before the learning process begins. They are not learned from the data but are determined by the practitioner or researcher. For example, learning rate is a hyperparameter that controls rate at which a model adjusts its parameters during training (e.g. used in gradient descent).
+
+- **Epoch** : Sometimes, training data is used more than one times while training model. The number of how many iteration pass through the entire dataset is called epoch. For example, when we say 5 epoch, it means that we are training the model with the same dataset for 5 times. Epoch is considered as hyperparameter as it is set before learning process.
+
+- **Batch** : Batch is the number of samples or data points that is processed together in a single learning process. If we have 1000 data and we used batch of 32, it means during each iteration, we will process 32 at each time.
+
+- **Iteration** : Iteration is the number of time we want to repeat each batch. It is different with epoch, epoch is the iteration of whole dataset, while this is just an iteration of a batch.
+
+- **Metric** : Metric is a measure of the quality of model's predictions. Metric is different with loss function, loss function is used to train while metric is used to evaluate the prediction. By evaluating the models, we can compare with different model or configuration. For example, a simple metric is accuracy, it is defined as the number of correct predictions divided by the total number of predictions.
+
+- **Fine Tuning** : Fine tuning is the process of training a pre-trained model, typically with a smaller dataset or new task. The purpose of fine-tuning is to leverage the knowledge and learned representations from the pre-trained model and adapt it to the new task or dataset.
+
+- **Overfitting** : Overfitting, also known as high variance, is a situation where a model learns too much from the training data, making it becomes too specialized and performs poorly on new, unseen data. This is the same when you practice alot on a math problem without studying the concept and only memorizing it, turns out the actual exam asked different questions. For a machine learning model, the concept is the pattern of the data, it is important to capture the broader patterns rather than a specific example.
+
+- **Underfitting** : Underfitting, also known as high bias, is where the model is too simple or didn't capture the underlying patterns in the data. It fails to learn the relevant relationships or make a very general assumptions for the training data.
+
+  ![Overfit and underfit](./underfit-overfit.png)  
+   Source : https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-how-to-deal-with-it-6803a989c76

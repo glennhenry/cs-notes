@@ -17,7 +17,7 @@ A image has more than just a color, it includes various properties that describe
 
 Here are some image properties :
 
-1.  **Size / Resolution** : The dimensions of the image, related to amount of pixels present in image, measured by width x height. The higher resolution the more detailed the image is.
+1.  **Size / Resolution** : The dimensions of the image, related to amount of pixels present in image, measured by width x height. The higher resolution the more detailed the image is.  
     ![Comparison of small to high resolution](./resolution.png)  
     Source : https://vimeo.com/blog/post/the-basics-of-image-resolution/
 
