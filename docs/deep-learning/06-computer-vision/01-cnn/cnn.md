@@ -7,4 +7,8 @@ description: CNN
 
 **CNN** is
 
+pooling, kernel
+
+Image classification example
+
 ### ResNet

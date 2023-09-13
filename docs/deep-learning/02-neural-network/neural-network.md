@@ -26,7 +26,18 @@ To capture complex relationships and patterns in the data, the network utilizes 
 
 ### Neural Network Architecture
 
-A neural network consists several network called neuron, in each neuron will have connection between them. The overall architecture consists of several layer of neuron, including input layer, hidden layer, and output layer.
+#### Perceptron
+
+The simplest model of neural network is called **perceptron**, it consists of several input data and weights. The input will be calculated with the their corresponding weight, summed up, and applied to an activation function to produce an output.
+
+![Perceptron](./perceptron.png)  
+Source : https://www.javatpoint.com/perceptron-in-machine-learning
+
+#### Multilayer Perceptron
+
+Perceptron consist only a single layer, it only process the input once. **Multilayer perceptron (MLP)** also known as **fully connected feedforward network** is similar to perceptron, however, it consists of multiple layer of processing. MLPs passes it through multiple layer with small units called neuron. Each neuron will be connected with each other.
+
+The overall architecture consists of several layer of neuron, including input layer, hidden layer, and output layer. In MLP, information only flow in one direction, from the input layer to the hidden layer and finally to the output layer, without any loops.
 
 - **Input Layer** : The input layer receives the raw input data and passes it to next layer for further processing. The number of neuron in input layer represent the dimensionality of the input data.
 
@@ -36,6 +47,10 @@ A neural network consists several network called neuron, in each neuron will hav
 
   ![Neural network architecture](./neural-network-architecture.png)  
    Source : https://towardsdatascience.com/everything-you-need-to-know-about-neural-networks-and-backpropagation-machine-learning-made-easy-e5285bc2be3a
+
+:::tip
+Neural network is a concept in both machine learning and deep learning, however, in deep learning the network is more advanced. There are multiple hidden layer in deep learning while machine learning uses simpler network architecture.
+:::
 
 ### Neural Network Learning Process
 
@@ -78,4 +93,10 @@ This learning process will be repeated for many times based on the hyperparamete
 ![Backpropagation](./backpropagation.png)  
 Source : https://www.analyticsvidhya.com/blog/2023/01/gradient-descent-vs-backpropagation-whats-the-difference/
 
-### Conclusion/addition
+#### Vanishing Gradient Problem
+
+Vanishing gradient problem is a phenomenon occurs in backpropagation due to it's nature of calculation.
+
+In backpropagation, gradient of loss function is calculated starting from the output layer, it will then be propagated backward. With the chain rule, the gradient will keep being multiplied with the previous layer and their value might become small and smaller as we keep multiplying them together.
+
+A smaller gradient can cause a slower learning because the updates to the weight and bias are going to be small. One of the way to help mitigate vanishing gradient problem is to use a correct activation function such as ReLU and its variant. ReLU helps preventing the gradient from becoming too small because it doesn't saturate the positive region compared to other activation function like sigmoid that saturate at large and negative values.

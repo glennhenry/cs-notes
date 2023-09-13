@@ -21,8 +21,8 @@ description: Deep Learning Notes
 - [Collaborative Filtering](deep-learning/collaborative-filtering)
 - [Natural Language Processing (NLP)](deep-learning/natural-language-processing)
   - [RNN](deep-learning/natural-language-processing/rnn)
-  - [LSTM](deep-learning/natural-language-processing/lstm)
   - [GRU](deep-learning/natural-language-processing/gru)
+  - [LSTM](deep-learning/natural-language-processing/lstm)
   - [Transformers (NLP)](deep-learning/natural-language-processing/transformers-nlp)
     - [example 1](deep-learning/natural-language-processing/transformers-nlp/example1)
     - b

@@ -82,6 +82,16 @@ With randomness, SGD able to escape saddle point or bad local minima, this is be
 ![Escaping saddle point](./escape-saddle-point.png)  
 Source : https://youtu.be/UmathvAKj80?si=Tpo1K5_hXo94UGJh&t=107
 
+#### Adam
+
+Adaptive Moment Estimation (Adam) is an upgrade to SGD. In high-level, Adam is able to adapt the model learning to different case we are facing. Adam have several parameters, these parameters will be adjusted based on past gradients.
+
+Adam uses several adaptation technique including :
+
+- **Adaptive Learning Rate** : SGD has a fixed learning rate which is set before model training begins. Adam is able to adjust the learning rate for each parameter based on their past gradients.
+- **Momentum** : Momentum is a configuration that helps us goes into minimum region like saddle point in the loss function faster by making the model adjust the parameter in the successful direction.
+- **Bias Correction** : During the early training, we typically set the parameters of our model (weight and bias) to some specific value. This may make our model biased toward that specific value, in simple term, Adam adjust our estimation based on the number of iterations or epochs.
+
 ### Activation Function
 
 While predicting in machine learning, we often find that the relationship between dependent and independent variable is non-linear. Sometimes, it can't be easily approximated using line in linear regression. Remember that the point is to predict by fitting a line, so we must construct a complex function that fits the data.
@@ -104,7 +114,7 @@ Source : https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep
 
 ### Terminology
 
-- **Hyperparameter** : Settings or configuration choices that are set before the learning process begins. They are not learned from the data but are determined by the practitioner or researcher. For example, learning rate is a hyperparameter that controls rate at which a model adjusts its parameters during training (e.g. used in gradient descent).
+- **Hyperparameter** : Settings or configuration choices that are set before the learning process begins. They are not learned from the data but are determined by the practitioner or researcher. For example, learning rate is a hyperparameter that controls rate at which a model adjusts its parameters during training (e.g. used in gradient descent). After we trained the model and evaluate it, we may want to adjust the hyperparameter to explore if there is a more optimal result, this is called **hyperparameter tuning**.
 
 - **Epoch** : Sometimes, training data is used more than one times while training model. The number of how many iteration pass through the entire dataset is called epoch. For example, when we say 5 epoch, it means that we are training the model with the same dataset for 5 times. Epoch is considered as hyperparameter as it is set before learning process.
 
@@ -114,6 +124,12 @@ Source : https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep
 
 - **Metric** : Metric is a measure of the quality of model's predictions. Metric is different with loss function, loss function is used to train while metric is used to evaluate the prediction. By evaluating the models, we can compare with different model or configuration. For example, a simple metric is accuracy, it is defined as the number of correct predictions divided by the total number of predictions.
 
+- **Data Split** : Data is typically split into 3 :
+
+  - **Training Data** : Training data is the part of data used to train the machine learning model, the model will learn from this data by adjusting its parameters (weight and bias) based on the actual data.
+  - **Test Data** : Test data is the data used to evaluate performance of the model after the training is done.
+  - **Validation Data** : Validation data is a subset of training data used to validate or assess model's performance, this way we can adjusts the hyperparamater if required.
+
 - **Fine Tuning** : Fine tuning is the process of training a pre-trained model, typically with a smaller dataset or new task. The purpose of fine-tuning is to leverage the knowledge and learned representations from the pre-trained model and adapt it to the new task or dataset.
 
 - **Overfitting** : Overfitting, also known as high variance, is a situation where a model learns too much from the training data, making it becomes too specialized and performs poorly on new, unseen data. This is the same when you practice alot on a math problem without studying the concept and only memorizing it, turns out the actual exam asked different questions. For a machine learning model, the concept is the pattern of the data, it is important to capture the broader patterns rather than a specific example.
@@ -122,3 +138,9 @@ Source : https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep
 
   ![Overfit and underfit](./underfit-overfit.png)  
    Source : https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-how-to-deal-with-it-6803a989c76
+
+- **Optimizer** : An optimizer is an algorithm or method used to optimize the loss function. Example of optimizer are [gradient descent](/machine-learning/linear-regression#gradient-descent), [stochastic gradient descent](/deep-learning/deep-learning-foundation#stochastic-gradient-descent), Adam, and etc.
+
+- **Regularization** : In simple term, regularization is a technique to make model prediction simpler (prevent overfitting) by forcing some feature coefficients to be 0. In other word, we exclude some variable contribution to our prediction. The features we are excluding are the one that has low influence toward the overall prediction. This way we can focus on the more important and influential features.
+
+- **Data Augmentation** : Data augmentation is the process of increasing the diversity and variability of the training data, to make our model more generalized to unseen data. This technique is typically used when our data is limited or in an image classification task. For example, while training a dog or cat classifier, with the same image data, we can do some transformation such as rotating the image, skew it, flip, scale, or adjust its color in order to create more variety of data to reduce overfitting.
