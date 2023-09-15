@@ -9,7 +9,7 @@ description: Operating System Notes
 
 ### All pages
 
-- [Virtualization](/operating-system/virtualization) (probably same as cloud computing)
+- [Containerization & Virtualization](/operating-system/containerization-virtualization)
 - kernel
 - unix
 - linux (linux kernel)
