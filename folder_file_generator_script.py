@@ -3,94 +3,56 @@
 
 import os
 
-topic_title = "computer-networking"
+topic_title = "backend-development"
 
 # List of content in kebab title
 content_id = [
-    "osi-model",
-    "tcp-ip-model",
-    "ip-address",
-    "mac-address",
-    "ipv4-ipv6",
-    "subnet-mask",
-    "routing",
-    "gateway",
-    "ports",
-    "socket",
-    "hubs",
-    "switch",
-    "router",
-    "modem",
-    "dial-up",
-    "broadband",
-    "ethernet",
-    "lan-wan",
-    "server",
-    "network-topology",
-    "dns",
-    "udp",
-    "dhcp",
-    "nat",
-    "proxy",
-    "vpn",
-    "tcp-protocol",
-    "ftp",
-    "smtp",
-    "rtp",
-    "http-https",
-    "real-time-communication-rtc",
-    "wi-fi",
-    "hotspot",
-    "bluetooth",
-    "cellular-networking",
-    "sim-card",
-    "firewall",
-    "ddos",
-    "network-encryption"
+    "middleware",
+    "web-server",
+    "apis-server-logic",
+    "rest-api",
+    "graphql",
+    "grpc",
+    "web-socket",
+    "authentication",
+    "authorization",
+    "search-engine",
+    "message-queueing",
+    "monolithic",
+    "microservice",
+    "soa",
+    "serverless",
+    "containerization-virtualization",
+    "docker-kubernetes",
+    "backend-server-security",
+    "caching",
+    "resource-optimization",
+    "network-optimization"
 ]
 
 "List of content in title case"
 content_title = [
-    "OSI Model",
-    "TCP/IP Model",
-    "IP Address",
-    "MAC Address",
-    "IPv4 & IPV6",
-    "Subnet Mask",
-    "Routing",
-    "Gateway",
-    "Ports",
-    "Socket",
-    "Hubs",
-    "Switch",
-    "Router",
-    "Modem",
-    "Dial-up",
-    "Broadband",
-    "Ethernet",
-    "LAN & WAN",
-    "Server",
-    "Network Topology",
-    "DNS",
-    "UDP",
-    "DHCP",
-    "NAT",
-    "Proxy",
-    "VPN",
-    "TCP Protocol",
-    "FTP",
-    "SMTP",
-    "RTP",
-    "HTTP & HTTPS",
-    "Real Time Communication (RTC)",
-    "Wi-Fi",
-    "Hotspot",
-    "Bluetooth",
-    "Cellular Networking",
-    "Sim Card",
-    "Firewall",
-    "DDoS",
-    "Network Encryption"
+    "Middleware",
+    "Web Server",
+    "APIs & Server Logic",
+    "REST API",
+    "GraphQL",
+    "gRPC",
+    "Web Socket",
+    "Authentication",
+    "Authorization",
+    "Search Engine",
+    "Message Queueing",
+    "Monolithic",
+    "Microservice",
+    "SOA",
+    "Serverless",
+    "Containerization & Virtualization",
+    "Docker & Kubernetes",
+    "Backend & Server Security",
+    "Caching",
+    "Resource Optimization",
+    "Network Optimization"
 ]
 
 # Create temp folder for debugging
@@ -108,10 +70,8 @@ def toTitleCase(kebab):
 # Doesn't create file, just print output in terminal
 def generate_topic_links():
     for i, kebab_title in enumerate(content_id, start=0):
-        title = toTitleCase(kebab_title)
         os.makedirs(parent_folder, exist_ok=True)
-
-        print(f"- [{title}]({topic_title}/{kebab_title})")
+        print(f"- [{content_title[i]}]({topic_title}/{kebab_title})")
 
 # Doesn't create file aswell
 def generate_topic_sidebars():
@@ -151,6 +111,7 @@ def generate_folder_file():
     print("Project structure and MD files created successfully!")
 
 # main
-generate_folder_file()
+
+# generate_folder_file()
 # generate_topic_links()
-# generate_topic_sidebars()
+generate_topic_sidebars()

@@ -12,9 +12,16 @@ description: Database System Notes
 - SQL
     - MySQL
 - NoSQL
-    - Vector
     - Document
-    - Firebase
-- a
-- b
+    - Key-Value
+    - Realtime
+    - Vector
+    - Graph
+- ORM
+- ACID
+- Transactions
+- Normalization
+- Database Optimization (Indexes)
+- Migration
+- Backup Strategy
 - c

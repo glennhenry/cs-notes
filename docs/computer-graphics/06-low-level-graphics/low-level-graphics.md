@@ -49,6 +49,10 @@ This is the process of rendering basic geometric shapes or elements in computer 
     ![A gif of flood fill algorithm](./filled-shape.gif)  
     Source : https://en.wikipedia.org/wiki/Flood_fill
 
+### Buffer
+
+framebuffer, graphic malloc, back buffer
+
 ### Framebuffer Manipulation
 
 A buffer is a block of memory thats temporilaly holds data. In graphics, buffer is used to store graphics information such as coordinates and pixel color. Changing a graphics involve modifying the buffer, for example changing a pixe color involves calculating the memory addresses corresponding to the desired pixel positions and writing the appropriate color values to those addresses.

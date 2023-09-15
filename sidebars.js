@@ -297,7 +297,9 @@ const sidebars = {
       type: "category",
       label: "Operating System",
       link: { type: "doc", id: "operating-system/operating-system" },
-      items: ["operating-system/xx-virtualization/virtualization"],
+      items: [
+        "operating-system/xx-containerization-virtualization/containerization-virtualization"
+      ],
     },
 
     // Theory of Computation & Automata
@@ -407,7 +409,47 @@ const sidebars = {
       type: "category",
       label: "Backend Development",
       link: { type: "doc", id: "backend-development/backend-development" },
-      items: [],
+      items: [
+        "backend-development/middleware/middleware",
+        "backend-development/web-server/web-server",
+        {
+          type: "category",
+          label: "APIs",
+          items: [
+            "backend-development/apis-server-logic/apis-server-logic",
+            "backend-development/rest-api/rest-api",
+            "backend-development/graphql/graphql",
+            "backend-development/grpc/grpc",
+            "backend-development/web-socket/web-socket",
+          ],
+        },
+        "backend-development/authentication/authentication",
+        "backend-development/authorization/authorization",
+        "backend-development/search-engine/search-engine",
+        "backend-development/message-queueing/message-queueing",
+        {
+          type: "category",
+          label: "Architecture",
+          items: [
+            "backend-development/monolithic/monolithic",
+            "backend-development/microservice/microservice",
+            "backend-development/soa/soa",
+            "backend-development/serverless/serverless",
+          ],
+        },
+        "backend-development/containerization-virtualization/containerization-virtualization",
+        "backend-development/docker-kubernetes/docker-kubernetes",
+        "backend-development/backend-server-security/backend-server-security",
+        {
+          type: "category",
+          label: "Backend Optimization",
+          items: [
+            "backend-development/caching/caching",
+            "backend-development/resource-optimization/resource-optimization",
+            "backend-development/network-optimization/network-optimization",
+          ],
+        },
+      ],
     },
 
     // Computer Security
@@ -547,7 +589,7 @@ const sidebars = {
       label: "Cloud Computing",
       link: { type: "doc", id: "cloud-computing/cloud-computing" },
       items: [
-        "cloud-computing/xx-virtualization/virtualization",
+        "cloud-computing/xx-containerization-virtualization/containerization-virtualization",
         "cloud-computing/xx1-docker-and-kubernetes/docker-and-kubernetes",
       ],
     },
