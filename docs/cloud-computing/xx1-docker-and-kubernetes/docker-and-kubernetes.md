@@ -18,7 +18,7 @@ While developing a web app, developers uses various library, module and this cre
 
 ### Docker
 
-**Docker** is a platform that allows developers to package their applications and dependencies so that it can be easily distributed and run on any system that supports Docker. Docker uses the idea of "containers" these are isolated environment of our code. Docker container is able to simulate a system that is able to run our application, this technology is called [**Virtualization**](/cloud-computing/virtualization).
+**Docker** is a platform that allows developers to package their applications and dependencies so that it can be easily distributed and run on any system that supports Docker. Docker uses the idea of "containers" these are isolated environment of our code. Docker container is able to simulate a system that is able to run our application, this technology is called [**Virtualization**](/cloud-computing/containerization-virtualization#virtualization).
 
 A Docker container is made using a Docker images, the "images" doesn't refer to images we see everyday. An images is a set of instruction to build a container, images can be thought as a template of making container.
 

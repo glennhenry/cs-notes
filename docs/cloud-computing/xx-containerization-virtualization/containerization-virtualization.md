@@ -10,4 +10,6 @@ This is the same notes as :
 - **[Operating System > Containerization & Virtualization](/operating-system/containerization-virtualization)**
 - **[Backend Development > Containerization & Virtualization](/backend-development/containerization-virtualization)**
 
-Containerization & Virtualization
+### Containerization
+
+### Virtualization
