@@ -7,8 +7,8 @@ description: Random Forest
 
 **Main Source :**
 
-- [Visual Guide to Random Forests - Econoscent](https://youtu.be/cIbj0WuK41w?si=Ck0xYB7UXpLJqE0F)
-- [Random Forest Algorithm Clearly Explained! - Normalized Nerd](https://youtu.be/v6VJ2RO66Ag?si=blojC7xpDh1oSw4V)
+- **[Visual Guide to Random Forests - Econoscent](https://youtu.be/cIbj0WuK41w?si=Ck0xYB7UXpLJqE0F)**
+- **[Random Forest Algorithm Clearly Explained! - Normalized Nerd](https://youtu.be/v6VJ2RO66Ag?si=blojC7xpDh1oSw4V)**
 
 **Random Forest** is another machine learning technique used for classification and regression tasks. Random forest uses the previous technique, which is [decision trees](/machine-learning/decision-trees), it combines multiple individual of tree to produce a single result of prediction.
 
