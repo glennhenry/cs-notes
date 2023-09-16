@@ -410,7 +410,6 @@ const sidebars = {
       label: "Backend Development",
       link: { type: "doc", id: "backend-development/backend-development" },
       items: [
-        "backend-development/middleware/middleware",
         "backend-development/web-server/web-server",
         {
           type: "category",

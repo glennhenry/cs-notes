@@ -9,10 +9,9 @@ Backend development is the process of creating the server-side component of an a
 
 ### All pages
 
-- [Middleware](backend-development/middleware)
 - [Web Server](backend-development/web-server) (nginx, apache)
 - APIs
-  - [APIs Server Logic](backend-development/apis-server-logic)
+  - [APIs & Server Logic](backend-development/apis-server-logic) (Routing)
   - [REST API](backend-development/rest-api)
   - [GraphQL](backend-development/graphql)
   - [gRPC](backend-development/grpc)
@@ -28,7 +27,7 @@ Backend development is the process of creating the server-side component of an a
   - [Serverless](backend-development/serverless)
 - [Containerization & Virtualization](backend-development/containerization-virtualization)
 - [Docker & Kubernetes](backend-development/docker-kubernetes)
-- [Backend & Server Security](backend-development/backend-server-security)
+- [Backend & Server Security](backend-development/backend-server-security) (Cors)
 - Backend Optimization
   - [Caching](backend-development/caching) (Client Side, Server Side [Redis], CDN)
   - [Resource Optimization](backend-development/resource-optimization)

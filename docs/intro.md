@@ -44,10 +44,11 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[edit]** : edit notes
 - **[ref]** : add reference to particular notes
 
-1. **[add]** Tor Browser : Extras
-2. **[add]** Crawler : Web Development -> Search Engine
-3. **[add]** Wayback Machine : Extras
-4. **[update]** Computer Display : Computer Graphics, add vsync (frame buffer, back buffer), add buffer
+1. **[add]** extras/tor-browser
+2. **[update]** frontend-web-development/search-engine#crawler
+3. **[add]** extras/wayback-machine
+5. **[update]** computer-graphics/computer-display#buffer (explain frame buffer, back buffer, how they are used)
+4. **[update]** computer-graphics/computer-display#vsync
 
 ### Credits
 
