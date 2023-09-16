@@ -9,6 +9,7 @@ description: Neural Network
 
 - **[Deep Learning Crash Course for Beginners - freeCodeCamp](https://youtu.be/VyWAvY2CF9c?si=qNn4Le63wJgabACo)**
 - **[Backpropagation calculus | Chapter 4, Deep learning - 3Blue1Brown](https://youtu.be/tIeHLnjs5U8?si=SZTyeJz7utdJLjV8)**
+- **[Softmax Activation Function - Developers Hutt](https://youtu.be/8ah-qhvaQqU?si=StzzMQMVFceQQghK)**
 
 ### Neural Network Idea
 
@@ -100,3 +101,40 @@ Vanishing gradient problem is a phenomenon occurs in backpropagation due to it's
 In backpropagation, gradient of loss function is calculated starting from the output layer, it will then be propagated backward. With the chain rule, the gradient will keep being multiplied with the previous layer and their value might become small and smaller as we keep multiplying them together.
 
 A smaller gradient can cause a slower learning because the updates to the weight and bias are going to be small. One of the way to help mitigate vanishing gradient problem is to use a correct activation function such as ReLU and its variant. ReLU helps preventing the gradient from becoming too small because it doesn't saturate the positive region compared to other activation function like sigmoid that saturate at large and negative values.
+
+### Softmax Activation Function
+
+Softmax is an activation function typically used in multi-class classification problem. It is a mathematical function used to assign probability to each class, the highest probability is the one our model will predict.
+
+:::tip
+A class is a distinct categories we are classifying the input to. For example, we might want to classify if an image is dog or cat. This mean, the image is either dog or cat, therefore dog and cat are the class.
+:::
+
+The formula for softmax is :
+
+![Softmax formula](./softmax.png)  
+Source : https://towardsdatascience.com/softmax-activation-function-explained-a7e1bc3ad60
+
+Where :
+
+$z_i$ : output for i-th class  
+$K$ : the number of class  
+$z_j$ : output from j-th class, will be summed up with all the output
+
+Softmax is typically used as the activation function for the output layer of neural network. Output will be produced after processing the input from all the preceding layer. The result will be calculated using the above formula.
+
+The formula will produce probability for a particular class by dividing the result of that class from preceding layer with sum of all result from all output neuron.
+
+For example, consider a scenario where we have 4 class classification task.
+
+![Each class output in output layer](./class-output.png)  
+Source : https://youtu.be/8ah-qhvaQqU?si=llIp3EluG-zh3gjX&t=80
+
+After processing through all the layers, each output layer produces an output. The denominator is the sum of constants $e$ raised to each output value. Therefore, it will be $e^{-1} + e^{0} + e^{3} + e^{5}$ = $169.87$.
+
+To assign probability to each class, we will use that particular class output as the numerator.
+
+![Numerator of each output](./numerator.png)  
+Source : https://youtu.be/8ah-qhvaQqU?si=3ogI3IgJnZZXLkZC&t=103
+
+And the highest probability is the one that the model believes to be the most likely prediction for the given input.

@@ -11,6 +11,7 @@ description: Deep Learning Foundation
 - **[Deep learning lesson 3 - fastai](https://youtu.be/hBBOjCiFcuo?si=DZdZmAXYcw_M49zC)**
 - **[The Unreasonable Effectiveness of Stochastic Gradient Descent (in 3 minutes) - Visually Explained](https://youtu.be/UmathvAKj80?si=_OhMXYlZYrCc0xIp)**
 - **[Deep Learning Crash Course for Beginners - freeCodeCamp](https://youtu.be/VyWAvY2CF9c?si=254TjhySXqspex_B)**
+- **[Deep learning lesson 7 - fastai](https://youtu.be/p4ZZq0736Po?si=aTGIzD1mBcOsmiYs)**
 
 ### Loss Function
 
@@ -141,6 +142,10 @@ Source : https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep
 
 - **Optimizer** : An optimizer is an algorithm or method used to optimize the loss function. Example of optimizer are [gradient descent](/machine-learning/linear-regression#gradient-descent), [stochastic gradient descent](/deep-learning/deep-learning-foundation#stochastic-gradient-descent), Adam, and etc.
 
+- **Gradient Accumulation** : While training model using optimizer like gradient descent, model's parameters are updated after computing gradient for each batch. Gradient accumulation is a technique that defer parameters update, the gradient for each batch is accumulated and updated once with the accumulated gradient. Using this technique can helps reduce memory as it reduce the training process.
+
 - **Regularization** : In simple term, regularization is a technique to make model prediction simpler (prevent overfitting) by forcing some feature coefficients to be 0. In other word, we exclude some variable contribution to our prediction. The features we are excluding are the one that has low influence toward the overall prediction. This way we can focus on the more important and influential features.
 
 - **Data Augmentation** : Data augmentation is the process of increasing the diversity and variability of the training data, to make our model more generalized to unseen data. This technique is typically used when our data is limited or in an image classification task. For example, while training a dog or cat classifier, with the same image data, we can do some transformation such as rotating the image, skew it, flip, scale, or adjust its color in order to create more variety of data to reduce overfitting.
+
+- **Multi-target Model** : A multi-target model is a model trained to predict multiple target variables simultaneously. For example, a multi-target model would also predict the number of bedrooms a house has rather than just predicting the house price. The training process will minimize overall loss of each target variable. The loss function itself is calculated individually and will be combined. The metric (e.g. error) for evaluating the prediction is also measured individually.

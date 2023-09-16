@@ -511,7 +511,6 @@ const sidebars = {
       items: [
         "deep-learning/deep-learning-foundation/deep-learning-foundation",
         "deep-learning/neural-network/neural-network",
-        "deep-learning/random-forests/random-forests",
         "deep-learning/collaborative-filtering/collaborative-filtering",
         {
           type: "category",

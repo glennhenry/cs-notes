@@ -17,7 +17,6 @@ description: Deep Learning Notes
 
 - [Deep Learning Foundation](deep-learning/deep-learning-foundation)
 - [Neural Network](deep-learning/neural-network)
-- [Random Forests](deep-learning/random-forests)
 - [Collaborative Filtering](deep-learning/collaborative-filtering)
 - [Natural Language Processing (NLP)](deep-learning/natural-language-processing)
   - [RNN](deep-learning/natural-language-processing/rnn)
