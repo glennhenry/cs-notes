@@ -29,9 +29,9 @@ Here are the high-level overview of NLP :
    ![Padding zero to each sequence](./sequnce-pad.png)  
    Source : https://youtu.be/r9QjkdSJZ2g?si=pGM_9okSjJR4Wxmp&t=295
 
-4. **Embedding** : We now has produced a sequence of word in form of number, but how will the model actually understand what a word means? This is where **embedding** come, embedding is a technique that involves grouping together words that are similar or commonly used in similar contexts.
+4. **Embedding** : We now has produced a sequence of word in form of number, but how will the model actually understand what a word means? This is where **embedding** come, embedding is a technique that involves grouping together words that are similar or commonly used in similar contexts. The model won't understand a word, but at least it knows how to use these words.
 
-   Word embedding are usually done by representing each word in a vector inside a vector space, where words with similar meanings or usage patterns are located close to each other. This way we can capture what is the meaning of a word while also having a numerical representation.
+   Word embedding are usually done by representing each word in a vector inside a vector space, where words with similar meanings or usage patterns are located close to each other. This way we can capture what is the meaning of a word while also having a numerical representation by representing it in vector.
 
    ![Word embedding example](./word-embedding.png)  
    Source : https://towardsdatascience.com/a-guide-to-word-embeddings-8a23817ab60f?gi=fc122b70f34a
@@ -39,7 +39,7 @@ Here are the high-level overview of NLP :
    ![Big set of word embedding](./word-embedding-2.png)  
    Source : https://devopedia.org/word-embedding
 
-5. **Deep Learning Model** : After all the preprocessing technique, we can now use the sequence of word in number as input for the deep learning model. The exact how will it works depend on the model architecture.
+5. **Deep Learning Model** : After all the preprocessing technique, we can now use the sequence of word in number as input for the deep learning model. The exact process of how will it works depends on the model architecture.
 
 ### All pages
 

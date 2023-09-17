@@ -49,6 +49,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 3. **[add]** extras/wayback-machine
 5. **[update]** computer-graphics/computer-display#buffer (explain frame buffer, back buffer, how they are used)
 4. **[update]** computer-graphics/computer-display#vsync
+5. **[update]** digital-signal-processing/compression#svd-compression
 
 ### Credits
 
