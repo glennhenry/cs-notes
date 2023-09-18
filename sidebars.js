@@ -417,6 +417,7 @@ const sidebars = {
           items: [
             "backend-development/apis-server-logic/apis-server-logic",
             "backend-development/rest-api/rest-api",
+            "backend-development/soap/soap",
             "backend-development/graphql/graphql",
             "backend-development/grpc/grpc",
             "backend-development/web-socket/web-socket",

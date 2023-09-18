@@ -9,13 +9,15 @@ Backend development is the process of creating the server-side component of an a
 
 ### All pages
 
-- [Web Server](backend-development/web-server) (nginx, apache)
+- [Web Server](backend-development/web-server)
 - APIs
-  - [APIs & Server Logic](backend-development/apis-server-logic) (Routing)
+  - [APIs & Server Logic](backend-development/apis-server-logic)
   - [REST API](backend-development/rest-api)
+  - [SOAP](backend-development/soap)
   - [GraphQL](backend-development/graphql)
   - [gRPC](backend-development/grpc)
   - [Web Socket](backend-development/web-socket)
+  - [Webhook](backend-development/webhook)
 - [Authentication](backend-development/authentication) (Cookie, OAuth, Token, JWT)
 - [Authorization](backend-development/authorization)
 - [Search Engine](backend-development/search-engine) (elastic search)

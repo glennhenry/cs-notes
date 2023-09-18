@@ -7,21 +7,49 @@ description: REST API
 
 **Main Source :**
 
+- **[What Is A RESTful API? - AWS](https://aws.amazon.com/what-is/restful-api/)**
+- **[RESTful APIs in 100 Seconds - Fireship](https://youtu.be/-MTSQjw5DrM?si=mGOKWYNFT7H6yl_m)**
+
 **Representational State Transfer API (REST API)** is an architectural style for designing an API.
 Web services that implement REST architecture are called RESTful web services.
 
-### How REST Works
+REST works by leveraging or extending HTTP concepts. The underlying architecture of REST API follows the [HTTP protocol](/computer-networking/http-https#http) to perform specific types of operation such as accessing resource.
 
-The underlying architecture of REST API still uses [HTTP methods](/computer-networking/http-https#http-request--method) to perform specific types of operation.
+Every resource in the server are uniquely identified by Uniform Resource Identifiers (URI), basically a unique address. An example of URI : `file:///C:/Users/username/Documents/file.txt`, `https://www.example.com/index.html`. In the case of REST API, the URI used typically uses the concept of [routing and endpoint](/backend-development/apis-server-logic#routing--endpoint).
 
-- Stateless: Each request from a client to a server contains all the information needed to understand and process that request. The server does not maintain any client state between requests.
+REST includes another HTTP concepts like :
 
-- Resources: REST APIs are centered around resources, which are the key entities or objects that the API exposes. Resources can be accessed and manipulated using unique resource identifiers (URIs).
+- **[HTTP methods](/computer-networking/http-https#http-request--method)** : Such as GET, POST, DELETE, PUT followed with the endpoint (e.g. GET /books).
+- **[HTTP format and syntax](/computer-networking/http-https#http-format--syntax)** : Including header, request line, request body, response format, and version.
+- **[HTTP Responses](/computer-networking/http-https#http-response)** : Codes to indicate the result of the response, for example, 200 OK signifies a successful response, 404 Not Found denotes that the requested resource does not exist.
 
-- HTTP Verbs/Methods: REST APIs use HTTP methods to perform actions on resources. The common methods include GET (retrieve a resource), POST (create a new resource), PUT (update an existing resource), and DELETE (remove a resource).
+Example of REST API GET request :
 
-- Uniform Interface: REST APIs have a uniform interface that follows a consistent set of conventions. This includes using standard HTTP status codes to indicate the result of a request, utilizing hypermedia links for resource navigation, and employing a clear and consistent data format such as JSON or XML for representing resources.
+```
+GET /books HTTP/1.1
+Host: api.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+Accept: application/json
+```
 
-- State Transfer: REST APIs transfer the representation of a resource's state between the client and server. This can be in various formats such as JSON (JavaScript Object Notation) or XML (eXtensible Markup Language).
+In this example, a GET request is made to the `/books` endpoint of the `api.example.com` server. User agent contains information about the client. The client expects a response in JSON format.
 
-- Authentication and Security: REST APIs often use authentication mechanisms such as API keys, tokens, or OAuth to ensure secure access and protect resources from unauthorized use.
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "title": "Book 1",
+    "author": "Author 1"
+  },
+  {
+    "id": 2,
+    "title": "Book 2",
+    "author": "Author 2"
+  }
+]
+```
+
+In the response, the server returns a status line with the status code (200 OK) along with the JSON data. The response body is a JSON array that includes information about two books, each with an ID, title, and author.
