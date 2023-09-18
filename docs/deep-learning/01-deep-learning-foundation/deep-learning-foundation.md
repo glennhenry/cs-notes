@@ -95,7 +95,7 @@ Adam uses several adaptation technique including :
 
 ### Activation Function
 
-While predicting in machine learning, we often find that the relationship between dependent and independent variable is non-linear. Sometimes, it can't be easily approximated using line in linear regression. Remember that the point is to predict by fitting a line, so we must construct a complex function that fits the data.
+While predicting in machine learning, we often find that the relationship between dependent and independent variable is non-linear. Sometimes, it can't be easily approximated using simple line like we did in linear regression. Remember that the goal is to predict next data by fitting a line, so we must construct a function that fits the data. The more complex relationship the variables have, the more complex the function would be.
 
 We can construct any complex function that captures non-linear relationship by summing up several function or lines. However, we may not achieve a desired function just by summing up all the line.
 
