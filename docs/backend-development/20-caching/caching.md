@@ -8,3 +8,5 @@ description: Caching
 **Main Source : **
 
 Caching page
+
+distributed caching
