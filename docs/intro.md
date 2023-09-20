@@ -50,6 +50,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 5. **[update]** computer-graphics/computer-display#buffer (explain frame buffer, back buffer, how they are used)
 4. **[update]** computer-graphics/computer-display#vsync
 5. **[update]** digital-signal-processing/compression#svd-compression
+6. **[ref]** backend-development/authentication-technique#jwt (ref to base64 encode)
 
 ### Credits
 

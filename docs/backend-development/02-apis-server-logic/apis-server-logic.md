@@ -75,3 +75,9 @@ Overall, routing and endpoint determines how the server should respond to differ
 
 ![Endpoint example](./endpoint.png)  
 Source : https://apipheny.io/api-endpoint/
+
+### API Gateway
+
+todo
+
+cache, load balance, rate limit

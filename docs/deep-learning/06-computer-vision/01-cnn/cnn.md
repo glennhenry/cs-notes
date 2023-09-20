@@ -83,6 +83,8 @@ Source : https://www.analyticsvidhya.com/blog/2022/03/basic-introduction-to-conv
 
 The number of neuron used in this layer depends on the size of image and on the number of how many filter we want to use. When we say 32 filter, this mean we have 32 distinct matrix with its own numbers. Each filter will be applied to the image, therefore producing 32 different image, the result is called **feature maps** as it is actually not a separate image, just a different form of image. (note: each conv layer can have different number of filter)
 
+The notation for convolution layer is (numberOfFilter x imageWidth x imageHeight). The input image image is typically separated by its color channel, so red, green, and blue color of the image is processed separately.
+
 ![Convolution with 6 filter](./6-convolution-filter.png)  
 Source : https://youtu.be/pj9-rr1wDhM?si=-7Fnrb2DpTa71Jo8&t=450
 

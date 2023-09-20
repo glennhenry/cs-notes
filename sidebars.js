@@ -425,6 +425,7 @@ const sidebars = {
           ],
         },
         "backend-development/authentication/authentication",
+        "backend-development/authentication-technique/authentication-technique",
         "backend-development/authorization/authorization",
         "backend-development/search-engine/search-engine",
         "backend-development/message-queueing/message-queueing",
@@ -446,8 +447,7 @@ const sidebars = {
           label: "Backend Optimization",
           items: [
             "backend-development/caching/caching",
-            "backend-development/resource-optimization/resource-optimization",
-            "backend-development/network-optimization/network-optimization",
+            "backend-development/general-optimization/general-optimization",
           ],
         },
       ],

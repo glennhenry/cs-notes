@@ -18,7 +18,8 @@ Backend development is the process of creating the server-side component of an a
   - [gRPC](backend-development/grpc)
   - [Webhook](backend-development/webhook)
   - [WebSocket](backend-development/websocket)
-- [Authentication](backend-development/authentication) (Cookie, OAuth, Token, JWT)
+- [Authentication](backend-development/authentication)
+- [Authentication Technique](backend-development/authentication-technique)
 - [Authorization](backend-development/authorization)
 - [Search Engine](backend-development/search-engine) (elastic search)
 - [Message Queueing](backend-development/message-queueing)
@@ -32,5 +33,4 @@ Backend development is the process of creating the server-side component of an a
 - [Backend & Server Security](backend-development/backend-server-security) (Cors)
 - Backend Optimization
   - [Caching](backend-development/caching) (Client Side, Server Side [Redis], CDN)
-  - [Resource Optimization](backend-development/resource-optimization)
-  - [Network Optimization](backend-development/network-optimization) (refer to server)
+  - [General Optimization](backend-development/general-optimization)
