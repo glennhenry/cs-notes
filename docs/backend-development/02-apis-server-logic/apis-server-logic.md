@@ -9,6 +9,7 @@ description: APIs & Server Logic
 
 - **[APIs for Beginners 2023 - How to use an API (Full Course / Tutorial) - freeCodeCamp](https://youtu.be/WXsD0ZgxjRw?si=IJAjV5WMFpiaT8n0)**
 - **[What Is Middleware? - AWS](https://aws.amazon.com/what-is/middleware/)**
+- **[What is API Gateway? - ByteByteGo](https://youtu.be/6ULyxuHKxg8?si=NejEaVJLUUz8jH0x)**
 
 ### What is API
 
@@ -50,15 +51,6 @@ Code above shows actual implementation of the `logOutput` function. Inside `logO
 
 API is considered as a contract because the caller and the API needs to agree what they must provide and what they will return. In this scenario, the caller must provide a string as the log and the API must print it out on console for the caller.
 
-### Middleware
-
-In backend, **Middleware** is a software that bridges between application and server. It is an intermediary that takes incoming requests from application and pass it into server. Middleware is not restricted to a single component, multiple middleware can be connected with other middleware or with other application logic before it is connected into the server.
-
-The purpose of middleware is to pre-process incoming request before passing it into server to make the server can focus only on the actual logic. For example, middleware can check if user has logged in or not, checking for cookies (file that stores basic user information), add additional data or configuration, and handling request error.
-
-![Middleware that acts as a bridge between application and server](./middleware.png)  
-Source : https://medium.com/@seymarslan/what-ismiddleware-fdb2ad163388
-
 ### Routing & Endpoint
 
 When the client sends a request to the server, the request must be handled with the appropriate actions. **Routing** is the mechanism of handling specific request specified by request's URL and [HTTP method](/computer-networking/http-https#http-request--method) to the appropriate codes that should handle them.
@@ -76,8 +68,36 @@ Overall, routing and endpoint determines how the server should respond to differ
 ![Endpoint example](./endpoint.png)  
 Source : https://apipheny.io/api-endpoint/
 
+### Middleware
+
+In backend, **Middleware** is a software that bridges between application and server. It is an intermediary that takes incoming requests from application and pass it into server. Middleware is not restricted to a single component, multiple middleware can be connected with other middleware or with other application logic before it is connected into the server.
+
+The purpose of middleware is to pre-process incoming request before passing it into server to make the server can focus only on the actual logic. For example, middleware in the context of backend can be used check if user has logged in or not, checking for cookies (file that stores basic user information), add additional data or configuration, and handling request error.
+
+![Middleware that acts as a bridge between application and server](./middleware.png)  
+Source : https://medium.com/@seymarslan/what-ismiddleware-fdb2ad163388
+
 ### API Gateway
 
-todo
+Middleware general definition is a software that bridges between one system to another, an **API gateway** is a type of middleware focused to bridges between the client and the backend system. It is a centralized entry point to access the server, a unified interface for APIs consumer.
 
-cache, load balance, rate limit
+An API gateway may provide some functionality including :
+
+- **Routing & Endpoint Management** : API gateway handles the routing of requests to the appropriate backend services based on predefined rules. It manages the endpoints and exposes a unified interface for API consumers.
+
+- **Protocol Translation** : API Gateways can translate between different protocols. For example, it can handle requests in [RESTful](/backend-development/rest-api) format from clients and convert it into another format such as [GraphQL](/backend-development/graphql), [WebSockets](/backend-development/websocket), or another API protocol.
+
+- **Security & Authentication** : API Gateways provide security mechanisms to protect APIs, they can handle [authentication](/backend-development/authentication) and [authorization](/backend-development/authorization).
+
+- **Request & Response Modifier** : API Gateways can modify, validate, or transform requests and responses as they pass through, this can include validating or filtering requests.
+
+- **Rate Limiting** : API Gateways can limit the number of requests made by a clients in a period of time.
+
+- **Caching** : API Gateways may store its previous response from previous API request, this is called **caching**. If the further request requested the same data, the API gateway doesn't need to forward it to the server, instead it respond with the data stored in the cache.
+
+- **Monitoring & Analytics** : API Gateways may log or monitor incoming request, API usage and performance. This allows administrators to gain insights into the traffic patterns, identify potential issues, and make optimal decision for optimization problem.
+
+- **Load Balancing** : Load balancing is the technique to distribute incoming request across multiple backend server to balance the load.
+
+![API Gateway illustration](./api-gateway.png)  
+Source : https://stackoverflow.com/questions/53477140/asp-net-core-api-gateway-middleware

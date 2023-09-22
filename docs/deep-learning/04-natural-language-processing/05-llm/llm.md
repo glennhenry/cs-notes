@@ -7,6 +7,3 @@ description: LLM
 
 **Large Language Model (LLM)** is
 
-### All page
-
-- [GPT](llm/gpt)

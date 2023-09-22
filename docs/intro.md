@@ -51,6 +51,8 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 4. **[update]** computer-graphics/computer-display#vsync
 5. **[update]** digital-signal-processing/compression#svd-compression
 6. **[ref]** backend-development/authentication-technique#jwt (ref to base64 encode)
+7. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
+7. **[ref]** backend-development/message-broker (ref to queue data structure)
 
 ### Credits
 

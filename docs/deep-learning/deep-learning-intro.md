@@ -29,10 +29,7 @@ Deep learning is suited for task which uses complex data that is hard to describ
     - b
     - c
   - [LLM](deep-learning/natural-language-processing/llm)
-    - a
-    - b
-    - c
-    - [GPT](deep-learning/natural-language-processing/llm/gpt)
+  - [GPT](deep-learning/natural-language-processing/gpt)
 - [Transformers (Audio)](deep-learning/transformers-audio)
   - a
   - b

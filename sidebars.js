@@ -428,7 +428,7 @@ const sidebars = {
         "backend-development/authentication-technique/authentication-technique",
         "backend-development/authorization/authorization",
         "backend-development/search-engine/search-engine",
-        "backend-development/message-queueing/message-queueing",
+        "backend-development/message-broker/message-broker",
         {
           type: "category",
           label: "Architecture",
@@ -529,14 +529,8 @@ const sidebars = {
                 "deep-learning/natural-language-processing/transformers-nlp/example1/example1",
               ],
             },
-            {
-              type: "category",
-              label: "Large Language Model (LLM)",
-              link: { type: "doc", id: "deep-learning/natural-language-processing/llm/llm" },
-              items: [
-                "deep-learning/natural-language-processing/llm/xx-gpt/gpt",
-              ],
-            },
+            "deep-learning/natural-language-processing/llm/llm",
+            "deep-learning/natural-language-processing/gpt/gpt",
           ],
         },
         {

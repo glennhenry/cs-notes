@@ -11,6 +11,7 @@ description: Authentication Technique
 - **[Session vs Token Authentication in 100 Seconds - Fireship](https://youtu.be/UBUNrFtufWo?si=IGz6Uo6OpzPTywjq)**
 - **[Token Based Authentication Made Easy - Auth0](https://auth0.com/learn/token-based-authentication-made-easy)**
 - **[Components of JWTs Explained - FusionAuth Docs](https://fusionauth.io/articles/tokens/jwt-components-explained)**
+- **[What Is Single Sign-on (SSO)? How It Works - ByteByteGo](https://youtu.be/O1cRJWYF-g4?si=4vqTPiWb4DheFCF8)**
 
 There are many types and technique used in authentication, these methods can be categorized into two general types which is **session-based authentication** and **token-based authentication**.
 
@@ -68,13 +69,34 @@ Source : https://jwt.io/
 
 5. **Token Validation** : When the server receives a request with a token, it validates the token using the secret key as well as other checks such as expiration time, token format, and any additional custom validation rules.
 
-6. **Access Granted** : Once the token is validated succesfully, the user can perform action they are allowed to do based on the information in the token.
+6. **Authorization & Access Grant** : Once the token is validated succesfully, the server will only allow user action they are allowed to do based on the information in the token.
 
 7. **Token Expiration** : Tokens may have an expiration time to ensure security and session management. If a token expires, the client needs to obtain a new token by repeating the authentication process.
 
 ![Token-based auth process](./token-auth.png)  
 Source : https://www.freecodecamp.org/news/how-to-sign-and-validate-json-web-tokens/
 
-#### OAuth
+### SSO
 
-#### SSO
+**Signle Sign-On (SSO)** is an authentication solution to authenticate user to log in once and gain access to multiple device without needing to authenticate again. SSO is implemented by protocol, the two popular are **Security Assertion Markup Language (SAML)** and **OpenID**. The difference is SAML uses XML while OpenID uses JWT to exchange data, both provide secure connection.
+
+In SSO, a **service provider (SP)** is an application that relies on **identity provider (IdP)**, the one who provide user's identity. This is how SSO works in general using SAML :
+
+1. **User Accesses an Application** : The user initiates the SSO process by attempting to access an application or service that supports SAML-based SSO.
+
+2. **Application Redirects to Identity Provider (IdP)**: IdP is a service that authenticate user and provide identity information to other system, it is responsible for verifying user's identity.The application will redirect the user to the chosen IdP.
+
+3. **User Authentication at IdP**: The user is presented with the IdP's login page or authentication form. The user enters their credentials (e.g., username and password) to authenticate themselves to the IdP.
+
+4. **IdP Generates SAML Assertion** : Upon successful authentication, the IdP generates a SAML assertion, which contains information about the user's authentication status and attributes. The SAML assertion is digitally signed by the IdP, meaning it is encrpyted using a [public/private key encryption](/computer-security/encryption#public--private-key) so that only the IdP and SP itself knows the information to ensure the integrity and origin of the data.
+
+5. **SAML Assertion Sent to Service Provider** : The IdP sends the SAML assertion back to the original application or browser and sent it to the service provider. The assertion is sent to Assertion Consumer Service (ACS) URL, which is a specific endpoint provided by service provider used when the authentication is successful.
+
+6. **SP Validates the SAML Assertion** : The SP receives the SAML assertion from the IdP. The SP validates the assertion by verifying the digital signature to ensure the assertion's integrity and authenticity.
+
+7. **User Authorized & Session Established** : Upon successful validation of the SAML assertion, the SP considers the user authenticated and establishes a session for the user. The session allows the user to access the application or service without providing additional credentials, basically the authentication process will be skipped.
+
+8. **SAML Assertion Expiration** : SAML assertions have an expiration time, typically set by the IdP. If the assertion expires, the SP may need to request a new assertion from the IdP to continue the SSO session. The SP may also supports single logout, which is a mechanism to log out from the SP and terminate the SSO session.
+
+![SSO SAML process](./sso.png)  
+Source : https://support.google.com/a/answer/6262987?hl=id

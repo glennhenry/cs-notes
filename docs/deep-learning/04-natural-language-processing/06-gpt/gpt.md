@@ -1,5 +1,5 @@
 ---
-slug: /deep-learning/natural-language-processing/llm/gpt
+slug: /deep-learning/natural-language-processing/gpt
 id: gpt
 title: GPT
 description: GPT

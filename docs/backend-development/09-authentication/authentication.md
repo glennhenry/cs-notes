@@ -48,7 +48,7 @@ Authentication may also include more than just one evidence from the user, there
 
 4. **Session Establishment** : Upon successful authentication, the system establishes a session for the authenticated user. A session is a period of time the user has been actively authenticated in a system, typically the user will receive their own session identifier, which will be used for subsequent access and is limited in time (expirable).
 
-5. **Access Granted** : The system will grant access to the user's requested resource or operation. The user can proceed to interact with the system or perform the desired actions.
+5. **Authorization & Access Grant** : The system decide whether the user has appropriate permission to do certain actions, if the user is allowed, the system will grant access to the user's requested resource or operation. The user can proceed to interact with the system or perform the desired actions.
 
 6. **Session Termination** : After the user is done with their activity, the session can be terminated, whether explicitly through a logout operation, or automatically by the system after a period of inactivity or upon reaching the session expiration time.
 
