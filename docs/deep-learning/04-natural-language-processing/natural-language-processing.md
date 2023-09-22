@@ -49,4 +49,4 @@ Here are the high-level overview of NLP :
 - [Transformers (NLP)](natural-language-processing/transformers-nlp)
   - [example 1](natural-language-processing/transformers-nlp/example1)
 - [LLM](natural-language-processing/llm)
-  - [GPT](natural-language-processing/llm/gpt)
+- [GPT](natural-language-processing/gpt)
