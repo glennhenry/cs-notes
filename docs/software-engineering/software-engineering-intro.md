@@ -11,7 +11,7 @@ Software Engineering
 
 - Build & Package Management System
 - Package Manager
-- Software Design & Architecture
+- Software Design & Architecture (event-driven, layered (mvc, mvvm, presentation layer, usecase))
 - Software Infrastructure
 - Software testing
 - Software Process / Methodology
