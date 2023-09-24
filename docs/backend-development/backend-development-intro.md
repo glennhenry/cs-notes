@@ -17,7 +17,7 @@ Backend development is the process of creating the server-side component of an a
   - [REST API](backend-development/rest-api)
   - [SOAP](backend-development/soap)
   - [GraphQL](backend-development/graphql)
-  - [gRPC](backend-development/grpc)
+  - [RPC](backend-development/rpc)
   - [Webhook](backend-development/webhook)
   - [WebSocket](backend-development/websocket)
 - [Authentication](backend-development/authentication)

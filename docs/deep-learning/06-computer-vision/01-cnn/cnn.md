@@ -56,13 +56,15 @@ Source : https://www.geeksforgeeks.org/cnn-introduction-to-pooling-layer/
 
 ### CNN
 
-CNN is specialized type of neural network used for image analysis, CNN typically consists of 3 different layer. Same as traditional neural network, these layer are connected together and will pass its result to next layer.
+CNN is specialized type of neural network used for image analysis, CNN typically consists of 4 different layer. Same as traditional neural network, these layer are connected together and will pass its result to next layer.
 
-- **Convolutional Layer** : Which is the layer that performs convolution operation explained above. So instead of multiplying input data by weights, CNN does convolution process to the input data then pass it onto the next layer that does convolution again. The convolution layer may also include an [activation function](/deep-learning/deep-learning-foundation#activation-function).
+- **Input Layer** : Input of CNN is an image in the form of number which is the representation of the image color. Input layer typically expect : [batch_size, channels, width, height], where width and height is the size of image, channels represent how many color channel in the image (e.g. RGB image means 3 channel), and batch_size is the number of image processed together in a single forward and backward pass.
 
-- **Pooling Layer** : Pooling layer that does the pooling process to reduce the image dimension. The pooling layer will take the representation of a region in the overall image.
+- **Convolutional Layer** : Which is the layer that performs convolution operation explained above. So instead of multiplying input data by weights as we did in traditional neural network, CNN does convolution process to the input data which is the image in numerical representation then pass it onto the next layer that does convolution again. The convolution layer may also include an [activation function](/deep-learning/deep-learning-foundation#activation-function).
 
-- **Fully Connected Layer** : The fully connected layers are the same layers as the traditional neural network. After extracting the information from image, these layer is responsible for making prediction.
+- **Pooling Layer** : Pooling layer that does the pooling process to reduce the image dimension. The pooling layer reduce image size but it also take the representation of the overall image. Each neuron in pooling layer will capture different representation of image depending on the input.
+
+- **Fully Connected Layer** : The fully connected layers are the same layers as the traditional neural network. After extracting the information from image from convolution and pooling layer, this layer is responsible for making prediction.
 
 ![CNN Layers](./cnn-layer.png)  
 Source : https://developersbreach.com/convolution-neural-network-deep-learning/
@@ -71,7 +73,7 @@ Source : https://developersbreach.com/convolution-neural-network-deep-learning/
 
 The input data will be an image in the form of its pixel colors. Convolution process will be done into the input data, however, the filter used here is a matrix that consist of random numbers. The convolution process is the same as above explanation, this will produce another image.
 
-As explained before, these filter allows us to detect low-level patterns. The first convolution process may won't be able to capture important patterns or features. However, these numbers will be adjusted later to improve the detection.
+These filter allows us to detect low-level patterns. The first convolution process may won't be able to capture important patterns or features. However, these numbers will be adjusted later to improve the detection.
 
 ![Convolution of a number 7 image](./convolution-layer.png)  
 Source : https://youtu.be/YRhxdVk_sIs?si=ZLAexy3x4VYMjQ0E&t=347
@@ -109,7 +111,7 @@ The input in the fully connected layer is based on the previous layer, the previ
 
 #### Dropout
 
-**Dropout** is a data augmentation techinique to reduce overfitting in CNN by deactivating some neuron in the layer of CNN. Dropout works by discarding some random color in an image. The idea of dropout is, we human, still able to recognize corrupted image like below. Computer should also know how to recognize these.
+**Dropout** is a data augmentation techinique to reduce overfitting in neural network by deactivating some neuron in the layer. Dropout can be thought as discarding some random color in an image. The idea of dropout is, we human, still able to recognize corrupted image. Computer should also know how to recognize these.
 
 ![Dropout deactivting neurons](./dropout.png)  
 Source : https://www.researchgate.net/figure/9-An-illustration-of-the-dropout-mechanism-within-the-proposed-CNN-a-Shows-a_fig23_317277576

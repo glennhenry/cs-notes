@@ -1,8 +1,8 @@
 ---
-slug: /backend-development/grpc
-id: grpc
-title: gRPC
-description: gRPC
+slug: /backend-development/rpc
+id: rpc
+title: RPC
+description: RPC
 ---
 
 **Main Source :**

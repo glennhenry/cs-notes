@@ -52,7 +52,8 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 5. **[update]** digital-signal-processing/compression#svd-compression
 6. **[ref]** backend-development/authentication-technique#jwt (ref to base64 encode)
 7. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
-7. **[ref]** backend-development/message-broker (ref to queue data structure)
+8. **[ref]** backend-development/message-broker (ref to queue data structure)
+9. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
 
 ### Credits
 

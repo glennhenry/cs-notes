@@ -419,7 +419,7 @@ const sidebars = {
             "backend-development/rest-api/rest-api",
             "backend-development/soap/soap",
             "backend-development/graphql/graphql",
-            "backend-development/grpc/grpc",
+            "backend-development/rpc/rpc",
             "backend-development/webhook/webhook",
             "backend-development/websocket/websocket",
           ],
