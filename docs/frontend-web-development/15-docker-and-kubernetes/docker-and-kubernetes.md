@@ -8,7 +8,7 @@ description: Docker & Kubernetes
 This is the same note as :
 
 - [Cloud Computing > Docker & Kubernetes](/cloud-computing/docker-and-kubernetes)
-- [Backend Development > Docker & Kubernetes](/backend-development/docker-and-kubernetes)
+- [Backend Development > Docker & Kubernetes](/backend-development/docker-kubernetes)
 
 **Main Source :**
 

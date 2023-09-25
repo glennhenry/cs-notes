@@ -22,7 +22,7 @@ A microservice architecture can be implemented in a social media app. The app is
 - Comment service, manages the comment of a post such as adding comment, deleting comment, editing comment
 - Notification service, the service that sends notification to the user's followers
 
-They can communicate with each other using [messaging systems](/backend-development/message-broker) or using [RPC](/backend-development/grpc). The architecture uses [API gateway](/backend-development/apis-server-logic#api-gateway) as the single entry point to access any microservice, it is responsible to route client request to the appropriate service. Each microservice may have their own database. However, if they will likely share the same data, they can share the database together.
+They can communicate with each other using [messaging systems](/backend-development/message-broker) or using [RPC](/backend-development/rpc). The architecture uses [API gateway](/backend-development/apis-server-logic#api-gateway) as the single entry point to access any microservice, it is responsible to route client request to the appropriate service. Each microservice may have their own database. However, if they will likely share the same data, they can share the database together.
 
 ![Example of microservice architecture](./microservice-example.png)  
 Source : https://medium.com/design-microservices-architecture-with-patterns/microservices-architecture-for-enterprise-large-scaled-application-825436c9a78a (with modification)

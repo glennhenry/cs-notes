@@ -16,7 +16,7 @@ In software, architecture is the overall design and structure of a software syst
 
 In backend, architecture refers to the design and organization of the server-side components, it focuses on how different backend components interact, handle data, process requests, and provide services to the frontend or client-side of an application.
 
-There are many backend architecture, the example are [monolithic](/backend-development/monolithic#monolithic), [microservices](/backend-development/microservices), [SOA](/backend-development/soa), and [serverless](/backend-development/serverless).
+There are many backend architecture, the example are [monolithic](/backend-development/monolithic#monolithic), [microservices](/backend-development/microservice), [SOA](/backend-development/soa), and [serverless](/backend-development/serverless).
 
 ![Example of a microservices architecture](./microservice.png)
 Source : https://stackoverflow.com/questions/76415176/explain-microservice-architecture
