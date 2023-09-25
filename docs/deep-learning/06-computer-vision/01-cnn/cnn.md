@@ -83,7 +83,9 @@ Some of the filters in the convolution maybe are supposed to detect edges, other
 ![Overall layer of abstraction](./overall-layer.png)  
 Source : https://www.analyticsvidhya.com/blog/2022/03/basic-introduction-to-convolutional-neural-network-in-deep-learning/
 
-The number of neuron used in this layer depends on the size of image and on the number of how many filter we want to use. When we say 32 filter, this mean we have 32 distinct matrix with its own numbers. Each filter will be applied to the image, therefore producing 32 different image, the result is called **feature maps** as it is actually not a separate image, just a different form of image. (note: each conv layer can have different number of filter)
+The number of output image depends on the number of filter use. When we say 32 filter, this mean we have 32 distinct matrix with its own numbers. Each filter will be applied to the image, therefore producing 32 different image, the result is called **feature maps** as it is actually not a separate image, just a different form of image. (note: each conv layer can have different number of filter)
+
+When we connect the layer together, we may have than 1 input image or feature maps. In this case, the convolution process works by applying a single filter in the next layer to all the feature maps from the previous layer, and the results are summed to generate a single feature map. This process is repeated for each filter in the second layer.
 
 The notation for convolution layer is (numberOfFilter x imageWidth x imageHeight). The input image image is typically separated by its color channel, so red, green, and blue color of the image is processed separately.
 

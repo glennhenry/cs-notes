@@ -8,19 +8,24 @@ description: Docker & Kubernetes
 This is the same note as :
 
 - [Cloud Computing > Docker & Kubernetes](/cloud-computing/docker-and-kubernetes)
+- [Backend Development > Docker & Kubernetes](/backend-development/docker-and-kubernetes)
 
 **Main Source :**
 
 - **[Wikipedia Docker (software)](<https://en.wikipedia.org/wiki/Docker_(software)>)**
 - **[Wikipedia Kubernetes](https://en.wikipedia.org/wiki/Kubernetes)**
 
-While developing a web app, developers uses various library, module and this creates a complex dependency. Running the web app in another machine such as server can have some issues, because the dependencies may not included in every server.
+While developing an application, developers uses various library and module creating a complex dependency. Running the app in another machine other than the development environtment might be tricky, because the dependencies may not included in the machine.
 
 ### Docker
 
 **Docker** is a platform that allows developers to package their applications and dependencies so that it can be easily distributed and run on any system that supports Docker. Docker uses the idea of "containers" these are isolated environment of our code. Docker container is able to simulate a system that is able to run our application, this technology is called [**Virtualization**](/cloud-computing/containerization-virtualization#virtualization).
 
 A Docker container is made using a Docker images, the "images" doesn't refer to images we see everyday. An images is a set of instruction to build a container, images can be thought as a template of making container.
+
+:::tip
+Find more about containerization [here](/cloud-computing/containerization-virtualization)
+:::
 
 #### How containers are made :
 
@@ -39,7 +44,7 @@ Source : https://itnext.io/getting-started-with-docker-facts-you-should-know-d00
 
 While Docker is used to build containerized applications, **Kubernetes**, on the other hand, is a platform that helps manage and automate the deployment, scaling, and management of containerized applications.
 
-Kubernetes organizes containers into Pods, a smallest deployable unit in Kubernetes and can contain one or more containers. Containers within a Pod share the same network namespace and can communicate with each other.
+Kubernetes organizes containers into something called **pods**, they are the smallest deployable unit in Kubernetes and can contain one or more containers. Containers within a pod share the same network namespace and can communicate with each other.
 
 One or more pods grouped together and run on a machine is called a **Node**. Node is responsible for running a Pods of container and provide resources like CPU and memory for the Pods running on it.
 

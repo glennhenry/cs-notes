@@ -18,7 +18,7 @@ description: Web Security
 
 There are many types of attacks which includes :
 
-### Cross-Site Scripting
+### Cross-Site Scripting (XSS)
 
 This is a type of attack where an attacker injects malicious code into a web page, which is then executed by the victim's browser. This can be used to steal sensitive information or take control of the user's session.
 

@@ -31,7 +31,7 @@ An example usecase of monolithic architecture is when each component are tightly
 
 For example, monolithic architecture may be used for an e-commerce platform that allows customers to browse products, add them to a shopping cart, and complete the checkout process. All the component are interconnected, using a unified codebase would simplify the development process.
 
-#### Advantages & Disadvantages
+### Advantages & Disadvantages
 
 Advantages :
 

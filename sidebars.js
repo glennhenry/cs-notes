@@ -442,14 +442,8 @@ const sidebars = {
         "backend-development/containerization-virtualization/containerization-virtualization",
         "backend-development/docker-kubernetes/docker-kubernetes",
         "backend-development/backend-server-security/backend-server-security",
-        {
-          type: "category",
-          label: "Backend Optimization",
-          items: [
-            "backend-development/caching/caching",
-            "backend-development/general-optimization/general-optimization",
-          ],
-        },
+        "backend-development/caching/caching",
+        "backend-development/backend-optimization/backend-optimization",
       ],
     },
 

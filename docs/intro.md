@@ -27,7 +27,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - [Database System](database-system)
 - **[Computer Graphics](computer-graphics)**
 - **[Frontend Web Development](frontend-web-development)**
-- [Backend Development](backend-development)
+- **[Backend Development](backend-development)**
 - [Computer Security](computer-security)
 - **[Machine Learning](machine-learning)**
 - [Deep Learning](deep-learning)
@@ -54,6 +54,12 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 7. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
 8. **[ref]** backend-development/message-broker (ref to queue data structure)
 9. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
+10. **[add]** extras/torrenting (u-torrent)
+11. **[ref]** backend-development/caching (redis ref to hashmap)
+12. **[ref]** backend-development/caching (cache invalidation ref to database trigger)
+13. **[ref]** backend-development/caching (cache replacement ref to queue data structure)
+14. **[ref]** backend-development/backend-optimization (resource optimization ref to database index)
+15. **[ref]** backend-development/backend-optimization (resource optimization ref to hash map)
 
 ### Credits
 
