@@ -495,6 +495,15 @@ const sidebars = {
         "machine-learning/support-vector-machine/support-vector-machine",
         "machine-learning/principal-component-analysis/principal-component-analysis",
         "machine-learning/k-means-clustering/k-means-clustering",
+        "machine-learning/collaborative-filtering/collaborative-filtering",
+        {
+          type: "category",
+          label: "Reinforcement Learning",
+          items: [
+            "machine-learning/reinforcement-learning/reinforcement-learning-intro/reinforcement-learning-intro",
+            "machine-learning/reinforcement-learning/example3/example3",
+          ],
+        },
       ],
     },
 
@@ -505,59 +514,40 @@ const sidebars = {
       link: { type: "doc", id: "deep-learning/deep-learning" },
       items: [
         "deep-learning/deep-learning-foundation/deep-learning-foundation",
+        "deep-learning/deep-learning-tasks/deep-learning-tasks",
         "deep-learning/neural-network/neural-network",
-        "deep-learning/collaborative-filtering/collaborative-filtering",
+        "deep-learning/cnn/cnn",
+        "deep-learning/resnet/resnet",
+        "deep-learning/siamese-network/siamese-network",
+        "deep-learning/rnn/rnn",
+        "deep-learning/lstm/lstm",
+        "deep-learning/gru/gru",
+        "deep-learning/autoencoder/autoencoder",
+        "deep-learning/gan/gan",   
         {
           type: "category",
-          label: "Natural Language Processing (NLP)",
-          link: { type: "doc", id: "deep-learning/natural-language-processing/natural-language-processing" },
+          label: "Transformers",
           items: [
-            "deep-learning/natural-language-processing/rnn/rnn",
-            "deep-learning/natural-language-processing/lstm/lstm",
-            "deep-learning/natural-language-processing/gru/gru",
-            {
-              type: "category",
-              label: "Transformers (NLP)",
-              link: { type: "doc", id: "deep-learning/natural-language-processing/transformers-nlp/transformers-nlp" },
-              items: [
-                "deep-learning/natural-language-processing/transformers-nlp/example1/example1",
-              ],
-            },
-            "deep-learning/natural-language-processing/llm/llm",
-            "deep-learning/natural-language-processing/gpt/gpt",
+            "deep-learning/transformers/transformers-intro/transformers-intro",
+            "deep-learning/transformers/xx1-transformers-for-nlp/transformers-for-nlp",
+            "deep-learning/transformers/xx2-transformers-for-audio/transformers-for-audio",
+          ],
+        },
+        "deep-learning/llm/llm",
+        {
+          type: "category",
+          label: "Stable Diffusion",
+          items: [
+            "deep-learning/stable-diffusion/stable-diffusion-intro/stable-diffusion-intro",
+            "deep-learning/stable-diffusion/example2/example2",
           ],
         },
         {
           type: "category",
-          label: "Transformers (Audio)",
-          link: { type: "doc", id: "deep-learning/transformers-audio/transformers-audio" },
+          label: "Deep Reinforcement Learning",
           items: [
-            "deep-learning/transformers-audio/example4/example4",
-          ],
-        },
-        {
-          type: "category",
-          label: "Computer Vision (CV)",
-          link: { type: "doc", id: "deep-learning/computer-vision/computer-vision" },
-          items: [
-            "deep-learning/computer-vision/cnn/cnn",
-            "deep-learning/computer-vision/gan/gan",
-            {
-              type: "category",
-              label: "Stable Diffusion",
-              link: { type: "doc", id: "deep-learning/computer-vision/stable-diffusion/stable-diffusion" },
-              items: [
-                "deep-learning/computer-vision/stable-diffusion/example2/example2",
-              ],
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "Reinforcement Learning",
-          link: { type: "doc", id: "deep-learning/reinforcement-learning/reinforcement-learning" },
-          items: [
-            "deep-learning/reinforcement-learning/example3/example3",
+            "deep-learning/deep-reinforcement-learning/deep-reinforcement-learning-intro/deep-reinforcement-learning-intro",
+            "deep-learning/deep-reinforcement-learning/examplerl/examplerl",
           ],
         },
       ],

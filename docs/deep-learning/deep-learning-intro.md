@@ -18,30 +18,24 @@ Deep learning is suited for task which uses complex data that is hard to describ
 ### All pages
 
 - [Deep Learning Foundation](deep-learning/deep-learning-foundation)
+- [Deep Learning Tasks](deep-learning/deep-learning-tasks)
 - [Neural Network](deep-learning/neural-network)
-- [Collaborative Filtering](deep-learning/collaborative-filtering)
-- [Natural Language Processing (NLP)](deep-learning/natural-language-processing)
-  - [RNN](deep-learning/natural-language-processing/rnn)
-  - [GRU](deep-learning/natural-language-processing/gru)
-  - [LSTM](deep-learning/natural-language-processing/lstm)
-  - [Transformers (NLP)](deep-learning/natural-language-processing/transformers-nlp)
-    - [example 1](deep-learning/natural-language-processing/transformers-nlp/example1)
-    - b
-    - c
-  - [LLM](deep-learning/natural-language-processing/llm)
-  - [GPT](deep-learning/natural-language-processing/gpt)
-- [Transformers (Audio)](deep-learning/transformers-audio)
-  - a
-  - b
-  - c
-- [Computer Vision (CV)](deep-learning/computer-vision)
-  - [CNN](deep-learning/computer-vision/cnn)
-  - [GAN](deep-learning/computer-vision/gan)
-  - [Stable Diffusion](deep-learning/computer-vision/stable-diffusion)
-    - a
-    - b
-    - c
-- [Reinforcement Learning](deep-learning/reinforcement-learning)
-  - a
-  - b
-  - c
+- [CNN](deep-learning/cnn)
+- [ResNet](deep-learning/resnet)
+- [Siamese Network](deep-learning/siamese-network)
+- [RNN](deep-learning/rnn)
+- [LSTM](deep-learning/lstm)
+- [GRU](deep-learning/gru)
+- [Autoencoder](deep-learning/autoencoder)
+- [GAN](deep-learning/gan)
+- Transformers
+  - [Transformers Intro](deep-learning/transformers/transformers-intro)
+  - [Transformers for NLP](deep-learning/transformers/transformers-for-nlp)
+  - [Transformers for Audio](deep-learning/transformers/transformers-for-audio)
+- [LLM](deep-learning/natural-language-processing/llm)
+- Stable Diffusion
+  - [Stable Diffusion Intro](deep-learning/stable-diffusion/stable-diffusion-intro)
+  - [example2](deep-learning/stable-diffusion/example2)
+- Deep Reinforcement Learning
+  - [Deep Reinforcement Learning Intro](deep-learning/deep-reinforcement-learning/deep-reinforcement-learning-intro)
+  - [examplerl](deep-learning/deep-reinforcement-learning/examplerl)

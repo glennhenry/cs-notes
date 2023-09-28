@@ -12,6 +12,8 @@ description: Deep Learning Foundation
 - **[The Unreasonable Effectiveness of Stochastic Gradient Descent (in 3 minutes) - Visually Explained](https://youtu.be/UmathvAKj80?si=_OhMXYlZYrCc0xIp)**
 - **[Deep Learning Crash Course for Beginners - freeCodeCamp](https://youtu.be/VyWAvY2CF9c?si=254TjhySXqspex_B)**
 - **[Deep learning lesson 7 - fastai](https://youtu.be/p4ZZq0736Po?si=aTGIzD1mBcOsmiYs)**
+- **[PyTorch for Deep Learning & Machine Learning – Full Course - freeCodeCamp](https://youtu.be/V_xro1bcAuA?si=sErbB-7m2MBagldq)**
+- **[Normalization - Google Machine Learning Course](https://developers.google.com/machine-learning/data-prep/transform/normalization)**
 
 ### Loss Function
 
@@ -113,7 +115,7 @@ Source : https://youtu.be/hBBOjCiFcuo?si=B8PDlJRj4QTa99k-&t=2721
 ![Activation function example](./activation-function.png)  
 Source : https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep-learning-9689331ba092
 
-### Terminology
+### Other Terminology
 
 - **Hyperparameter** : Settings or configuration choices that are set before the learning process begins. They are not learned from the data but are determined by the practitioner or researcher. For example, learning rate is a hyperparameter that controls rate at which a model adjusts its parameters during training (e.g. used in gradient descent). After we trained the model and evaluate it, we may want to adjust the hyperparameter to explore if there is a more optimal result, this is called **hyperparameter tuning**.
 
@@ -149,3 +151,27 @@ Source : https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep
 - **Data Augmentation** : Data augmentation is the process of increasing the diversity and variability of the training data, to make our model more generalized to unseen data. This technique is typically used when our data is limited or in an image classification task. For example, while training a dog or cat classifier, with the same image data, we can do some transformation such as rotating the image, skew it, flip, scale, or adjust its color in order to create more variety of data to reduce overfitting.
 
 - **Multi-target Model** : A multi-target model is a model trained to predict multiple target variables simultaneously. For example, a multi-target model would also predict the number of bedrooms a house has rather than just predicting the house price. The training process will minimize overall loss of each target variable. The loss function itself is calculated individually and will be combined. The metric (e.g. error) for evaluating the prediction is also measured individually.
+
+- **Transfer Learning** : A technique which a pre-trained model, initially trained on a specific task, is tweaked on a related task. Instead of training a model from scratch, an existing model trained on a similar task is tweaked to suit it to the new task. For example, if there is a model for classifying cars, we can suit it to classify trucks.
+
+- **Early Stopping** : A technique to prevent overfitting by stopping the training of a model in an optimal time. One way to determine the optimal time to stop, is to plot the model's loss curve and find out when the loss is slowly decreasing.
+
+  ![Early stopping graph](./early-stopping.png)  
+  Source : https://miro.medium.com/v2/resize:fit:708/1*LSjaVNMa-ku85I35of-mAw.png
+
+- **Learning Rate Decay** : Learning rate is a hyperparameter that is set before the training of a model. In some scenario, the model successfully learn and reach the minima of a loss function, this mean it has reached an optimal loss. However, if we set a large learning rate, the model will still try to optimize the loss function, making the optimization become unstable. **Learning rate decay**, also called **learning rate scheduling**, helps us reduce the learning rate over time during the optimization process. The idea is to start with a high learning rate for rapid progress in the early stages of training. Then, as the we get closer to the optimal loss, the learning rate is decreased to reach more precise convergence.
+
+- **State-of-the-Art (SOTA)** : A model is called SOTA if that particular model or technique achieve the highest known performance or accuracy in a specific benchmark or task. It represents the current best-known solution or method for a particular problem.
+
+- **Cutting-Edge** : A cutting-edge model means a model or technique that represents the latest advancements in a field. These model are characterized by most recent innovation, methodologies, or architectural designs.
+
+- **Normalization** : Normalization is the process of transforming data into a common scale without distorting its shape, meaning the relative relationships and patterns within the data are preserved even after the normalization process. The purpose of normalization is to generalize the data to prevent a feature with large number dominate the learning process. This will be useful for case when absolute values of the features are not as important as their relative positions within the range.
+
+  There are several technique to normalize data, an example is the min-max technique that scale all the data value in a specific range (e.g. 0 to 1). It uses the minimum and maximum value of the data as the baseline of the scaled value, the formula is `scaled_value = (value - min_value) / (max_value - min_value)`.
+
+  ![Normalization](./normalization.png)  
+   Source : https://zaffnet.github.io/batch-normalization
+
+- **Batch Normalization** : Batch normalization is the process of normalizing data in a batch, they are done by adding extra layer that does normalization process in the networks.
+
+- **Standarization** : If normalization scale the data to a specific range, standarization, also known as z-score normalization, transforms the data to have a mean of 0 and standard deviation of 1. By centering the data around the mean and scales it based on the standard deviation, standardization make the data less affected by outliers while also preserving the shape of distribution.
