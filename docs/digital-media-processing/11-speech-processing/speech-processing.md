@@ -29,5 +29,5 @@ Speech processing involves some steps, here is a high-level overview :
 Source : https://www.kardome.com/blog-posts/difference-speech-and-voice-recognition
 
 :::tip
-Find out more about speech processing in [Natural Language Processing (NLP)](/deep-learning/natural-language-processing)
+Find more about speech processing related to [Natural Language Processing (NLP)](/deep-learning/deep-learning-tasks#natural-language-processing-nlp)
 :::

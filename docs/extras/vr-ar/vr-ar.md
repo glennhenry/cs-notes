@@ -47,7 +47,7 @@ It will then generates virtual content including 3D models, images, videos, text
 
 AR responds to input methods, such as touch, gestures, voice commands, or even eye tracking. As the user moves or the environment changes, the AR system continuously updates the position tracking.
 
-Overall, AR relies alot on sensor and [computer vision](/deep-learning/computer-vision) technique to track object.
+Overall, AR relies alot on sensor and [computer vision](/deep-learning/deep-learning-tasks#computer-vision-cv) technique to track object.
 
 ![Tracking of an object in AR](./ar-tracking.jpeg)  
 Source : https://www.semanticscholar.org/paper/OVERCOMING-AUGMENTED-REALITY-TRACKING-DIFFICULTIES-Clothier-Bailey/ff7b8da5bb11879d1552020609c845919307ab19

@@ -1,5 +1,5 @@
 ---
-slug: /machine-learning/reinforcement-learning-intro
+slug: /machine-learning/reinforcement-learning/reinforcement-learning-intro
 id: reinforcement-learning-intro
 title: Reinforcement Learning Intro
 description: Reinforcement Learning Intro

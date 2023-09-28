@@ -38,6 +38,6 @@ This notes will include explanation about traditional ML algorithms (implementat
 - [k-Means Clustering](machine-learning/k-means-clustering)
 - [Collaborative Filtering](machine-learning/collaborative-filtering)
 - Reinforcement Learning
-  - [Reinforcement Learning](machine-learning/reinforcement-learning/reinforcement-learning-intro)
+  - [Reinforcement Learning Intro](machine-learning/reinforcement-learning/reinforcement-learning-intro)
   - [Example3](machine-learning/reinforcement-learning/example3)
   - c
