@@ -5,7 +5,7 @@ title: ResNet
 description: ResNet
 ---
 
-- Main Source:
+**Main Source :**
 
 - **[ResNet (actually) explained in under 10 minutes - rupert ai](https://youtu.be/o_3mboe1jYI?si=3i-uFFu0MD8UJoQu)**
 - **[What is ResNet? (with 3D Visualizations) - Prof. Ryan Ahmed](https://youtu.be/nc7FzLiB_AY?si=4g1qmNPChEPZ4rj5)**

@@ -24,4 +24,5 @@ description: Database System Notes
 - Database Optimization (Indexes)
 - Migration
 - Backup Strategy
-- c
+- database driver
+- dao
