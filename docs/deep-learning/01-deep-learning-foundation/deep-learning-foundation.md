@@ -142,7 +142,7 @@ Source : https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep
   ![Overfit and underfit](./underfit-overfit.png)  
    Source : https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-how-to-deal-with-it-6803a989c76
 
-- **Optimizer** : An optimizer is an algorithm or method used to optimize the loss function. Example of optimizer are [gradient descent](/machine-learning/linear-regression#gradient-descent), [stochastic gradient descent](/deep-learning/deep-learning-foundation#stochastic-gradient-descent), Adam, and etc.
+- **Optimizer** : An optimizer is an algorithm or method used to optimize the loss function. Example of optimizer are [gradient descent](/machine-learning/linear-regression#gradient-descent), [stochastic gradient descent](/deep-learning/deep-learning-foundation#stochastic-gradient-descent), [Adam](/deep-learning/deep-learning-foundation#adam), and etc.
 
 - **Gradient Accumulation** : While training model using optimizer like gradient descent, model's parameters are updated after computing gradient for each batch. Gradient accumulation is a technique that defer parameters update, the gradient for each batch is accumulated and updated once with the accumulated gradient. Using this technique can helps reduce memory as it reduce the training process.
 
