@@ -523,6 +523,7 @@ const sidebars = {
         "deep-learning/lstm/lstm",
         "deep-learning/gru/gru",
         "deep-learning/autoencoder/autoencoder",
+        "deep-learning/variational-autoencoder/variational-autoencoder",
         "deep-learning/gan/gan",   
         {
           type: "category",

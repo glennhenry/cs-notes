@@ -27,6 +27,7 @@ Deep learning is suited for task which uses complex data that is hard to describ
 - [LSTM](deep-learning/lstm)
 - [GRU](deep-learning/gru)
 - [Autoencoder](deep-learning/autoencoder)
+- [Variational Autoencoder](deep-learning/variational-autoencoder)
 - [GAN](deep-learning/gan)
 - Transformers
   - [Transformers Intro](deep-learning/transformers/transformers-intro)
