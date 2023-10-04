@@ -1,5 +1,5 @@
 ---
-slug: /deep-learning/natural-language-processing/llm
+slug: /deep-learning/transformers/llm
 id: llm
 title: LLM
 description: LLM
@@ -7,5 +7,7 @@ description: LLM
 
 **Large Language Model (LLM)** is
 
+
+### BERT
 
 ### GPT

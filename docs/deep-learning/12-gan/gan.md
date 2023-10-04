@@ -9,6 +9,8 @@ description: GAN
 
 - **[Google ML GAN Course](https://developers.google.com/machine-learning/gan)**
 - **[WGANs: A stable alternative to traditional GANs || Wasserstein GAN - Developers Hutt](https://youtu.be/QJOEmwvnmTM?si=NiUmbLBTvcLh7wVb)**
+- **[VAE-GAN Explained! - Connor Shorten](https://youtu.be/yyqfZfnSzcw?si=WFBY7i7f-yAKT_i9)**
+- **[CycleGAN Explained in 5 Minutes! - Matchue](https://youtu.be/-8hfnlxEPn4?si=nUnHWj5NL1H9Q2DN)**
 
 **Generative Adversarial Network (GAN)** is a machine learning framework specifically used to generate data. GANs are a generative model, similar as [variational autoencoder (VAE)](/deep-learning/variational-autoencoder), meaning they generate new samples that are similar to the training data. We feed some data to the model, the model will capture the pattern and common structure of the data to generate new instance of data.
 
@@ -78,7 +80,7 @@ The second term $E_z[\log(1 - D(G(z)))]$ represents the expected log-likelihood 
 
 The minimization or maximization of specific term is done by taking the partial derivative with respect to the specific parameters. The loss will be optimized and backpropagation process will be done to adjust all the parameters involved. The generator is connected to the discriminator to receive its gradient for optimization step.
 
-### Wasserstein
+### Wasserstein (WGAN)
 
 The Wasserstein loss is the alternative loss function for minimax, it modified the concept of standard GAN, becoming **Wasserstein Generative Adversarial Networks (WGANs)**. This was introduced to address GAN problem including the lack of meaningful loss metric.
 
@@ -114,6 +116,43 @@ Source : https://learnopencv.com/conditional-gan-cgan-in-pytorch-and-tensorflow/
 
 #### Variational Autoencoder GAN (VAE-GAN)
 
-VAE-GAN combines the [variational autoencoder](/deep-learning/variational-autoencoder) with the traditional GAN.
+VAE-GAN combines the [variational autoencoder](/deep-learning/variational-autoencoder) with the traditional GAN. The generator in GAN is replaced by the decoder of VAE. The step are :
+
+1. Input data goes through encoder, the data will be transformed into latent space representation in the form of probability distribution.
+2. The distribution will be sampled and goes into the decoder, transforming it back to higher-dimensional representation.
+3. The generated data from decoder will be passed together with training sample to the discriminator
+4. Discriminator classify real or fake data.
+
+There are 3 loss function used which is combined from loss in VAE and GAN :
+
+1. **Regularization / KL Divergence Loss** : The loss for encoder which is responsible to map input data into latent space representation, the loss is supposed to encourage the encoder to make the latent space representation close to the prior distribution, which is set to normal distribution.
+2. **Reconstruction Loss** : The loss of VAE decoder, the difference between reconstructed image with the original image.
+3. **Adversarial / GAN Loss** : The loss resulted from discriminator that classify whether data is real or fake. The generator or the decoder of VAE need to generate data that can fool the discriminator while the discriminator need to classify real images as real and generated images as fake.
+
+![VAE-GAN architecture](./vae-gan.png)  
+Referenced from : https://wandb.ai/shambhavicodes/vae-gan/reports/An-Introduction-to-VAE-GANs--VmlldzoxMTcxMjM5, https://medium.com/dataseries/variational-autoencoder-with-pytorch-2d359cbf027b
 
 #### CycleGAN
+
+**Cycle-Consistent GAN** is a type of GAN designed for image-to-image translation tasks. It is an unsupervised learning model that can learn to convert/transform one image to another image smoothly without paired training data. It is achieved using two paired of generator and discriminator.
+
+The generator consists of two, the $G_A$ that is responsible for transforming image from domain A to domain B, another one $G_B$ is responsible for transforming image from domain B to domain A.
+
+The discriminator $D_A$ classify between real and fake image from domain A which is from $G_A$, while $D_B$ does the same from $G_B$.
+
+:::note
+The domain here means a specific style of an image that is visually distinguishable, a common example is a horse image (domain A) transitioning to zebra image (domain B).
+:::
+
+The CycleGAN process operates in a cycle :
+
+1. Generator A takes an image from Domain A as input and translates it to Domain B. The goal is to generate a realistic image in Domain B as it is really coming from domain B.
+2. Generator B takes that translated image and translates it back to Domain A. The goal is to reconstruct an image that is similar to the original input image from Domain A.
+3. The discriminator compare the generated images with the same real images which we used as input for generator A in step 1.
+
+The process is same for the other discriminator.
+
+![CycleGAN architecture](./cyclegan.png)  
+Source : https://www.oreilly.com/library/view/hands-on-artificial-intelligence/9781788836067/c2e7d914-4e45-4528-8627-c590d19107ef.xhtml
+
+There are two loss function used, the same adversarial/GAN loss which is obtained from the discriminator classification (classify whether image is real or fake). Another loss is the **cycle consistency loss**, which is loss introduced to ensure the translation from A to B and then from B to A or vice versa reconstructs the original image.

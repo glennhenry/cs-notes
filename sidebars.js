@@ -532,9 +532,9 @@ const sidebars = {
             "deep-learning/transformers/transformers-intro/transformers-intro",
             "deep-learning/transformers/xx1-transformers-for-nlp/transformers-for-nlp",
             "deep-learning/transformers/xx2-transformers-for-audio/transformers-for-audio",
+            "deep-learning/transformers/xx3-llm/llm",
           ],
         },
-        "deep-learning/llm/llm",
         {
           type: "category",
           label: "Stable Diffusion",
