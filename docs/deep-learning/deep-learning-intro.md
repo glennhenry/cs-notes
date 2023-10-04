@@ -33,7 +33,7 @@ Deep learning is suited for task which uses complex data that is hard to describ
   - [Transformers Intro](deep-learning/transformers/transformers-intro)
   - [Transformers for NLP](deep-learning/transformers/transformers-for-nlp)
   - [Transformers for Audio](deep-learning/transformers/transformers-for-audio)
-- [LLM](deep-learning/natural-language-processing/llm)
+  - [LLM](deep-learning/transformers/llm)
 - Stable Diffusion
   - [Stable Diffusion Intro](deep-learning/stable-diffusion/stable-diffusion-intro)
   - [example2](deep-learning/stable-diffusion/example2)
