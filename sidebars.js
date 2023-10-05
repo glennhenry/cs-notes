@@ -530,9 +530,11 @@ const sidebars = {
           label: "Transformers",
           items: [
             "deep-learning/transformers/transformers-intro/transformers-intro",
+            "deep-learning/transformers/transformers-architecture/transformers-architecture",
             "deep-learning/transformers/xx1-transformers-for-nlp/transformers-for-nlp",
             "deep-learning/transformers/xx2-transformers-for-audio/transformers-for-audio",
             "deep-learning/transformers/xx3-llm/llm",
+            "deep-learning/transformers/xx4-vision-transformers/vision-transformers",
           ],
         },
         {

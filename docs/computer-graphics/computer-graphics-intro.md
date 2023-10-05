@@ -26,7 +26,7 @@ The overview of computer graphics process involve these 3 :
 - [2D Transformation](computer-graphics/2d-transformation)
 - [3D Transformation](computer-graphics/3d-transformation)
 - [GPU Pipeline](computer-graphics/gpu-pipeline)
-- [GPU Pipeline](computer-graphics/low-level-graphics)
+- [Low Level Graphics](computer-graphics/low-level-graphics)
 - [Curves](computer-graphics/curves)
 - [Surfaces](computer-graphics/surfaces)
 - [Textures (Part 1)](computer-graphics/textures-part-1)

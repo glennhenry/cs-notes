@@ -61,6 +61,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 14. **[ref]** backend-development/backend-optimization (resource optimization ref to database index)
 15. **[ref]** backend-development/backend-optimization (resource optimization ref to hash map)
 16. **[add]** extras/url-shortener
+17. **[update]** backend-development/websocket#data-exchange : add websocket payload, frame, ping, pong, fin, rsv, close, timeout
+18. **[add]** deep-learning/markov-models (markov chain, hidden markov model)
+19. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambigous, which pixel should be determined to draw.
 
 ### Credits
 
