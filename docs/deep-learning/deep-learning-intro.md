@@ -30,7 +30,7 @@ Deep learning is suited for task which uses complex data that is hard to describ
 - [Variational Autoencoder](deep-learning/variational-autoencoder)
 - [GAN](deep-learning/gan)
 - Transformers
-  - [Transformers Intro](deep-learning/transformers/transformers-intro)
+  - [Attention Mechanism](deep-learning/transformers/attention-mechanism)
   - [Transformers Architecture](deep-learning/transformers/transformers-architecture)
   - [Transformers for NLP](deep-learning/transformers/transformers-for-nlp)
   - [Transformers for Audio](deep-learning/transformers/transformers-for-audio)

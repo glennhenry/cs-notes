@@ -1,8 +1,8 @@
 ---
-slug: /deep-learning/transformers/transformers-intro
-id: transformers-intro
-title: Transformers Intro
-description: Transformers Intro
+slug: /deep-learning/transformers/attention-mechanism
+id: attention-mechanism
+title: Attention Mechanism
+description: Attention Mechanism
 ---
 
 **Main Source :**
@@ -69,9 +69,9 @@ The attention layer will distribute the information to each decoder, each of it 
 ![The decoder](./rnn-attention-decoder.png)  
 Source : https://youtu.be/y7YWo6XaVHc?si=ThCduvO7eaqGYc2L&t=159 (with modification)
 
+In conclusion, what will be produced in the current output step depends on the previous output and all the input we've gathered, all of it is summarized into some vector of information. We use the most relevant information for current step. For example, in text translation, when we encounter a subject word in the first step, it will make sense to put predicate in the next step rather than putting another subject. 
+
+In fact, the model doesn't recognize a word is subject or predicate, as every input sequence will be transformed into number. The model will adjust its parameters to remember it based on number.
+
 ![RNN with attention mechanism](./rnn-attention.png)  
 Source : https://medium.datadriveninvestor.com/attention-in-rnns-321fbcd64f05 (with modification)
-
-### Transformers
-
-**Transformers** is... architecture 

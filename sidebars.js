@@ -529,7 +529,7 @@ const sidebars = {
           type: "category",
           label: "Transformers",
           items: [
-            "deep-learning/transformers/transformers-intro/transformers-intro",
+            "deep-learning/transformers/attention-mechanism/attention-mechanism",
             "deep-learning/transformers/transformers-architecture/transformers-architecture",
             "deep-learning/transformers/xx1-transformers-for-nlp/transformers-for-nlp",
             "deep-learning/transformers/xx2-transformers-for-audio/transformers-for-audio",
