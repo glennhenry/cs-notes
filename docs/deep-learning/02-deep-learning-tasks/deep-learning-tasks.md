@@ -41,7 +41,7 @@ Source : https://www.semanticscholar.org/paper/Object-Detection-using-the-Canny-
 **Natural Language Processing (NLP)** is a field of AI that focuses on the interaction between computers and human language. Deep learning technique can be applied to NLP, the idea is to turn human language into numbers that can be processed in the neural network.
 
 :::note
-Common deep learning architecture for NLP: [RNN](/deep-learning/rnn), [LSTM](/deep-learning/lstm), [GRU](/deep-learning/gru), and [Transformers](/deep-learning/transformers/transformers-intro).
+Common deep learning architecture for NLP: [RNN](/deep-learning/rnn), [LSTM](/deep-learning/lstm), [GRU](/deep-learning/gru), and [Transformers](/deep-learning/transformers/transformers-architecture).
 :::
 
 Here are the high-level overview of NLP :

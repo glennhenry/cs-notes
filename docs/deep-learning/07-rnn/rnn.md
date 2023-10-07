@@ -64,7 +64,7 @@ The concept of memory or output from previous step is stored in something called
 
 This will be repeated together for each input in the sequence, the architecture can also be simplified with a loop. As each time step produces output, which output to use depend on the task. For example, in a text interpretation task, the output used may be the last output considering it contains the most information from all the sequence.
 
-It doesn't have to be the last output, another mechanism called **[attention](/deep-learning/transformers/transformers-intro#attention-mechanism)** captures the only important or relevant information, which isn't always the last.
+It doesn't have to be the last output, another mechanism called **[attention](/deep-learning/transformers/attention-mechanism)** captures the only important or relevant information, which isn't always the last.
 
 ![RNN architecture](./rnn-architecture.png)  
 Source : https://youtu.be/2GgGu6kMSqE?si=XuJlH_-vVmjZQeup&t=164
