@@ -9,6 +9,7 @@ description: Transformers Architecture
 
 - **[Transformer (Attention is all you need) - Minsuk Heo 허민석](https://youtu.be/z1xs9jdZnuY?si=_rWDHRCle8k-x8SG)**
 - **[Illustrated Guide to Transformers Neural Network: A step by step explanation - The A.I. Hacker - Michael Phi](https://youtu.be/4Bdc55j80l8?si=hHjopC6GvZl-mZTv)**
+- **[Hugging Face course part 1](https://huggingface.co/learn/nlp-course/chapter1/1)**
 
 **Transformers** is a type of deep learning architecture that specifically uses the [attention mechanism](/deep-learning/transformers/attention-mechanism) as the key component. While [RNN with attention](/deep-learning/transformers/attention-mechanism#rnn-with-attention) also use the attention mechanism, transformers is a standalone architecture that doesn't need traditional sequential model like [RNN](/deep-learning/rnn).
 
@@ -59,7 +60,7 @@ The first and second is the input pre-processing, the third and so on is the act
 
    The normalized value will be multiplied with the value vector. The result of it is what we call **attention weights**. The normalized value which represent the similarity of information is multiplied by the actual information of the token in input sequence. This mean we are assigning the similarity of information to each token.
 
-   The output (called **attention layer output**) will be the sum of all attention weights and this will be done for all element in sequence.
+   The output (called **attention layer output**) will be the sum of all attention weights and this will be done for all element in sequence. The properties of encoder that consider each token in sequence including the previous and subsequent token to capture the information that lies on the input is called **bi-directional**. In other word, it can pay attention to every token in the sequence.
 
    ![Self-attention matrix multiplication](./self-attention.png)  
    Source : https://theaisummer.com/transformer/
@@ -87,7 +88,7 @@ The first and second is the input pre-processing, the third and so on is the act
    ![Residual connection](./add-norm.png)  
    Source : https://deepgram.com/learn/visualizing-and-explaining-transformer-models-from-the-ground-up
 
-The step from 3 to 6 represent the process of a single encoder layer. In conclusion, a single layer of encoder processes and transform the input sequence to capture relevant information in the sequence.
+The step from 3 to 6 represent the process of a single encoder layer. In conclusion, a single layer of encoder processes and transform the input sequence to capture relevant information in the sequence. The output of encoder is a key and value pair that represent the information about the input sequence.
 
 Transformers architecture may includes multiple encoder layer, they have identical architecture but they don't share weights.
 
@@ -104,18 +105,18 @@ The decoder first process the previous output and then it will be combined with 
 
 2. **Positional Encoding** : The similar encoding process to capture the relative position of each token in the sequence.
 
-3. **Masked Multi-Head Attention** : In the normal multi-head attention, we calculated the attention weights using matrix multiplication which include multiplying every element with each other. Multiplying with every element includes accessing its query, key, vector, meaning we have information about them. However, we don't want this to happen in decoder, we don't want to generate output with the information from future. This is implemented by changing some of the value in the matrix during the matrix multiplication to a very large negative number.
+3. **Masked Multi-Head Attention** : In the normal multi-head attention, we calculated the attention weights using matrix multiplication which include multiplying every element with each other. Multiplying with every element includes accessing its query, key, vector, meaning we have information about them. However, we don't want this to happen in decoder, we don't want to generate output with the information from future. This is implemented by changing some of the value in the matrix during the matrix multiplication to a very large negative number. The properties of decoder that only access previously generated token is called **uni-directional**.
 
    ![Masked multi-head attention](./masked-multi-head-attention.png)  
    Source : https://tigris-data-science.tistory.com/entry/%EC%B0%A8%EA%B7%BC%EC%B0%A8%EA%B7%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EB%8A%94-Transformer4-Masked-Multi-Head-Attention%EA%B3%BC-Decoder
 
 4. **Add & Norm** : It then goes to the add & norm layer again which consist of residual connection and normalization layer.
 
-5. **Multi-head Attention** : In this step, the multi-head attention will be done again, the input will be the combination of the output from encoder and previous result from decoder. It then goes to add & norm layer again.
+5. **Multi-head Attention** : Also known as encoder-decoder attention, in this step, the multi-head attention will be done again. Multi-head attention will need query, key, and value vector, the input for them will be the combination of the output from encoder and previous result from decoder. Encoder provides the key and value pair, the decoder's previous output is transformed into a query. So basically, the encoder provides the contextual information from key and value pair and its combined with the query from decoder that represent what we need to generate the output now. It then goes to add & norm layer again.
 
 6. **Feed-Forward Network + Add & Norm** : The next component in the decoder layer is the feed-forward network. Same as the encoder, it consist of fully connected layer with non-linear activation function. Next, it will be normalized again in the add & norm layer.
 
-7. **Output** : Finally, the output from previous layer will go into a linear layer, followed with softmax activation function to produces the probability of each token. The model select the token with highest probability and use it as the input for next decoder step.
+7. **Output** : Finally, the output from previous layer will go into a linear layer, followed with softmax activation function to produces the probability of each token. The model select the token with highest probability and use it as the input for next decoder step. Decoder is considered as  **auto-regressive**, meaning it output sequence one step at a time, in an iterative and sequential manner.
 
    ![Transformers output](./transformers-output.png)  
    Source : https://www.linkedin.com/pulse/intro-transformer-architecture-jithin-s-l
@@ -129,4 +130,10 @@ After output is generated, the prediction or whatever the output is will be comp
 
 After loss is calculated, the similar learning process will be done, including the backpropagation process through all the layer of transformers model from the decoder output until the encoder input.
 
-Transformers model is considered as semi-supervised learning. It relies on labeled data which require explicit supervision but also use unlabeled data to improve its generalization. The semi-supervised learning may also involve techniques like pretrained and fine tuning. The pretrained technique mean the model is trained on unlabeled data and then it will be fine tuned, a smaller labeled dataset will be fed to the model to adapt it on specific tasks.
+#### Extras
+
+Transformers consists of encoder and decoder, however, they are not necesarry used together. In tasks like text classification or sentiment analysis, where understanding of the input is the primary objective, the encoder captures contextual information about the data, the information can be fed into classifier directly. A decoder-only model is designed for generating output. It is applicable in tasks such as dialogue generation, where it generates the subsequent word based on previously generated words.
+
+They are often used together for sequence-to-sequence tasks like text translation that require understanding of input data and the output generation.
+
+Transformers model is considered as semi-supervised learning. It relies on labeled data which require explicit supervision but also use unlabeled data to improve its generalization. The semi-supervised learning may also involve techniques like pretrained and fine tuning. The pre-trained technique mean the model is trained on unlabeled data. During the pre-training process, the model learns the general language representation and capture how each word relate with each other. It will then be fine tuned, a smaller labeled dataset will be fed to the model to adapt it on specific tasks or specific topic (the method is also called **transfer learning**).

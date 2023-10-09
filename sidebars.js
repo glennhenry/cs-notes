@@ -531,10 +531,11 @@ const sidebars = {
           items: [
             "deep-learning/transformers/attention-mechanism/attention-mechanism",
             "deep-learning/transformers/transformers-architecture/transformers-architecture",
-            "deep-learning/transformers/xx1-transformers-for-nlp/transformers-for-nlp",
-            "deep-learning/transformers/xx2-transformers-for-audio/transformers-for-audio",
-            "deep-learning/transformers/xx3-llm/llm",
-            "deep-learning/transformers/xx4-vision-transformers/vision-transformers",
+            "deep-learning/transformers/bert/bert",
+            "deep-learning/transformers/gpt/gpt",
+            "deep-learning/transformers/bart/bart",
+            "deep-learning/transformers/llm/llm",
+            "deep-learning/transformers/vision-transformers/vision-transformers",
           ],
         },
         {

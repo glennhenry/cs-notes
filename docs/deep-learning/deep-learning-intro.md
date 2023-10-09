@@ -5,12 +5,6 @@ title: Deep Learning
 description: Deep Learning Notes
 ---
 
-**Main Source :**
-
-- **[fast.ai](https://course.fast.ai/)**
-- **[hugging face](https://huggingface.co/learn)**
-- **Some other source**
-
 **Deep Learning** is a subfield of [machine learning](/machine-learning) that focuses on [neural network](deep-learning/neural-network), a more advanced way to learn from data. Traditional machine learning relies on feature a data has, the feature are typically extracted manual by machine learning practicioner. Neural network, in high level, can learn hierarchical representations of the data, automatically extracting useful features or detecting pattern from raw input without needing for manual feature engineering.
 
 Deep learning is suited for task which uses complex data that is hard to describe by humans such as images. As long as we can turn it into numbers, the model will learn the pattern of the number and make prediction.
@@ -32,8 +26,9 @@ Deep learning is suited for task which uses complex data that is hard to describ
 - Transformers
   - [Attention Mechanism](deep-learning/transformers/attention-mechanism)
   - [Transformers Architecture](deep-learning/transformers/transformers-architecture)
-  - [Transformers for NLP](deep-learning/transformers/transformers-for-nlp)
-  - [Transformers for Audio](deep-learning/transformers/transformers-for-audio)
+  - [BERT](deep-learning/transformers/bert)
+  - [GPT](deep-learning/transformers/gpt)
+  - [BART](deep-learning/transformers/bart)
   - [LLM](deep-learning/transformers/llm)
   - [Vision Transformers](deep-learning/transformers/vision-transformers)
 - Stable Diffusion

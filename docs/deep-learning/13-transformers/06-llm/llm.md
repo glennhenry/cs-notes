@@ -6,8 +6,3 @@ description: LLM
 ---
 
 **Large Language Model (LLM)** is
-
-
-### BERT
-
-### GPT
