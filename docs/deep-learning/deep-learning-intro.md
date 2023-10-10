@@ -26,6 +26,7 @@ Deep learning is suited for task which uses complex data that is hard to describ
 - Transformers
   - [Attention Mechanism](deep-learning/transformers/attention-mechanism)
   - [Transformers Architecture](deep-learning/transformers/transformers-architecture)
+  - [Transformers Audio](deep-learning/transformers/transformers-audio)
   - [BERT](deep-learning/transformers/bert)
   - [GPT](deep-learning/transformers/gpt)
   - [BART](deep-learning/transformers/bart)

@@ -31,6 +31,9 @@ Empty
   - SQL Injection
   - Cross-Site Request Forgery
   - Cookie Hijacking
+- Other Attack & Exploit
+	- Buffer Overflow
+	- Birthday attack
 - Android Security
 - Peneration Testing
 - Reverse Engineer

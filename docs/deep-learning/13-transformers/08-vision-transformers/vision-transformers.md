@@ -6,3 +6,4 @@ description: Vision Transformers
 ---
 
 **Vision Transformers (ViT)** is...
+image and video

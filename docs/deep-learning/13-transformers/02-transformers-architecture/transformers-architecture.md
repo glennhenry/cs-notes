@@ -9,7 +9,7 @@ description: Transformers Architecture
 
 - **[Transformer (Attention is all you need) - Minsuk Heo 허민석](https://youtu.be/z1xs9jdZnuY?si=_rWDHRCle8k-x8SG)**
 - **[Illustrated Guide to Transformers Neural Network: A step by step explanation - The A.I. Hacker - Michael Phi](https://youtu.be/4Bdc55j80l8?si=hHjopC6GvZl-mZTv)**
-- **[Hugging Face course part 1](https://huggingface.co/learn/nlp-course/chapter1/1)**
+- **[Hugging Face NLP course part 1](https://huggingface.co/learn/nlp-course/chapter1/1)**
 
 **Transformers** is a type of deep learning architecture that specifically uses the [attention mechanism](/deep-learning/transformers/attention-mechanism) as the key component. While [RNN with attention](/deep-learning/transformers/attention-mechanism#rnn-with-attention) also use the attention mechanism, transformers is a standalone architecture that doesn't need traditional sequential model like [RNN](/deep-learning/rnn).
 
@@ -112,11 +112,11 @@ The decoder first process the previous output and then it will be combined with 
 
 4. **Add & Norm** : It then goes to the add & norm layer again which consist of residual connection and normalization layer.
 
-5. **Multi-head Attention** : Also known as encoder-decoder attention, in this step, the multi-head attention will be done again. Multi-head attention will need query, key, and value vector, the input for them will be the combination of the output from encoder and previous result from decoder. Encoder provides the key and value pair, the decoder's previous output is transformed into a query. So basically, the encoder provides the contextual information from key and value pair and its combined with the query from decoder that represent what we need to generate the output now. It then goes to add & norm layer again.
+5. **Multi-head Attention** : Also known as **encoder-decoder attention** or **cross-attention**, in this step, the multi-head attention will be done again. Multi-head attention will need query, key, and value vector, the input for them will be the combination of the output from encoder and previous result from decoder. Encoder provides the key and value pair, the decoder's previous output is transformed into a query. So basically, the encoder provides the contextual information from key and value pair and its combined with the query from decoder that represent what we need to generate the output now. It then goes to add & norm layer again.
 
 6. **Feed-Forward Network + Add & Norm** : The next component in the decoder layer is the feed-forward network. Same as the encoder, it consist of fully connected layer with non-linear activation function. Next, it will be normalized again in the add & norm layer.
 
-7. **Output** : Finally, the output from previous layer will go into a linear layer, followed with softmax activation function to produces the probability of each token. The model select the token with highest probability and use it as the input for next decoder step. Decoder is considered as  **auto-regressive**, meaning it output sequence one step at a time, in an iterative and sequential manner.
+7. **Output** : Finally, the output from previous layer will go into a linear layer, followed with softmax activation function to produces the probability of each token. The model select the token with highest probability and use it as the input for next decoder step. Decoder is considered as  **auto-regressive** or **causal-attention**, meaning it output sequence one step at a time, in an iterative and sequential manner.
 
    ![Transformers output](./transformers-output.png)  
    Source : https://www.linkedin.com/pulse/intro-transformer-architecture-jithin-s-l

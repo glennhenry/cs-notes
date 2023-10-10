@@ -8,3 +8,4 @@ description: GPT
 **Main Source :**
 
 **GPT** is ...
+causal language modeling / token predictor

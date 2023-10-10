@@ -13,7 +13,7 @@ description: Computer & Programming Fundamentals Notes
 - [Computer Representation](computer-and-programming-fundamentals/computer-representation) (rgb, bit byte kb, floating number)
 - [Bitwise Operation](computer-and-programming-fundamentals/bitwise-operation)
 - type (primitive, complex object)
-- Memory (garbage collection, stack, heap, allocation, object, cache, pointer, references) (memory from perspective of software not hardware)
+- Memory (garbage collection, stack, heap, allocation, buffer, object, cache, pointer, references) (memory from perspective of software not hardware)
 - programming paradigm (oop, concurrent, etc)
 - Object Oriented Programming
 - Concurrent Programming (thread, process, coroutine, promise, async await)
@@ -24,5 +24,5 @@ description: Computer & Programming Fundamentals Notes
 	- Reflection
 	- Callback
 	- Bytecode, Assembly, Operation Code (opcode), machine langauge, binary language, hexcode
-- b
+- Input & Output (reading and writing file, specifically java, stream, inputstream, outputstream, buffer, bytearray, bytearrayinputstream, bytearrayoutputstream, etc)
 - c
