@@ -535,7 +535,6 @@ const sidebars = {
             "deep-learning/transformers/bert/bert",
             "deep-learning/transformers/gpt/gpt",
             "deep-learning/transformers/bart/bart",
-            "deep-learning/transformers/llm/llm",
             "deep-learning/transformers/vision-transformers/vision-transformers",
           ],
         },

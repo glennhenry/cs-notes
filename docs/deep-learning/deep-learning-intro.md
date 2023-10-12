@@ -30,7 +30,6 @@ Deep learning is suited for task which uses complex data that is hard to describ
   - [BERT](deep-learning/transformers/bert)
   - [GPT](deep-learning/transformers/gpt)
   - [BART](deep-learning/transformers/bart)
-  - [LLM](deep-learning/transformers/llm)
   - [Vision Transformers](deep-learning/transformers/vision-transformers)
 - Stable Diffusion
   - [Stable Diffusion Intro](deep-learning/stable-diffusion/stable-diffusion-intro)
