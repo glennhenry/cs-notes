@@ -16,7 +16,7 @@ Autoencoder is good for reconstructing input data, however, it has limitation fo
 
 The main concept is the data distribution, the model will capture the probability distribution of different data samples occuring. The generation process is a probabilistic, it is done by sampling the distribution. This will make the model able to generate samples that are similar to the training data but not necessarily identical.
 
-Actually, we can use the similar concept of VAE that samples the data obtained from the encoder which will later be represented in the latent space to generate new image. However, the latent space doesn't model the variability or uncertainty of the data, it is simply a lower-dimensional representation of the data. They are also not continous or discrete, sampling it would be challenging.
+Actually, we can use the similar concept of VAE that samples the data obtained from the encoder which will later be represented in the latent space to generate new image. However, the latent space doesn't model the variability or uncertainty of the data, it is simply a lower-dimensional representation of the data. They are also not continous or discrete, meaning sampling it would be challenging.
 
 ![VAE architecture](./vae.png)  
 Source : https://theaisummer.com/Autoencoder/
@@ -25,7 +25,7 @@ Source : https://theaisummer.com/Autoencoder/
 
 Input data such as image is fed to the encoder. Similar to traditional autoencoder, it consist of several layers such as [convolution layers](/deep-learning/cnn#convolution-1) and [pooling layers](/deep-learning/cnn#pooling-1).
 
-After going into the encoder layers and arrived at the final fully-connected layer, the output of is kinda different. As explained before, the data samples will be represented in a distribution, and we will sample from the distribution. The output is still gonna be the lower-dimensional representation of the data, often called as **latent variables**. However, these latent variables will be modeled into a probability distribution instead of being flattened, they will be transformed into a probability distribution called **latent space distribution**.
+After going through encoder layers and arrived at the final fully-connected layer, the output kinda different. As explained before, the data samples will be represented in a distribution, and we will sample from the distribution. The output is still gonna be the lower-dimensional representation of the data, often called as **latent variables**. However, these latent variables will be modeled into a probability distribution instead of being flattened, they will be transformed into a probability distribution called **latent space distribution**.
 
 The distribution follows the multivariate Gaussian distribution, it will be constructed based on two vectors parameters : **mean($\mu$)** vector and the **standard deviations ($\sigma$)** or **variance ($\sigma^2$)** vector. These vectors are produced in the two branch of the final fully-connected layer of the encoder.
 

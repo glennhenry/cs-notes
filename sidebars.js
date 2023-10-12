@@ -518,6 +518,7 @@ const sidebars = {
         "deep-learning/neural-network/neural-network",
         "deep-learning/cnn/cnn",
         "deep-learning/resnet/resnet",
+        "deep-learning/u-net/u-net",
         "deep-learning/siamese-network/siamese-network",
         "deep-learning/rnn/rnn",
         "deep-learning/lstm/lstm",
@@ -540,10 +541,12 @@ const sidebars = {
         },
         {
           type: "category",
-          label: "Stable Diffusion",
+          label: "Diffusion",
           items: [
-            "deep-learning/stable-diffusion/stable-diffusion-intro/stable-diffusion-intro",
-            "deep-learning/stable-diffusion/example2/example2",
+            "deep-learning/diffusion/diffusion-model/diffusion-model",
+            "deep-learning/diffusion/xx1-stable-diffusion/stable-diffusion",
+            "deep-learning/diffusion/xx2-dall-e/dall-e",
+            "deep-learning/diffusion/xx3-midjourney/midjourney",
           ],
         },
         {
