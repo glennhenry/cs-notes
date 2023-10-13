@@ -20,7 +20,7 @@ GAN consist of two components: the **generator** and the **discriminator**. The 
 
 The idea behind GANs is that the generator produces new data, and the discriminator which is able to differentiate between different types of data, in this case the discriminator differentiate between real or fake data, act as a critic that provides feedback to the generator to improve its data generation capabilities.
 
-#### Adversarial Training
+### Adversarial Training
 
 Both generator and discriminator are trained in adversarial way, the generator's objective is to produce new samples that can fool the discriminator, while the discriminator's objective is to accurately distinguish between real and fake samples.
 

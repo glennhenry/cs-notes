@@ -37,6 +37,7 @@ This notes will include explanation about traditional ML algorithms (implementat
 - [Principal Component Analysis](machine-learning/principal-component-analysis)
 - [k-Means Clustering](machine-learning/k-means-clustering)
 - [Collaborative Filtering](machine-learning/collaborative-filtering)
+- [Markov Models](machine-learning/markov-models)
 - Reinforcement Learning
   - [Reinforcement Learning Intro](machine-learning/reinforcement-learning/reinforcement-learning-intro)
   - [Example3](machine-learning/reinforcement-learning/example3)

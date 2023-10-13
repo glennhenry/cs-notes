@@ -39,7 +39,7 @@ Here are the high level process of FTP :
    ![FTP command](./ftp-command.png)  
    Source : https://www.deskshare.com/resources/articles/ftp-how-to.aspx
 
-#### SFTP
+### SFTP
 
 FTP is not really secure, it has some security issue such as :
 

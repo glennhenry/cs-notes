@@ -121,7 +121,7 @@ The decoder first process the previous output and then it will be combined with 
    ![Transformers output](./transformers-output.png)  
    Source : https://www.linkedin.com/pulse/intro-transformer-architecture-jithin-s-l
 
-#### Learning Process
+### Learning Process
 
 After output is generated, the prediction or whatever the output is will be compared with the actual label of the input. For example :
 
