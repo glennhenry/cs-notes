@@ -20,7 +20,7 @@ description: Data Structures & Algorithms Notes
   - [Tree](data-structures-and-algorithms/tree)
     - [Binary Tree](data-structures-and-algorithms/binary-tree)
   - [Heap](data-structures-and-algorithms/heap)
-  - a
+  - Hash Map (hashset vs hashmap vs hashtable vs dictionary)
   - b
   - c
 - a

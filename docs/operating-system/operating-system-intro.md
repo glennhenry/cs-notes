@@ -10,6 +10,11 @@ description: Operating System Notes
 ### All pages
 
 - [Containerization & Virtualization](/operating-system/containerization-virtualization)
+- file system
+- memory management
+- booting
+- ring
+- bios
 - kernel
 - unix
 - linux (linux kernel)

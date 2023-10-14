@@ -496,13 +496,13 @@ const sidebars = {
         "machine-learning/principal-component-analysis/principal-component-analysis",
         "machine-learning/k-means-clustering/k-means-clustering",
         "machine-learning/collaborative-filtering/collaborative-filtering",
-        "machine-learning/markov-models/markov-models",
         {
           type: "category",
           label: "Reinforcement Learning",
           items: [
             "machine-learning/reinforcement-learning/reinforcement-learning-intro/reinforcement-learning-intro",
             "machine-learning/reinforcement-learning/example3/example3",
+            "machine-learning/reinforcement-learning/xx-markov-models/markov-models",
           ],
         },
       ],
