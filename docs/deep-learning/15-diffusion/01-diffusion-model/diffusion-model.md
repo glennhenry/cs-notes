@@ -10,6 +10,7 @@ description: Diffusion Model
 - **[Wikipedia Diffusion model](https://en.wikipedia.org/wiki/Diffusion_model)**
 - **[What are Diffusion Models? - Ari Seff](https://youtu.be/fbLgFrlTnGU?si=tR6le4piBvVpeR_9)**
 - **[Introduction to Diffusion Models for Machine Learning - AssemblyAI](https://www.assemblyai.com/blog/diffusion-models-for-machine-learning-introduction/)**
+- **[[Lab Seminar] DDIM: Denoising Diffusion Implicit Model (ICLR, 2021) - DSAIL SKKU](https://youtu.be/aUqbWBQTKaA?si=BONjB3Ul4iGOmy-1)**
 
 **Diffusion Model** is a class of generative model, meaning it generates new data by learning the underlying distribution of a given dataset and uses this knowledge to generate new data samples. Diffusion model is typically used for tasks including image generation, image denoising, generating high-resolution image, and etc.
 
@@ -109,7 +110,21 @@ Source : https://tree.rocks/make-diffusion-model-from-scratch-easy-way-to-implem
 
 ### Denoising Diffusion Implicit Models (DDIM)
 
-The type of denoising diffusion model previously we talked about uses the probabilistic Markov chain as the framework. However, it is slow.... because it involves forward and reverse using markov chain that involves alot of calculation.... instead DDIM use denoiser...
+The type of denoising diffusion model previously we talked about uses the probabilistic Markov chain as the framework, which can be slow during the sampling process in the reverse diffusion (there is some technique to skip the diffusion in forward process). Furthermore, DDPM require alot of forward diffusion step, which also increase the step in reverse process.
+
+DDIM is a non-Markovian diffusion model, it removed the use of Markov chain. In Markov chain, during the reverse process, we assume that previous step only depends on current step (e.g. $x_1$ depends on $x_2$ = $q(x_2|x_1)$).
+
+![DDIM without Markov chain](./ddim.png)  
+Source : https://betterprogramming.pub/diffusion-models-ddpms-ddims-and-classifier-free-guidance-e07b297b2869 (with modification)
+
+DDIM does not rely on a strict sequential dependence on previous steps. The elimination of the Markov chain allows for the consideration of multiple states beyond just the previous one in the reverse diffusion process. This transformation turns the process into an optimization problem, as the inclusion of more states introduces complex dependencies and variations in the data.
+
+The goal is to find an optimal **latent code**, latent code is nothing but a set of parameters that captures the information required to generate a denoised or clean sample from a corrupted input. We adjust the parameters by minimizing the reconstruction loss between the generated sample and the corrupted input.
+
+:::tip
+DDPM can be seen as a special case of DDIM, where we only consider the previous state for current state.  
+The term "implicit" in DDIM means that we do not explicitly try to denoise the image, instead we just find the best parameters that minimize the lost.
+:::
 
 ### Conditional & Unconditional Generation
 
@@ -131,13 +146,21 @@ The target data in reverse process which is $p_{\theta}(x_{0})$ becomes $p_{\the
 ![Reverse step network](./reverse-step-network.png)  
 Source : https://youtu.be/fbLgFrlTnGU?si=luVZ1O9GCWV8_2PH&t=714
 
-## Score-Based Diffusion Model
+## Score-Based Diffusion Model (SBDM)
 
-uses score function, gradient with respect to data distribution to guide the generation.
+**Score-Based Diffusion Model (SBDM)** is also known as **Noise Conditional Score Network (NCSN)** or **Score-Matching with Langevin Dynamics (SMLD)**. SBDM introduces the concept of **score**, mathematically, it is the gradient of the log-likelihood of the data distribution.
+
+![Score function](./score-function.png)  
+Source : https://youtu.be/fbLgFrlTnGU?si=lEL8BBYdL0f1cetc&t=907
+
+A gradient with respect to some variables tells us the direction and magnitude of the steepest ascent or descent of a function at a particular point. Specifically in the context of SBDM, the gradient measures the direction in which the noise should be adjusted to move towards denoising or generating the desired output. It act as a guide for diffusion process by providing information on how to update the noise, but it does not provide a direct measure of similarity or dissimilarity.
+
+The integration of score-based guidance with diffusion model fall between each diffusion step, score or gradient of the log-likelihood of the data distribution will be estimated with respect to the noise process. After that, the noise is updated in the direction of the estimated score.
 
 ## Latent Diffusion Model (LDM)
 
-uses [variational autoencoder (VAE)](/deep-learning/variational-autoencoder)
+input data goes to encoder, it will be transformed into latent space or lower-dimensional representation. the output of encoder is a multivariate gaussian distribution, parameterized by its mean and variance, which is also produced by encoder. The distribtuion will be fed into diffusion model. diffusion model produces the new sampled image. to actually generate image, we use decoder that does the rerverse process.
+typically use [variational autoencoder (VAE)](/deep-learning/variational-autoencoder)
 
 ---
 
@@ -153,8 +176,8 @@ what to explain in diffusion :
 - Denoising Diffusion Probabilistic Models (DDPM) (done)
 - Denoising Diffusion Implicit Models (DDIM) (done)
 - conditional and unconditional diffusion (done)
-- sampler
-- CLIP
+- sampler (in stabble diffusion)
+- CLIP (in dall e & midjourney)
 - a
 - b
 - c
