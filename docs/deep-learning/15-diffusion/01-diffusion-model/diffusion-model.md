@@ -11,6 +11,8 @@ description: Diffusion Model
 - **[What are Diffusion Models? - Ari Seff](https://youtu.be/fbLgFrlTnGU?si=tR6le4piBvVpeR_9)**
 - **[Introduction to Diffusion Models for Machine Learning - AssemblyAI](https://www.assemblyai.com/blog/diffusion-models-for-machine-learning-introduction/)**
 - **[[Lab Seminar] DDIM: Denoising Diffusion Implicit Model (ICLR, 2021) - DSAIL SKKU](https://youtu.be/aUqbWBQTKaA?si=BONjB3Ul4iGOmy-1)**
+- Good article : **[How diffusion models work: the math from scratch by Sergios Karagiannakos,Nikolas Adaloglou](https://theaisummer.com/diffusion-models/)**
+- **[Stable Diffusion Samplers: A Comprehensive Guide](https://stable-diffusion-art.com/samplers/)**
 
 **Diffusion Model** is a class of generative model, meaning it generates new data by learning the underlying distribution of a given dataset and uses this knowledge to generate new data samples. Diffusion model is typically used for tasks including image generation, image denoising, generating high-resolution image, and etc.
 
@@ -76,6 +78,10 @@ The inference process is where the process is made learnable or adjustable. In t
 ![Reverse process implementation](./reverse-process-implementation.png)  
 Source : https://youtu.be/fbLgFrlTnGU?si=o0xlAFVkGm6B4nHr&t=651
 
+:::tip
+The implementation of the reverse or denoising process typically uses the [U-Net architecture](/deep-learning/u-net) for image data or a [transformers](/deep-learning/transformers/transformers-architecture) for non-image data.
+:::
+
 #### Training Objective
 
 The forward and reverse process can be understood as process that transform data or distribution (the input image) in two different directions. The forward process involves adding noise that will make the data distribution approach Gaussian distribution. The reverse process involves transforming the data back to its original distribution. This is done by approximating the unnoised data, by doing this, we effectively generate new data points during this process.
@@ -83,7 +89,7 @@ The forward and reverse process can be understood as process that transform data
 ![The objective of diffusion model](./objective.png)  
 Source : https://youtu.be/fbLgFrlTnGU?si=lOk5eb9Au4EJumjW&t=376 (with modification)
 
-The process and objective of diffusion model is similar to [**variational autoencoder (VAE)**](/deep-learning/variational-autoencoder). In VAE, the encoder takes the input data and maps it to a lower-dimensional representation called the **latent space**. This latent space serves as a compressed representation that captures the essential information and underlying structure present in the input data. The decoder takes the latent space and sample from it, to generate new data samples. The objective is to approximate the true data distribution from the sampled distribution.
+The process and objective of diffusion model is similar to [**variational autoencoder (VAE)**](/deep-learning/variational-autoencoder). In VAE, the encoder takes the input data and maps it to a lower-dimensional representation called the **latent variables**. This latent variables serves as a compressed representation that captures the essential information and underlying structure present in the input data. Latent variables will then be modeled in a probability distribution with some mean and variance, this is now called a **latent space**. The decoder sample from the latent space distribution, to generate new data samples. The objective is to approximate the true data distribution from the sampled distribution.
 
 The similar objective can be applied to diffusion model, "Given transformed data, how to untransform it?". The primary aim of a diffusion model is to enhance the inference process, particularly by focusing on the reverse process that involves computing the preceding state of the Markov chain.
 
@@ -150,6 +156,8 @@ Source : https://youtu.be/fbLgFrlTnGU?si=luVZ1O9GCWV8_2PH&t=714
 
 **Score-Based Diffusion Model (SBDM)** is also known as **Noise Conditional Score Network (NCSN)** or **Score-Matching with Langevin Dynamics (SMLD)**. SBDM introduces the concept of **score**, mathematically, it is the gradient of the log-likelihood of the data distribution.
 
+### Score Function
+
 ![Score function](./score-function.png)  
 Source : https://youtu.be/fbLgFrlTnGU?si=lEL8BBYdL0f1cetc&t=907
 
@@ -157,32 +165,51 @@ A gradient with respect to some variables tells us the direction and magnitude o
 
 The integration of score-based guidance with diffusion model fall between each diffusion step, score or gradient of the log-likelihood of the data distribution will be estimated with respect to the noise process. After that, the noise is updated in the direction of the estimated score.
 
+## Continuous Diffusion Model
+
+Continuous diffusion model is a type of diffusion model that model the noise distribution of the data in a continuous manner. Instead of modeling how the noise distribution changes over discrete time step, SBDM instead treat the distribution as a continous process that evolves over a continuous time.
+
+The diffusion process is modeled using **stochastic differential equations (SDEs)**. SDEs are mathematical equation that describe how a system transitions from one state to another, which is affected by deterministic and random factor.
+
+The score-based diffusion model can be combined together with SDE-based modeling. The SDE-based deterministic and random factor terms can be incorporated into the score-based model to guide the denoising and transformation steps of the diffusion process.
+
+![Continous diffusion model using SDE](./continous-sde.png)  
+Source : https://theaisummer.com/diffusion-models/#score-based-generative-modeling-through-stochastic-differential-equations-sde
+
+### Sampler
+
+Continous diffusion model uses SDE to model the system, in order to know the system state over time and sample from it to actually generates data, the SDE needs to be solved.
+
+While solving an SDE, we do not find the exact analytical solution, we instead approximate the solution (also called numerical integration). Some of the methods are Euler–Maruyama method, Heun's method, and linear multistep methods, these are also called **sampler**.
+
+The sampler we are using will gradually reduce the noise of the image, we can use a technique called **noise scheduling** to controls how fast they sample.
+
+![Sampler that gradually reduce noises](./sampler.gif)  
+Source : https://stable-diffusion-art.com/samplers/ (sampler that gradually reduce the noise)
+
+#### Ancestral Sampler
+
+There is another type of sampler called **ancestral sampler**, these sampler introduce randomness to the sampling process. At each sampling step, they add noise to the image to introduce variations in the generated images. This makes the image produced may not reach a consistent and reproducible state, the image can turn differently at each step.
+
+|               Ancestral sampler               |             Normal sampler              |
+| :-------------------------------------------: | :-------------------------------------: |
+| ![Ancestral sampler](./ancestral-sampler.gif) | ![Normal sampler](./normal-sampler.gif) |
+
+https://stable-diffusion-art.com/samplers/
+
 ## Latent Diffusion Model (LDM)
 
-input data goes to encoder, it will be transformed into latent space or lower-dimensional representation. the output of encoder is a multivariate gaussian distribution, parameterized by its mean and variance, which is also produced by encoder. The distribtuion will be fed into diffusion model. diffusion model produces the new sampled image. to actually generate image, we use decoder that does the rerverse process.
-typically use [variational autoencoder (VAE)](/deep-learning/variational-autoencoder)
+In diffusion model, we are approximating what an unnoised image will look like from a random noised image. In other word, we are approximating the probability distribution of a target image from a simple base distribution. This makes diffusion model is often called a general method to model a probability distribution.
 
----
+An encoder-decoder pair is a type of network that consist of two component. The encoder, serve as the one that takes input and transform it into **latent variables** or lower-dimensional representation of the input data. The other component, decoder, will take the output of encoder and do the reverse process. An example of encoder-decoder pair are [autoencoder](/deep-learning/autoencoder) and [Variational autoencoder (VAE)](/deep-learning/variational-autoencoder), which model the latent variables in probability distribution, called **latent space**.
 
-The entire diffusion topics is based on the fast.ai part 2 course, with addition from other sources.
+**Latent diffusion model** or **LDM** is a type of diffusion model combined with an encoder-decoder pair (typically a VAE). The idea of using diffusion model with an encoder-decoder pair is because the encoder outputs a probability distribution which we can use as the input for diffusion model.
 
-- **[fast.ai Part 2 course](https://course.fast.ai/Lessons/part2.html)**
+Instead of forward diffusing a raw image and then do the reverse process, LDM instead takes the input from encoder and model the probability distribution. To actually generate image, we can sample from the output of the diffusion model and use the decoder to decode it back to image.
 
-this note should include the general principle of how diffusion model works, the next notes should explain it in more detailed along with the explanation about the method and technique used.
+Latent space provides meaningful representation of the input, the diffusion process which includes forward and reverse diffusion can be seen as exploring the latent space to allow for diverse generation of data.
 
-what to explain in diffusion :
+LDM can also be integrated with additional condition such as text, image, or any other meaningful representation. This integration can leverage technique like [cross-attention](/deep-learning/transformers/transformers-architecture), which is also used in the transformers architecture. First, the encoder encodes the data into the latent space, followed by the forward diffusion process. The conditional input, typically the encoded representation of the original input, which can be produced by [transformers encoders](/deep-learning/transformers/transformers-architecture#encoder), is concatenated together with the output of forward diffusion process. Subsequently, the cross-attention mechanism is incorporated to guide the reverse diffusion or denoising process. Once the reverse diffusion is completed, we can sample the output and fed it into the decoder.
 
-- Diffusion method (done)
-- Denoising Diffusion Probabilistic Models (DDPM) (done)
-- Denoising Diffusion Implicit Models (DDIM) (done)
-- conditional and unconditional diffusion (done)
-- sampler (in stabble diffusion)
-- CLIP (in dall e & midjourney)
-- a
-- b
-- c
-  the last 3: stable diffusion, dall-e, and midjourney will explain what diffusion model technique they specifically uses, it can be thought as the application of diffusion model.
-  will also explain how stable diffusion and others apply the conditional generation technique such as cross attention with transformers
-- stable diffusion
-- dall-e
-- midjourney
+![LDM](./ldm.png)  
+Source : https://theaisummer.com/diffusion-models/
