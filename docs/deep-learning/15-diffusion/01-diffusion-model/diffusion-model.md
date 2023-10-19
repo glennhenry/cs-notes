@@ -32,7 +32,7 @@ There are many variation of diffusion model, each with their own concept, **Deno
 
 ### Denoising Diffusion Probabilistic Model (DDPM)
 
-the type of denoising diffusion model that learns the underlying **probability distribution** of a dataset and generate new samples from that distribution.
+The type of denoising diffusion model that learns the underlying **probability distribution** of a dataset and generate new samples from that distribution.
 
 The overall process of denoising diffusion model consist of two steps, the forward process that gradually add noise to the image, and the reverse process that tries to reverse the process or remove the noise to generate clean samples.
 
@@ -51,13 +51,17 @@ Utilizing the Markov chain with diffusion model, the distribution of noise at so
 Source : https://youtu.be/fbLgFrlTnGU?si=tR6le4piBvVpeR_9&t=109
 
 :::note
-The forward process is fixed, meaning it doesn't have adjustable parameters.
+The forward process is fixed, meaning it doesn't have learnable parameters.
 :::
 
 In the context of diffusion model, the type of Gaussian distribution used is the **diagonal Gaussian distribution**. The variance, denoted as $\beta$, varies at each time step and is constrained to be within the range of 0 and 1. The lower variance implies that the diffusion or transformation of the distribution occurs more gradually and with smaller perturbations, which may help us on the reverse process.
 
 ![Gaussian distribution](./gaussian-distribution.png)  
 Source : https://youtu.be/fbLgFrlTnGU?si=mN1d8DKDP9vYJjQ0&t=129
+
+:::note
+The beta parameters is used to control or adjust the noise added in forward process or removed in the reverse process, this technique is also called **noise scheduling**.
+:::
 
 As we iteratively perform the forward diffusion process, the noise gradually converges towards a Gaussian distribution. Mathematically speaking, the noise can be approximated as a **multivariate Gaussian distribution with a mean vector of zero and an identity covariance matrix**.
 
@@ -182,8 +186,6 @@ Continous diffusion model uses SDE to model the system, in order to know the sys
 
 While solving an SDE, we do not find the exact analytical solution, we instead approximate the solution (also called numerical integration). Some of the methods are Euler–Maruyama method, Heun's method, and linear multistep methods, these are also called **sampler**.
 
-The sampler we are using will gradually reduce the noise of the image, we can use a technique called **noise scheduling** to controls how fast they sample.
-
 ![Sampler that gradually reduce noises](./sampler.gif)  
 Source : https://stable-diffusion-art.com/samplers/ (sampler that gradually reduce the noise)
 
@@ -213,3 +215,23 @@ LDM can also be integrated with additional condition such as text, image, or any
 
 ![LDM](./ldm.png)  
 Source : https://theaisummer.com/diffusion-models/
+
+## Contrastive Language-Image Pre-Training (CLIP)
+
+CLIP is a model that combines vision and language understanding, it is a model that learns the similarity between image and text. CLIP takes an input image with its corresponding text description, they will be encoded. In other words, the higher-dimensional data will be converted into a lower-dimensional representation. The place where all the encoded input is combined is called the **embedding space**.
+
+During training, CLIP will learn how to map each image and text into the shared embedding space. The objective is to group the pairs of encoded representation (image and text) together, while pushing the dissimilar pairs apart.
+
+The loss function in CLIP consists of two main components: the **image-text similarity loss** and the **contrastive loss**. Both of the loss is calculated in the embedding space, the similarity metrics such as cosine similarity can be used. Similarity loss is maximized to encourage the maximum similarity score between correct pair of image and text. On the other hand, the contrastive loss is minimized to encourage a minimum similarity score between mismatched pairs of image and text.
+
+![Joint embedding space](./joint-embedding-space.png)  
+Source : https://blog.dataiku.com/leveraging-joint-text-image-models-to-search-and-classify-images
+
+The encoding process, involves the use of image and text encoder. We can choose variety of model for text and image encoding, for example, we can use [transformers encoder](/deep-learning/transformers/transformers-architecture#encoder) for text encoding and [CNN](/deep-learning/cnn) (without its classifier) for image encoding.
+
+![CLIP](./clip.png)  
+Source : https://towardsdatascience.com/simple-implementation-of-openai-clip-model-a-tutorial-ace6ff01d9f2?gi=de7f9822c57a
+
+After training, CLIP can be used for variety of tasks including image classification, image retrieval, text-to-image generation.
+
+For example in an image classification tasks, an image is fed into the encoder, the encoder encodes the image and generates the encoded representation. In the embedding space, the model will find which label is the most similar with the encoded representation of the image. The highest similarity is considered the predicted class label for the image.
