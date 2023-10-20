@@ -215,7 +215,7 @@ LDM can also be integrated with additional condition such as text, image, or any
 
 ### Stable Diffusion
 
-**Stable Diffusion** is a deep learning model based on [diffusion model](/deep-learning/diffusion/diffusion-model), specifically, it's an open source implementation of [**latent diffusion model (LDM)**](/deep-learning/diffusion-model#latent-diffusion-model-ldm). It is typically used to generate image conditioned on text or image, inpainting, outpainting, super-resolution, and etc.
+**Stable Diffusion** is a deep learning model based on [diffusion model](/deep-learning/diffusion-model), specifically, it's an open source implementation of [**latent diffusion model (LDM)**](/deep-learning/diffusion-model#latent-diffusion-model-ldm). It is typically used to generate image conditioned on text or image, inpainting, outpainting, super-resolution, and etc.
 
 #### Architecture
 
