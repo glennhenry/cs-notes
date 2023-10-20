@@ -32,11 +32,7 @@ Deep learning is suited for task which uses complex data that is hard to describ
   - [GPT](deep-learning/transformers/gpt)
   - [BART](deep-learning/transformers/bart)
   - [Vision Transformers](deep-learning/transformers/vision-transformers)
-- Diffusion
-  - [Diffusion Model](deep-learning/diffusion/diffusion-model)
-  - [Stable Diffusion](deep-learning/diffusion/stable-diffusion)
-  - [DALL-E](deep-learning/diffusion/dall-e)
-  - [Midjourney](deep-learning/diffusion/midjourney)
+- [Diffusion Model](deep-learning/diffusion-model)
 - Deep Reinforcement Learning
   - [Deep Reinforcement Learning Intro](deep-learning/deep-reinforcement-learning/deep-reinforcement-learning-intro)
   - [examplerl](deep-learning/deep-reinforcement-learning/examplerl)

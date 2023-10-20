@@ -540,16 +540,7 @@ const sidebars = {
             "deep-learning/transformers/vision-transformers/vision-transformers",
           ],
         },
-        {
-          type: "category",
-          label: "Diffusion",
-          items: [
-            "deep-learning/diffusion/diffusion-model/diffusion-model",
-            "deep-learning/diffusion/xx1-stable-diffusion/stable-diffusion",
-            "deep-learning/diffusion/xx2-dall-e/dall-e",
-            "deep-learning/diffusion/xx3-midjourney/midjourney",
-          ],
-        },
+        "deep-learning/diffusion-model/diffusion-model",
         {
           type: "category",
           label: "Deep Reinforcement Learning",

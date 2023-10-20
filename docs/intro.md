@@ -54,7 +54,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 7. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
 8. **[ref]** backend-development/message-broker (ref to queue data structure)
 9. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
-10. **[add]** extras/torrenting (u-torrent)
+10. **[add]** extras/torrent (bittorent protocol)
 11. **[ref]** backend-development/caching (redis ref to hashmap)
 12. **[ref]** backend-development/caching (cache invalidation ref to database trigger)
 13. **[ref]** backend-development/caching (cache replacement ref to queue data structure)
@@ -66,7 +66,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 ### Longest Notes
 
-- [Diffusion Model](deep-learning/diffusion/diffusion-model)
+- [Diffusion Model](deep-learning/diffusion-model)
 - [HTTP & HTTPS](computer-networking/http-https)
 - [GAN](deep-learning/gan)
 - [Transformers Architecture](deep-learning/transformers/transformers-architecture)
