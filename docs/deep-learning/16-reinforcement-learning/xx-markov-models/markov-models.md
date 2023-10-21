@@ -1,5 +1,5 @@
 ---
-slug: /machine-learning/reinforcement-learning/markov-models
+slug: /deep-learning/reinforcement-learning/markov-models
 id: markov-models
 title: Markov Models
 description: Markov Models

@@ -496,15 +496,6 @@ const sidebars = {
         "machine-learning/principal-component-analysis/principal-component-analysis",
         "machine-learning/k-means-clustering/k-means-clustering",
         "machine-learning/collaborative-filtering/collaborative-filtering",
-        {
-          type: "category",
-          label: "Reinforcement Learning",
-          items: [
-            "machine-learning/reinforcement-learning/reinforcement-learning-intro/reinforcement-learning-intro",
-            "machine-learning/reinforcement-learning/example3/example3",
-            "machine-learning/reinforcement-learning/xx-markov-models/markov-models",
-          ],
-        },
       ],
     },
 
@@ -543,10 +534,10 @@ const sidebars = {
         "deep-learning/diffusion-model/diffusion-model",
         {
           type: "category",
-          label: "Deep Reinforcement Learning",
+          label: "Reinforcement Learning",
           items: [
-            "deep-learning/deep-reinforcement-learning/deep-reinforcement-learning-intro/deep-reinforcement-learning-intro",
-            "deep-learning/deep-reinforcement-learning/examplerl/examplerl",
+            "deep-learning/reinforcement-learning/reinforcement-learning-intro/reinforcement-learning-intro",
+            "deep-learning/reinforcement-learning/xx-markov-models/markov-models",
           ],
         },
       ],
