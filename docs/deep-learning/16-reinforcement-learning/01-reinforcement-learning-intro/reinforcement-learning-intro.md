@@ -11,15 +11,44 @@ Deep RL
 
 ### The Big Idea
 
+### Terminology
+
+#### Agent
+
+#### Environment (stochastic and deterministic)
+
+#### State
+
+#### Action
+
+#### Policy (stochastic and deterministic)
+
+#### Trajectory
+
+#### Reward & Return
+
+#### Value Function
+
+#### Q-Function
+
+#### Q-Network
+
+#### Bellman Equation
+
+topics:
+
 - Markov Models
-- Markov Decision
-- Value & Policy Iteration
-- Q-Learning
-- Temporal Difference
-- Model-Free Prediction (Monte Carlo Methods)
-- Model-Free Control (SARSA)
-- Model-Based
-- Bandits (Multi-armed, contextual)
-- Policy Gradient
+- Markov Decision Process (DP, Value Iteration, Policy Iteration, value function approximation)
+- Model-Free Prediction
+  - Monte Carlo Methods
+  - Temporal Difference
+- Model-Free Control
+  - SARSA
+  - Q-Learning
+  - Deep Q-Learning (deep q netnwrok)
+- Exploration & Exploitation
+- Policy Gradient (DPG)
 - Actor-Critic
-- Exploration
+- Imitation Learning (Behavioral Cloning, Inverse Reinforcement Learning (IRL), Generative Adversarial Imitation Learning (GAIL))
+- Bandits (Multi-armed, contextual)
+- Multi-Agent

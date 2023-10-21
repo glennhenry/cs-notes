@@ -537,7 +537,7 @@ const sidebars = {
           label: "Reinforcement Learning",
           items: [
             "deep-learning/reinforcement-learning/reinforcement-learning-intro/reinforcement-learning-intro",
-            "deep-learning/reinforcement-learning/xx-markov-models/markov-models",
+            "deep-learning/reinforcement-learning/markov-models/markov-models",
           ],
         },
       ],
