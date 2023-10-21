@@ -235,7 +235,7 @@ Source : https://towardsdatascience.com/stable-diffusion-best-open-source-versio
    ![Forward diffusion and reverse diffusion using U-Net](./diffusion-process.png)  
     Source : https://medium.com/@steinsfu/diffusion-model-clearly-explained-cd331bd41166, https://youtu.be/J87hffSMB60?si=_iCGv-rnh_sXt_dL&t=352 (with modification)
 
-3. **Conditioning** : The model also takes a conditional input such as text, it will be encoded or converted into lower-dimensional representation, this can be done using [transformers encoders](/deep-learning/transformers/transformers-architecture#encoder).
+3. **Conditioning** : The model also takes a conditional input such as text, it will be encoded or converted into lower-dimensional representation, this can be done using [transformers encoders](/deep-learning/transformers/transformers-architecture#encoder) or [CLIP text encoder](#contrastive-language-image-pre-training-clip).
 
    The integration with conditional input is incorporated in two ways :
 
@@ -249,6 +249,8 @@ Source : https://towardsdatascience.com/stable-diffusion-best-open-source-versio
 
    ![The output of stable diffusion with additional super-resolution](./output.png)  
    Source : https://youtu.be/J87hffSMB60?si=Y01BDAdH9hNa-dqQ&t=486
+
+After completing the training process, in the actual image generation, we have the option to generate new images by inputting only text, or we can choose to input both text and an image simultaneously, which will modify the input image based on the text we provide.
 
 ## Contrastive Language-Image Pre-Training (CLIP)
 
