@@ -536,7 +536,7 @@ const sidebars = {
           type: "category",
           label: "Reinforcement Learning",
           items: [
-            "deep-learning/reinforcement-learning/reinforcement-learning-intro/reinforcement-learning-intro",
+            "deep-learning/reinforcement-learning/reinforcement-learning-fundamental/reinforcement-learning-fundamental",
             "deep-learning/reinforcement-learning/markov-models/markov-models",
           ],
         },

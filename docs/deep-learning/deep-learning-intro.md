@@ -33,6 +33,6 @@ Deep learning is suited for task which uses complex data that is hard to describ
   - [BART](deep-learning/transformers/bart)
   - [Vision Transformers](deep-learning/transformers/vision-transformers)
 - [Diffusion Model](deep-learning/diffusion-model)
-- Deep Reinforcement Learning
-  - [Deep Reinforcement Learning Intro](deep-learning/reinforcement-learning/reinforcement-learning-intro)
+- Reinforcement Learning
+  - [Reinforcement Learning Fundamental](deep-learning/reinforcement-learning/reinforcement-learning-fundamental)
   - [Markov Models](deep-learning/reinforcement-learning/markov-models)
