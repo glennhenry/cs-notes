@@ -7,7 +7,7 @@ description: Reinforcement Learning Fundamental
 
 **Main Source :**
 
-- **[OpenAI Spinning Up Part 1](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)**
+- **[OpenAI Spinning Up Introduction To RL](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)**
 
 **Reinforcement Learning (RL)** is one of the three machine learning paradigm alongside supervised learning and unsupervised learning. In RL, we do not teach the model how to perform a task directly by providing labeled examples (supervised learning) or by discovering patterns in unlabeled data (unsupervised learning).
 
@@ -50,12 +50,14 @@ A set of all valid action in a given environment is called **action space**. Sim
 
 #### Policy
 
-A policy is a rules or instructions that guide an RL agent to make decisions. It determines the agent's behavior by specifying which actions it should take in different situations or states. Policy is defined as a function that takes a state and returns an action.
+A policy is a strategy or instructions that guide an RL agent to make decisions. It determines the agent's behavior by specifying which actions it should take in different situations or states. Policy is defined as a function that takes a state and returns an action.
 
 A policy can be deterministic or stochastic :
 
-- Deterministic : A deterministic policy maps a state directly to specific actions, it is represented as $a = \mu(s)$.
+- Deterministic : A deterministic policy maps a state directly to specific actions, it is represented as $a = \mu(s)$. This mean, according to the policy if we are at state $s$, we need to take action $a$.
 - Stochastic : A stochastic policy gives different action in a probabilistic manner based on the given state, it is represented as $a \sim \pi(\cdot | s)$. The $a \sim$ means we are randomly selection an action $a$ from a probability distribution given by the policy function $\pi(\cdot | s)$, conditioned on state $s$. The dot here is a placeholder for an action variable.
+
+Policy act as a brain for the agent, it will keep being updated to adjust with the environment so that it can guide the agent toward best result.
 
 Here is an example of a stochastic policy for a specific state :
 
@@ -123,7 +125,9 @@ Source : https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#value-
 
 #### Bellman Equation
 
-Bellman equation is an equation that describes how the value of a state (or state-action pair) is related to the values of its successor states. It says that the value of a state is the reward for current state plus the discounted value for next state. The value for the next state also depends on the next and next state, making it a recursive equation.
+Bellman equation is an equation, typically used in dynamic programming, it is an equation that decompose a problem into smaller subproblems and finding the optimal solution by iteratively updating the value.
+
+In the context of RL, Bellman equation is applied to describes how the value of a state (or state-action pair) is related to the values of its successor states. It says that the value of a state is the reward for current state plus the discounted value for next state. The value for the next state also depends on the next and next state, making it a recursive equation.
 
 ![Bellman equation of four value function](./bellman-equation.png)  
 Source : https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#bellman-equations
@@ -138,3 +142,11 @@ Advantage function is a function that estimate the advantage or benefit of takin
 Source : https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#advantage-functions
 
 The $A^{\pi}(s,a)$ represent the advantage of taking action $a$ in state $s$. A positive advantage indicates that the action is better than average, while a negative advantage suggests that the action is worse than average. A value close to zero means the action is roughly equivalent to the average.
+
+### Model-Based & Model-Free
+
+Model-Based and Model-Free are the two approach of reinforcement learning.
+
+- Model-Based : In model-based RL, the agent has access to a **model of the environment**. Model of an environment is a simulation of the environment in which an agent operates. It provides information about the dynamics of the environment, including transition probabilities and rewards. The agent uses this model to simulate the environment and plan its actions. The use of model is to enable the agent to simulate and plan ahead before actually taking actions.
+
+- Model-Free : In model-free RL, the agent does not have access to the model of the environment. Instead, it learns directly from interacting with the environment without prior knowledge of the transition probabilities and rewards. Model-free RL algorithms learn by trial and error, exploring the environment and updating their policy or value estimates based on observed rewards. They aim to find an optimal policy or value function that guides them toward the best return.

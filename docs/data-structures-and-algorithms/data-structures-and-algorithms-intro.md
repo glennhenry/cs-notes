@@ -13,8 +13,7 @@ description: Data Structures & Algorithms Notes
   - Search
   - Traversal
   - Shortest Path
-  - a
-  - b
+  - Dynamic Programming (top down memoization, bottom up approach)
   - c
 - Data Structures
   - [Tree](data-structures-and-algorithms/tree)
@@ -26,3 +25,5 @@ description: Data Structures & Algorithms Notes
 - a
 - b
 - c
+
+\*should also explain famous problem such as traveling salesman, knapsack, etc on each algorithm or data structure

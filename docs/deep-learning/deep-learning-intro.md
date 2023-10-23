@@ -35,4 +35,17 @@ Deep learning is suited for task which uses complex data that is hard to describ
 - [Diffusion Model](deep-learning/diffusion-model)
 - Reinforcement Learning
   - [Reinforcement Learning Fundamental](deep-learning/reinforcement-learning/reinforcement-learning-fundamental)
-  - [Markov Models](deep-learning/reinforcement-learning/markov-models)
+  - Model-Based
+    - [Markov Models](deep-learning/reinforcement-learning/markov-models)
+    - [Markov Decision Process](deep-learning/reinforcement-learning/markov-decision-process)
+  - Model-Free
+    - Monte Carlo Methods
+    - Temporal Difference
+    - SARSA
+    - Q-Learning (q table, q network, deep q network)
+    - Exploration & Exploitation
+    - Bandits (Multi-armed, contextual)
+    - Policy Gradient (DPG)
+    - Actor-Critic
+    - Imitation Learning (Behavioral Cloning, Inverse Reinforcement Learning (IRL), Generative Adversarial Imitation Learning (GAIL))
+  - Multi-Agent

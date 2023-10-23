@@ -298,7 +298,7 @@ const sidebars = {
       label: "Operating System",
       link: { type: "doc", id: "operating-system/operating-system" },
       items: [
-        "operating-system/xx-containerization-virtualization/containerization-virtualization"
+        "operating-system/xx-containerization-virtualization/containerization-virtualization",
       ],
     },
 
@@ -384,7 +384,10 @@ const sidebars = {
     {
       type: "category",
       label: "Frontend Web Development",
-      link: { type: "doc", id: "frontend-web-development/frontend-web-development" },
+      link: {
+        type: "doc",
+        id: "frontend-web-development/frontend-web-development",
+      },
       items: [
         "frontend-web-development/html/html",
         "frontend-web-development/html-dom/html-dom",
@@ -517,7 +520,7 @@ const sidebars = {
         "deep-learning/gru/gru",
         "deep-learning/autoencoder/autoencoder",
         "deep-learning/variational-autoencoder/variational-autoencoder",
-        "deep-learning/gan/gan",   
+        "deep-learning/gan/gan",
         {
           type: "category",
           label: "Transformers",
@@ -537,11 +540,26 @@ const sidebars = {
           label: "Reinforcement Learning",
           items: [
             "deep-learning/reinforcement-learning/reinforcement-learning-fundamental/reinforcement-learning-fundamental",
-            "deep-learning/reinforcement-learning/markov-models/markov-models",
+            {
+              type: "category",
+              label: "Model-Based",
+              items: [
+                "deep-learning/reinforcement-learning/markov-models/markov-models",
+                "deep-learning/reinforcement-learning/markov-decision-process/markov-decision-process",
+              ],
+            },
           ],
         },
       ],
     },
+
+    // {
+    //   type: "category",
+    //   label: "Model-Free",
+    //   items: [
+    //     
+    //   ],
+    // },
 
     // Software Engineering
     {

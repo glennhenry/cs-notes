@@ -63,14 +63,16 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 16. **[add]** extras/url-shortener
 17. **[update]** backend-development/websocket#data-exchange : add websocket payload, frame, ping, pong, fin, rsv, close, timeout
 18. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambigous, which pixel should be determined to draw. text rendering
+19. **[ref]** deep-learning/reinforcement-learning/reinforcement-learning-fundamental (refer to dynamic programming in dsa)
+20. **[ref]** deep-learning/reinforcement-learning/markov-decision-process (refer to dynamic programming in dsa)
 
 ### Longest Notes
 
 - [Diffusion Model](deep-learning/diffusion-model)
-- [HTTP & HTTPS](computer-networking/http-https)
-- [GAN](deep-learning/gan)
 - [Transformers Architecture](deep-learning/transformers/transformers-architecture)
-- [Neural Network](deep-learning/neural-network)
+- [HTTP & HTTPS](computer-networking/http-https)
+- [Reinforcement Learning Fundamental](deep-learning/reinforcement-learning/reinforcement-learning-fundamental)
+- [GAN](deep-learning/gan)
 
 ### Credits
 
