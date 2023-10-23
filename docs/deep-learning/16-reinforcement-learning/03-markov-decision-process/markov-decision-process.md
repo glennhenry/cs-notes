@@ -51,7 +51,9 @@ The two formula above with the four in the [Bellman equation](/deep-learning/rei
 
 #### Value & Policy Iteration
 
-Value and policy iteration are the algorithm that uses dynamic programming (solving problem by breaking it down into smaller subproblem) to estimate the optimal value function of an MDP. The algorithm starts with an initial value function and iteratively improves it until convergence.
+Both value and policy iteration are the actual algorithm that uses the formula explained above. It demonstrate dynamic programming (solving problem by breaking it down into smaller subproblem) to estimate the optimal value function of an MDP. The algorithm uses formula explained above, it starts with an initial value function and iteratively improves it until convergence.
+
+demonstration of value and policy iteration
 
 :::note
 By converge, it means the result stabilizes and does not change abruptly or significantly between iterations.
