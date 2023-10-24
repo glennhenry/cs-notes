@@ -548,18 +548,18 @@ const sidebars = {
                 "deep-learning/reinforcement-learning/markov-decision-process/markov-decision-process",
               ],
             },
+            {
+              type: "category",
+              label: "Model-Free",
+              items: [
+                "deep-learning/reinforcement-learning/monte-carlo-method/monte-carlo-method",
+                "deep-learning/reinforcement-learning/temporal-difference/temporal-difference",
+              ],
+            },
           ],
         },
       ],
     },
-
-    // {
-    //   type: "category",
-    //   label: "Model-Free",
-    //   items: [
-    //     
-    //   ],
-    // },
 
     // Software Engineering
     {

@@ -8,6 +8,7 @@ description: Reinforcement Learning Fundamental
 **Main Source :**
 
 - **[OpenAI Spinning Up Introduction To RL](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)**
+- **[An introduction to Reinforcement Learning - Arxiv Insights](https://youtu.be/JgvyzIkgxF0?si=yLspLgVml_G977_J)**
 
 **Reinforcement Learning (RL)** is one of the three machine learning paradigm alongside supervised learning and unsupervised learning. In RL, we do not teach the model how to perform a task directly by providing labeled examples (supervised learning) or by discovering patterns in unlabeled data (unsupervised learning).
 
@@ -123,6 +124,12 @@ There are four main value function :
 ![Four of value function](./value-functions.png)  
 Source : https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#value-functions
 
+In practice, the [value function](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#value-function) is usually not known to us. There are several reasons for this :
+
+- **Complex or Unknown Environment** : It is often impossible to have complete knowledge of all possible states, actions, rewards, and transition dynamics.
+- **Sparse Rewards** : Sometimes, the reward is not directly given to the agent after doing an action, if the agent doesn't receive any feedback after a long time, it may lead to difficulties in finding the optimal policy. A reward that is too high or too low can also make the learning unstable.
+- **Stochasticity** : Many environments are stochastic, meaning that the outcomes of actions are subject to randomness which makes it difficult to predict the exact reward or value for a state because it can vary from one interaction to another.
+
 #### Bellman Equation
 
 Bellman equation is an equation, typically used in dynamic programming, it is an equation that decompose a problem into smaller subproblems and finding the optimal solution by iteratively updating the value.
@@ -142,6 +149,10 @@ Advantage function is a function that estimate the advantage or benefit of takin
 Source : https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#advantage-functions
 
 The $A^{\pi}(s,a)$ represent the advantage of taking action $a$ in state $s$. A positive advantage indicates that the action is better than average, while a negative advantage suggests that the action is worse than average. A value close to zero means the action is roughly equivalent to the average.
+
+### Conclusion
+
+The stochastic aspect along with reward and penalty terms on each action in reinforcement learning makes it different with supervised or unsupervised learning. In the latter two machine learning paradigms, the model always choose the highest probability based on the data they learned (e.g. while predicting or classifying). However, in reinforcement learning, even if we have high probability we will always try to explore different choice and reward. This enables reinforcement learning model to adapt itself with the environment, without needing an explicit instruction or example on a specific tasks.
 
 ### Model-Based & Model-Free
 

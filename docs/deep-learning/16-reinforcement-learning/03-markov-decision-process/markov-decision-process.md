@@ -20,6 +20,10 @@ The image above shows an example of an MDP, the green circles are the states, or
 
 For example if we are at state 1 ($S_1$), we can choose to take action 0 ($a_0$) or action 1 ($a_1$). Choosing action 0, there are 3 chances, we can either transition to state 2 ($S_2$) with 0.2 chance or back to state 1 with 0.1 chance or to state 0 ($S_0$), which will give us reward of 5 in the chance of 0.7.
 
+:::tip
+MDP is a [model-based](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#model-based--model-free) technique, meaning we need to know the information about the environment such as the transition probabilities and rewards.
+:::
+
 ### Component of MDP
 
 An MDP contains four key component, they are represented in 4-tuple ($S, A, P_a, R_a$):
@@ -43,7 +47,7 @@ The formula are formulated in [Bellman equation](/deep-learning/reinforcement-le
 - $\pi ( s ) := \operatorname{argmax}_a \left\{ \sum\limits_{s'} P_a (s , s') \left( R_a (s , s') + \gamma V(s') \right) \right\}$  
   The second formula represent the **policy function update**. It will select the action $a$ that yields the highest return from the value function.
 
-The goal is to find the best value and policy function. In order to achieve this goal, we employ these two formulas to iteratively estimates the value function and policy. To implement these formulas, a technique called **dynamic programming** is used.
+The goal is to find the best value and policy function. In order to achieve this goal, we employ these two formulas to iteratively estimates the value function and policy. The technique to approximate value function is also called **value function approximation**.
 
 :::note
 The two formula above with the four in the [Bellman equation](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#bellman-equation) demonstrate the same usage of Bellman equation to update the value function and policy iteratively.
@@ -51,12 +55,12 @@ The two formula above with the four in the [Bellman equation](/deep-learning/rei
 
 #### Value & Policy Iteration
 
-Both value and policy iteration are the actual algorithm that uses the formula explained above. It demonstrate dynamic programming (solving problem by breaking it down into smaller subproblem) to estimate the optimal value function of an MDP. The algorithm uses formula explained above, it starts with an initial value function and iteratively improves it until convergence.
+Both value and policy iteration are the actual algorithm that uses the formula explained above to solve MDP by estimating the optimal function. It demonstrate **dynamic programming** or the technique to solve a problem by breaking it down into smaller subproblem.
 
-demonstration of value and policy iteration
+The algorithm starts with an initial function and proceeds to iteratively compute it until reaching a point of convergence. The value of a state depends on another state, in other word, a problem depends on another problem, this can be referred as subproblem. This is where dynamic programming comes, we can start solving the subproblem first and then build up to the main problem. When we encounter a subproblem that has already been solved subproblem, we can efficiently use the information we have previously acquired.
+
+The iteration involves updating the estimated value and policy based on the current estimate itself, this is known as **bootstraping**
 
 :::note
 By converge, it means the result stabilizes and does not change abruptly or significantly between iterations.
 :::
-
-### Value Function Approximation
