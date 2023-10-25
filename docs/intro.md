@@ -69,9 +69,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 ### Longest Notes
 
 - [Diffusion Model](deep-learning/diffusion-model)
+- [Reinforcement Learning Fundamental](deep-learning/reinforcement-learning/reinforcement-learning-fundamental)
 - [Transformers Architecture](deep-learning/transformers/transformers-architecture)
 - [HTTP & HTTPS](computer-networking/http-https)
-- [Reinforcement Learning Fundamental](deep-learning/reinforcement-learning/reinforcement-learning-fundamental)
 - [GAN](deep-learning/gan)
 
 ### Credits

@@ -9,6 +9,7 @@ description: Reinforcement Learning Fundamental
 
 - **[OpenAI Spinning Up Introduction To RL](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)**
 - **[An introduction to Reinforcement Learning - Arxiv Insights](https://youtu.be/JgvyzIkgxF0?si=yLspLgVml_G977_J)**
+- **[Reinforcement Learning – Exploration vs Exploitation Tradeoff - AI ML Analytics](https://ai-ml-analytics.com/reinforcement-learning-exploration-vs-exploitation-tradeoff/)**
 
 **Reinforcement Learning (RL)** is one of the three machine learning paradigm alongside supervised learning and unsupervised learning. In RL, we do not teach the model how to perform a task directly by providing labeled examples (supervised learning) or by discovering patterns in unlabeled data (unsupervised learning).
 
@@ -161,3 +162,21 @@ Model-Based and Model-Free are the two approach of reinforcement learning.
 - Model-Based : In model-based RL, the agent has access to a **model of the environment**. Model of an environment is a simulation of the environment in which an agent operates. It provides information about the dynamics of the environment, including transition probabilities and rewards. The agent uses this model to simulate the environment and plan its actions. The use of model is to enable the agent to simulate and plan ahead before actually taking actions.
 
 - Model-Free : In model-free RL, the agent does not have access to the model of the environment. Instead, it learns directly from interacting with the environment without prior knowledge of the transition probabilities and rewards. Model-free RL algorithms learn by trial and error, exploring the environment and updating their policy or value estimates based on observed rewards. They aim to find an optimal policy or value function that guides them toward the best return.
+
+### Exploration & Exploitation
+
+Exploration and Exploitation is a common dilemma in reinforcement learning.
+
+- **Exploration** : Refers to the process of seeking out and gathering new information about the environment. By exploring, it means the agent takes action that isn't considered the best according to the current policy. The agent explores to potentially finds better actions or states that may lead to higher rewards.
+
+- **Exploitation** : Exploitation is often referred as the "greedy" technique that prioritize immediate rewards or maximize the cummulative rewards based on the agent's current policy. In other word, the agent will choose actions that yield the highest reward according to current policy.
+
+Both strategy is very important in machine learning, we need to balance the exploration and exploitation. Too much exploration may lead to excessive randomness and inefficient use of learned knowledge, while too much exploitation may result in the agent getting stuck in a suboptimal policy and missing out on better opportunities.
+
+#### Epsilon-Greedy
+
+**Epsilon-greedy** is a common strategy used in reinforcement learning to balance exploration and exploitation. The balancing is determined by probabilities, which is set by the epsilon ($\mathcal{E}$) parameter.
+
+First, we choose the value of epsilon ($\mathcal{E}$), the epsilon represent the probability of exploring, the exploration include selecting random action. The probability to exploit is determined by 1 - $\mathcal{E}$, the agent will select the highest estimated value based on its current policy.
+
+A higher value of $\mathcal{E}$ encourages more exploration, while a lower value of $\mathcal{E}$ favors exploitation. The $\mathcal{E}$ can be decreased gradually, over time, the agent can transition from initially exploring extensively to eventually exploiting the learned knowledge more frequently.

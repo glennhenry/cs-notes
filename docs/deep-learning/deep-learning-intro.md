@@ -43,7 +43,6 @@ Deep learning is suited for task which uses complex data that is hard to describ
     - [Temporal Difference](deep-learning/reinforcement-learning/temporal-difference)
     - [SARSA](deep-learning/reinforcement-learning/sarsa)
     - [Q-Learning](deep-learning/reinforcement-learning/q-learning)
-    - [Exploration & Exploitation](deep-learning/reinforcement-learning/exploration-exploitation)
     - [Bandits](deep-learning/reinforcement-learning/bandits)
     - [Policy Gradient](deep-learning/reinforcement-learning/policy-gradient)
     - [Actor-Critic](deep-learning/reinforcement-learning/actor-critic)
