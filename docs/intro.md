@@ -30,7 +30,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[Backend Development](backend-development)**
 - [Computer Security](computer-security)
 - **[Machine Learning](machine-learning)**
-- [Deep Learning](deep-learning)
+- **[Deep Learning](deep-learning)**
 - [Software Engineering](software-engineering)
 - [Cloud Computing](cloud-computing)
 - [Extras](extras)

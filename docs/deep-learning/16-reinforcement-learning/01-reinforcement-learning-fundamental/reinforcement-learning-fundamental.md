@@ -10,6 +10,7 @@ description: Reinforcement Learning Fundamental
 - **[OpenAI Spinning Up Introduction To RL](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)**
 - **[An introduction to Reinforcement Learning - Arxiv Insights](https://youtu.be/JgvyzIkgxF0?si=yLspLgVml_G977_J)**
 - **[Reinforcement Learning – Exploration vs Exploitation Tradeoff - AI ML Analytics](https://ai-ml-analytics.com/reinforcement-learning-exploration-vs-exploitation-tradeoff/)**
+- **[Solving the Multi-Armed Bandit Problem by Anson Wong - Medium](https://towardsdatascience.com/solving-the-multi-armed-bandit-problem-b72de40db97c)**
 
 **Reinforcement Learning (RL)** is one of the three machine learning paradigm alongside supervised learning and unsupervised learning. In RL, we do not teach the model how to perform a task directly by providing labeled examples (supervised learning) or by discovering patterns in unlabeled data (unsupervised learning).
 
