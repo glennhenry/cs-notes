@@ -65,5 +65,5 @@ ASCII has limited uses due to only being able to represent 128 different charact
 Image is represented by a grid pixels. Pixel is the smallest unit of information in an image. A pixel typically owns 3 color value which is red, green and blue. Each color is represented as 1 byte or 8 bit (0-255), which means there are 256 different combination for each color. These three colors are combined together to construct an image, making it able to represent 16.777.216 different color in each pixels.
 
 :::tip
-Find out more about image and color in [here](/computer-graphics/computer-images-part-1) or about computer represntation in [here](/computer-and-programming-fundamentals/computer-representation)
+Find out more about [image and color](/computer-graphics/computer-images-part-1) or about [data representation in computer](/computer-and-programming-fundamentals/data-representation)
 :::

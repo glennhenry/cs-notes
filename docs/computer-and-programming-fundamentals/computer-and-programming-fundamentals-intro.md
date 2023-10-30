@@ -39,7 +39,7 @@ Some of the topics here include the basic of other topics like OS, DSA, Compiler
 		- [Query Language](computer-and-programming-fundamentals/query-language)
 	- [Concurrent Programming](computer-and-programming-fundamentals/concurrent-programming)
 	- [Parallel Computing](computer-and-programming-fundamentals/parallel-computing)
-	- [Reactive Programming](computer-and-programming-fundamentals/reactive-programmimg)
+	- [Reactive Programming](computer-and-programming-fundamentals/reactive-programming)
 - Code Execution
   - [Compilation](computer-and-programming-fundamentals/compilation)
   - [Interpreter](computer-and-programming-fundamentals/interpreter)
