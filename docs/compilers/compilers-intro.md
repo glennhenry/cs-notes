@@ -9,6 +9,9 @@ description: Compilers
 
 ### All pages
 
-- a
-- b
-- c
+- Compiliation Process
+    - Tokenization
+    - Parsing
+    - Generation
+- Compiler Optimization
+- Decompilation

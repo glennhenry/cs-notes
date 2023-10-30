@@ -62,9 +62,73 @@ const sidebars = {
         id: "computer-and-programming-fundamentals/computer-and-programming-fundamentals",
       },
       items: [
-        "computer-and-programming-fundamentals/xx-computer-representation/computer-representation",
-        "computer-and-programming-fundamentals/xx1-number-system/number-system",
-        "computer-and-programming-fundamentals/xx2-bitwise-operation/bitwise-operation",
+        {
+          type: "category",
+          label: "Computer Representation",
+          items: [
+            "computer-and-programming-fundamentals/number-system/number-system",
+            "computer-and-programming-fundamentals/binary-representation/binary-representation",
+            "computer-and-programming-fundamentals/bitwise-operation/bitwise-operation",
+            "computer-and-programming-fundamentals/floating-number/floating-number",
+            "computer-and-programming-fundamentals/data-representation/data-representation",
+          ],
+        },
+        {
+          type: "category",
+          label: "Computer Fundamentals",
+          items: [
+            "computer-and-programming-fundamentals/operating-system/operating-system",
+            "computer-and-programming-fundamentals/memory/memory",
+            "computer-and-programming-fundamentals/input-output/input-output",
+          ],
+        },
+        {
+          type: "category",
+          label: "Programming Fundamentals",
+          items: [
+            "computer-and-programming-fundamentals/data-types-variables/data-types-variables",
+            "computer-and-programming-fundamentals/operators/operators",
+            "computer-and-programming-fundamentals/control-flow/control-flow",
+            "computer-and-programming-fundamentals/functions/functions",
+            "computer-and-programming-fundamentals/debugging-error-handling/debugging-error-handling",
+            "computer-and-programming-fundamentals/data-structures-and-algorithms/data-structures-and-algorithms",
+            {
+              type: "category",
+              label: "Programming Paradigms",
+              items: [
+                {
+                  type: "category",
+                  label: "Imperative",
+                  items: [
+                    "computer-and-programming-fundamentals/procedural-programming/procedural-programming",
+                    "computer-and-programming-fundamentals/object-oriented-programming/object-oriented-programming",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Declarative",
+                  items: [
+                    "computer-and-programming-fundamentals/functional-programming/functional-programming",
+                    "computer-and-programming-fundamentals/query-language/query-language",
+                  ],
+                },
+                "computer-and-programming-fundamentals/concurrent-programming/concurrent-programming",
+                "computer-and-programming-fundamentals/parallel-computing/parallel-computing",
+                "computer-and-programming-fundamentals/reactive-programming/reactive-programming",
+              ],
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Code Execution",
+          items: [
+            "computer-and-programming-fundamentals/compilation/compilation",
+            "computer-and-programming-fundamentals/interpreter/interpreter",
+            "computer-and-programming-fundamentals/execution-environment/execution-environment",
+          ],
+        },
+        "computer-and-programming-fundamentals/computer-and-programming-terminology/computer-and-programming-terminology",
       ],
     },
 

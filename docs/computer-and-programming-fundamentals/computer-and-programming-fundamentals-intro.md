@@ -7,22 +7,41 @@ description: Computer & Programming Fundamentals Notes
 
 **Computer & Programming Fundamentals** is ...
 
+Some of the topics here include the basic of other topics like OS, DSA, Compiler, which serve as introductory foundations.
+
 ### All pages
 
-- [Number System](computer-and-programming-fundamentals/number-system)
-- [Computer Representation](computer-and-programming-fundamentals/computer-representation) (rgb, bit byte kb, floating number)
-- [Bitwise Operation](computer-and-programming-fundamentals/bitwise-operation)
-- type (primitive, complex object)
-- Memory (garbage collection, stack, heap, allocation, buffer, virtual memory, object, cache, pointer, references) (memory from perspective of software not hardware)
-- programming paradigm (oop, concurrent, etc)
-- Object Oriented Programming
-- Concurrent Programming (thread, process, coroutine, promise, async await)
-- runtime (virtual machine, jvm)
-- Compiler & Interpreter (compile to assembly, compile bytecode, etc)
-- Computer & Programming Terminology
-    - Terminal, Command Line, Bash, Shell
-	- Reflection
-	- Callback
-	- Bytecode, Assembly, Operation Code (opcode), machine langauge, binary language, hexcode
-- Input & Output (reading and writing file, specifically java, stream, inputstream, outputstream, buffer, bytearray, bytearrayinputstream, bytearrayoutputstream, etc)
-- c
+(computer-and-programming-fundamentals/)
+
+- Computer Representation
+  - [Number System](computer-and-programming-fundamentals/number-system)
+  - [Binary Representation](computer-and-programming-fundamentals/binary-representation)
+  - [Bitwise Operation](computer-and-programming-fundamentals/bitwise-operation)
+  - [Floating Number](computer-and-programming-fundamentals/floating-number)
+  - [Data Representation](computer-and-programming-fundamentals/data-representation)
+- Computer Fundamentals
+  - [Operating System](computer-and-programming-fundamentals/operating-system)
+  - [Memory](computer-and-programming-fundamentals/memory)
+  - [Input & Output](computer-and-programming-fundamentals/input-output)
+- Programming Fundamentals
+  - [Data Types & Variables](computer-and-programming-fundamentals/data-types-variables)
+  - [Operators](computer-and-programming-fundamentals/operators)
+  - [Control Flow](computer-and-programming-fundamentals/control-flow)
+  - [Functions](computer-and-programming-fundamentals/functions)
+  - [Debugging & Error Handling](computer-and-programming-fundamentals/debugging-error-handling)
+  - [Data Structures & Algorithms](computer-and-programming-fundamentals/data-structures-and-algorithms)
+  - Programming Paradigm
+	- Imperative
+		- [Procedural Programming](computer-and-programming-fundamentals/procedural-programming)
+		- [Object Oriented Programming](computer-and-programming-fundamentals/object-oriented-programming)
+	- Declarative
+		- [Functional Programming](computer-and-programming-fundamentals/functional-programming)
+		- [Query Language](computer-and-programming-fundamentals/query-language)
+	- [Concurrent Programming](computer-and-programming-fundamentals/concurrent-programming)
+	- [Parallel Computing](computer-and-programming-fundamentals/parallel-computing)
+	- [Reactive Programming](computer-and-programming-fundamentals/reactive-programmimg)
+- Code Execution
+  - [Compilation](computer-and-programming-fundamentals/compilation)
+  - [Interpreter](computer-and-programming-fundamentals/interpreter)
+  - [Execution Environment](computer-and-programming-fundamentals/execution-environment)
+- [Computer & Programming Terminology](computer-and-programming-fundamentals/computer-and-programming-terminology)

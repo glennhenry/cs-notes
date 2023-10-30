@@ -12,3 +12,4 @@ description: Programming Language Theory Notes
 - a
 - b
 - c
+- type system (primitive, complex object, generics, type cast, type conversion, inference, checkcing)

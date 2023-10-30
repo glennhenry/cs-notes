@@ -11,10 +11,10 @@ description: Data Structures & Algorithms Notes
 - Algorithms
   - Sort
   - Search
+  - Recursion
   - Traversal
   - Shortest Path
   - Dynamic Programming (top down memoization, bottom up approach)
-  - c
 - Data Structures
   - [Tree](data-structures-and-algorithms/tree)
     - [Binary Tree](data-structures-and-algorithms/binary-tree)

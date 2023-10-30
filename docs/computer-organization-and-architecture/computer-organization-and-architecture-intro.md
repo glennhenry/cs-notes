@@ -9,6 +9,6 @@ description: Computer Organization & Architecture Notes
 
 ### All pages
 
-- a
-- b
+- Logic Gates & Boolean Algebra
+- Memory hierarchy
 - c

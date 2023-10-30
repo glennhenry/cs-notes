@@ -5,7 +5,7 @@
 
 import os
 
-base_path = "D:\\Programming\\Projects\\cs-notes\\docs\\deep-learning\\16-reinforcement-learning"
+base_path = "D:\\Programming\\Projects\\cs-notes\\docs\\computer-and-programming-fundamentals"
 folders = os.listdir(base_path)
 
 for num, folder_name in enumerate(folders) :
