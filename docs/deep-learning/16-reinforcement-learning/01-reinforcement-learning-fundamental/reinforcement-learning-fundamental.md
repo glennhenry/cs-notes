@@ -43,13 +43,13 @@ An environment can also be stochastic, which means it doesn't entirely depends o
 
 State, denoted as $s$ is the condition of the environment at a particular time. It contains all the information about the environment such as the agent's location. While a state represent complete condition, an **observation** is a partial representation of that state, it can be a sensor measurement in a robotics problem.
 
-A state can be discrete or continuous. A discrete or categorical state can be the coordinates of the agent's position in the grid of maze. A continuous state can be found in robotic problem such as joint angles, end-effector position, and velocities.
+A state can be discrete or continuous. A discrete or categorical state can be the coordinates of the agent's position in the grid of maze. A continuous state can be found in a robotic problem such as joint angles, end-effector position, and velocities.
 
 #### Action
 
 Action, denoted as $a$ is the choice or decision made by agent to interact with the environment. The action did by agent will influence the state of the environment.
 
-A set of all valid action in a given environment is called **action space**. Similar to state, action can also be discrete or continuous.
+A set of all valid action in a given environment is called **action space**. Similar to state, action can also be discrete or continuous. For example, we can move discretely in a grid-based task like maze or move continously in a self-driving car task, where the action space could be the steering angle of the car.
 
 #### Policy
 
