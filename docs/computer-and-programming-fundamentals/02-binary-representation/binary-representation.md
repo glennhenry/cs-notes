@@ -69,7 +69,7 @@ Source : https://www.researchgate.net/figure/Least-significant-bit_fig2_35112870
 
 In binary numbers, we don't use negative sign to represent negative number, we instead uses another binary digit to determine whether its a positive or negative number, the extra digit is called the **sign bit**, and it doesn't contribute to overall value. The other binary digit that contributes to overall value is called the **magnitude bits**.
 
-Signed magnitude is a way to represent negative or positive number, where the most significant bit (MSB) is used as the sign bit. The MSB of 1 represent the binary number is negative, while 0 represent positive number. The usage of MSB as the sign bit makes us need an extra binary digit to represent a larger number.
+Signed magnitude is a way to represent negative or positive number, where the most significant bit (MSB) is used as the sign bit. The MSB of 1 represent the binary number is negative, while 0 represent positive number. In some cases, the usage of MSB as the sign bit makes us need an extra binary digit to represent a larger number.
 
 The representation using signed magnitude is very simple, however, it introduces complexity when performing arithmetic operations, as special rules are required to handle the sign bit separately from the magnitude bits.
 
@@ -89,7 +89,7 @@ Source : https://www.meracalculator.com/math/ones-complement.php
 
 #### Two Complement
 
-The two complement is another signed number representation. To obtain the two complement of a binary number, the method is very similar to one complement, we first flip the bit, and then we add extra 1 to the resulting binary number.
+The two complement is another signed number representation. To obtain the two complement of a binary number, the method is very similar to one complement, we first obtain the one complement (flip the bit), and then we add extra 1 to the resulting binary number.
 
 For example, the number 5 in binary form, which is `00000101`. By inverting the bits, we obtain `11111010`, and when we add 1 to this result, we arrive at the two's complement representation, which is `11111011`. This representation signifies the value of -5.
 
