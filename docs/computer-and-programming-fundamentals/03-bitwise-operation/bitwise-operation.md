@@ -7,12 +7,22 @@ description: Bitwise Operation
 
 Bitwise Operation..
 
-### OR
+### Bit Shifting
+
+#### Shift Left
+
+#### Shift Right
+
+### Bit Masking
+
+### Logical Operation
+
+#### NOT
+
+#### OR
 
 #### XOR
 
-#### NOR
-
-### AND
+#### AND
 
 and so on..
