@@ -63,6 +63,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          breadcrumbs: true,
           routeBasePath: '/', 
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/glennhenry/cs-notes/tree/main',
@@ -103,11 +104,12 @@ const config = {
       },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Notes',style:'dark' ,
+        title: 'Notes', style:'dark' ,
         logo: {
           alt: 'Docusaurus Logo',
           src: 'img/logo.svg',
         },
+        hideOnScroll: true,
         items: [
           {
             label: 'Github',
@@ -129,6 +131,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      }
     }),
 };
 

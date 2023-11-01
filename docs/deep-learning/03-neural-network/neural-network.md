@@ -13,9 +13,9 @@ description: Neural Network
 
 ### Neural Network Idea
 
-In traditional machine learning, the features of the data needs to be extracted manually by the researcher. The process involve extracting relevant features and identifying relationship or patterns. After that, the data with the corresponding feature can be feed to the machine learning model.
+In traditional machine learning, the features of the data need to be extracted manually by the researcher. The process involves extracting relevant features and identifying relationship or patterns. After that, the data with the corresponding feature can be feed to the machine learning model.
 
-**Neural Network** is a method of machine learning inspired by the human brain to teach computer without needing many human assistance. Neural network is able to learn automatically and capture the relationship and underlying patterns in the data.
+**Neural Network** is a method of machine learning inspired by the human brain to teach computer without needing much human assistance. Neural network is able to learn automatically and capture the relationship and underlying patterns in the data.
 
 A neural network is built upon a mathematical function that takes input data. This function has variables or parameters called weights and biases, which are used with input data to somehow suit with the actual data to make prediction.
 
@@ -29,16 +29,16 @@ To capture complex relationships and patterns in the data, the network utilizes 
 
 #### Perceptron
 
-The simplest model of neural network is called **perceptron**, it consists of several input data and weights. The input will be calculated with the their corresponding weight, summed up, and applied to an activation function to produce an output.
+The simplest model of neural network is called **perceptron**, it consists of several input data and weights. The input will be calculated with their corresponding weight, summed up, and applied to an activation function to produce an output.
 
 ![Perceptron](./perceptron.png)  
 Source : https://www.javatpoint.com/perceptron-in-machine-learning
 
 #### Multilayer Perceptron
 
-Perceptron consist only a single layer, it only process the input once. **Multilayer perceptron (MLP)** also known as **fully connected feedforward network** is similar to perceptron, however, it consists of multiple layer of processing. MLPs passes it through multiple layer with small units called neuron. Each neuron will be connected with each other.
+Perceptron consists only a single layer, it only processes the input once. **Multilayer perceptron (MLP)** also known as **fully connected feedforward network** is similar to perceptron, however, it consists of multiple layers of processing. MLPs passes it through multiple layers with small units called neuron. Each neuron will be connected with each other.
 
-The overall architecture consists of several layer of neuron, including input layer, hidden layer, and output layer. In MLP, information only flow in one direction, from the input layer to the hidden layer and finally to the output layer, without any loops.
+The overall architecture consists of several layers of neuron, including input layer, hidden layer, and output layer. In MLP, information only flows in one direction, from the input layer to the hidden layer and finally to the output layer, without any loops.
 
 - **Input Layer** : The input layer receives the raw input data and passes it to next layer for further processing. The number of neuron in input layer represent the dimensionality of the input data.
 
