@@ -65,6 +65,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 18. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambigous, which pixel should be determined to draw. text rendering
 19. **[ref]** deep-learning/reinforcement-learning/reinforcement-learning-fundamental (refer to dynamic programming in dsa)
 20. **[ref]** deep-learning/reinforcement-learning/markov-decision-process (refer to dynamic programming in dsa)
+21. **[ref]** /computer-and-programming-fundamentals/data-representation (refer to database)
 
 ### Longest Notes
 

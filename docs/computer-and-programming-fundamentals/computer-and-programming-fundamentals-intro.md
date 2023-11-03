@@ -33,7 +33,7 @@ Some of the topics here include the basic of other topics like OS, DSA, Compiler
   - Programming Paradigm
 	- Imperative
 		- [Procedural Programming](computer-and-programming-fundamentals/procedural-programming)
-		- [Object Oriented Programming](computer-and-programming-fundamentals/object-oriented-programming)
+		- [Object-Oriented Programming](computer-and-programming-fundamentals/object-oriented-programming)
 	- Declarative
 		- [Functional Programming](computer-and-programming-fundamentals/functional-programming)
 		- [Query Language](computer-and-programming-fundamentals/query-language)
