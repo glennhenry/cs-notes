@@ -5,13 +5,13 @@ title: Computer & Programming Fundamentals
 description: Computer & Programming Fundamentals Notes
 ---
 
-**Computer & Programming Fundamentals** is ...
+This topics serve as an introduction to a more advanced and specific topics, it also contains fundamental terminology or technique used in computer science and programming.
 
-Some of the topics here include the basic of other topics like OS, DSA, Compiler, which serve as introductory foundations.
+:::note
+Sometimes, the explanation includes concept from programming.
+:::
 
 ### All pages
-
-(computer-and-programming-fundamentals/)
 
 - Computer Representation
   - [Number System](computer-and-programming-fundamentals/number-system)
