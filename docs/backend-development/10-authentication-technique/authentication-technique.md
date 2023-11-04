@@ -48,7 +48,7 @@ In session-based authentication, the user stores session ID and the server also 
 
 #### JWT
 
-In token-based authentication, JSON Web Token (JWT) is typically used as the implementation. JWT is encoded in base64 uses [JSON](/frontend-web-development) as the format for representing the token's actual data. JWT consists of header, payload, and signature.
+In token-based authentication, JSON Web Token (JWT) is typically used as the implementation. JWT is encoded in [base64](/computer-and-programming-fundamentals/data-representation#base64) uses [JSON](/frontend-web-development) as the format for representing the token's actual data. JWT consists of header, payload, and signature.
 
 - **Header** : Header specify algorithm used to sign the token and the type of the token (which is "JWT").
 - **Payload** : Payload contains the actual user's data such as username and email.

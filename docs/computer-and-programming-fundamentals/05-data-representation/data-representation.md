@@ -5,6 +5,16 @@ title: Data Representation
 description: Data Representation
 ---
 
+**Main Source :**
+
+- **[Units of information - Wikipedia](https://en.wikipedia.org/wiki/Units_of_information)**
+- **[Computer Graphics Images](/computer-graphics/computer-images-part-1)**
+- **[Digital Signal Processing](/digital-signal-processing)**
+- **[Digital Media Processing](/digital-media-processing)**
+- **[What is ASCII - TechTarget](https://www.techtarget.com/whatis/definition/ASCII-American-Standard-Code-for-Information-Interchange)**
+- **[How Unicode Works: What Every Developer Needs to Know About Strings and 🦄 by Peter Tasker](https://deliciousbrains.com/how-unicode-works/)**
+- **[Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)**
+
 Computers store and process data in binary format, using a combination of 0s and 1s, known as bits. These bits are grouped together to form larger units of data. Those bits are combined to represent various data types in computer.
 
 ### Units of Data
@@ -156,3 +166,25 @@ Unicode assigns a unique numerical value, called a **code point**, to each chara
 
 ![UTF comparison](./unicode-utf.png)  
 Source : https://support.absorblms.com/hc/en-us/articles/18014014342291-Outlook-Encoding-for-Special-Characters
+
+### Base Encoding
+
+Base encoding is the process of representing data or information in a specific numerical base. The most common encoding in computing is the base-2 encoding, where we represent data using only two symbols: 0 and 1.
+
+#### Base64
+
+Base64 is an encoding scheme that represents binary data in an ASCII string format. It uses a set of 64 characters from the alphabet (both lowercase and uppercase), numbers, the "+" symbol, and the "/". It also use the "=" symbol as padding, to ensure that the length of the resulting encoded string is a multiple of 4 characters.
+
+Here's how the conversion from binary data to Base64 works (**Base64 encoding**) :
+
+1. Input Binary Data : The binary data will be divided into groups of 3 bytes.
+2. Split Into 6-bit Chunks : Each byte that contains 8-bit each will be combined producing 24-bit binary value. It will then be split onto four 6-bit chunks.
+3. Map to Base64 : Each 6-bit chunk is mapped to a corresponding character from the Base64 character set.
+4. Padding : If the input data is not evenly divisible by 3 (i.e., the last group has less than 3 bytes), padding is added to ensure that the length of the encoded string is a multiple of 4 characters.
+
+The process to get binary data back from a string encoded in Base64 will be the reverse process of this, and it's called **Base64 decoding**.
+
+![Base64 table defined](./base-64-table.png)  
+Source : https://en.wikipedia.org/wiki/Base64
+
+For example, consider ASCII characters: "Man", which has 8-bit binary values of `01001101`, `01100001`, and `01101110`, respectively. Each byte will be joined together resulting in `010011010110000101101110`. We will then split it into 6-bit chunk `010011 010110 000101 101110`. Each 6-bit chunk maps to `T`, `W`, `F`, `u`, respectively. Thus, "Man" in ASCII is equivalent to "TWFu" in Base64 encoded.

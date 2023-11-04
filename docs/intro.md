@@ -40,7 +40,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 #### TODO :
 
 - **[add]** : add new notes
-- **[update]** : update / add extra notes
+- **[update]** : update existing notes
 - **[edit]** : edit notes
 - **[ref]** : add reference to particular notes
 
@@ -50,7 +50,6 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 5. **[update]** computer-graphics/computer-display#buffer (explain frame buffer, back buffer, how they are used)
 4. **[update]** computer-graphics/computer-display#vsync
 5. **[update]** digital-signal-processing/compression#svd-compression
-6. **[ref]** backend-development/authentication-technique#jwt (ref to base64 encode)
 7. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
 8. **[ref]** backend-development/message-broker (ref to queue data structure)
 9. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
