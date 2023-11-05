@@ -5,10 +5,10 @@ title: Computer & Programming Fundamentals
 description: Computer & Programming Fundamentals Notes
 ---
 
-This topics serve as an introduction to a more advanced and specific topics, it also contains fundamental terminology or technique used in computer science and programming.
+These topics serve as an introduction to a more advanced and specific topics, it also contains fundamental terminology or technique used in computer science and programming.
 
 :::note
-Sometimes, the explanation includes concept from programming.
+Sometimes, the explanation includes concept from programming and some code.
 :::
 
 ### All pages

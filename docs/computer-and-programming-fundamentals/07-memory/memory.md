@@ -9,7 +9,7 @@ description: Memory
 
 - **[What and where are the stack and heap? - stackoverflow](https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap)**
 - **[Data buffer - Wikipedia](https://en.wikipedia.org/wiki/Data_buffer)**
-- pointer ref
+- **[What is the Difference Between a Pointer and a Reference C++ - Paul Programming](https://youtu.be/sxHng1iufQE?si=A-qOSCg_Z0oHO6bh)**
 - **[A quick and thorough guide to ‘null’: what it is, and how you should use it by Christian Neumanns - freeCodeCamp](https://www.freecodecamp.org/news/a-quick-and-thorough-guide-to-null-what-it-is-and-how-you-should-use-it-d170cea62840/)**
 - **[Memory management - Wikipedia](https://en.wikipedia.org/wiki/Memory_management)**
 - **[What is Virtual Memory? What Does it Do? - Eye on Tech](https://youtu.be/qeOBEOBJREs?si=Ql-qaggCrzP7T8Rt)**
@@ -58,11 +58,76 @@ Another usage for buffer is to improve retrieval efficieny in I/O (input-output)
 ![Buffering](./buffering.png)  
 Source : http://www.planetoftunes.com/computer/caching-and-streaming.php
 
-#### Pointer & References
+#### Mutability
 
-A pointer is a variable that stores the memory address of another variable. It "points" to the location in memory where the actual data is stored.
+Mutability refers to whether an object, data structure, or a variable can be modified after it is created. An object that can be modified after a value is assigned is called **mutable**, while the opposite is called **immutable**.
 
-Sometimes, when we store data on a variable, the variables doesn't directly hold the data. The variables instead hold a memory address that points to the location in memory where the data is stored. The variable that hold a memory address of a data or another variable is called a **pointer**.
+In memory, when a mutable object is created, a block if memory is allocated to store its contents. When we change the value of the object, we are modifying it in place, and the memory address remains the same.
+
+On the other hand, when someone tries to change an immutable object, the particular address that holds the value won't be changed, instead, a new object with the modified values is created, and a new memory location is allocated to store the new object.
+
+Here is an example in code :
+
+```
+a = 5
+a = 3
+```
+
+When we assign `a = 5`, a memory object representing the value `5` is created and stored. The variable `a` is then associated with this object. Later, when we assign `a = 3`, assuming numbers are immutable, a new memory object representing the value `3` is created. The variable `a` is updated to reference this new object. The original object representing `5` remains in memory until it is cleaned up by the [garbage collector](/computer-and-programming-fundamentals/memory#garbage-collection) or manually released in lower-level programming languages.
+
+#### Pointer & Reference
+
+A **pointer** is a variable that stores the memory address of another variable. It "points" to the location in memory where the actual data is stored.
+
+A **reference** is a variable that "refer" to other variable. Reference provides an alternative name or alias for an existing object.
+
+![Pointer and references](./pointer-references.png)  
+Source : https://youtu.be/sxHng1iufQE?si=qfog89ZUE5UIXQsB&t=463 (cropped and edited)
+
+##### Example
+
+Here's an example taken from a YouTube video :
+
+1. In the line 1, we are declaring a variable named `ptr` which is a pointer (marked by `*` symbol), that pointer will "point" to a memory address of an `int`. Currently, it doesn't point to anything yet.
+2. In the line 2 and 3, we are declaring two variable that holds an `int`, named `var` and `foo`, respectively. Memory will be allocated to store these values, and both variables will hold their respective values.
+3. We are assigning an address to `ptr` variable, the value will be `&var`. The symbol `&` is the "address-of" operator, when we say `&var`, it means we are taking the address of `var` variable. Based on the image, the `ptr` will now store the address of `var` variable, which is `0xA`.
+4. We are changing the address of `ptr` variable to `&foo`. Now, `ptr` will hold the address of `foo` variable, which is `0xB`.
+5. In the line 5, we are creating a variable that named `ref` that holds reference to an `int` variable, which is `var`. The `ref` variable will have the same exact address as `var`.
+
+##### Purpose of Pointer
+
+Consider the following code :
+
+```c
+int x = 5;
+int* ptr = &x;
+*ptr = 10;
+```
+
+`x` is an `int` variable with a value of `5`, while `ptr` is an `int` pointer that stores the memory address of `x`. When we say `*ptr = 10`, we are directly accessing the memory address held by the `ptr` variable, which is the address of `x`, and updating the value at that address to `10`. As a result, any variable associated with that address, such as `x`, will also be modified. Using pointer, we can effectively modify other variables indirectly through their shared memory address.
+
+##### Purpose of Reference
+
+Consider the following code :
+
+```c
+int a = 5;
+int b = a;
+```
+
+In this code, we are declaring an `int` variable named `a` with the value of `5`. In the next line, we are declaring another `int` variable named `b` with the value of variable `a`. When we assign a variable with the value of another variable, we are essentially taking the copy of that variable and save it in the new variable. Because it's just a copy, modifying `b` will not affect the value of `a`, and vice versa.
+
+```c
+int a = 5;
+int& b = a;
+```
+
+However, in this code we added `&` symbol, which mean we are creating a reference instead of just copying the value. When we make change, either to variable `a` or `b`, both variable will be changed. This is because a reference refer to the same memory location.
+
+Some purpose of using reference :
+
+1. We can create another name for a variable to make code more readable and expressive.
+2. In situations where multiple instances of a value are required, there is no need to create separate copies explicitly. Instead, we can utilize a single value by creating references, each instance will point to the same value stored in a single location. This approach simplifies the process of synchronizing all instances since modifying the referenced value will automatically update all the instances, reducing the processing resources required.
 
 ##### Type of References
 
@@ -106,7 +171,7 @@ Source : https://iboysoft.com/wiki/virtual-memory.html
 
 #### Cache
 
-Cache is a small, high-speed memory that is located closer to the CPU (central processing unit) than the main memory (RAM). The purpose of cache is to speeds up retrieval for frequently accessed resource.
+Cache is a small, high-speed memory that is located closer to the CPU (central processing unit) than the main memory (RAM). The purpose of cache is to speed up retrieval for frequently accessed resource.
 
 When the CPU needs to read data from or write data to the main memory, it first checks the cache to see if the required data is already present. If the data is found in the cache (called **cache hit**), it can be quickly accessed by the CPU without the need to access the slower main memory.
 
