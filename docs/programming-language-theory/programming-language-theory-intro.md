@@ -12,4 +12,4 @@ description: Programming Language Theory Notes
 - a
 - b
 - c
-- type system (primitive, complex object, generics, type cast, type conversion, inference, checkcing, type safety, strong weak type, static dynamic type)
+- type system (primitive, complex object, generics, type cast, type conversion, inference, checking, type safety, strong weak type, static dynamic type (ref to computer and programming terminology))

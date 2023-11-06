@@ -5,9 +5,26 @@ title: Computer & Programming Terminology
 description: Computer & Programming Terminology
 ---
 
+/computer-and-programming-fundamentals/computer-and-programming-terminology#pseudocode
+/computer-and-programming-fundamentals/computer-and-programming-terminology#pseudocode
+
 Computer & Programming Terminology
 
 ### Programming Terms
+
+#### Pseudocode
+
+#### Data Structures
+
+##### HashMap vs HashSet vs Dictionary
+
+##### Array vs List vs ArrayList
+
+#### Typing Strength
+
+strong, weak, dynamic, static
+
+#### Standard Library
 
 #### Streams
 
