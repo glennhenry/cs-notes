@@ -9,6 +9,10 @@ Computer & Programming Terminology
 
 ### Programming Terms
 
+#### Streams
+
+#### ByteArray
+
 #### Abstraction
 
 #### API

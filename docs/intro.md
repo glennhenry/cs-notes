@@ -67,6 +67,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 21. **[ref]** /computer-and-programming-fundamentals/data-representation (refer to database)
 22. **[ref]** /computer-and-programming-fundamentals/memory (refer to stack in dsa)
 23. **[ref]** /computer-and-programming-fundamentals/memory#pointer--references (refer to linked list in dsa)
+24. **[ref]** /computer-and-programming-fundamentals/memory#pointer--references (refer to tree, linked list in dsa)
 
 ### Longest Notes
 

@@ -22,24 +22,17 @@ Sometimes, the explanation includes concept from programming and some code.
 - Computer Fundamentals
   - [Operating System](computer-and-programming-fundamentals/operating-system)
   - [Memory](computer-and-programming-fundamentals/memory)
-  - [Input & Output](computer-and-programming-fundamentals/input-output)
 - Programming Fundamentals
-  - [Data Types & Variables](computer-and-programming-fundamentals/data-types-variables)
-  - [Operators](computer-and-programming-fundamentals/operators)
-  - [Control Flow](computer-and-programming-fundamentals/control-flow)
-  - [Functions](computer-and-programming-fundamentals/functions)
-  - [Debugging & Error Handling](computer-and-programming-fundamentals/debugging-error-handling)
+  - [Programming Concepts](computer-and-programming-fundamentals/programming-concepts)
   - [Data Structures & Algorithms](computer-and-programming-fundamentals/data-structures-and-algorithms)
   - Programming Paradigm
-	- Imperative
-		- [Procedural Programming](computer-and-programming-fundamentals/procedural-programming)
-		- [Object-Oriented Programming](computer-and-programming-fundamentals/object-oriented-programming)
-	- Declarative
-		- [Functional Programming](computer-and-programming-fundamentals/functional-programming)
-		- [Query Language](computer-and-programming-fundamentals/query-language)
-	- [Concurrent Programming](computer-and-programming-fundamentals/concurrent-programming)
-	- [Parallel Computing](computer-and-programming-fundamentals/parallel-computing)
-	- [Reactive Programming](computer-and-programming-fundamentals/reactive-programming)
+    - Imperative
+      - [Procedural Programming](computer-and-programming-fundamentals/procedural-programming)
+      - [Object-Oriented Programming](computer-and-programming-fundamentals/object-oriented-programming)
+    - Declarative
+      - [Functional Programming](computer-and-programming-fundamentals/functional-programming)
+      - [Query Language](computer-and-programming-fundamentals/query-language)
+    - [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism)
 - Code Execution
   - [Compilation](computer-and-programming-fundamentals/compilation)
   - [Interpreter](computer-and-programming-fundamentals/interpreter)

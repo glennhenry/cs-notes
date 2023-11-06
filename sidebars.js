@@ -79,18 +79,13 @@ const sidebars = {
           items: [
             "computer-and-programming-fundamentals/operating-system/operating-system",
             "computer-and-programming-fundamentals/memory/memory",
-            "computer-and-programming-fundamentals/input-output/input-output",
           ],
         },
         {
           type: "category",
           label: "Programming Fundamentals",
           items: [
-            "computer-and-programming-fundamentals/data-types-variables/data-types-variables",
-            "computer-and-programming-fundamentals/operators/operators",
-            "computer-and-programming-fundamentals/control-flow/control-flow",
-            "computer-and-programming-fundamentals/functions/functions",
-            "computer-and-programming-fundamentals/debugging-error-handling/debugging-error-handling",
+            "computer-and-programming-fundamentals/programming-concepts/programming-concepts",
             "computer-and-programming-fundamentals/data-structures-and-algorithms/data-structures-and-algorithms",
             {
               type: "category",
@@ -112,9 +107,7 @@ const sidebars = {
                     "computer-and-programming-fundamentals/query-language/query-language",
                   ],
                 },
-                "computer-and-programming-fundamentals/concurrent-programming/concurrent-programming",
-                "computer-and-programming-fundamentals/parallel-computing/parallel-computing",
-                "computer-and-programming-fundamentals/reactive-programming/reactive-programming",
+                "computer-and-programming-fundamentals/concurrency-and-parallelism/concurrency-and-parallelism",
               ],
             },
           ],

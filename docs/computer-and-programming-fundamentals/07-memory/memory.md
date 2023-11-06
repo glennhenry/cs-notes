@@ -42,7 +42,7 @@ The stack is faster than heap for some reasons :
 - Stack is a LIFO structure, most recently allocated memory is at the top of the stack and can be accessed quickly.
 - The fixed size of stack makes it easy to allocate memory, we can easily move up or down the size by a fixed amount.
 
-Heap requires additional bookkeeping or it requires maintaining additional information to keep track of allocated and deallocated memory blocks. When a memory block is allocated, the heap manager needs to find a suitable free block of the requested size and update the bookkeeping information accordingly.
+Heap requires additional bookkeeping, or it requires maintaining additional information to keep track of allocated and deallocated memory blocks. When a memory block is allocated, the heap manager needs to find a suitable free block of the requested size and update the bookkeeping information accordingly.
 
 ![Heap memory vs stack](./heap-memory.png)  
 Source : https://www.javatpoint.com/stack-vs-heap-java
@@ -51,9 +51,9 @@ Source : https://www.javatpoint.com/stack-vs-heap-java
 
 A buffer is a temporary storage area used to hold data while it is being transferred between different devices or processes. It acts as an intermediate storage space, allowing for smoother and more efficient data transfer.
 
-For example, in video playback, we often hear the term "buffering" when there are delays or interruptions during the playback. The buffering process involves temporarily storing video's frame in the buffer. Playing each individual frame immediately as it arrives will make the playback looks rough, instead the video player video player stores the frames in a buffer until a certain amount of playback time is accumulated.
+For example, in video playback, we often hear the term "buffering" when there are delays or interruptions during the playback. The buffering process involves temporarily storing video's frame in the buffer. Playing each individual frame immediately as it arrives will make the playback looks rough, instead the video player stores the frames in a buffer until a certain amount of playback time is accumulated.
 
-Another usage for buffer is to improve retrieval efficieny in I/O (input-output) operation. Accessing data stored in the storage (e.g., hard drive) can be slower than accessing to computer's main memory (e.g., RAM). When reading a file, the computer can load a chunk of data from hard drive into the a buffer, then then the application will load the data from the buffer rather than directly accessing the storage device.
+Another usage for buffer is to improve retrieval efficiency in I/O (input-output) operation. Accessing data stored in the storage (e.g., hard drive) can be slower than accessing to computer's main memory (e.g., RAM). When reading a file, the computer can load a chunk of data from hard drive into the buffer, then the application will load the data from the buffer rather than directly accessing the storage device.
 
 ![Buffering](./buffering.png)  
 Source : http://www.planetoftunes.com/computer/caching-and-streaming.php
@@ -106,6 +106,8 @@ int* ptr = &x;
 
 `x` is an `int` variable with a value of `5`, while `ptr` is an `int` pointer that stores the memory address of `x`. When we say `*ptr = 10`, we are directly accessing the memory address held by the `ptr` variable, which is the address of `x`, and updating the value at that address to `10`. As a result, any variable associated with that address, such as `x`, will also be modified. Using pointer, we can effectively modify other variables indirectly through their shared memory address.
 
+Pointer which stores memory address allows us to have direct memory access. This is useful for implementing data structures like tree or linked list, where each node need to connection with other node. We can allow connection between node by having a pointer that points to other node's address.
+
 ##### Purpose of Reference
 
 Consider the following code :
@@ -130,6 +132,14 @@ Some purpose of using reference :
 2. In situations where multiple instances of a value are required, there is no need to create separate copies explicitly. Instead, we can utilize a single value by creating references, each instance will point to the same value stored in a single location. This approach simplifies the process of synchronizing all instances since modifying the referenced value will automatically update all the instances, reducing the processing resources required.
 
 ##### Type of References
+
+The two important type of reference :
+
+- **Strong Reference** : A strong reference is the default type of reference in many programming languages. It keeps an object in memory as long as there is at least one strong reference pointing to it. As long as there are active strong references, the object will not be [garbage-collected](/computer-and-programming-fundamentals/memory#garbage-collection).
+
+- **Weak Reference** : A weak reference is a type of reference that does not prevent the object from being garbage-collected. In other word, when a variable have weak reference to an object, we can't guarantee that the variable will always contain that object, as the object may be garbage-collected or cleaned from the memory. If the object is garbage-collected and we are accessing the variable, we may get [null](/computer-and-programming-fundamentals/memory#null) value.
+
+There are also soft, phantom, and unreachable reference.
 
 #### Object
 
