@@ -62,3 +62,7 @@ Some characteristics of Unix :
 - **User Interface** : Unix systems provides a command-line interface, an interface for users to interact with the operating system by typing commands.
 
 Popular operating system such as Linux and macOS are considered as Unix-like, meaning they have similarities with the original Unix operating system.
+
+:::tip
+Refer to [operating system](/operating-system) for more detailed explanation
+:::

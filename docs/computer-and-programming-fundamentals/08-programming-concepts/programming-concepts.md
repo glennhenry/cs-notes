@@ -63,6 +63,8 @@ Some common data types are :
 
   Example of a boolean variable : `bool correct = true`, a variable named `correct` has a boolean value of `true`.
 
+Some of these data types such as Integer, Float, Double, Character, Boolean are called **primitive data types**, which means they are basic built-in types provided by the programming language and are not composed of other types. Primitive types are used to represent fundamental data values and are usually the simplest and most efficient way to store and manipulate data.
+
 ### Operators
 
 Operators are symbols or keywords that are used to perform operations on data. When an operator is applied to two elements, it performs a specific operation and returns a resulting value. This value can then be stored in a variable or used in further computations. Some common type of operators :
@@ -160,10 +162,74 @@ Source : https://www.guru99.com/c-loop-statement.html
 
 ### Functions
 
+A function is a block of code that performs a specific task or set of tasks. It is a "mini-program" or reusable unit of code that can be called or invoked from different parts of a program. The part of function that contains the set of instructions or statements to complete a task is called the **body function**.
+
+A function has unique name that identify them and will be used to call within the program. A function is typically called by calling its name with a parenthesis: `function()`.
+
+For example, when we have a task to add two number together, instead of writing the same code, we can make a function that will add two number together, and we can call it to do it for us.
+
+The purpose of function is different with loop, a loop repeats a block of code multiple times. On the other hand, a function encapsulate a task, it decomposes a task into smaller, manageable pieces, each performing a specific task.
+
+A function can also take input, an input provides necessary information for the function to perform its task. A function input is called **parameter** and the input we are actually passing is called **argument**.
+
+In the case of adding two number, the function will take input or the parameters of the function are the two number. If we call the function and give it input of 2 and 5, then 2 and 5 are the arguments.
+
+For example, here's how you would define a function in Kotlin programming language :
+
+```kotlin
+fun add(num1: Int, num2: Int): Int {
+  return num1 + num2
+}
+```
+
+The `fun` keyword is used when you are defining a function, the `add` is the name of the function. The function will take 2 parameters, which are `num1` and `num2`. The `num1` and `num2` are just placeholder name that we will use inside the function, these can be thought as the variables given to us.
+
+In Kotlin, we need to specify the data type of parameters of the function and also what data type will the function returns. To specify, we put `:` and its type such as `Int` in front of the parameter name and we need to separate each parameter with a comma. At the end, we also specify the return type similar to the parameter, in the case of adding number, the result will be another number, therefore we will specify `: Int`.
+
+To define the function body, we use curly brackets `{}`. Inside the brackets, we will define the function body which contains the instruction of our function. In this case, the instruction is just adding the two parameters using `+` operator.
+
+The `return` keyword is the keyword we use to indicate the value that the function will return. The data type of the return value must correspond to the data type we specified in the function. When a `return` is called, the function will end, and the programmer who call it will receive the result.
+
+![Analogy of a function, takes an apple and slice it into two](./function.png)  
+Source : https://www.scaler.com/topics/c/user-defined-functions-in-c/
+
 ### Debugging & Error Handling
+
+A **bug** in software is an error or unexpected behavior in software. **Debugging** is the process of identifying and resolving which part of the program's code causes the error. **Error handling**, is the process of handling or anticipating error that may occur during the execution of program. Error handling helps us to recover the program from error and preventing it to terminate abruptly.
+
+#### Type of Error
+
+- Syntax Error : Syntax errors occur when the code violates the rules of the programming language's syntax. A syntax error typically occurs before the program execution, such as during the process of writing the code. Common examples of syntax errors include misspelled keywords, missing or mismatched parentheses or brackets, incorrect variable names, or improper use of operators.
+- Runtime Error : Runtime errors are the error that occurs during the execution of program. These errors may arise due to unexpected conditions, such as invalid user input (e.g., entering number when the application ask you to enter a character).
+- Logic Error : On the other hand, logic error doesn't involve the error of execution. They occur when the code executes correctly but does not produce the expected or desired result. Logical errors are typically caused by mistakes in the program's logic. For example, in a calculator application, the programmer mistakenly implemented a button intended for adding two numbers to instead perform subtraction between the numbers.
 
 #### Exception
 
+An exception is an event or condition that occurs during the execution of a program and disrupts the normal flow of instructions (considered as runtime error). It represents an unexpected situation in program which require to be handled.
+
+When an error occurs, the program raises or throws the exception. When we throw an exception, it typically involves creating an exception object that contains information about the exception, such as the type of exception and additional details.
+
 #### Try-Catch
 
-#### Logging
+The try-catch is a control flow mechanism that allows us to execute some code and handle the exception if an error occurs. It consists of a `try` block, where the regular program flow is contained, a `catch` block to handle exceptions, and an optional `finally` block for code that should execute regardless of whether an error occurs or not.
+
+Here is an example of try-catch block in the Kotlin programming language :
+
+```kotlin
+try {
+  // user should input number
+} catch (e: InvalidInput) {
+  // user inputted character, send alert message to them
+} finally {
+  // send a "message received" message to user
+}
+```
+
+In the `catch` block, we will need to specify what kind of error is expected to happen. For example, the type of error is the `InvalidInput`, which tells us that user has invalid input. We can also anticipate multiple kind of error by specifying more catch block. If the error we get is different to what we specified, then the catch block may be ignored, unless the type of error is a more general type or if it includes a broader exception type.
+
+The `finally` block will send a "message received" message to the user, to indicate that their input has been acknowledged.
+
+When an error is thrown and is not handled, the program executor will try to find which part of the program is supposed to handle the error. The program will keep finding the error handler up to the part of code that responsible for calling or invoking the function that makes the error happens, this is called **error propagation** or **call stack unwinding**. If we reach the highest-level point and error handler is still not found, the program may crash abruptly.
+
+![Flowchart of a try-catch block](./try-catch.jpeg)  
+Source : https://www.wikitechy.com/tutorials/java/java-try-catch-finally-blocks

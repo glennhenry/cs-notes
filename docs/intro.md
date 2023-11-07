@@ -47,9 +47,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 1. **[add]** extras/tor-browser
 2. **[update]** frontend-web-development/search-engine#crawler
 3. **[add]** extras/wayback-machine
-5. **[update]** computer-graphics/computer-display#buffer (explain frame buffer, back buffer, how they are used)
-4. **[update]** computer-graphics/computer-display#vsync
-5. **[update]** digital-signal-processing/compression#svd-compression
+4. **[update]** computer-graphics/computer-display#buffer (explain frame buffer, back buffer, how they are used)
+5. **[update]** computer-graphics/computer-display#vsync
+6. **[update]** digital-signal-processing/compression#svd-compression
 7. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
 8. **[ref]** backend-development/message-broker (ref to queue data structure)
 9. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
@@ -68,14 +68,15 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 22. **[ref]** /computer-and-programming-fundamentals/memory (refer to stack in dsa)
 23. **[ref]** /computer-and-programming-fundamentals/memory#pointer--references (refer to linked list in dsa)
 24. **[ref]** /computer-and-programming-fundamentals/memory#pointer--references (refer to tree, linked list in dsa)
+25. **[ref]** /computer-and-programming-fundamentals/data-structures-and-algorithms (refer to dsa, and hash function)
 
 ### Longest Notes
 
-- [Diffusion Model](deep-learning/diffusion-model)
-- [Reinforcement Learning Fundamental](deep-learning/reinforcement-learning/reinforcement-learning-fundamental)
-- [Transformers Architecture](deep-learning/transformers/transformers-architecture)
-- [HTTP & HTTPS](computer-networking/http-https)
-- [GAN](deep-learning/gan)
+- [Diffusion Model](deep-learning/diffusion-model) (27316 char)
+- [Programming Concepts](computer-and-programming-fundamentals/programming-concepts) (21198 char)
+- [Reinforcement Learning Fundamental](deep-learning/reinforcement-learning/reinforcement-learning-fundamental) (17758 char)
+- [Data Representation](computer-and-programming-fundamentals/data-representation) (16346 char)
+- [Transformers Architecture](deep-learning/transformers/transformers-architecture) (15600 char)
 
 ### Credits
 
