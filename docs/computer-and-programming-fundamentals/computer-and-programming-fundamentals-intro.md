@@ -28,10 +28,10 @@ Explanation such as programming concepts are hard to explain for me, because I a
   - [Data Structures & Algorithms](computer-and-programming-fundamentals/data-structures-and-algorithms)
   - Programming Paradigm
     - Imperative
-      - [Procedural Programming](computer-and-programming-fundamentals/procedural-programming)
+      - [Imperative & Procedural Programming](computer-and-programming-fundamentals/imperative-procedural-programming)
       - [Object-Oriented Programming](computer-and-programming-fundamentals/object-oriented-programming)
     - Declarative
-      - [Functional Programming](computer-and-programming-fundamentals/functional-programming)
+      - [Declarative & Functional Programming](computer-and-programming-fundamentals/declarative-functional-programming)
       - [Query Language](computer-and-programming-fundamentals/query-language)
     - [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism)
 - Code Execution

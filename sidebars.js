@@ -95,7 +95,7 @@ const sidebars = {
                   type: "category",
                   label: "Imperative",
                   items: [
-                    "computer-and-programming-fundamentals/procedural-programming/procedural-programming",
+                    "computer-and-programming-fundamentals/imperative-procedural-programming/imperative-procedural-programming",
                     "computer-and-programming-fundamentals/object-oriented-programming/object-oriented-programming",
                   ],
                 },
@@ -103,7 +103,7 @@ const sidebars = {
                   type: "category",
                   label: "Declarative",
                   items: [
-                    "computer-and-programming-fundamentals/functional-programming/functional-programming",
+                    "computer-and-programming-fundamentals/declarative-functional-programming/declarative-functional-programming",
                     "computer-and-programming-fundamentals/query-language/query-language",
                   ],
                 },
