@@ -13,3 +13,4 @@ description: Theory of Computation & Automata Notes
 - a
 - b
 - c
+turing machine, turing complete (difference with turing test)
