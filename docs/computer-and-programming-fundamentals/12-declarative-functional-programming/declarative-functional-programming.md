@@ -96,6 +96,8 @@ After constructing a function, the next step is to apply an expression to the pa
 
 A function that takes some variable and return the variable incremented by 1, the lambda calculus notation for this is $\lambda x.x + 1$. When we apply this function with the argument of $3$, it would be written as $(\lambda x.x + 1) \space 3$, which is equal to $4$. The variable $x$ is **bound** to the argument $3$ during the function application.
 
+That was just the basic concept of lambda calculus, there are many more concepts.
+
 :::note
 Overall, lambda calculus serves as the theoretical foundation for many concepts in functional programming languages. It provides a formal and mathematical framework for understanding functions, function application, and the manipulation of functions.
 :::

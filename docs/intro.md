@@ -70,6 +70,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 24. **[ref]** /computer-and-programming-fundamentals/memory#pointer--references (refer to tree, linked list in dsa)
 25. **[ref]** /computer-and-programming-fundamentals/data-structures-and-algorithms (refer to dsa, and hash function)
 26. **[ref]** /computer-and-programming-fundamentals/declarative-functional-programming (refer to recursion)
+27. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
 
 ### Longest Notes
 

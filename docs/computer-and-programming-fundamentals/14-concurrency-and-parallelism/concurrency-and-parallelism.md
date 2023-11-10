@@ -7,13 +7,19 @@ description: Concurrency & Parallelism
 
 **Concurrency & Parallelism** are
 
-### Concurrent Programming
+why concurrency is needed
+what is thread what is process and the difference between them
+thread vs process image
 
-#### Thread
+### Concurrent Programming
 
 #### Process
 
+#### Thread
+
 #### Coroutine
+
+what's the difference with traditional thread
 
 #### Actor-Based
 
@@ -23,4 +29,8 @@ description: Concurrency & Parallelism
 
 #### Flow-Based
 
+stream of data or events
+
 #### Event-Driven
+
+click listener in GUI
