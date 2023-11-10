@@ -71,6 +71,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 25. **[ref]** /computer-and-programming-fundamentals/data-structures-and-algorithms (refer to dsa, and hash function)
 26. **[ref]** /computer-and-programming-fundamentals/declarative-functional-programming (refer to recursion)
 27. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
+28. **[ref]** /computer-and-programming-fundamentals/concurrency-and-parallelism (refer to operating system IPC)
 
 ### Longest Notes
 

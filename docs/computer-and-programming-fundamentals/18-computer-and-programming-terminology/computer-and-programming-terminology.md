@@ -34,8 +34,6 @@ strong, weak, dynamic, static
 
 #### API
 
-#### Callback / Listener
-
 #### Reflection
 
 #### Code & Language

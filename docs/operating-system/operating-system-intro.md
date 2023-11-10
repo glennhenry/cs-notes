@@ -13,10 +13,13 @@ description: Operating System Notes
 - file system
 - memory management
 - booting
-- ring
+- ring 0 1 2 3
+- kernel
 - bios
 - kernel
-- unix
-- linux (linux kernel)
+- Unix
+- Linux (Linux kernel)
 - windows
 - android
+- thread and process
+- IPC
