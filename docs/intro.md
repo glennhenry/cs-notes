@@ -77,9 +77,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
 - [Programming Concepts](computer-and-programming-fundamentals/programming-concepts) (21198 char)
+- [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism) (18758 char)
 - [Reinforcement Learning Fundamental](deep-learning/reinforcement-learning/reinforcement-learning-fundamental) (17758 char)
 - [Data Representation](computer-and-programming-fundamentals/data-representation) (16346 char)
-- [Transformers Architecture](deep-learning/transformers/transformers-architecture) (15600 char)
 
 ### Credits
 
