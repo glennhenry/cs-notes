@@ -72,6 +72,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 26. **[ref]** /computer-and-programming-fundamentals/declarative-functional-programming (refer to recursion)
 27. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
 28. **[ref]** /computer-and-programming-fundamentals/concurrency-and-parallelism (refer to operating system IPC)
+29. **[add]** /digital-media-processing/iso (iso file format, how they work)
 
 ### Longest Notes
 
