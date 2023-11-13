@@ -74,7 +74,7 @@ Here are commonly used data structures :
 
 - **Stack** : Stack is a data structure where the elements are stacked on top of each other. It follows the Last-In-First-Out (LIFO) principle, where element can be added or removed only from the top of the stack. The operation of adding element is often called "push" and the operation of removing element is called "pop". The time complexity to add or remove element is also O(1), no matter the size, the operation will always be the same.
 
-- **Hash Table** : Hash table is a data structure where access element based on a unique identifier called **key**. An element is a set of key-value pair, the key is the identifier and the value is the actual value associated with it.
+- **Hash Table** : Hash table is a data structure where we access element based on a unique identifier called **key**. An element is a set of key-value pair, the key is the identifier and the value is the actual value associated with it.
 
   Under the hood, hash table uses an array to store the element. An array has a constant time complexity to access an element, however, in some cases the index of the element we are looking for is not known. Sometimes, the index of the element also changes overtime when we remove an element from the array.
 

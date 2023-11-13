@@ -73,6 +73,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 27. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
 28. **[ref]** /computer-and-programming-fundamentals/concurrency-and-parallelism (refer to operating system IPC)
 29. **[add]** /digital-media-processing/iso (iso file format, how they work)
+30. **[ref]** /computer-and-programming-fundamentals/computer-and-programming-terminology (refer to some concept in dsa)
 
 ### Longest Notes
 
