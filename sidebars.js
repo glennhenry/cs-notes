@@ -118,7 +118,7 @@ const sidebars = {
           items: [
             "computer-and-programming-fundamentals/compilation/compilation",
             "computer-and-programming-fundamentals/interpreter/interpreter",
-            "computer-and-programming-fundamentals/execution-environment/execution-environment",
+            "computer-and-programming-fundamentals/runtime-environment/runtime-environment",
           ],
         },
         "computer-and-programming-fundamentals/computer-and-programming-terminology/computer-and-programming-terminology",
