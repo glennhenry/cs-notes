@@ -9,7 +9,7 @@ description: Theory of Computation & Automata Notes
 
 ### All pages
 
-- Computability Theory (P, NP, NP-Hard)
+- Computability Theory
 - a
 - b
 - c

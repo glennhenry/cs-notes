@@ -332,9 +332,64 @@ const sidebars = {
         id: "data-structures-and-algorithms/data-structures-and-algorithms",
       },
       items: [
-        "data-structures-and-algorithms/xx-tree/tree",
-        "data-structures-and-algorithms/xx1-binary-tree/binary-tree",
-        "data-structures-and-algorithms/xx2-heap/heap",
+        "data-structures-and-algorithms/analysis-of-algorithms/analysis-of-algorithms",
+        {
+          type: "category",
+          label: "Data Structures",
+          items: [
+            "data-structures-and-algorithms/array/array",
+            "data-structures-and-algorithms/linked-list/linked-list",
+            "data-structures-and-algorithms/stack/stack",
+            "data-structures-and-algorithms/queue/queue",
+            "data-structures-and-algorithms/hash-table/hash-table",
+            "data-structures-and-algorithms/set/set",
+            "data-structures-and-algorithms/tree/tree",
+            "data-structures-and-algorithms/heap/heap",
+            "data-structures-and-algorithms/graph/graph",
+            "data-structures-and-algorithms/trie/trie",
+          ],
+        },
+        {
+          type: "category",
+          label: "Algorithms",
+          items: [
+            {
+              type: "category",
+              label: "Common Types",
+              items: [
+                "data-structures-and-algorithms/sorting/sorting",
+                "data-structures-and-algorithms/search/search",
+                "data-structures-and-algorithms/recursion/recursion",
+                "data-structures-and-algorithms/divide-and-conquer/divide-and-conquer",
+                "data-structures-and-algorithms/traversal/traversal",
+                "data-structures-and-algorithms/backtracking/backtracking",
+                "data-structures-and-algorithms/greedy/greedy",
+                "data-structures-and-algorithms/dynamic-programming/dynamic-programming",
+              ],
+            },
+            {
+              type: "category",
+              label: "Other Algorithms",
+              items: [
+                "data-structures-and-algorithms/two-pointer/two-pointer",
+                "data-structures-and-algorithms/sliding-window/sliding-window",
+                "data-structures-and-algorithms/prefix-sum/prefix-sum",
+              ],
+            },
+            {
+              type: "category",
+              label: "Graph Algorithms",
+              items: [
+                "data-structures-and-algorithms/cycle-detection/cycle-detection",
+                "data-structures-and-algorithms/shortest-path/shortest-path",
+                "data-structures-and-algorithms/union-find/union-find",
+                "data-structures-and-algorithms/topological-sort/topological-sort",
+                "data-structures-and-algorithms/minimum-spanning-tree/minimum-spanning-tree",
+              ],
+            },
+          ],
+        },
+        "data-structures-and-algorithms/complexity-theory/complexity-theory",
       ],
     },
 

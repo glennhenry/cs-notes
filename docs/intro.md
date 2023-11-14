@@ -14,7 +14,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 ### All topics
 
 - **[Digital Signal Processing](digital-signal-processing)**
-- [Computer & Programming Fundamentals](computer-and-programming-fundamentals)
+- **[Computer & Programming Fundamentals](computer-and-programming-fundamentals)**
 - **[Digital Media Processing](digital-media-processing)**
 - **[Computer Networking](computer-networking)**
 - [Data Structures & Algorithms](data-structures-and-algorithms)

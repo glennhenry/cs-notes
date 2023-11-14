@@ -3,56 +3,70 @@
 
 import os
 
-topic_title = "backend-development"
+topic_title = "data-structures-and-algorithms"
 
 # List of content in kebab title
 content_id = [
-    "middleware",
-    "web-server",
-    "apis-server-logic",
-    "rest-api",
-    "graphql",
-    "grpc",
-    "web-socket",
-    "authentication",
-    "authorization",
-    "search-engine",
-    "message-queueing",
-    "monolithic",
-    "microservice",
-    "soa",
-    "serverless",
-    "containerization-virtualization",
-    "docker-kubernetes",
-    "backend-server-security",
-    "caching",
-    "resource-optimization",
-    "network-optimization"
+    "analysis-of-algorithms",
+    "array",
+    "linked-list",
+    "stack",
+    "queue",
+    "hash-table",
+    "set",
+    "tree",
+    "heap",
+    "graph",
+    "trie",
+    "sorting",
+    "search",
+    "recursion",
+    "divide-and-conquer",
+    "traversal",
+    "backtracking",
+    "greedy",
+    "dynamic-programming",
+    "two-pointer",
+    "sliding-window",
+    "prefix-sum",
+    "cycle-detection",
+    "shortest-path",
+    "union-find",
+    "topological-sort",
+    "minimum-spanning-tree",
+    "complexity-theory",
 ]
 
-"List of content in title case"
+# List of content in title case
 content_title = [
-    "Middleware",
-    "Web Server",
-    "APIs & Server Logic",
-    "REST API",
-    "GraphQL",
-    "gRPC",
-    "Web Socket",
-    "Authentication",
-    "Authorization",
-    "Search Engine",
-    "Message Queueing",
-    "Monolithic",
-    "Microservice",
-    "SOA",
-    "Serverless",
-    "Containerization & Virtualization",
-    "Docker & Kubernetes",
-    "Backend & Server Security",
-    "Caching",
-    "Resource Optimization",
-    "Network Optimization"
+    "Analysis of Algorithms",
+    "Array",
+    "Linked-List",
+    "Stack",
+    "Queue",
+    "Hash Table",
+    "Set",
+    "Tree",
+    "Heap",
+    "Graph",
+    "Trie",
+    "Sorting",
+    "Search",
+    "Recursion",
+    "Divide & Conquer",
+    "Traversal",
+    "Backtracking",
+    "Greedy",
+    "Dynamic Programming",
+    "Two Pointer",
+    "Sliding Window",
+    "Prefix Sum",
+    "Cycle Detection",
+    "Shortest Path",
+    "Union Find",
+    "Topological Sort",
+    "Minimum Spanning Tree",
+    "Complexity Theory",
 ]
 
 # Create temp folder for debugging
@@ -105,7 +119,8 @@ def generate_folder_file():
             md_file.write(f"---\n\n")
 
             # Write default template
-            md_file.write(f"**Main Source : **\n\n")
+            md_file.write(f"**Main Source :**\n\n")
+            md_file.write(f"- \n\n")
             md_file.write(f"{title} page\n")
 
     print("Project structure and MD files created successfully!")
@@ -114,4 +129,4 @@ def generate_folder_file():
 
 # generate_folder_file()
 # generate_topic_links()
-generate_topic_sidebars()
+# generate_topic_sidebars()
