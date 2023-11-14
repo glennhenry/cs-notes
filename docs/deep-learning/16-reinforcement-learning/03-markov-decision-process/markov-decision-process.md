@@ -55,11 +55,11 @@ The two formula above with the four in the [Bellman equation](/deep-learning/rei
 
 #### Value & Policy Iteration
 
-Both value and policy iteration are the actual algorithm that uses the formula explained above to solve MDP by estimating the optimal function. It demonstrate **dynamic programming** or the technique to solve a problem by breaking it down into smaller subproblem.
+Both value and policy iteration are the actual algorithm that uses the formula explained above to solve MDP by estimating the optimal function. It demonstrates **[dynamic programming](/data-structures-and-algorithms/dynamic-programming)** or the technique to solve a problem by breaking it down into smaller subproblem.
 
 The algorithm starts with an initial function and proceeds to iteratively compute it until reaching a point of convergence. The value of a state depends on another state, in other word, a problem depends on another problem, this can be referred as subproblem. This is where dynamic programming comes, we can start solving the subproblem first and then build up to the main problem. When we encounter a subproblem that has already been solved subproblem, we can efficiently use the information we have previously acquired.
 
-The iteration involves updating the estimated value and policy based on the current estimate itself, this is known as **bootstraping**
+The iteration involves updating the estimated value and policy based on the current estimate itself, this is known as **bootstrapping**
 
 :::note
 By converge, it means the result stabilizes and does not change abruptly or significantly between iterations.

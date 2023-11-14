@@ -22,7 +22,7 @@ During the execution of program, the program's instructions or code need to be l
 
 #### Stack
 
-The stack is a region of memory used for the management of function calls and local variables. It operates on the principle of stack data structure. Each time a function is called, a new stack frame is created and pushed onto the stack. The stack frame contains information such as function parameters, return address, and local variables.
+The stack is a region of memory used for the management of function calls and local variables. It operates on the principle of [stack data structure](/data-structures-and-algorithms/stack). Each time a function is called, a new stack frame is created and pushed onto the stack. The stack frame contains information such as function parameters, return address, and local variables.
 
 As functions complete their execution, their stack frames are popped off the stack, allowing the program to return to the calling function. This mechanism enables the program to manage the flow of execution and maintain the context of function calls.
 
@@ -106,7 +106,7 @@ int* ptr = &x;
 
 `x` is an `int` variable with a value of `5`, while `ptr` is an `int` pointer that stores the memory address of `x`. When we say `*ptr = 10`, we are directly accessing the memory address held by the `ptr` variable, which is the address of `x`, and updating the value at that address to `10`. As a result, any variable associated with that address, such as `x`, will also be modified. Using pointer, we can effectively modify other variables indirectly through their shared memory address.
 
-Pointer which stores memory address allows us to have direct memory access. This is useful for implementing data structures like tree or linked list, where each node need to connection with other node. We can allow connection between node by having a pointer that points to other node's address.
+Pointer which stores memory address allows us to have direct memory access. This is useful for implementing data structures like [tree](/data-structures-and-algorithms/tree) or [linked list](/data-structures-and-algorithms/linked-list), where each node need to connection with other node. We can allow connection between node by having a pointer that points to other node's address.
 
 ##### Purpose of Reference
 

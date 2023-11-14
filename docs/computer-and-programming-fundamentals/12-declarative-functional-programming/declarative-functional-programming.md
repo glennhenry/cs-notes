@@ -68,7 +68,7 @@ The concept of treating a function as an argument or as an output from another f
 
 #### Recursion
 
-Because functional languages depend on function, iterating is based on **recursion**. Quick concept, recursion is where a function call itself until some condition is achieved. For example, we could make an illusion of loop in a function like :
+Because functional languages depend on function, iterating is based on **[recursion](/data-structures-and-algorithms/recursion)**. Quick concept, recursion is where a function call itself until some condition is achieved. For example, we could make an illusion of loop in a function like :
 
 ```python
 def loop_for(n):

@@ -27,7 +27,7 @@ The use of message broker here is not just as an interface to the service, more 
 
 ### Message Queue
 
-Message broker may store messages received from the client in something called **message queue**, which is a queue data structure that is used to store messages until they can be processed by the intended service. By using queue, this ensure the messages are processed in appropriate request order.
+Message broker may store messages received from the client in something called **message queue**, which is a [queue data structure](/data-structures-and-algorithms/queue) that is used to store messages until they can be processed by the intended service. By using queue, this ensures the messages are processed in appropriate request order.
 
 Another benefits of message queue :
 
@@ -78,7 +78,7 @@ Source : https://halovina.com/konfigurasi-rabbitmq-untuk-message-broker/
 
 ### Apache Kafka
 
-Apache Kafka on the other hand, is designed to be more scalable for real-time data streaming and processing. A unit of data produced by producers consisting of key-value pair, timestamp, and additional metadata is called a **record**. These records are organized into **topics** and topics are further divided into **partitions**, record are distributed within the partitions. Each partitions is an ordered, immutable sequence of records. These topics are handled by a **broker** which is responsible for receiving records from producers and serve records to consumers. A group of broker are then grouped together to form a **Kafka Cluster**, the cluster act as the entry point for producers and consumers to interact with the messaging system.
+Apache Kafka on the other hand, is designed to be more scalable for real-time data streaming and processing. A unit of data produced by producers consisting of key-value pair, timestamp, and additional metadata is called a **record**. These records are organized into **topics** and topics are further divided into **partitions**, record are distributed within the partitions. Each partition is an ordered, immutable sequence of records. These topics are handled by a **broker** which is responsible for receiving records from producers and serve records to consumers. A group of broker are then grouped together to form a **Kafka Cluster**, the cluster act as the entry point for producers and consumers to interact with the messaging system.
 
 ![Apache Kafka](./apache-kafka.png)  
 Source : https://www.projectpro.io/article/apache-kafka-architecture-/442

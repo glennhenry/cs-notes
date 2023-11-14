@@ -51,29 +51,18 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 5. **[update]** computer-graphics/computer-display#vsync
 6. **[update]** digital-signal-processing/compression#svd-compression
 7. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
-8. **[ref]** backend-development/message-broker (ref to queue data structure)
-9. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
-10. **[add]** extras/torrent (bittorent protocol)
-11. **[ref]** backend-development/caching (redis ref to hashmap)
-12. **[ref]** backend-development/caching (cache invalidation ref to database trigger)
-13. **[ref]** backend-development/caching (cache replacement ref to queue data structure)
-14. **[ref]** backend-development/backend-optimization (resource optimization ref to database index)
-15. **[ref]** backend-development/backend-optimization (resource optimization ref to hash map)
-16. **[add]** extras/url-shortener
-17. **[update]** backend-development/websocket#data-exchange : add websocket payload, frame, ping, pong, fin, rsv, close, timeout
-18. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambigous, which pixel should be determined to draw. text rendering
-19. **[ref]** deep-learning/reinforcement-learning/reinforcement-learning-fundamental (refer to dynamic programming in dsa)
-20. **[ref]** deep-learning/reinforcement-learning/markov-decision-process (refer to dynamic programming in dsa)
-21. **[ref]** /computer-and-programming-fundamentals/data-representation (refer to database)
-22. **[ref]** /computer-and-programming-fundamentals/memory (refer to stack in dsa)
-23. **[ref]** /computer-and-programming-fundamentals/memory#pointer--references (refer to linked list in dsa)
-24. **[ref]** /computer-and-programming-fundamentals/memory#pointer--references (refer to tree, linked list in dsa)
-25. **[ref]** /computer-and-programming-fundamentals/data-structures-and-algorithms (refer to dsa, and hash function)
-26. **[ref]** /computer-and-programming-fundamentals/declarative-functional-programming (refer to recursion)
-27. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
-28. **[ref]** /computer-and-programming-fundamentals/concurrency-and-parallelism (refer to operating system IPC)
-29. **[add]** /digital-media-processing/iso (iso file format, how they work)
-30. **[ref]** /computer-and-programming-fundamentals/computer-and-programming-terminology (refer to some concept in dsa)
+8. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
+9. **[add]** extras/torrent (bittorent protocol)
+10. **[ref]** backend-development/caching (cache invalidation ref to database trigger)
+11. **[ref]** backend-development/backend-optimization (resource optimization ref to database index)
+12. **[add]** extras/url-shortener
+13. **[update]** backend-development/websocket#data-exchange : add websocket payload, frame, ping, pong, fin, rsv, close, timeout
+14. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambigous, which pixel should be determined to draw. text rendering
+15. **[ref]** /computer-and-programming-fundamentals/data-representation (refer to database)
+16. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
+17. **[ref]** /computer-and-programming-fundamentals/concurrency-and-parallelism (refer to operating system IPC)
+18. **[add]** /digital-media-processing/iso (iso file format, how they work)
+19. **[update]** computer-graphics (should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic, and bad English)
 
 ### Longest Notes
 

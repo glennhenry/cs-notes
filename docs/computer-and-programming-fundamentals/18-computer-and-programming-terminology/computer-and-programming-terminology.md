@@ -23,14 +23,14 @@ Source : https://www.computerscience.gcse.guru/theory/pseudocode
 ##### Hash map vs Hash set vs Dictionary
 
 - **Hash map** : [Hash table or Hash map](/computer-and-programming-fundamentals/data-structures-and-algorithms#data-structures) is a data structure where we access element based on a unique identifier called **key**. An element is a set of key-value pair, the key is the identifier and the value is the actual value associated with it.
-- **Hash set** : **Set** is a data structure that stores unique element. **Hash set** is one way to implement set data structure using hash code. It uses hash table internally, which mean it uses hashing function similar to hash map. While it uses hash table, it is not a key-value pair data structure unlike hash map.
+- **Hash set** : **[Set](/data-structures-and-algorithms/set)** is a data structure that stores unique element. **Hash set** is one way to implement set data structure using hash code. It uses hash table internally, which mean it uses hashing function similar to hash map. While it uses hash table, it is not a key-value pair data structure unlike hash map.
 - **Dictionary** : Just another name for hash map in language like Python.
 
 ##### Array vs List vs ArrayList
 
 - **Array** : [Array](/computer-and-programming-fundamentals/data-structures-and-algorithms#data-structures) is a fixed-sized data structure that stores same type of element in a contiguous block of memory.
-- **List** : List is a variable-sized data structure that can store different type of element. A list can be implemented using a linked list, which allows for non-contiguous memory allocation, enabling each value to be located at an arbitrary position.
-- **ArrayList** : ArrayList is an implementation of list data structure using a dynamic array. Unlike traditional array, a dynamic array can be resized.
+- **List** : List is a variable-sized data structure that can store different type of element. A list can be implemented using a [linked list](/data-structures-and-algorithms/linked-list), which allows for non-contiguous memory allocation, enabling each value to be located at an arbitrary position.
+- **ArrayList** : ArrayList is an implementation of list data structure using a [dynamic array](/data-structures-and-algorithms/array#dynamic-array). Unlike traditional array, a dynamic array can be resized.
 
 ![Array and list](./array-list.png)
 

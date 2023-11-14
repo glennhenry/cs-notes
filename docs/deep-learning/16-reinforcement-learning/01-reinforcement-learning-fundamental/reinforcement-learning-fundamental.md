@@ -37,7 +37,7 @@ Agent is the machine learning model or the entity that make decision and interac
 
 Environment is the world or system in which RL agent operates. It can be a real-world or a simulated environment. The environment should have well-defined state, action, and reward to ensure the learning efficiency of the agent.
 
-An environment can also be stochastic, which means it doesn't entirely depends on the current state and action, it involves element of randomness or uncertainty.
+An environment can also be stochastic, which means it doesn't entirely depend on the current state and action, it involves element of randomness or uncertainty.
 
 #### State
 
@@ -47,9 +47,9 @@ A state can be discrete or continuous. A discrete or categorical state can be th
 
 #### Action
 
-Action, denoted as $a$ is the choice or decision made by agent to interact with the environment. The action did by agent will influence the state of the environment.
+Action, denoted as $a$ is the choice or decision made by agent to interact with the environment. The action done by agent will influence the state of the environment.
 
-A set of all valid action in a given environment is called **action space**. Similar to state, action can also be discrete or continuous. For example, we can move discretely in a grid-based task like maze or move continously in a self-driving car task, where the action space could be the steering angle of the car.
+A set of all valid action in a given environment is called **action space**. Similar to state, action can also be discrete or continuous. For example, we can move discretely in a grid-based task like maze or move continuously in a self-driving car task, where the action space could be the steering angle of the car.
 
 #### Policy
 
@@ -71,7 +71,7 @@ Here is an example of a stochastic policy for a specific state :
 
 The policy act as the rules for agent to select an action. The action of the agent will be randomly sampled from these policy. So, when the agent is at state $s$, it may sample or select one of these four.
 
-In the context of deep RL algorithm, where we utilize paramaters of neural network (e.g. weight and bias), we can set the policy as a learnable parameters. The parameters are often denoted as $\theta$ or $\phi$ and then it will be written on the policy's subscript (e.g. $a = \mu_{\theta}(s)$).
+In the context of deep RL algorithm, where we utilize parameters of neural network (e.g. weight and bias), we can set the policy as a learnable parameter. The parameters are often denoted as $\theta$ or $\phi$ and then it will be written on the policy's subscript (e.g. $a = \mu_{\theta}(s)$).
 
 #### Trajectory
 
@@ -134,9 +134,9 @@ In practice, the [value function](/deep-learning/reinforcement-learning/reinforc
 
 #### Bellman Equation
 
-Bellman equation is an equation, typically used in dynamic programming, it is an equation that decompose a problem into smaller subproblems and finding the optimal solution by iteratively updating the value.
+Bellman equation is an equation, typically used in [dynamic programming](/data-structures-and-algorithms/dynamic-programming), it is an equation that decompose a problem into smaller subproblems and finding the optimal solution by iteratively updating the value.
 
-In the context of RL, Bellman equation is applied to describes how the value of a state (or state-action pair) is related to the values of its successor states. It says that the value of a state is the reward for current state plus the discounted value for next state. The value for the next state also depends on the next and next state, making it a recursive equation.
+In the context of RL, Bellman equation is applied to describe how the value of a state (or state-action pair) is related to the values of its successor states. It says that the value of a state is the reward for current state plus the discounted value for next state. The value for the next state also depends on the next and next state, making it a recursive equation.
 
 ![Bellman equation of four value function](./bellman-equation.png)  
 Source : https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#bellman-equations
@@ -170,7 +170,7 @@ Exploration and Exploitation is a common dilemma in reinforcement learning.
 
 - **Exploration** : Refers to the process of seeking out and gathering new information about the environment. By exploring, it means the agent takes action that isn't considered the best according to the current policy. The agent explores to potentially finds better actions or states that may lead to higher rewards.
 
-- **Exploitation** : Exploitation is often referred as the "greedy" technique that prioritize immediate rewards or maximize the cummulative rewards based on the agent's current policy. In other word, the agent will choose actions that yield the highest reward according to current policy.
+- **Exploitation** : Exploitation is often referred as the "greedy" technique that prioritize immediate rewards or maximize the cumulative rewards based on the agent's current policy. In other word, the agent will choose actions that yield the highest reward according to current policy.
 
 Both strategy is very important in machine learning, we need to balance the exploration and exploitation. Too much exploration may lead to excessive randomness and inefficient use of learned knowledge, while too much exploitation may result in the agent getting stuck in a suboptimal policy and missing out on better opportunities.
 

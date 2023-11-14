@@ -7,7 +7,7 @@ description: Backend Optimization
 
 **Main Source : Various source from Google and Articles**
 
-This includes the technique of optimization in general for a backend server in 3 aspect including network, server, and resource optimization.
+This includes the technique of optimization in general for a backend server in 3 aspect including networks, server, and resource optimization.
 
 ### Horizontal vs Vertical Scaling
 
@@ -38,7 +38,7 @@ Backend architecture can be scaled to handle increased traffic and load. They ca
 
 - **Efficient Database Queries** : Optimize database queries by ensuring proper indexing, avoiding unnecessary joins or subqueries, and optimizing data retrieval.
 
-- **Efficient Algorithms and Data Structures** : Use algorithms and data structures that provide efficient operations for your application's use cases. For example, if you frequently search or write data, consider using hash map.
+- **Efficient Algorithms and Data Structures** : Use algorithms and data structures that provide efficient operations for your application's use cases. For example, if you frequently search or write data, consider using [hash map](/data-structures-and-algorithms/hash-table).
 
 - **Resource Pooling** : Which is the technique of reusing resources by creating a shared repository of resources rather than creating a new resource for each request. This includes sharing database connections, network sockets, or other expensive resources.
 

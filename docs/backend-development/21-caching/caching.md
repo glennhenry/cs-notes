@@ -29,7 +29,7 @@ Source : https://pressidium.com/blog/browser-cache-work/
 
   - **Database Query** : When a common type of query is executed, the result is stored in a cache. If the same query is requested again, the server can return the cached result instead of executing the query again.
 
-  - **Redis** : **REmote DIctionary Server (Redis)** is in-memory data structure store that implements hash-map like data structure where data is stored as key-value pairs. The keys are unique identifiers, and the corresponding values which is where we store our actual data, it can be of different types, such as strings, lists, sets, hashes, or sorted sets. By using key-value pair, it allows for efficient constant O(1) for read and write speed.
+  - **Redis** : **REmote DIctionary Server (Redis)** is in-memory data structure store that implements [hash-map like data structure](/data-structures-and-algorithms/hash-table) where data is stored as key-value pairs. The keys are unique identifiers, and the corresponding values which is where we store our actual data, it can be of different types, such as strings, lists, sets, hashes, or sorted sets. By using key-value pair, it allows for efficient constant O(1) for read and write speed.
 
     ![Server side caching](./server-side-caching.png)
     Source : https://www.wallarm.com/what/difference-between-a-cdn-and-web-accelerator, https://blog.hackajob.com/how-to-implement-redis-in-go/
@@ -38,9 +38,9 @@ Source : https://pressidium.com/blog/browser-cache-work/
 
 - **Cache-Aside** : The application is responsible for managing the cache. When data is requested, the application first checks the cache, if the data is found, it is retrieved from the cache and returned to the requester. If the data is not in the cache (called **cache miss**), the application retrieves it from the data source, stores it in the cache for future use, and then returns it to the requester.
 
-- **Write-Through** : This is a cache writing strategy where, everytime data is written or updated, it is written to both cache and data source simultaneously. Write-through caching ensures data consistency but may have higher write latency due to the additional write operation to the data source.
+- **Write-Through** : This is a cache writing strategy where, every time data is written or updated, it is written to both cache and data source simultaneously. Write-through caching ensures data consistency but may have higher write latency due to the additional write operation to the data source.
 
-- **Write-Back** : Write-back caching involves writing or updating data in the cache first and deferring the write to the underlying data source. This will reduce latency compared to write-through strategy, however, this approachs introduce the risk of data loss.
+- **Write-Back** : Write-back caching involves writing or updating data in the cache first and deferring the write to the underlying data source. This will reduce latency compared to write-through strategy, however, this approach introduce the risk of data loss.
 
 - **Read-Through** : When data is requested and not found in the cache (a cache miss), the cache automatically retrieves the data from the underlying data source. The retrieved data is then stored in the cache and returned to the requester.
 
@@ -67,7 +67,7 @@ The methods are :
 
 - **Least Frequently Used (LFU)** : This policy assumes that frequently accessed items are more valuable and should be retained in the cache. The data item that has been accessed the least number of times will be evicted.
 
-- **First-In-First-Out (FIFO)** : The data item that was inserted into the cache first is evicted when the cache is full. This follows a queue-like behavior, where the oldest data is removed.
+- **First-In-First-Out (FIFO)** : The data item that was inserted into the cache first is evicted when the cache is full. This follows a [queue-like behavior](/data-structures-and-algorithms/queue), where the oldest data is removed.
 
 - **Random Replacement** : This will select a random data item from the cache for eviction. It does not take into account the recency or frequency of access.
 
