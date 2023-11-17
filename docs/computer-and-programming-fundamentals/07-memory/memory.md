@@ -147,7 +147,7 @@ Object is a fundamental concept in [OOP](/computer-and-programming-fundamentals/
 
 #### Null
 
-Null is a special value that represents the absence of a value. It is often used to indicate that a variable or pointer does not currently point to any valid data.
+Null, also known as **nil**, is a special value that represents the absence of a value. It is often used to indicate that a variable or pointer does not currently point to any valid data.
 
 ### Memory Management
 
