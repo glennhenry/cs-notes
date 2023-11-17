@@ -5,6 +5,11 @@ title: Data Structures & Algorithms
 description: Data Structures & Algorithms
 ---
 
+**Main Source :**
+
+- **[Data structure - Wikipedia](https://en.wikipedia.org/wiki/Data_structure)**
+- **[Analysis of algorithms - Wikipedia](https://en.wikipedia.org/wiki/Analysis_of_algorithms)**
+
 ### Algorithm
 
 An algorithm is a set of step-by-step instructions or rules to solve a specific problem or perform a particular task. Computer works by executing instruction, an algorithm in computer programming act as the building block of a program.
