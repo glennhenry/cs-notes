@@ -56,7 +56,7 @@ Source : https://study.com/academy/lesson/circularly-linked-lists-in-java-creati
 
 A singly linked list can be very inefficient when the element we are looking for is at last node of the list. We know that linked list is a linear-like data structure, all the operation, at the worst, happen in linear time complexity. Adding a reference to the tail like what [doubly linked list](/data-structures-and-algorithms/linked-list#doubly-linked-list) is doing, help us improve the performance.
 
-A **skip list** is a data structure based on linked list which is included with additional reference or pointer. The difference between a traditional linked list with skip list is that a skip list maintain a collection of sorted data. Skip list provides an efficient data structure for searching, inserting, and deleting elements in a sorted collection.
+A **skip list** is a data structure based on linked list which is included with additional reference or pointer. A skip list is different with the traditional linked list. Skip list maintain a collection of sorted data, it is a data structure that provides an efficient data structure for searching, inserting, and deleting elements in a sorted collection.
 
 In a skip list, the elements are stored in linked lists at different levels or layers. The bottom level contains all the elements in sorted order, while the higher levels contain a subset of the elements, skipping over some elements. Each element in the list has a tower of pointers, linking it to the same element in higher levels.
 
