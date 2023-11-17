@@ -31,9 +31,9 @@ Source : https://pressidium.com/blog/browser-cache-work/
 
   - **Redis** : **REmote DIctionary Server (Redis)** is in-memory data structure store that implements [hash-map like data structure](/data-structures-and-algorithms/hash-table) where data is stored as key-value pairs. The keys are unique identifiers, and the corresponding values which is where we store our actual data, it can be of different types, such as strings, lists, sets, hashes, or sorted sets. By using key-value pair, it allows for efficient constant O(1) for read and write speed.
 
-    ![Server side caching](./server-side-caching.png)
-    Source : https://www.wallarm.com/what/difference-between-a-cdn-and-web-accelerator, https://blog.hackajob.com/how-to-implement-redis-in-go/
-
+    ![Server side caching](./server-side-caching.png)  
+    Source : [CDN (top image)](https://www.wallarm.com/what/difference-between-a-cdn-and-web-accelerator), [Redis cache (bottom image)](https://blog.hackajob.com/how-to-implement-redis-in-go/)
+    
 ### Caching Strategy
 
 - **Cache-Aside** : The application is responsible for managing the cache. When data is requested, the application first checks the cache, if the data is found, it is retrieved from the cache and returned to the requester. If the data is not in the cache (called **cache miss**), the application retrieves it from the data source, stores it in the cache for future use, and then returns it to the requester.
