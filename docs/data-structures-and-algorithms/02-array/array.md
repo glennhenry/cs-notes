@@ -28,7 +28,7 @@ Array require us to store the same type of element, this is because the memory l
 
 Therefore, it is important for array to have store the same type of element.
 
-#### Modifying Array
+#### Array Operation
 
 There are some operation we can do in an array :
 
