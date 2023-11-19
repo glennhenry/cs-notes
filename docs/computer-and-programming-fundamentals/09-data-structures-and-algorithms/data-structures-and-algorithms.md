@@ -87,7 +87,7 @@ Here are commonly used data structures :
 
   So, to add an element to a hash table, we will need a key and the value which is the element we are going to store. Hash table does the same way to access the element, given a key, transform it into hash code from the hash function, then use the result to access the element from the array. The hash function typically has a constant time complexity, making it a very efficient data structure to quickly access element.
 
-  However, in some cases, the hash function may return the same hash code for different key, this is called **collision** and it's a common problem in hash table. Technique such as **chaining** is employed to mitigate this problem.
+  However, in some cases, the hash function may return the same hash code for different key, this is called **[collision](/data-structures-and-algorithms/hash-table#collision)** and it's a common problem in hash table. Technique such as **chaining** is employed to mitigate this problem.
 
   ![Array, stack, and hash table data structures](./data-structure.png)  
   Source : [array](https://www.geeksforgeeks.org/when-to-use-array-over-a-list/), [stack](https://www.trivusi.web.id/2022/07/struktur-data-stack.html), [hash table](https://khalilstemmler.com/blogs/data-structures-algorithms/hash-tables/)
