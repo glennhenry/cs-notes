@@ -11,4 +11,7 @@ description: Heap
 
 Heap page
 
+heapify
+formula
+
 ### Min-Max Heap

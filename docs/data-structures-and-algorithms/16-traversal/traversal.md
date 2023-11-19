@@ -19,6 +19,8 @@ Traversal page
 
 #### Post-Order Traversal
 
+#### Level Order Traversal
+
 ### Graph Traversal
 
 #### Depth-First Search (DFS)
