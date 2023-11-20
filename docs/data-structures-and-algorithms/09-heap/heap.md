@@ -9,7 +9,7 @@ description: Heap
 
 - **[Heap (data structure) - Wikipedia](<https://en.wikipedia.org/wiki/Heap_(data_structure)>)**
 
-**Heap** is a data structure where we maintain collection based on some priority (e.g., larger number have larger priority). Heap is an implementation of [priority queue](/data-structures-and-algorithms/priority-queue) using a binary tree (although other variant exist).
+**Heap** is a data structure where we maintain collection based on some priority (e.g., larger number have larger priority). Heap is an implementation of [priority queue](/data-structures-and-algorithms/queue#priority-queue) using a binary tree (although other variant exist).
 
 In typical binary tree, searching for a value typically results in O(log n) or the worst case in O(n) time. However, in heap, we can search a value with the most priority in a constant O(1) time, making it a suitable data structure for priority based tasks. This is possible because heap structures its element in a neat way.
 
