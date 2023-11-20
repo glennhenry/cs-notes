@@ -98,40 +98,74 @@ AVL tree able to achieve a worst-case time complexity of O(log n) for search, de
 
 ##### Properties
 
+In order for a red-black tree to be considered as valid, it must adhere to these properties :
+
 1. Every node is either red or black.
 2. All NIL (also known as null nodes and leaf nodes) are considered black.
-3. A red node does not have a red child (red property).
-4. Every path from a given node to any of its descendant NIL nodes goes through the same number of black nodes. In other words, the number of black nodes encountered when traversing any path in the tree remains constant (black depth property).
+3. A red node does not have a red child (called red property).
+4. Every path from a given node to any of its descendant NIL nodes goes through the same number of black nodes. In other words, the number of black nodes encountered when traversing any path in the tree remains constant (called black depth property).
 5. (Conclusion) If a node N has exactly one child, it must be a red child, because if it were black, its NIL descendants would sit at a different black depth than N's NIL child, violating requirement 4.
 
 Source : https://en.wikipedia.org/wiki/Red%E2%80%93black_tree (with modification)
 
 Similar to AVL tree, red-black tree can achieve the worst-case scenario time complexity of O(log n).
 
-##### Repainting
+![Red-black tree](./red-black-tree.png)  
+Source : https://www.javatpoint.com/red-black-tree-java
+
+##### Repainting & Rotation
 
 When performing operations on a red-black tree, such as inserting a new node or deleting an existing node, the tree may violate one or more of the red-black tree properties. To restore these properties and maintain the balance of the tree, repainting is performed.
 
-- Insertion Repainting :
+- **Insertion Repainting** :
 
   1. When a new node is inserted, it is initially colored red.
   2. If the parent of the newly inserted node is also red, repainting is required to restore the red property (red node can't have red child).
   3. Repainting involves changing the colors of certain nodes and performing rotations to maintain the red-black properties.
 
-- Deletion Repainting :
+- **Deletion Repainting** :
 
   1. When a node is deleted, the tree may violate the red-black tree properties, particularly the black depth property and the red property.
   2. Repainting involves adjusting the color of nodes and performing rotations to restore the properties.
   3. The specific rules for repainting after deletion depend on various cases, such as whether the deleted node is red or black, whether the sibling of the deleted node is red or black, and so on.
 
-![Red-black tree](./red-black-tree.png)  
-Source : https://www.javatpoint.com/red-black-tree-java
+**Rotation** :
+
+- **Left Rotation** : During a left rotation, the right child of the node becomes the new root of the subtree, and the node becomes the left child of its original right child.
+
+- **Right Rotation** : During a right rotation, the left child of the node becomes the new root of the subtree, and the node becomes the right child of its original left child.
+
+  ![Red black tree rotation GIF](./red-black-tree-rotation.gif)  
+  Source : https://en.wikipedia.org/wiki/Red%E2%80%93black_tree
 
 ### B-Tree
 
-**B-Tree** is a self-balancing tree designed to efficiently handle large datasets and disk-based storage. Unlike binary trees, B-Trees can have more than two child nodes per parent, allowing them to store a larger number of keys in a node. The key here means an identifier that are associated with corresponding values (similar to [hash map](/data-structures-and-algorithms/hash-table)).
+In a large dataset, storage, or disk-based storage, the data are typically stored in sorted order to allow for efficient searching. However, after inserting or deleting data, which may occurs frequently in the storage, we will need to modify the array to keep it sorted, which can be time-consuming for large storage.
 
-When we say a b-tree with order `m`, it means `m` is the maximum number of children a node can have, more specifically :
+Previous self-balancing binary tree such as AVL trees and red-black trees can keep data in sorted order after insertion and deletion in efficient time. However, they have a limitation in terms of storage because they are binary trees, meaning they can only store data in the left and right child nodes. As data continues to be stored, the tree can grow larger and eventually become inefficient in terms of performance.
+
+**B-Tree** is another self-balancing tree, but it is not a binary tree, it is a normal tree that can have more than two child nodes per parent. It is designed to efficiently handle large datasets and disk-based storage.
+
+In b-tree, often times we will hear the word **"key"**, the key is basically the actual value of a node. For example, in the image below, it is a b-tree where the root itself contains 2 value, which are 20 and 40. We can say that 20 and 40 are the key of the b-tree's root.
+
+![B-tree](./b-tree.png)  
+Source : https://www.programiz.com/dsa/b-tree
+
+B-tree maintains a sorted order of data from left to right, just like binary search tree. This property allows b-tree "binary searchable", traversing the tree, we can easily get a range of queries efficiently, as adjacent keys are likely to be located close together.
+
+#### B-tree Characteristics
+
+Some characteristics of a b-tree :
+
+- **Balanced Structure** : B-tree ensures that the height is balanced, all leaf nodes should be at the same level.
+
+- **Insertion & Deletion** : Inserting a new key involves finding the appropriate position in the tree to insert. Deleting a key from a B-tree involves finding the key and removing it.
+
+In b-tree, to maintain balance, each node will have some minimum and maximum keys. When the number of keys in a node exceed the minimum or maximum, this mean the tree is unbalanced.
+
+#### Rules & Balancing
+
+**B-tree rules** : When we say a b-tree with order `m`, it means `m` is the maximum number of children a node can have, more specifically :
 
 - Every node has at most `m` children.
 - Every internal node has at least ⌈`m/2`⌉ (ceil) children.
@@ -141,13 +175,8 @@ When we say a b-tree with order `m`, it means `m` is the maximum number of child
 
 Source : https://en.wikipedia.org/wiki/B-tree
 
-Some characteristics of a b-tree :
+B-tree can be unbalanced after insertion or deletion operation, the balance is achieved by splitting or merging the trees.
 
-- **Balanced Structure** : The height of a B-tree is balanced, meaning that all leaf nodes are at the same level. This balance is achieved by maintaining a minimum number of keys in each node and redistributing keys among nodes during insertions and deletions.
+- **Splitting** : Splitting occurs when a node becomes overfull, meaning it exceeds its maximum capacity of keys. In this case, the overfull node is divided into two separate nodes, and a median key is chosen to become the separator key that will be moved to the parent node.
 
-- **Search and Insertion** : Searching for a key in a B-tree is similar to searching in a binary search tree but with multiple children per node. Inserting a new key involves finding the appropriate position in the tree and potentially splitting nodes if necessary to maintain the order and balance of the tree.
-
-- **Deletion** : Deleting a key from a B-tree involves finding the key, removing it, and possibly redistributing keys or merging nodes to maintain balance.
-
-![B-tree](./b-tree.png)  
-Source : https://www.programiz.com/dsa/b-tree
+- **Merging** : Merging occurs when a node becomes underfull, meaning it has fewer keys than the minimum required. In this case, the underfull node is merged with a sibling node, effectively reducing the number of nodes in the tree.
