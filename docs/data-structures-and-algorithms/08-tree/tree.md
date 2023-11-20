@@ -140,32 +140,18 @@ When performing operations on a red-black tree, such as inserting a new node or 
 
 ### B-Tree
 
-In a large dataset, storage, or disk-based storage, the data are typically stored in sorted order to allow for efficient searching. However, after inserting or deleting data, which may occurs frequently in the storage, we will need to modify the array to keep it sorted, which can be time-consuming for large storage.
-
-Previous self-balancing binary tree such as AVL trees and red-black trees can keep data in sorted order after insertion and deletion in efficient time. However, they have a limitation in terms of storage because they are binary trees, meaning they can only store data in the left and right child nodes. As data continues to be stored, the tree can grow larger and eventually become inefficient in terms of performance.
-
-**B-Tree** is another self-balancing tree, but it is not a binary tree, it is a normal tree that can have more than two child nodes per parent. It is designed to efficiently handle large datasets and disk-based storage.
+**B-Tree** is another self-balancing tree, similar to AVL and red-black trees, but it is not a binary tree. It is a normal tree that can have more than two child nodes per parent, designed to address the limitation of self-balancing binary tree which can only store data in the left and right child.
 
 In b-tree, often times we will hear the word **"key"**, the key is basically the actual value of a node. For example, in the image below, it is a b-tree where the root itself contains 2 value, which are 20 and 40. We can say that 20 and 40 are the key of the b-tree's root.
 
 ![B-tree](./b-tree.png)  
 Source : https://www.programiz.com/dsa/b-tree
 
-B-tree maintains a sorted order of data from left to right, just like binary search tree. This property allows b-tree "binary searchable", traversing the tree, we can easily get a range of queries efficiently, as adjacent keys are likely to be located close together.
-
-#### B-tree Characteristics
-
-Some characteristics of a b-tree :
-
-- **Balanced Structure** : B-tree ensures that the height is balanced, all leaf nodes should be at the same level.
-
-- **Insertion & Deletion** : Inserting a new key involves finding the appropriate position in the tree to insert. Deleting a key from a B-tree involves finding the key and removing it.
-
-In b-tree, to maintain balance, each node will have some minimum and maximum keys. When the number of keys in a node exceed the minimum or maximum, this mean the tree is unbalanced.
-
 #### Rules & Balancing
 
-**B-tree rules** : When we say a b-tree with order `m`, it means `m` is the maximum number of children a node can have, more specifically :
+B-tree maintains a sorted order of data from left to right, just like binary search tree. This property allows b-tree to be "binary searchable". To make an efficient search, the tree needs to be balanced, b-tree have some rules to maintain the sorted order. B-tree limits the number of node each node can have.
+
+When we say a b-tree with order `m`, it means `m` is the maximum number of children a node can have, more specifically :
 
 - Every node has at most `m` children.
 - Every internal node has at least ⌈`m/2`⌉ (ceil) children.
@@ -180,3 +166,5 @@ B-tree can be unbalanced after insertion or deletion operation, the balance is a
 - **Splitting** : Splitting occurs when a node becomes overfull, meaning it exceeds its maximum capacity of keys. In this case, the overfull node is divided into two separate nodes, and a median key is chosen to become the separator key that will be moved to the parent node.
 
 - **Merging** : Merging occurs when a node becomes underfull, meaning it has fewer keys than the minimum required. In this case, the underfull node is merged with a sibling node, effectively reducing the number of nodes in the tree.
+
+Inserting a new key involves finding the appropriate position in the tree to insert. Deleting a key from a B-tree involves finding the key and removing it.
