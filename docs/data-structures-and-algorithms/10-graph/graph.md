@@ -7,7 +7,7 @@ description: Graph
 
 **Main Source :**
 
-- **[Graph (abstract data type)](<https://en.wikipedia.org/wiki/Graph_(abstract_data_type)>)**
+- **[Graph (abstract data type) - Wikipedia](<https://en.wikipedia.org/wiki/Graph_(abstract_data_type)>)**
 
 **Graph** is a data structure that represents a collection of interconnected elements.
 
