@@ -11,6 +11,9 @@ description: Divide & Conquer
 
 Divide & Conquer page
 
+![Divide and conquer](./divide-and-conquer.png)  
+Source : https://data-notes.co/divide-and-conquer-algorithms-b135681d08fc
+
 ### Merge Sort
 
 ### Quick Sort
