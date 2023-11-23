@@ -12,7 +12,7 @@ description: Traversal
 
 **Traversal** refers to the process of visiting and accessing each element or node in a data structure, such as linked list, tree, or graph. The purpose of traversal is to perform some operation on each element or node, such as reading its value, modifying it, or performing other specific task.
 
-For a [singly linked list](/data-structures-and-algorithms/linked-list), traversal involves starting at the head node and following the links from one node to the next until the end of the list is reached. This is typically done using a loop or [recursion](/data-structures-and-algorithms/recursion/linked-list-traversal).
+For a [singly linked list](/data-structures-and-algorithms/linked-list), traversal involves starting at the head node and following the links from one node to the next until the end of the list is reached. This is typically done using a loop or [recursion](/data-structures-and-algorithms/recursion#linked-list-traversal).
 
 ### Graph Traversal
 
