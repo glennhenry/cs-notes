@@ -26,7 +26,7 @@ Before this, you might see [an introduction to Data Structures and Algorithms](/
     - [Sorting](data-structures-and-algorithms/sorting)
     - [Search](data-structures-and-algorithms/search)
     - [Recursion](data-structures-and-algorithms/recursion)
-    - [Divide & Conquer](data-structures-and-algorithms/divide-and-conquer)
+    - [Divide And Conquer](data-structures-and-algorithms/divide-and-conquer)
     - [Traversal](data-structures-and-algorithms/traversal)
     - [Backtracking](data-structures-and-algorithms/backtracking)
     - [Greedy](data-structures-and-algorithms/greedy)
