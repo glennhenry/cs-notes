@@ -109,6 +109,12 @@ val user = User(name = "Serial", age = 23)
 
 In the case of [HTTP request](/computer-networking/http-https), this JSON file will be included in the payload. This will be sent over the network, the JSON data will be received on the other end by the recipient. In order to use this data in the form of Kotlin object, it will need to go through the **deserialization** or the reverse process of serialization that converts it back to object.
 
+#### Brute Force
+
+Brute force is a strategy of solving a problem that involves trying out all possible solution, without any additional optimization or anything that might improve the overall outcome. Brute force is typically used in the case where the problem is very small or there are just too many solution and constraint.
+
+Example of brute forcing is when you try to guess a 3-digit PIN code. Each of the digit can be anything from 0 to 9, and each number can repeat in other digit place. Starting from 000, you would incrementally try each possible combination, such as 001, 002, 003, and so on, until you reach 009. After that, you would move on to the next hundreds place, trying combinations like 010, 011, 012, and so forth until the last 999.
+
 ### Other Terms
 
 #### Command Line, Command Prompt, Shell, Bash, Terminal, Console
