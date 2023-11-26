@@ -382,6 +382,7 @@ const sidebars = {
               items: [
                 "data-structures-and-algorithms/cycle-detection/cycle-detection",
                 "data-structures-and-algorithms/shortest-path/shortest-path",
+                "data-structures-and-algorithms/path-finding/path-finding",
                 "data-structures-and-algorithms/union-find/union-find",
                 "data-structures-and-algorithms/topological-sort/topological-sort",
                 "data-structures-and-algorithms/minimum-spanning-tree/minimum-spanning-tree",
