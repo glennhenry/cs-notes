@@ -156,6 +156,11 @@ function reconstructPath(cameFrom, current):
     return totalPath
 ```
 
+![A-star algorithm animation](./a-star-algorithm.gif)  
+Source : https://github.com/vittin/A-Star
+
+We can see that the path frequently approach the wall that closely covers the target due to the heuristic function. The algorithm may perceive those paths as potentially shorter or more promising.
+
 1. We initialized some data structures, the `openSet` is a data structure, which is a priority queue that keeps track of the vertices that have been discovered but have not yet been fully explored. Similar to Dijkstra's algorithm, we will initialize the distance as infinity. The heuristic function takes source and target vertex, the implementation depends on the specific problem.
 2. The algorithm runs while the `openSet` is not empty. We will always start from the highest priority, or the one that has the lowest f-score.
 3. If the current vertex is not the goal, the algorithm explores its neighbors. The tentative g-score represents the cost of reaching a target vertex from the starting vertex via the current path being explored. We will compare each g-score of the neighbor, if we found a lower g-score than the current path we are exploring, we will continue in that path, else we will continue with the current path.
