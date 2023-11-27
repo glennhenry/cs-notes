@@ -52,17 +52,18 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 6. **[update]** digital-signal-processing/compression#svd-compression
 7. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
 8. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
-9. **[add]** extras/torrent (bittorent protocol)
+9. **[add]** extras/torrent (BitTorrent protocol)
 10. **[ref]** backend-development/caching (cache invalidation ref to database trigger)
 11. **[ref]** backend-development/backend-optimization (resource optimization ref to database index)
 12. **[add]** extras/url-shortener
-13. **[update]** backend-development/websocket#data-exchange : add websocket payload, frame, ping, pong, fin, rsv, close, timeout
-14. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambigous, which pixel should be determined to draw. text rendering
+13. **[update]** backend-development/websocket#data-exchange : add web socket payload, frame, ping, pong, fin, rsv, close, timeout
+14. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambiguous, which pixel should be determined to draw. Text rendering
 15. **[ref]** /computer-and-programming-fundamentals/data-representation (refer to database)
 16. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
 17. **[ref]** /computer-and-programming-fundamentals/concurrency-and-parallelism (refer to operating system IPC)
-18. **[add]** /digital-media-processing/iso (iso file format, how they work)
+18. **[add]** /digital-media-processing/iso (ISO file format, how they work)
 19. **[update]** computer-graphics (should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic, and bad English)
+20. **[ref]** /data-structures-and-algorithms/complexity-theory (ref to Turing machine and other TOC related terms)
 
 ### Longest Notes
 
