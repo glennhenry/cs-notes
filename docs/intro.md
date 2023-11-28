@@ -81,11 +81,11 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 #### AI Chatbot Software
 
-- Assisted with few AI tools [Sage Poe](https://poe.com), [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/). **Most of the source here are are also from AI**. I combined what the resources says with extra explanation from AI bots.
+- Assisted with few AI tools [Sage Poe](https://poe.com), [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/). **Most of the source here are also from AI**. I combined what the resources say with extra explanation from AI bots (or paraphrasing).
 
 #### Online Courses and Media Source
 
-- Various online resource were used in the creation of this site, I try to include all resource in each section. These resource act as the curriculum of what should I learn and the structure of what a topic contains.
+- Various online resource were used in the creation of this site, I try to include all resource in each section. These resources act as the curriculum of what should I learn and the structure of what a topic contains.
 
 #### Additional Resources
 
