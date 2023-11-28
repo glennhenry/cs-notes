@@ -17,7 +17,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[Computer & Programming Fundamentals](computer-and-programming-fundamentals)**
 - **[Digital Media Processing](digital-media-processing)**
 - **[Computer Networking](computer-networking)**
-- [Data Structures & Algorithms](data-structures-and-algorithms)
+- **[Data Structures & Algorithms](data-structures-and-algorithms)**
 - [Computer Organization & Architecture](computer-organization-and-architecture)
 - [Operating System](operating-system)
 - [Theory of Computation & Automata](theory-of-computation-and-automata)
