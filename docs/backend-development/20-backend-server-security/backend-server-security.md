@@ -24,7 +24,7 @@ There are many kinds of attacks, one of the common type of attack is an injectio
 - **[SQL Injection](/computer-security/web-security#sql-injection)** : Attacker manipulates user input to execute unauthorized SQL queries, potentially gaining access to or modifying the database.
 - **[Cross-site scripting (XSS)](/computer-security/web-security#cross-site-scripting-xss)** : Injecting malicious scripts into web pages viewed by users in some input field, might steal user's sensitive information.
 - **[Cross-site request forgery](/computer-security/web-security#cross-site-request-forgery)** : Trick a user into performing an action on a website without their knowledge or consent.
-- **[DDoS attack](/computer-security/ddos-attack)** : Flooding a backend server with by overwhelming it with a flood of traffic, making it unable to process users request.
+- **[DDoS attack](/computer-security/network-security#ddos-attack)** : Flooding a backend server with by overwhelming it with a flood of traffic, making it unable to process users request.
 
 ### Impersonation
 

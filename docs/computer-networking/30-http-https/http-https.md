@@ -30,7 +30,7 @@ Source : https://www.freecodecamp.org/news/what-is-http/
 
 HTTP requests consist of a method that indicates the type of request, a [Uniform Resource Locator (URL)](/frontend-web-development/web-url) that specifies the resource being requested, and optional headers that provide additional information about the request.
 
-Some common method are :
+Some of the common method are :
 
 - **GET** : The GET method is used to retrieve a resource from the server. It is primarily used to request data and should not have any side effects on the server. For example, retrieving a webpage or fetching data such as image or video from a server.
 
@@ -49,7 +49,7 @@ Source : https://javarevisited.blogspot.com/2016/04/what-is-purpose-of-http-requ
 
 ### HTTP Response
 
-Upon requesting using an HTTP method, the server will response a status code that indicates the outcome of the request along with the requested data and optional response headers. The status code consist of 3 digit ranging from 100 to 599 (not all number included).
+Upon requesting using an HTTP method, the server will respond a status code that indicates the outcome of the request along with the requested data and optional response headers. The status code consists of 3 digit ranging from 100 to 599 (not all number included).
 
 1. **Informational (1xx)** : This category consists of informational response codes that indicate that the server has received the request and is processing it. These codes are used to provide preliminary information or to request the client to continue with the request.
 
@@ -61,7 +61,7 @@ Upon requesting using an HTTP method, the server will response a status code tha
 
 5. **Server Errors (5xx)** : Server error response codes indicate that the server encountered an error while processing the request. These codes indicate that the server was unable to fulfill the request due to an internal server error or an unexpected condition. Server error codes are returned when something goes wrong on the server side, such as a misconfiguration, a problem with the server application, or server overload.
 
-![An example of HTTP response from HTTP wikipedia page, obtained from the network console in firefox web browser](./http-response.png)
+![An example of HTTP response from HTTP Wikipedia page, obtained from the network console in Firefox web browser](./http-response.png)
 
 ### HTTP Format & Syntax
 
@@ -112,11 +112,11 @@ Source : https://www.studytonight.com/computer-networks/http-protocol
 
 ### HTTP Version
 
-HTTP has undergone several version over time, the oldest one is the HTTP/1.0 and the newest is the HTTP/3. Along the version, new response code, feature, performance improvement were introduced.
+HTTP has undergone several versions over time, the oldest one is the HTTP/1.0 and the newest is the HTTP/3. Along the version, new response code, feature, performance improvement were introduced.
 
 #### HTTP/1.0
 
-HTTP/1.0 was made in 1996, it is based on TCP and each request required a separate connection, resulting in higher overhead. HTTP/1.0 had a basic set of headers, including Content-Type, Content-Length, Host, User-Agent, and Referer. The supported method are GET, POST, HEAD, and PUT were among the supported methods.
+HTTP/1.0 was made in 1996, it is based on TCP and each request required a separate connection, resulting in higher overhead. HTTP/1.0 had a basic set of headers, including Content-Type, Content-Length, Host, User-Agent, and Referer. The supported methods are GET, POST, HEAD, and PUT were among the supported methods.
 
 #### HTTP/1.1
 
@@ -138,14 +138,14 @@ HTTP/3, also known as HTTP over QUIC, was a draft in 2020 and was published in J
 
 In HTTP/3, if a packet is lost or delayed in one stream, it does not affect the delivery of other streams since they are independent of each other.
 
-QUIC introduces connection ID, it is a unique identifier of a connection. An identifer allows a faster connection establishment or migration compared to traditional protocols like TCP. An example for this would be a phone that originally uses Wi-Fi and changes to a cellular network. The server will recognizes the ID and associates it with the existing connection state, allowing the connection to continue seamlessly without interruption.
+QUIC introduces connection ID, it is a unique identifier of a connection. An identifier allows a faster connection establishment or migration compared to traditional protocols like TCP. An example for this would be a phone that originally uses Wi-Fi and changes to a cellular network. The server will recognize the ID and associates it with the existing connection state, allowing the connection to continue seamlessly without interruption.
 
 ![Comparison between HTTP version](./http-version.png)  
 Source : https://www.researchgate.net/figure/Comparison-of-HTTP-versions_fig1_312560536, https://blog.cloudflare.com/http3-the-past-present-and-future/
 
 ## HTTPS
 
-While using HTTP as protocol to retrieve webpage, the information are sent in plain text. This means while information are transmitted, it can be read easily by anyone who has access to the network traffic, this is called [eavesdropping](/computer-security/eavesdropping). Another bad thing that could happen is someone could manipulate the sensitive information or injecting a malicious code, this is called [Man-in-the-Middle Attack (MITM)](/computer-security/man-in-the-middle-attack).
+While using HTTP as protocol to retrieve webpage, the information are sent in plain text. This means while information are transmitted, it can be read easily by anyone who has access to the network traffic, this is called [eavesdropping](/computer-security/network-security#eavesdropping). Another bad thing that could happen is someone could manipulate the sensitive information or injecting a malicious code, this is called [Man-in-the-Middle Attack (MITM)](/computer-security/network-security#man-in-the-middle-attack).
 
 The browsing behavior and activities of users can be easily monitored and tracked by various entities, including internet service providers (ISPs), advertisers, and malicious actors. This compromises user privacy and can lead to targeted advertising, profiling, or misuse of personal information.
 
@@ -157,7 +157,7 @@ TLS protocol involves a handshake process, after connection is established or th
 
 Here is a high-level explanation for HTTPS process :
 
-1. **TCP Handshake** : TCP handshakes which is the same as the beginning of HTTP process, this include sending SYN and ACK message.
+1. **TCP Handshake** : TCP handshakes which is the same as the beginning of HTTP process, this includes sending SYN and ACK message.
 
 2. **Certificate Check** : The client will send a "Client Hello" message to the server, indicating the TLS protocol versions and cryptographic algorithms it supports to encrypt the data. The server will respond with a "Server Hello" message, selecting the highest TLS version and cryptographic algorithms that both the client and server support.
 
@@ -165,9 +165,9 @@ Here is a high-level explanation for HTTPS process :
 
    After the certificate exchange, the server sends a "Server Hello Done" message to indicate that it has completed its part of the handshake. This message serves as a signal to the client that it can proceed with the next step.
 
-3. **Key Exchange** : In the next step, there will be an [asymmetric key exchange](/computer-security/asymmetric-encryption#key-exchange) where the client and server exchange keys. This key exchange process includes sending the necessary information required to encrypt the data. This information typically includes the [key exchange algorithm](/computer-security/encryption#key-exchange), encryption algorithm, and [hash function](/computer-security/hash-function) to be used for the TLS protocol.
+3. **Key Exchange** : In the next step, there will be an [asymmetric key exchange](/computer-security/encryption#symmetric--asymmetric) where the client and server exchange keys. This key exchange process includes sending the necessary information required to encrypt the data. This information typically includes the [key exchange algorithm](/computer-security/encryption#key-exchange), encryption algorithm, and [hash function](/computer-security/hash-function) to be used for the TLS protocol.
 
-4. **Data Transmission** : After the key exchange, a session key is generated. The session key is a [symmetric encryption](/computer-security/symmetric-encryption) key used to encrypt and decrypt the data. The client possesses the public key, while the server has the corresponding private key. In simple terms, the session key can only be used with the public and private keys owned by the client and server. The data is encrypted using the session key, enabling secure transmission between the client and server.
+4. **Data Transmission** : After the key exchange, a session key is generated. The session key is a [symmetric encryption](/computer-security/encryption#symmetric--asymmetric) key used to encrypt and decrypt the data. The client possesses the public key, while the server has the corresponding private key. In simple terms, the session key can only be used with the public and private keys owned by the client and server. The data is encrypted using the session key, enabling secure transmission between the client and server.
 
 HTTPS is the combination of symmetric and asymmetric encryption algorithm. Asymmetric only happens from certificate check to the key exchange process. During data transmission, symmetric algorithm will be used.
 
@@ -175,5 +175,5 @@ HTTPS is the combination of symmetric and asymmetric encryption algorithm. Asymm
 Source : https://blog.bytebytego.com/p/how-does-https-work-episode-6
 
 :::tip
-Find more about general [encryption](/computer-security/encryption) and its terminology including [public and private key](/computer-security/encryption#public-and-private-key), [key exchange](/computer-security/encryption#key-exchange). Also about [symmetric](/computer-security/symmetric-encryption) and [asymmetric](/computer-security/asymmetric-encryption) encryption.
+Find more about general [encryption](/computer-security/encryption) and its terminology including [public and private key](/computer-security/encryption#public-and-private-key), [key exchange](/computer-security/encryption#key-exchange). Also, about [symmetric and asymmetric encryption](/computer-security/symmetric--asymmetric).
 :::

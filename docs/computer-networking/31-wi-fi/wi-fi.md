@@ -11,11 +11,11 @@ description: Wi-Fi
 - **[2.4 GHz vs 5 GHz WiFi: What is the difference? | PowerCert](https://youtu.be/J_bf_KE5llQ?si=mDP5uaguw2uDLftZ)**
 - **[Wireless Access Point vs Wi-Fi Router | PowerCert](https://youtu.be/OxiY4yf6GGg?si=58jsyWGQjuk4K0o6)**
 
-**Wireless Fidelity (Wi-Fi)** is a technology that allows electronic devices to connect to a[ local area network (LAN)](/computer-networking/lan-wan) wirelessly. It enables devices such as computers, smartphones, tablets, and other devices to access the internet and communicate with each other without the need for physical wired connections.
+**Wireless Fidelity (Wi-Fi)** is a technology that allows electronic devices to connect to a [local area network (LAN)](/computer-networking/lan-wan) wirelessly. It enables devices such as computers, smartphones, tablets, and other devices to access the internet and communicate with each other without the need for physical wired connections.
 
 It is one of a wireless network protocol that uses radio waves as the medium to exchange data. Each device will need a central point access such as Wi-Fi [router](/computer-networking/router).
 
-A packet of data in digital form is transformed into an analog signal. Analog signal will be send into the receiver, this is done by the [modulation and demodulation (modem)](/computer-networking/dial-up-modem) process. The Wi-Fi router will connect to the modem and forward the data packet into the destined device in the local network.
+A packet of data in digital form is transformed into an analog signal. Analog signal will be sent into the receiver, this is done by the [modulation and demodulation (modem)](/computer-networking/dial-up-modem) process. The Wi-Fi router will connect to the modem and forward the data packet into the destined device in the local network.
 
 ![Wi-Fi router](./wifi-router.png)  
 Source : https://youtu.be/mPMGRILsOVk?si=D7PjKsfm1TouFWk4&t=133
@@ -24,9 +24,9 @@ Source : https://youtu.be/mPMGRILsOVk?si=D7PjKsfm1TouFWk4&t=133
 
 Some factor that contribute to Wi-Fi performance are :
 
-- **Wi-Fi Range** : Wi-Fi typically have range of 30 - 91 meters. However, the range may be reduced by some factor including the type and design of antennas used in Wi-Fi devices, an obstructions such as thick walls or metal structures are particularly effective at blocking wireless signals.
+- **Wi-Fi Range** : Wi-Fi typically have range of 30 - 91 meters. However, the range may be reduced by some factor including the type and design of antennas used in Wi-Fi devices, an obstruction such as thick walls or metal structures are particularly effective at blocking wireless signals.
 
-- **Wave Interference** : Wi-Fi uses radio waves to transfer data, if alot of device uses Wi-Fi at the same time, wave inference could happen. Interference can occur when other devices emit signals that overlap or interfere with Wi-Fi signals.
+- **Wave Interference** : Wi-Fi uses radio waves to transfer data, if a lot of devices uses Wi-Fi at the same time, wave inference could happen. Interference can occur when other devices emit signals that overlap or interfere with Wi-Fi signals.
 
 #### Single & Dual-band Router
 
@@ -61,7 +61,7 @@ Source : https://youtu.be/OxiY4yf6GGg?si=-tqndmm07MA2bh6j&t=178
 
 **Hotspot** is a location or an area where wireless internet access is provided, typically using Wi-Fi technology.
 
-Hotspot can be public or private, a public hotspots are Wi-Fi networks that are available for use by anyone within range. Examples include Wi-Fi networks in cafes, airports, libraries, and parks. Public hotspots are designed to be easily accessible to the general public and provide internet connectivity for visitors or customers. However, using public hotspot may be dangerous as anyone can access it. A malicious actor could intercepts and captures the network traffic transmitted between a user's device and the hotspot, this is called [eavesdropping](/computer-security/eavesdropping).
+Hotspot can be public or private, a public hotspots are Wi-Fi networks that are available for use by anyone within range. Examples include Wi-Fi networks in cafés, airports, libraries, and parks. Public hotspots are designed to be easily accessible to the public and provide internet connectivity for visitors or customers. However, using public hotspot may be dangerous as anyone can access it. A malicious actor could intercept and captures the network traffic transmitted between a user's device and the hotspot, this is called [eavesdropping](/computer-security/network-security#eavesdropping).
 
 Private hotspots, also known as tethering, are Wi-Fi networks created by individuals using their smartphones, tablets, or dedicated mobile hotspot devices. These hotspots are intended for personal use and are secured with a password. Only those who know the password can connect to the network and access the internet through it. Private hotspots are commonly used when a person wants to share their data connection with other devices.
 

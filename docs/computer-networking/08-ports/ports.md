@@ -29,9 +29,9 @@ A list of used port can be found in this [Wikipedia](https://en.wikipedia.org/wi
 
 Port is used together with IP address to communicate. The IP address is used to know the location of the destination, while port is to specify what type of communication we want to do. For example, an HTTP request is made to `http://www.google.com`, the IP address of `google.com` is `215.114.85.17`, with the port 80 it will become `215.114.85.17:80`.
 
-**Port Forwarding** is a technique used to redirect network traffic from one IP address and port combination to another IP address and port combination. It allows incoming connections or data packets destined for a specific port on a [router](/computer-networking/router) or [firewall](/computer-networking/firewall) to be forwarded to a different port or device on the local network.
+**Port Forwarding** is a technique used to redirect network traffic from one IP address and port combination to another IP address and port combination. It allows incoming connections or data packets destined for a specific port on a [router](/computer-networking/router) or [firewall](/computer-networking/network-security#firewall) to be forwarded to a different port or device on the local network.
 
-Our router receives data from external network along with our router IP address as the destination and also a port. Port forwarding can be thought as the router translating the IP address with the port, so it will be redirected to local device on the network.
+Our router receives data from external network along with our router's IP address as the destination and also a port. Port forwarding can be thought as the router translating the IP address with the port, so it will be redirected to local device on the network.
 
 The router doesn't know how to process the port received from external network without any port forwarding configuration.
 
@@ -54,7 +54,7 @@ Ports can be in different states based on the response received during scanning:
 
 This port state is related to port forwarding. If we haven't configured the port forwarding in our router, the default state will be closed.
 
-![Port states on github, twitter, and google](./port-states.png)  
+![Port states on GitHub, Twitter, and Google](./port-states.png)  
 Source : https://codepen.io/umarcbs/pen/NWradwg
 
 #### Scan Types
