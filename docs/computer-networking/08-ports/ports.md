@@ -50,7 +50,7 @@ Ports can be in different states based on the response received during scanning:
 
 - **Closed** : If a port responds with a specific message indicating that it is closed, it means that no service or application is listening on that port.
 
-- **Filtered** : If a port does not respond to the scan or the response is blocked by a [firewall](/computer-networking/firewall) or network filtering device, it is considered filtered. The port scanner cannot determine whether the port is open or closed.
+- **Filtered** : If a port does not respond to the scan or the response is blocked by a [firewall](/computer-networking/network-security#firewall) or network filtering device, it is considered filtered. The port scanner cannot determine whether the port is open or closed.
 
 This port state is related to port forwarding. If we haven't configured the port forwarding in our router, the default state will be closed.
 
