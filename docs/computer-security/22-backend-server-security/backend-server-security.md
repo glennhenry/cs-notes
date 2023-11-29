@@ -1,5 +1,5 @@
 ---
-slug: /backend-development/backend-server-security
+slug: /computer-security/backend-server-security
 id: backend-server-security
 title: Backend & Server Security
 description: Backend & Server Security
@@ -7,7 +7,7 @@ description: Backend & Server Security
 
 This is the same notes as :
 
-- **[Computer Security > Backend & Server Security](/computer-security/backend-server-security)**
+- **[Backend Development > Backend & Server Security](/backend-development/backend-server-security)**
 
 **Main Source :**
 

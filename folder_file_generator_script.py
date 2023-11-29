@@ -3,70 +3,60 @@
 
 import os
 
-topic_title = "data-structures-and-algorithms"
+topic_title = "computer-security"
 
 # List of content in kebab title
 content_id = [
-    "analysis-of-algorithms",
-    "array",
-    "linked-list",
-    "stack",
-    "queue",
-    "hash-table",
-    "set",
-    "tree",
-    "heap",
-    "graph",
-    "trie",
-    "sorting",
-    "search",
-    "recursion",
-    "divide-and-conquer",
-    "traversal",
-    "backtracking",
-    "greedy",
-    "dynamic-programming",
-    "two-pointer",
-    "sliding-window",
-    "prefix-sum",
-    "cycle-detection",
-    "shortest-path",
-    "union-find",
-    "topological-sort",
-    "minimum-spanning-tree",
-    "complexity-theory",
+    "computer-security-fundamentals",
+    "hash-function",
+    "md5",
+    "sha",
+    "bcrpyt",
+    "encryption",
+    "aes",
+    "des",
+    "blowfish",
+    "diffie-hellman",
+    "rsa",
+    "elliptic-curve-cryptography",
+    "elliptic-curve-diffie-hellman",
+    "dsa",
+    "lattice-based-cryptography",
+    "bitcoin-blockchain",
+    "antivirus-antimalware",
+    "reverse-engineering",
+    "network-security",
+    "web-security",
+    "mobile-security",
+    "backend-server-security",
+    "other-attack-and-exploit",
 ]
 
 # List of content in title case
 content_title = [
-    "Analysis of Algorithms",
-    "Array",
-    "Linked-List",
-    "Stack",
-    "Queue",
-    "Hash Table",
-    "Set",
-    "Tree",
-    "Heap",
-    "Graph",
-    "Trie",
-    "Sorting",
-    "Search",
-    "Recursion",
-    "Divide & Conquer",
-    "Traversal",
-    "Backtracking",
-    "Greedy",
-    "Dynamic Programming",
-    "Two Pointer",
-    "Sliding Window",
-    "Prefix Sum",
-    "Cycle Detection",
-    "Shortest Path",
-    "Union Find",
-    "Topological Sort",
-    "Minimum Spanning Tree",
-    "Complexity Theory",
+    "Computer Security Fundamentals",
+    "Hash Function",
+    "MD5",
+    "SHA",
+    "Bcrypt",
+    "Encryption",
+    "AES",
+    "DES",
+    "Blowfish",
+    "Diffie-Hellman",
+    "RSA",
+    "Elliptic Curve Cryptography",
+    "Elliptic Curve Diffie-Hellman",
+    "DSA",
+    "Lattice-Based Cryptography",
+    "Bitcoin & Blockchain",
+    "Antivirus & Antimalware",
+    "Reverse Engineering",
+    "Network Security",
+    "Web Security",
+    "Mobile Security",
+    "Backend & Server Security",
+    "Other Attack & Exploit",
 ]
 
 # Create temp folder for debugging
@@ -120,7 +110,7 @@ def generate_folder_file():
 
             # Write default template
             md_file.write(f"**Main Source :**\n\n")
-            md_file.write(f"- \n\n")
+            md_file.write(f"- [] \n\n")
             md_file.write(f"{title} page\n")
 
     print("Project structure and MD files created successfully!")
@@ -129,4 +119,4 @@ def generate_folder_file():
 
 # generate_folder_file()
 # generate_topic_links()
-# generate_topic_sidebars()
+generate_topic_sidebars()

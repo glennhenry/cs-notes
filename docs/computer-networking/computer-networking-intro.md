@@ -56,8 +56,6 @@ description: Computer Networking Notes
   - [Bluetooth](computer-networking/bluetooth)
   - [Cellular Networks](computer-networking/cellular-networking)
   - [Sim Card](computer-networking/sim-card)
-- Security
-  - [DDoS Attack](computer-networking/ddos-attack)
-  - [Firewall](computer-networking/firewall)
-  - [Network Encryption](computer-networking/network-encryption)
+- [Network Security](computer-networking/network-security)
+- [Network Encryption](computer-networking/network-encryption)
 - [Networking Command](computer-networking/networking-command)
