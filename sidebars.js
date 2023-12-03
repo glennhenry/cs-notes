@@ -557,11 +557,11 @@ const sidebars = {
           type: "category",
           label: "Cryptography",
           items: [
+            "computer-security/math-concepts/math-concepts",
             {
               type: "category",
               label: "Hashing",
               items: [
-                "computer-security/math-concepts/math-concepts",
                 "computer-security/hash-function/hash-function",
                 "computer-security/md5/md5",
                 "computer-security/sha/sha",
@@ -580,7 +580,7 @@ const sidebars = {
             },
             {
               type: "category",
-              label: "Asymmetric Encryption",
+              label: "Asymmetric Encryption & Key Exchange",
               items: [
                 "computer-security/diffie-hellman/diffie-hellman",
                 "computer-security/rsa/rsa",

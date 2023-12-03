@@ -13,6 +13,7 @@ Highly recommend seeing [computer networking](computer-networking) first. This i
 
 - [Computer Security Fundamentals](computer-security/computer-security-fundamentals)
 - Cryptography
+  - [Math Concepts](computer-security/math-concepts)
   - Hashing
     - [Hash Function](computer-security/hash-function)
     - [MD5](computer-security/md5)
