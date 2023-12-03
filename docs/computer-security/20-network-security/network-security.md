@@ -44,6 +44,8 @@ Source : https://www.onelogin.com/learn/ddos-attack
 
 ### IP Spoofing
 
+### MAC Spoofing
+
 ### Firewall
 
 **Firewall** is a network security device that acts as a barrier between a trusted internal network and an untrusted external network, such as the Internet. Its primary purpose is to control incoming and outgoing network traffic.
@@ -64,3 +66,7 @@ Source : https://shop3213.sosoutremer.org/category?name=hardware%20vs%20software
 ### Network Encryption
 
 See [network encryption](/computer-networking/network-encryption)
+
+### Port Scanner
+
+### Packet Sniffer

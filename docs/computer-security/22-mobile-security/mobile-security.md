@@ -12,3 +12,5 @@ description: Mobile Security
 Mobile Security page
 
 ### Clickjacking
+
+### Biometric Spoofing
