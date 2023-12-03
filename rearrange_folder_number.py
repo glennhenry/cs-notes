@@ -5,7 +5,7 @@
 
 import os
 
-base_path = "D:\\Programming\\Projects\\cs-notes\\docs\\data-structures-and-algorithms"
+base_path = "D:\\Programming\\Projects\\cs-notes\\docs\\computer-security"
 folders = os.listdir(base_path)
 
 for num, folder_name in enumerate(folders) :

@@ -11,4 +11,4 @@ description: Computer Organization & Architecture Notes
 
 - Logic Gates & Boolean Algebra
 - Memory hierarchy
-- c
+- Assembly Language (what are push, mov, eax, edx, and etc operation)

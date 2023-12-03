@@ -23,7 +23,6 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - [Theory of Computation & Automata](theory-of-computation-and-automata)
 - [Compilers](compilers)
 - [Programming Language Theory](programming-language-theory)
-- [System Programming](system-programming)
 - [Database System](database-system)
 - **[Computer Graphics](computer-graphics)**
 - **[Frontend Web Development](frontend-web-development)**

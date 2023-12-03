@@ -436,14 +436,6 @@ const sidebars = {
       items: [],
     },
 
-    // System Programming
-    {
-      type: "category",
-      label: "System Programming",
-      link: { type: "doc", id: "system-programming/system-programming" },
-      items: [],
-    },
-
     // Database System
     {
       type: "category",
@@ -569,6 +561,7 @@ const sidebars = {
               type: "category",
               label: "Hashing",
               items: [
+                "computer-security/math-concepts/math-concepts",
                 "computer-security/hash-function/hash-function",
                 "computer-security/md5/md5",
                 "computer-security/sha/sha",
