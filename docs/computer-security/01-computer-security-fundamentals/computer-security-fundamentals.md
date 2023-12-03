@@ -29,7 +29,7 @@ In computer security, a common model to understand goals and principles of compu
 
 1. **Confidentiality** : Ensures that sensitive data is accessible only to authorized individuals or entities. Access preventation such as [encryption](/computer-security/encryption), access controls, and secure communication protocols are implemented.
 
-2. **Integrity** : Ensures data remains accurate, reliable, and unaltered throughout its lifecycle. It involves protecting data from unauthorized modification, deletion, or [tampering](/computer-security/other-attack-and-exploit#tampering). Techniques such as data validation, [checksums](/computer-security/hash-function#checksums), [digital signatures](/computer-security/computer-security-fundamentals/digital-signature), and secure storage mechanisms are used to maintain data integrity and prevent unauthorized changes.
+2. **Integrity** : Ensures data remains accurate, reliable, and unaltered throughout its lifecycle. It involves protecting data from unauthorized modification, deletion, or [tampering](/computer-security/other-attack-and-exploit#tampering). Techniques such as data validation, [checksums](/computer-security/hash-function#checksums), [digital signatures](/computer-security/computer-security-fundamentals#digital-signature), and secure storage mechanisms are used to maintain data integrity and prevent unauthorized changes.
 
 3. **Availability** : Ensures that computer systems are accessible and operational when needed. It involves preventing disruptions or unauthorized [denial of service (DoS)](/computer-security/network-security#ddos-attack). Various technique such as backup systems, fault tolerance, and distance recovery plans are implemented to maximize system availability and minimize downtime.
 
