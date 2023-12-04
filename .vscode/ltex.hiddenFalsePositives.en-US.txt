@@ -11,3 +11,4 @@
 {"rule":"DT_RB_IN","sentence":"^\\QFor example, we can represent the number 24 as the multiply of :\\E$"}
 {"rule":"DT_RB_IN","sentence":"^\\QWhen we can represent a number with the multiply of two number, they are called composite number.\\E$"}
 {"rule":"DT_RB_IN","sentence":"^\\QWhen we can represent a number with the multiply of two or more number, they are called composite number.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QModular addition involves adding two numbers and then taking the remainder when divided by the modulus.\\E$"}

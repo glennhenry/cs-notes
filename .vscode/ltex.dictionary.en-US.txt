@@ -2,3 +2,9 @@ Totient
 Spim
 Cryptojacking
 preventation
+Bezout
+Bézout
+coprime
+totient
+Primality
+primality
