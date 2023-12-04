@@ -117,7 +117,7 @@ const config = {
             position: 'left',
           },
           {
-            label: 'Docusaurus',
+            label: 'Made with Docusaurus',
             href: 'https://github.com/facebook/docusaurus',
             position: 'right',
           },
