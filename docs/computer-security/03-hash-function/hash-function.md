@@ -7,7 +7,7 @@ description: Hash Function
 
 **Main Source :**
 
-- []
+- **[Hash function - Wikipedia](https://en.wikipedia.org/wiki/Hash_function)**
 
 **Hash Function** is a mathematical function that takes an input of arbitrary size and produces a fixed-size output, called **hash values/codes**. The exact same input will always produce the same output, which is what makes a hash function used for verification.
 
