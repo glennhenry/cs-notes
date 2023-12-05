@@ -13,6 +13,8 @@ Encryption
 
 ### Cipher
 
+### Key Repetition
+
 #### Decipher
 
 ### Encryption
