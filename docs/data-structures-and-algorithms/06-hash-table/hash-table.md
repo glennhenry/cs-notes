@@ -33,7 +33,7 @@ Another technique to mitigate collision, which is a trivial one is just increasi
 
 ### Example
 
-One of a simple hash function for hash table is the modulo hash. The formula is :  
+One of a simple hash function for hash table is the **division hash function**. The formula is :  
 $\text{hash code} = \text{key } \% \text{ array size}$  
 The hash code for some key will be obtained by calculating the remainder (% modulo) of dividing the key by the array size.
 
