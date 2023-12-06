@@ -20,8 +20,8 @@ Highly recommend seeing [computer networking](computer-networking) first. This i
     - [SHA](computer-security/sha)
   - [Encryption](computer-security/encryption)
   - Symmetric Encryption
-    - [AES](computer-security/aes)
     - [DES](computer-security/des)
+    - [AES](computer-security/aes)
     - [Blowfish](computer-security/blowfish)
   - Asymmetric Encryption & Key Exchange
     - [Diffie-Hellman](computer-security/diffie-hellman)

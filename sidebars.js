@@ -572,8 +572,8 @@ const sidebars = {
               type: "category",
               label: "Symmetric Encryption",
               items: [
-                "computer-security/aes/aes",
                 "computer-security/des/des",
+                "computer-security/aes/aes",
                 "computer-security/blowfish/blowfish",
               ],
             },
