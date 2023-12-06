@@ -565,7 +565,6 @@ const sidebars = {
                 "computer-security/hash-function/hash-function",
                 "computer-security/md5/md5",
                 "computer-security/sha/sha",
-                "computer-security/bcrpyt/bcrpyt",
               ],
             },
             "computer-security/encryption/encryption",

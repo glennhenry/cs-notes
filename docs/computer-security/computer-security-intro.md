@@ -18,7 +18,6 @@ Highly recommend seeing [computer networking](computer-networking) first. This i
     - [Hash Function](computer-security/hash-function)
     - [MD5](computer-security/md5)
     - [SHA](computer-security/sha)
-    - [Bcrypt](computer-security/bcrpyt)
   - [Encryption](computer-security/encryption)
   - Symmetric Encryption
     - [AES](computer-security/aes)
