@@ -26,13 +26,17 @@ Here is the high-level overview of DES :
 
 3.  **Encryption Rounds** : The main encryption process is divided into rounds of transformations. The transformation process is called **Feistel cipher**, or **Feistel (F) function**, it takes half size of block (32-bit) and a key. It involves key mixing, substitution, permutation to introduce confusion and diffusion.
 
+    :::note
+    **Feistel structure** is the general design principle for cipher that divides the input data into two equal halves and applies a series of rounds to these halves. On the other hand, **Feistel cipher** is a specific type of symmetric encryption algorithm that employs the Feistel structure.
+    :::
+
     1. **Initial Permutation (IP)** : The 64-bit plaintext block goes through an initial permutation (IP) step. The permuted plaintext block is divided into two 32-bit halves, known as the left half and the right half. In each round, the left half will be swapped with the right half from the previous round.
     2. **Expansion** : The 32-bit half-block is expanded to 48 bits using an expansion permutation table (E-box). The table contains bits which will determine the specific order in which the bits of the input and output blocks are arranged.
     3. **Key Mixing** : The expanded half is combined with the 48-bit key for that round using XOR operation, derived from the original 56-bit key in the key scheduling process.
     4. **Substitution** : The combined result is then passed through eight S-boxes (substitution boxes), which substitute 6-bit values with 4-bit values based on predefined tables.
     5. **Permutation** : The outputs of the S-boxes are rearranged by permutation operation according to a fixed permutation called P-box (P). The result of the P-box permutation is then XOR-ed with the left half from the previous round to produce the new right half. Also, The new left half (Li) is set equal to the previous right half (Ri-1).
 
-       ![Feistel function](./feistel-function.png)  
+       ![Feistel function](./feistel-function.png)
        Source : https://en.wikipedia.org/wiki/File:Data_Encription_Standard_Flow_Diagram.svg
 
 4.  **Final Steps** : After the 16 rounds of encryption, the left and right halves are concatenated. It then goes through a final permutation (FP), which is the inverse of the initial permutation. The resulting 64-bit block is the ciphertext.
