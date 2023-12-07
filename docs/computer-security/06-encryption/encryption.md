@@ -73,6 +73,19 @@ These are two types of encryption :
 ![Symmetric and asymmetric encryption](./symmetric-asymmetric.png)  
 Source : https://www.clickssl.net/blog/symmetric-encryption-vs-asymmetric-encryption
 
+##### Stream vs Block Cipher
+
+Stream and block cipher are the two types of how plaintext is converted into ciphertext. They are considered as two different categories or classes in the symmetric encryption (uses single key to encrypt and decrypt).
+
+- **Stream cipher** : Operates on single bit or byte.
+- **Block cipher** : Convert the plaintext in fixed-size block (e.g., 64 bits, 128 bits, etc). The plaintext is divided into these fixed-size blocks, and each block is encrypted or decrypted independently.
+
+![Stream cipher](./stream-cipher.gif)  
+Source : https://medium.com/networks-security/private-key-public-key-encryption-91f1a90c905f
+
+![Block cipher](./block-cipher.gif)  
+Source : https://medium.com/networks-security/private-key-public-key-encryption-91f1a90c905f
+
 #### Key Exchange
 
 **Key exchange** is the process of exchanging secret key between parties securely. It involves cryptographic protocols and techniques to exchange keys without revealing them to potential [eavesdroppers](/computer-security/network-security#eavesdropping).
