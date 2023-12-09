@@ -9,4 +9,4 @@ description: Elliptic Curve Cryptography
 
 - [] 
 
-Elliptic Curve Cryptography page
+**Elliptic Curve Cryptography** is a form of [public key cryptography](/computer-security/encryption#public--public-key) that is based on the properties of elliptic curve when they are defined over finite fields. This mean

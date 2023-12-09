@@ -584,7 +584,6 @@ const sidebars = {
                 "computer-security/diffie-hellman/diffie-hellman",
                 "computer-security/rsa/rsa",
                 "computer-security/elliptic-curve-cryptography/elliptic-curve-cryptography",
-                "computer-security/elliptic-curve-diffie-hellman/elliptic-curve-diffie-hellman",
                 "computer-security/dsa/dsa",
               ],
             },

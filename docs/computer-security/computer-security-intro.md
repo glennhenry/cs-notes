@@ -27,7 +27,6 @@ Highly recommend seeing [computer networking](computer-networking) first. This i
     - [Diffie-Hellman](computer-security/diffie-hellman)
     - [RSA](computer-security/rsa)
     - [Elliptic Curve Cryptography](computer-security/elliptic-curve-cryptography)
-    - [Elliptic Curve Diffie-Hellman](computer-security/elliptic-curve-diffie-hellman)
     - [DSA](computer-security/dsa)
   - [Lattice-Based Cryptography](computer-security/lattice-based-cryptography)
   - [Bitcoin & Blockchain](computer-security/bitcoin-blockchain)
