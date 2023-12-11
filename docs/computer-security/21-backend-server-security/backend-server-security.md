@@ -26,8 +26,6 @@ There are many kinds of attacks, one of the common type of attack is an injectio
 - **[Cross-site request forgery](/computer-security/web-security#cross-site-request-forgery)** : Trick a user into performing an action on a website without their knowledge or consent.
 - **[DDoS attack](/computer-security/network-security#ddos-attack)** : Flooding a backend server with by overwhelming it with a flood of traffic, making it unable to process users request.
 
-### Impersonation
-
 ### API Security
 
 APIs are very important in software development to enable communication and data exchange between various systems, applications, or services. APIs often expose valuable data, and they are heavily relied on by the application, attacking them might be a good starting point.
@@ -38,6 +36,14 @@ APIs are very important in software development to enable communication and data
 
 ### Authentication & Authorization Security
 
+Authentication is a crucial aspect in application, developers must ensure that only legitimate users and authorized individuals are able to authenticate to a system.
+
+Authentication system can be upgraded to be more secure by having [multiple factor consideration](/backend-development/authentication#authentication-factor-number), [various other identity of user](/backend-development/authentication#authentication-factor) (e.g., uses fingerprint or face to authenticate rather than password that can be cracked).
+
+Always validate and sanitize input from user to prevent common vulnerabilities such as [SQL injection](/computer-security/web-security#sql-injection), [cross-site scripting](/computer-security/web-security#cross-site-scripting-xss)
+
+Encrypt communication between user and server, also store user credentials like passwords using strong encryption algorithm like [AES](/computer-security/aes), avoid of storing it in plaintext.
+
 ### Security Mitigation
 
 Some strategy used to protect backend system :
@@ -45,7 +51,7 @@ Some strategy used to protect backend system :
 - **Rate Limiting** : A technique which will limit API request per time interval, this can help prevent DDoS attack.
 - **Sanitizing Input** : Make sure to always validate the input field in your application, make sure it doesn't contain exploitable character to be safe from injection attack like XSS or SQL injection.
 - **Data Encryption** : Encrypt sensitive data stored in database, communication may also use [secure protocol](/computer-networking/network-encryption) such as [HTTPS](/computer-networking/http-https#https).
-- **Port Blocking** : 
+- **Port Blocking** :
 - **Content Security Policy (CSP)** : A security mechanism implemented by web browsers to mitigate the risk of certain types of web-based attacks. CSP works by specifying a whitelist of trusted sources for various types of content, such as scripts, stylesheets, images, fonts, and frames. For example :
 
   - `default-src` Specifies the default source for all types of content if a specific directive is not specified.
