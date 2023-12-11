@@ -64,7 +64,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 19. **[update]** computer-graphics (should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic, and bad English)
 20. **[ref]** /data-structures-and-algorithms/complexity-theory (ref to Turing machine and other TOC related terms)
 21. **[ref]** /data-structures-and-algorithms/complexity-theory (ref to boolean gates)
-22. **[ref]** /frontend-web-development : Many notes are lacking, however, it's not as bad as computer graphics, minor correction on all notes is needed.
+22. **[update]** /frontend-web-development : Many notes are lacking, however, it's not as bad as computer graphics, minor correction on all notes is needed.
+23. **[ref]** /computer-security/reverse-engineering (ref to decompilation in compilers)
+24. **[ref]** /computer-security/reverse-engineering (ref to assembly language in COA)
 
 ### Longest Notes
 
