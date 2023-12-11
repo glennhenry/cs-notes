@@ -27,7 +27,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[Computer Graphics](computer-graphics)**
 - **[Frontend Web Development](frontend-web-development)**
 - **[Backend Development](backend-development)**
-- [Computer Security](computer-security)
+- **[Computer Security](computer-security)**
 - **[Machine Learning](machine-learning)**
 - **[Deep Learning](deep-learning)**
 - [Software Engineering](software-engineering)
