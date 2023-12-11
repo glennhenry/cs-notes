@@ -74,3 +74,7 @@ Example of methods to steal the cookies includes :
 Source : https://www.geeksforgeeks.org/what-is-cookie-hijacking/
 
 ### URL Hijacking
+
+**URL Hijacking** or **domain hijacking** is the act of taking control of a website's domain or URL in order to redirect visitors to a different website or to gain unauthorized access to sensitive information. Many techniques such as [MitM](/computer-security/network-security#man-in-the-middle-attack), [other spoofing techniques](/computer-security/network-security#spoofing), and [social engineering](/computer-security/other-attack-and-exploit#typosquatting) can be employed to achieves this.
+
+Attackers may exploit vulnerabilites in some website in domain registrar systems to gain control over a legitimate domain. Once they have control, they can modify DNS settings or transfer the domain to a different registrar, effectively hijacking the URL.
