@@ -29,7 +29,7 @@ Highly recommend seeing [computer networking](computer-networking) first. This i
     - [Elliptic Curve Cryptography](computer-security/elliptic-curve-cryptography)
     - [DSA](computer-security/dsa)
   - [Lattice-Based Cryptography](computer-security/lattice-based-cryptography)
-  - [Bitcoin & Blockchain](computer-security/bitcoin-blockchain)
+  - [Blockchain](computer-security/blockchain)
 - [Antivirus & Antimalware](computer-security/antivirus-antimalware)
 - [Reverse Engineering](computer-security/reverse-engineering)
 - [Network Security](computer-security/network-security)

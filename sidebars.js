@@ -588,7 +588,7 @@ const sidebars = {
               ],
             },
             "computer-security/lattice-based-cryptography/lattice-based-cryptography",
-            "computer-security/bitcoin-blockchain/bitcoin-blockchain",
+            "computer-security/blockchain/blockchain",
           ],
         },
         "computer-security/antivirus-antimalware/antivirus-antimalware",
