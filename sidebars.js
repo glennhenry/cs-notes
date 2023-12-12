@@ -393,7 +393,27 @@ const sidebars = {
         type: "doc",
         id: "computer-organization-and-architecture/computer-organization-and-architecture",
       },
-      items: [],
+      items: [
+        "computer-organization-and-architecture/coa-fundamentals/coa-fundamentals",
+        "computer-organization-and-architecture/boolean-logic/boolean-logic",
+        "computer-organization-and-architecture/ram-and-registers/ram-and-registers",
+        "computer-organization-and-architecture/cpu/cpu",
+        "computer-organization-and-architecture/assembly-language/assembly-language",
+        "computer-organization-and-architecture/input-output/input-output",
+        {
+          type: "category",
+          label: "Computer Architecture",
+          items: [
+            "computer-organization-and-architecture/system-bus/system-bus",
+            "computer-organization-and-architecture/von-neumann/von-neumann",
+            "computer-organization-and-architecture/harvard/harvard",
+            "computer-organization-and-architecture/isa/isa",
+          ],
+        },
+        "computer-organization-and-architecture/computer-memory/computer-memory",
+        "computer-organization-and-architecture/gpu/gpu",
+        "computer-organization-and-architecture/vector-processors-and-tpu/vector-processors-and-tpu",
+      ],
     },
 
     // Operating System
