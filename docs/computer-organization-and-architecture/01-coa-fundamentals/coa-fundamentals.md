@@ -11,7 +11,7 @@ description: COA Fundamentals
 - **[Central processing unit - Wikipedia](https://en.wikipedia.org/wiki/Central_processing_unit)**
 - **Various Google searches**
 
-**Computer Organization and Architecture (COA)** is the study of the design and implementation of computer systems at the hardware level. It focuses on the organization and interactions of the components between a computer systems, including CPU, memory, and I/O devices.
+**Computer Organization and Architecture (COA)** is the study of the design and implementation of computer systems at the hardware level. It focuses on the organization and interactions of the components between a computer system, including CPU, memory, and I/O devices.
 
 ### Computer Components
 
@@ -25,7 +25,7 @@ description: COA Fundamentals
   - **Cache** : Cache is a small, high-speed memory that are typically located closer to the CPU than main memory. Cache reduce the time required to fetch instructions and data from the main memory. Caches exist in multiple levels, such as L1, L2, and L3, with each level providing progressively larger storage capacity but at slightly slower access speeds.
   - **Secondary Memory** : Secondary memory is the opposite of main memory, it is non-volatile (requires no power) and it provides long-term storage for programs, data, and files. They are devices like hard disk drives (HDDs) or solid-state drives (SSDs).
 - **Registers** : Registers are small, high-speed memory units located within the CPU. They are used to store data that the CPU is currently using for its operations. Registers can store intermediate results, memory addresses, and control information. For example, a register can be used for **program counter**, which is a component to holds the memory address of the next instruction to be fetched and executed.
-- **Arithmetic Logic Unit (ALU)** : ALU is the component that is responsible for performing arithmetic operations (addition, subtraction, multiplication, and division) and logical operations (such as comparisons, [bitwise operations](/computer-and-programming-fundamentals/bitwise-operations), and [boolean operations](/computer-organization-and-architecture/boolean-logic)). The ALU operates on data retrieved from registers and produces results that are stored back in registers.
+- **Arithmetic Logic Unit (ALU)** : ALU is the component that is responsible for performing arithmetic operations (addition, subtraction, multiplication, and division) and logical operations (such as comparisons, [bitwise operations](/computer-and-programming-fundamentals/bitwise-operation), and [boolean operations](/computer-organization-and-architecture/boolean-logic)). The ALU operates on data retrieved from registers and produces results that are stored back in registers.
 
 Regarding instructions, they are made through the source code from the high-level programming language. These source code are translated to machine language which is recognized by the CPU as instruction. Those instructions will be stored in memory sequentially, along with the variables or any other data used in the program.
 
