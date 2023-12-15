@@ -44,7 +44,7 @@ Here is a more detailed explanation of DSA :
    - Choose a random integer $k$ from $\{1..q - 1\}$.
    - Compute $r := (g^k \text{ mod } p) \text{ mod } q$.
    - Compute $s := (k^{-1} (H(m)) + xr) \text { mod } q$, where $H(m)$ is the output of hash function when inputting message $m$.
-   - The resulting signature is the pair $(r, s)$.
+   - The resulting signature is the pair $(r, s)$, which will be attached to the document.
 
 4. **Signature Verification** : Given a pair of signature $(r, s)$, to determine if it's valid for message $m$ :
 
@@ -56,9 +56,11 @@ Here is a more detailed explanation of DSA :
 
    If $v$ is equal to $r$, then the signature is valid.
 
-In conclusion, the public key $y$ is used to verify the signature, while the public key $x$ (which is hard to find) is used to sign the digital data.
+In conclusion, the public key $y$ is used to verify the signature, while the private key $x$ (which is hard to find) is used to sign the digital data.
 
-When an attacker tries to break DSA, their objective can be impersonating the original owner. They will try to find the private key to modify the content of digitally signed messages without invalidating the signature. This can lead to the manipulation or corruption of data, potentially causing harm or deception.
+When an attacker tries to break DSA, their objective is to impersonate the original owner. They will try to find the private key so they can modify the content of digitally signed messages without invalidating the signature. This can lead to the manipulation or corruption of data, potentially causing harm or deception.
+
+If we say the document is $a$, the hashed document is $b$, and the hashed document encrypted with private key is $c$, then, the attacker must find the original private key owned by the actual signer, so that the decryption of digital signature or converting back from $c$ to $b$ will match the hashing of document from $a$ to $b$. The verification process doesn't check if document is modified or not, the point is, the resulting hash value from the document must match with the decrypted digital signatures attached in the document.
 
 ![DSA algorithm](./dsa.png)  
 Source : https://medium.com/@21_000_000/digital-signature-algorithm-60c8318cf9b6
