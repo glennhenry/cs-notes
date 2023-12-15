@@ -175,5 +175,5 @@ HTTPS is the combination of symmetric and asymmetric encryption algorithm. Asymm
 Source : https://blog.bytebytego.com/p/how-does-https-work-episode-6
 
 :::tip
-Find more about general [encryption](/computer-security/encryption) and its terminology including [public and private key](/computer-security/encryption#public-and-private-key), [key exchange](/computer-security/encryption#key-exchange). Also, about [symmetric and asymmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption).
+Find more about general [encryption](/computer-security/encryption) and its terminology including [public and private key](/computer-security/encryption#public--private-key), [key exchange](/computer-security/encryption#key-exchange). Also, about [symmetric and asymmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption).
 :::
