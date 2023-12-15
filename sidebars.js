@@ -408,6 +408,7 @@ const sidebars = {
             "computer-organization-and-architecture/von-neumann/von-neumann",
             "computer-organization-and-architecture/harvard/harvard",
             "computer-organization-and-architecture/isa/isa",
+            "computer-organization-and-architecture/microarchitecture/microarchitecture",
           ],
         },
         "computer-organization-and-architecture/computer-memory/computer-memory",
