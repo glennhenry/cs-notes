@@ -19,6 +19,10 @@ volatile and non-volatile
 
 #### RAM
 
+##### Structure of RAM
+
+memory cell, transistor, capacitor
+
 ##### DRAM
 
 ##### SRAM
@@ -27,7 +31,9 @@ volatile and non-volatile
 
 ##### VRAM
 
-##### DDR in RAM
+##### RAM Architecture
+
+SDR, DDR, SDRAM
 
 #### ROM
 
@@ -42,6 +48,17 @@ volatile and non-volatile
 ### Memory Management
 
 #### Address
+
+Pointer references in low level
+
+#### Memory Allocation
+
+dynamic allocation
+free(ptr)
+
+#### Stack & Heap Allocation
+
+#### Garbage Collection
 
 #### Direct Memory Access
 

@@ -17,6 +17,8 @@ CPU page
 
 ### Control Unit
 
+control flow, loops, function/procedures
+
 ### Pipelining
 
 ### Interruption
