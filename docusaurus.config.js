@@ -5,8 +5,8 @@
 const math = require('remark-math');
 const katex = require('rehype-katex');
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 const organizationName = "glennhenry";
 const projectName = "cs-notes";
@@ -33,29 +33,7 @@ const config = {
     locales: ['en'],
   },
 
-  plugins: [
-    [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        indexDocs: true,
-        indexDocSidebarParentCategories: 0,
-        indexBlog: false,
-        indexPages: true,
-        language: "en",
-        style: undefined,
-        maxSearchResults: 8,
-        lunr: {
-          tokenizerSeparator: /[\s\-]+/,
-          b: 0.75,
-          k1: 1.2,
-          titleBoost: 5,
-          contentBoost: 1,
-          tagsBoost: 3,
-          parentCategoriesBoost: 2,
-        },
-      },
-    ],
-  ],
+  plugins: [require.resolve('docusaurus-lunr-search')],
 
   presets: [
     [
