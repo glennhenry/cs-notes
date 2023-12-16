@@ -95,7 +95,7 @@ The floating point standard have some special cases to handle special number :
 
 Normalization is the process that provides a standardized way to represent floating-point numbers, which helps to avoid ambiguity and ensures consistent interpretation of the numerical value.
 
-Normalizing number ensure that only one non-zero digit exist to the left of the binary point. For example in decimal number, the number $53.75$ can be normalized to $5.375$.
+Normalizing number ensure that only one non-zero digit exist to the left of the binary point. For example in decimal number, the number $53.75 \times 10^{0}$ can be normalized to $5.375 \times 10^{1}$ or even $0.5375 \times 10^{2}$.
 
 There are two types of normalization :
 
