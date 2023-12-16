@@ -396,10 +396,19 @@ const sidebars = {
       items: [
         "computer-organization-and-architecture/coa-fundamentals/coa-fundamentals",
         "computer-organization-and-architecture/boolean-logic/boolean-logic",
-        "computer-organization-and-architecture/ram-and-registers/ram-and-registers",
-        "computer-organization-and-architecture/cpu/cpu",
-        "computer-organization-and-architecture/assembly-language/assembly-language",
+        {
+          type: "category",
+          label: "CPU",
+          items: [
+            "computer-organization-and-architecture/alu/alu",
+            "computer-organization-and-architecture/control-unit/control-unit",
+            "computer-organization-and-architecture/registers-and-ram/registers-and-ram",
+            "computer-organization-and-architecture/instructions-and-programs/instructions-and-programs",
+            "computer-organization-and-architecture/cpu/cpu",
+          ],
+        },
         "computer-organization-and-architecture/input-output/input-output",
+        "computer-organization-and-architecture/assembly-language/assembly-language",
         {
           type: "category",
           label: "Computer Architecture",

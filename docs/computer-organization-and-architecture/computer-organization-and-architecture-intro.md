@@ -10,9 +10,14 @@ description: Computer Organization & Architecture Notes
 - [COA Fundamentals](computer-organization-and-architecture/coa-fundamentals)
 - [Boolean Logic](computer-organization-and-architecture/boolean-logic)
 - [RAM & Registers](computer-organization-and-architecture/ram-and-registers)
-- [CPU](computer-organization-and-architecture/cpu)
-- [Assembly Language](computer-organization-and-architecture/assembly-language)
+- CPU
+  - [ALU](computer-organization-and-architecture/alu)
+  - [Control Unit](computer-organization-and-architecture/control-unit)
+  - [Registers & RAM](computer-organization-and-architecture/registers-and-ram)
+  - [Instructions & Programs](computer-organization-and-architecture/instructions-and-programs)
+  - [CPU](computer-organization-and-architecture/cpu)
 - [Input/Output](computer-organization-and-architecture/input-output)
+- [Assembly Language](computer-organization-and-architecture/assembly-language)
 - Computer Architecture
   - [System Bus](computer-organization-and-architecture/system-bus)
   - [Von Neumann](computer-organization-and-architecture/von-neumann)

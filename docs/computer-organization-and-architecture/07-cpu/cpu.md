@@ -10,14 +10,9 @@ description: CPU
 - [] 
 
 CPU page
-
-### ALU
+control flow, loops, function/procedures
 
 ### Instruction Set
-
-### Control Unit
-
-control flow, loops, function/procedures
 
 ### Pipelining
 
