@@ -78,7 +78,7 @@ Scientific notation provide a framework for floating number representation. In t
 Still, some numbers cannot be exactly represented due to the limitations of the finite number of bits available. The floating-point standard specifies that we can choose two kinds of precision :
 
 - **Single Precision** : Uses **32-bit** to represent a single number, this format allocates **1 bit for the sign**, **8 bits for the exponent**, and **23 bits for the mantissa**, providing 7 decimal digits of precision.
-- **Double Precision** : Uses **64-bit** to represent a single number, this format allocates **1 bit for the sign**, **11 bits for the exponent**, and **52 bits for the mantissa**, providing 7 decimal digits of precision.
+- **Double Precision** : Uses **64-bit** to represent a single number, this format allocates **1 bit for the sign**, **11 bits for the exponent**, and **52 bits for the mantissa**, providing 16 decimal digits of precision.
 
 ![Part of floating point number](./part-of-floating-point.png)  
 Source : https://www.geeksforgeeks.org/ieee-standard-754-floating-point-numbers/
