@@ -9,7 +9,6 @@ description: Computer Organization & Architecture Notes
 
 - [COA Fundamentals](computer-organization-and-architecture/coa-fundamentals)
 - [Boolean Logic](computer-organization-and-architecture/boolean-logic)
-- [Registers & RAM](computer-organization-and-architecture/registers-and-ram)
 - CPU
   - [ALU](computer-organization-and-architecture/alu)
   - [Control Unit](computer-organization-and-architecture/control-unit)

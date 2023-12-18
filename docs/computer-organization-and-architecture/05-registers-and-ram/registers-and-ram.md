@@ -10,3 +10,5 @@ description: Registers & RAM
 - [] 
 
 RAM & Registers page
+
+### Status Registers
