@@ -13,7 +13,7 @@ description: ALU
 
 Computers, as we know, only understand binary data, represented by electrical signals in the form of 1s and 0s. When performing calculations, computers rely on [binary operations](/computer-and-programming-fundamentals/binary-representation#binary-operation) to manipulate this binary data. Computer will leverage [various logic gates](/computer-organization-and-architecture/boolean-logic#logic-gates), which is based on [boolean logic](/computer-organization-and-architecture/boolean-logic) in order to carry out binary operations.
 
-For example, consider an input electrical signal 1 followed by 0, and another input is 0 followed by 1. The first input, namely 1 and 0, will go through an [OR logic gate](/computer-organization-and-architecture/logic-gates), producing 1. The second input, 0 and 1, will go through another OR logic gate, producing 1 as well. The two result, which is 1 followed another 1, or "11", will represent 3 in binary number system.
+For example, consider an input electrical signal 1 followed by 0, and another input is 0 followed by 1. The first input, namely 1 and 0, will go through an [OR logic gate](/computer-organization-and-architecture/boolean-logic#logic-gates), producing 1. The second input, 0 and 1, will go through another OR logic gate, producing 1 as well. The two result, which is 1 followed another 1, or "11", will represent 3 in binary number system.
 
 What we have just done is doing an [addition operation on binary](/computer-and-programming-fundamentals/binary-representation#addition). The first input "10", which represent the number 2 in decimal, and the second input "01", which represent number 1, is added together by using the OR logic gate, producing 3.
 
