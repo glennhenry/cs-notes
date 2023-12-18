@@ -401,8 +401,8 @@ const sidebars = {
           label: "CPU",
           items: [
             "computer-organization-and-architecture/alu/alu",
-            "computer-organization-and-architecture/control-unit/control-unit",
             "computer-organization-and-architecture/registers-and-ram/registers-and-ram",
+            "computer-organization-and-architecture/control-unit/control-unit",
             "computer-organization-and-architecture/instructions-and-programs/instructions-and-programs",
             "computer-organization-and-architecture/cpu/cpu",
           ],

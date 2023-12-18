@@ -11,8 +11,8 @@ description: Computer Organization & Architecture Notes
 - [Boolean Logic](computer-organization-and-architecture/boolean-logic)
 - CPU
   - [ALU](computer-organization-and-architecture/alu)
-  - [Control Unit](computer-organization-and-architecture/control-unit)
   - [Registers & RAM](computer-organization-and-architecture/registers-and-ram)
+  - [Control Unit](computer-organization-and-architecture/control-unit)
   - [Instructions & Programs](computer-organization-and-architecture/instructions-and-programs)
   - [CPU](computer-organization-and-architecture/cpu)
 - [Input/Output](computer-organization-and-architecture/input-output)
