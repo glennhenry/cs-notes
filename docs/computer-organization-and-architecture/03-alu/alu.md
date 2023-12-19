@@ -37,7 +37,7 @@ Input of ALU :
 
 - **Operand** : ALU takes two input called [operand](/computer-organization-and-architecture/coa-fundamentals#opcode--operand), which represent the input binaries for operation to be performed.
 - **[Opcode](/computer-organization-and-architecture/coa-fundamentals#opcode--operand)** : It is the instruction on what should ALU do based on the two operand.
-- **Status** : Status provide information about the current status of ALU or the contextual information from the previous operations. The status is called a **flag**, it is obtained from a special registers called [status registers](/computer-organization-and-architecture/registers-and-ram#status-registers).
+- **Status** : Status provide information about the current status of ALU or the contextual information from the previous operations. The status is called a **flag**, it is obtained from a special registers called [status registers](/computer-organization-and-architecture/registers-and-ram#type-of-registers).
 
   Some common flags are :
 
