@@ -8,6 +8,7 @@ description: Control Unit
 **Main Source :**
 
 - **[The Central Processing Unit (CPU) - Crash Course Computer Science #7](https://youtu.be/FZGugFqdr60?si=fv-igtfockfyfiRw)**
+- **[Instructions & Programs - Crash Course Computer Science #8](https://youtu.be/zltgXvg6r3k?si=DZwDzYcoylBP47S7)**
 
 **Control Unit** is the component of CPU that is responsible for coordinating and controlling the activities of the CPU. It fetches instruction from the memory, decode it or interprets the instruction and generates necesarry command and signals for ALU and other components such as the registers and I/O devices. The control unit is also responsible for managing time and synchronization between different component of CPU, ensuring that various operations, such as fetching, decoding, executing, and storing results, occur in the correct sequence and at the appropriate time.
 
@@ -99,3 +100,44 @@ Interrupt is a signal that indicates the occurrence of an event that requires th
 When an interrupt happen, the control unit will suspends the execution of current instruction and will transfers control to an **interrupt handler routine**, it is the component that is responsible for handling interrupt event. The control unit will also saves the execution context, including the relevant registers such as the PC. After the handler completes the handling, control unit will continue the execution of the program with the saved context.
 
 Exceptions are unwanted event during program's execution, it will need special handling from **exception handler**. Similar to interruption, the control unit will save the execution context and transfers the control to the exception handler. Once the exception handling is completed, the control unit continue the program's execution.
+
+#### More Instructions
+
+There are still many instructions that computer can execute, it is to handle more complex situation that occurs in a program. There are many more operations such as jump, halt, condition, looping, etc.
+
+![More instructions](./instructions.png)  
+Source : https://youtu.be/zltgXvg6r3k?si=EXDRnkb43OL_tda1&t=201
+
+- **Halt** : The halt instruction is used to explicitly terminate the execution of a program or a specific section of code. It is very important to halt when your program is done executing, to indicates a program has completed its tasks and ready to exit.
+- **Jump** : Also known as goto statement, is an instruction that doesn't continue with the normal sequential flow. You can transfer control to a different part of program, such as "jumping" to specified memory address. Jumps are used to implement [control flow](/computer-and-programming-fundamentals/programming-concepts#control-flow)
+- **Condition** : Condition is anything that refer to expressions or logical statements that evaluate to either true or false. They are used to make decision within program, typically to implement the [if-statement](/computer-and-programming-fundamentals/programming-concepts#conditional-statement). Conditional statement will involve logical operation, such as checking if some number greater than other number using various [logic gates](/computer-organization-and-architecture/boolean-logic#logic-gates).
+- **Looping** : Looping is the act of repeating an instruction multiple times, it is used to implement loop statement like [for-loop](/computer-and-programming-fundamentals/programming-concepts#for-loop) and [while-loop](/computer-and-programming-fundamentals/programming-concepts#while-loop). Instead of repeating certain task several times, loops allows us to automate it. Looping typically uses jump to enable non-sequential execution and simulate looping behavior.
+
+##### Example
+
+1. LOAD_A 14 : Load the number 1 from the memory address 14 in RAM, store it in the register A.
+2. LOAD_B 15 : Load the number 1 from the memory address 15, store it in the register B.
+3. ADD B A : Add together register B and register A, resulting in 2, store the result in register A.
+4. STORE_A 13 : From register A, store the value to memory address 13.
+5. JUMP 2 : Jump to the memory address 2, the memory address 2 contains the instruction ADD B A, we are going to do it again the similar way.
+
+This behavior may be repeated forever, because we keep jumping, adding, storing without any condition on when this will end.
+
+![Example 1](./example-1.png)  
+Source : https://youtu.be/zltgXvg6r3k?si=WpIfH9GUWfWehoz2&t=295
+
+We will need to modify so that the jump statement should not be executed at some point. We can utilize a conditional jump statement, JUMP_NEG, which means we are only going to jump if the number on the registers is negative. Furthermore, we will also subtract the number on registers instead of adding them. This will effectively create a loop where we are going to subtract the number until they are negative.
+
+1. LOAD_A 14, LOAD_B 15 : Load number from memory address 14 and 15 to register A and B, respectively.
+2. SUB B A : Subtract the number on register B with register A, store the result in register A.
+3. JUMP_NEG 5 : If the number on register A is negative, jump to address 5, else continue sequential execution.
+4. JUMP 2 : Because the number is not negative, we will continue to the next instruction, which is to jump to address 2.
+
+This will be repeated until the number on register A is negative.
+
+5. JUMP_NEG 5 : After register A is negative, we will jump to address 5.
+6. STORE_A 13 : Store the number from register A to the address 13.
+7. HALT : Stop the program.
+
+![Example 2](./example-2.png)  
+Source : https://youtu.be/zltgXvg6r3k?si=1Nn9-95QfB123WYP&t=335

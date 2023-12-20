@@ -13,7 +13,6 @@ description: Computer Organization & Architecture Notes
   - [ALU](computer-organization-and-architecture/alu)
   - [Registers & RAM](computer-organization-and-architecture/registers-and-ram)
   - [Control Unit](computer-organization-and-architecture/control-unit)
-  - [Instructions & Programs](computer-organization-and-architecture/instructions-and-programs)
   - [CPU](computer-organization-and-architecture/cpu)
 - [Input/Output](computer-organization-and-architecture/input-output)
 - [Assembly Language](computer-organization-and-architecture/assembly-language)

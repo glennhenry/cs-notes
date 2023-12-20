@@ -7,10 +7,10 @@ description: CPU
 
 **Main Source :**
 
-- [] 
+- **[Advanced CPU Designs - Crash Course Computer Science #9](https://youtu.be/rtAlC5J1U40?si=wae6I4lznG73wuzx)**
 
 CPU page
-control flow, loops, function/procedures
+immediate value
 
 ### Instruction Set
 
