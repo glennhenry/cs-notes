@@ -68,7 +68,12 @@ The CPU executes instruction in a cycle, it goes through three main steps : fetc
    ![Control unit with ALU](./control-unit-with-alu.png)  
    Source : https://youtu.be/FZGugFqdr60?si=po5Qm1YG2UPzX5Ur&t=410
 
-   The interaction between control unit and [ALU](/computer-organization-and-architecture/alu), it performs the arithmetic or logical operation according to the control signals and operand received from the control unit.
+   The interaction between control unit and [ALU](/computer-organization-and-architecture/alu), it performs the arithmetic or logical operation according to the control signals and operand received from the control unit. Here's a common example :
+
+   1. First, some binary data (number) is loaded into the register A, using the LOAD_A instruction.
+   2. Another binary data is loaded into the register B, using the LOAD_B instruction.
+   3. The two number form register A and register B will be added in the ALU, using the instruction ADD.
+   4. The result will be stored in some RAM location, using the instruction STORE_A.
 
 #### Clock Cycle
 
