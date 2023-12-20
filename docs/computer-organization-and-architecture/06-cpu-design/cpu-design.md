@@ -1,8 +1,8 @@
 ---
-slug: /computer-organization-and-architecture/cpu
-id: cpu
-title: CPU
-description: CPU
+slug: /computer-organization-and-architecture/cpu-design
+id: cpu-design
+title: CPU Design
+description: CPU Design
 ---
 
 **Main Source :**

@@ -403,7 +403,7 @@ const sidebars = {
             "computer-organization-and-architecture/alu/alu",
             "computer-organization-and-architecture/registers-and-ram/registers-and-ram",
             "computer-organization-and-architecture/control-unit/control-unit",
-            "computer-organization-and-architecture/cpu/cpu",
+            "computer-organization-and-architecture/cpu-design/cpu-design",
           ],
         },
         "computer-organization-and-architecture/input-output/input-output",
