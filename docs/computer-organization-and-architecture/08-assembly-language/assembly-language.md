@@ -14,7 +14,7 @@ description: Assembly Language
 
 Due to the direct interaction with the hardware, asm is specific to a particular computer architecture or processor family. Different processors have their own assembly languages, tailored to their instruction sets, registers, and addressing modes. Therefore, code written in assembly language is not portable across different hardware platforms without modification.
 
-![ASM](https://www.investopedia.com/terms/a/assembly-language.asp)  
+![ASM](./asm.png)  
 Source : https://www.investopedia.com/terms/a/assembly-language.asp
 
 ### Translatation to Machine Code
