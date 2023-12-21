@@ -62,7 +62,7 @@ There are many instruction keyword in asm :
 
 - **Registers**
 
-  - **AX, BX, CX, DX (general-purpose registers)**
+  - **AX, BX, CX, DX, EBX (general-purpose registers)**
   - **AL (accumulator low)**
   - **EAX (extended accumulator)**
   - **SP (stack pointer)**
