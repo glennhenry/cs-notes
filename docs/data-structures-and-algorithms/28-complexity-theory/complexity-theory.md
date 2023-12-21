@@ -88,7 +88,7 @@ Source : https://makeagif.com/gif/traveling-salesman-problem-visualization-GZeMv
 - If a polynomial-time algorithm exists for any NP-Complete problem, it implies that a polynomial-time algorithm exists for all problems in NP.
 - NP-Complete problems are considered to be of equal difficulty, meaning that solving one NP-Complete problem would effectively solve them all. This property is known as "completeness" because the complexity of all problems in NP is "complete" with respect to the complexity of NP-Complete problems.
 
-An example of an NP-Complete problem is the **Circuit satisfiability problem (CSAT)**. This problem ask whether a circuit that consist of boolean gates can produce output 1, while ensuring that the inputs consistently remain as either 0 or 1.
+An example of an NP-Complete problem is the **Circuit satisfiability problem (CSAT)**. This problem ask whether a circuit that consist of [boolean gates](/computer-organization-and-architecture/boolean-logic#logic-gates) can produce output 1, while ensuring that the inputs consistently remain as either 0 or 1.
 
 To know if CSAT is NP-complete, we would need to proof it belongs to NP and NP-hard.
 

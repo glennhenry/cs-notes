@@ -22,13 +22,13 @@ For example, we may have a program that connect to server, suppose we want to kn
 
 #### Decompilation
 
-**Decompilation** is a technique to translate compiled binary code back into a higher-level programming language. When we program in higher-level language, the source code will be converted down into machine language (e.g., assembly language), which will be executed by computers. These codes are hard to understand by human, by decompiling it back to higher-level language, we can understand it easier.
+**Decompilation** is a technique to translate compiled binary code back into a higher-level programming language. When we program in higher-level language, the source code will be converted down into machine language (e.g., [assembly language](/computer-organization-and-architecture/assembly-language)), which will be executed by computers. These codes are hard to understand by human, by decompiling it back to higher-level language, we can understand it easier.
 
 Decompiling can recreate (or at least approximate) the original source code from executable code to higher-level language. This will help reverse engineering process a lot, because we are able to see the readable code. However, decompilation tools are not perfect. The resulting decompiled code may not be an exact replica of the original source code. Decompilers can face challenge when reconstructing the code due to compilers optimizations that results in loss of information during the compilation process, and other factors.
 
 #### Disassembly
 
-**Disassembly** is a technique to convert machine code or binary instructions back into assembly language. It doesn't convert back to higher-level language, but it converts it into readable machine code.
+**Disassembly** is a technique to convert machine code or binary instructions back into [assembly language](/computer-organization-and-architecture/assembly-language). It doesn't convert back to higher-level language, but it converts it into readable machine code.
 
 Disassembly provides more detail about the low-level instruction, it doesn't need to approximate high-level abstraction. It can reveal specific instructions executed by the processor, including memory accesses, register operations, and control flow.
 
