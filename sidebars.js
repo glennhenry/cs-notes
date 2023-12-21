@@ -412,7 +412,6 @@ const sidebars = {
           type: "category",
           label: "Computer Architecture",
           items: [
-            "computer-organization-and-architecture/system-bus/system-bus",
             "computer-organization-and-architecture/von-neumann/von-neumann",
             "computer-organization-and-architecture/harvard/harvard",
             "computer-organization-and-architecture/isa/isa",

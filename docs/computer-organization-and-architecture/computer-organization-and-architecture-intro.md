@@ -17,7 +17,6 @@ description: Computer Organization & Architecture Notes
 - [Input/Output](computer-organization-and-architecture/input-output)
 - [Assembly Language](computer-organization-and-architecture/assembly-language)
 - Computer Architecture
-  - [System Bus](computer-organization-and-architecture/system-bus)
   - [Von Neumann](computer-organization-and-architecture/von-neumann)
   - [Harvard](computer-organization-and-architecture/harvard)
   - [ISA](computer-organization-and-architecture/isa)
