@@ -75,6 +75,13 @@ Another use of prediction is to predict the outcome of memory access instruction
 ![Branch history](./branch-history.png)  
 Source : https://en.wikipedia.org/wiki/Branch_predictor
 
+#### Superscalar
+
+Superscalar is an instruction-level parallelism that allows the execution of multiple instructions in parallel within a single clock cycle. It can be employed with pipelining, where each stage of the pipeline can handle multiple instructions simultaneously.
+
+![Superscalar](./superscalar.png)  
+Source : https://en.wikipedia.org/wiki/Superscalar_processor
+
 #### Cache & Memory
 
 Memory is the place for storing data and instructions that are actively used by the CPU during program execution. The commonly used memory for random access is the RAM.
