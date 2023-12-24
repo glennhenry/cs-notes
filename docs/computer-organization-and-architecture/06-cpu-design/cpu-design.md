@@ -94,7 +94,7 @@ Cache typically organize the structure of their memory for more efficient retrie
 Source : https://www.cloudeka.id/id/berita/web-dev/apa-itu-cache-memory/
 
 :::tip
-More about [caching](/backend-development/caching), some may relate to backend development. It includes type of caching, cache invalidation, cache replacement. Also, more about [computer memory](/computer-organization-and-architecture/computer-memory).
+More about [caching](/backend-development/caching), some may relate to backend development. It includes type of caching, cache invalidation, cache replacement.
 :::
 
 ### Performance Evaluation
