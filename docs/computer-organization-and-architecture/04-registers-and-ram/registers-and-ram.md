@@ -9,8 +9,9 @@ description: Registers & RAM
 
 - **[Registers and RAM - Crash Course Computer Science #6](https://youtu.be/fpnE6UAfbtU?si=XGkAf7mO--sxmc3t)**
 - **[What is a Register in a CPU and How Does it Work? - TOTALPHASE](https://www.totalphase.com/blog/2023/05/what-is-register-in-cpu-how-does-it-work/)**
+- **Some Google searches**
 
-**Registers & RAM** are important components in CPU, they serve as storage or memory for the CPU. Registers is a smaller storage with higher speed that is suitable to hold intermediate result. While RAM is the larger storage with lower speed that is suitable to hold the program's data and instructions actively used by CPU during program's execution. Both memory is a type of volatile memory, it can only store data while the device is running.
+**Registers & RAM** are important components in CPU, they serve as storage or memory for the CPU. Register is a smaller storage with higher speed that is suitable to hold intermediate result. While RAM is the larger storage with lower speed that is suitable to hold the program's data and instructions actively used by CPU during program's execution. Both memory is a type of volatile memory, it can only store data while the device is running.
 
 Registers are the fastest form of computer memory, and they are directly accessible by the CPU. When doing arithmetic operation using [ALU](/computer-organization-and-architecture/alu), we will need place to store the intermediate result or to store other information such as carry temporarily. Registers is typically the place to store this. The ALU will receive important information such as status and operand from the registers.
 
@@ -94,7 +95,7 @@ In this structure, although we used additional wires just for enabling/disabling
 
 In the grid structure, we can select certain latch by its corresponding row and column. If each latch were to have an address, just like memory, their address would be their corresponding row and column.
 
-But remember, the number of row and column will also be encoded in binary format. For example, a latch in 4th column and 7th row would have address of "01000111", where 4 in binary is "0100" and 7 in binary is "0111". The address length of the grid should match the number of latches in the grid. In a 16x16 grid (256-bit memory) with 16 latches per row and column, an 8-bit address is needed. This consists of 4 bits for the row address and 4 bits for the column address.
+But remember, the number of row and column will also be encoded in binary format. For example, a latch in 4th column and 7th row would have address of "01000111", where 4 in binary is "0100" and 7 in binary is "0111". The address length of the grid should match the number of latches in the grid. In a 16×16 grid (256-bit memory) with 16 latches per row and column, an 8-bit address is needed. This consists of 4 bits for the row address and 4 bits for the column address.
 
 When we have certain address and we want to get the latch, we will need something that handles the conversion. A **multiplexer** is a component we can use, it is a component that is commonly used to select and route different data inputs to the desired output. So, whenever we want to enable write and write data for a specific latch, we just input the memory address in form of binary to the multiplexer.
 
@@ -103,14 +104,14 @@ Source : https://youtu.be/fpnE6UAfbtU?si=3eEYivxZm6Nfx-_C&t=487
 
 #### RAM
 
-The 16x16 grid memory can be simplified like below
+The 16×16 grid memory can be simplified like below
 
 ![256-bit memory](./256-bit-memory.png)  
 Source : https://youtu.be/fpnE6UAfbtU?si=XDLNhZa1uqvkB82k&t=519
 
 It will have address lines that should accommodate the 256 possible memory locations, the data lines for writing to the memory, and the read/write enable/disable functionality.
 
-We can combine multiple instance of this 256-bit memory to construct a storage with larger capacity. We can arrange them the similar way of arranging latches to create a registers.
+We can combine multiple instance of this 256-bit memory to construct a storage with larger capacity. We can arrange them the similar way of arranging latches to create a register.
 
 ![Combined 256-bit memory](./256-bit-memory-combined.png)  
 Source : https://youtu.be/fpnE6UAfbtU?si=THw2caJKKBD2tiSt&t=550
@@ -137,6 +138,21 @@ Source : https://www.eecis.udel.edu/~davis/cpeg222/AssemblyTutorial/Chapter-10/a
 Sometimes memory address is denoted by [hexadecimal number system](/computer-and-programming-fundamentals/number-system#hexadecimal). The prefix "0x" typically correspond to hexadecimal, while the prefix "0b" correspond to binary.
 :::
 
+##### Type of RAM
+
+There are several types of RAM used in computer systems :
+
+- **DRAM (Dynamic Random Access Memory)** : DRAM is the most common type of RAM used in modern computer systems. It is a volatile memory technology that stores each bit of data in a separate capacitor within an integrated circuit. The data stored in DRAM needs to be refreshed periodically to retain its information, by refreshing, it means restoring the charge in the capacitor. DRAM is relatively slower compared to other types but offers higher storage density and lower cost.
+
+- **SRAM (Static Random Access Memory)** : SRAM is another type of volatile RAM that stores data using latch circuits. Unlike DRAM, SRAM does not require periodic refreshing, which makes it faster and more reliable. However, SRAM is more expensive and has lower storage density compared to DRAM. SRAM is commonly used in cache memory and as registers in CPUs.
+
+- **SDRAM (Synchronous Dynamic Random Access Memory)** : Typically traditional RAM can't keep up with the CPU's processing speed, this results in a performance bottleneck. SDRAM is a type of DRAM that synchronizes its operations with the CPU's clock, offering the potential for improved performance. SDRAM is used as the main memory in most computer systems. Different variations of SDRAM include DDR (Double Data Rate) SDRAM, DDR2, DDR3, DDR4, and DDR5, with each generation providing increased data transfer rates and improved performance.
+
+- **VRAM (Video Random Access Memory)** : (not to be confused with virtual memory) VRAM is a specialized type of RAM that is specifically designed for graphics processing. It is used to store graphical data required by the graphics card. VRAM is optimized for high-speed read and write operations and is capable of simultaneously providing data to the graphics card while refreshing the display.
+
+![Type of RAM](./type-of-ram.png)  
+Source : https://quicklearncomputer.com/types-of-ram/
+
 #### Type of Registers
 
 There are many types of registers :
@@ -149,7 +165,24 @@ There are many types of registers :
   - **Stack Pointer** : During program's execution, a [dedicated stack](/computer-and-programming-fundamentals/memory#stack) will be used to store function calls, local variables, intermediate data storage, etc. The stack pointer is the specific [pointer](/computer-and-programming-fundamentals/memory#pointer--reference) that points to the stack. Simply the register contains memory address for the program's stack.
 - **Status Register/Flags Register** : Contains individual bits that represent the status or condition of the CPU after an operation. These bits may provide information about the [arithmetic operations in ALU](/computer-organization-and-architecture/alu), such as carry, overflow, zero, and sign indicators.
 
-And many more...
+And many more…
 
 ![Type of registers in CPU](./type-of-registers.png)  
 Source : https://www.tutorialandexample.com/registers
+
+### Memory Hierarchy
+
+**Memory Hierarchy** is the arrangement and organization of different levels of memory in a computer system. The hierarchy consider factors such as cost, capacity, access speed, and latency.
+
+- **Registers** : These are the fastest and smallest storage units located directly within the CPU. Registers hold data that the CPU is currently processing. They have the fastest access times but the smallest capacity.
+
+- **Cache** : Cache memory is a small and fast memory located between the CPU and main memory. It stores frequently accessed data and instructions to reduce the time taken to access them from the main memory. Cache memory is divided into multiple levels, such as L1, L2, and sometimes L3, with each level having larger capacity but slower access times than the previous level.
+
+- **Main Memory (RAM)** : Main memory, typically is RAM modules, is the primary storage used by programs and data during execution. It has larger capacity compared to cache memory but slower access times.
+
+- **Secondary Storage** : Secondary storage devices, such as hard disk drives (HDDs) and solid-state drives (SSDs), provide non-volatile storage for long-term data storage. They have larger capacities than main memory but longer access times.
+
+- **Tertiary Storage** : Tertiary storage refers to external storage devices, such as magnetic tapes or optical disks. They offer even larger capacities, but slower access times compared to secondary storage.
+
+![Memory hierarchy](./memory-hierarchy.png)  
+Source : https://www.geeksforgeeks.org/memory-hierarchy-design-and-its-characteristics/

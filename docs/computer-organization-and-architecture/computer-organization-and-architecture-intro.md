@@ -20,6 +20,5 @@ description: Computer Organization & Architecture Notes
   - [Von Neumann](computer-organization-and-architecture/von-neumann)
   - [Harvard](computer-organization-and-architecture/harvard)
   - [ISA](computer-organization-and-architecture/isa)
-- [Computer Memory](computer-organization-and-architecture/computer-memory)
 - [GPU](computer-organization-and-architecture/gpu)
 - [Vector Processors & TPU](computer-organization-and-architecture/vector-processors-and-tpu)

@@ -12,6 +12,15 @@ description: Operating System Notes
 - [Containerization & Virtualization](/operating-system/containerization-virtualization)
 - file system
 - memory management
+    - Address
+    - Memory Allocation
+    - Stack & Heap Allocation
+    - Garbage Collection
+    - Direct Memory Access
+    - Paging
+    - Segmentation
+    - Virtual Memory
+    - Cache
 - booting
 - ring 0 1 2 3
 - kernel

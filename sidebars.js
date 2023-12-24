@@ -417,7 +417,6 @@ const sidebars = {
             "computer-organization-and-architecture/isa/isa",
           ],
         },
-        "computer-organization-and-architecture/computer-memory/computer-memory",
         "computer-organization-and-architecture/gpu/gpu",
         "computer-organization-and-architecture/vector-processors-and-tpu/vector-processors-and-tpu",
       ],
