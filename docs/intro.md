@@ -18,7 +18,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[Digital Media Processing](digital-media-processing)**
 - **[Computer Networking](computer-networking)**
 - **[Data Structures & Algorithms](data-structures-and-algorithms)**
-- [Computer Organization & Architecture](computer-organization-and-architecture)
+- **[Computer Organization & Architecture](computer-organization-and-architecture)**
 - [Operating System](operating-system)
 - [Theory of Computation & Automata](theory-of-computation-and-automata)
 - [Compilers](compilers)
