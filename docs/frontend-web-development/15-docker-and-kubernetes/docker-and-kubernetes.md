@@ -7,29 +7,29 @@ description: Docker & Kubernetes
 
 This is the same note as :
 
-- [Cloud Computing > Docker & Kubernetes](/cloud-computing/docker-and-kubernetes)
-- [Backend Development > Docker & Kubernetes](/backend-development/docker-kubernetes)
+- **[Cloud Computing > Docker & Kubernetes](/cloud-computing/docker-and-kubernetes)**
+- **[Backend Development > Docker & Kubernetes](/backend-development/docker-kubernetes)**
 
 **Main Source :**
 
 - **[Wikipedia Docker (software)](<https://en.wikipedia.org/wiki/Docker_(software)>)**
 - **[Wikipedia Kubernetes](https://en.wikipedia.org/wiki/Kubernetes)**
 
-While developing an application, developers uses various library and module creating a complex dependency. Running the app in another machine other than the development environtment might be tricky, because the dependencies may not included in the machine.
+While developing an application, developers uses various library and module creating a complex dependency. Running the app in another machine other than the development environment might be tricky, because the dependencies may not include in the machine.
 
 ### Docker
 
-**Docker** is a platform that allows developers to package their applications and dependencies so that it can be easily distributed and run on any system that supports Docker. Docker uses the idea of "containers" these are isolated environment of our code. Docker container is able to simulate a system that is able to run our application, this technology is called [**Virtualization**](/cloud-computing/containerization-virtualization#virtualization).
+**Docker** is a platform that allows developers to package their applications and dependencies so that it can be easily distributed and run on any system that supports Docker. Docker uses the idea of "containers" these are isolated environment of our code. Docker container is able to simulate a system that is able to run our application, this technology is called [**Virtualization**](/cloud-computing/virtualization).
 
-A Docker container is made using a Docker images, the "images" doesn't refer to images we see everyday. An images is a set of instruction to build a container, images can be thought as a template of making container.
+A Docker container is made using a Docker images, the "images" doesn't refer to images we see every day. An image is a set of instruction to build a container, images can be thought as a template of making container.
 
 :::tip
-Find more about containerization [here](/cloud-computing/containerization-virtualization)
+Find more about containerization [here](/cloud-computing/containerization)
 :::
 
 #### How containers are made :
 
-- **Dockerfile** : A Dockerfile is a textfile that contains dependencies and configuration needed by the application. Dockerfile typically require a base image, this is a pre-built image that serves as the starting point for building a Docker container. It contains a minimal operating system and other basic components needed to run an application.
+- **Dockerfile** : A Dockerfile is a text file that contains dependencies and configuration needed by the application. Dockerfile typically require a base image, this is a pre-built image that serves as the starting point for building a Docker container. It contains a minimal operating system and other basic components needed to run an application.
 
 - **Build Command** : Docker provide a CLI to perform various operations, such as building Docker images, running Docker containers, and managing Docker networks and volumes. Once the Dockerfile is created, you can use the Docker CLI to build the image.
 
@@ -46,7 +46,7 @@ While Docker is used to build containerized applications, **Kubernetes**, on the
 
 Kubernetes organizes containers into something called **pods**, they are the smallest deployable unit in Kubernetes and can contain one or more containers. Containers within a pod share the same network namespace and can communicate with each other.
 
-One or more pods grouped together and run on a machine is called a **Node**. Node is responsible for running a Pods of container and provide resources like CPU and memory for the Pods running on it.
+One or more pods grouped together and run on a machine is called a **Node**. Node is responsible for running Pods of containers and provide resources like CPU and memory for the Pods running on it.
 
 When there is a set of nodes that run containerized applications, these are called **Kubernetes cluster**. A cluster can be managed from a control plane which is the component that is used to manage the state of the cluster and provide the API interface for managing and deploying containerized applications.
 
@@ -60,5 +60,5 @@ When there is a set of nodes that run containerized applications, these are call
 
 - **Scheduler** : The scheduler is responsible for scheduling Pods to run on Nodes in the cluster based on factors like resource availability, node affinity, and anti-affinity. The scheduler selects the most suitable Node for each Pod and assigns it to that Node.
 
-![Kubernates diagram showing a client controls a kubernetes cluster containing several nodes](./kubernetes-diagram.png)  
+![Kubernetes diagram showing a client controls a Kubernetes cluster containing several nodes](./kubernetes-diagram.png)  
 Source : https://www.nginx.com/resources/glossary/kubernetes/
