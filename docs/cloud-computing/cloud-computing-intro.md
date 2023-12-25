@@ -10,7 +10,8 @@ Cloud Computing
 All pages
 
 
-- [Containerization & Virtualization](/cloud-computing/containerization-virtualization)
+- [Virtualization](/cloud-computing/virtualization)
+- [Containerization](/cloud-computing/containerization)
 - [Docker & Kubernetes](/cloud-computing/docker-and-kubernetes)
 - Distributed System
 - a

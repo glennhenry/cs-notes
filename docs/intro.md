@@ -59,13 +59,12 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 14. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambiguous, which pixel should be determined to draw. Text rendering
 15. **[ref]** /computer-and-programming-fundamentals/data-representation (refer to database)
 16. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
-17. **[ref]** /computer-and-programming-fundamentals/concurrency-and-parallelism (refer to operating system IPC)
-18. **[add]** /digital-media-processing/iso (ISO file format, how they work)
-19. **[update]** computer-graphics (should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic, and bad English)
-20. **[ref]** /data-structures-and-algorithms/complexity-theory (ref to Turing machine and other TOC related terms)
-22. **[update]** /frontend-web-development : Many notes are lacking, however, it's not as bad as computer graphics, minor correction on all notes is needed.
-23. **[ref]** /computer-security/reverse-engineering (ref to decompilation in compilers)
-24. **[ref]** /computer-organization-and-architecture/registers-and-ram (ref to virtual memory in operating system)
+17. **[add]** /digital-media-processing/iso (ISO file format, how they work)
+18. **[update]** computer-graphics (should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic, and bad English)
+19. **[ref]** /data-structures-and-algorithms/complexity-theory (ref to Turing machine and other TOC related terms)
+20. **[update]** /frontend-web-development : Many notes are lacking, however, it's not as bad as computer graphics, minor correction on all notes is needed.
+21. **[ref]** /computer-security/reverse-engineering (ref to decompilation in compilers)
+22. **[ref]** /operating-system/virtualization (ref to distributed systems in cloud-computing)
 
 ### Longest Notes
 

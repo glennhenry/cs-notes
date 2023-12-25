@@ -148,7 +148,7 @@ There are several types of RAM used in computer systems :
 
 - **SDRAM (Synchronous Dynamic Random Access Memory)** : Typically traditional RAM can't keep up with the CPU's processing speed, this results in a performance bottleneck. SDRAM is a type of DRAM that synchronizes its operations with the CPU's clock, offering the potential for improved performance. SDRAM is used as the main memory in most computer systems. Different variations of SDRAM include DDR (Double Data Rate) SDRAM, DDR2, DDR3, DDR4, and DDR5, with each generation providing increased data transfer rates and improved performance.
 
-- **VRAM (Video Random Access Memory)** : (not to be confused with virtual memory) VRAM is a specialized type of RAM that is specifically designed for graphics processing. It is used to store graphical data required by the graphics card. VRAM is optimized for high-speed read and write operations and is capable of simultaneously providing data to the graphics card while refreshing the display.
+- **VRAM (Video Random Access Memory)** : (not to be confused with [virtual memory](/operating-system/memory-management#virtual-memory)) VRAM is a specialized type of RAM that is specifically designed for graphics processing. It is used to store graphical data required by the graphics card. VRAM is optimized for high-speed read and write operations and is capable of simultaneously providing data to the graphics card while refreshing the display.
 
 ![Type of RAM](./type-of-ram.png)  
 Source : https://quicklearncomputer.com/types-of-ram/

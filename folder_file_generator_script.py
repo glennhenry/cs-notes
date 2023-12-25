@@ -3,40 +3,62 @@
 
 import os
 
-topic_title = "computer-organization-and-architecture"
+topic_title = "operating-system"
 
 # List of content in kebab title
 content_id = [
-    "coa-fundamentals",
-    "boolean-logic",
-    "ram-and-registers",
-    "cpu",
-    "assembly-language",
-    "input-output",
-    "system-bus",
-    "von-neumman",
-    "harvard",
-    "isa",
-    "computer-memory",
-    "gpu",
-    "vector-processors-and-tpu",
+    "os-fundamentals",
+    "kernel",
+    "process-management",
+    "multithreading",
+    "interrupt-and-exception-handling",
+    "scheduling",
+    "inter-process-communication",
+    "memory-management",
+    "file-system",
+    "storage-management",
+    "system-call-and-service",
+    "booting",
+    "device-driver-and-io",
+    "networking",
+    "user-interface",
+    "virtualization",
+    "security",
+    "type-of-os",
+    "unix",
+    "linux-kernel",
+    "bsd",
+    "android",
+    "windows",
+    "macos-and-ios",
 ]
 
 # List of content in title case
 content_title = [
-    "COA Fundamentals",
-    "Boolean Logic",
-    "RAM & Registers",
-    "CPU",
-    "Assembly Language",
-    "Input/Output",
-    "System Bus",
-    "Von Neumman",
-    "Harvard",
-    "ISA",
-    "Computer Memory",
-    "GPU",
-    "Vector Processors & TPU",
+    "OS Fundamentals",
+    "Kernel",
+    "Process Management",
+    "Multithreading",
+    "Interrupt & Exception Handling",
+    "Scheduling",
+    "Inter-process Communication",
+    "Memory Management",
+    "File System",
+    "Storage Management",
+    "System Call & Service",
+    "Booting",
+    "Device Driver & I/O",
+    "Networking",
+    "User Interface",
+    "Virtualization",
+    "Security",
+    "Type of OS",
+    "Unix",
+    "BSD",
+    "Linux Kernel",
+    "Android",
+    "Windows",
+    "macOS & iOS"
 ]
 
 # Create temp folder for debugging
@@ -97,6 +119,6 @@ def generate_folder_file():
 
 # main
 
-# generate_folder_file()
+generate_folder_file()
 # generate_topic_links()
-generate_topic_sidebars()
+# generate_topic_sidebars()

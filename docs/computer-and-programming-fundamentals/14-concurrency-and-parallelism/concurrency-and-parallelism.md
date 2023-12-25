@@ -31,7 +31,7 @@ Another example is a mobile app that loads data from the phone's storage. The ap
 
 A **process** is an instance of a running program. A process encapsulates the running program's code, data, and resources required to execute a program. Each process has its own memory space and system resources. Process is managed by the [operating system](/computer-and-programming-fundamentals/operating-system), and is independent with each other process, they are executed in its own isolated memory space.
 
-Process has its own memory space and system resource, they are not directly accessible or affected by another process. In order to communicate with other processes, a mechanism called **Inter-Process Communication (IPC)** is employed.
+Process has its own memory space and system resource, they are not directly accessible or affected by another process. In order to communicate with other processes, a mechanism called **[Inter-Process Communication (IPC)](/operating-system/inter-process-communication)** is employed.
 
 Operating system will keep track the state of each process, a process will run through several states :
 

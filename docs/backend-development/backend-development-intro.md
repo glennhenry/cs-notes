@@ -30,7 +30,7 @@ Backend development is the process of creating the server-side component of an a
   - [Microservice](backend-development/microservice)
   - [SOA](backend-development/soa)
   - [Serverless](backend-development/serverless)
-- [Containerization & Virtualization](backend-development/containerization-virtualization)
+- [Containerization](backend-development/containerization)
 - [Docker & Kubernetes](backend-development/docker-kubernetes)
 - [Backend & Server Security](backend-development/backend-server-security)
 - [Caching](backend-development/caching)
