@@ -7,9 +7,9 @@ description: CS Notes
 
 # CS Notes
 
-My Computer Science notes from various online courses, tutorial, and lectures. I wanted to make my notes into a documentation-style layout to improve the overall readability and presentation.
+My Computer Science notes from various online courses, tutorial, and lectures. I wanted to make my notes into a documentation-like layout to improve the overall readability and presentation.
 
-\* Most of the topics covers more on the theoretical side and less on the technical side.
+**Most of the topics covers more on the theoretical side and less on the technical side.**
 
 ### All topics
 
@@ -39,27 +39,40 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 - **[add]** : add new notes
 - **[update]** : update existing notes
-- **[edit]** : edit notes
 - **[ref]** : add reference to particular notes
 
-1. **[update]** frontend-web-development/search-engine#crawler
-2. **[update]** computer-graphics/computer-display#buffer (explain frame buffer, back buffer, how they are used)
-3. **[update]** computer-graphics/computer-display#vsync
-4. **[update]** digital-signal-processing/compression#svd-compression
-5. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
-6. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
-7. **[ref]** backend-development/caching (cache invalidation ref to database trigger)
-8. **[ref]** backend-development/backend-optimization (resource optimization ref to database index)
-9. **[update]** backend-development/websocket#data-exchange : add web socket payload, frame, ping, pong, fin, rsv, close, timeout
-10. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambiguous, which pixel should be determined to draw. Text rendering
-11. **[ref]** /computer-and-programming-fundamentals/data-representation (refer to database)
-12. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
-13. **[add]** /digital-media-processing/iso (ISO file format, how they work)
-14. **[update]** computer-graphics (should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic, and bad English)
-15. **[ref]** /data-structures-and-algorithms/complexity-theory (ref to Turing machine and other TOC related terms)
-16. **[update]** /frontend-web-development : Many notes are lacking, however, it's not as bad as computer graphics, minor correction on all notes is needed.
-17. **[ref]** /computer-security/reverse-engineering (ref to decompilation in compilers)
-18. **[ref]** /operating-system/virtualization (ref to distributed systems in cloud-computing)
+1. **[update]** computer-graphics : Should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic. Some topic to include :
+
+   - Frame buffer, back buffer, vsync.
+   - Primitive rendering, text rendering.
+
+2. **[update]** frontend-web-development : Minor update for all note, also some topic to include for addition :
+
+   - Search engine, crawler.
+
+3. **[update]** Fix English and typo from each note of topics :
+
+   - Computer Graphics
+   - Frontend Web Development
+   - Digital Signal Processing
+   - Digital Media Processing
+   - Computer Networking
+   - Machine Learning
+   - Deep Learning
+   - Backend Development
+
+4. **[update]** digital-signal-processing : /compression#svd-compression -> add svd compression.
+5. **[add]** /digital-media-processing : /iso -> add ISO file format.
+6. **[ref]** backend-development : /search-engine#elasticsearch -> ref to document database.
+7. **[ref]** backend-development : /serverless -> ref to FaaS in Cloud Computing.
+8. **[ref]** backend-development : /caching#cache-invalidation -> ref to database trigger.
+9. **[ref]** backend-development : /backend-optimization#resource-optimization -> ref to database index.
+10. **[update]** backend-development : /websocket -> #data-exchange, add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
+11. **[ref]** /computer-and-programming-fundamentals : /data-representation -> ref to database.
+12. **[ref]** /computer-and-programming-fundamentals : /query-language -> ref to few concepts in database system.
+13. **[ref]** /data-structures-and-algorithms : /complexity-theory -> ref to Turing machine and other TOC related terms.
+14. **[ref]** /computer-security : /reverse-engineering -> ref to decompilation in compilers.
+15. **[ref]** /operating-system: /virtualization -> ref to distributed systems in cloud-computing.
 
 ### Longest Notes
 
