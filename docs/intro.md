@@ -32,7 +32,6 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[Deep Learning](deep-learning)**
 - [Software Engineering](software-engineering)
 - [Cloud Computing](cloud-computing)
-- [Extras](extras)
 
 \*Bolded are completed
 
@@ -43,28 +42,24 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[edit]** : edit notes
 - **[ref]** : add reference to particular notes
 
-1. **[add]** extras/tor-browser
-2. **[update]** frontend-web-development/search-engine#crawler
-3. **[add]** extras/wayback-machine
-4. **[update]** computer-graphics/computer-display#buffer (explain frame buffer, back buffer, how they are used)
-5. **[update]** computer-graphics/computer-display#vsync
-6. **[update]** digital-signal-processing/compression#svd-compression
-7. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
-8. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
-9. **[add]** extras/torrent (BitTorrent protocol)
-10. **[ref]** backend-development/caching (cache invalidation ref to database trigger)
-11. **[ref]** backend-development/backend-optimization (resource optimization ref to database index)
-12. **[add]** extras/url-shortener
-13. **[update]** backend-development/websocket#data-exchange : add web socket payload, frame, ping, pong, fin, rsv, close, timeout
-14. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambiguous, which pixel should be determined to draw. Text rendering
-15. **[ref]** /computer-and-programming-fundamentals/data-representation (refer to database)
-16. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
-17. **[add]** /digital-media-processing/iso (ISO file format, how they work)
-18. **[update]** computer-graphics (should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic, and bad English)
-19. **[ref]** /data-structures-and-algorithms/complexity-theory (ref to Turing machine and other TOC related terms)
-20. **[update]** /frontend-web-development : Many notes are lacking, however, it's not as bad as computer graphics, minor correction on all notes is needed.
-21. **[ref]** /computer-security/reverse-engineering (ref to decompilation in compilers)
-22. **[ref]** /operating-system/virtualization (ref to distributed systems in cloud-computing)
+1. **[update]** frontend-web-development/search-engine#crawler
+2. **[update]** computer-graphics/computer-display#buffer (explain frame buffer, back buffer, how they are used)
+3. **[update]** computer-graphics/computer-display#vsync
+4. **[update]** digital-signal-processing/compression#svd-compression
+5. **[ref]** backend-development/search-engine#elasticsearch (ref to document database)
+6. **[ref]** backend-development/serverless (ref to FaaS cloud computing)
+7. **[ref]** backend-development/caching (cache invalidation ref to database trigger)
+8. **[ref]** backend-development/backend-optimization (resource optimization ref to database index)
+9. **[update]** backend-development/websocket#data-exchange : add web socket payload, frame, ping, pong, fin, rsv, close, timeout
+10. **[update]** computer-graphics/low-level-graphics : add the line drawing algorithm, we can never draw a perfect line, it can be ambiguous, which pixel should be determined to draw. Text rendering
+11. **[ref]** /computer-and-programming-fundamentals/data-representation (refer to database)
+12. **[ref]** /computer-and-programming-fundamentals/query-language (refer to concepts in database system)
+13. **[add]** /digital-media-processing/iso (ISO file format, how they work)
+14. **[update]** computer-graphics (should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic, and bad English)
+15. **[ref]** /data-structures-and-algorithms/complexity-theory (ref to Turing machine and other TOC related terms)
+16. **[update]** /frontend-web-development : Many notes are lacking, however, it's not as bad as computer graphics, minor correction on all notes is needed.
+17. **[ref]** /computer-security/reverse-engineering (ref to decompilation in compilers)
+18. **[ref]** /operating-system/virtualization (ref to distributed systems in cloud-computing)
 
 ### Longest Notes
 
