@@ -5,10 +5,6 @@ title: Virtualization
 description: Virtualization
 ---
 
-This is the same notes as :
-
-- **[Operating System > Virtualization](/operating-system/virtualization)**
-
 **Main Source :**
 
 - **[Virtualization Explained - PowerCert](https://youtu.be/UBVVq-xz5i0?si=kHYnrYGPjpTsiqYv)**

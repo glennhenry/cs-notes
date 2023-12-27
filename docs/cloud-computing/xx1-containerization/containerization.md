@@ -5,10 +5,6 @@ title: Containerization
 description: Containerization
 ---
 
-This is the same notes as :
-
-- **[Backend Development > Containerization](/backend-development/containerization)**
-
 **Main Source :**
 
 - **[Containers - Explained in 4 Minutes - Accelerate Rediscover In 4 Minutes](https://youtu.be/pR-cGS6IGvI?si=LOqZkrsmbzDJE7l9)**

@@ -5,10 +5,6 @@ title: Network Security
 description: Network Security
 ---
 
-This is the same notes as :
-
-- **[Computer Networking > Network Security](/computer-networking/network-security)**
-
 **Main Source :**
 
 - **[Network eavesdropping - Wikipedia](https://en.wikipedia.org/wiki/Network_eavesdropping)**

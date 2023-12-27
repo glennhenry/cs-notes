@@ -5,11 +5,6 @@ title: Docker & Kubernetes
 description: Docker & Kubernetes
 ---
 
-This is the same note as :
-
-- **[Frontend Web Development > Docker & Kubernetes](/frontend-web-development/docker-and-kubernetes)**
-- **[Backend Development > Docker & Kubernetes](/backend-development/docker-kubernetes)**
-
 **Main Source :**
 
 - **[Wikipedia Docker (software)](<https://en.wikipedia.org/wiki/Docker_(software)>)**

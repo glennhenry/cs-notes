@@ -5,10 +5,6 @@ title: Backend & Server Security
 description: Backend & Server Security
 ---
 
-This is the same notes as :
-
-- **[Backend Development > Backend & Server Security](/backend-development/backend-server-security)**
-
 **Main Source :**
 
 - **[Backend Developer Roadmap, Web Security - roadmap.sh](https://roadmap.sh/backend)**
