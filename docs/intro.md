@@ -63,11 +63,11 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 4. **[update]** digital-signal-processing : /compression#svd-compression -> add svd compression.
 5. **[add]** /digital-media-processing : /iso -> add ISO file format.
-6. **[ref]** backend-development : /search-engine#elasticsearch -> ref to document database.
-7. **[ref]** backend-development : /serverless -> ref to FaaS in Cloud Computing.
-8. **[ref]** backend-development : /caching#cache-invalidation -> ref to database trigger.
-9. **[ref]** backend-development : /backend-optimization#resource-optimization -> ref to database index.
-10. **[update]** backend-development : /websocket -> #data-exchange, add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
+6. **[update]** backend-development : /websocket -> #data-exchange, add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
+7. **[ref]** backend-development : /search-engine#elasticsearch -> ref to document database.
+8. **[ref]** backend-development : /serverless -> ref to FaaS in Cloud Computing.
+9. **[ref]** backend-development : /caching#cache-invalidation -> ref to database trigger.
+10. **[ref]** backend-development : /backend-optimization#resource-optimization -> ref to database index.
 11. **[ref]** /computer-and-programming-fundamentals : /data-representation -> ref to database.
 12. **[ref]** /computer-and-programming-fundamentals : /query-language -> ref to few concepts in database system.
 13. **[ref]** /data-structures-and-algorithms : /complexity-theory -> ref to Turing machine and other TOC related terms.
