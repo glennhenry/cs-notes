@@ -5,7 +5,7 @@ const sidebars = {
   sidebar: [
     "intro",
 
-    // Digital Signal Processing
+    // 1. Digital Signal Processing
     {
       type: "category",
       label: "Digital Signal Processing",
@@ -53,7 +53,7 @@ const sidebars = {
       ],
     },
 
-    // Computer & Programming Fundamentals
+    // 2. Computer & Programming Fundamentals
     {
       type: "category",
       label: "Computer & Programming Fundamentals",
@@ -125,7 +125,7 @@ const sidebars = {
       ],
     },
 
-    // Digital Media Processing
+    // 3. Digital Media Processing
     {
       type: "category",
       label: "Digital Media Processing",
@@ -219,7 +219,7 @@ const sidebars = {
       ],
     },
 
-    // Computer Networking
+    // 4. Computer Networking
     {
       type: "category",
       label: "Computer Networking",
@@ -315,7 +315,7 @@ const sidebars = {
       ],
     },
 
-    // Data Structures & Algorithms
+    // 5. Data Structures & Algorithms
     {
       type: "category",
       label: "Data Structures & Algorithms",
@@ -385,7 +385,7 @@ const sidebars = {
       ],
     },
 
-    // Computer Organization & Architecture
+    // 6. Computer Organization & Architecture
     {
       type: "category",
       label: "Computer Organization & Architecture",
@@ -422,7 +422,7 @@ const sidebars = {
       ],
     },
 
-    // Operating System
+    // 7. Operating System
     {
       type: "category",
       label: "Operating System",
@@ -461,7 +461,7 @@ const sidebars = {
       ],
     },
 
-    // Theory of Computation & Automata
+    // 8. Theory of Computation & Automata
     {
       type: "category",
       label: "Theory of Computation & Automata",
@@ -472,7 +472,7 @@ const sidebars = {
       items: [],
     },
 
-    // Compilers
+    // 9. Compilers
     {
       type: "category",
       label: "Compilers",
@@ -480,7 +480,7 @@ const sidebars = {
       items: [],
     },
 
-    // Programming Language Theory
+    // 10. Programming Language Theory
     {
       type: "category",
       label: "Programming Language Theory",
@@ -491,7 +491,7 @@ const sidebars = {
       items: [],
     },
 
-    // Database System
+    // 11. Database System
     {
       type: "category",
       label: "Database System",
@@ -499,7 +499,7 @@ const sidebars = {
       items: [],
     },
 
-    // Computer Graphics
+    // 12. Computer Graphics
     {
       type: "category",
       label: "Computer Graphics",
@@ -531,7 +531,7 @@ const sidebars = {
       ],
     },
 
-    // Frontend Web Development
+    // 13. Frontend Web Development
     {
       type: "category",
       label: "Frontend Web Development",
@@ -558,7 +558,7 @@ const sidebars = {
       ],
     },
 
-    // Backend Development
+    // 14. Backend Development
     {
       type: "category",
       label: "Backend Development",
@@ -601,7 +601,7 @@ const sidebars = {
       ],
     },
 
-    // Computer Security
+    // 15. Computer Security
     {
       type: "category",
       label: "Computer Security",
@@ -656,7 +656,7 @@ const sidebars = {
       ],
     },
 
-    // Machine Learning
+    // 16. Machine Learning
     {
       type: "category",
       label: "Machine Learning",
@@ -676,7 +676,7 @@ const sidebars = {
       ],
     },
 
-    // Deep Learning
+    // 17. Deep Learning
     {
       type: "category",
       label: "Deep Learning",
@@ -740,7 +740,7 @@ const sidebars = {
       ],
     },
 
-    // Software Engineering
+    // 18. Software Engineering
     {
       type: "category",
       label: "Software Engineering",
@@ -748,7 +748,7 @@ const sidebars = {
       items: ["software-engineering/xx1-package-manager/package-manager"],
     },
 
-    // Cloud Computing
+    // 19. Cloud Computing
     {
       type: "category",
       label: "Cloud Computing",
@@ -757,18 +757,6 @@ const sidebars = {
         "cloud-computing/xx-virtualization/virtualization",
         "cloud-computing/xx1-containerization/containerization",
         "cloud-computing/xx2-docker-and-kubernetes/docker-and-kubernetes",
-      ],
-    },
-
-    // Extras
-    {
-      type: "category",
-      label: "Extras",
-      link: { type: "doc", id: "extras/extras" },
-      items: [
-        "extras/deepweb-and-darkweb/deepweb-and-darkweb",
-        "extras/tor-browser/tor-browser",
-        "extras/vr-ar/vr-ar",
       ],
     },
   ],
