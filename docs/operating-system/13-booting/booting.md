@@ -11,7 +11,11 @@ description: Booting
 
 Booting page
 
-### Bootloader
+ROM, EEPROM, EPROM, boostrap
+
+### Boot Process
+
+### Boot Loaders
 
 ### BIOS
 

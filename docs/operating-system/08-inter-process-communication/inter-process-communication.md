@@ -10,3 +10,5 @@ description: Inter-process Communication
 - [] 
 
 Inter-process Communication page
+
+Mechanism, RPC

@@ -10,5 +10,8 @@ description: Kernel
 - [] 
 
 Kernel page
+kernel data structure
+kernel design
+monolithic, micro, hybrid, exo
 
 ### Kernel Models

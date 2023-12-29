@@ -10,19 +10,16 @@ description: Multithreading
 - []
 
 Multithreading page
+multiprocessing, multi program counter
 
 ### Threading Problems
 
-#### Deadlock
-
 #### Race Condition
 
-### Synchronization
-
-#### Synchronization Primitives
-
-##### Semaphores
-
-##### Mutex
-
-##### Spinlocks
+Thread creation
+Thread management
+Thread pools
+Thread Safety
+Thread Scheduling
+Thread Communication
+Thread Creation and Termination

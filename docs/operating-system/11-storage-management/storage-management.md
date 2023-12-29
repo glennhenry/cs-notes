@@ -13,4 +13,10 @@ Storage Management page
 
 ### Disk Management
 
+Free-space management, Storage allocation, Disk scheduling
+
+### RAID
+
+### Backup & Recovery
+
 ### Defragmentation

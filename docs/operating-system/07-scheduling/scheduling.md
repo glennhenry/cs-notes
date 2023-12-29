@@ -11,6 +11,8 @@ description: Scheduling
 
 Scheduling page
 
+job scheduling, cpu scheduling, Multiprocessor Scheduling
+
 ### Scheduling Algorithms
 
 ### Context Switching
