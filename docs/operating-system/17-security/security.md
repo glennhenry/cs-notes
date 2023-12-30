@@ -9,7 +9,7 @@ description: Security
 
 - []
 
-Security page
+Security page, modes
 
 ### Protection Ring
 
