@@ -11,6 +11,8 @@ description: Security
 
 Security page
 
+### Protection Ring
+
 ### Permissions
 
 ### Access Control

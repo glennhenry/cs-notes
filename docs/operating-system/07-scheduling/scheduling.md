@@ -11,10 +11,8 @@ description: Scheduling
 
 Scheduling page
 
-job scheduling, cpu scheduling, Multiprocessor Scheduling
+job scheduling, cpu scheduling, Multiprocessor Scheduling, Context Switching in scheduling
 
 ### Scheduling Algorithms
-
-### Context Switching
 
 ### Blocking

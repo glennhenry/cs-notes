@@ -1,6 +1,6 @@
 ---
-slug: /operating-system/linux-kernel
-id: linux-kernel
+slug: /operating-system/bsd
+id: bsd
 title: BSD
 description: BSD
 ---
@@ -10,3 +10,4 @@ description: BSD
 - [] 
 
 BSD page
+bsd and descendants
