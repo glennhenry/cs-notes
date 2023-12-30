@@ -72,7 +72,8 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 12. **[ref]** /computer-and-programming-fundamentals : /query-language -> ref to few concepts in database system.
 13. **[ref]** /data-structures-and-algorithms : /complexity-theory -> ref to Turing machine and other TOC related terms.
 14. **[ref]** /computer-security : /reverse-engineering -> ref to decompilation in compilers.
-15. **[ref]** /operating-system: /virtualization -> ref to distributed systems in cloud-computing.
+15. **[ref]** /operating-system : /virtualization -> ref to distributed systems in cloud-computing.
+16. **[ref]** /operating-system : /os-fundamentals -> ref to distributed systems in cloud-computing.
 
 ### Longest Notes
 
