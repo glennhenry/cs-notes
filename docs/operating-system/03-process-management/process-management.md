@@ -130,23 +130,3 @@ Source : https://byjus.com/gate/context-switching-in-os-notes/
 
   ![Round Robin](./round-robin.png)  
    Source : https://en.wikipedia.org/wiki/Round-robin_scheduling
-
-### Process Synchronization
-
-#### Deadlock
-
-#### Starvation
-
-#### Livelock
-
-#### Synchronization Primitives
-
-atomic operation
-
-##### Semaphores
-
-##### Mutex
-
-##### Spinlocks
-
-##### Monitors

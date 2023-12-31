@@ -432,6 +432,7 @@ const sidebars = {
         "operating-system/kernel/kernel",
         "operating-system/process-management/process-management",
         "operating-system/multithreading/multithreading",
+        "operating-system/process-synchronization/process-synchronization",
         "operating-system/interrupt-and-exception-handling/interrupt-and-exception-handling",
         "operating-system/system-call-and-service/system-call-and-service",
         "operating-system/scheduling/scheduling",
