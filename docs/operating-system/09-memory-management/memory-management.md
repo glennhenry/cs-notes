@@ -37,6 +37,8 @@ Memory Management page
 
 ##### Cache Replacement
 
+#### Virtual Addressing
+
 #### Virtual Memory
 
 #### Paging
