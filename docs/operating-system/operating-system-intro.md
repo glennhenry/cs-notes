@@ -7,6 +7,8 @@ description: Operating System Notes
 
 ### All pages
 
+Some source is also from the book "Abraham Silberschatz-Operating System Concepts (9th,2012_12)".
+
 - [OS Fundamentals](operating-system/os-fundamentals)
 - [Kernel](operating-system/kernel)
 - [Process Management](operating-system/process-management)
