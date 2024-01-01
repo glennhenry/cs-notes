@@ -9,22 +9,6 @@ description: Process Synchronization
 
 - []
 
-### Problem
+### Message Passing
 
-#### Deadlock
-
-#### Starvation
-
-#### Livelock
-
-### Synchronization Primitives
-
-atomic operation
-
-#### Semaphores
-
-#### Mutex
-
-#### Spinlocks
-
-#### Monitors
+pipes, sockets, message queues, or channels. 
