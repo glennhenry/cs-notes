@@ -117,7 +117,7 @@ Each process has its own [PCB](#pcb), which holds important information about th
 ![Context switch](./context-switch.png)  
 Source : https://byjus.com/gate/context-switching-in-os-notes/
 
-#### Scheduling Algorithm & Strategy
+#### Scheduling Algorithms
 
 - **First in, first out (FIFO) or First come, first served (FCFS)** : This is the simplest algorithm, the next process to be executed is the order they arrive in the ready queue. While it is simple and easy to implement, it may result in poor average response time, especially if long-running processes are ahead in the queue.
 
