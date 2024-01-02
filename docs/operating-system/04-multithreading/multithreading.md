@@ -7,7 +7,7 @@ description: Multithreading
 
 **Main Source :**
 
-- **[Abraham Silberschatz-Operating System Concepts (9th,2012_12) Part 3]**
+- **[Chapter 4 Threads - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 - **[Multithreading (computer architecture) - Wikipedia](<https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)>)**
 - **[Thread (computing) - Wikipedia](<https://en.wikipedia.org/wiki/Thread_(computing)>)**
 
