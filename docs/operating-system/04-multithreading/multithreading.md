@@ -8,6 +8,7 @@ description: Multithreading
 **Main Source :**
 
 - **[Chapter 4 Threads - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
+- **[Chapter 5 Process Synchronization - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 - **[Multithreading (computer architecture) - Wikipedia](<https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)>)**
 - **[Thread (computing) - Wikipedia](<https://en.wikipedia.org/wiki/Thread_(computing)>)**
 
@@ -95,7 +96,9 @@ These are fundamental tools used in multithreaded programming to synchronize.
 
 ###### Locks / Mutex
 
-Mutex (mutual exclusion) is a synchronization primitive that ensure only one thread to access a shared resource. It works by having a lock, a thread that wants to access the resource must acquire the lock first. If the lock is already held by another thread, the requesting thread will be blocked until the lock is released.
+**Mutex (mutual exclusion)** is a synchronization primitive that ensure only one thread to access a shared resource. It works by having a lock, a thread that wants to access the resource must acquire the lock first. If the lock is already held by another thread, the requesting thread will be blocked until the lock is released. When the thread that access the resource has finished, then the lock will be released.
+
+The mutex technique can be implemented in the software-level by memory synchronization instructions provided by the hardware architecture.
 
 ###### Condition Variables
 
