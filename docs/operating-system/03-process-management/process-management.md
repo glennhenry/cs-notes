@@ -59,6 +59,8 @@ There are two types of multitasking :
 - **Preemptive Multitasking** : This technique allocates CPU time to multiple processes by forcibly interrupting and suspending the execution of one process to give time to another process.
 - **Cooperative Multitasking** : This technique relies on processes voluntarily yielding control to other processes. In this approach, each process is responsible for explicitly relinquishing the CPU when it has completed its task or when it wants to allow other processes to run.
 
+Preemptive multitasking introduces overhead as it relies on the OS to schedule and manage the execution between tasks, while cooperative multitasking manages the execution themselves. Cooperative multitasking can be an up or down, it's important to manage the execution fairly between thread, or an issue called [starvation](/operating-system/multithreading#multithreading-problems) may occur. [**Thread**](#thread) is the construct that allows you to multitask preemptively, the construct that allows you to multitask cooperatively is called [**coroutine**](/computer-and-programming-fundamentals/concurrency-and-parallelism#coroutine).
+
 When trying to switch the execution between process, the current state of process being executed will be saved, so it can be restored and resumed later. This process is called **[context switch](#context-switch)**.
 
 ### Process State

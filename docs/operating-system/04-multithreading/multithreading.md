@@ -154,10 +154,6 @@ Source : https://dip-mazumder.medium.com/how-to-determine-java-thread-pool-size-
   ![Livelock](./livelock.png)  
   Source : http://15418.courses.cs.cmu.edu/spring2014/lecture/snoopimpl1/slide_021
 
-:::tip
-See also [concurrency and parallelism](/computer-and-programming-fundamentals/concurrency-and-parallelism).
-:::
-
 ### Communication
 
 Communication is essential to coordinate between thread and processes. There are mainly two technique, **shared memory** and **message passing**.
@@ -184,3 +180,7 @@ Some example of message passing :
 
 ![Message passing](./message-passing.png)  
 Source : https://beingintelligent.com/difference-between-shared-memory-and-message-passing-process-communication.html
+
+:::tip
+In relation to concurrency, see also [concurrency and parallelism](/computer-and-programming-fundamentals/concurrency-and-parallelism).
+:::

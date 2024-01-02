@@ -122,7 +122,11 @@ When a piece of code can be suspended, it means that it can yield control to oth
 ![Coroutine illustration](./coroutine.png)  
 Source : https://blog.adacore.com/coroutines-in-ada-a-clean-but-heavy-implementation
 
-Coroutine differs with multithreading, multiple thread can work together in parallel, they can execute code simultaneously. Having multiple thread can be resource intensive (e.g., require its memory and switching between them can be intensive). On the other hand, coroutine doesn't require a lot of thread to work, coroutine take turns executing their code, allowing for efficient multitasking within a smaller number of threads. In summary, coroutine can be thought as the lightweight version of thread.
+Coroutine differs with multithreading, multiple thread can work together in parallel, they can execute code simultaneously. Having multiple thread can be resource intensive (e.g., require memory and the switches between them can be intensive). On the other hand, coroutine doesn't use a lot of thread, they take turns executing their code. It is a concurrent construct rather than a parallelism construct, which allows for efficient multitasking within a smaller number of threads. In summary, coroutine can be thought as the lightweight version of thread.
+
+:::tip
+Thread is considered as **preemptive multitasking**, which mean it is the responsibility of the operating system to manage the execution between them. On the other hand, coroutine is considered as **cooperative multitasking**, where each coroutine is responsible for yielding control to others.
+:::
 
 #### Callbacks
 
@@ -222,3 +226,7 @@ Source : https://en.wikipedia.org/wiki/Deadlock
 #### Thread Pool
 
 Thread pool is a collection of pre-initialized threads. Instead of creating a new thread for each task, a thread pool maintains a pool of reusable threads, reducing the overhead of creating and destroying threads.
+
+:::tip
+In relation with multitasking and concurrency, see also [multithreading](/operating-system/multithreading).
+:::
