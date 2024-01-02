@@ -27,7 +27,7 @@ Source : https://towardsdatascience.com/multithreading-and-multiprocessing-in-10
 
 The image above shows the illustration of multithreading. Each thread holds different data, but they share the same memory space and resources of the parent process. In contrast, multiprocessing is when we utilize a processor that has several cores. Each core would have their own data and thread that will execute simultaneously.
 
-Utilizing multiple threads is typically more efficient than making multiple process that execute the same tasks. Threads have a smaller memory footprint, require less time for [context switching](/operating-system/process-management/context-switch), and have lower scheduling overhead. Also, separate process means [IPC](/operating-system/inter-process-communication) is required to communicate between processes, whereas thread shares the same memory within a process, thus communication will be easier.
+Utilizing multiple threads is typically more efficient than making multiple process that execute the same tasks. Threads have a smaller memory footprint, require less time for [context switching](/operating-system/process-management#context-switch), and have lower scheduling overhead. Also, separate process means [IPC](/operating-system/inter-process-communication) is required to communicate between processes, whereas thread shares the same memory within a process, thus communication will be easier.
 
 ### Multithreading Model
 
