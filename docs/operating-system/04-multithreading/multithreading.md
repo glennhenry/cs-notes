@@ -82,7 +82,7 @@ Source : https://medium.com/spring-boot/multithreading-in-java-with-examples-25b
 
 #### Thread Communication
 
-Multiple threads exist within the same process, threads can communicate by sharing memory. They can read from and write to shared data structures or variables. Another way is communicating through **[message passing](/operating-system/process-synchronization#message-passing)**, where they send messages or signals to each other. One thread can send a message to another thread, which then receives and processes the message.
+Multiple threads exist within the same process, threads can communicate by sharing memory. They can read from and write to shared data structures or variables. Another way is communicating through **[message passing](#communication)**, where they send messages or signals to each other. One thread can send a message to another thread, which then receives and processes the message.
 
 #### Thread Synchronization
 
@@ -157,3 +157,30 @@ Source : https://dip-mazumder.medium.com/how-to-determine-java-thread-pool-size-
 :::tip
 See also [concurrency and parallelism](/computer-and-programming-fundamentals/concurrency-and-parallelism).
 :::
+
+### Communication
+
+Communication is essential to coordinate between thread and processes. There are mainly two technique, **shared memory** and **message passing**.
+
+#### Shared Memory
+
+**Shared Memory** is typically used for thread, but can also be used for process communication. The implementation is simple, a portion of memory is allocated and made accessible to multiple processes for read and write. However, this communication mechanism may require [additional synchronization technique](#thread-synchronization) to prevent [concurrency issues](#multithreading-problems).
+
+#### Message Passing
+
+**Message Passing** is an act of communication between processes or thread without using shared memory, it is inherently associated with "message".
+
+Message passing can be synchronous or asynchronous. In the synchronous model, the sender process blocks until the message is received by the recipient process. In the asynchronous model, the sender process continues execution immediately after sending the message, without waiting for a response from the recipient. The recipient process can receive the message at a later time.
+
+Some example of message passing :
+
+- **Pipes** : Pipes are a form of [inter-process communication (IPC)](/operating-system/inter-process-communication) that allows the output of one process to be used as the input of another process. In a pipe, data flows in a unidirectional manner from the writer process to the reader process. Pipes can be either named or unnamed, with unnamed pipes typically used for communication between related processes (e.g., parent-child processes).
+
+- **Sockets** : Sockets are a communication endpoint that enables bidirectional communication between processes over a network. They can be used for IPC within the same machine (domain sockets) or across different machines (network sockets).
+
+- **[Message Queues](/backend-development/message-broker#message-broker)** : Message queues is where processes exchange messages through a shared [queue](/data-structures-and-algorithms/queue) in the operating system. Each message has a specific format and is placed into the queue by the sending process. The receiving process can then retrieve messages from the queue in a first-in-first-out (FIFO) order.
+
+- **Channels** : Channels is a higher-level concept for message passing. Channels typically provide a set of operations, such as sending and receiving messages, and may incorporate synchronization mechanisms like blocking or non-blocking operations. Channels can be implemented using various underlying mechanisms, including shared memory, pipes, or sockets.
+
+![Message passing](./message-passing.png)  
+Source : https://beingintelligent.com/difference-between-shared-memory-and-message-passing-process-communication.html

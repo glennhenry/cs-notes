@@ -113,7 +113,3 @@ The algorithm works as follows :
 
 ![Peterson's solution code](./peterson-solution.png)  
 Source : https://www.geeksforgeeks.org/introduction-of-process-synchronization/
-
-### Message Passing
-
-pipes, sockets, message queues, or channels.
