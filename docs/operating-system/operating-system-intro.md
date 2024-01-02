@@ -14,7 +14,7 @@ Some source is also from the book "Abraham Silberschatz-Operating System Concept
 - [Process Management](operating-system/process-management)
 - [Multithreading](operating-system/multithreading)
 - [Process Synchronization](operating-system/process-synchronization)
-- [Interrupt & Exception Handling](operating-system/interrupt-and-exception-handling)
+- [Interrupt Handling](operating-system/interrupt-handling)
 - [System Call & Service](operating-system/system-call-and-service)
 - [Scheduling](operating-system/scheduling)
 - [Inter-process Communication](operating-system/inter-process-communication)
