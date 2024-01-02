@@ -79,9 +79,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
 - [Programming Concepts](computer-and-programming-fundamentals/programming-concepts) (21198 char)
-- [Multithreading](/operating-system/multithreading) (20320 char)
 - [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism) (18758 char)
 - [COA Fundamentals](/computer-organization-and-architecture/coa-fundamentals) (18540 char)
+- [Reinforcement Learning Fundamental](deep-learning/reinforcement-learning/reinforcement-learning-fundamental) (17758 char)
 
 ### Credits
 
