@@ -435,7 +435,6 @@ const sidebars = {
         "operating-system/process-synchronization/process-synchronization",
         "operating-system/interrupt-handling/interrupt-handling",
         "operating-system/system-call/system-call",
-        "operating-system/scheduling/scheduling",
         "operating-system/inter-process-communication/inter-process-communication",
         "operating-system/memory-management/memory-management",
         "operating-system/file-system/file-system",

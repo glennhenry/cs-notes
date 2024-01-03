@@ -16,7 +16,6 @@ Some source is also from the book "Abraham Silberschatz-Operating System Concept
 - [Process Synchronization](operating-system/process-synchronization)
 - [Interrupt Handling](operating-system/interrupt-handling)
 - [System Call](operating-system/system-call)
-- [Scheduling](operating-system/scheduling)
 - [Inter-process Communication](operating-system/inter-process-communication)
 - [Memory Management](operating-system/memory-management)
 - [File System](operating-system/file-system)

@@ -11,6 +11,7 @@ description: Process Management
 - **[Process management (computing) - Wikipedia](https://en.wikipedia.org/wiki/Process_management)**
 - **[Scheduling (computing) - Wikipedia](<https://en.wikipedia.org/wiki/Scheduling_(computing)>)**
 - **[Context switch - Wikipedia](https://en.wikipedia.org/wiki/Context_switch)**
+- **[Chapter 6 CPU Scheduling - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 
 **Process Management** is a fundamental component of an operating system that involves the management and control of processes.
 
@@ -82,16 +83,26 @@ A process has several states which represents the current condition or status.
 
 ### Process Scheduling
 
-**Process Scheduling** is the key of multitasking, there are several goals :
+**Scheduling** is the process of determining the order in which tasks or processes are executed on the CPU. Since the CPU can only execute one task at a time, scheduling determines which task gets CPU time and for how long. Scheduling is important for multitasking, where multiple programs are executed at a time, and it is essential to ensure fair execution for all of them.
 
-- **Maximizing throughput** or the amount of work done in some unit of time.
-- **Minimizing wait time** or the amount of time processes spend waiting.
-- **Minimizing response time** or the time taken from the initiation of a request or task until the first response or output is produced.
-- **Maximizing fairness** or equitable access to system resources for all processes.
+Efficient scheduling scenario :
+
+- **Throughput is high** : The scheduler maximizes the number of tasks completed within a given time frame.
+- **CPU utilization is high, or wait time is short** : The scheduler keeps the CPU busy by promptly assigning tasks to it, minimizing idle time. When a program is waiting for an I/O operation to complete, instead of wasting time on waiting and doing nothing, it is more efficient to allow other programs to execute in the meantime.
+- **Response time is low** : Interactive tasks or user interface interactions receive quick CPU time, ensuring a responsive system. In an efficient scheduling scenario, interactions from user such as clicking a button should be given high priority, thus will minimize response time and improve the user experience.
+- **Fairness is maintained** : Each program or process is allocated a reasonable share of CPU time, preventing starvation, which is the case when a process or task is unable to make progress to complete its execution. In a priority-based scheduling, fairness is a classic problem. The idea of priority is that tasks with higher priority should be executed first. However, if there exist many high priority task, the lower-priority task may not have the opportunity to complete.
+
+#### CPU-I/O Burst Cycle
+
+The CPU-I/O burst cycle is the alternating pattern of CPU computation and I/O operations that occur during the execution of a program or process. The CPU burst actively utilizes the CPU for computation or processing tasks. The I/O burst phase initiates input/output operations, this phase causes the CPU to wait.
+
+This cycle can be inefficient, as it leads to long wait times and underutilization of resources.
+
+![CPU-I/O burst](./cpu-io-burst.png)
 
 #### Process Queue
 
-Processes are stored in queue based on their current state. For example, processes that are in ready state are put in ready queue.
+Running processes are stored in queue based on their current state. For example, processes that are in ready state are put in ready queue.
 
 ![Process queue](./process-queue.png)  
 Source : https://byjus.com/gate/process-scheduling-in-operating-system-notes/
@@ -110,16 +121,32 @@ The process scheduler is responsible for determining the execution order and all
 
 #### Context Switch
 
-In context switch, which is done by the **dispatcher**, the current state of the running process, including the contents of CPU registers, program counter, and other relevant information will be saved. This step ensures that the process can be resumed from the same point when it regains CPU execution time.
+During context switch, which is done by the **dispatcher**, the current state of the running process, including the contents of CPU registers, program counter, and other relevant information will be saved. This step ensures that the process can be resumed from the same point when it regains CPU execution time.
 
-It is important for context switch to be fast as possible, because it is invoked very frequently and during invocation, the CPU does nothing.
+It is important for context switch to be fast as possible, because it is invoked very frequently, and during invocation the CPU does nothing.
 
 Each process has its own [PCB](#pcb), which holds important information about the process. When context switch occurs, the corresponding PCB of current process is accessed and modified to reflect the current state. After that, the PCB associated with the new process, is retrieved, and its relevant data, including register values, is loaded into the CPU registers.
 
 ![Context switch](./context-switch.png)  
 Source : https://byjus.com/gate/context-switching-in-os-notes/
 
+#### Process Attributes
+
+Process has several attributes, in the context of process scheduling, they can be used to determine the scheduling :
+
+- **Priority** : In priority-based scheduling, priority is the main attributes that represents the relative importance or urgency of a process compared to other processes, where the higher value indicates a higher priority process. Priority can be assigned based on factors such as system requirements, process characteristics, or user-defined criteria.
+- **Burst Time** : Burst time, also known as execution time or CPU time, is the amount of time required by a process to complete its execution on the CPU. It represents the duration of time during which a process actively utilizes the CPU for computation or processing tasks. The burst time can be obtained by estimation, observation based on historical data, or tasks that are influenced by user input.
+- **Arrival Time** : Time in which process arrives at the system's ready queue or scheduler. The arrival time can be used as the measurement for the start of the scheduling algorithm.
+- **Waiting Time** : Waiting time is the total amount of time a process spends waiting in the ready queue before it gets the CPU for execution. It is the difference between the arrival time of the process and the time it starts executing.
+- **Turnaround Time** : Turnaround time is the total time taken by a process to complete its execution, including both waiting time and burst time. It is the difference between the completion time of the process and its arrival time.
+- **Response Time** : Response time is the time taken from when a process enters the system until it starts its first execution. It is particularly relevant in interactive systems, where users expect quick responses.
+
+  ![The process' attributes](./process-attributes.png)  
+   Source : https://www.shiksha.com/online-courses/articles/turnaround-time-in-cpu-scheduling/ (copy and modified)
+
 #### Scheduling Algorithms
+
+There are many algorithms to schedule processes or tasks, different algorithm has different objectives and target specific aspects of process or task scheduling.
 
 - **First in, first out (FIFO) or First come, first served (FCFS)** : This is the simplest algorithm, the next process to be executed is the order they arrive in the ready queue. While it is simple and easy to implement, it may result in poor average response time, especially if long-running processes are ahead in the queue.
 
@@ -127,7 +154,15 @@ Source : https://byjus.com/gate/context-switching-in-os-notes/
    Source : https://en.wikipedia.org/wiki/Scheduling_(computing)#/media/File:Thread_pool.svg
 
 - **Priority Scheduling** : Processes are assigned priorities, and the process with the highest priority is selected for execution. The priority can be anything, for example it could be deadline.
+
+  ![Priority scheduling](./priority-scheduling.png)  
+   Source : https://www.embedded.com/tasks-and-scheduling/
+
 - **Shortest Remaining Time First or Shortest Job First (SJF)** : Strategy where the process with the smallest total execution time is selected for execution next. However, this requires knowledge of the total execution time of each process (or at least estimation), which is often not available or accurate in practice.
+
+  ![SJF scheduling](./sjf.png)  
+   Source : https://en.wikipedia.org/wiki/Shortest_remaining_time
+
 - **Round Robin (RR)** : Each process is allocated a fixed time slice, and processes are executed circularly. This strategy provides fair sharing of CPU time among processes, however, shorter processes may still experience longer response times due to the fixed time slice.
 
   ![Round Robin](./round-robin.png)  
