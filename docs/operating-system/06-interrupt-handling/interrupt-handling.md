@@ -43,7 +43,7 @@ Spurious interrupts can be challenging to diagnose and resolve since they do not
 
 #### Software Interrupt
 
-Software interrupt originate from software, typically through [system call that request a service](/operating-system/system-call-and-service). System calls are triggered by executing special software instructions or by raising specific flags or conditions. For example, a program may make a system call to request a file operation, network communication, or access to hardware resources.
+Software interrupt originate from software, typically through [system call](/operating-system/system-call). System calls are triggered by executing special software instructions or by raising specific flags or conditions. For example, a program may make a system call to request a file operation, network communication, or access to hardware resources.
 
 Other source of software interrupt is from **exception** that occurs during the execution of program. Exceptions are anomalous condition that require special handling from the exception handler, this may be caused by error such as division by zero, invalid memory access, page faults, or illegal instruction execution.
 
