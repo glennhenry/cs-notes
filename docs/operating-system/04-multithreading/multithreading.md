@@ -100,9 +100,28 @@ These are fundamental tools used in multithreaded programming to synchronize.
 
 The mutex technique can be implemented in the software-level by memory synchronization instructions provided by the hardware architecture.
 
-###### Condition Variables
+###### Monitor & Condition Variables
 
-Condition variables are synchronization primitives that allow threads to wait for a specific condition to become true before proceeding with their execution. They are typically used in conjunction with locks/mutexes to enable efficient thread coordination and synchronization.
+**Condition variables** are synchronization primitives that allow threads to wait for a specific condition to become true before proceeding with their execution. Condition variables are typically used together with lock, forming another construct, **monitors**.
+
+**Monitors** is a higher-level synchronization construct that combines mutex and condition variables. The mutex is used to ensure only one thread is accessing the resource, while the condition variables is used for additional coordination between the threads.
+
+In a sense, condition variable is actually a [queue](/data-structures-and-algorithms/queue). Threads will be kept in the queue until a condition is met. The condition variable has three operations :
+
+- **Wait** : The "wait" operation temporarily release the associated mutex and enter a wait state on a condition variable, effectively blocking its execution. It is typically called when the thread or process encounters a condition that prevents it from proceeding.
+- **Signal** : The "signal" operation is used to awaken one waiting thread or process that is blocked on a particular condition variable, such as wait state. It notifies a single waiting thread or process that the condition it was waiting for may have changed. The awakened thread or process can then reacquire the associated lock or mutex and continue its execution.
+- **Broadcast** : The "broadcast" operation is used to awaken all waiting threads or processes that are blocked on a particular condition variable.
+
+Monitors work like following :
+
+1. When a thread wants to access the shared data, it first needs to acquire the monitor's lock. If the lock is already held by another thread, the requesting thread will be blocked until the lock becomes available.
+2. Once a thread has acquired the lock, it enters the monitor and gains exclusive access to the shared data. The thread can then perform operations on the data inside a critical section.
+3. In the case of success operation, once a thread completes, it releases the monitor's lock, allowing other threads to acquire it. The thread exits the monitor, making it available for other threads to enter.
+4. In the case when the thread encounter whatever condition that prevent it from proceeding, such as a specific state of the shared resource, it may signal or broadcast the other threads.
+5. Another thread, which are signaled, can modify the shared data in a way that affects the other waiting threads' conditions, in which it can signal or broadcast again.
+
+![Monitors](./monitors.png)  
+Source : https://dev.to/l04db4l4nc3r/process-synchronization-monitors-in-go-4g4k
 
 ###### Semaphores
 
