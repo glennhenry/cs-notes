@@ -42,11 +42,67 @@ Source : https://www.geeksforgeeks.org/introduction-of-process-synchronization/
 
 #### Readers-Writers
 
-#### Dining Philosophers
+Readers-Writers problem is a scenario where there exist multiple processes, one is reader (process that access data), and another is writer (process that writes data), which are trying to access a shared resource simultaneously.
+
+Having multiple process that reads at the same time is not a problem, because every reader will always read the same data. However, in a case where a reader and a writer access the data at a time, this will obviously be a problem, it may result in [race condition](/operating-system/multithreading#multithreading-problems).
+
+There are two variants of readers-writers problem :
+
+- The first problem assumes that readers have priority over writers.
+  - Multiple reader is allowed to read simultaneously, reader shouldn't wait if the resource is currently opened for reading.
+  - Writers must wait until all active readers have finished accessing the shared resource. Only a single writer is granted exclusive access to the resource at a time.
+  - This problem may starve writers.
+- The second problem assumes that writers have priority over readers.
+  - When a writer is ready to write, it needs to write as soon as possible.
+  - Reader shouldn't write when the writer is going to write.
+  - This problem may starve readers.
+
+The criteria for solution :
+
+- Readers can access the shared resource simultaneously if no writers are currently accessing it.
+- Writers should access the shared resource exclusively, meaning that no other readers or writers can access it while a writer is writing.
+- The solution should avoid starvation and ensure fairness, neither readers nor writers should be indefinitely blocked from accessing the resource.
+
+The general solution :
+
+```
+Shared variables:
+readers_count = 0
+read_lock = Semaphore(1)
+write_lock = Semaphore(1)
+
+Reader process:
+while true:
+    wait(read_lock)
+    readers_count = readers_count + 1
+    if readers_count == 1:
+        wait(write_lock)
+    signal(write_lock)
+
+    // Perform reading...
+
+    wait(read_lock)
+    readers_count = readers_count - 1
+    if (read count == 0):
+        signal(write_lock)
+    signal(read_lock)
+
+Writer process:
+while true:
+    wait(write_lock)
+
+    // Perform writing...
+
+    signal(write_lock)
+```
+
+- The `read_lock` and `write_lock` variable indicates the mutex for reader and writer, respectively.
+- The `wait()` and `signal()` function is the implementation of semaphores, it will enable/disable the access. [Semaphore](/operating-system/multithreading#semaphores) keeps a count, it will only allow access if the count is greater than 0. Passing a lock to the `wait()` function will decrement the lock's count, which effectively block any other reader/writer for accessing. On the other hand, `signal()` is the opposite of `wait()`, which will increment the count, effectively notifies other reader/writer.
+- The process of incrementing and decrementing reader count is synchronized with lock, when reading, we will not use the lock, we will allow multiple reader to read simultaneously.
+- When `readers_count` reaches 0, we will allow the writer to write by signaling the lock.
+- When writing, we will also use `wait()` and `signal()` before and after the writing is done, to ensure only one writer writes.
 
 #### Deadlock
-
-After using synchronization techniques, additional concurrency issues may occur. For example, after using mutexes to restrict resource access to a single process at a time can potentially lead to another issue known as [deadlock](/operating-system/multithreading#multithreading-problem).
 
 Processes need resource, this mean the process has a dependency on a resource to perform certain operations or computations. For example, a process may need access to a printer resource to print a document, or it may need access to a database resource to retrieve or update data. Deadlock occurs when a set of processes is unable to proceed because each process is waiting for a resource that is held by another process in the set.
 

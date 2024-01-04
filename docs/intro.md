@@ -81,7 +81,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - [Programming Concepts](computer-and-programming-fundamentals/programming-concepts) (21198 char)
 - [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism) (19294 char)
 - [COA Fundamentals](/computer-organization-and-architecture/coa-fundamentals) (18540 char)
-- [Reinforcement Learning Fundamental](deep-learning/reinforcement-learning/reinforcement-learning-fundamental) (17758 char)
+- [Process Management](operating-system/process-management) (17818 char)
 
 ### Credits
 
