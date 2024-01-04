@@ -102,6 +102,63 @@ while true:
 - When `readers_count` reaches 0, we will allow the writer to write by signaling the lock.
 - When writing, we will also use `wait()` and `signal()` before and after the writing is done, to ensure only one writer writes.
 
+#### Dining Philosophers
+
+The dining philosophers problem illustrate the [deadlock](/operating-system/multithreading#multithreading-problem).
+
+![Dining philosophers problem](./dining-philosopher.png)  
+Source : https://www.scaler.com/topics/operating-system/dining-philosophers-problem-in-os/
+
+- The problem involves a group of philosophers sitting around a table, alternating between thinking and eating.
+- There exist 5 single chopsticks on the left and right each philosopher.
+- Each philosopher requires two chopsticks to eat but can only pick up adjacent chopsticks, which are in the left or right.
+- The philosopher can't pick chopsticks which are used, they need to wait.
+- Once they are done eating, they put the chopsticks back.
+- The problem demonstrates the challenges of allocating resources to multiple processes, with the primary goal of enabling all philosophers to eat while avoiding deadlock and starvation.
+
+The solution for this problem uses [monitors](/operating-system/multithreading#monitor--condition-variables) :
+
+```
+monitor DiningPhilosophers {
+    enum: THINKING, EATING, HUNGRY
+    philosophers_state = [THINKING, THINKING, THINKING, THINKING, THINKING]
+    condition = initialize 5 condition variable
+
+    function pick_chopstick(i: int) {
+        philosophers_state[i] = HUNGRY
+        is_possible_to_eat(i)
+        if philosophers_state[i] != EATING:
+            condition[i].wait()
+    }
+
+    function is_possible_to_eat(i: int) {
+        if left_and_right_chopstick_available(i):
+            philosophers_state[i] = EATING
+            condition[i].signal()
+    }
+
+    function left_and_right_chopstick_available(i: int) -> boolean {
+        return philosophers_state[(i + 4) % 5] != EATING &&  // left is not eating
+               philosophers_state[i] == HUNGRY &&  // is hungry right now
+               philosophers_state[(i + 1) % 5] != EATING  // right is not eating
+    }
+
+    function done_eating(i: int) {
+        philosophers_state[i] = THINKING
+        is_possible_to_eat((i + 4) % 5)
+        is_possible_to_eat((i + 1) % 5)
+    }
+}
+```
+
+- We represent the state of philosopher in enum, which are either `THINKING`, `EATING`, `HUNGRY`. Initially, all philosophers are set to the `THINKING` state. The specific order in which philosophers start their actions depends on the specific problem at hand.
+- The `condition` is the condition variable associated with each philosopher, it will change whenever other philosopher uses `wait()` or `signal()`. Calling `wait()` on the condition effectively block the philosopher from eating. When `signal()` is called, it notifies other philosophers about the current state of the philosopher on which the signal is invoked.
+- Starting from the `pick_chopstick`, when we call this function given some index `i`, the philosopher at index `i` will start eating.
+- Before actually eating, it will first confirm if it's possible to eat by checking the left and right chopstick. If possible, it will eat and notify other philosopher, else it will wait.
+- When eating is done, the `done_eating` function will be called. It will set the philosopher state back to `THINKING`, and also decide if the philosopher on the left and right can eat.
+
+The dining philosophers problem is just a theoretical problem. By solving and examining this problem, we can gain insights into various solutions and synchronization techniques that can be applied to more complex real-world scenarios.
+
 #### Deadlock
 
 Processes need resource, this mean the process has a dependency on a resource to perform certain operations or computations. For example, a process may need access to a printer resource to print a document, or it may need access to a database resource to retrieve or update data. Deadlock occurs when a set of processes is unable to proceed because each process is waiting for a resource that is held by another process in the set.
