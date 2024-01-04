@@ -12,7 +12,37 @@ description: Process Synchronization
 
 Process synchronization is concerned with the coordination and control of concurrent processes or threads in a system. The goal is to ensure that processes can safely access shared resources, communicate with each other, and avoid other [concurrency-related issues](/operating-system/multithreading#multithreading-problems).
 
-### Synchronization Issues
+### Synchronization Techniques
+
+Some concept of synchronization for process is similar to [thread synchronization](/operating-system/multithreading#thread-synchronization), that is using synchronization tools such as mutexes, condition variables, semaphores, etc.
+
+#### Peterson’s Solution
+
+In a concurrent program, the specific section of code where shared resources are accessed or modified is called **critical section**. We could implement mutex to ensure only one process accesses the resource at a time.
+
+**Peterson's solution** is an algorithm for mutex (mutual exclusion), it is a software-based solution which ensure that only one process or thread can enter its critical section at a time.
+
+Peterson's solution requires the shared variables :
+
+- `turn` : A variable that indicates whose turn it is to enter the critical section.
+- `flag` : An array of boolean flags, with each element representing the intention of a process to enter the critical section.
+
+The algorithm works as follows :
+
+1. Each process sets its `flag` to indicate its intention to enter the critical section.
+2. The process sets `turn` to indicate that it is the other process's `turn`.
+3. The process enters a loop and checks if the other process's `flag` is set and if it is the other process's `turn`. If both conditions are true, the process waits until the other process completes its critical section.
+4. If the conditions are false, the process enters its critical section and executes the desired code.
+5. After the process completes its critical section, it resets its flag to indicate that it is no longer interested in entering the critical section. Also, exist a remainder section where we can perform any necessary cleanup or non-critical tasks.
+
+![Peterson's solution code](./peterson-solution.png)  
+Source : https://www.geeksforgeeks.org/introduction-of-process-synchronization/
+
+### Synchronization Problems
+
+#### Readers-Writers
+
+#### Dining Philosophers
 
 #### Priority Inversion
 
@@ -87,29 +117,3 @@ If a deadlock occurs after detection, there are some method to recover from it :
 - **Process Termination** : One approach is to terminate one or more processes involved in the deadlock. By terminating a process, the resources held by that process are released and become available for other processes. The terminated process may need to restart or reattempt its task after the deadlock is resolved.
 
 - **Resource Preemption** : In some cases, it may be possible to preempt or forcibly reclaim resources from one or more processes to break the deadlock. The preemption can be achieved by rolling back the process to a checkpoint or by freeing resources that are less critical to the process. Preempted resources can then be allocated to other processes to allow them to proceed.
-
-### Other Synchronization Techniques
-
-Some concept of synchronization for process is similar to [thread synchronization](/operating-system/multithreading#thread-synchronization).
-
-#### Peterson’s Solution
-
-In a concurrent program, the specific section of code where shared resources are accessed or modified is called **critical section**. We could implement [mutex](/operating-system/multithreading#locks--mutex) to ensure only one process can access or modify the resource. We also need to ensure that progress is made within the critical section. To avoid when no progress is made, we can make a process that are waiting for the critical section to complete to bypass. To ensure the fairness, we can limit on the number of times a process is allowed to be bypassed while waiting to enter its critical section.
-
-**Peterson's solution** is an algorithm for mutual exclusion in concurrent programming. It provides a software-based approach to ensure that only one process or thread can enter its critical section at a time.
-
-Peterson's solution requires the shared variables :
-
-- `turn` : A variable that indicates whose turn it is to enter the critical section.
-- `flag` : An array of boolean flags, with each element representing the intention of a process to enter the critical section.
-
-The algorithm works as follows :
-
-1. Each process sets its `flag` to indicate its intention to enter the critical section.
-2. The process sets `turn` to indicate that it is the other process's `turn`.
-3. The process enters a loop and checks if the other process's `flag` is set and if it is the other process's `turn`. If both conditions are true, the process waits until the other process completes its critical section.
-4. If the conditions are false, the process enters its critical section and executes the desired code.
-5. After the process completes its critical section, it resets its flag to indicate that it is no longer interested in entering the critical section. Also, exist a remainder section where we can perform any necessary cleanup or non-critical tasks.
-
-![Peterson's solution code](./peterson-solution.png)  
-Source : https://www.geeksforgeeks.org/introduction-of-process-synchronization/
