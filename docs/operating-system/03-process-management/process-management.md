@@ -167,3 +167,22 @@ There are many algorithms to schedule processes or tasks, different algorithm ha
 
   ![Round Robin](./round-robin.png)  
    Source : https://en.wikipedia.org/wiki/Round-robin_scheduling
+
+#### Scheduling Problems
+
+##### Priority Inversion
+
+**Priority Inversion** is a phenomenon that can occur in systems where different tasks or processes have different priorities. It refers to a situation where a lower-priority task or process holds a resource needed by a higher-priority task, thereby causing a delay in the execution of the higher-priority task.
+
+Example scenario :
+
+1. Three tasks/processes are involved : a **high-priority task (H)**, a **medium-priority task (M)**, and a **low-priority task (L)**.
+2. H need to access some resource, but the resource is currently held by L.
+3. H couldn't preempt L, because L has much lower priority than H. The reason low-priority tasks can't be preempted is due to the avoidance of starvation, if high-priority task keep preempting, lower-priority task may never get a chance to execute.
+4. Suppose that M is ready, M can preempt L because it is not the highest priority. Now, M is currently executing and holds the resource.
+5. This phenomenon causes H takes longer to complete, because of waiting for M additionally.
+
+One way to mitigate is the **priority inheritance** technique, which temporarily raise the priority of a lower-priority task to a higher-priority task when the lower-priority task holds a resource needed by the higher-priority task. So, L priority can be changed to H, this way we don't prevent M for preempting, because essentially it has higher priority. After the resource access is complete, the priority is back to original.
+
+![Priority inversion and priority inheritance](./priority-inversion.png)  
+Source : https://www.digikey.com/en/maker/projects/introduction-to-rtos-solution-to-part-11-priority-inversion/abf4b8f7cd4a4c70bece35678d178321
