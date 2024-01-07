@@ -13,7 +13,7 @@ Storage Management page
 
 ### Disk Management
 
-Free-space management, Storage allocation, Disk scheduling
+Free-space management, Storage allocation, Disk scheduling, block sector partition
 
 ### RAID
 
