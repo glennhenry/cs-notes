@@ -18,7 +18,7 @@ Some source is also from the book "Abraham Silberschatz-Operating System Concept
 - [System Call](operating-system/system-call)
 - [Inter-process Communication](operating-system/inter-process-communication)
 - [Memory Management](operating-system/memory-management)
-- [Storage Management](operating-system/storage-management)
+- [Disk Management](operating-system/disk-management)
 - [File System](operating-system/file-system)
 - [Device Management](operating-system/device-management)
 - [Booting](operating-system/booting)

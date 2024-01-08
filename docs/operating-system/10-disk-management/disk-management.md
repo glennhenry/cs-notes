@@ -1,8 +1,8 @@
 ---
-slug: /operating-system/storage-management
-id: storage-management
-title: Storage Management
-description: Storage Management
+slug: /operating-system/disk-management
+id: disk-management
+title: Disk Management
+description: Disk Management
 ---
 
 **Main Source :**
@@ -11,7 +11,7 @@ description: Storage Management
 
 Storage Management page
 
-### Storage Structure
+### Mass-Storage Structure
 
 magnetic disk
 ssd

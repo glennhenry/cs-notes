@@ -437,7 +437,7 @@ const sidebars = {
         "operating-system/system-call/system-call",
         "operating-system/inter-process-communication/inter-process-communication",
         "operating-system/memory-management/memory-management",
-        "operating-system/storage-management/storage-management",
+        "operating-system/disk-management/disk-management",
         "operating-system/file-system/file-system",
         "operating-system/device-management/device-management",
         "operating-system/booting/booting",
