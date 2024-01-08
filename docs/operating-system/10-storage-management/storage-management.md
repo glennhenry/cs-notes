@@ -11,6 +11,11 @@ description: Storage Management
 
 Storage Management page
 
+### Storage Structure
+
+magnetic disk
+ssd
+magnetic tape
 intro to how disk work
 
 ### Disk Management
