@@ -11,9 +11,11 @@ description: Storage Management
 
 Storage Management page
 
+intro to how disk work
+
 ### Disk Management
 
-Free-space management, Storage allocation, Disk scheduling, block sector partition
+Free-space management, Storage allocation, Disk scheduling, boot-block-sector-partition, disk formatting
 
 ### RAID
 
