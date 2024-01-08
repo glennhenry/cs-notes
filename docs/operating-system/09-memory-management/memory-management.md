@@ -11,6 +11,8 @@ description: Memory Management
 - **[Memory management - Wikipedia](https://en.wikipedia.org/wiki/Memory_management)**
 - **[Stack-based memory allocation - Wikipedia](https://en.wikipedia.org/wiki/Stack-based_memory_allocation)**
 - **[Contiguous Memory Allocation in OS - SCALER Topics](https://www.scaler.com/topics/contiguous-memory-allocation-in-os/)**
+- **[Virtual memory - Wikipedia](https://en.wikipedia.org/wiki/Virtual_memory)**
+- **[Memory paging - Wikipedia](https://en.wikipedia.org/wiki/Memory_paging)**
 - **Various Google searches**
 
 Memory is used to store program's data and instruction. The CPU will fetch the instructions from memory and execute them. The data required by the instructions is also fetched from memory and manipulated by the CPU. After execution is done, the data is stored back on the memory.
@@ -169,17 +171,46 @@ Source : https://stackoverflow.com/questions/1200694/internal-and-external-fragm
 ![Compaction](./compaction.png)  
 Source : https://www.semanticscholar.org/paper/Memory-Compaction-Performance-Improvement-by-a-Page-Jang-Kwon/579ddc1c3fb50a554ac93a9d6d7095aa1f506a66
 
-### Paging
+### Virtual Memory
 
-### Virtual Addressing
+#### Virtual Addressing
 
-The operating system assigns a portion of memory to a process by providing it with a range of memory addresses. When the process needs to read from or write to memory, it uses any of these addresses. However sometimes the addresses given to the process are not directly associated with physical memory. In other words, the locations the process refers to are not actual physical locations. This concept is known as **virtual addressing**, where the process accesses a "virtual" location.
+The operating system assigns a portion of memory to a process by providing it with a range of memory addresses. When the process needs to read from or write to memory, it uses any of these addresses. However, the address given to the process are not directly associated with physical memory. In other words, the locations the process refers to are not actual physical locations. This concept is known as **virtual addressing**, where the process accesses a "virtual" location.
 
-#### Virtual Memory
+We call memory that use virtual addressing a **virtual memory**. Virtual memory make it possible to use secondary storage such as hard disk to store process data. Main memory or RAM, while they are fast, they are limited in space. Secondary storage is typically slow, but it has much larger space.
 
-### Caching
+![Virtual memory](./virtual-memory.png)  
+Source : https://www.tutorialspoint.com/operating_system/os_virtual_memory.htm
 
-Caching is...
-cac
+Process is given a range of address that it can access to. It is the OS responsibility to handle the mapping between the virtual address and the physical address. If the process want to access, say the address "0x200", the OS must translate that virtual address into a real address, it needs to locate a physical location from a virtual address.
 
-See [caching](/backend-development/caching)
+In summary, virtual memory is a technique to use secondary disk as an extension of memory. Each process uses a virtual address instead of a physical address. The memory management system decides whether to place the data on the main memory, or place it in the secondary disk. The location where it is placed doesn't matter, as the OS will the mapping between virtual and physical address.
+
+#### Paging
+
+**Paging** is one of the mechanism to implement virtual memory. Paging divides the virtual address space of a process into contiguous fixed-size blocks called **pages**. Likewise, the physical memory is divided into frames of the same size. The pages of a process are mapped to the frames in physical memory through a page table.
+
+![Paging](./paging.png)  
+Source : https://byjus.com/gate/paging-in-operating-system-notes/
+
+#### Translation
+
+When a program references a memory address through virtual address, it will need to go through an address translation. Memory management unit (MMU), which is the hardware that handles memory related operations, will intercept the memory access and performs the necessary translation.
+
+The MMU uses a **page table**, which is a data structure maintained by the OS that contains various mapping information between virtual pages and physical frames, such as an indicator that indicates whether the corresponding address that the process is accessing is present in the main memory.
+
+A virtual address contains consists of multiple components or fields :
+
+- **Page Number** : Page or segment within the virtual address space that the address belongs to.
+- **Page Offset** : Represents the offset or displacement within the page or segment. It specifies the specific location or byte within the page or segment that the address refers to.
+
+![Address translation](./address-translation.png)  
+Source : https://blogs.vmware.com/vsphere/2020/03/how-is-virtual-memory-translated-to-physical-memory.html
+
+When a program references a memory page that is not currently present in main memory, an exception called **page fault** occurs. When a requested page is not resident in main memory, it needs to be fetched from secondary storage. The program generates a memory access request for the page, this will trigger a page fault [interrupt](/operating-system/interrupt-handling), causing the control to transfer to the operating system.
+
+#### Advantages & Disadvantages
+
+Paging has some advantages, paging make it possible to swap memory. Pages that are not currently needed can be swapped out to disk storage, freeing up physical memory for other pages or processes. Each page in virtual memory can be assigned access permissions, such as read-only or read-write, this increase memory protection between processes.
+
+The division of memory into pages lead to potential [internal fragmentation](#fragmentation), when the process does not utilize all memory within a page. Unused portion of the page is wasted and cannot be allocated to other processes.
