@@ -209,8 +209,20 @@ Source : https://blogs.vmware.com/vsphere/2020/03/how-is-virtual-memory-translat
 
 When a program references a memory page that is not currently present in main memory, an exception called **page fault** occurs. When a requested page is not resident in main memory, it needs to be fetched from secondary storage. The program generates a memory access request for the page, this will trigger a page fault [interrupt](/operating-system/interrupt-handling), causing the control to transfer to the operating system.
 
+#### Page Replacement
+
+When page fault occurs, data need to be fetched from secondary storage to the main memory. This will involve evicting or replacing an existing page on the main memory. There are many algorithm and strategy to decide which page to replace, some examples are :
+
+- **Least Recently Used (LRU)** : This algorithm selects the page that has not been accessed for the longest period of time. It assumes that pages that have not been accessed recently are less likely to be accessed in the near future.
+- **First-In, First-Out (FIFO)** : This algorithm evicts the page that has been in physical memory the longest. It maintains a queue of pages and removes the page that entered the memory first.
+- **Least Frequently Used (LFU)** : This algorithm selects the page that has been accessed the least number of times. It assumes that pages with lower access frequencies are less likely to be used in the future.
+
 #### Advantages & Disadvantages
 
-Paging has some advantages, paging make it possible to swap memory. Pages that are not currently needed can be swapped out to disk storage, freeing up physical memory for other pages or processes. Each page in virtual memory can be assigned access permissions, such as read-only or read-write, this increase memory protection between processes.
+Paging has some advantages, paging make it possible to swap memory. Pages that are not currently needed can be temporarily swapped out to disk storage, freeing up physical memory for other pages or processes. Each page in virtual memory can be assigned access permissions, such as read-only or read-write, this increase memory protection between processes.
 
 The division of memory into pages lead to potential [internal fragmentation](#fragmentation), when the process does not utilize all memory within a page. Unused portion of the page is wasted and cannot be allocated to other processes.
+
+:::tip
+In the mapping between virtual and physical memory, file can also be mapped into the virtual memory address space of a process. This technique is called **memory-mapped files**, it enables process to access the contents of a file as if it were a block of memory, providing an efficient way to read from and write to files.
+:::
