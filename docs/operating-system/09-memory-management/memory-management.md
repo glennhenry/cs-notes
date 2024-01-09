@@ -164,9 +164,13 @@ Source : https://prepinsta.com/operating-systems/page-replacement-algorithms/bes
 ![Fragmentation](./fragmentation.png)  
 Source : https://stackoverflow.com/questions/1200694/internal-and-external-fragmentation
 
+To eliminate fragmentation, a process called **defragmentation** is done. It involves reorganizing files and data on a disk is reorganized. This process rearranges fragmented file segments into contiguous blocks.
+
 #### Compaction
 
 **Compaction** is a technique to rearrange memory contents, such as processes or data, to create larger contiguous blocks of free memory. It involves moving processes or files and updating memory references accordingly. Compaction can be time-consuming and may require additional memory or storage to facilitate the movement of data.
+
+The difference between compaction and defragmentation is, compaction moves any data so that hole is minimized. On the other hand, defragmentation involves rearranging common data, such as data of the same file, so that the file is stored continuously.
 
 ![Compaction](./compaction.png)  
 Source : https://www.semanticscholar.org/paper/Memory-Compaction-Performance-Improvement-by-a-Page-Jang-Kwon/579ddc1c3fb50a554ac93a9d6d7095aa1f506a66
