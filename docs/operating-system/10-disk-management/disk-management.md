@@ -8,6 +8,8 @@ description: Disk Management
 **Main Source :**
 
 - **[Chapter 10 Mass-Storage Structure - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
+- **[Chapter 12 File-System Implementation - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
+- **[Free Space Management in OS - SCALER Topics](https://www.scaler.com/topics/free-space-management-in-os/)**
 
 Operating system provides necessary abstractions and services for disk management. By disk, it means they are secondary or tertiary storage, which are non-volatile storage device that retains data even when the power is turned off.
 
@@ -110,10 +112,56 @@ When bad sector is found, it is flagged to be unusable. If it is possible to rec
 
 #### Free-space management
 
-#### Storage allocation
+When we delete a file, it is not immediately removed from the disk. File is simply marked as free space instead of being deleted. When we want to create a new file, we will overwrite the disk which is marked as free. This effectively delay the physical deletion of files, which will reduce the performance overhead when deleting file.
+
+The OS can choose various data structure to keep track the free space, the data structure is called **free-space list**.
+
+- **Bit Vector** : A block in the disk has a bit, each bit will either be 0 or 1, where 0 represent allocated and 1 represent free space. This data structure is simple, but when it needs a free space, it needs to check the bit one by one, potentially going through all the block.
+
+  ![Bit vector](./bit-vector.png)  
+  Source : https://www.scaler.com/topics/free-space-management-in-os/
+
+- **[Linked List](/data-structures-and-algorithms/linked-list)** : The system maintains a linked list of free blocks. This approach allow us to get free space efficiently, because all the node in the linked list is already a free space. However, because the pointer to the next block is located inside the block, traversing the list would be inefficient, because it requires I/O operation to read the block.
+
+  ![Free-space list using linked list](./free-space-linked-list.png)  
+  Source : https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/12_FileSystemImplementation.html
+
+- **Counting** : This approach involves keeping track of the count of contiguous free blocks. This approach takes advantage of the fact that data is often stored in contiguous blocks, so when a block is freed, it is likely that the adjacent blocks are also free. We only need to store the address of the first free block and the number of free contiguous block next to it.
+
+#### Storage Allocation
+
+**Storage allocation** is the process of assigning and managing storage space for data or resources on a storage device, determining where and how they are stored, organizing them systematically, and tracking their locations for efficient retrieval.
+
+There are three common method to allocate :
+
+- **Contiguous Allocation** : In this method, files are stored as continuous blocks of data on the storage device. Each file occupies a contiguous section of the storage space. We will then store the location of the block with its length. Contiguous allocation provides fast access to data, but it can suffer from [fragmentation](/operating-system/memory-management#fragmentation) as files are created, modified, and deleted.
+
+  ![Contiguous allocation](./contiguous-allocation.png)  
+  Source : https://mocki.co/contiguous-allocation/
+
+- **Linked Allocation** : Linked allocation uses linked data structures, such as [linked lists](/data-structures-and-algorithms/linked-list), to manage storage space. Each file is divided into blocks, and each block contains a pointer to the next block. The file system maintains a table or index to keep track of the blocks' locations scattered around. Linked allocation allows for dynamic storage allocation and flexibility, solving fragmentation issue, but can introduce overhead due to the need to traverse the linked structure.
+
+  ![Linked allocation](./linked-allocation.png)  
+  Source : https://www.geeksforgeeks.org/file-allocation-methods/
+
+- **Indexed Allocation** : Indexed allocation uses a table to store the location of a file's block. The file's block will contain pointers or addresses that directly reference the data blocks on the storage device. Indexed allocation allows efficient access to files by random access, but it requires additional storage space for the index structure.
+
+  ![Indexed allocation](./indexed-allocation.png)  
+  Source : https://www.scaler.com/topics/file-allocation-methods-in-os/
 
 ### RAID
 
-### Backup & Recovery
+**Redundant Array of Independent Disks (RAID)** is a technology that combines multiple physical disk drives into a single logical unit. RAID provides parallel data transfer across all the disks by distributing data across multiple disks, it utilizes all the disk transfer rate.
 
-### Defragmentation
+Another benefits of RAID are data redundancy. A technique called **mirroring** allow us to have a backup of data. The technique involves writing a copy of a data written into a specific disk into every disk. While it is expensive, it ensures that data is still accessible even if one or more disk drives fail.
+
+RAID can be configured in many levels :
+
+- **RAID 0** : Also known as **striping**, RAID 0 improves performance by splitting data across multiple disks without redundancy, offering no data protection.
+- **RAID 1** : RAID 1, or mirroring, duplicates data across two or more disks to provide redundancy, providing a backup data.
+- **RAID 0 + 1 and 1 + 0** : RAID 0 + 1 combines mirroring and striping. It provides both high performance and data redundancy, but it requires a larger number of drives compared to other RAID levels.
+
+And many other levels…
+
+![RAID levels comparison](./raid.png)  
+Source : https://ttrdatarecovery.com/raid-1-vs-raid-10-comparison/
