@@ -1,0 +1,43 @@
+import heapq
+import os
+
+def count_characters(directory):
+    total_sum = 0
+    alls = []
+
+    for root, dirs, files in os.walk(directory):
+        for filename in files:
+            if filename.endswith(".md") or filename.endswith(".mdx"):
+                file_path = os.path.join(root, filename)
+
+                with open(file_path, "r", encoding="utf-8") as file:
+                    content = file.read()
+                    char_sum = len(content)
+                    total_sum += char_sum
+                    alls.append((-char_sum, filename))
+                    print(f"Note: {file_path}, Characters: {char_sum}")
+
+    print(f"\nTotal Characters in All Notes: {total_sum}")
+    print(f"\nLongest notes:")
+    heapq.heapify(alls)
+    for _ in range(5):
+        c, n = heapq.heappop(alls)
+        print(f"  Character: {-c} | {n}")
+
+def count_notes(directory):
+    count = 0
+
+    for root, dirs, files in os.walk(directory):
+        current_count = 0
+
+        for filename in files:
+            if filename.endswith(".md") or filename.endswith(".mdx"):
+                current_count += 1
+                count += current_count
+                print(f"Total: {count} | {root} | {filename}")
+
+    print(f"Total notes: {count}")
+
+directory_path = "D:\\Programming\\Projects\\cs-notes\\docs"
+# count_characters(directory_path)
+# count_notes(directory_path)
