@@ -8,6 +8,8 @@ description: File System
 **Main Source :**
 
 - **[Chapter 11 File-System Interface - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
+- **[Chapter 12 File-System Implementation - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
+- **[File system - Wikipedia](https://en.wikipedia.org/wiki/File_system)**
 - **[Directory structure in OS - SCALER Topics](https://www.scaler.com/topics/directory-structure-in-os/)**
 
 **File System** is a logical construct, a method, or structure used by an operating system to organize and store data on the storage.
@@ -65,11 +67,11 @@ Terminology :
 
 #### File Security
 
-To ensure only authorized processes have access to files, the OS provide a mechanism called **access control**. The OS maintains metadata about each file, including ownership and permissions. These permissions specify which processes are allowed to perform certain operations on the file, such as reading, writing, or executing.
+To ensure only authorized processes have access to files, the OS provide a mechanism called **access control**. The OS maintains metadata about each file, including ownership and permissions. These permissions specify which processes are allowed to perform certain operations on the file, such as read, write, execute, append, delete, or list. Read, write, execute, and list are descriptive, append means writing new information at the end of the file, and list, list the name and attributes of the file.
 
 In a multi-user environment where multiple users operate the same computer, meaning they may share access to files, this is where file security becomes even more critical. The operating system provides features to handle file sharing and control how files may be accessed by different users, not just processes.
 
-In [Unix OS](/operating-system/unix), each file is assigned a 9-bit binary protection code, which consists of three 3-bit fields representing the owner, the owner's group, and everyone else. These fields determine the level of access granted to different users or groups for a particular file.
+In [Unix OS](/operating-system/unix), each file is assigned a 9-bit binary protection code, which consists of three 3-bit fields representing the **owner**, the **owner's group**, and everyone else (also called **universe**). These fields determine the level of access granted to different users or groups for a particular file.
 
 The three permission bits for each field are :
 
@@ -149,11 +151,37 @@ The two types of graph for directory representation :
 [Tree](/data-structures-and-algorithms/tree) is a special case of graph where the properties are undirected and acyclic. It contains no cycles or loops and connected, meaning there is a path between any two vertices.
 :::
 
-### File Allocation
-
-contiguous, linkeed, indexed
-
 ### File System Implementation
+
+#### File System Structure
+
+#### File Control Block
+
+#### Partition & Mounting
+
+#### Directory Implementation
+
+- **Linear List** :
+- **Hash Table** :
+
+#### Allocation Methods
+
+**Allocation Methods** are the methods of allocating space on a storage device to store files in a file system. It involves managing the storage resources and organizing the physical locations where files are stored on the storage medium.
+
+See [storage allocation](/operating-system/disk-management#storage-allocation).
+
+#### Inode
+
+It's an example in Unix OS. FCB
+
+#### Free-Space Management
+
+**Free-space Management** is the process of tracking and managing available space on a storage device. It involves keeping a record of which areas or blocks of the storage medium are free or allocated to files.
+
+- **Allocation** : When a new file needs to be created, the system identifies and allocates a suitable portion of the storage medium to store the file. The system finds contiguous or non-contiguous set of free blocks that can accommodate the file's size.
+- **Deallocation** : When a file is deleted or no longer needed, the system marks the previously allocated blocks as free, making them available for future allocations.
+
+See [free-space management](/operating-system/disk-management#free-space-management).
 
 ### File System Example
 
