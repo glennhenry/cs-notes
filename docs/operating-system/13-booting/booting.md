@@ -12,7 +12,7 @@ description: Booting
 Booting page
 
 ROM, EEPROM, EPROM, boostrap
-
+mbr, boot sector
 ### Boot Process
 
 ### Boot Loaders

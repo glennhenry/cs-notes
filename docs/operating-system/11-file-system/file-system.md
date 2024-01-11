@@ -11,6 +11,9 @@ description: File System
 - **[Chapter 12 File-System Implementation - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 - **[File system - Wikipedia](https://en.wikipedia.org/wiki/File_system)**
 - **[Directory structure in OS - SCALER Topics](https://www.scaler.com/topics/directory-structure-in-os/)**
+- **[File Allocation Table - Wikipedia](https://en.wikipedia.org/wiki/File_Allocation_Table)**
+- **[Design of the FAT file system - Wikipedia](https://en.wikipedia.org/wiki/Design_of_the_FAT_file_system)**
+- **[NTFS - Wikipedia](https://en.wikipedia.org/wiki/NTFS)**
 
 **File System** is a logical construct, a method, or structure used by an operating system to organize and store data on the storage.
 
@@ -155,24 +158,67 @@ The two types of graph for directory representation :
 
 #### File System Structure
 
+File system is designed with multiple levels, forming a layered structure.
+
+1. At the lowest level, the physical properties of the storage devices, such as disks, are dealt with. This level accesses data directly from the disk in the level of blocks. It is possible to access to any block of information on the disk directly.
+2. The hardware is controlled by I/O control, through device drivers and interrupt handlers. It manages the flow of data between the application programs and the storage devices, also handles error detection and recovery in case of I/O failures.
+3. A basic file system is implemented above the hardware. It is a logical file system on the physical storage devices that handles the low-level operations required to read and write data from and to the physical block of storage devices.
+4. The file-organization module is responsible for managing how files are stored and organized. This includes determining allocated space ([free-space management](#free-space-management)), location of file, and translation between physical blocks and logical blocks.
+5. The logical file system is the highest-level in the system. It is the level where a standardized and abstracted interface exist for applications to access and manipulate files without needing to know the details of the underlying physical storage devices. File organization is abstracted using [directory](#directory), file is also included with a **[File Control Block (FCB)](#file-control-block)**, which is a data structure used to maintain information about individual files, such as ownership, permissions, and location of the file contents.
+
+   ![File system structure](./file-system-structure.png)  
+   Source : https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/12_FileSystemImplementation.html
+
+More about disk in [disk management](/operating-system/disk-management).
+
 #### File Control Block
+
+FCB holds important metadata about the file, such as its name, location, size, permissions, creation and modification timestamps, and other attributes. It acts as a reference point for the operating system to track and manipulate the file throughout its lifecycle.
+
+When a file is created, the file system allocates a new FCB to represent it. The FCB is then updated with the necessary information, such as the file name and its associated data blocks. This FCB is then stored in the appropriate directory structure, allowing the operating system to locate and access the file.
+
+![File control block](./file-control-block.png)  
+Source : https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/12_FileSystemImplementation.html
+
+The OS keep track a data structure called **open-file table**, to manage open files by processes or applications. Within a specific process, an **open-file table per-process** is used. On the other hand, the OS also keep track the **system-wide open-file table**, which maintains a global view of all open files and is accessible by all processes in the system.
+
+When an application opens a file, the operating system scans the system-wide open-file table to determine if the file is already being used. If the file is indeed in use, the operating system creates a new entry in the per-process open-file table that references the existing entry in the system-wide open-file table. This approach helps minimize the overhead of opening a new file. After that, the process is assigned a **file descriptor** or **file handle**, which serves as a reference to the opened file.
+
+If the file is not already open, the directory structure is searched, and the FCB associated with the file is copied into the system-wide open-file table. This table not only stores the FCB but also keeps track of the number of processes that have the file open, so that it know when to close the file.
+
+After the process receive the file descriptor, either from the existing system-wide open-file or from per-process, the process can now perform file operation through it.
 
 #### Partition & Mounting
 
+**Partition** is the process of logically separating section of a physical disk drive. When a disk is partitioned, it is divided into multiple sections that can be treated as independent units. Each partition is typically formatted with a file system and can be used to store data and host a file system. Partition help to create boundaries so that the system doesn't overwrite important data when the disk is full.
+
+**Mounting** is the process of making a file system accessible and associating it with a specific directory (called **mount point**). When a file system is mounted, the directory specified as the mount point becomes the entry point for accessing the files and directories within that file system.
+
+For example, in Windows, mounting a drive is assigning a drive letter. Each storage device or partition is assigned a drive letter (such as `C:`, `D:`, `E:`) to represent it. If a file system is mounted at drive letter `C:`, users can access files within that file system by specifying the drive letter followed by the file path.
+
+![Disk partition in Windows](./disk-partition.png)  
+Source : https://www.minitool.com/partition-disk/volume-vs-partition.html
+
 #### Directory Implementation
 
-- **Linear List** :
-- **Hash Table** :
+Two common approaches are using a [linear list](/data-structures-and-algorithms/linked-list) and a [hash table](/data-structures-and-algorithms/hash-table).
+
+- **Linear List** : The directory entries are stored in a sequential list. Each entry contains the file name and a pointer to the corresponding file data. This method is simple to program, but it may result in slower searching, especially for large directories.
+
+  To find a specific file, the directory must be searched from the beginning until the desired entry is found. Similar to other operation where traversal is needed. This linear search can be time-consuming, especially if the directory is long. One way to improve is to use a sorted list, it can decrease the average search time by allowing a binary search. Additionally, a sorted list enables producing a sorted directory listing without a separate sorting step.
+
+- **Hash Table** : In this approach, a linear list is still used to store the directory entries, but a hash data structure is employed as well. The hash table takes a value computed from the file name and returns a pointer to the corresponding entry in the linear list. This allows for faster directory search by greatly reducing the search time.
+
+  When a file name needs to be looked up, it is hashed to generate a value within a given range. This value is then used to directly access the corresponding entry in the linear list, avoiding the need for sequential searching. However, [collisions](/data-structures-and-algorithms/hash-table#collision) may occur when two file names hash to the same location, requiring collision resolution techniques, such as using a linked list within each hash entry.
+
+  ![Hash table directory](./hash-table-directory.png)  
+  Source : https://www.javatpoint.com/os-directory-implementation
 
 #### Allocation Methods
 
 **Allocation Methods** are the methods of allocating space on a storage device to store files in a file system. It involves managing the storage resources and organizing the physical locations where files are stored on the storage medium.
 
 See [storage allocation](/operating-system/disk-management#storage-allocation).
-
-#### Inode
-
-It's an example in Unix OS. FCB
 
 #### Free-Space Management
 
@@ -187,15 +233,73 @@ See [free-space management](/operating-system/disk-management#free-space-managem
 
 #### FAT
 
-- dd
-- dd
+**File Allocation Table (FAT)** is a file system used in the old Windows version. FAT has three versions, FAT12, FAT16, and FAT32, where each newer version accommodate larger storage capacities and file sizes.
+
+- **Structure** :
+
+  - The FAT file system organizes data on a storage device into **[clusters](/operating-system/disk-management#disk-structure)**, which are contiguous fixed-size units of allocation on the disk.
+  - The file system consists of four regions : **reserved sectors**, **FAT region**, **root directory region**, and **data region**.
+  - Reserved sectors is a portion of the file system that is reserved for the system file, it includes the boot sector, which contains information for booting the system.
+  - The FAT is the main component, it is a table that keeps track of the allocation status of each disk block.
+  - Root directory stores information about the files and directories located in the root directory.
+  - Data region holds the actual data of files and directories, they are divided into cluster which are linked together through the entries in the FAT.
+
+- **File Allocation Table** :
+
+  - FAT is a table that keeps track of which clusters are allocated to files and directories.
+  - Each entry in the table represents a cluster and contains information about the status of the cluster (such as whether it is free, allocated, or marked as bad). Entries are chained together forming a [linked list](/data-structures-and-algorithms/linked-list).
+  - An entry of FAT depends on the version, FAT12 uses 12 bits, FAT16 uses 16 bits, and so on.
+  - For example, an entry in FAT32 can be `0x00000000`, this represents a free cluster, a `0x0FFFFFFF` indicates an end-of-file marker or a special purpose value.
+
+- **Directory Structure** :
+
+  - The file system keep track of **directory table**, which is a centralized index that contains information about the files stored on the disk. It provides the necessary details to locate and access specific files. The directory table consists of a collection of directory entries, each representing a file or a subdirectory.
+  - Each directory entry contains metadata about a file or a subdirectory, such as the file name, extension, attributes, creation/modification dates, and the starting of the cluster of the file's data.
+  - The root directory is located in a fixed position on the storage device, and subsequent directories are stored as separate entries within their parent directories.
+
+  ![FAT directory entries](./directory-entries.png)  
+  Source : [top](https://codes.pratikkataria.com/file-systems/), [bottom](https://networkencyclopedia.com/file-allocation-table-fat/)
+
+  In the image above, FILE1 starts from the cluster 0002, it continues to cluster 0003 until the cluster 0004, where end of file mark is reached.
+
+- **Limitations** :
+
+  - The FAT file system has certain limitations, such as the maximum file size and the maximum number of files supported, which depend on the FAT version and cluster size being used. For example, the original FAT16 file system had limitations on file size (up to 2 GB) and the number of files in the root directory (up to 512 entries).
+  - In FAT12 and FAT16, the file name is limited to 8 characters for the base name and 3 characters for the extension, to adapt with the limited resource of early days of computing. For example, `myfile.txt` is a valid file name, but `thisismyverylongfilename.txt` would be truncated to `thisismy.txt`.
+
+To summarize, the FAT file system divides the disk into clusters and uses the FAT table to track the status of each cluster. Clusters store file data and are organized in a chain, the length of which varies depending on the file size. Files are grouped into directories, and information about directories and their entries is stored in the directory table. Each directory entry contains metadata and the starting cluster of the associated data. When reading a file, the system traverses the cluster chain until it reaches a specific end-of-file marker.
 
 #### NTFS
 
-- dd
-- dd
+**New Technology File System (NTFS)** is a file system for the newer Windows version. NTFS is a successor of FAT, it introduces support for long file names, advanced file and folder permissions, encryption, compression, and fault tolerance mechanisms.
 
-#### EXT4
+![Access control](./ntfs-access-control.png)  
+Source : https://en.wikipedia.org/wiki/NTFS#/media/File:NTPermissions.png
 
-- dd
-- dd
+The image above is the access control lists in Windows 7. Permissions can be assigned to file or directory. They are assigned to a parent folder are automatically inherited by its subfolders and files, reducing the need of assigning permission individually to each file or directory.
+
+NTFS consists three important components **partition boot sector (PBS)**, **master file table (MFT)**, and **metafiles**. The fundamental data structure in NTFS is the MFT. MFT keeps track of the file's metadata and the address of file's blocks, eliminating the need for a separate table like in FAT. If a file is extremely large, it may require multiple MFT records to contain the list of its blocks.
+
+- **PBS** : Located at the first sector of a disk partition. It contains essential information for the system to [boot](/operating-system/booting), such as the boot code that initiates the system's startup process, magic number that identifies NTFS file system, and the partition table that identifies the partition structure on the disk. In NTFS, the PBS includes the bootstrap code that loads the operating system's bootloader, which is responsible for starting the operating system.
+
+  ![NTFS PBS](./ntfs-pbs.png)  
+  Source : https://twitter.com/jaredcatkinson/status/590333209495244801
+
+- **MFT** : MFT is the centralized database that stores metadata about files and directories on an NTFS volume. MFT is a linear sequence of fixed-size 1-KB records, where each entry is file or directory on the volume. It contains information such as file names, timestamps, file attributes, security descriptors, and data allocation. The MFT is used file system operations, it enables quick access to file metadata and efficient management of file data.
+
+  ![MFT](./mft.png)  
+  Source : https://andreafortuna.org/2017/07/18/how-to-extract-data-and-timeline-from-master-file-table-on-ntfs-filesystem/
+
+- **Metafiles** : NTFS has several special system files that help structure and organize the file system. Some example :
+
+  - **$MFT** : The Master File Table itself is a meta file that serves as a database of file and directory metadata, as mentioned earlier.
+  - **$MFTMirr** : The MFT Mirror is a backup copy of the first few critical records of the MFT.
+  - **$LogFile** : The Log File is used for transaction logging in NTFS. It records changes made to the file system before they are committed, allowing for system recovery when unexpected events such as power failures occurs.
+  - **$Bitmap** : The Bitmap file keeps track of the allocation status of clusters on the disk, indicating which clusters are free and which are in use.
+  - **$Volume** : The Volume file stores information about the NTFS volume itself, including its label, version, serial number, and other volume-specific details.
+
+#### ext
+
+**Extended file system (ext)** is a file system for [Linux kernel](/operating-system/linux-kernel), it consists of four versions, ext1, ext2, ext3, and the newest ext4.
+
+Starting from the ext2, the file system is...
