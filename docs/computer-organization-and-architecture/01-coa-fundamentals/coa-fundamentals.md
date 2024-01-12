@@ -56,7 +56,7 @@ Source : https://www.researchgate.net/figure/Fig3-internal-structure-of-RAM_fig2
 
 ROM can be used for :
 
-- **Bootstrap Loader** : It is the initial instruction for computer to boot or start up.
+- **[Bootstrap Loader](/operating-system/booting)** : It is the initial instruction for computer to boot or start up.
 - **Firmware** : Firmware is software code embedded in hardware devices. It consists of basic machine instructions for hardware to do common task with other software in the device.
 - **Embedded Systems** : Embedded systems are devices included with a dedicated computer systems to perform specific tasks or functions. They often rely on pre-programmed instructions stored in ROM to perform their intended functions.
 
