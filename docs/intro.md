@@ -77,11 +77,11 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 ### Longest Notes
 
+- [File System](operating-system/file-system) (36282 char)
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
 - [Memory Management](operating-system/memory-management) (24432 char)
 - [Programming Concepts](computer-and-programming-fundamentals/programming-concepts) (21198 char)
 - [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism) (19294 char)
-- [COA Fundamentals](/computer-organization-and-architecture/coa-fundamentals) (18540 char)
 
 ### Credits
 
