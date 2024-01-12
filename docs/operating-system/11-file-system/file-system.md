@@ -14,6 +14,7 @@ description: File System
 - **[File Allocation Table - Wikipedia](https://en.wikipedia.org/wiki/File_Allocation_Table)**
 - **[Design of the FAT file system - Wikipedia](https://en.wikipedia.org/wiki/Design_of_the_FAT_file_system)**
 - **[NTFS - Wikipedia](https://en.wikipedia.org/wiki/NTFS)**
+- **[Extended file system - Wikipedia](https://en.wikipedia.org/wiki/Extended_file_system)**
 
 **File System** is a logical construct, a method, or structure used by an operating system to organize and store data on the storage.
 
@@ -300,6 +301,43 @@ NTFS consists three important components **partition boot sector (PBS)**, **mast
 
 #### ext
 
-**Extended file system (ext)** is a file system for [Linux kernel](/operating-system/linux-kernel), it consists of four versions, ext1, ext2, ext3, and the newest ext4.
+**Extended file system (ext)** is a file system for [Linux kernel](/operating-system/linux-kernel), it consists of four versions, ext1, ext2, ext3, and the newest ext4. All of them are designed to be backward compatible of each other.
 
-Starting from the ext2, the file system is...
+##### ext2
+
+Starting from the ext2 :
+
+- **Disk Layout** : ext2 organizes data on the disk into fixed-size blocks. The default block size is 4 KB, although larger block sizes can be used. The file system divides the disk into block groups, each containing a fixed number of blocks. Each block group has its own metadata to track file system structures and data within that group.
+- **Inodes** : **Inode (index node)** is a data structure in Unix-like system for describing file-system object, such as file or directory. An inode contains metadata about the file, including file permissions, ownership information, timestamps, and pointers to the data blocks that store the file's content. Inodes are arranged in a table structure.
+
+  ![Inode pointer structure](./inode.png)  
+  The inode can contain pointer to the file's content (direct data blocks), or a pointer to another block that contains pointer to the actual content (indirect data blocks).  
+  Source : https://en.wikipedia.org/wiki/Inode_pointer_structure
+
+- **Directory** : Directories in ext2 are organized as special files. A directory file contains a list of entries, where each entry represents a file or a subdirectory within that directory. Each entry consists of a name and an inode number that points to the corresponding inode.
+
+  ![Directory entry in ext](./ext-directory-entry.png)  
+  Source : https://premaseem.wordpress.com/2016/02/14/what-is-inode-in-linux-unit/
+
+- **Block Allocation** : ext2 uses a block allocation bitmap to track the allocation status of data blocks. The bitmap keeps track of free blocks and allocated blocks within the file system. When a new file is created or an existing file is extended, ext2 searches for free blocks using the allocation bitmap and assigns them to the file. When a file is deleted in ext2, its inode and data blocks are marked as free in the allocation bitmap, making them available for reuse.
+
+##### ext3
+
+ext3 brought several improvements over ext2, such as the **journaling system**. The journaling system logs changes to the file system before committing them to the main file system structures. This journaling feature ensures that the file system can recover after a crash or an unexpected system shutdown.
+
+There are three levels of journaling :
+
+- **Journal (lowest risk)** : In data journaling, both metadata and file data modifications are logged in the journal before being committed to the file system. Can suffer from performance overhead due to the increased number of disk writes required.
+- **Ordered (medium risk)** : Only metadata are logged in the journal, after it is logged, file content is modified after.
+- **Writeback (highest risk)** : This level is similar to ordered, but logging metadata and writing the file content is done asynchronously. This means that there is a possibility that file content writing is completed first, and a system crash occurs before the metadata is written.
+
+![Journaling system](./journaling.png)  
+Source : https://foxutech.com/journaling-filesystem/
+
+##### ext4
+
+ext4 supports larger file systems and file sizes compared to ext3. ext4 allows storage capacities up to 1 exabyte (1 billion gigabytes) and individual file sizes of up to 16 terabytes. ext4 does not limit the number of subdirectories in a single directory, in contrast, ext3 a directory can have at most 32,000 subdirectories.
+
+ext4 enhances the allocation algorithms, it introduces **multiblock allocation**, which allows for allocation of multiple blocks at once. In contrast, ext3 calls block allocator, once for each block.
+
+ext4 implements **delayed allocation**, also known as **allocate-on-flush**. This technique improves write performance by delaying the allocation and writing of data blocks until they are actually needed. This technique allow writing larger amount of data at once, reducing unnecessary disk I/O operations.
