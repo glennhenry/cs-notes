@@ -67,7 +67,7 @@ Source : https://tournasdimitrios1.wordpress.com/2011/01/19/the-basics-of-networ
 
 #### Connection Strategies
 
-Two processes can establish a sequence communication. Connections can be either **connection-oriented** or **connectionless**.
+Two processes can establish a sequence of communication. Connections can be either **connection-oriented** or **connectionless**.
 
 In a connection-oriented approach, a dedicated communication channel is established between the sender and receiver before data transmission. Protocols like [TCP](/computer-networking/tcp-protocol) follow a connection-oriented approach. In short, TCP guarantee that packet will not lost in transmission, this is participant of TCP must ensure they are connected reliably. Upon sending message, the sender must send an **ACK (acknowledgment)** message, which can be thought as an indicator of whether data transmission should continue.
 
