@@ -99,6 +99,10 @@ When the computer goes through the [boot process](/operating-system/booting), it
 ![Boot sector](./boot-sector.png)  
 Source : https://en.wikipedia.org/wiki/Boot_sector#/media/File:GNU_GRUB_components.svg
 
+:::info
+See also **[master boot record (MBR)](/operating-system/booting#master-boot-record-mbr)**.
+:::
+
 #### Bad Sector
 
 Bad sector refers to a portion of a storage device that is physically damaged or unable to reliably store data. A bad sector can occur due to various reasons, including manufacturing defects, physical damage, aging, or other issues with the disk.

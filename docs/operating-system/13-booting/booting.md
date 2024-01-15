@@ -36,3 +36,13 @@ When computer is turned off, it may be switched on via button. After that, serie
    Source : https://en.wikipedia.org/wiki/Bootloader#/media/File:Debian_Unstable_GRUB2_(2015).png
 
 After the operating system is loaded, the boot is considered done, as the operating system can now handle system or application programs.
+
+### Master Boot Record (MBR)
+
+MBR is a data structure located in the first sector (or [boot sector](/operating-system/disk-management#boot-sector)) of a storage device. The MBR contains essential information for the system to start up.
+
+- **Bootloader Code** : The bootloader's code is stored in the MBR.
+- **Partition Table** : The MBR stores a **partition table**, which is a data structure that describes the layout of partitions on the storage device. The partition table defines the starting and ending sectors of each partition, as well as the partition type.
+
+![MBR](./mbr.png)  
+Source : https://www.ionos.ca/digitalguide/server/configuration/what-is-mbr/
