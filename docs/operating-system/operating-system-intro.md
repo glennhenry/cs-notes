@@ -25,7 +25,7 @@ Some source is also from the book "Abraham Silberschatz-Operating System Concept
 - [Networking](operating-system/networking)
 - [User Interface](operating-system/user-interface)
 - [Virtualization](operating-system/virtualization)
-- [Security](operating-system/security)
+- [Security](operating-system/protection-and-security)
 - Case Studies
   - [Type of OS](operating-system/type-of-os)
   - [Unix](operating-system/unix)

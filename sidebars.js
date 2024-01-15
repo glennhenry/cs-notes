@@ -444,7 +444,7 @@ const sidebars = {
         "operating-system/networking/networking",
         "operating-system/user-interface/user-interface",
         "operating-system/virtualization/virtualization",
-        "operating-system/security/security",
+        "operating-system/protection-and-security/protection-and-security",
         {
           type: "category",
           label: "Case Studies",
