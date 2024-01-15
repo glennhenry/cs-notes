@@ -31,6 +31,6 @@ Some source is also from the book "Abraham Silberschatz-Operating System Concept
   - [Unix](operating-system/unix)
   - [BSD](operating-system/linux-kernel)
   - [Linux Kernel](operating-system/bsd)
-  - [Android](operating-system/android)
   - [Windows](operating-system/windows)
+  - [Android](operating-system/android)
   - [macOS & iOS](operating-system/macos-and-ios)

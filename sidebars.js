@@ -451,10 +451,10 @@ const sidebars = {
           items: [
             "operating-system/type-of-os/type-of-os",
             "operating-system/unix/unix",
-            "operating-system/linux-kernel/linux-kernel",
             "operating-system/bsd/bsd",
-            "operating-system/android/android",
+            "operating-system/linux-kernel/linux-kernel",
             "operating-system/windows/windows",
+            "operating-system/android/android",
             "operating-system/macos-and-ios/macos-and-ios",
           ],
         },
