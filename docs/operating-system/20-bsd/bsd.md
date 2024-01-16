@@ -19,6 +19,8 @@ Over time, the BSD codebase was further developed and evolved independently, lea
 
 The FreeBSD is an open source, portable, complete operating system that can run on [x86](/computer-organization-and-architecture/isa#x86), [ARM](/computer-organization-and-architecture/isa#arm), AArch64, RISC-V, and PowerPC computers.
 
+FreeBSD features :
+
 - **Kernel** : FreeBSD has its own kernel, which is a monolithic one with modular design.
 
   The kernel initially uses the M:N [threading model](/operating-system/multithreading#relationship-model), where multiple user-level threads (M) were mapped onto a smaller number of kernel-level threads (N). In the version 7.0, FreeBSD switched to a 1:1 threading model.

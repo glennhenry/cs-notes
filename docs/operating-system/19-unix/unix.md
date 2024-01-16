@@ -31,7 +31,7 @@ The structure of Unix is as follows :
 ![Unix OS structure](./unix-structure.png)  
 Source : https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/2_Structures.html
 
-### Characteristics
+### Features
 
 - **Portability** : Unix follows the **Portable Operating System Interface (POSIX)** standard. POSIX defines how should an OS provide both system and application APIs so that it can be portable between other platforms.
 - **Shell** : Unix provides shell that serves as a [command-line interface (CLI)](/operating-system/user-interface#cli) for interacting with the system. The shell interprets user commands and executes them, allowing users to perform various operations, run programs, and manage files and processes.
