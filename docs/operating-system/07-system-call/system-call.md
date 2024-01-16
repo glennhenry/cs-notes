@@ -87,7 +87,7 @@ System calls in this category are related to process and system security, includ
 - **Cryptography**: System calls such as `encrypt()`, `decrypt()`, and `hash()` provide cryptographic functionality for data security. These system calls allow processes to perform encryption and decryption operations on data, as well as generate cryptographic hashes for data integrity verification and password storage.
 
 :::tip
-See also [OS security](/operating-system/security).
+See also [OS security](/operating-system/protection-and-security).
 :::
 
 ### System Call Implementation
