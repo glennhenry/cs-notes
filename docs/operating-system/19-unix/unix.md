@@ -47,5 +47,5 @@ Source : https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/2_Structures
   - `home` : The home directory is typically the default directory for each user. It stores personal files and user-specific configurations. Each user has their own home directory, typically represented as `/home/username` or `~`.
   - `bin` : The bin directory, short for binary, contains executable binary files (i.e., compiled programs or scripts) that are essential for basic system functionality. Common system utilities and commands are stored in this directory.
 
-- [**Inter-process Communication**](/operating-system/inter-process-communication) : Uses of [pipes](/inter-process-communication#message-passing) as its IPC mechanism. For example, the command `command1 | command2` creates a pipe between `command1` and `command2`, where the output of `command1` is piped directly as input to `command2`.
+- [**Inter-process Communication**](/operating-system/inter-process-communication) : Uses of [pipes](/operating-system/inter-process-communication#message-passing) as its IPC mechanism. For example, the command `command1 | command2` creates a pipe between `command1` and `command2`, where the output of `command1` is piped directly as input to `command2`.
 - **System Calls** : See [type of system calls & example](/operating-system/system-call#type-of-system-calls--example).
