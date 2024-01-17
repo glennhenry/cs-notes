@@ -43,6 +43,7 @@ The Linux kernel is based on [Unix](/operating-system/unix), they have similar f
 
 - Linux kernel manages physical memory in the form of pages. When a process requests memory, the kernel allocates pages from the available pool.
 - Linux implements a [virtual memory](/operating-system/memory-management#virtual-memory) system that allows processes to have their own virtual address spaces. It provides memory protection, demand paging, and memory sharing mechanisms.
+- Linux kernel uses the [slab](/operating-system/memory-management#slab-allocation) and the [buddy allocation](/operating-system/memory-management#buddy-allocation).
 
 #### File Systems
 

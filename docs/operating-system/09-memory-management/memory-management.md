@@ -11,6 +11,8 @@ description: Memory Management
 - **[Memory management - Wikipedia](https://en.wikipedia.org/wiki/Memory_management)**
 - **[Stack-based memory allocation - Wikipedia](https://en.wikipedia.org/wiki/Stack-based_memory_allocation)**
 - **[Contiguous Memory Allocation in OS - SCALER Topics](https://www.scaler.com/topics/contiguous-memory-allocation-in-os/)**
+- **[Slab allocation - Wikipedia](https://en.wikipedia.org/wiki/Slab_allocation)**
+- **[Buddy memory allocation - Wikipedia](https://en.wikipedia.org/wiki/Buddy_memory_allocation)**
 - **[Virtual memory - Wikipedia](https://en.wikipedia.org/wiki/Virtual_memory)**
 - **[Memory paging - Wikipedia](https://en.wikipedia.org/wiki/Memory_paging)**
 - **Various Google searches**
@@ -134,6 +136,30 @@ Source : https://www.scaler.com/topics/contiguous-memory-allocation-in-os/
 
 Contiguous memory allocation requires proper memory protection mechanisms to prevent processes from accessing the memory of other processes. These mechanisms include using base and limit registers or utilizing virtual memory techniques.
 
+#### Slab Allocation
+
+**Slab allocation** is a memory allocation mechanism that involves allocating a fixed-size block of memory called **slab**, whose size is supposed to fit an object, thereby minimizing memory waste due to [fragmentation](#fragmentation).
+
+Collection of slabs is stored in **cache**, it is used to track slab status. The cache maintains a list of free slabs, partially used slabs, and full slabs.
+
+The slab allocator sets up a pool of memory, which is then divided into slabs of a fixed size. When an allocation request is made for an object of a specific size, the slab allocator looks for a cache dedicated to that size. If a cache is found, the allocator checks if there are free objects within the cache's slabs. If there are, it assigns one of the free objects to the requester. If not, it allocates a new slab and assigns an object from that slab.
+
+When an object is deallocated, it is returned to the cache's list of free objects. If the slab becomes empty (all objects are deallocated), it is moved to the list of free slabs.
+
+![Slab allocation](./slab-allocation.png)  
+Source : https://cs.stackexchange.com/questions/45159/can-someone-explain-this-diagram-about-slab-allocation
+
+#### Buddy Allocation
+
+**Buddy allocation** is a memory allocation algorithm that manages memory in power-of-two block sizes, which can be divided or merged.
+
+When a memory request is made, the buddy allocator allocates memory from a buddy of a size that is a power of 2, such as 4 KB, 8 KB, or 16 KB. If the request asks for smaller memory than is available, then the block can be divided. If the request asks for larger memory, then the block can be merged.
+
+The properties of divide and merge of buddy allocation make it reduces external fragmentation. However, it still suffers from internal fragmentation when the requested size is larger than available. For example, if requested memory is 66 KB, then we would have to allocate for 128 KB, because of the fixed power-of-two nature.
+
+![Buddy allocation](./buddy-allocation.png)  
+Source : https://www.researchgate.net/figure/Memory-management-in-Linux-via-the-buddy-allocator-algorithm-Memory-spaces-are-divided_fig1_360496423
+
 #### Allocation Strategy
 
 During allocation, there are few strategies to determine the best location to allocate a block of memory from a free memory pool :
@@ -211,11 +237,13 @@ A virtual address contains consists of multiple components or fields :
 ![Address translation](./address-translation.png)  
 Source : https://blogs.vmware.com/vsphere/2020/03/how-is-virtual-memory-translated-to-physical-memory.html
 
-When a program references a memory page that is not currently present in main memory, an exception called **page fault** occurs. When a requested page is not resident in main memory, it needs to be fetched from secondary storage. The program generates a memory access request for the page, this will trigger a page fault [interrupt](/operating-system/interrupt-handling), causing the control to transfer to the operating system.
+When a program references a memory page that is not currently present in main memory, an exception called **page fault** occurs. When a requested page is not available in main memory, it needs to be fetched from secondary storage. The program generates a memory access request for the page, this will trigger a page fault [interrupt](/operating-system/interrupt-handling), causing the control to transfer to the operating system.
+
+This entire process is called **demand paging**, which is a technique to load data into memory only when it is needed, rather than loading the entire program or data set into memory at once. Virtual memory make it possible to implement demand paging, it allows the system to allocate and manage memory resources dynamically, as needed, by utilizing secondary storage as an extension of the physical memory.
 
 #### Page Replacement
 
-When page fault occurs, data need to be fetched from secondary storage to the main memory. This will involve evicting or replacing an existing page on the main memory. There are many algorithm and strategy to decide which page to replace, some examples are :
+When page fault occurs, data need to be fetched from secondary storage to the main memory. This will involve evicting or replacing an existing page on the main memory, the process is called **page replacement** or **page swapping**. There are many algorithm and strategy to decide which page to replace, some examples are :
 
 - **Least Recently Used (LRU)** : This algorithm selects the page that has not been accessed for the longest period of time. It assumes that pages that have not been accessed recently are less likely to be accessed in the near future.
 - **First-In, First-Out (FIFO)** : This algorithm evicts the page that has been in physical memory the longest. It maintains a queue of pages and removes the page that entered the memory first.
@@ -223,9 +251,11 @@ When page fault occurs, data need to be fetched from secondary storage to the ma
 
 #### Advantages & Disadvantages
 
-Paging has some advantages, paging make it possible to swap memory. Pages that are not currently needed can be temporarily swapped out to disk storage, freeing up physical memory for other pages or processes. Each page in virtual memory can be assigned access permissions, such as read-only or read-write, this increase memory protection between processes.
+Paging make it possible to swap memory, pages that are not currently needed can be temporarily swapped out to disk storage. By swapping out unnecessary pages to disk, the system can free up valuable space in the main memory for other processes or programs.
 
-The division of memory into pages lead to potential [internal fragmentation](#fragmentation), when the process does not utilize all memory within a page. Unused portion of the page is wasted and cannot be allocated to other processes.
+Each page in virtual memory can be assigned access permissions, such as read-only or read-write, this increase memory protection between processes.
+
+However, the division of memory into pages lead to potential [internal fragmentation](#fragmentation), when the process does not utilize all memory within a page. Unused portion of the page is wasted and cannot be allocated to other processes.
 
 :::tip
 In the mapping between virtual and physical memory, file can also be mapped into the virtual memory address space of a process. This technique is called **memory-mapped files**, it enables process to access the contents of a file as if it were a block of memory, providing an efficient way to read from and write to files.

@@ -75,14 +75,12 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 15. **[ref]** /operating-system : /virtualization -> ref to distributed systems in cloud-computing.
 16. **[ref]** /operating-system : /os-fundamentals -> ref to distributed systems in cloud-computing.
 17. **[ref]** /operating-system : /user-interface -> ref to mvc in software engineering.
-18. **[update]** /operating-system : /memory-management#memory-allocation -> add slab and buddy allocation, demand paging.
-19. **[update]** /operating-system : /linux#features -> in memory management, add slab and buddy allocation.
 
 ### Longest Notes
 
 - [File System](operating-system/file-system) (36282 char)
+- [Memory Management](operating-system/memory-management) (27368 char)
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
-- [Memory Management](operating-system/memory-management) (24432 char)
 - [Programming Concepts](computer-and-programming-fundamentals/programming-concepts) (21198 char)
 - [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism) (19294 char)
 
