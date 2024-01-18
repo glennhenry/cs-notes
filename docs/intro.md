@@ -19,7 +19,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[Computer Networking](computer-networking)**
 - **[Data Structures & Algorithms](data-structures-and-algorithms)**
 - **[Computer Organization & Architecture](computer-organization-and-architecture)**
-- [Operating System](operating-system)
+- **[Operating System](operating-system)**
 - [Theory of Computation & Automata](theory-of-computation-and-automata)
 - [Compilers](compilers)
 - [Programming Language Theory](programming-language-theory)
