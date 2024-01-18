@@ -75,6 +75,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 15. **[ref]** /operating-system : /virtualization -> ref to distributed systems in cloud-computing.
 16. **[ref]** /operating-system : /os-fundamentals -> ref to distributed systems in cloud-computing.
 17. **[ref]** /operating-system : /user-interface -> ref to mvc in software engineering.
+18. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
 
 ### Longest Notes
 
