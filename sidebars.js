@@ -496,7 +496,39 @@ const sidebars = {
       type: "category",
       label: "Database System",
       link: { type: "doc", id: "database-system/database-system" },
-      items: [],
+      items: [
+        "database-system/relational-data/relational-data",
+        "database-system/query-language/query-language",
+        {
+          type: "category",
+          label: "Database Management",
+          items: [
+            {
+              type: "category",
+              label: "Database Design",
+              items: [
+                "database-system/database-model/database-model",
+                "database-system/normalization/normalization",
+                "database-system/transactions/transactions",
+                "database-system/trigger-and-constraints/trigger-and-constraints",
+              ],
+            },
+            "database-system/backup-and-recovery/backup-and-recovery",
+            "database-system/database-optimization/database-optimization",
+          ],
+        },
+        {
+          type: "category",
+          label: "NoSQL",
+          items: [
+            "database-system/document/document",
+            "database-system/key-value/key-value",
+            "database-system/graph/graph",
+            "database-system/vector/vector",
+          ],
+        },
+        "database-system/database-implementation/database-implementation",
+      ],
     },
 
     // 12. Computer Graphics

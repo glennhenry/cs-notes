@@ -3,62 +3,40 @@
 
 import os
 
-topic_title = "operating-system"
+topic_title = "database-system"
 
 # List of content in kebab title
 content_id = [
-    "os-fundamentals",
-    "kernel",
-    "process-management",
-    "multithreading",
-    "interrupt-and-exception-handling",
-    "scheduling",
-    "inter-process-communication",
-    "memory-management",
-    "file-system",
-    "storage-management",
-    "system-call-and-service",
-    "booting",
-    "device-driver-and-io",
-    "networking",
-    "user-interface",
-    "virtualization",
-    "security",
-    "type-of-os",
-    "unix",
-    "linux-kernel",
-    "bsd",
-    "android",
-    "windows",
-    "macos-and-ios",
+    "relational-data",
+    "query-language",
+    "database-model",
+    "normalization",
+    "transactions",
+    "trigger-and-constraints",
+    "backup-and-recovery",
+    "database-optimization",
+    "document",
+    "key-value",
+    "graph",
+    "vector",
+    "database-implementation",
 ]
 
 # List of content in title case
 content_title = [
-    "OS Fundamentals",
-    "Kernel",
-    "Process Management",
-    "Multithreading",
-    "Interrupt & Exception Handling",
-    "Scheduling",
-    "Inter-process Communication",
-    "Memory Management",
-    "File System",
-    "Storage Management",
-    "System Call & Service",
-    "Booting",
-    "Device Driver & I/O",
-    "Networking",
-    "User Interface",
-    "Virtualization",
-    "Security",
-    "Type of OS",
-    "Unix",
-    "BSD",
-    "Linux Kernel",
-    "Android",
-    "Windows",
-    "macOS & iOS"
+    "Relational Data",
+    "Query Language",
+    "Database Model",
+    "Normalization",
+    "Transactions",
+    "Trigger & Constraints",
+    "Backup & Recovery",
+    "Database Optimization",
+    "Document",
+    "Key-Value",
+    "Graph",
+    "Vector",
+    "Database Implementation",
 ]
 
 # Create temp folder for debugging
@@ -119,6 +97,6 @@ def generate_folder_file():
 
 # main
 
-generate_folder_file()
+# generate_folder_file()
 # generate_topic_links()
-# generate_topic_sidebars()
+generate_topic_sidebars()

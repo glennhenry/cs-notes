@@ -5,24 +5,21 @@ title: Database System
 description: Database System Notes
 ---
 
-**Database System** is ...
-
 ### All pages
 
-- SQL
-    - MySQL
+- [Relational Data](database-system/relational-data)
+- [Query Language](database-system/query-language)
+- Database Management
+  - Database Design
+    - [Database Model](database-system/database-model)
+    - [Normalization](database-system/normalization)
+    - [Transactions](database-system/transactions)
+    - [Trigger & Constraints](database-system/trigger-and-constraints)
+  - [Backup & Recovery](database-system/backup-and-recovery)
+  - [Database Optimization](database-system/database-optimization)
 - NoSQL
-    - Document
-    - Key-Value
-    - Realtime
-    - Vector
-    - Graph
-- ORM
-- ACID
-- Transactions
-- Normalization
-- Database Optimization (Indexes)
-- Migration
-- Backup Strategy
-- database driver
-- dao
+  - [Document](database-system/document)
+  - [Key-Value](database-system/key-value)
+  - [Graph](database-system/graph)
+  - [Vector](database-system/vector)
+- [Database Implementation](database-system/database-implementation)
