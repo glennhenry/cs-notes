@@ -132,7 +132,7 @@ We can define a method that will be implemented by its subclasses. For example, 
 
 There are two types of polymorphism :
 
-- **Compile-time Polymorphism (Static Polymorphism)** : Also known as **method overloading**, it is a phenomenon that occurs when multiple methods with the same name, but different parameters are defined in a class. The appropriate method to be executed is determined at the compile-time based on the number, type, and order of the arguments passed.
+- **Compile-time Polymorphism (Static Polymorphism)** : This polymorphism is resolved in compile-time, one of the example is **method overloading**. It is a phenomenon that occurs when multiple methods with the same name, but different parameters are defined in a class. The appropriate method to be executed is determined at the compile-time based on the number, type, and order of the arguments passed.
 
   For example, a `Calculator` class that has method to add number, there may be two separate method, where each method differ in how many parameters or how many numbers it can take. Here is an example of code in Kotlin programming language :
 
@@ -153,7 +153,7 @@ There are two types of polymorphism :
 Compile-time is period in which code is being translated into machine language that computer can understand.
 :::
 
-- **Runtime Polymorphism (Dynamic Polymorphism)** : Also known as **method overriding**, occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. The decision of which method implementation will be executed determined at runtime (at the program execution) based on the actual type of the object being referenced.
+- **Runtime Polymorphism (Dynamic Polymorphism)** : This polymorphism is resolved in rutime, one of the example is **method overriding**, which occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. The decision of which method implementation will be executed determined at runtime (at the program execution) based on the actual type of the object being referenced.
 
   ```kotlin
   // open indicates a class, attributes, or methods is inheritable
