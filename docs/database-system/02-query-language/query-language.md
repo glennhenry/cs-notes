@@ -47,6 +47,10 @@ SQL clauses perform specific functions, they have particular order of execution 
 ![SQL execution order](./sql-order.png)  
 Source : https://en.wikipedia.org/wiki/SQL_syntax
 
+:::info
+The `SELECT` statement is also known as the **projection** operator. Projection is simply selecting a set of columns, eliminating the rest of larger set of columns. Also, the `WHERE` statement is a **selection** operation. Selection is the operation of filtering rows that satisfies certain condition.
+:::
+
 ##### Operators
 
 Operators are symbols or keywords that are used to perform comparisons, calculations, or logical operations on values or expressions.
@@ -235,4 +239,29 @@ Because SQL is [declarative](/computer-and-programming-fundamentals/declarative-
 
 For example, the SQL JOINS is an easy example of set theory application. In mathematics, set is defined as ... The `LEFT JOIN` is actually a mathematical set operation that ...
 
-This is just a simple example of how math is used behind SQL operations. Other aspect of database such as [normalization](/database-system/normalization) and [transactions](/database-system/transactions) also make use of math principles.
+As explained earlier, the `SELECT` statement is also known as projection. In relational model, everything is a tuple, which is a ... Using `SELECT` effectively selects certain column from a table. Mathematically, the query specifying the column and the column within the table is represented as a tuple. The engine is supposed to match the specified tuple with the available tuple. The tuple that matches becomes the selected column that will be returned.
+
+This is just a simple example of how math is used behind SQL operations. Other aspect of database such as [normalization](/database-system/normalization) also make use of math principles.
+
+#### Query Processing
+
+A database query goes to several processes :
+
+query + ddl command -> query plan -> execution engine -> page commands -> buffer manager -> buffers, statistics -> storage manager -> storage.
+
+query plan: projection, selection
+
+many operation are carried out within single query, such as selecting specific column and selecting only row that meet the required condition. The exeuction engine will plan which operation is done first. for example, in a student database, lets say we wanted to get student name that has score greater than 80 and is a male.
+
+1. we would filter the table for the condition first (selection), if the condition is from two column, we would find the intersection between those two, and then we will project the data with the speicfied column (projection).
+
+query parser, query preprocessor, query optimizer, relational algebra, modern way
+
+transaction -> concurrency control -> lock table -> execution engine
+execution engine -> logging and recovery
+
+[Transaction](/database-system/transactions) is a technique to group together related database operation, to ensure all operation is executed as a whole. Some database operation may be related, if one column is updated, the other column dependent on it must be updated as well. It is possible that a system fails occur right after we did the first operation. This makes it not possible to update the other data, causing a lost of information.
+
+A piece of transaction is delegated to concurrency control, which is a component that handles concurrency mechanism. Two or more database operations that are reading and writing the same data, needs to be prevented to access it at the same time to prevent [data races](/computer-and-programming-fundamentals/concurrency-and-parallelism#race-condition). The information of concurrency is stored in the lock table. The concurrency control decides the execution order and send it to execution engine.
+
+1 - 65, 205-308
