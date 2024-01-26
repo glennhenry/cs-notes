@@ -9,5 +9,7 @@ description: Database Model
 
 - []
 
+data model describe the structure, operation, constraints of data.
+
 Database Model page
-(hierarchical, network, relational, object (orm), nosql, er diagram, uml, object defintiion lang)
+(hierarchical, network, relational, object (orm), nosql, er diagram, uml, object defintiion lang, xml)

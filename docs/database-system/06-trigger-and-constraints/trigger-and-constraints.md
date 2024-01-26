@@ -10,3 +10,6 @@ description: Trigger & Constraints
 - [] 
 
 Trigger & Constraints page
+
+constraints:
+primary key, foreign key, default, unique, not null
