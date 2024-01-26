@@ -208,7 +208,7 @@ A race condition happens when multiple threads try to use the same data at the s
 
 #### Thread Lock
 
-Thread lock, also known as mutual exclusion (mutex), is a synchronization mechanism used prevent race condition. It simply ensures that only one thread can access the resource at a time.
+Thread lock, also known as [mutual exclusion (mutex)](/operating-system/multithreading#locks--mutex), is a synchronization mechanism used prevent race condition. It simply ensures that only one thread can access the resource at a time.
 
 ![Thread lock](./thread-lock.png)
 
@@ -218,14 +218,14 @@ Thread safe refers to the property of a program or data structure that can be sa
 
 #### Deadlock
 
-Deadlock is a situation where two or more threads are unable to proceed because each is waiting for the other to take a specific action. Deadlock can occur when attempting to prevent race conditions through synchronization mechanisms, but those mechanisms are implemented incorrectly.
+[Deadlock](/operating-system/process-synchronization#deadlock) is a situation where two or more threads are unable to proceed because each is waiting for the other to take a specific action. Deadlock can occur when attempting to prevent race conditions through synchronization mechanisms, but those mechanisms are implemented incorrectly.
 
 ![Deadlock GIF](./deadlock.gif)  
 Source : https://en.wikipedia.org/wiki/Deadlock
 
 #### Thread Pool
 
-Thread pool is a collection of pre-initialized threads. Instead of creating a new thread for each task, a thread pool maintains a pool of reusable threads, reducing the overhead of creating and destroying threads.
+[Thread pool](/operating-system/multithreading#thread-pool) is a collection of pre-initialized threads. Instead of creating a new thread for each task, a thread pool maintains a pool of reusable threads, reducing the overhead of creating and destroying threads.
 
 :::tip
 In relation with multitasking and concurrency, see also [multithreading](/operating-system/multithreading).
