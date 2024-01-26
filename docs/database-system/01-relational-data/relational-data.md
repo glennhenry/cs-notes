@@ -25,6 +25,10 @@ A row entry represent individual instances of data within the table. Each row co
 _A customer table containing column CustomerId, FirstName, LastName, and DateCreated._  
 Source : https://database.guide/what-is-a-table/
 
+:::info
+Table is also called **relations**, which consist of rows or formally a set of **tuples**.
+:::
+
 ### Data Types
 
 There are many types of data that can be assigned to specific column, some common data types are :
