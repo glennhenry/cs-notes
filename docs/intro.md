@@ -82,8 +82,8 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - [File System](operating-system/file-system) (36282 char)
 - [Memory Management](operating-system/memory-management) (27368 char)
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
+- [Query Language](database-system/query-language) (23388 char)
 - [Programming Concepts](computer-and-programming-fundamentals/programming-concepts) (21198 char)
-- [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism) (19294 char)
 
 ### Credits
 

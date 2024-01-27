@@ -9,6 +9,7 @@ description: Query Language
 
 - **[SQL - Wikipedia](https://en.wikipedia.org/wiki/SQL)**
 - **[SQL syntax - Wikipedia](https://en.wikipedia.org/wiki/SQL_syntax)**
+- **Chapter 2, 5, 6 - Database Systems - The Complete Book (2nd Edition)**
 
 **Query Language** is a specific programming language designed to make [queries](/database-system/relational-data#query) in a database.
 
@@ -228,40 +229,86 @@ Source : https://www.shiksha.com/online-courses/articles/sql-left-join-examples-
 
 ### How SQL works
 
+#### Math
+
 Relational database, relational model, and SQL is originally based on several mathematical studies :
 
-- **Set theory** :
-- **Relational algebra** :
-- **Relational calculus** :
-- **Predicate logics** :
+- **Set theory** : Set theory is the foundation of the relational model in database systems. It encompasses the concepts of sets, relations, and operations on them. The relational model represents data as sets and uses set theory principles to define operations such as union, intersection, and difference.
+- **Relational algebra** : Relational algebra is a mathematical system used to manipulate and query data in the relational model. It expresses operations on relations, such as selection, projection, join, and set operations.
+- **Relational calculus** : Relational calculus is a formal language for expressing queries in the relational model. It defines the logical and declarative approach to query formulation, where queries are expressed as formulas or rules. There are two types of relational calculus: tuple calculus and domain calculus. Tuple calculus operates on individual tuples, while domain calculus operates on the attributes and values of tuples.
+- **Predicate logics** : Predicate logic is a mathematical system used for formalizing logical statements and reasoning about them. It involves the use of predicates, which are statements that can be true or false depending on the values of their variables. Predicate logic are operators like logical (`AND`, `OR`, `NOT`) and comparison (`=`, `<`, `>`).
 
 Because SQL is [declarative](/computer-and-programming-fundamentals/declarative-functional-programming#declarative-programming), as a user, we will never be concerned in how the engine process the query. Under the hood, given a complex SQL statement, it is common for the database engine to process the operation based on these mathematical principles.
 
-For example, the SQL JOINS is an easy example of set theory application. In mathematics, set is defined as ... The `LEFT JOIN` is actually a mathematical set operation that ...
+For example, the SQL INTERSECTION is an easy example of set theory application. In mathematics, a set is defined as a collection of distinct elements. In SQL, tables can be thought of as sets of rows.
 
-As explained earlier, the `SELECT` statement is also known as projection. In relational model, everything is a tuple, which is a ... Using `SELECT` effectively selects certain column from a table. Mathematically, the query specifying the column and the column within the table is represented as a tuple. The engine is supposed to match the specified tuple with the available tuple. The tuple that matches becomes the selected column that will be returned.
+Suppose we have two sets A and B :
+
+`A = {1, 2, 3, 4}`, `B = {3, 4, 5, 6}`
+
+It can be thought as table A that has row `{1, 2, 3, 4}` and only a single column, similarly for table B.
+
+Mathematical representation :
+
+`A ∩ B = {3, 4}`
+
+In this case, the set intersection operation results in a new set that contains the common elements between sets A and B, which are 3 and 4.
+
+#### Projection
+
+In the relational model, everything is represented as tuples. A tuple is a finite ordered sequence of elements, where each element corresponds to a specific attribute or column in a relation or table. Tuples in the relational model are analogous to rows in a database table.
+
+:::info
+Same terminology :  
+Table -> relation  
+Row -> tuple  
+Column -> attribute
+:::
+
+Consider a table called `Employees` with the following columns : `EmployeeID`, `FirstName`, and `LastName`. Each row in the `Employees` table can be represented in the following tuple :
+
+```
+Tuple 1: (1, "John", "Doe", 50000)
+Tuple 2: (2, "Jane", "Smith", 60000)
+Tuple 3: (3, "David", "Johnson", 55000)
+```
+
+As explained earlier, the `SELECT` statement is also known as projection. Using `SELECT` effectively selects certain column from a table. Mathematically, the projection operation refers to the extraction of specific attributes from a relation or set of tuples. It can be represented using mathematical notation as follows :
+
+Let $R$ be a relation or set of tuples, and let $A_1, A_2, ..., A_n$ be the attributes or columns to be selected from $R$. The projection operation, denoted as $\pi$, selects the specified attributes from the relation $R$.
+
+If we have $n$ number of columns, mathematically it would be : $\pi A_1, A_2, ..., A_n$
+
+If we choose to query the `EmployeeID` and `FirstName` column, the SQL statement would be : `SELECT EmployeeID, FirstName FROM Employees`. In math representation : $\pi \text{ EmployeeID}, \text{FirstName}$.
 
 This is just a simple example of how math is used behind SQL operations. Other aspect of database such as [normalization](/database-system/normalization) also make use of math principles.
 
 #### Query Processing
 
+![DBMS components](./dbms-component.png)  
+Source : Book page 6
+
 A database query goes to several processes :
 
-query + ddl command -> query plan -> execution engine -> page commands -> buffer manager -> buffers, statistics -> storage manager -> storage.
+1. **Parse & Compilation** : User made a query through DML, the query compiler will parse the query, breaking it down into a parse tree. The query preprocessor takes the parsed query and performs semantic check to ensure its correctness. The query will be transformed into the mathematical representation of relational algebra. The transformed representation will be optimized by finding the most efficient sequence of operations on the actual data. The optimizer will keep the metadata and statistics of the database.
 
-query plan: projection, selection
+   ![Relational algebraic tree](./relational-algebraic-tree.png)  
+   Source : https://www.researchgate.net/figure/A-Relational-Algebra-Tree_fig11_305333879
 
-many operation are carried out within single query, such as selecting specific column and selecting only row that meet the required condition. The exeuction engine will plan which operation is done first. for example, in a student database, lets say we wanted to get student name that has score greater than 80 and is a male.
+2. **DDL Commands** : The DDL commands provided by the database administrator, which include the schema of the database will be passed to the DDL compiler, serving information about the database for the query process.
+3. **Transactions & Concurrency Control** : The query and other database operation will be grouped together into one unit of execution, called [transactions](/database-system/transactions). This is done to ensure the execution of all operations as a single unit, preventing the possibility of executing only some of them and being unable to complete the remaining operations due to system failures.
 
-1. we would filter the table for the condition first (selection), if the condition is from two column, we would find the intersection between those two, and then we will project the data with the speicfied column (projection).
+   A piece of transaction is delegated to concurrency control, which is a component that handles concurrency mechanism. Two or more database operations that are reading and writing the same data, needs to be prevented to access it at the same time to prevent [data races](/computer-and-programming-fundamentals/concurrency-and-parallelism#race-condition). The information of concurrency is stored in the lock table. The concurrency control decides the execution order and send it to execution engine.
 
-query parser, query preprocessor, query optimizer, relational algebra, modern way
+4. **Execution Engine** : The query will be planned into a sequence of actions that the DBMS will perform. The execution engine is responsible to plan which operation is done first, in the case of multiple operation carried out within single query.
 
-transaction -> concurrency control -> lock table -> execution engine
-execution engine -> logging and recovery
+   For example, in a student database, let's say we wanted to get student name that has score greater than 80 and is a male.
 
-[Transaction](/database-system/transactions) is a technique to group together related database operation, to ensure all operation is executed as a whole. Some database operation may be related, if one column is updated, the other column dependent on it must be updated as well. It is possible that a system fails occur right after we did the first operation. This makes it not possible to update the other data, causing a lost of information.
+   - We would filter the table for the condition separately. In the first filter, we take data with score greater than 80. In the second filter, we will take data that satisfy male condition.
+   - We will find the intersection between the two filter, and then we will project or take the data with the specified column.
 
-A piece of transaction is delegated to concurrency control, which is a component that handles concurrency mechanism. Two or more database operations that are reading and writing the same data, needs to be prevented to access it at the same time to prevent [data races](/computer-and-programming-fundamentals/concurrency-and-parallelism#race-condition). The information of concurrency is stored in the lock table. The concurrency control decides the execution order and send it to execution engine.
+   We will also save some information about the query to the logging and recovery manager.
 
-1 - 65, 205-308
+5. **Resource Manager** : Execution engine issue commands to the resource manager, which is a component that knows the information about the table and the location of them in the storage.
+6. **Buffer Manager** : Buffer manager is the component that manages memory. The storage stores data in a form of block, which is a fixed-size unit of data for storage. The buffer manager will partition the main memory into buffers, which is a fixed-size unit of data for memory. The buffers serve as the memory region where disk block transfer take place.
+7. **Storage & Storage Manager** : The storage is typically a secondary storage such as hard disk. Disk stores nothing but blocks of data, it will require a component that knows the placement of block in the disk. In other word, the component know the file structure of disk. The component that know it is **storage manager**, it will be responsible for controlling the data transfer between buffer manager and the underlying storage. In simple database system, the storage manager can be the [file system](/operating-system/file-system) of the operating system.
