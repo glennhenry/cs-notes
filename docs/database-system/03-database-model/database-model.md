@@ -9,6 +9,7 @@ description: Database Model
 
 - **Chapter 4 - Database Systems - The Complete Book (2nd Edition)**
 - **[Database model - Wikipedia](https://en.wikipedia.org/wiki/Database_model)**
+- **[XML notes](/digital-media-processing/xml)**
 
 **Database Model** is a conceptual representation of how data is organized and structured in a database system. It describes the logical structure, relationships between data elements, and the rules for manipulating and accessing the data. Database models serve as a blueprint for designing and implementing a database system.
 
@@ -157,17 +158,100 @@ The two code example above is taken from the book chapter 4.9.
 
 #### Hierarchical
 
+Hierarchical data model organizes data in a tree-like structure. Data is represented as a collection of records that are linked together in a parent-child relationship, forming a hierarchy. A record is a unit of data that represents a single entity.
+
+![Hierarchical model](./hierarchical-data-model.png)  
+Source : https://en.wikipedia.org/wiki/Database_model#/media/File:Hierarchical_Model.svg
+
+This model can represent one-to-many relationship, the parent record can have multiple child records, but each child record can have only one parent.
+
+![Hierarchical model in relational table](./hierarchical-in-relational.png)  
+Source : https://en.wikipedia.org/wiki/Hierarchical_database_model
+
+The image above is an example of relational model, it is an `employee` and `computer` table. The `computer` table has a column `User EmpNo`, which is a foreign key to the primary key of `employee` table. If this relational model were organized in hierarchical model, then the `employee` would be the parent of `computer`.
+
+##### XML
+
+**eXtensible Markup Language (XML)** is a markup language used for structuring and representing data in a human-readable and machine-readable format. XML documents are structured as a hierarchy of elements. Each element is enclosed by opening and closing tags, and elements can be nested to form a tree-like structure.
+
+An example of XML :
+
+```xml
+<person id="1">
+   <name>John Doe</name>
+   <age>25</age>
+</person>
+```
+
+The example defines a record of `person` entity with an attributes `id` equal to one. The `name` and `age` is the actual data associated with the entity.
+
+- **Tags** : XML uses tags to define elements, they are enclosed in angle brackets `< >`. Opening tags indicate the beginning of an element, while closing tags indicate the end of an element. For example, `<person>` and `</person>` are the opening and closing tags for the "person" element.
+- **Attributes** : XML elements can have attributes which provide additional information about the element. Attribute is defined as name-value pairs, in the example above, the `person` element have attribute named `id` equal to value of 1.
+- **Parent & Child** : XML is a hierarchical model, the `person` element is the root and also the parent element of its child, `name` and `age`. Child elements represent actual data while attribute is just additional details.
+
+:::info
+More about [XML](/digital-media-processing/xml).
+:::
+
 #### Network
+
+Network model is the expansion of hierarchical model, it extends from a tree-like structure into a graph-like structure (because essentially a tree is a graph with constraints).
+
+![Network model](./network-model.png)  
+Source : https://en.wikipedia.org/wiki/Database_model#/media/File:Network_Model.svg
+
+The graph structure of network model allows for many-to-many relationship, a single parent is not a requirement anymore. There can be more than one path from an ancestor node to a descendant.
+
+Records and relationships are organized into sets. The sets are represented in a circular [linked list](/data-structures-and-algorithms/linked-list), where each circle represents a set and consists of records of a specific record type.
+
+![Circular linked list](./circular-set.png)  
+Source : https://byjus.com/gate/network-model-in-dbms-notes/
+
+The circular set establishes a [directed graph](/data-structures-and-algorithms/graph#directed), where the direction is determined by the ownership relationship. We can access related records by following the links within the circular linked lists.
 
 #### Relational
 
+Relational model is what we have [discussed in the previous topics](/database-system/relational-data).
+
 #### Object
 
-object defintiion lang
-orm
+The object model follows the [object-oriented programming (OOP)](/computer-and-programming-fundamentals/object-oriented-programming) paradigms. In object model, an entity is defined as a class.
+
+Objects encapsulate both data (attributes or properties) and behavior (methods or operations) within a single entity. OOP concepts like inheritance are supported in object databases, this allows specific entity to inherit attributes and behavior from their parent classes.
+
+Object model can be combined with relational model, becoming **object-relational database**. This model help to bridge between database and object-oriented modeling used in programming language to build a software system.
+
+The connection between database and OOP languages uses a technique called **object-relational mapping (ORM)**. Developers define object-oriented classes that represent database tables or entities. The ORM framework will handle the mapping and synchronization of data between these classes and the corresponding database tables. It abstracts away the complexities of writing raw SQL queries, instead developer can call database operation in object-oriented manner.
+
+![ORM](./orm.png)  
+Source : https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping
 
 #### Document
 
-#### XML
+Document model stores and organizes data in a flexible, semi-structured format known as documents. In this database model, data is stored in self-contained documents, typically in formats such as [JSON (JavaScript Object Notation)](/frontend-web-development/json).
 
-page 483-515
+:::tip
+[XML](#xml) is considered as a document model as well.
+:::
+
+Document model has a standard format in how they structure the data. For example, XML uses tags and element, JSON relies on key-value pairs, other document such as YAML relies on key-value pairs as well, but the structure is designed to be simple.
+
+An example of YAML :
+
+```yaml
+employee:
+  - name: John Smith
+    age: 30
+    position: Software Engineer
+    skills:
+      - Java
+      - Python
+      - SQL
+  - name: Jane Doe
+    age: 28
+    position: UX Designer
+    skills:
+      - User Experience Design
+      - Wireframing
+      - Prototyping
+```
