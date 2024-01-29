@@ -53,7 +53,7 @@ The most common way to connect tables is by using primary key and **foreign key*
 
 For example, let's consider two tables : `Customers` and `Orders`.
 
-- The `Customers` table maintains a collection of customer, it has a primary key column called `CustomerID` and another column containing the customer's name.
+- The `Customers` table maintains a collection of customers, it has a primary key column called `CustomerID` and another column containing the customer's name.
 - The `Orders` table contains order data, it has primary key column called `OrderID` and another column `Item ordered`, which specify particular item that was ordered.
 
 ![Customer order table 1](./customer-order-table-1.png)
@@ -62,15 +62,17 @@ An order is obviously ordered by a customer, it make sense to also store which c
 
 ![Customer order table 2](./customer-order-table-2.png)
 
-Now the order table has an information about which customer ordered the item. However, we need to include more information into the `Orders` table, and those information are from the `Customers` table. This lead to **data redudancy** in the `Orders` table.
+Now the order table has an information about which customer ordered the item. However, we need to include more information into the `Orders` table, and this information is from the `Customers` table. This lead to **data redundancy** in the `Orders` table.
 
 Instead of storing customer information directly in the `Orders` table, we can use a foreign key column in the `Orders` table to refer to some customer in the `Customers` table. This way, we will know which customer is associated with specific order without needing to duplicate the customer data in the `Orders` table. So, let's modify the table again.
 
-We removed the column `Ordered by Customer (name)` and only preserve the `Ordered by Customer (id)` column. This table is much more efficient than the previous table. When we process the table and we wanna know who ordered an item, we will look at the foreign key column. The foreign key will guide us to the primary key of the `Customers` table.
+We removed the column `Ordered by Customer (name)` and only preserve the `Ordered by Customer (id)` column. This table is much more efficient than the previous table. When we process the table and we want to know who ordered an item, we will look at the foreign key column. The foreign key will guide us to the primary key of the `Customers` table.
+
+In some case, when the primary key is a simple data such as integer ID, we will also save more space. This is because an integer data is smaller than storing the name of customer, which is a string data.
 
 ![Customer order table 3](./customer-order-table-3.png)
 
-Furthermore, as the row and column of a table increase, the use of foreign key becomes even more useful to reduce duplicate data. Also, maintaining multiple table with the same data can increase the chance of **data inconsistency**, in which multiple instance of same data in a database or system do not match or are contradictory. If we modify data on the `Customers` table, we must also modify the `Orders` table as well. However, this introduce overhead when we modify data, imagine having to modify 10 table just to modify a single entry of a table.
+Furthermore, as the row and column of a table increase, the use of foreign key becomes even more useful to reduce duplicate data. Also, maintaining multiple table with the same data can increase the chance of **data inconsistency**, in which multiple instance of same data in a database or system do not match or are contradictory. If we modify data on the `Customers` table, we must also modify the `Orders` table as well. However, this introduces overhead when we modify data, imagine having to modify 10 tables just to modify a single entry of a table.
 
 ![Another example of table with foreign key](./another-example.png)  
 _Another example of table with foreign key_  
@@ -86,7 +88,7 @@ Through the use of primary and foreign keys, there are different types of relati
 
 - **One-to-Many (1:N)** : Each record in one table can be associated with multiple records in another table, while each record in the other table is associated with only one record in the first table.
 
-  An order can contain many items, but an item belongs to a single order. In this case, the orders table is the one side and the items table is the many side.
+  An order can contain many items, but an item belongs to a single order. In this case, the orders table is the one side and the items table is the many sides.
 
 - **Many-to-Many (N:M)** : Multiple records in one table can be associated with multiple records in another table. This type of relationship is typically implemented using an intermediary table that holds the associations between the two tables.
 
