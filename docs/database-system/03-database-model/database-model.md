@@ -56,7 +56,7 @@ We can enforce constraints on a database, they are specific rules or conditions 
 ![ER diagram keys](./er-diagram-key.png)  
 Source : Book page 149
 
-In the diagram, we indicate an attribute as the unique identifier of an entity set by underlining it. In this case, a studio is uniquely identified by its [primary key](/database-system/relational-data/primary--foreign-key), which is the name.
+In the diagram, we indicate an attribute as the unique identifier of an entity set by underlining it. In this case, a studio is uniquely identified by its [primary key](/database-system/relational-data#primary--foreign-key), which is the name.
 
 ![ER diagram other constraints](./er-diagram-other-constraints.png)  
 Source : Book page 150, 151
