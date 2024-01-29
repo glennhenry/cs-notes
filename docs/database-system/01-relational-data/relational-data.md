@@ -97,6 +97,14 @@ Through the use of primary and foreign keys, there are different types of relati
 ![Table relationship](./table-relationship.png)  
 Source : https://experienceleague.adobe.com/docs/commerce-business-intelligence/mbi/analyze/warehouse-manager/table-relationships.html
 
+#### Other Keys
+
+There are other keys in relational model :
+
+- **Composite Key** : A composite key is a key that consists of two or more columns in a table. It is used when there are no single attributes that can uniquely identify a record, but the combination of multiple attributes can.
+- **Compound Key** : A composite key, where one of the column is a foreign key.
+- **Candidate Key** : A candidate key represent a column that can be used as primary key.
+
 ### Schema
 
 A database schema is a logical blueprint or structure that defines the organization, relationships of the database in an RDBMS. It specifies the tables, columns, data types, and relationships between tables.
