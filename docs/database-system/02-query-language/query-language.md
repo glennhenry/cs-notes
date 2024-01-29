@@ -281,8 +281,6 @@ If we have $n$ number of columns, mathematically it would be : $\pi A_1, A_2, ..
 
 If we choose to query the `EmployeeID` and `FirstName` column, the SQL statement would be : `SELECT EmployeeID, FirstName FROM Employees`. In math representation : $\pi \text{ EmployeeID}, \text{FirstName}$.
 
-This is just a simple example of how math is used behind SQL operations. Other aspect of database such as [normalization](/database-system/normalization) also make use of math principles.
-
 #### Query Processing
 
 ![DBMS components](./dbms-component.png)  
