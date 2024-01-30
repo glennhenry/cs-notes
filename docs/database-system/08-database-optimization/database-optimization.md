@@ -16,3 +16,5 @@ Query language, typically being a declarative language, allows it to make optimi
 - Indexes
 - caching
 - partition
+
+### Index
