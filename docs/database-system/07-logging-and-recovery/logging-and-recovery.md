@@ -46,8 +46,6 @@ During logging transaction, it can be implemented using the **write-ahead loggin
 
 The transaction and logging usually happens periodically. Transaction are written to the log, after some point, the system will perform a checkpoint, writing all the changes to the database and clear the logs.
 
-843 881
-
 ### Replication
 
 **Replication** is the process of maintaining a copy of data for fault-tolerance.
