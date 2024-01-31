@@ -40,7 +40,7 @@ Some sources are from the book **Database Systems - The Complete Book (2nd Editi
     - [Normalization](database-system/normalization)
     - [Transactions](database-system/transactions)
     - [Trigger & Constraints](database-system/trigger-and-constraints)
-  - [Backup & Recovery](database-system/backup-and-recovery)
+  - [Logging & Recovery](database-system/logging-and-recovery)
   - [Database Optimization](database-system/database-optimization)
 - NoSQL
   - [Document](database-system/document)

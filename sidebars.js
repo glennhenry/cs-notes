@@ -513,7 +513,7 @@ const sidebars = {
                 "database-system/trigger-and-constraints/trigger-and-constraints",
               ],
             },
-            "database-system/backup-and-recovery/backup-and-recovery",
+            "database-system/logging-and-recovery/logging-and-recovery",
             "database-system/database-optimization/database-optimization",
           ],
         },
