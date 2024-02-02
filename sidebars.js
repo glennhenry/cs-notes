@@ -517,7 +517,7 @@ const sidebars = {
             "database-system/database-optimization/database-optimization",
           ],
         },
-        "database-system/nosql",
+        "database-system/nosql/nosql",
         "database-system/database-implementation/database-implementation",
       ],
     },
