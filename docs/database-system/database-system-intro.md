@@ -42,9 +42,5 @@ Some sources are from the book **Database Systems - The Complete Book (2nd Editi
     - [Trigger & Constraints](database-system/trigger-and-constraints)
   - [Logging & Recovery](database-system/logging-and-recovery)
   - [Database Optimization](database-system/database-optimization)
-- NoSQL
-  - [Document](database-system/document)
-  - [Key-Value](database-system/key-value)
-  - [Graph](database-system/graph)
-  - [Vector](database-system/vector)
+- [NoSQL](database-system/nosql)
 - [Database Implementation](database-system/database-implementation)

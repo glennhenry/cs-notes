@@ -517,16 +517,7 @@ const sidebars = {
             "database-system/database-optimization/database-optimization",
           ],
         },
-        {
-          type: "category",
-          label: "NoSQL",
-          items: [
-            "database-system/document/document",
-            "database-system/key-value/key-value",
-            "database-system/graph/graph",
-            "database-system/vector/vector",
-          ],
-        },
+        "database-system/nosql",
         "database-system/database-implementation/database-implementation",
       ],
     },
