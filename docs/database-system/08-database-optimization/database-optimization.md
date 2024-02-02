@@ -66,7 +66,9 @@ On the other hand, b-tree is more flexible in terms of the node maintained in ea
 ![Binary search tree](./bst.png)  
 Source : https://en.wikipedia.org/wiki/Binary_search_tree
 
-A b-tree node does not have to be 2, the number of node can be within a certain range. A node in a b-tree is sized to match the disk page size. Each node can contain many keys which all held in a single page. This mean, we can check a lot of keys in only a single I/O operation that retrieves the particular page.
+A b-tree node does not have to be 2, the number of node can be within a certain range. A node in a b-tree is sized to match the disk page size. Each node can contain many keys which all held in a single page. This is possible because an index entry consist only a key and a pointer, whereas binary search performed on sorted table requires all rows and column.
+
+The compact representation of index entries in b-tree indexing enables a significant amount of data (the index keys) to fit within a single page. We can check a large amount of key in just a single I/O operations that retrieves the specific page.
 
 Also, we don't need to reorganize the node and all the disk pages every time insertion or deletion happens, this is because [b-tree by itself is a self-balancing tree](/data-structures-and-algorithms/tree#rules--balancing).
 
@@ -148,4 +150,26 @@ The information and metrics collected about the data and structure of a database
 
 ### Caching
 
+DBMS can introduce [caching](/backend-development/caching) mechanism to improve database queries.
+
+- **Buffer caching** : Buffer pool is a region of memory that is allocated by the buffer manager as the place to transfer disk blocks. It is basically the "transit" area between the disk storage and the CPU. When query happens, the DBMS may check the buffer pool if the required data is available already.
+- **Query caching** : When a query is executed, the DBMS checks if the same query with the same parameters has been executed before and if the result is already present in the query cache. If the result is found in the cache, it can be directly returned without the need for re-executing the query and accessing the disk, resulting in performance improvement.
+
 ### Partition
+
+Database partitioning is a technique to logically divide a large database into smaller, more manageable partitions. Partitioning is particularly useful when dealing with large datasets or when performance bottlenecks occur due to the size and complexity of the database.
+
+Partitioning also improves scalability and availability, it ensures that a failure of one partition does not affect the availability of the other partitions. Those partitions can be distributed across multiple servers.
+
+For example, a global company with customers in multiple regions could partition its customer data by region. This would allow the company to store the customer data for each region on a server in that region, which would improve data locality and reduce latency.
+
+Type of database partitioning :
+
+1. **Range Partitioning** : Data is divided based on a specific range of values from a chosen attribute. For example, a date attribute could be partitioned into monthly or yearly ranges. Each partition contains data that falls within that specific range.
+2. **List Partitioning** : Divides data based on specific values or a list of values from a chosen attribute. For instance, a database could be partitioned based on region attribute, where each partition contains data related to a specific region.
+3. **Composite Partitioning** : Composite partitioning combines multiple partitioning techniques to create more complex partitioning strategies.
+4. **Round-robin Partitioning** : Round-robin partitioning evenly distributes data across partitions in a circular fashion. Each new record is inserted into the next partition cyclically. This technique can be useful when the data distribution is expected to be uniform and there is no specific criterion for partitioning.
+5. **Hash Partitioning** : Hash partitioning distributes the data across partitions based on a [hash function](/computer-security/hash-function) applied to a chosen attribute. The hash function ensures an even distribution of data across partitions, making it useful when there is no natural range or list criterion for partitioning.
+
+![Database partition](./partition.png)  
+Source : https://www.enjoyalgorithms.com/blog/data-partitioning-system-design-concept
