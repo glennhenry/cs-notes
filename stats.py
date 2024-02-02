@@ -39,5 +39,5 @@ def count_notes(directory):
     print(f"Total notes: {count}")
 
 directory_path = "D:\\Programming\\Projects\\cs-notes\\docs"
-# count_characters(directory_path)
-# count_notes(directory_path)
+count_characters(directory_path)
+count_notes(directory_path)

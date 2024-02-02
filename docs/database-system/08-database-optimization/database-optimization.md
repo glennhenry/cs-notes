@@ -11,8 +11,6 @@ description: Database Optimization
 - **[Database index - Wikipedia](https://en.wikipedia.org/wiki/Database_index)**
 - **[How much do B-trees reduce disk accesses? - stackoverflow](https://stackoverflow.com/questions/34471493/how-much-do-b-trees-reduce-disk-accesses)**
 
-341-367
-
 Query language, typically being a declarative language, allows it to make its own optimization. It is up to the database engine how will it perform the database operation. Query language doesn't rely on specific instruction from the programmer, this makes the compiler able to produce a highly optimized query in a controlled way.
 
 ### Index
