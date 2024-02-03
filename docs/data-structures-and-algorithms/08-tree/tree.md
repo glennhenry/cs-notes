@@ -142,7 +142,7 @@ When performing operations on a red-black tree, such as inserting a new node or 
 
 **B-Tree** is another self-balancing tree, similar to AVL and red-black trees, but it is not a binary tree. It is a normal tree that can have more than two child nodes per parent, designed to address the limitation of self-balancing binary tree which can only store data in the left and right child.
 
-In b-tree, often times we will hear the word **"key"**, the key is basically the actual value of a node. For example, in the image below, it is a b-tree where the root itself contains 2 value, which are 20 and 40. We can say that 20 and 40 are the key of the b-tree's root.
+In b-tree, often times we will hear the word **"key"**. This term probably comes from database system, as b-tree is often used for implementing [database index](/database-system/index). B-tree node consist multiple keys, these keys are the actual value within a node. For example, the image below is a b-tree where the root node contains 2 keys, which are 20 and 40. The root node then has 3 child node, each node has key(s) : 10, 30 and 33, 50 and 60.
 
 ![B-tree](./b-tree.png)  
 Source : https://www.programiz.com/dsa/b-tree
