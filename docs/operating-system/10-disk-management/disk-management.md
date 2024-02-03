@@ -48,7 +48,7 @@ There are 3 common secondary storage :
 Disk is divided into several logical components :
 
 - **Track** : A track is a concentric circular path on a disk's platter. It is defined as a complete circle around the disk's surface at a specific radius.
-- **Sector** : A sector is the smallest addressable unit of storage on a disk. It represents a fixed-size section of a track. Sectors are typically formatted to hold a specific amount of data, such as 512 bytes or 4 kilobytes. Data is written to and read from sectors using the disk's read/write heads. These sectors are grouped together into larger units called blocks. The block size can vary depending on the [file system](/operating-system/file-system) and disk configuration.
+- **Sector** : A sector is the smallest addressable unit of storage on a disk. It represents a fixed-size section of a track. Sectors are typically formatted to hold a specific amount of data, such as 512 bytes or 4 kilobytes. Data is written to and read from sectors using the disk's read/write heads. These sectors are abstracted logically by [file system](/operating-system/file-system) and grouped together into a unit called **block**. The block size can vary depending on the file system and disk configuration.
 - **Cluster** : A cluster, also known as an allocation unit, is a group of blocks that are treated as a single unit by the file system. It is the smallest addressable unit of disk space for file allocation.
 
   ![Disk structure](./disk-structure.png)  
