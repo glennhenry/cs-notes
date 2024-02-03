@@ -41,6 +41,7 @@ Some sources are from the book **Database Systems - The Complete Book (2nd Editi
     - [Transactions](database-system/transactions)
     - [Trigger & Constraints](database-system/trigger-and-constraints)
   - [Logging & Recovery](database-system/logging-and-recovery)
+  - [Index](database-system/index)
   - [Database Optimization](database-system/database-optimization)
 - [NoSQL](database-system/nosql)
 - [Database Implementation](database-system/database-implementation)

@@ -514,6 +514,7 @@ const sidebars = {
               ],
             },
             "database-system/logging-and-recovery/logging-and-recovery",
+            "database-system/index/index",
             "database-system/database-optimization/database-optimization",
           ],
         },
