@@ -519,7 +519,16 @@ const sidebars = {
           ],
         },
         "database-system/nosql/nosql",
-        "database-system/database-implementation/database-implementation",
+        {
+          type: "category",
+          label: "Database Implementation",
+          items: [
+            "database-system/storage-management/storage-management",
+            "database-system/index-implementation/index-implementation",
+            "database-system/query-processing/query-processing",
+            "database-system/concurrency-control/concurrency-control",
+          ],
+        },
       ],
     },
 

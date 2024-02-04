@@ -1,23 +1,14 @@
 ---
-slug: /database-system/database-implementation
-id: database-implementation
-title: Database Implementation
-description: Database Implementation
+slug: /database-system/storage-management
+id: storage-management
+title: Storage Management
+description: Storage Management
 ---
 
 **Main Source :**
 
-- **Chapter 13, 14, 15, 16, 18, 19 - Database Systems - The Complete Book (2nd Edition)**
+- **Chapter 13 - Database Systems - The Complete Book (2nd Edition)**
 - **Some previous notes, attached in tip callout**
-
-555-617 storage
-619-697 index
-701-757 query execution
-759-841 query compiler
-883-950 concurrency control
-953-983 transaction
-
-### Storage Management
 
 In computer system, storage can be organized in hierarchy, from the lowest level registers and cache, up to secondary storage (such as hard disks) or even tertiary storage.
 
@@ -25,7 +16,7 @@ In computer system, storage can be organized in hierarchy, from the lowest level
 Find more about [memory hierarchy](/computer-organization-and-architecture/registers-and-ram#memory-hierarchy).
 :::
 
-#### Disks
+### Disks
 
 Database operates in main memory and secondary storage. The main memory is typically abstracted by [file system](/operating-system/file-system) and [virtual memory](/operating-system/memory-management#virtual-memory).
 
@@ -37,7 +28,7 @@ A concentric circular path on the platter is called a **track**. Within a sectio
 Find more about [disk management](/operating-system/disk-management).
 :::
 
-#### Data Arrangement
+### Data Arrangement
 
 One way to store database table and records on disk is the **fixed-length record** technique. A table is created by providing columns and its data types. We will accommodate the largest possible data attribute within a table. This ensures that all records have the same length, regardless of the actual data values stored in them.
 
@@ -50,7 +41,7 @@ For example, the image above creates a table with column : name, address, gender
 
 Records are stored consecutively within a block, the block serves as the unit of data transferred between the disk and main memory.
 
-#### Block & Record Addresses
+### Block & Record Addresses
 
 Each block and record on the disk has a physical address, which consists of the device ID for the disk, the cylinder number, the track number within the cylinder, the block number within the track, and sometimes the offset of the beginning of the record within the block.
 
@@ -65,7 +56,7 @@ The different addressing between main memory and secondary storage does not affe
 
 One way to swizzle pointer is to store another table (called **translation table**) that maps between database addresses and memory addresses. The pointer will store a bit indicating whether the pointer is currently a database address or a memory address, and the actual database or memory pointer.
 
-#### Variable-Length Record
+### Variable-Length Record
 
 In some cases, we want to store record in varying size. One approach is to keep the fixed-length portion of the record first, followed by the variable-length fields. To achieve this, we will include pointers (offsets) to the beginnings of the variable-length fields.
 
@@ -81,47 +72,14 @@ Source : Book page 605
 
 Alternative approach of storing variable-length record is to store them separately from the record, in a separate block or blocks. This allows for flexibility in terms of storage allocation and retrieval. However, it also increases the number of disk I/O operations required to access all the components of the record.
 
-#### BLOB
+### BLOB
 
 **Binary Large Object (BLOB)** refers to very large values, such as images and videos, that need to be stored across multiple blocks. BLOB must be stored consecutively to be retrieved efficiently. Also, we may not need to retrieve the entire BLOB. For example, it is not necessary to retrieve the entire 2-hour movie if the movie is played at a slow rate or only at the end. We may retrieve the several blocks gradually.
 
 If fast real-time access is required, it may be necessary to distribute BLOB across several disks. This involves distributing the blocks of the BLOB among multiple disks, to allow multiple blocks to be retrieved simultaneously.
 
-#### Record Modifications
+### Record Modifications
 
 - **Insertion** : In the case of unsorted table, we can find an empty space and insert the record there. To maintain sorted table on insertion, we will need to find where the record should be placed and potentially sliding the records around the block. If we can't find enough space to insert record in a particular block, we can either reorganize the record with the adjacent block or create another block (called **overflow block**) and associate that block with a pointer in the original block.
 - **Deletion** : We can delete a record and slide the block. If we cannot do it, we may maintain an available-space list in the block header. We will store a marker that indicates whether a block is free or not. Another thing is, there could be pointer associated with the particular deleted block, so it is necessary to keep information within the block associated with the record. The information is called **tombstone**, it is a permanent bit which must exist until database is reconstructed.
 - **Update** : If the resulting record size after update is same, then there is no issue. Otherwise, we will need to create more space on the block, then the problem becomes similar to insertion.
-
-### Index
-
-[index](/database-system/index)
-
-#### B-Tree
-
-[B-tree](/data-structures-and-algorithms/tree#b-tree)
-
-#### Hash Table
-
-[hash table](/data-structures-and-algorithms/hash-table)
-
-### Query Execution
-
-one pass
-nested loop joins
-two pass, sort and hash
-index based
-buffer management
-
-### Query Compiler
-
-parsing preprocessing
-query plans
-estimation, heuristics
-
-### Concurrency Control
-
-schedules
-locks
-two phase locking
-timestamp
