@@ -63,6 +63,10 @@ The compact representation of index entries in b-tree indexing enables a signifi
 
 Also, we don't need to reorganize the node and all the disk pages every time insertion or deletion happens, this is because [b-tree by itself is a self-balancing tree](/data-structures-and-algorithms/tree#rules--balancing).
 
+:::tip
+The terms page and block is sometimes used interchangeably.
+:::
+
 #### Index Architecture & Methods
 
 Indexes can be organized differently :
