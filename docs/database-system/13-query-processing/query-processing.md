@@ -9,9 +9,6 @@ description: Query Processing
 
 - **Chapter 15, 16 - Database Systems - The Complete Book (2nd Edition)**
 
-701-757 query execution
-759-841 query compiler
-
 The process of query goes from parsing, creating the unoptimized initial query plan (also called logical query plan) in algebraic representation, and transforming it into optimized physical query plan.
 
 ![Process of query](./query-process.png)  
@@ -29,15 +26,13 @@ An example of physical-query-plan operator is **scanning table**. Scanning table
 - **Index-scan** : Uses index to read the blocks and records.
 - **Sort-scan** : If the table can fit in main-memory, we may sort it and read the records.
 
-### Query Processing
-
-#### One-Pass Algorithms
+### One-Pass Algorithms
 
 In the case of database, **one-pass algorithms** are category of algorithms that reads data from the disk, process it, and write the results back in the disk, all in one pass.
 
 There are three types of one-pass algorithms :
 
-- **Tuple-at-a-time, unary operations** : Read and process one block at a time, require small amount memory. This type of algorithms includes common operation like projection and selection. These kinds of operations are implemented by loading records from the disk into the input buffer and the operation is performed on them. The result of the operation goes to the output buffer.
+- **Tuple-at-a-time, unary operations** : Read and process one block at a time, require a small amount memory. This type of algorithms is used in operation like projection and selection. These kinds of operations are implemented by loading records from the disk into the input buffer and the operation is performed on them (e.g., checking for `WHERE` condition). The result of the operation goes to the output buffer.
 
   ![Tuple-at-a-time](./tuple-at-a-time.png)  
    Source : Book page 711
@@ -55,7 +50,7 @@ There are three types of one-pass algorithms :
 Unary operations are operation performed on single input, while binary is performed on two inputs.
 :::
 
-#### Nested-Loop Join
+### Nested-Loop Join
 
 **Nested-Loop Join** is a family of algorithms that joins two tables. There are some variants of nested-loop join :
 
@@ -64,15 +59,15 @@ Unary operations are operation performed on single input, while binary is perfor
   ![Tuple-based join](./tuple-based.png)  
    Source : Book page 719
 
-- **Block-Based** : The block-based algorithm is an improvement over tuple-based algorithm. It involves considering a block of tuples instead of individual tuple. Furthermore, to reduce the disk I/O operation, we will store as many tuple from the outer set in main memory.
+- **Block-Based** : The block-based algorithm is an improvement over tuple-based algorithm. It involves considering a block of tuples instead of individual tuple, to reduce the disk I/O operation. Furthermore, we will store as many tuple from the outer set in main memory.
 
-#### Two-Pass Algorithm
+### Two-Pass Algorithm
 
 One-pass algorithms read data from disk, process it, and write the result back to the disk. In contrast, **two-pass algorithms** read from the disk again after writing the result.
 
 Two-pass algorithm can be based on sorting and hash. Sorting-based algorithms use sorting technique to organize data in the first and second pass. Hashing-based algorithms use hash functions to partition the data into buckets in the first pass and second pass.
 
-##### Sorting-Based
+#### Sorting-Based
 
 Example of sorting-based algorithms :
 
@@ -98,33 +93,32 @@ Example of sorting-based algorithms :
     - Output all the tuples that can be created by joining the identified tuples from R and S based on their common Y value.
     - If either relation has no more unprocessed tuples in the memory, load more tuples from that relation into the buffer.
 
-##### Hashing-Based
+#### Hashing-Based
 
 In comparison to sorting-based algorithms :
 
 - **Duplicate Elimination** : The idea is, same record will hash to same hash code, and will fall into the same bucket. Each record is hashed, so it is partitioned into different bucket. Within a bucket, only one copy of the duplicate records is kept, and the rest are removed. This method works as long as the table is small, so that no non-duplicate record in the same bucket.
 - **Join (Hash Join Algorithm)** : Similar to other operation, we will hash the record and partition them into buckets. Within a bucket, if the join attribute values match, the tuples are considered a match and can be combined.
 
-#### Index-Based Algorithms
+### Index-Based Algorithms
 
-**Index-based algorithms** is a set of algorithms that leverage [database indexes](/database-system/index), such as selection and join.
+**Index-based algorithms** is a set of algorithms that leverage [database indexes](/database-system/index), such as selection and join. In some cases, clustered indexes may be faster than non-cluster index, because the physical ordering of data in disk is already known.
 
-- **Selection** :
-- **Unsorted Index Join** :
-- **Sorted Index Join** :
+- **Selection** : Index stores a pointer to record given an attribute that is used as the search key. An index-based selection would be straightforward retrieval.
+- **Index Join** : Consider two relation R(X, Y) and S(Y, Z), and S has index on attribute Y. To join them together on attributes Y, we compare each tuple in relation R with the tuple(s) of S, which we retrieve using the index on attribute Y.
 
-#### Buffer Management
+### Buffer Management
 
-Buffer management is concerned with the management and allocation of buffers in main memory, which is an area to hold data recently read from or written to disk.
+Buffer management is concerned with the management and allocation of buffers in main memory, which is an area to hold data recently read from or written to disk. The buffer manager stores the used/free buffer in a buffer pool. It has two options for managing buffers : it can either directly control the usage of main memory or use the virtual memory provided by the operating system.
 
-##### Architecture
+![Buffer manager](./buffer-manager.png)  
+Source : http://dbmsfortech.blogspot.com/2016/05/buffer-management.html
 
-##### Strategies
+Buffer manager has several strategies to control the use of buffers, it decides which block/page should be provided when requested :
 
-LRU, FIFO, clock/second chance
+- **Least Recently Used (LRU)** : This strategy evicts the buffer that has been accessed the least recently. In other word, the block that has not been used for long time is chosen to be replaced. It assumes that recently accessed buffers are more likely to be accessed again in the near future. The buffer manager will keep track the time in a table.
+- **First-In, First-Out (FIFO)**: This strategy removes the buffer that has been in the buffer pool for the longest duration. It operates on the principle that the buffer that has been present for the longest time is less likely to be needed again soon.
+- **Clock (Second Chance)**: The clock strategy uses a circular list to manage the buffers and a clock hand that will rotate clockwise to find the buffer. Buffers are marked with a reference bit, either 0 or 1 (initially 0). When the clock hand reaches a buffer, it checks the reference bit. If the reference bit is set (1), indicating recent use, the bit is set to 0, and the clock hand moves to the next buffer. If the reference bit is not set (0), the buffer is chosen for replacement.
 
-### Query Compiler
-
-parsing preprocessing
-query plans
-estimation, heuristics
+  ![Clock algorithm](./clock.png)  
+  Source : Book page 749
