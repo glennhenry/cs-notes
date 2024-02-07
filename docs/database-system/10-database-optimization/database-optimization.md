@@ -58,7 +58,7 @@ A cost of query plan is estimated by several factors such as disk I/O operations
 The information and metrics collected about the data and structure of a database is stored in a database statistics. These can be table, column, index statistics, which stores data types, size, cardinality, or any other metadata. Statistical summaries such as frequency and distribution of values can also be stored in a histogram.
 
 :::tip
-More about [query processing](/database-system/query-processing) and [query compiler](/query-compiler).
+More about [query processing](/database-system/query-processing) and [query compiler](/database-system/query-compiler).
 :::
 
 ### Caching
