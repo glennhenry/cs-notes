@@ -7,17 +7,11 @@
   --ifm-color-primary-lighter: #1323f5;
   --ifm-color-primary-lightest: #3442f7;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     color: #5b66a7;
   }
 
-  strong,
-  em {
+  strong, em {
     color: rgb(41, 131, 138);
   }
 
@@ -36,17 +30,11 @@ html[data-theme="dark"] {
   --ifm-color-primary-lightest: #ffffff;
   --ifm-background-color: #1d1f25;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     color: #a4d2f1;
   }
 
-  strong,
-  em {
+  strong, em {
     color: rgb(107, 197, 126);
   }
 
