@@ -10,9 +10,6 @@ description: Concurrency Control
 - **Chapter 18 - Database Systems - The Complete Book (2nd Edition)**
 - **[Concurrency control - Wikipedia](https://en.wikipedia.org/wiki/Concurrency_control)**
 
-883-950 concurrency control
-953-983 transaction
-
 Database operations are grouped into a transaction unit. The execution of each transaction unit is scheduled by the **scheduler** of DBMS. This is to ensure database operations executed in controller manner, avoiding concurrency issues such as [data races](/computer-and-programming-fundamentals/concurrency-and-parallelism#race-condition). The overall process of handling concurrency is called **concurrency control**.
 
 The two property of concurrency control :
@@ -73,6 +70,15 @@ Source : Book page 892
 
 The above is example of a schedule that is conflict-serializable. A sequence of swap is performed indicated by the underline.
 
+### Common Problem
+
+Some common problem that occurs in concurrent transactions :
+
+- **[Deadlock](/operating-system/process-synchronization#deadlock)** : Deadlock is a situation where two or more transactions are waiting indefinitely for resources that are held by other transactions.
+- **Dirty Reads** : Dirty read occurs when one transaction reads data that has been modified by another transaction that has not yet been committed. In other words, a transaction reads uncommitted data that may be rolled back later, leading to data inconsistency.
+- **Non-repeatable Reads** : Non-repeatable reads occur when a transaction reads the same data multiple times during its execution, but the values of the data change between each read. This inconsistency can happen when another transaction modifies the data that the first transaction is reading.
+- **Phantom Reads** : Phantom reads occur when a transaction reads a set of rows that satisfy a certain condition, but when it repeats the same read, additional rows are found that meet the condition. This can occur when another transaction inserts or deletes rows that match the condition.
+
 ### Methods
 
 Concurrency control mechanism are categorized into three :
@@ -92,17 +98,53 @@ In the precedence graph, each transaction is represented by a node, and there is
 
 #### Locks
 
-When a database transaction is going on, that transaction will lock the data it is accessing. The other transaction will not be able to access the locked data, until the one that locks it releases it. This may be implemented using [mutex](/operating-system/multithreading#locks--mutex).
+Lock is a mechanism to prevent multiple transaction accessing the same database element. A lock can be _acquired_ by a transaction, meaning that particular transaction has the access to the data and the others can't interfere it until the lock is _released_.
 
-#### Timestamp Ordering
+:::tip
+See also [mutex](/operating-system/multithreading#locks--mutex).
+:::
 
-This method assigns a unique timestamp to each transaction when it begins execution. The timestamps are used to order the transactions and determine their relative precedence. The system ensures that transactions are executed in timestamp order, which means that a transaction with a higher timestamp is executed after a transaction with a lower timestamp. By using timestamps, conflicts between transactions can be resolved by allowing the transaction with the earlier timestamp to proceed, while the transaction with the later timestamp may be rolled back and restarted.
+The scheduler keep track a lock table, which contains the mapping that associates database elements with locking information specific to each element. Based on the lock table information, a transaction request will be delayed if another transaction is currently holding the lock.
 
-### Common Problem
+![Scheduler keeping a lock table](./locks.png)  
+Source : Book page 898
 
-Some common problem that occurs in concurrent transactions :
+Notation for lock is :
 
-- **[Deadlock](/operating-system/process-synchronization#deadlock)** : Deadlock is a situation where two or more transactions are waiting indefinitely for resources that are held by other transactions.
-- **Dirty Reads** : Dirty read occurs when one transaction reads data that has been modified by another transaction that has not yet been committed. In other words, a transaction reads uncommitted data that may be rolled back later, leading to data inconsistency.
-- **Non-repeatable Reads** : Non-repeatable reads occur when a transaction reads the same data multiple times during its execution, but the values of the data change between each read. This inconsistency can happen when another transaction modifies the data that the first transaction is reading.
-- **Phantom Reads** : Phantom reads occur when a transaction reads a set of rows that satisfy a certain condition, but when it repeats the same read, additional rows are found that meet the condition. This can occur when another transaction inserts or deletes rows that match the condition.
+- $l_i(X)$ : Transaction $i$ requests a lock on database element $X$.
+- $u_i(X)$ : Transaction $i$ releases or unlock its lock on database element $X$.
+
+Below is an example of lock notation for transactions.
+
+![Lock notation example](./transaction-lock.png)  
+Source : Book page 899
+
+Transaction 1 acquire lock and read the value database element $A$. It increases the value of it by 100 and write the result. After that, it releases the lock and transaction 2 continue. It's a valid schedule of transaction, but not serializable.
+
+##### Two-Phase Locking
+
+**Two-phase locking (2PL)** is a locking mechanism that enforces a specific order of actions within a transaction that guarantees serializability.
+
+It divides a schedule into two distinct phases : the **lock acquisition phase** and the **lock release phase**. In the lock acquisition phase, a transaction acquires _all_ the necessary locks it needs to read or modify database elements before proceeding with its operations. In other word, all lock actions precede all unlock actions.
+
+Once the transaction enters the lock release phase, it releases the locks it acquired during the lock acquisition phase, allowing other transactions to acquire them. Any transaction requesting the lock before it is released will be denied and delayed further.
+
+![2PL](./2pl.png)  
+Source : Book page 901 (with modification)
+
+In this example, the transaction 1 acquire the lock for database element B before even unlocking A. This way, even if the schedule of transaction 2 precede it in instantaneous time, it won't be able to acquire B.
+
+#### Timestamp Ordering (TO)
+
+This method assigns a unique timestamp to each transaction when it begins execution. The timestamps are used to order the transactions and determine their relative precedence. The system validates that transactions are executed in timestamp order, which means that a transaction with a higher timestamp is executed after a transaction with a lower timestamp.
+
+There are two approaches to generating timestamps in this method :
+
+- One approach is to use the system clock as the timestamp, as long as the scheduler does not operate so fast that it could assign the same timestamp to two transactions.
+- Another approach is to maintain a counter that is incremented by 1 each time a transaction starts, and the new value becomes the timestamp.
+
+Each database element is associated with two timestamps and a **commit bit**. The two timestamps are **read time (RT)** and **write time (WT)**, which are the highest timestamp of a transaction that has read and write the element, respectively. The commit bit is used to track whether the most recent write has already committed or not.
+
+The commit bit gives an information to prevent a situation where one transaction reads data written by another transaction that subsequently aborts (dirty read).
+
+In the case of conflict, we can allow the transaction with the earlier timestamp to proceed, while the transaction with the later timestamp may be rolled back and restarted or delayed.
