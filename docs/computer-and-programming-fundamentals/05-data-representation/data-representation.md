@@ -116,6 +116,10 @@ A database file is typically divided into fixed-size chunk that contains a speci
 ![Example of a structured database in table](./rdbms-example.png)  
 Source : https://www.javatpoint.com/what-is-rdbms
 
+:::tip
+See also [database system](/database-system).
+:::
+
 ### Character Encoding
 
 Encoding refers to the process of converting information from one representation or format to another. It involves converting data into a specific format that can be processed, transmitted, stored, or interpreted by digital systems.

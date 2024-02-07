@@ -23,7 +23,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - [Theory of Computation & Automata](theory-of-computation-and-automata)
 - [Compilers](compilers)
 - [Programming Language Theory](programming-language-theory)
-- [Database System](database-system)
+- **[Database System](database-system)**
 - **[Computer Graphics](computer-graphics)**
 - **[Frontend Web Development](frontend-web-development)**
 - **[Backend Development](backend-development)**
@@ -64,25 +64,20 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 4. **[update]** digital-signal-processing : /compression#svd-compression -> add svd compression.
 5. **[add]** /digital-media-processing : /iso -> add ISO file format.
 6. **[update]** backend-development : /websocket -> #data-exchange, add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
-7. **[ref]** backend-development : /search-engine#elasticsearch -> ref to document database.
-8. **[ref]** backend-development : /serverless -> ref to FaaS in Cloud Computing.
-9. **[ref]** backend-development : /caching#cache-invalidation -> ref to database trigger.
-10. **[ref]** backend-development : /backend-optimization#resource-optimization -> ref to database index.
-11. **[ref]** /computer-and-programming-fundamentals : /data-representation -> ref to database.
-12. **[ref]** /computer-and-programming-fundamentals : /query-language -> ref to few concepts in database system.
-13. **[ref]** /data-structures-and-algorithms : /complexity-theory -> ref to Turing machine and other TOC related terms.
-14. **[ref]** /computer-security : /reverse-engineering -> ref to decompilation in compilers.
-15. **[ref]** /operating-system : /virtualization -> ref to distributed systems in cloud-computing.
-16. **[ref]** /operating-system : /os-fundamentals -> ref to distributed systems in cloud-computing.
-17. **[ref]** /operating-system : /user-interface -> ref to mvc in software engineering.
-18. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
+7. **[ref]** backend-development : /serverless -> ref to FaaS in Cloud Computing.
+8. **[ref]** /data-structures-and-algorithms : /complexity-theory -> ref to Turing machine and other TOC related terms.
+9. **[ref]** /computer-security : /reverse-engineering -> ref to decompilation in compilers.
+10. **[ref]** /operating-system : /virtualization -> ref to distributed systems in cloud-computing.
+11. **[ref]** /operating-system : /os-fundamentals -> ref to distributed systems in cloud-computing.
+12. **[ref]** /operating-system : /user-interface -> ref to mvc in software engineering.
+13. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
 
 ### Longest Notes
 
 - [File System](operating-system/file-system) (36282 char)
 - [Memory Management](operating-system/memory-management) (27368 char)
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
-- [Query Language](database-system/query-language) (23388 char)
+- [Query Language](database-system/query-language) (23218 char)
 - [Programming Concepts](computer-and-programming-fundamentals/programming-concepts) (21198 char)
 
 ### Credits

@@ -242,21 +242,17 @@ Because SQL is [declarative](/computer-and-programming-fundamentals/declarative-
 
 For example, the SQL INTERSECTION is an easy example of set theory application. In mathematics, a set is defined as a collection of distinct elements. In SQL, tables can be thought of as sets of rows.
 
-Suppose we have two sets A and B :
+Suppose we have two sets $A$ and $B$ : $A = \{1, 2, 3, 4\}$, $B = \{3, 4, 5, 6\}$
 
-`A = {1, 2, 3, 4}`, `B = {3, 4, 5, 6}`
+It can be thought as table $A$ that has row $\{1, 2, 3, 4\}$ and only a single column, similarly for table $B$.
 
-It can be thought as table A that has row `{1, 2, 3, 4}` and only a single column, similarly for table B.
+Mathematical representation : $A \cap B = \{3, 4\}$
 
-Mathematical representation :
-
-`A ∩ B = {3, 4}`
-
-In this case, the set intersection operation results in a new set that contains the common elements between sets A and B, which are 3 and 4.
+In this case, the set intersection operation results in a new set that contains the common elements between sets $A$ and $B$, which are 3 and 4.
 
 #### Projection
 
-In the relational model, everything is represented as tuples. A tuple is a finite ordered sequence of elements, where each element corresponds to a specific attribute or column in a relation or table. Tuples in the relational model are analogous to rows in a database table.
+In the relational model, everything is represented as **tuples**. A tuple is a finite ordered sequence of elements, where each element corresponds to a specific attribute or column in a relation or table. Tuples in the relational model are analogous to rows in a database table.
 
 :::info
 Same terminology :  

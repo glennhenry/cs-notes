@@ -57,7 +57,7 @@ The methods are :
 
 - **Time-Based Invalidation** : Associates a **time-to-live (TTL)** value with each cached item. When the TTL expires, the cached item is considered invalid and is evicted from the cache.
 
-- **Event-Based Invalidation** : Cache is invalidated by observing events or triggers that signify changes in the data source. These events can be database triggers or [message queue notifications](/backend-development/message-broker).
+- **Event-Based Invalidation** : Cache is invalidated by observing events or triggers that signify changes in the data source. These events can be [database triggers](/database-system/trigger-and-constraints) or [message queue notifications](/backend-development/message-broker).
 
 ### Cache Replacement
 

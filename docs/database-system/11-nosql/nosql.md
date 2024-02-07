@@ -15,7 +15,7 @@ description: NoSQL
 - **[Vector database - Wikipedia](https://en.wikipedia.org/wiki/Vector_database)**
 - **Various Google searches**
 
-**NoSQL** is a type of databases that doesn't follow the relational model principles. Unlike relational databases, which store data in tables with predefined schemas, NoSQL databases is more flexible in approach to data storage and management. NoSQL typically relies on a specific data structure to handle large volumes of data, including unstructured and semi-structured data.
+**NoSQL (or non-relational database)** is a type of databases that doesn't follow the relational model principles. Unlike [relational databases](/database-system/relational-data), which store data in tables with predefined schemas, NoSQL databases is more flexible in approach to data storage and management. NoSQL typically relies on a specific data structure to handle large volumes of data, including unstructured and semi-structured data.
 
 ### Key-Value
 

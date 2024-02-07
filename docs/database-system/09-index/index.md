@@ -97,3 +97,7 @@ Non-clustered index can be efficient for query of data based on the indexed colu
 
 ![Index types](./index-types.png)  
 Source : [Bitmap index](https://www.semanticscholar.org/paper/A-Data-Mining-Approach-for-selecting-Bitmap-Join-Bellatreche-Missaoui/be31419bb65817e457433f4061af2771e9891ac2), [Dense index](http://mlwiki.org/index.php/Dense_Index), [Sparse index](https://prepinsta.com/dbms/indexing-and-its-types/), [Inverted index](https://spotintelligence.com/2023/10/30/inverted-indexing/), [Primary and secondary index](https://byjus.com/gate/indexing-in-dbms-notes/), [Hash index](https://www.sqlpipe.com/blog/b-tree-vs-hash-index-and-when-to-use-them)
+
+:::tip
+See [index implementation](/database-system/index-implementation) for more detail about index and their implementation.
+:::

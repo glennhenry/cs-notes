@@ -40,18 +40,18 @@ Three example types of search engine are :
 
 - **Full-Text Search Engine** : These search engines are designed to index and search through the entire content of documents or web pages. They analyze the text and index it based on keywords, allowing users to search for specific terms or phrases within the indexed content.
 
-- **Database Search Engine** : These search engines focus on searching within structured databases. They enable users to query and retrieve specific data from databases using SQL-like queries or other query languages.
+- **Database Search Engine** : These search engines focus on searching within structured databases. They enable users to query and retrieve specific data from databases using [SQL-like queries](/database-system/query-language) or other query languages.
 
 ### Elasticsearch
 
-**Elasticsearch** is a search and analytics engine, at its core, it is a document-oriented database that stores data in [JSON](/frontend-web-development/json)-like format. It allows you to index and search structured and unstructured data, making it suitable for many use cases such as full-text search, log analytics, and real-time analytics.
+**Elasticsearch** is a search and analytics engine, at its core, it is a [document-oriented database](/database-system/nosql#document) that stores data in [JSON](/frontend-web-development/json)-like format. It allows you to index and search structured and unstructured data, making it suitable for many use cases such as full-text search, log analytics, and real-time analytics.
 
-Elasticsearch operates in a distributed architecture. An engine of elasticsearch capable of storing data and performing search operation is considered as a **node**. These nodes works together to form a **cluster**.
+Elasticsearch operates in a distributed architecture. An engine of elasticsearch capable of storing data and performing search operation is considered as a **node**. These nodes work together to form a **cluster**.
 
 A similar data is grouped together and stored in a logical container called **index**. It can be thought of as a separate database within Elasticsearch. An index is identified by a name, which should be unique within the Elasticsearch cluster.
 
-In elasticsearch, everytime we index data, it is divided into smaller subsets called **shards**. These shards are then distributed on separate node in a cluster to allows parallel search and indexing operations, making them faster and scalable.
+In elasticsearch, every time we index data, it is divided into smaller subsets called **shards**. These shards are then distributed on separate node in a cluster to allows parallel search and indexing operations, making them faster and scalable.
 
-Also as an analytics engine, elasticsearch allows us to perform analytics and statistical analysis(using tool called logstash); and data visualization (using tool called Kibana).
+Also, as an analytics engine, elasticsearch allows us to perform analytics and statistical analysis (using tool called logstash); and data visualization (using tool called Kibana).
 
 Overall, the key features of elasticsearch is combining distributed computing and scalable storage with also various analytics feature.

@@ -22,7 +22,7 @@ A column has a particular **data type** (or domain) associated with it. The colu
 A row entry represent individual instances of data within the table. Each row contains the actual data values for each attribute. For example, in a table representing employees, each row would represent a specific employee, and the columns would contain attributes such as employee ID, name, age, and so on.
 
 ![Customer table](./customer-table.png)  
-_A customer table containing column CustomerId, FirstName, LastName, and DateCreated._  
+_A customer table containing column `CustomerId`, `FirstName`, `LastName`, and `DateCreated`._  
 Source : https://database.guide/what-is-a-table/
 
 :::info
@@ -58,7 +58,7 @@ For example, let's consider two tables : `Customers` and `Orders`.
 
 ![Customer order table 1](./customer-order-table-1.png)
 
-An order is obviously ordered by a customer, it make sense to also store which customer placed the order. Let's modify the table.
+An order is obviously ordered by a customer, it makes sense to also store which customer placed the order. Let's modify the table.
 
 ![Customer order table 2](./customer-order-table-2.png)
 

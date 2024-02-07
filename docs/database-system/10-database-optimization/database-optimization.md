@@ -10,7 +10,7 @@ description: Database Optimization
 - **[Query optimization - Wikipedia](https://en.wikipedia.org/wiki/Query_optimization)**
 - **[Partition (database) - Wikipedia](<https://en.wikipedia.org/wiki/Partition_(database)>)**
 
-Query language, typically being a declarative language, allows it to make its own optimization. It is up to the database engine how will it perform the database operation. Query language doesn't rely on specific instruction from the programmer, this makes the compiler able to produce a highly optimized query in a controlled way.
+[Query language](/database-system/query-language), typically being a declarative language, allows it to make its own optimization. It is up to the database engine how will it perform the database operation. Query language doesn't rely on specific instruction from the programmer, this makes the compiler able to produce a highly optimized query in a controlled way.
 
 ### Query Optimization
 
@@ -56,6 +56,10 @@ A cost of query plan is estimated by several factors such as disk I/O operations
 - **Cardinality** : Cardinality is the number of distinct values or rows in a table or a column. Cardinality is important for estimating the number of rows that will be returned by a query or the number of distinct values that will be involved in a join.
 
 The information and metrics collected about the data and structure of a database is stored in a database statistics. These can be table, column, index statistics, which stores data types, size, cardinality, or any other metadata. Statistical summaries such as frequency and distribution of values can also be stored in a histogram.
+
+:::tip
+More about [query processing](/database-system/query-processing) and [query compiler](/query-compiler).
+:::
 
 ### Caching
 
