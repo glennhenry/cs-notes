@@ -49,22 +49,7 @@ article {
   margin-right: 20px;
 }
 
-/* White tint external link icon */
-a[href^="http"]:not(nav a):not([href^="https://glennhenry.github.io/cs-notes"])::after,
-a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
-{
-  content: "";
-  display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
-  margin-left: 0.25em;
-  background-image: url("/static/img/external_link.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  vertical-align: middle;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
-    contrast(100%);
-}
+
 
 /* Always underline for link, except navbar and TOC links */
 a:not(nav a):not(.table-of-contents a) {
