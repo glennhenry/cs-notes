@@ -7,16 +7,37 @@
   --ifm-color-primary-lighter: #1323f5;
   --ifm-color-primary-lightest: #3442f7;
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #5b66a7;
   }
 
-  strong, em {
+  strong,
+  em {
     color: rgb(41, 131, 138);
   }
 
   .katex {
     color: rgb(148, 42, 6);
+  }
+
+  /* Black tint external link icon */
+  a[href^="http"]:not(nav a):not([href^="https://glennhenry.github.io/cs-notes"])::after,
+a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
+  {
+    content: "";
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.25em;
+    background-image: url("/static/img/external_link.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
   }
 }
 
@@ -30,16 +51,39 @@ html[data-theme="dark"] {
   --ifm-color-primary-lightest: #ffffff;
   --ifm-background-color: #1d1f25;
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #a4d2f1;
   }
 
-  strong, em {
+  strong,
+  em {
     color: rgb(107, 197, 126);
   }
 
   .katex {
     color: rgb(206, 180, 140);
+  }
+
+  /* White tint external link icon */
+  a[href^="http"]:not(nav a):not([href^="https://glennhenry.github.io/cs-notes"])::after,
+a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
+  {
+    content: "";
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.25em;
+    background-image: url("/static/img/external_link.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+      brightness(100%) contrast(100%);
   }
 }
 
@@ -47,23 +91,6 @@ html[data-theme="dark"] {
 article {
   margin-left: 20px;
   margin-right: 20px;
-}
-
-/* White tint external link icon */
-a[href^="http"]:not(nav a):not([href^="https://glennhenry.github.io/cs-notes"])::after,
-a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
-{
-  content: "";
-  display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
-  margin-left: 0.25em;
-  background-image: url("/static/img/external_link.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  vertical-align: middle;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
-    contrast(100%);
 }
 
 /* Always underline for link, except navbar and TOC links */
