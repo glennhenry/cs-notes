@@ -9,7 +9,6 @@ description: Transactions
 
 - **[Database transaction - Wikipedia](https://en.wikipedia.org/wiki/Database_transaction)**
 - **[ACID - Wikipedia](https://en.wikipedia.org/wiki/ACID)**
-- **[Concurrency control - Wikipedia](https://en.wikipedia.org/wiki/Concurrency_control)**
 
 **Transaction** is a technique to group together related database operation.
 
