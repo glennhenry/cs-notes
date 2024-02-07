@@ -100,6 +100,12 @@ These are fundamental tools used in multithreaded programming to synchronize.
 
 The mutex technique can be implemented in the software-level by memory synchronization instructions provided by the hardware architecture.
 
+There are three types of locks :
+
+- **Shared lock** : Multiple thread is able to read same data simultaneously.
+- **Exclusive lock (mutex)** : When a thread acquire an exclusive lock, it has exclusive access to the data until the lock is released.
+- **Update lock** : Combination of shared and exclusive locks, allowing multiple thread to read, but only one thread to update the data at a time.
+
 ###### Monitor & Condition Variables
 
 **Condition variables** are synchronization primitives that allow threads to wait for a specific condition to become true before proceeding with their execution. Condition variables are typically used together with lock, forming another construct, **monitors**.
