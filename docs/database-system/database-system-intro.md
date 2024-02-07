@@ -39,6 +39,7 @@ Some sources are from the book **Database Systems - The Complete Book (2nd Editi
     - [Database Model](database-system/database-model)
     - [Normalization](database-system/normalization)
     - [Transactions](database-system/transactions)
+    - [Concurrency Control](database-system/concurrency-control)
     - [Trigger & Constraints](database-system/trigger-and-constraints)
   - [Logging & Recovery](database-system/logging-and-recovery)
   - [Index](database-system/index)
@@ -49,4 +50,3 @@ Some sources are from the book **Database Systems - The Complete Book (2nd Editi
   - [Index Implementation](database-system/index-implementation)
   - [Query Processing](database-system/query-processing)
   - [Query Compiler](database-system/query-compiler)
-  - [Concurrency Control](database-system/concurrency-control)
