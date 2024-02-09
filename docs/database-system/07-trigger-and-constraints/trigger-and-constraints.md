@@ -21,7 +21,7 @@ description: Trigger & Constraints
 - `UNIQUE` : Ensures that the non-null values in a column(s) are unique across all rows in a table.
 - `NOT NULL` : Ensures that a column cannot have null values. It requires that the column must have a value for every row and disallows the insertion of null values.
 - `CHECK` : Specifies a condition that must be satisfied for the values in a column(s). For example, we can use the `CHECK` constraint to specify that a numeric column must be positive or that a character column must have a certain length.
-- `CREATE INDEX` : Creates [index](/database-system/database-optimization#index) in table for performance optimization.
+- `CREATE INDEX` : Creates [index](/database-system/index) in table for performance optimization.
 
 ### Trigger
 
