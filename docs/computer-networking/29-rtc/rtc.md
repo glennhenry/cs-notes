@@ -30,7 +30,7 @@ WebRTC is a web real-time communication technology that uses RTC protocol. It es
 
 To begin connection, the participant need to send an "offer" to the signaling server. It contains necessary information including protocol version, session name, session identifier, session title, email address, phone number, and other important information. The signaling server will exchange the information between each participant.
 
-Peer-to-peer connection could bring some problems, many devices uses private IP address assigned by [Network Address Translation (NAT)](/computer-networking/nat). These private IP addresses are not directly reachable from the public internet. Another problem is some devices have a [firewall](/computer-security/networking-security#firewall) as network security.
+Peer-to-peer connection could bring some problems, many devices uses private IP address assigned by [Network Address Translation (NAT)](/computer-networking/nat). These private IP addresses are not directly reachable from the public internet. Another problem is some devices have a [firewall](/computer-security/network-security#firewall) as network security.
 
 WebRTC uses standard called Interactive Connectivity Establishment (ICE). ICE helps avoiding private IP address problem by utilizing STUN (Session Traversal Utilities for NAT) servers. It enables devices to determine their public IP addresses by contacting these servers, allowing them to communicate with the outside world.
 
