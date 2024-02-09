@@ -48,7 +48,7 @@ Source : https://en.wikipedia.org/wiki/Process_%28computing%29#/media/File:Conce
 
 **Thread**, on the other hand, is a basic unit of execution within a process. A thread is a single sequence of instruction that can be executed by the CPU. Thread exists inside a process, they share the same memory space and resources of the process that created them.
 
-A single process can have multiple thread to execute multiple task, the technique is called [multithreading](/computer-and-programming-fundamentals/concurrency-and-parallelism#multithreading--multiprocessing). In a process where multiple thread exist, they can work together to complete a task as they share the same memory space.
+A single process can have multiple thread to execute multiple task, the technique is called [multithreading](#multithreading). In a process where multiple thread exist, they can work together to complete a task as they share the same memory space.
 
 #### Process vs Thread
 

@@ -37,7 +37,7 @@ Source : https://www.sangfor.com/glossary/cloud-and-infrastructure/what-is-wide-
 
 **Virtual Local Area Network (VLAN)** is a technique used to create logical, isolated networks within a physical local area network (LAN). Devices within a VLAN can communicate with each other as if they were connected to the same physical network, even if they are physically located in different areas or connected to different switches.
 
-By dividing network traffic, VLAN offers simpler network, traffic reduction, and better security. Devices in one VLAN cannot directly communicate with devices in another VLAN unless specific routing or [firewall](/computer-networking/network-security#firewall) rules are in place.
+By dividing network traffic, VLAN offers simpler network, traffic reduction, and better security. Devices in one VLAN cannot directly communicate with devices in another VLAN unless specific routing or [firewall](/computer-security/network-security#firewall) rules are in place.
 
 Network division works by assigning VLAN ID or VLAN tag to each VLAN. These IDs are used to uniquely identify which VLAN a network packet or frame belongs to. Network devices such as [switch](/computer-networking/switch) may be configured to associate specific ports with particular VLANs. This association determines which VLAN a device belongs to. Devices connected to the same VLAN-configured ports are considered members of the same VLAN.
 

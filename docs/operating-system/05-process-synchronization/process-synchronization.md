@@ -104,7 +104,7 @@ while true:
 
 #### Dining Philosophers
 
-The dining philosophers problem illustrate the [deadlock](/operating-system/multithreading#multithreading-problem).
+The dining philosophers problem illustrate the [deadlock](/operating-system/multithreading#multithreading-problems).
 
 ![Dining philosophers problem](./dining-philosopher.png)  
 Source : https://www.scaler.com/topics/operating-system/dining-philosophers-problem-in-os/

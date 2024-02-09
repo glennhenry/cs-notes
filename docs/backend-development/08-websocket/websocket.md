@@ -12,7 +12,7 @@ description: WebSocket
 
 **WebSocket** is a communication protocol that allows full-duplex communication, meaning it allows simultaneous data flow in both direction at the same time. WebSocket establish a persistent connection over a single [TCP](/computer-networking/tcp-protocol) connection, it doesn't need to make request to server like [HTTP](/computer-networking/http-https#http) everytime it want to send new data. WebSocket is suited for real-time communication that needs frequent update such as live dashboard or chat application.
 
-WebSocket is an alternative to [pooling](/backend-development/webhook#pooling) for real-time communication. Using pooling means we need to make request periodically to check for new data, this can be wasteful if the application is real-time meaning an update happens often.
+WebSocket is an alternative to [pooling](/backend-development/webhook#polling) for real-time communication. Using pooling means we need to make request periodically to check for new data, this can be wasteful if the application is real-time meaning an update happens often.
 
 WebSocket has different use case with [Webhook](/backend-development/webhook#webhook). WebSocket is typically used for client-server communication such as interactive communication in a chat app. Webhook, on the other hand, typically used for server-server communication or to integrate systems. The use case can be data sync between different system or notify external server.
 

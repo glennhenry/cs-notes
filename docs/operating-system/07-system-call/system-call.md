@@ -75,7 +75,7 @@ System calls in this category are used for inter-process communication (IPC) and
 - **Inter-Process Communication (IPC)**: System calls like `pipe()`, `shmget()`, `semget()`, and `msgget()` are used for various forms of IPC, including shared memory, semaphores, and message queues. These mechanisms facilitate communication and synchronization between different processes running on the same system. Processes can share data through shared memory, coordinate access to shared resources using semaphores, or exchange messages through message queues using these system calls.
 
 :::tip
-See also [message passing](/operating-system/multithreading#message-passing) and [IPC](/operating-system/inter-process-communication).
+See also [message passing](/operating-system/inter-process-communication#message-passing) and [IPC](/operating-system/inter-process-communication).
 :::
 
 #### Protection

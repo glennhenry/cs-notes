@@ -49,7 +49,7 @@ FTP is not really secure, it has some security issue such as :
 
 Secure File Transfer Protocol (SFTP) is commonly used as a secure alternative to FTP (File Transfer Protocol) because it adds encryption and authentication mechanisms to protect data during transit.
 
-SFTP uses [Secure Shell (SSH)](/computer-networking/network-encryption#secure-shell-ssh) as its underlying protocol, which provides encryption and data integrity. All data, including file content, commands, and authentication credentials, are encrypted to prevent unauthorized access or eavesdropping. SFTP also uses TCP for reliable data transfer and it operates on port 22 instead.
+SFTP uses [Secure Shell (SSH)](/computer-networking/network-encryption#ssh) as its underlying protocol, which provides encryption and data integrity. All data, including file content, commands, and authentication credentials, are encrypted to prevent unauthorized access or eavesdropping. SFTP also uses TCP for reliable data transfer and it operates on port 22 instead.
 
 ![Security comparison between FTP and SFTP](./ftp-vs-sftp.png)  
 Source : https://www.educba.com/ftp-vs-sftp/

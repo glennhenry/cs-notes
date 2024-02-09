@@ -26,7 +26,7 @@ The high level description of MD5 algorithm :
 
 2. **Initialization** : MD5 uses four 32-bit registers (A, B, C, and D) as its internal state. These registers are used to store intermediate values during the processing of the input message blocks, they are initialized with predefined values.
 
-3. **Processing** : For each block, a series of rounds are performed, which involve [bitwise logical operations](/computer-and-programming-fundamentals/bitwise-operation), [modular addition](/computer-security/math-concepts#modular-addition), and non-linear functions. The rounds modify the internal state (registers) of the algorithm.
+3. **Processing** : For each block, a series of rounds are performed, which involve [bitwise logical operations](/computer-and-programming-fundamentals/bitwise-operation), [modular addition](/computer-security/math-concepts#modular-addition--subtraction), and non-linear functions. The rounds modify the internal state (registers) of the algorithm.
 
    ![The bitwise logic](./logical-operation.png)  
    Source : https://en.wikipedia.org/wiki/MD5#algorithm

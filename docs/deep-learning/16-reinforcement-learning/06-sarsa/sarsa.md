@@ -13,7 +13,7 @@ description: SARSA
 
 ### Algorithm
 
-TD is a general framework to estimate value based on the observed rewards and the estimated values of future states. **SARSA is the specific algorithm used to update Q-value**, therefore the algorithm is very similar to [TD](/deep-learning/reinforcement-learning/temporal-difference#algorithm).
+TD is a general framework to estimate value based on the observed rewards and the estimated values of future states. **SARSA is the specific algorithm used to update Q-value**, therefore the algorithm is very similar to [TD](/deep-learning/reinforcement-learning/temporal-difference).
 
 1.  **Initialization** : Initialize the Q-values for all state-action pairs arbitrarily or to some default values.
 

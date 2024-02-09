@@ -43,7 +43,7 @@ Source : https://forum.arduino.cc/t/caesar-cipher-with-arduino-pt-1/189683
 They are commonly used interchangeable, but they have different context.
 
 - Decipher : Converting back ciphertext to plaintext.
-- Decrypt : Converting encrypted data to original form, it is used in the context of various encryption schemes such as [symmetric and asymmetric encryption](#symmetric--asymmetric).
+- Decrypt : Converting encrypted data to original form, it is used in the context of various encryption schemes such as [symmetric and asymmetric encryption](#symmetric--asymmetric-encryption).
 - Decode : Converting back encoded data into readable format, it doesn't have to be encrypted data. For example, it can include converting [ASCII](/computer-and-programming-fundamentals/data-representation#ascii) encoded text (in binary) to plaintext.
 
 ### Cryptographic Encryption

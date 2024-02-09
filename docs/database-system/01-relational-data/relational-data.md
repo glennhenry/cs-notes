@@ -144,5 +144,5 @@ We can perform various operation on our query, some examples are :
 - **Intersection** : Retrieves only the common rows between two or more queries, keeping only the rows that appear in all result sets.
 
 :::info
-More about [operation](/database-system/query-language#operation).
+More about [operation](/database-system/query-language#other-operations).
 :::

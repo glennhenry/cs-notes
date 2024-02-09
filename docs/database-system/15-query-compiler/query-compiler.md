@@ -86,7 +86,7 @@ Some example to estimate operations :
 
 ### Plan Enumeration & Selection
 
-After estimation of operators are determined, the optimizer needs to estimate the cost of evaluating certain expressions. They are based on the number of disk I/O operations performed, which can be influenced by [similar factors as before](#estimation) :
+After estimation of operators are determined, the optimizer needs to estimate the cost of evaluating certain expressions. They are based on the number of disk I/O operations performed, which can be influenced by [similar factors as before](#cost-estimation) :
 
 - **Choice of logical operators** : The selection of logical query plans includes decisions such as join methods, sorting, and filtering.
 - **Sizes of intermediate results**

@@ -37,7 +37,7 @@ It consists of four steps :
    In conclusion, modulus $n$ and exponent $e$ is the public key. While exponent $d$ is obtained from $p$, $q$, and $\lambda(n)$, these must be kept secret.
 
    :::note
-   In the original RSA paper, the [Euler's totient function](/computer-security/math-concepts#eulers-totient), $\phi(n) = (p - 1) \times (q - 1)$ is used instead of $\lambda(n)$.
+   In the original RSA paper, the [Euler's totient function](/computer-security/math-concepts#eulers-totient-function), $\phi(n) = (p - 1) \times (q - 1)$ is used instead of $\lambda(n)$.
    :::
 
 2. **Key Distribution** :

@@ -13,7 +13,7 @@ description: Elliptic Curve Cryptography
 - **[Elliptic Curves - Computerphile](https://youtu.be/NF1pwjL9-DE?si=XfPlzAbOj1Qe7EGq)**
 - **[ECDH - A security site](https://asecuritysite.com/ecdh)**
 
-**Elliptic Curve Cryptography** is a form of [public key cryptography](/computer-security/encryption#public--public-key) that is based on the properties of elliptic curve when they are defined over finite fields.
+**Elliptic Curve Cryptography** is a form of [public key cryptography](/computer-security/encryption#public--private-key) that is based on the properties of elliptic curve when they are defined over finite fields.
 
 ### Elliptic Curve
 

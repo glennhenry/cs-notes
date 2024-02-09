@@ -18,7 +18,7 @@ One of the application of network encryption is the [HTTPS](/computer-networking
 
 ### SSL/TLS
 
-**Secure Sockets Layer (SSL)** is one of the first cryptographic protocols to provide secure communication over a computer network. It uses public key encryption, also known as [asymmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption). There will be [public and private key](/computer-security/encryption#public-and-private-key), these key are a piece of information that is used to "lock" or "unlock" data, just like a key in real life.
+**Secure Sockets Layer (SSL)** is one of the first cryptographic protocols to provide secure communication over a computer network. It uses public key encryption, also known as [asymmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption). There will be [public and private key](/computer-security/encryption#public--private-key), these key are a piece of information that is used to "lock" or "unlock" data, just like a key in real life.
 
 1. **Handshakes (Client & Server Hello)** : To establish a connection, SSL protocol involves a handshaking process. Handshaking indicates that the client wants to communicate with the server, they will also exchange some required information.
 

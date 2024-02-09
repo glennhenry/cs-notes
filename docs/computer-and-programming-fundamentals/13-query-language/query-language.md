@@ -11,7 +11,7 @@ description: Query Language
 
 **Query Language** is a computer language used to communicate with and retrieve information from databases. A database is a collection of data, which can be categorized as either **[relational](/database-system/relational-data)**, where data is organized into tables with rows and columns, or **[non-relational](/database-system/nosql)**, where data do not use fixed tabular structure and is instead unstructured, often used to store rapidly changing data.
 
-Query languages are considered as [declarative programming](/computer-and-programming-fundamentals/declarative-functional-programming#declarative), they focus on specifying the desired outcome or result rather than the detailed steps or procedures to achieve that outcome.
+Query languages are considered as [declarative programming](/computer-and-programming-fundamentals/declarative-functional-programming#declarative-programming), they focus on specifying the desired outcome or result rather than the detailed steps or procedures to achieve that outcome.
 
 Query language uses statements to command the database system to retrieve specific outcomes or perform certain operations. A query language can have keyword that indicate the type of operation to be performed, provide additional information to the operation, expression that define calculation or transformation that will be applied to data, and some conditional logic to adjust the operation based on specific condition. Last but not least, query language may have their own syntax rules and conventions that define how the keywords, expressions, or other operators should be structured.
 
