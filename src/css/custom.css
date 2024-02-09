@@ -6,38 +6,38 @@
   --ifm-color-primary-light: #0a1af3;
   --ifm-color-primary-lighter: #1323f5;
   --ifm-color-primary-lightest: #3442f7;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #5b66a7;
-  }
+:root h1,
+:root h2,
+:root h3,
+:root h4,
+:root h5,
+:root h6 {
+  color: #5b66a7;
+}
 
-  strong,
-  em {
-    color: rgb(41, 131, 138);
-  }
+:root strong,
+:root em {
+  color: rgb(41, 131, 138);
+}
 
-  .katex {
-    color: rgb(148, 42, 6);
-  }
+:root .katex {
+  color: rgb(148, 42, 6);
+}
 
-  a[href^="http"]:not(nav a):not([href^="https://glennhenry.github.io/cs-notes"])::after,
-  a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
-  {
-    content: "";
-    display: inline-block;
-    width: 0.8em;
-    height: 0.8em;
-    margin-left: 0.25em;
-    background-image: url("/static/img/external_link.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-  }
+:root a[href^="http"]:not(nav a):not([href^="https://glennhenry.github.io/cs-notes"])::after,
+:root a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
+{
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+  background-image: url("/static/img/external_link.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
 }
 
 html[data-theme="dark"] {
@@ -49,39 +49,40 @@ html[data-theme="dark"] {
   --ifm-color-primary-lighter: #fbf5ff;
   --ifm-color-primary-lightest: #ffffff;
   --ifm-background-color: #1d1f25;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #a4d2f1;
-  }
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+  color: #a4d2f1;
+}
 
-  strong,
-  em {
-    color: rgb(107, 197, 126);
-  }
+html[data-theme="dark"] strong,
+html[data-theme="dark"] em {
+  color: rgb(107, 197, 126);
+}
 
-  .katex {
-    color: rgb(206, 180, 140);
-  }
+html[data-theme="dark"] .katex {
+  color: rgb(206, 180, 140);
+}
 
-  a[href^="http"]:not(nav a):not([href^="https://glennhenry.github.io/cs-notes"])::after,
-  a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
-  {
-    content: "";
-    display: inline-block;
-    width: 0.8em;
-    height: 0.8em;
-    margin-left: 0.25em;
-    background-image: url("/static/img/external_link.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-  }
+html[data-theme="dark"] a[href^="http"]:not(nav a):not([href^="https://glennhenry.github.io/cs-notes"])::after,
+html[data-theme="dark"] a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
+{
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+  background-image: url("/static/img/external_link.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
+    contrast(100%);
 }
 
 article {
