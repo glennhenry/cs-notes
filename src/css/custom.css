@@ -25,9 +25,8 @@
     color: rgb(148, 42, 6);
   }
 
-  /* Black tint external link icon */
   a[href^="http"]:not(nav a):not([href^="https://glennhenry.github.io/cs-notes"])::after,
-a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
+  a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
   {
     content: "";
     display: inline-block;
@@ -69,9 +68,8 @@ html[data-theme="dark"] {
     color: rgb(206, 180, 140);
   }
 
-  /* White tint external link icon */
   a[href^="http"]:not(nav a):not([href^="https://glennhenry.github.io/cs-notes"])::after,
-a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
+  a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
   {
     content: "";
     display: inline-block;
@@ -87,18 +85,15 @@ a[href^="//"]:not(nav a):not([href^="//glennhenry.github.io/cs-notes"])::after
   }
 }
 
-/* Left and right spacing for main contents */
 article {
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* Always underline for link, except navbar and TOC links */
 a:not(nav a):not(.table-of-contents a) {
   text-decoration: underline;
 }
 
-/* Thin black border for image and video */
 img {
   border: 1px solid black;
 }
