@@ -43,7 +43,18 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 1. **[update]** computer-graphics : Should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic. Some topic to include :
 
-   - Frame buffer, back buffer, vsync.
+   - fundamentals
+       - scene
+	   - rendering
+	   - terminologies
+	   - interpolation
+	   - normalizing
+	   - vertex
+   - render loop
+   - graphics pipeline
+   - gui
+	   - window system
+   - Frame buffer, front & back buffer, vsync.
    - Primitive rendering, text rendering.
 
 2. **[update]** frontend-web-development : Minor update for all note, also some topic to include for addition :
@@ -71,6 +82,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 11. **[ref]** /operating-system : /os-fundamentals -> ref to distributed systems in cloud-computing.
 12. **[ref]** /operating-system : /user-interface -> ref to mvc in software engineering.
 13. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
+14. **[update]** /index : add index page containing all pages
 
 ### Longest Notes
 

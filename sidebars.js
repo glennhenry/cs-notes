@@ -779,7 +779,66 @@ const sidebars = {
       type: "category",
       label: "Software Engineering",
       link: { type: "doc", id: "software-engineering/software-engineering" },
-      items: ["software-engineering/xx1-package-manager/package-manager"],
+      items: [
+        "software-engineering/software-methodologies/software-methodologies",
+        {
+          type: "category",
+          label: "Software Design",
+          items: [
+            "software-engineering/software-principles/software-principles",
+            "software-engineering/diagrams/diagrams",
+            {
+              type: "category",
+              label: "Design Patterns",
+              items: [
+                "software-engineering/creational/creational",
+                "software-engineering/structural/structural",
+                "software-engineering/behavioral/behavioral",
+              ],
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Software Architecture",
+          items: [
+            "software-engineering/client-server/client-server",
+            "software-engineering/event-driven/event-driven",
+            "software-engineering/master-slave/master-slave",
+            "software-engineering/peer-to-peer/peer-to-peer",
+            "software-engineering/layered/layered",
+            "software-engineering/component-based/component-based",
+          ],
+        },
+        {
+          type: "category",
+          label: "Software Management",
+          items: [
+            "software-engineering/software-testing/software-testing",
+            "software-engineering/quality-assurance/quality-assurance",
+            "software-engineering/software-debugging/software-debugging",
+            "software-engineering/build-and-package-management/build-and-package-management",
+            "software-engineering/version-control/version-control",
+            "software-engineering/open-sourcing/open-sourcing",
+            "software-engineering/modularization/modularization",
+            "software-engineering/software-deployment/software-deployment",
+            "software-engineering/devops-and-ci-cd/devops-and-ci-cd",
+          ],
+        },
+        {
+          type: "category",
+          label: "System Design",
+          items: [
+            "software-engineering/performance/performance",
+            "software-engineering/scalability/scalability",
+            "software-engineering/availability-and-reliability/availability-and-reliability",
+            "software-engineering/consistency/consistency",
+            "software-engineering/infrastructure/infrastructure",
+            "software-engineering/security/security",
+            "software-engineering/system-design-examples/system-design-examples",
+          ],
+        },
+      ],
     },
 
     // 19. Cloud Computing

@@ -7,7 +7,7 @@ description: NPM
 
 **Main Source : [Wikipedia npm](https://en.wikipedia.org/wiki/Npm)**
 
-**NPM (short for Node Package Manager)** is a [package manager](/software-engineering/package-manager) for the JavaScript programming language also as the default package manager for [Node JS](/frontend-web-development/node-js). It is primarily used for managing and sharing packages of reusable code that can be easily integrated into web applications.
+**NPM (short for Node Package Manager)** is a [package manager](/software-engineering/build-and-package-management) for the JavaScript programming language also as the default package manager for [Node JS](/frontend-web-development/node-js). It is primarily used for managing and sharing packages of reusable code that can be easily integrated into web applications.
 
 NPM provides a command-line interface (CLI) for working with packages and managing dependencies. When you need specific library or packages for your web app, developers can use the npm command to install packages from the NPM registry, which is a public repository of packages that can be easily searched and browsed.
 
