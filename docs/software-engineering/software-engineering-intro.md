@@ -44,4 +44,5 @@ Software Engineering
   - [Availability & Reliability](software-engineering/availability-and-reliability)
   - [Consistency](software-engineering/consistency)
   - [Infrastructure](software-engineering/infrastructure)
-  - [Security](software-engineering/securitysystem-design-examples)
+  - [Security](software-engineering/security)
+  - [System Design Examples](software-engineering/system-design-examples)
