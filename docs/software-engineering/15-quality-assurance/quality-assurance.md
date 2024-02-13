@@ -14,3 +14,4 @@ Quality Assurance page
 - metric
 - reporting
 - risk amangement
+- code review

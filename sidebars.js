@@ -780,7 +780,7 @@ const sidebars = {
       label: "Software Engineering",
       link: { type: "doc", id: "software-engineering/software-engineering" },
       items: [
-        "software-engineering/software-methodologies/software-methodologies",
+        "software-engineering/software-process/software-process",
         {
           type: "category",
           label: "Software Design",
