@@ -46,16 +46,31 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
    - fundamentals
        - scene
 	   - rendering
+	   - local, world, view, clip screen space
 	   - terminologies
 	   - interpolation
 	   - normalizing
 	   - vertex
+   - 2d/3d transformation
+	   - coordinate system
+	   - euler rotation
+	   - gimbal lock
+	   - quarternion
+	   - why use 4d coordinate( afinne transformation )
    - render loop
    - graphics pipeline
    - gui
 	   - window system
    - Frame buffer, front & back buffer, vsync.
    - Primitive rendering, text rendering.
+   - physics and implementation
+	   - gravity
+	   - rigid body
+	   - fluid
+   - opengl
+   - projection
+	   - ortographic, near plane, far plane
+	   - perspective, fov
 
 2. **[update]** frontend-web-development : Minor update for all note, also some topic to include for addition :
 

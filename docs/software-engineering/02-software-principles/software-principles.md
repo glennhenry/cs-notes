@@ -11,6 +11,8 @@ description: Software Principles
 
 Software Principles page
 
+### DRY
+
 - oop
 - specification and standards
 - design and implementation (interface)
