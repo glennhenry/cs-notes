@@ -17,3 +17,4 @@ Diagrams page
 - activity
 - state
 - er diagram
+- wireframe

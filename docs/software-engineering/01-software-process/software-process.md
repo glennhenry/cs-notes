@@ -13,9 +13,9 @@ description: Software Process
 **Software process** is a series of activities or tasks that is followed to create a software. The general process includes :
 
 1. Gathering information on the requirement of the software.
-2. Design the software architecture, which represent how each component interact with each other.
+2. Design the architecture, component, and interface. Architecture represents the overall design of software, component design involve designing how will a component operate, and interface design specify how each component interact with each other.
 3. Implement the architecture by writing the actual code, following specific coding standards.
-4. Testing and verifying that software runs correctly and meet specified requirements.
+4. Testing and verifying that software runs correctly. Broadly speaking, testing can be categorized into three types : individual component testing, system testing where all components are tested together, and a final test to determine if the software meets the specified requirements.
 5. Installing, setting up, and configuring the software on targeted hardware.
 6. Update the software by introducing new feature or fixing bug based on user feedbacks.
 
