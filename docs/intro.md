@@ -71,6 +71,10 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
    - projection
 	   - ortographic, near plane, far plane
 	   - perspective, fov
+   - lightning
+	   - directional, point, spotlight
+	   - attenuation
+	   - spcular, diffuse, ambient, phong
 
 2. **[update]** frontend-web-development : Minor update for all note, also some topic to include for addition :
 

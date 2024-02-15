@@ -11,6 +11,8 @@ description: Software Principles
 - **[Don't repeat yourself - Wikipedia](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)**
 - **[KISS principle - Wikipedia](https://en.wikipedia.org/wiki/KISS_principle)**
 - **[You aren't gonna need it - Wikipedia](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)**
+- **[Law of Demeter - Wikipedia](https://en.wikipedia.org/wiki/Law_of_Demeter)**
+- **[Separation of concerns - Wikipedia](https://en.wikipedia.org/wiki/Separation_of_concerns)**
 
 **Software Principles** are collection of guidelines, styles, tips, good practices, by various software and engineers to help to guide the process of developing a good software. By good software, it means they are reliable, maintainable, scalable, and many more listed in [software characteristics](/software-engineering#software-characteristics).
 
@@ -255,13 +257,169 @@ On the other hand, the loose coupling code introduce an interface, which allows 
 
 The contract is nothing but a specification that the method `getUserById` must take a `userId` of type `String` and return an object `User`, similar to the `saveUser` method. This allows us to create a variety of class that may have different way of processing the data internally.
 
-### LoD
+### Law of Demeter (LoD)
 
 **LoD (Law of Demeter)** is a design principle that promotes loose coupling and encapsulation in [object-oriented programming](/computer-and-programming-fundamentals/object-oriented-programming). The principle states that an object should have limited knowledge about other objects and should only interact with its immediate neighbors.
 
-### SoC
+There are three principles of LoD, based on [Wikipedia](https://en.wikipedia.org/wiki/Law_of_Demeter) :
 
-### Unidirectional Data Flow
+- Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.
+- Each unit should only talk to its friends; don't talk to strangers.
+- Only talk to your immediate friends.
+
+An object could have dependency to other object, meaning it relies on another object to fulfill certain tasks or provide specific functionality. We call the object that it depends on a **friend** or **neighbor**.
+
+The principle states that an object should have limited knowledge about its friend. One of the benefits of an object with limited knowledge about its companion can be seen in the case of designing a public API. A random person using your API shouldn't need to understand the inner working of your API too much, because that is the point of API, to provide a high level of abstraction.
+
+![LoD principle](./lod.png)  
+Source : https://blog.knoldus.com/the-law-of-demeter/
+
+Let's say we are making an API that lets user (developer) to store book name data.
+
+```kotlin
+val dm = DataManager()
+dm.saveData("Software Engineering 9th Edition by Ian Sommerville")
+```
+
+We can save data by just calling `saveData` method. Now under the hood, the API may use SQLite database to actually store the data.
+
+```kotlin
+class DataManager(private val databaseManager: DatabaseManager) {
+    fun saveData(data: String) {
+        // preprocess the data...
+        databaseManager.saveToDB(data)
+    }
+}
+
+class DatabaseManager(private val db: SQLite) {
+    fun saveToDB(data: String) {
+        db.initialize()
+        db.syncWithRemoteServer()
+        // other database setup here...
+        db.save(data)
+    }
+}
+```
+
+The point of this API is to abstract away the process of saving data to database. `DataManager` is responsible for handling data, including preprocessing it and saving it to the database. The process of saving to database is abstracted again by `DatabaseManager`, it doesn't even know which database it is interacting to. Finally, the `DatabaseManager` choose `SQLite` as its database, and it contains the actual code that interact with database.
+
+The application of LoD principle in this example can be seen in the `DataManager` class. It considers `SQLite` as a stranger, and they don't interact directly. They don't even know each other detail, `DataManager` is not responsible for instantiating the database.
+
+### Separation of Concerns (SoC)
+
+**Separation of Concerns (SoC)** is a principle for dividing a complex system into distinct and independent parts, where each part addresses a specific concern or responsibility.
+
+**Concern** is a specific aspect or responsibility of a software system. It represents a distinct functionality or set of related behaviors that can be identified and separated from other parts of the system. For example, in a web application, concerns could include user authentication, database access, business logic, user interface rendering, logging, and error handling. These are general concern, concern can be as specific as "the name of which class to instantiate".
+
+In SoC, a software system should be divided into modules or components, and each module should be responsible for a single concern or functionality. In the example of Law of Demeter, `DataManager` chose to not handle database connection. It instead communicates with an intermediary, which is `DatabaseManager`. The example demonstrates separation of concerns, where we delegate the database related task to class that is supposed to handle these.
+
+SoC allows for code to be modular. If `DataManager` were to communicate directly with `SQLite` database, then if there exist another class that interact with database, we would need to repeat the similar code (i.e., setting up the database). Modularity allows for code reuse, as individual modules can be used in different contexts or projects.
+
+### Dependency Injection
+
+**Dependency Injection (DI)** is a technique used to achieve loose coupling and modularity in software engineering. If an object depends on another object, the object must be "injected" into the class rather than the class creating them internally.
+
+Dependency injection is typically done through interface and provided via constructor. To demonstrate, consider this example.
+
+Without DI :
+
+```kotlin
+// Service interface
+interface MessageService {
+    fun getMessage(): String
+    fun isMessageAvailable(): Boolean
+}
+
+// Implementation of MessageService
+class EmailService : MessageService {
+    override fun getMessage(): String {
+        return "Email message"
+    }
+
+    override fun isMessageAvailable(): String {
+        return true // for simplicity, let's say message is always available
+    }
+}
+
+// Class that directly creates an instance of EmailService
+class MessageBroadcaster {
+    private val messageService: MessageService = EmailService()
+
+    fun broadcast() {
+        while (messageService.isMessageAvailable()) {
+            val message = messageService.getMessage()
+            println("Broadcast: $message")
+        }
+    }
+}
+
+fun main() {
+    // Using MessageProcessorWithoutDI directly
+    val broadcaster = MessageBroadcaster()
+    broadcaster.broadcast()
+}
+```
+
+A message service is a service that should provide message, we should be able to retrieve the message using `getMessage()` and check its availability using `isMessageAvailable()`. Let's say we are making an email service, so we will make a class called `EmailService` that implements `MessageService`.
+
+A message broadcaster is supposed to broadcast the latest message from the service. A message broadcaster without DI would instantiate its own service inside the class (look at `private val messageService: MessageService = EmailService()`).
+
+The problem without DI arise when we wanted to have different instance of service, maybe `EmailService` and `UserService`. We can either make an entirely new broadcaster class or just instantiate an instance of `UserService` inside `MessageBroadcaster`. However, the latter is probably not an ideal solution. It introduces tight coupling and makes it difficult to replace or switch to a different implementation without modifying the class itself.
+
+With DI :
+
+```kotlin
+// Service interface
+interface MessageService {
+    fun getMessage(): String
+    fun isMessageAvailable(): Boolean
+}
+
+// Implementation of MessageService
+class EmailService : MessageService {
+    override fun getMessage(): String {
+        return "Email message"
+    }
+
+    override fun isMessageAvailable(): String {
+        return true // for simplicity, let's say message is always available
+    }
+}
+
+// MessageService in constructor now
+class MessageBroadcaster(private val messageService: MessageService) {
+    fun broadcast() {
+        while (messageService.isMessageAvailable()) {
+            val message = messageService.getMessage()
+            println("Broadcast: $message")
+        }
+    }
+}
+
+class UserService: MessageService {
+    /* ... */
+}
+
+fun main() {
+    // Creating an instance of EmailService (dependency)
+    val emailService = EmailService()
+
+    // Injecting the dependency into MessageBroadcaster
+    val emailBroadcaster = MessageBroadcaster(emailService)
+
+    // Easily create another type of MessageBroadcaster
+    val userService = UserService()
+    val userBroadcaster = MessageBroadcaster(userService)
+
+    // Using MessageBroadcaster with injected dependency
+    emailBroadcaster.processMessage()
+    userBroadcaster.processMessage()
+}
+```
+
+The `MessageBroadcaster` no longer instantiates an instance of `MessageService` itself; instead, it accepts whatever is provided to it through the constructor. This increases flexibility and allows us to create different types of `MessageBroadcaster`. We can make implementation of `MessageService` as we want, and provide it to `MessageBroadcaster` easily.
+
+### Unidirectional Data Flow (UDF)
 
 ### Composition Over Inheritance
 
