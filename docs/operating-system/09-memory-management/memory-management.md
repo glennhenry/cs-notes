@@ -110,7 +110,7 @@ Dynamic allocation is flexible when resizing memory. We can use the `realloc()` 
 
 The direct control of memory in manual management can either be an up or down.
 
-One of the major advantages of manual memory management is the potential for improved performance. Since the programmer has direct control over memory, they can optimize memory usage based on the specific needs of the program. However, manual memory management also introduces challenges and potential risks. It requires careful attention to detail to avoid issues such as **memory leaks**, where we do not release an unused memory, and invalid memory accesses.
+One of the major advantages of manual memory management is the potential for improved performance. Since the programmer has direct control over memory, they can optimize memory usage based on the specific needs of the program. However, manual memory management also introduces challenges and potential risks. It requires careful attention to small detail to avoid issues like invalid memory access, or **memory leaks**. Memory leak is a problem that occurs when unused memory is not released. While it may not be a significant concern if the leaked memory is small, it can accumulate over time.
 
 There are many techniques to automatically manage memory, two examples are :
 
