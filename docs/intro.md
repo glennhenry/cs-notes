@@ -51,6 +51,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 	   - interpolation
 	   - normalizing
 	   - vertex
+		   - vbo, vao, ebo, vertices, indices
    - 2d/3d transformation
 	   - coordinate system
 	   - euler rotation
@@ -58,6 +59,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 	   - quarternion
 	   - why use 4d coordinate( afinne transformation )
    - render loop
+   - more about rendering
+		- transparency rendering order
+		- backface culling
    - graphics pipeline
    - gui
 	   - window system
@@ -67,7 +71,6 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 	   - gravity
 	   - rigid body
 	   - fluid
-   - opengl
    - projection
 	   - ortographic, near plane, far plane
 	   - perspective, fov
@@ -75,6 +78,13 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 	   - directional, point, spotlight
 	   - attenuation
 	   - spcular, diffuse, ambient, phong
+   - mesh
+       - loading
+	   - model
+   - depth buffer, buffer test, z buffer, z fighting
+	   - scene data -> trasnformation -> projection to view space -> depth value formula -> depth value -> depth value testing
+   - stencil testing
+   - blending, color, formula
 
 2. **[update]** frontend-web-development : Minor update for all note, also some topic to include for addition :
 
@@ -106,10 +116,10 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 ### Longest Notes
 
 - [File System](operating-system/file-system) (36282 char)
+- [Software Principles](software-engineering/software-principles) (30368 char, due to many code examples)
 - [Memory Management](operating-system/memory-management) (27368 char)
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
 - [Query Language](database-system/query-language) (23218 char)
-- [Programming Concepts](computer-and-programming-fundamentals/programming-concepts) (21198 char)
 
 ### Credits
 

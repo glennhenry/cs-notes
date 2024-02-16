@@ -13,6 +13,9 @@ description: Software Principles
 - **[You aren't gonna need it - Wikipedia](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)**
 - **[Law of Demeter - Wikipedia](https://en.wikipedia.org/wiki/Law_of_Demeter)**
 - **[Separation of concerns - Wikipedia](https://en.wikipedia.org/wiki/Separation_of_concerns)**
+- **[Prefer composition over inheritance? - stackoverflow](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance)**
+- **[Summary of 'Clean code' by Robert C. Martin - wojteklu GitHub Gist](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)**
+- **[SOLID - Wikipedia](https://en.wikipedia.org/wiki/SOLID) and the 5 articles**
 
 **Software Principles** are collection of guidelines, styles, tips, good practices, by various software and engineers to help to guide the process of developing a good software. By good software, it means they are reliable, maintainable, scalable, and many more listed in [software characteristics](/software-engineering#software-characteristics).
 
@@ -419,10 +422,156 @@ fun main() {
 
 The `MessageBroadcaster` no longer instantiates an instance of `MessageService` itself; instead, it accepts whatever is provided to it through the constructor. This increases flexibility and allows us to create different types of `MessageBroadcaster`. We can make implementation of `MessageService` as we want, and provide it to `MessageBroadcaster` easily.
 
-### Unidirectional Data Flow (UDF)
-
 ### Composition Over Inheritance
+
+In OOP, there is a concept called [inheritance](/computer-and-programming-fundamentals/object-oriented-programming#inheritance). Inheritance allows a class to inherit all the properties and behaviors from a parent class. While inheritance can be useful in some cases, it can also lead to a rigid and inflexible class hierarchy. Inheritance creates a tight coupling between classes, making it difficult to modify or extend the behavior of a class without affecting other classes in the hierarchy.
+
+Inheritance is often associated with an **"is-a" relationship**. When a class inherits from another class, it is stating that the derived class is a specialized version of the base class. The derived class shares the characteristics and behaviors of the base class and adds additional features or overrides existing ones.
+
+**Composition**, on the other hand, involves building complex objects by combining simpler objects or components. Instead of inheriting behavior from a parent class, an object is composed of other objects that provide the desired functionality. We often refer composition as a **"has-a" relationship**, signifying that one class has another class as part of its structure. This approach promotes loose coupling and flexibility in the design.
+
+An example of code with inheritance :
+
+```kotlin
+open class Manufacturer(open val name: String)
+
+class Car(
+    override val name: String, val model: String, val color: String
+) : Manufacturer(name)
+```
+
+Inheritance is not suitable for this code. While a car is associated with a manufacturer, but a car doesn't have an "is-a" relationship. A car is not a manufacturer, but rather associated with particular manufacturer.
+
+A scenario that would be suitable with inheritance is `Person` and `Employee` class. A person is a general representation of person, while an employee is a specialized person. An employee can definitely inherit a person and extend its properties and behavior.
+
+Here's how `Manufacturer` and `Car` class would look like with composition :
+
+```kotlin
+class Manufacturer(open val name: String)
+
+class Car(
+    val manufacturer: Manufacturer,
+    val model: String,
+    val color: String
+)
+```
+
+Instead of inheriting the manufacturer, we chose to include it inside car.
+
+In summary, the principle of composition over inheritance doesn't mean we have use composition all the time. It suggests that, in certain cases, it is preferable to favor composition over inheritance when the class is actually composed of the other class. Inheritance is not the only choice when a class has particular characteristics of another class.
 
 ### Clean Code
 
+The definition of clean code typically refers to well-structured, readable, and maintainable code that follows best practices and conventions to make it is easy to understand and modify.
+
+Some principles of clean code :
+
+- Following standard conventions (e.g., language or team standard).
+- Following code principles such as KISS, DRY, etc.
+- Following design principles such as dependency injection, Law of Demeter, etc.
+- Pronounceable, searchable, descriptive, and meaningful naming of identifier.
+- Function can be made small and focus on one logic at a time.
+- Adding comment that explains "why" rather than "what".
+
 ### SOLID
+
+SOLID principles is a set of five design principles aimed to make OOP code more understandable, flexible, and maintainable.
+
+#### Single Responsibility Principle (SRP)
+
+> A class should have only one reason to change, meaning it should have a single responsibility.
+
+An `Order` class may have a `calculateDiscount()` method. Upon a successful order, we may want to send an email the customer. The email contains order information, which `Order` class have. It will be much easier to have `sendEmail()` method in the `Order` class, but this violates SRP principle. Violation of SRP introduces tight coupling and the mixing of unrelated code together. An alternative would be making another class, such as `EmailSender`, which is responsible for sending emails.
+
+#### Open/Closed Principle (OCP)
+
+> Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. This principle encourages designing systems that can be easily extended with new functionality without modifying existing code.
+
+Some choices to implement OCP includes using interfaces, abstract classes, composition, dependency injection, and generics.
+
+#### Liskov Substitution Principle (LSP)
+
+> Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program. This principle ensures that subtypes adhere to the behavior expected from their base types.
+
+A common example illustrating LSP principle is `Rectangle` and `Square` class that inherits `Shape`.
+
+```kotlin
+open class Rectangle(val width: Int, val height: Int) {
+    open fun setWidth(width: Int) {
+        this.width = width
+    }
+
+    open fun setHeight(height: Int) {
+        this.height = height
+    }
+}
+
+class Square(val sideLength: Int) : Rectangle(sideLength, sideLength) {
+    override fun setWidth(width: Int) {
+        sideLength = width
+    }
+
+    override fun setHeight(height: Int) {
+        sideLength = height
+    }
+}
+```
+
+The LSP principle states that we should be able to treat subclass interchangeably with the superclass without having unexpected behavior. This mean we can treat `Square` as `Rectangle`. A rectangle have method `setWidth` and `setHeight`, treating `Square` as `Rectangle` would mean we can set its width and height independently. However, this violates the nature properties of square, where its side should be equal, and yet we change them independently.
+
+A solution for this would be making `Square` to not inherit `Rectangle`, maybe inherit a more general class like `Shape`. Another way to solve this is simply updating the width in `setHeight` and updating the height in the `setWidth` method, although this sounds counter-intuitive.
+
+#### Interface Segregation Principle (ISP)
+
+> Clients should not be forced to depend on interfaces they do not use. This principle advises breaking down large interfaces into smaller, more focused ones, tailored to the specific needs of clients.
+
+Consider a base class `Animal`, it could have method `eat()` and `sleep()`. We may have `Dog`, `Cat`, etc., that inherits the base class `Animal`. As our class hierarchy get larger, we may need more method such as `fly()`. However, some of animal may not be able to fly, such as penguin. Because penguin inherits `Animal`, we are required to implement it. A way to avoid this is to implement the method with meaningless body, but this violates the principle.
+
+A way to adhere ISP principle is splitting the class or interface hierarchy into a smaller and specific ones. So, we could make a subclass `FlyingAnimal` that inherits `Animal`, and move the behavior related to flying inside the `FlyingAnimal`.
+
+#### Dependency Inversion Principle (DIP)
+
+> High-level modules should not depend on low-level modules. Both should depend on abstractions. This principle promotes loose coupling and allows for easier substitution of dependencies.
+
+```kotlin
+class EmailSender {
+    fun sendEmail(message: String) {
+        println("Sending email: $message")
+    }
+}
+
+class NotificationService {
+    private val emailSender = EmailSender()
+
+    fun sendEmailNotification(message: String) {
+        emailSender.sendEmail(message)
+    }
+}
+```
+
+In this example, the `NotificationService` is the higher level module that we use that depends on `EmailSender`. The behavior or `NotificationService` is dictated by `EmailSender`, such as the requirement of passing `message` and calling the `sendEmail` method. Think of `EmailSender` as a public API, if we change its behavior (e.g., changing parameters), all the user using the `NotificationService` would need to change its behavior as well, which is not favorable. Furthermore, the cost of this become larger as we have a long chain of dependency within the system.
+
+A code following dependency inversion would look like this :
+
+```kotlin
+interface MessageSender {
+    fun sendMessage(message: String)
+}
+
+class EmailSender : MessageSender {
+    override fun sendMessage(message: String) {
+        println("Sending email: $message")
+    }
+}
+
+class NotificationService(private val sender: MessageSender) {
+    fun sendNotification(message: String) {
+        sender.sendMessage(message)
+    }
+}
+```
+
+The `NotificationService` now depend on the `MessageSender` interface, which can be implemented by various type of sender, including `EmailSender`. If somehow `EmailSender` need to change, all it needs is to follow the interface contract. It becomes decoupled from the specific implementation details of the message sending logic, allowing for greater flexibility and modularity.
+
+![Dependency inversion](./dependency-inversion.png)  
+ Source : https://levelup.gitconnected.com/solid-programming-for-arduino-the-dependency-inversion-principle-4ce3bdb787d1
