@@ -42,9 +42,9 @@ A good software is associated with several characteristics :
   - [Software Principles](software-engineering/software-principles)
   - [Diagrams](software-engineering/diagrams)
   - Design Patterns
-    - [Creational](software-engineering/creational)
-    - [Structural](software-engineering/structural)
-    - [Behavioral](software-engineering/behavioral)
+    - [Creational Design Pattern](software-engineering/creational-design-pattern)
+    - [Structural Design Pattern](software-engineering/structural-design-pattern)
+    - [Behavioral Design Pattern](software-engineering/behavioral-design-pattern)
 - Software Architecture
   - [Client-Server](software-engineering/client-server)
   - [Event-Driven](software-engineering/event-driven)

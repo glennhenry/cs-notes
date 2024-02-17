@@ -791,9 +791,9 @@ const sidebars = {
               type: "category",
               label: "Design Patterns",
               items: [
-                "software-engineering/creational/creational",
-                "software-engineering/structural/structural",
-                "software-engineering/behavioral/behavioral",
+                "software-engineering/creational-design-pattern/creational-design-pattern",
+                "software-engineering/structural-design-pattern/structural-design-pattern",
+                "software-engineering/behavioral-design-pattern/behavioral-design-pattern",
               ],
             },
           ],
