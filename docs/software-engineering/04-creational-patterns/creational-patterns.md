@@ -1,8 +1,8 @@
 ---
-slug: /software-engineering/creational-design-pattern
-id: creational-design-pattern
-title: Creational Design Pattern
-description: Creational Design Pattern
+slug: /software-engineering/creational-patterns
+id: creational-patterns
+title: Creational Patterns
+description: Creational Patterns
 ---
 
 **Main Source :**
