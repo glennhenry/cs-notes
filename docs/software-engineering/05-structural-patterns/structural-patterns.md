@@ -1,8 +1,8 @@
 ---
-slug: /software-engineering/structural-design-pattern
-id: structural-design-pattern
-title: Structural Design Pattern
-description: Structural Design Pattern
+slug: /software-engineering/structural-patterns
+id: structural-patterns
+title: Structural Patterns
+description: Structural Patterns
 ---
 
 **Main Source :**

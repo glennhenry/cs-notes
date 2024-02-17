@@ -1,8 +1,8 @@
 ---
-slug: /software-engineering/behavioral-design-pattern
-id: behavioral-design-pattern
-title: Behavioral Design Pattern
-description: Behavioral Design Pattern
+slug: /software-engineering/behavioral-patterns
+id: behavioral-patterns
+title: Behavioral Patterns
+description: Behavioral Patterns
 ---
 
 **Main Source :**
