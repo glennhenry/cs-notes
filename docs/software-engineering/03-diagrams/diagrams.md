@@ -9,6 +9,9 @@ description: Diagrams
 
 - **[Wireframe - ProductPlan](https://www.productplan.com/glossary/wireframe/)**
 - **[Class diagram - Wikipedia](https://en.wikipedia.org/wiki/Class_diagram)**
+- **[Use case diagram - Wikipedia](https://en.wikipedia.org/wiki/Use_case_diagram)**
+- **[Activity diagram - Wikipedia](https://en.wikipedia.org/wiki/Activity_diagram)**
+- **[UML state machine - Wikipedia](https://en.wikipedia.org/wiki/UML_state_machine)**
 
 It is often to represent various aspects of software systems or its components in diagram. They are used to illustrate different facets of the system's design, architecture, behavior, or relationships between components.
 
@@ -101,9 +104,43 @@ Source : https://medium.com/thousand-words-by-creately/the-ultimate-guide-to-seq
 
 #### Use Case Diagram
 
+**Use case diagram** is a diagram showing possible interaction with a system. **Actors**, such as users or other systems, are denoted depicted by stick man. Ovals or rectangles are **use cases**, which are specific functionalities or behaviors provided by the system. All the figure inside the big rectangle is considered as the scope of the system being modeled.
+
+![Use case diagram](./usecase-diagram.png)  
+Source : https://en.wikipedia.org/wiki/Use_case_diagram
+
+In addition, there are four types of relationship :
+
+- **Association** : Represented by a solid arrow, indicates a communication or interaction between an actor and a use case.
+- **Generalization** : Represented by a dashed arrow, indicates a specific use case or actor that inherits the behavior and characteristics of a more general use case or actor.
+- **\<\<extend\>\>** : Represents optional or alternative functionality that can be added to a base use case under certain conditions.
+- **\<\<include\>\>** : Represents a situation where one use case includes the functionality of another use case.
+
 #### Activity Diagram
 
+**Activity diagram** illustrates the flow of activities and actions within a system or a process. The flow of actions is connected with arrows, and the action are constructed with shapes, which are :
+
+- **Black circle** represents the start (initial node) of the workflow
+- **Capsule** represent actions
+- **Diamonds** represent decisions
+- **Bars** represent the start (split) or end (join) of concurrent activities;
+- **Encircled black circle** represents the end (final node).
+
+![Activity diagram](./activity-diagram.png)  
+Source : https://en.wikipedia.org/wiki/Activity_diagram#/media/File:Activity_conducting.svg
+
 #### State Diagram
+
+**State diagram** is a type of UML diagram that represent the behavior of a system that is affected by events over time.
+
+System has **states**, which represent the different conditions or modes that an object or system can be in during its lifecycle. Each state is depicted as a rounded rectangle with the name of the state inside.
+
+An **event** represent occurrences or stimuli that trigger state transitions. **Transitions** represent the movement of an object or system from one state to another in response to an event or condition. Transitions are depicted with arrow, forming a [directed graph](/data-structures-and-algorithms/graph#directed) in the overall state diagram. When state transition takes place, **actions**, which describe operations or tasks will be performed.
+
+![State diagram](./state-diagram.png)  
+Source : https://nulab.com/learn/software-development/a-simple-guide-to-drawing-your-first-state-diagram-with-examples/
+
+Similar to activity diagram, the start and end of the diagram is represented as black circle and encircled black circle, respectively.
 
 ### ER Diagram
 

@@ -44,47 +44,51 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 1. **[update]** computer-graphics : Should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic. Some topic to include :
 
    - fundamentals
-       - scene
-	   - rendering
-	   - local, world, view, clip screen space
-	   - terminologies
-	   - interpolation
-	   - normalizing
-	   - vertex
-		   - vbo, vao, ebo, vertices, indices
+     - scene
+     - rendering
+     - local, world, view, clip screen space
+     - terminologies
+     - interpolation
+     - normalizing
+     - vertex
+       - vbo, vao, ebo, vertices, indices
    - 2d/3d transformation
-	   - coordinate system
-	   - euler rotation
-	   - gimbal lock
-	   - quarternion
-	   - why use 4d coordinate( afinne transformation )
+     - coordinate system
+     - euler rotation
+     - gimbal lock
+     - quarternion
+     - why use 4d coordinate( afinne transformation )
    - render loop
    - more about rendering
-		- transparency rendering order
-		- backface culling
+     - transparency rendering order
+     - backface culling
    - graphics pipeline
    - gui
-	   - window system
+     - window system
    - Frame buffer, front & back buffer, vsync.
    - Primitive rendering, text rendering.
    - physics and implementation
-	   - gravity
-	   - rigid body
-	   - fluid
+     - gravity
+     - rigid body
+     - fluid
    - projection
-	   - ortographic, near plane, far plane
-	   - perspective, fov
+     - ortographic, near plane, far plane
+     - perspective, fov
    - lightning
-	   - directional, point, spotlight
-	   - attenuation
-	   - spcular, diffuse, ambient, phong
+     - directional, point, spotlight
+     - attenuation
+     - spcular, diffuse, ambient, phong
    - mesh
-       - loading
-	   - model
+     - loading
+     - model
    - depth buffer, buffer test, z buffer, z fighting
-	   - scene data -> trasnformation -> projection to view space -> depth value formula -> depth value -> depth value testing
+     - scene data -> trasnformation -> projection to view space -> depth value formula -> depth value -> depth value testing
    - stencil testing
    - blending, color, formula
+   - shader
+     - vertex shader
+     - fragment shader
+     - geometry shader
 
 2. **[update]** frontend-web-development : Minor update for all note, also some topic to include for addition :
 
@@ -109,9 +113,10 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 9. **[ref]** /computer-security : /reverse-engineering -> ref to decompilation in compilers.
 10. **[ref]** /operating-system : /virtualization -> ref to distributed systems in cloud-computing.
 11. **[ref]** /operating-system : /os-fundamentals -> ref to distributed systems in cloud-computing.
-12. **[ref]** /operating-system : /user-interface -> ref to mvc in software engineering.
-13. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
-14. **[update]** /index : add index page containing all pages
+12. **[ref]** /operating-system : /os-fundamentals -> ref to client-server architecture in software engineering
+13. **[ref]** /operating-system : /user-interface -> ref to mvc in software engineering.
+14. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
+15. **[update]** /index : add index page containing the list of all notes
 
 ### Longest Notes
 
