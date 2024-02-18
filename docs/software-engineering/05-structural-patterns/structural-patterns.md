@@ -7,7 +7,7 @@ description: Structural Patterns
 
 **Main Source :**
 
-- []
+- **[Structural Design Patterns - Refatoring Guru](https://refactoring.guru/design-patterns/structural-patterns)**
 
 **Structural patterns** focus on structuring objects and classes to form larger structure. These patterns help to define and manage relationships between different components, ensuring that they work together effectively.
 
