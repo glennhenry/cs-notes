@@ -31,7 +31,7 @@ Backend architecture can be scaled to handle increased traffic and load. They ca
 
 - **Load Balancing** : Distribute incoming traffic across multiple servers using load balancers, this will reduce the burden of a single server.
 
-  ![Load balancing](./load-balancing.png)
+  ![Load balancing](./load-balancing.png)  
   Source : https://herza.id/blog/load-balancing-pengertian-cara-kerja-jenis-metode-kelebihan-dan-kekurangan/
 
 ### Resource Optimization

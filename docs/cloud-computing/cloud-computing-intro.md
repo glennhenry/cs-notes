@@ -13,7 +13,8 @@ All pages
 - [Virtualization](/cloud-computing/virtualization)
 - [Containerization](/cloud-computing/containerization)
 - [Docker & Kubernetes](/cloud-computing/docker-and-kubernetes)
-- Distributed System
+- Distributed Computing
+    - Distributed hash tables
 - a
 - b
 - c
