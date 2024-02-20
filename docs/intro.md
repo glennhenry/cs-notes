@@ -74,10 +74,8 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
    - projection
      - ortographic, near plane, far plane
      - perspective, fov
-   - lightning
-     - directional, point, spotlight
-     - attenuation
-     - spcular, diffuse, ambient, phong
+
+   - Blurring, edge detection, filter
    - mesh
      - loading
      - model
@@ -89,6 +87,24 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
      - vertex shader
      - fragment shader
      - geometry shader
+	 - lightning
+		 - directional, point, spotlight
+		 - attenuation
+		 - spcular, diffuse, ambient, phong, blinn phong
+		 - normal mapping
+		 - parallax mapping
+		 - HDR
+		 - bloom
+		 - SSAO / ambient occulsion
+		 - g buffer and deferred shading
+   - directional shadow and point shadow
+	 - mapping
+	 - pcf
+	 - over sampling
+	 - peter panning
+	 - shadow acne
+	 - depth map
+	 - light shadow space
 
 2. **[update]** frontend-web-development : Minor update for all note, also some topic to include for addition :
 
