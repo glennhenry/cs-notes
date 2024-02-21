@@ -807,7 +807,7 @@ const sidebars = {
             "software-engineering/master-slave/master-slave",
             "software-engineering/peer-to-peer/peer-to-peer",
             "software-engineering/layered/layered",
-            "software-engineering/component-based/component-based",
+            "software-engineering/other-architecture-patterns/other-architecture-patterns",
           ],
         },
         {

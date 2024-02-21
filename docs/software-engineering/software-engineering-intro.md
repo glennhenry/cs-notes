@@ -51,7 +51,7 @@ A good software is associated with several characteristics :
   - [Master-Slave](software-engineering/master-slave)
   - [Peer-to-Peer](software-engineering/peer-to-peer)
   - [Layered](software-engineering/layered)
-  - [Component-Based](software-engineering/component-based)
+  - [Other Architecture Patterns](software-engineering/other-architecture-patterns)
 - Software Management
   - [Software Testing](software-engineering/software-testing)
   - [Software Debugging](software-engineering/software-debugging)
