@@ -9,7 +9,7 @@ description: Other Architecture Patterns
 
 - []
 
-This note discusses other architectural patterns, such as MVC, MVP, MVVM, MVI, and VIPER. The five are guidelines on we can organize code and separate concerns in software applications. They are somewhat similar to [layered architecture](/sfotware-engineering/layered) in terms of separating concerns.
+This note discusses other architectural patterns, such as MVC, MVP, MVVM, MVI, and VIPER. The five are guidelines on we can organize code and separate concerns in software applications. They are somewhat similar to [layered architecture](/software-engineering/layered) in terms of separating concerns.
 
 ### MVC
 
