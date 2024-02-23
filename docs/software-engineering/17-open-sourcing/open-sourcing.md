@@ -18,6 +18,5 @@ Open Sourcing page
 - contribution
 - issues
 - pull request
-- semver
 
 ### Issues
