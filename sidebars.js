@@ -815,7 +815,6 @@ const sidebars = {
           label: "Software Management",
           items: [
             "software-engineering/software-testing/software-testing",
-            "software-engineering/quality-assurance/quality-assurance",
             "software-engineering/software-debugging/software-debugging",
             "software-engineering/build-and-package-management/build-and-package-management",
             "software-engineering/version-control/version-control",

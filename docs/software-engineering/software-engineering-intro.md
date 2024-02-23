@@ -55,7 +55,6 @@ A good software is associated with several characteristics :
 - Software Management
   - [Software Testing](software-engineering/software-testing)
   - [Software Debugging](software-engineering/software-debugging)
-  - [Quality Assurance](software-engineering/quality-assurance)
   - [Build & Package Management](software-engineering/build-and-package-management)
   - [Version Control](software-engineering/version-control)
   - [Open Sourcing](software-engineering/open-sourcing)
