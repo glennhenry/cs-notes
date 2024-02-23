@@ -296,6 +296,8 @@ fun getAllDataWeirdUser(): User {
 }
 ```
 
+Sometimes, stub keeps track information how they are all called, which might be useful for debugging in the case of test failures. These kinds of stubs are called **spies**.
+
 ##### Dummy
 
 A dummy object is a placeholder object used to satisfy the requirements of a particular test scenario or to fulfill the dependencies of the system under test, but it does not have any significant behavior or functionality.
