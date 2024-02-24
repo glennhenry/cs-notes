@@ -7,7 +7,8 @@ description: Other Architecture Patterns
 
 **Main Source :**
 
-- []
+- **[What is the difference between MVI compared to MVC and MVVM - stackoverflow](https://stackoverflow.com/questions/59205614/what-is-the-difference-between-mvi-compared-to-mvc-and-mvvm/59336002)**
+- **[VIPER-Architecture for iOS project with simple demo example by Bipin Pandey - Medium](https://medium.com/cr8resume/viper-architecture-for-ios-project-with-simple-demo-example-7a07321dbd29)**
 
 This note discusses other architectural patterns, such as MVC, MVP, MVVM, MVI, and VIPER. The five are guidelines on we can organize code and separate concerns in software applications. They are somewhat similar to [layered architecture](/software-engineering/layered) in terms of separating concerns.
 
