@@ -16,7 +16,7 @@ Open Sourcing page
 - documentation
 - code of conduct
 - contribution
-- issues
-- pull request
+- issues formatting
+- pull request formatting
 
 ### Issues
