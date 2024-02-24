@@ -68,6 +68,10 @@ The functions of package manager :
 An example of package manager is [npm](/frontend-web-development/npm), which is the default package manager for [Node.js](/frontend-web-development/node-js) projects.
 :::
 
+:::warning
+Using package manager doesn't mean it will solve every dependency issues. Conflicting issue, such as one requiring newer version that is not compatible with older version may not be solvable by nature, and require human intervention. What package manager guarantee is, it helps us to automate and handle issue that are solvable.
+:::
+
 #### Semantic Versioning
 
 **Semantic Versioning (SemVer)** is a versioning scheme used to assign meaningful version numbers to software packages. It is a set of rules and guidelines that helps developers and users understand the nature of changes in a release and determine compatibility with other versions.
