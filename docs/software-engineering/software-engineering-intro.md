@@ -60,7 +60,6 @@ A good software is associated with several characteristics :
   - [Open Sourcing](software-engineering/open-sourcing)
   - [Modularization](software-engineering/modularization)
   - [Software Deployment](software-engineering/software-deployment)
-  - [DevOps & CI/CD](software-engineering/devops-and-ci-cd)
 - System Design
   - [Performance](software-engineering/performance)
   - [Scalability](software-engineering/scalability)

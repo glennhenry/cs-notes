@@ -821,7 +821,6 @@ const sidebars = {
             "software-engineering/open-sourcing/open-sourcing",
             "software-engineering/modularization/modularization",
             "software-engineering/software-deployment/software-deployment",
-            "software-engineering/devops-and-ci-cd/devops-and-ci-cd",
           ],
         },
         {
