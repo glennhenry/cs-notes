@@ -68,7 +68,7 @@ Some types of environment :
 
 Several steps involved in the deployment process :
 
-- **[Build](<(/software-engineering/build-and-package-management#software-build)>)** : As mentioned before, it is necessary to build the necessary artifact and packaging them into a deployable format.
+- **[Build](/software-engineering/build-and-package-management#software-build)** : As mentioned before, it is necessary to build the necessary artifact and packaging them into a deployable format.
 - **Infrastructure Setup** : Set up the target deployment environment, including servers, networking, databases, etc. This step may involve provisioning virtual machines, configuring containers, or setting up cloud services to create the necessary infrastructure.
 - **Configuration** : Configure the deployment environment with the required settings and parameters. This includes configuring environment-specific variables, connection strings, or API keys.
 - **Deploy** : Perform the deployment by transferring the artifacts to the target environment. This can be done using file transfer protocols (uploading it) or [version control systems](/software-engineering/version-control). Deployment is done in specific strategy explained below.
