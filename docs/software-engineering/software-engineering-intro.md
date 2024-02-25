@@ -11,7 +11,7 @@ description: Software Engineering Notes
 
 ### Intro
 
-**Software engineering** is an engineering discipline that is concerned with software programs. A software system is developed by programmers, which use programming languages like Python, Java, C++, or JavaScript to write instructions that the computer can understand and execute. 
+**Software engineering** is an engineering discipline that is concerned with software programs. A software system is developed by programmers, which use programming languages like Python, Java, C++, or JavaScript to write instructions that the computer can understand and execute.
 
 The difficulty of making software can vary depending on the type of software being made and the complexity of the software. A simple software made by individual may not involve more than one program. A complex software made by team of individuals may need multiple programs or components to work together. Often they require extra configuration to ensure the software can be run on different types of devices.
 
@@ -60,11 +60,5 @@ A good software is associated with several characteristics :
   - [Open Sourcing](software-engineering/open-sourcing)
   - [Modularization](software-engineering/modularization)
   - [Software Deployment](software-engineering/software-deployment)
-- System Design
-  - [Performance](software-engineering/performance)
-  - [Scalability](software-engineering/scalability)
-  - [Availability & Reliability](software-engineering/availability-and-reliability)
-  - [Consistency](software-engineering/consistency)
-  - [Infrastructure](software-engineering/infrastructure)
-  - [Security](software-engineering/security)
-  - [System Design Examples](software-engineering/system-design-examples)
+- [System Design](software-engineering/system-design)
+- [System Design Examples](software-engineering/system-design-examples)

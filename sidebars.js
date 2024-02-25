@@ -823,19 +823,8 @@ const sidebars = {
             "software-engineering/software-deployment/software-deployment",
           ],
         },
-        {
-          type: "category",
-          label: "System Design",
-          items: [
-            "software-engineering/performance/performance",
-            "software-engineering/scalability/scalability",
-            "software-engineering/availability-and-reliability/availability-and-reliability",
-            "software-engineering/consistency/consistency",
-            "software-engineering/infrastructure/infrastructure",
-            "software-engineering/security/security",
-            "software-engineering/system-design-examples/system-design-examples",
-          ],
-        },
+        "software-engineering/system-design/system-design",
+        "software-engineering/system-design-examples/system-design-examples",
       ],
     },
 
