@@ -54,3 +54,7 @@ Authentication may also include more than just one evidence from the user, there
 
 ![Example of an authentication process](./auth-example.png)  
 Source : https://swoopnow.com/user-authentication/
+
+:::tip
+See [authentication technique](/backend-development/authentication-technique) for implementation.
+:::
