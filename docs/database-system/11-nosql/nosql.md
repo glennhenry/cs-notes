@@ -13,6 +13,7 @@ description: NoSQL
 - **[How Neo4j stores data internally? - stackoverflow](https://stackoverflow.com/questions/24366078/how-neo4j-stores-data-internally)**
 - **[How is data stored in a graph database? [duplicate] - stackoverflow](https://stackoverflow.com/questions/48777704/how-is-data-stored-in-a-graph-database)**
 - **[Vector database - Wikipedia](https://en.wikipedia.org/wiki/Vector_database)**
+- **[What are BASE Properties? - dremio](https://www.dremio.com/wiki/base-properties/)**
 - **Various Google searches**
 
 **NoSQL (or non-relational database)** is a type of databases that doesn't follow the relational model principles. Unlike [relational databases](/database-system/relational-data), which store data in tables with predefined schemas, NoSQL databases is more flexible in approach to data storage and management. NoSQL typically relies on a specific data structure to handle large volumes of data, including unstructured and semi-structured data.
@@ -128,3 +129,5 @@ NoSQL typically lacks strong consistency and true transactions compared to relat
 - **Basically Available (BA)** : The importance of providing high availability for read and write operations, even in the presence of failures or network partitions. A system should strive to remain operational and responsive, even under challenging conditions.
 - **Soft State (S)** : NoSQL tolerate temporary inconsistencies, but the state across system should eventually be consistent.
 - **Eventually consistent (E)** : Eventually consistency means that the system will eventually reach a consistent state across all system or replicas. While updates may take some time to propagate and synchronize, the system guarantees that, given enough time and absence of further updates, all replicas will converge to a consistent state.
+
+We can infer that NoSQL tends to prioritize availability over consistency.
