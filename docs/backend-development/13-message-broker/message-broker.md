@@ -31,7 +31,7 @@ Message broker may store messages received from the client in something called *
 
 Another benefits of message queue :
 
-- **Asynchronous Communication** : Message queues also enable asynchronous communication patterns, where the sender and receiver do not need to be active at the same time. For example, the messages can be held while the user or the service is down.
+- **Asynchronous Communication** : Message queues also enable asynchronous communication patterns, where the sender and receiver do not need to be active at the same time. They can also operate independently at their own pace. For example, messages can be held while the user or the service is down, and sent after it's up again.
 - **Fault Tolerance** : Message queues can provide fault tolerance by storing messages persistently. If the service fails, the messages in the queue remain, ensuring that no data is lost. Once the failed component becomes available again, it can resume processing messages from the queue.
 
   ![Message queue](./message-queue.png)  
