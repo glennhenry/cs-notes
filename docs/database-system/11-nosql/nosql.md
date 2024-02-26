@@ -120,3 +120,11 @@ Let's say we have the word "kitten" as the query, and the embedding is [0.25, 0.
 - Similarity with "elephant" ≈ 0.792752
 - Similarity with "lion" ≈ 0.640261
 - Similarity with "tiger" ≈ 0.969144
+
+### BASE Properties
+
+NoSQL typically lacks strong consistency and true transactions compared to relational databases. BASE properties are in contrast to [ACID properties](/database-system/transactions#acid) in relational database.
+
+- **Basically Available (BA)** : The importance of providing high availability for read and write operations, even in the presence of failures or network partitions. A system should strive to remain operational and responsive, even under challenging conditions.
+- **Soft State (S)** : NoSQL tolerate temporary inconsistencies, but the state across system should eventually be consistent.
+- **Eventually consistent (E)** : Eventually consistency means that the system will eventually reach a consistent state across all system or replicas. While updates may take some time to propagate and synchronize, the system guarantees that, given enough time and absence of further updates, all replicas will converge to a consistent state.
