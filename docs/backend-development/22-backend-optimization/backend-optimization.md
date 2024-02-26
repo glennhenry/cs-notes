@@ -22,7 +22,7 @@ Backend architecture can be scaled to handle increased traffic and load. They ca
 
 - **Content Delivery networks (CDN)** : Distribute static content, such as images, CSS, and JavaScript files, to a CDN. CDN is distributed servers that are strategically placed in different locations worldwide to reach user faster.
 
-  ![CDN](./cdn.png)
+  ![CDN](./cdn.png)  
   Source : https://www.cloudflare.com/learning/cdn/what-is-a-cdn/
 
 ### Server Optimization
