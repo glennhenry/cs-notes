@@ -72,6 +72,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
      - rigid body
      - fluid
    - projection
+
      - ortographic, near plane, far plane
      - perspective, fov
 
@@ -87,24 +88,24 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
      - vertex shader
      - fragment shader
      - geometry shader
-	 - lightning
-		 - directional, point, spotlight
-		 - attenuation
-		 - spcular, diffuse, ambient, phong, blinn phong
-		 - normal mapping
-		 - parallax mapping
-		 - HDR
-		 - bloom
-		 - SSAO / ambient occulsion
-		 - g buffer and deferred shading
+   - lightning
+     - directional, point, spotlight
+     - attenuation
+     - spcular, diffuse, ambient, phong, blinn phong
+     - normal mapping
+     - parallax mapping
+     - HDR
+     - bloom
+     - SSAO / ambient occulsion
+     - g buffer and deferred shading
    - directional shadow and point shadow
-	 - mapping
-	 - pcf
-	 - over sampling
-	 - peter panning
-	 - shadow acne
-	 - depth map
-	 - light shadow space
+   - mapping
+   - pcf
+   - over sampling
+   - peter panning
+   - shadow acne
+   - depth map
+   - light shadow space
 
 2. **[update]** frontend-web-development : Minor update for all note, also some topic to include for addition :
 
@@ -133,8 +134,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 13. **[ref]** /operating-system : /user-interface -> ref to mvc in software engineering.
 14. **[ref]** /software-engineering : /peer-to-peer -> ref to distributed hash table in cloud-computing.
 15. **[ref]** /software-engineering : /other-architecture-patterns -> ref to state machine in theory-of-computation-and-automata.
-14. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
-15. **[update]** /index : add index page containing the list of all notes
+16. **[ref]** / software-engineering : /system-design -> ref to distributed systems in cloud-computing
+17. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
+18. **[update]** /index : add index page containing the list of all notes
 
 ### Longest Notes
 

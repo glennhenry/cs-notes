@@ -8,6 +8,9 @@ description: System Design
 **Main Source :**
 
 - **[system-design-primer by donnemartin - GitHub](https://github.com/donnemartin/system-design-primer)**
+- **My previous notes**
+- **[CAP theorem - Availability and Partition Tolerance - stackoverflow](https://stackoverflow.com/questions/12346326/cap-theorem-availability-and-partition-tolerance)**
+- **[You Can’t Sacrifice Partition Tolerance - Coda Hale](https://codahale.com/you-cant-sacrifice-partition-tolerance/)**
 
 **System Design** is the process of defining the architecture, components, modules, interfaces, and data for a software system. Many factors including criteria of requirements are considered when designing the architecture.
 
@@ -95,19 +98,32 @@ Ways to improve consistency :
 
 #### CAP Theorem
 
-CAP theorem is a principle that states that it is impossible for a distributed system to simultaneously provide all three properties in the face of network partitions (i.e., the network can experience failures or delays that cause nodes to be disconnected from each other).
+Distributed system is a collection of interconnected computer that are separated and only connected by one central computer. The computers in the connection are often called as node. Each node communicate and coordinate their activities through message passing, shared memory, or other forms of inter-process communication.
 
-Furthermore, it states that only two of the three following properties can be guaranteed :
+CAP theorem is a principle that states that it is impossible for a distributed system to simultaneously provide all three CAP properties in the face of **network partitions**. Network partition is a phenomenon that in which nodes are disconnected, causing them unable to communicate. It is a realistic situation that can occur even in large system due to various reasons, such as network failures, hardware failures, misconfigurations, or even during routine maintenance activities.
+
+The three CAP properties are :
 
 - **Consistency** : Requirement that all nodes in a distributed system have the same view of data at the same time.
 - **Availability** : System remains operational and responsive even in the presence of failures.
 - **Partition Tolerance** : System's ability to continue functioning even when network partitions occur.
 
+The reasoning behind CAP theorem is one conflicting another. Nodes in distributed system can be thought as disjoint set, which is a non-overlapping set. If $A = \{1, 2\}$ and $B = \{3\}$, then A and B are disjoint sets.
+
+When a node receives new data, it has the option to write it or reject it. If it chooses to write it, then we can say the system is available at the time (it serves request), but it will need to synchronize with others in order to maintain consistency.
+
+When a partition occurs, nodes can't communicate with each other. If they keep choosing to write the new data, then it would lead to **inconsistency**, as the data is not synchronized across all nodes and they can't synchronize. If they choose to reject the write request, then we just **sacrificed availability**. This means guaranteeing CA together is not possible, resulting in the impossibility of achieving CAP as well.
+
+This leaves us with two possible system :
+
+- **CP** : CP system sacrifice availability whenever a partition occurs. It will block or delay responses until the partition is resolved.
+- **AP** : An AP system will continue to operate and serve requests during partition, even if it means allowing temporary inconsistencies of the data.
+
 ![CAP theorem Venn diagram](./cap-theorem.png)  
 Source : https://en.wikipedia.org/wiki/CAP_theorem#/media/File:CAP_Theorem_Venn_Diagram.png
 
-:::info
-Distributed system is simply collection of interconnected computer that are separated and only connected by one central computer. The computers in the connection are often called as node. Each node communicate and coordinate their activities through message passing, shared memory, or other forms of inter-process communication.
+:::tip
+More about distributed systems.
 :::
 
 ### Infrastructure
