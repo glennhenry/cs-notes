@@ -20,7 +20,7 @@ Backend architecture can be scaled to handle increased traffic and load. They ca
 
 - **Minimize Requests** : Combine multiple requests into a single request or use techniques like [HTTP/2](/computer-networking/http-https#http2) multiplexing to reduce the overhead of establishing multiple connections. Minify responses file, compress or resizing image can reduce amount of data transferred over the network especially for large file.
 
-- **Content Delivery networks (CDN)** : Distribute static content, such as images, CSS, and JavaScript files, to a CDN. CDN is distributed servers that are strategically placed in different locations worldwide to reach user faster.
+- **[Content Delivery networks (CDN)](/software-engineering/system-design#cdn)** : Distribute static content, such as images, CSS, and JavaScript files, to a CDN. CDN is distributed servers that are strategically placed in different locations worldwide to reach user faster.
 
   ![CDN](./cdn.png)  
   Source : https://www.cloudflare.com/learning/cdn/what-is-a-cdn/
@@ -29,7 +29,7 @@ Backend architecture can be scaled to handle increased traffic and load. They ca
 
 - **Server Caching** : Implement caching mechanisms like [Redis caching](/backend-development/caching#type-of-caching) or [reverse proxies](/computer-networking/proxy#reverse-proxy) to store frequently accessed data closer to the server.
 
-- **Load Balancing** : Distribute incoming traffic across multiple servers using load balancers, this will reduce the burden of a single server.
+- **[Load Balancing](/software-engineering/system-design#load-balancer)** : Distribute incoming traffic across multiple servers using load balancers, this will reduce the burden of a single server.
 
   ![Load balancing](./load-balancing.png)  
   Source : https://herza.id/blog/load-balancing-pengertian-cara-kerja-jenis-metode-kelebihan-dan-kekurangan/
