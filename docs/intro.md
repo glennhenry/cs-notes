@@ -30,7 +30,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[Computer Security](computer-security)**
 - **[Machine Learning](machine-learning)**
 - **[Deep Learning](deep-learning)**
-- [Software Engineering](software-engineering)
+- **[Software Engineering](software-engineering)**
 - [Cloud Computing](cloud-computing)
 
 \*Bolded are completed
@@ -130,13 +130,11 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 9. **[ref]** /computer-security : /reverse-engineering -> ref to decompilation in compilers.
 10. **[ref]** /operating-system : /virtualization -> ref to distributed systems in cloud-computing.
 11. **[ref]** /operating-system : /os-fundamentals -> ref to distributed systems in cloud-computing.
-12. **[ref]** /operating-system : /os-fundamentals -> ref to client-server architecture in software engineering
-13. **[ref]** /operating-system : /user-interface -> ref to mvc in software engineering.
-14. **[ref]** /software-engineering : /peer-to-peer -> ref to distributed hash table in cloud-computing.
-15. **[ref]** /software-engineering : /other-architecture-patterns -> ref to state machine in theory-of-computation-and-automata.
-16. **[ref]** / software-engineering : /system-design -> ref to distributed systems in cloud-computing
-17. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
-18. **[update]** /index : add index page containing the list of all notes
+12. **[ref]** /software-engineering : /peer-to-peer -> ref to distributed hash table in cloud-computing.
+13. **[ref]** /software-engineering : /other-architecture-patterns -> ref to state machine in theory-of-computation-and-automata.
+14. **[ref]** / software-engineering : /system-design -> ref to distributed systems in cloud-computing
+15. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
+16. **[update]** /index : add index page containing the list of all notes
 
 ### Longest Notes
 

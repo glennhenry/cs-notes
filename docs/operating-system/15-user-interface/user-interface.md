@@ -49,7 +49,7 @@ The GUI systems will monitor for user input such as mouse clicks, keyboard input
 
 #### MVC
 
-One of the popular pattern for designing a GUI system is the **Model-View-Controller (MVC)** pattern. This pattern design GUI system in three separate components.
+One of the popular pattern for designing a GUI system is the **[Model-View-Controller (MVC)](/software-engineering/other-architecture-patterns#mvc)** pattern. This pattern design GUI system in three separate components.
 
 The model represents the data and the logic within the application. It would handle tasks such as data retrieval, storage, manipulation, and any other operations specific to certain tasks.
 
