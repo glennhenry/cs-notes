@@ -130,14 +130,6 @@ More about distributed systems.
 
 Infrastructure refers to the hardware, software, and network components that provide the foundation for a system to operate.
 
-- DNS (Domain Name System)
-- CDN (Content Delivery Network)
-- Load balancers and reverse proxies
-- Microservices architecture
-- Service discovery and service registry
-- Message queues and event-driven systems
-- Web servers (Apache, Nginx)
-
 #### DNS
 
 The main purpose of [Domain Name System (DNS)](/computer-networking/dns) resolves a domain name (e.g., `google.com`) to the corresponding IP address (i.e., `216.239.38.120`), to allow browser to establish a connection with the correct server.
