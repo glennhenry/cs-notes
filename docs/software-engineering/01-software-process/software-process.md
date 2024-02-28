@@ -93,3 +93,41 @@ A cycle is divided into four phases :
 2. **Risk Analysis** : In this phase, risks are assessed and analyzed. The identified risks are evaluated based on their potential impact on the project and the likelihood of occurrence. Strategies and mitigation plans are developed to address the identified risks.
 3. **Development** : Focuses on the actual development and implementation of the software. It includes activities such as designing the system architecture, developing the software components, and thorough testing to ensure quality and functionality.
 4. **Evaluation** : The evaluation phase involves reviewing and assessing the progress made. Based on this evaluation, decisions are made regarding the next steps, such as making adjustments.
+
+### Software Planning
+
+Making a software project can be overwhelming if we don't have the plan. It is easy to be distracted by the amount of work we have to do. Here are some tips to plan and build a program :
+
+1. [System Design](/software-engineering/system-design) : System design is the process of designing architecture and all related component to build a software system. It is a very good practice to always sketch the system first, at least get a high-level view on how the system will look like.
+
+   A system design involves :
+
+   - **Requirements Gathering** : To know what should we build, we need to know what our requirements are. Requirement can be categorized into two, functional and non-functional. Functional requirements are the specific features and functionalities that the software should provide. Non-functional requirements, on the other hand, specify the qualities or characteristics of the software, such as performance, security, and usability.
+
+     The functional requirements for a streaming platform include enabling users to broadcast videos to the server and allowing other users to receive the broadcasts to watch them. The non-functional requirement would be designing the app to be scalable with thousands of traffic around the world. The app should be able to handle such workload and keep functioning.
+
+     In this step we may also choose our tech stack, including what programming languages, library, framework, or cloud services that suit our needs.
+
+   - **High-level Design** : After knowing what is required to build the software, we can start designing the system in high-level. This involves making a design that outlines the architecture and structure of the software. We could make [various diagram](/software-engineering/diagrams) that represent how each component interact or determining how should we store the data.
+
+   - **More Detailed Design** : Then, we can create a more detailed design that provides a deeper understanding of the internal components, modules, and implementation details of the software application. We can imagine how would the component works or what algorithm it would use.
+
+   - **Core Design** : Core design focuses on designing the central and critical components of the software system. In the case of creating a video streaming app, we can focus on designing how users can broadcast their videos, how the server receives them, and how it simultaneously sends the content to all viewers. We can ignore other non-essential components such as user authentication.
+
+   - **Scale** : After everything is evaluated, we can now focus on how to scale and maintain the system. We should identify which component would most likely be causing performance bottlenecks or limiting the system's scalability. Let's say our streaming app is targeting the international market, which mean anyone around the world would use it. We can choose to distribute server instances, so that users can have low-latency access to the streaming content, regardless of their geographical location.
+
+2. **Start Development** : Begin the actual development by following the design.
+3. **Incremental & MVP** : It is a good practice to build the software incrementally, meaning that we develop the software in small increments, each providing a valuable and functional piece of the system. We start breaking down the system into smaller component to help us manage the development process.
+
+   We should identify the MVP (Minimum Viable Product), which represents the smallest set of features that provides value. We don't need to be bothered by advanced authentication system, recommendation algorithms, or social features. Perhaps we don't need to integrate Google or Facebook authentication, we can use a simple username and password for the time being.
+
+   In the case of video streaming :
+
+   1. The initial step would be establishing a connection between the client app and the server by sending a basic text message.
+   2. The next step would be to enhance it to transmit an actual video.
+   3. Progress would continue gradually, allow multiple clients to connect to the server and send text messages concurrently. The server should be capable of broadcasting messages to all connected clients concurrently.
+   4. The text message would be upgraded to a real-time video stream, ensure that all clients receive the stream correctly.
+   5. Create a video player capable of running the stream.
+
+4. **Testing** : Write [automated tests](/software-engineering/software-testing#automated) to verify the software and to prevent functionality from becoming incorrect when code is modified.
+5. **Keep Going** : After creating the minimum viable product and testing it, we should identify any problems or areas for improvement. We can create a list of TODOs that may include bug fixes, new features, corrections, etc. We can prioritize each task on the To-do list and determine the next steps accordingly. If the bug significantly affect the app, we can fix them. If working on a new feature, we can start again the process from step 1 by creating the high-level design of the new feature, developing it incrementally, and targeting the MVP, and so on going iteratively.
