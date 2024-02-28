@@ -53,7 +53,7 @@ Improving scalability is typically related to distributing the workload: :
 
   With more users present, storing all their session data can be a burden. One approach is to share the state across all the server, to reduce the burden of a single server storing the data. However, this approach require additional synchronization mechanism, which can increase the complexity of the system.
 
-- [Partition database](/database-system/database-optimization#partition), which involve breaking down a large dataset into smaller, more manageable subsets distributed across multiple servers.
+- [Database partitioning](/database-system/database-optimization#partition) is a term for breaking down a large database into smaller, more manageable units called partitions. This is done within a single database instance. Partition can scale the system horizontally, this is done by distributing the partition across multiple servers, this process is called **database sharding**.
 
 ### Availability & Reliability
 
@@ -204,6 +204,7 @@ Ways to improve security :
 
 :::tip
 See also :
+
 - [Backend Optimization](/backend-development/backend-optimization)
 - [Database Optimization](/database-system/database-optimization)
 - [Database Index](/database-system/index)
@@ -212,4 +213,4 @@ See also :
 - [Mobile Security](/computer-security/mobile-security)
 - [Backend & Server Security](/computer-security/backend-server-security)
 - [Other Attack & Exploit](/computer-security/other-attack-and-exploit)
-:::
+  :::
