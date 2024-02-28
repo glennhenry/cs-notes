@@ -831,12 +831,50 @@ const sidebars = {
     // 19. Cloud Computing
     {
       type: "category",
-      label: "Cloud Computing",
-      link: { type: "doc", id: "cloud-computing/cloud-computing" },
+      label: "Cloud Computing & Distributed Systems",
+      link: {
+        type: "doc",
+        id: "cloud-computing-and-distributed-systems/cloud-computing-and-distributed-systems",
+      },
       items: [
-        "cloud-computing/xx-virtualization/virtualization",
-        "cloud-computing/xx1-containerization/containerization",
-        "cloud-computing/xx2-docker-and-kubernetes/docker-and-kubernetes",
+        {
+          type: "category",
+          label: "Distributed Systems",
+          items: [
+            "cloud-computing-and-distributed-systems/distributed-systems-model/distributed-systems-model",
+            "cloud-computing-and-distributed-systems/distributed-systems-communication/distributed-systems-communication",
+            "cloud-computing-and-distributed-systems/distributed-hash-table/distributed-hash-table",
+            "cloud-computing-and-distributed-systems/distributed-file-system/distributed-file-system",
+            "cloud-computing-and-distributed-systems/distributed-database/distributed-database",
+          ],
+        },
+        {
+          type: "category",
+          label: "Architecture & Models",
+          items: [
+            "cloud-computing-and-distributed-systems/client-server/client-server",
+            "cloud-computing-and-distributed-systems/event-driven/event-driven",
+            "cloud-computing-and-distributed-systems/master-slave/master-slave",
+            "cloud-computing-and-distributed-systems/peer-to-peer/peer-to-peer",
+            "cloud-computing-and-distributed-systems/microservices/microservices",
+            "cloud-computing-and-distributed-systems/mapreduce/mapreduce",
+            "cloud-computing-and-distributed-systems/lambda/lambda",
+          ],
+        },
+        {
+          type: "category",
+          label: "Cloud-Native Technologies",
+          items: [
+            "cloud-computing-and-distributed-systems/virtualization/virtualization",
+            "cloud-computing-and-distributed-systems/containerization/containerization",
+            "cloud-computing-and-distributed-systems/docker-and-kubernetes/docker-and-kubernetes",
+          ],
+        },
+        "cloud-computing-and-distributed-systems/cloud-services-models/cloud-services-models",
+        "cloud-computing-and-distributed-systems/cloud-deployment-models/cloud-deployment-models",
+        "cloud-computing-and-distributed-systems/cloud-database/cloud-database",
+        "cloud-computing-and-distributed-systems/cloud-security/cloud-security",
+        "cloud-computing-and-distributed-systems/cloud-services-and-technologies/cloud-services-and-technologies",
       ],
     },
   ],

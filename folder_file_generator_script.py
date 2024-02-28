@@ -3,98 +3,97 @@
 
 import os
 
-topic_title = "software-engineering"
+topic_title = "cloud-computing"
 
 # List of content in kebab title
 content_id = [
-    "software-methodologies",
-    "software-principles",
-    "diagrams",
-    "creational",
-    "structural",
-    "behavioral",
-    "component-based",
-    "layered",
+    "distributed-systems-model",
+    "distributed-systems-communication",
+    "distributed-hash-table",
+    "distributed-file-system",
+    "distributed-database",
     "client-server",
     "event-driven",
     "master-slave",
     "peer-to-peer",
-    "software-testing",
-    "quality-assurance",
-    "software-debugging",
-    "build-and-package-management",
-    "version-control",
-    "open-sourcing",
-    "modularization",
-    "software-deployment",
-    "devops-and-ci-cd",
-    "performance",
-    "scalability",
-    "availability-and-reliability",
-    "consistency",
-    "infrastructure",
-    "security"
-    "system-design-examples",
+    "microservices",
+    "mapreduce",
+    "lambda",
+    "virtualization",
+    "containerization",
+    "docker-and-kubernetes",
+    "cloud-services-models",
+    "cloud-deployment-models",
+    "cloud-database",
+    "cloud-security",
+    "cloud-services-and-technologies",
 ]
 
 # List of content in title case
 content_title = [
-    "Software Methodologies",
-    "Software Principles",
-    "Diagrams",
-    "Creational",
-    "Structural",
-    "Behavioral",
-    "Component-Based",
-    "Layered",
+    "Distributed Systems Model",
+    "Distributed Systems Communication",
+    "Distributed Hash Table",
+    "Distributed File System",
+    "Distributed Database",
     "Client-Server",
     "Event-Driven",
     "Master-Slave",
     "Peer-to-Peer",
-    "Software Testing",
-    "Quality Assurance",
-    "Software Debugging",
-    "Build & Package Management",
-    "Version Control",
-    "Open Sourcing",
-    "Modularization",
-    "Software Deployment",
-    "DevOps & CI/CD",
-    "Performance",
-    "Scalability",
-    "Availability & Reliability",
-    "Consistency",
-    "Infrastructure",
-    "Security",
-    "System Design Examples"
+    "Microservices",
+    "MapReduce",
+    "Lambda",
+    "Virtualization",
+    "Containerization",
+    "Docker & Kubernetes",
+    "Cloud Services Models",
+    "Cloud Deployment Models",
+    "Cloud Database",
+    "Cloud Security",
+    "Cloud Services & Technologies"
 ]
 
 # Create temp folder for debugging
 parent_folder = "C:\\Users\\USER\\Desktop\\temp"
 os.makedirs(parent_folder, exist_ok=True)
 
-# Title Case -> title-case
+
 def toKebabCase(title):
+    """
+    Title Case -> title-case
+    """
     return title.capitalize().replace('-', ' ')
 
-# title-case -> Title Case
+
 def toTitleCase(kebab):
+    """
+    title-case -> Title Case
+    """
     return " ".join(word.capitalize() for word in kebab.split('-'))
 
-# Doesn't create file, just print output in terminal
+
 def generate_topic_links():
+    """
+    Doesn't create file, just print output in terminal
+    """
     for i, kebab_title in enumerate(content_id, start=0):
         os.makedirs(parent_folder, exist_ok=True)
         print(f"- [{content_title[i]}]({topic_title}/{kebab_title})")
 
-# Doesn't create file aswell
+
 def generate_topic_sidebars():
+    """
+    Doesn't create file aswell
+    """
     for i, kebab_title in enumerate(content_id, start=0):
         title = toTitleCase(kebab_title)
         print(f'"{topic_title}/{kebab_title}/{kebab_title}",')
 
-# Creates actual folder and file
+
 def generate_folder_file():
+    """
+    Creates actual folder and file
+    """
     # Create folders and MD files
     for i, kebab_title in enumerate(content_id, start=1):
         title = content_title[i - 1]
@@ -125,8 +124,9 @@ def generate_folder_file():
 
     print("Project structure and MD files created successfully!")
 
-# main
 
-# generate_folder_file()
-# generate_topic_links()
-generate_topic_sidebars()
+if __name__ == "__main__":
+    # generate_folder_file()
+    # generate_topic_links()
+    generate_topic_sidebars()
+    pass
