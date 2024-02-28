@@ -35,7 +35,33 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
 \*Bolded are completed
 
-#### TODO :
+### Longest Notes
+
+- [File System](operating-system/file-system) (36282 char)
+- [Software Principles](software-engineering/software-principles) (30368 char, due to many code examples)
+- [Memory Management](operating-system/memory-management) (27368 char)
+- [Diffusion Model](deep-learning/diffusion-model) (27316 char)
+- [Query Language](database-system/query-language) (23218 char)
+
+### Credits
+
+#### Site Generator
+
+- This site is made using [Docusaurus](https://docusaurus.io/) an open source static site generator made by Meta with React.
+
+#### AI Chatbot Software
+
+- Assisted with few AI tools [Assistant Poe](https://poe.com), [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/). **Most of the source here are also from AI**. I combined what the resources say with extra explanation from AI bots (or paraphrasing).
+
+#### Online Courses and Media Source
+
+- Various online resource were used in the creation of this site, I try to include all resource in each section. These resources act as the curriculum of what should I learn and the structure of what a topic contains.
+
+#### Additional Resources
+
+- [GitHub](https://github.com/) - For storing and hosting this site.
+
+### TODO :
 
 - **[add]** : add new notes
 - **[update]** : update existing notes
@@ -135,29 +161,3 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 14. **[ref]** / software-engineering : /system-design -> ref to distributed systems in cloud-computing
 15. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
 16. **[update]** /index : add index page containing the list of all notes
-
-### Longest Notes
-
-- [File System](operating-system/file-system) (36282 char)
-- [Software Principles](software-engineering/software-principles) (30368 char, due to many code examples)
-- [Memory Management](operating-system/memory-management) (27368 char)
-- [Diffusion Model](deep-learning/diffusion-model) (27316 char)
-- [Query Language](database-system/query-language) (23218 char)
-
-### Credits
-
-#### Site Generator
-
-- This site is made using [Docusaurus](https://docusaurus.io/) an open source static site generator made by Meta with React.
-
-#### AI Chatbot Software
-
-- Assisted with few AI tools [Assistant Poe](https://poe.com), [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/). **Most of the source here are also from AI**. I combined what the resources say with extra explanation from AI bots (or paraphrasing).
-
-#### Online Courses and Media Source
-
-- Various online resource were used in the creation of this site, I try to include all resource in each section. These resources act as the curriculum of what should I learn and the structure of what a topic contains.
-
-#### Additional Resources
-
-- [GitHub](https://github.com/) - For storing and hosting this site.
