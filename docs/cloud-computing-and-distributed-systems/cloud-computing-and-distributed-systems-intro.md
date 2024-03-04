@@ -18,7 +18,7 @@ Intro to what is Cloud Computing, what is distributed systems.
   - [Event-Driven](cloud-computing/event-driven)
   - [Master-Slave](cloud-computing/master-slave)
   - [Peer-to-Peer](cloud-computing/peer-to-peer)
-  - [Microservices](cloud-computing/microservices)
+  - [Microservice](cloud-computing/microservice)
   - [MapReduce](cloud-computing/mapreduce)
   - [Lambda](cloud-computing/lambda)
 - Cloud-Native Technologies

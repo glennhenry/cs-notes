@@ -856,7 +856,7 @@ const sidebars = {
             "cloud-computing-and-distributed-systems/event-driven/event-driven",
             "cloud-computing-and-distributed-systems/master-slave/master-slave",
             "cloud-computing-and-distributed-systems/peer-to-peer/peer-to-peer",
-            "cloud-computing-and-distributed-systems/microservices/microservices",
+            "cloud-computing-and-distributed-systems/microservice/microservice",
             "cloud-computing-and-distributed-systems/mapreduce/mapreduce",
             "cloud-computing-and-distributed-systems/lambda/lambda",
           ],
