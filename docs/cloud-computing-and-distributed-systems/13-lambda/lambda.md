@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/lambda
+slug: /cloud-computing-and-distributed-systems/lambda
 id: lambda
 title: Lambda
 description: Lambda

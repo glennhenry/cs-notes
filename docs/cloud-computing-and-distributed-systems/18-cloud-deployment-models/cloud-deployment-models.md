@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/cloud-deployment-models
+slug: /cloud-computing-and-distributed-systems/cloud-deployment-models
 id: cloud-deployment-models
 title: Cloud Deployment Models
 description: Cloud Deployment Models

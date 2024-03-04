@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/cloud-services-models
+slug: /cloud-computing-and-distributed-systems/cloud-services-models
 id: cloud-services-models
 title: Cloud Services Models
 description: Cloud Services Models

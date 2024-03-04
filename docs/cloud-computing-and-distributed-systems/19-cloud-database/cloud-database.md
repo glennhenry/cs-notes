@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/cloud-database
+slug: /cloud-computing-and-distributed-systems/cloud-database
 id: cloud-database
 title: Cloud Database
 description: Cloud Database

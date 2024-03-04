@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/virtualization
+slug: /cloud-computing-and-distributed-systems/virtualization
 id: virtualization
 title: Virtualization
 description: Virtualization

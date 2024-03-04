@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/microservice
+slug: /cloud-computing-and-distributed-systems/microservice
 id: microservice
 title: Microservice
 description: Microservice

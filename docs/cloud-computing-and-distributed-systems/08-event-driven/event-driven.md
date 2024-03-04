@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/event-driven
+slug: /cloud-computing-and-distributed-systems/event-driven
 id: event-driven
 title: Event-Driven
 description: Event-Driven

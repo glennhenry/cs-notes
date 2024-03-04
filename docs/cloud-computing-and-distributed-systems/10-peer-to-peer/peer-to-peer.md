@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/peer-to-peer
+slug: /cloud-computing-and-distributed-systems/peer-to-peer
 id: peer-to-peer
 title: Peer-to-Peer
 description: Peer-to-Peer

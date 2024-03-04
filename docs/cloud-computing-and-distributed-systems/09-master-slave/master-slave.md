@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/master-slave
+slug: /cloud-computing-and-distributed-systems/master-slave
 id: master-slave
 title: Master-Slave
 description: Master-Slave

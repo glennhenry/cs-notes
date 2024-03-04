@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/containerization
+slug: /cloud-computing-and-distributed-systems/containerization
 id: containerization
 title: Containerization
 description: Containerization

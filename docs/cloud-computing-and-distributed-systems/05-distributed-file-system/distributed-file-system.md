@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/distributed-file-system
+slug: /cloud-computing-and-distributed-systems/distributed-file-system
 id: distributed-file-system
 title: Distributed File System
 description: Distributed File System

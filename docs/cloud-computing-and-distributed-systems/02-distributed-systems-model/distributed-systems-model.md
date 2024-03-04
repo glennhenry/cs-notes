@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/distributed-systems-model
+slug: /cloud-computing-and-distributed-systems/distributed-systems-model
 id: distributed-systems-model
 title: Distributed Systems Model
 description: Distributed Systems Model

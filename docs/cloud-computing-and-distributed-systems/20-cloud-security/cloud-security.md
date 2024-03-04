@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/cloud-security
+slug: /cloud-computing-and-distributed-systems/cloud-security
 id: cloud-security
 title: Cloud Security
 description: Cloud Security

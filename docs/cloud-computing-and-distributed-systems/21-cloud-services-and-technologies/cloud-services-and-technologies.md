@@ -1,5 +1,5 @@
 ---
-slug: /cloud-computing/cloud-services-and-technologies
+slug: /cloud-computing-and-distributed-systems/cloud-services-and-technologies
 id: cloud-services-and-technologies
 title: Cloud Services & Technologies
 description: Cloud Services & Technologies
