@@ -5,16 +5,14 @@ title: Fundamentals
 description: Cloud Computing & Distributed Systems Fundamentals
 ---
 
-**Main Source (this page) :**
+**Main Source :**
 
 - **[Distributed computing - Wikipedia](https://en.wikipedia.org/wiki/Distributed_computing)**
 - **[Cloud computing - Wikipedia](https://en.wikipedia.org/wiki/Cloud_computing)**
 
-### Introduction
+### Distributed System
 
-#### Distributed Systemss
-
-**Distributed Systems** is a system that consist of a collection of interconnected computers (often called **nodes**) that coordinate and communicate to achieve a common goal. In a traditional centralized system, a single computer handles all tasks. On the other hand, distributed systems distribute the workload across multiple computers.
+**Distributed System** is a system that consist of a collection of interconnected computers (often called **nodes**) that coordinate and communicate to achieve a common goal. In a traditional centralized system, a single computer handles all tasks. On the other hand, distributed systems distribute the workload across multiple computers.
 
 ![Distributed system](./distributed-system.png)  
 Source : https://aosabook.org/en/v2/distsys.html
@@ -22,6 +20,8 @@ Source : https://aosabook.org/en/v2/distsys.html
 :::tip
 When discussing servers, distributed systems, or cloud computing, we will refer to the entity making a request as a **client**, and the one capable of processing it is called a **server**.
 :::
+
+#### Benefits
 
 Benefits of distributed systems :
 
@@ -43,7 +43,7 @@ On the other hand, a distributed system operates independently (i.e., they have 
 (a) and (b) are distributed system, while (c) is a parallel system  
 Source : https://en.wikipedia.org/wiki/Distributed_computing#/media/File:Distributed-parallel.svg
 
-#### Cloud Computing
+### Cloud Computing
 
 The widespread adoption of the internet and the increasing workload on servers created challenges for businesses in terms of managing and scaling their computing infrastructure.
 
@@ -59,6 +59,8 @@ Components of cloud computing :
 
   ![Components of cloud computing](./cloud-computing-components.png)  
   Source : https://en.wikipedia.org/wiki/Cloud_computing#/media/File:Cloud_computing.svg
+
+#### Benefits
 
 Benefits of cloud computing :
 
