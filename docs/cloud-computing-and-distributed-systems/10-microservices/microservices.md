@@ -5,8 +5,4 @@ title: Microservices
 description: Microservices
 ---
 
-**Main Source :**
-
-- [] 
-
-Microservices page
+See **[Backend Development > Microservice](/backend-development/microservice)**
