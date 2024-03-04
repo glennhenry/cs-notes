@@ -123,7 +123,7 @@ This leaves us with two possible system :
 Source : https://en.wikipedia.org/wiki/CAP_theorem#/media/File:CAP_Theorem_Venn_Diagram.png
 
 :::tip
-More about distributed systems.
+More about [distributed systems](/cloud-computing-and-distributed-systems).
 :::
 
 ### Infrastructure

@@ -837,6 +837,7 @@ const sidebars = {
         id: "cloud-computing-and-distributed-systems/cloud-computing-and-distributed-systems",
       },
       items: [
+        "cloud-computing-and-distributed-systems/cloud-computing-and-distributed-systems/fundamentals/fundamentals",
         {
           type: "category",
           label: "Distributed Systems",

@@ -11,8 +11,14 @@ description: Distributed Systems Communication
 
 Distributed Systems Communication page
 
+### Coordination
+
+- task assignment
+    - dht
+    - centralized
+    - decentralized
+    - message queue
 - message passing
-- message queue
 - rpc
 - publish / subscribe
 - SOA

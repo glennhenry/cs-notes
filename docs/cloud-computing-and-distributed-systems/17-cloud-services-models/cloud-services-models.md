@@ -16,3 +16,5 @@ Cloud Services Models page
 - saas
 - faas
 - chap 4
+- cloud computing stacks
+- https://en.wikipedia.org/wiki/Cloud_computing#Service_models

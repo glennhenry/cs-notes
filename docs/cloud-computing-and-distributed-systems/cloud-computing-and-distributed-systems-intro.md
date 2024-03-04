@@ -5,8 +5,11 @@ title: Cloud Computing & Distributed Systems
 description: Cloud Computing & Distributed Systems Notes
 ---
 
-Intro to what is Cloud Computing, what is distributed systems.
+Some sources come from the book **Distributed and Cloud Computing - Kai Hwang**.
 
+### All pages
+
+- [Fundamentals](cloud-computing-and-distributed-systems/fundamentals)
 - Distributed Systems
   - [Distributed Systems Model](cloud-computing/distributed-systems-model)
   - [Distributed Systems Communication](cloud-computing/distributed-systems-communication)

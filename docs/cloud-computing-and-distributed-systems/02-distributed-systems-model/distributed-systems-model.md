@@ -11,6 +11,8 @@ description: Distributed Systems Model
 
 Distributed Systems Model page
 
+https://en.wikipedia.org/wiki/Distributed_computing#Theoretical_foundations
+
 - node link
 - state based
 - actor model

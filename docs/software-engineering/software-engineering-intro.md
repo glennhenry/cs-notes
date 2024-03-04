@@ -7,7 +7,7 @@ description: Software Engineering Notes
 
 **Main Source :**
 
-- This note and some other topic, **Software-Engineering-9th-Edition-by-Ian-Sommerville**
+- This note, **Software-Engineering-9th-Edition-by-Ian-Sommerville**
 
 ### Intro
 

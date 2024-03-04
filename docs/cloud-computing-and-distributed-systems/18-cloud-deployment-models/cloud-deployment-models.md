@@ -15,3 +15,4 @@ Cloud Deployment Models page
 - public
 - hybrid
 - community
+- https://en.wikipedia.org/wiki/Cloud_computing#Deployment_models
