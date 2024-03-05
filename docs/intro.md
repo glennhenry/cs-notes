@@ -161,3 +161,4 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 14. **[ref]** / software-engineering : /system-design -> ref to distributed systems in cloud-computing
 15. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
 16. **[update]** /index : add index page containing the list of all notes
+17. **[update]** /data-structures-and-algorithms : /graph -> add more terminology about graphs.
