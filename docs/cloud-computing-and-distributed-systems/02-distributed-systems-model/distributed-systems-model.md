@@ -73,7 +73,11 @@ Properties of consensus algorithms that must be satisfied :
 
 ###### Paxos
 
-One example of family of protocols for solving consensus is **Paxos**. The one we are discussing is the basic variant of Paxos. It consists of the two phases, divided into another two subphases :
+One example of family of protocols for solving consensus is **Paxos**. The one we are discussing is the basic variant of Paxos.
+
+Paxos achieves consistency across multiple nodes by informing them of a value and asking their agreement. The value is only accepted if a sufficient number of nodes agree on it.  It can be thought as candidate proposing and voters that vote the proposal.
+
+It consists of the two phases, divided into another two subphases :
 
 - **Phase 1 - Prepare (1a), Promise (1b)** : (1a): In this phase, a proposer (node) initiates the consensus process by sending a message of **prepare** to a majority of acceptors (nodes). The prepare request includes a proposal number, which uniquely identify the initial message and must be greater than any number used in any of the previous prepare message.
 
@@ -82,6 +86,8 @@ One example of family of protocols for solving consensus is **Paxos**. The one w
 - **Phase 2 - Accept (2a), Accepted (2b)** : (2a): If the proposer receives promises from a majority of acceptors, it can proceed to the accept phase. The proposer sends an accept request to the same set of acceptors, including the proposal number and the value it wants to propose. If an acceptor receives an accept request and has not promised to ignore requests with lower proposal numbers (a node should promise in phase 1b), it accepts the proposal and broadcasts its acceptance to all nodes.
 
   (2b): Once the proposer receives acceptances from a majority of acceptors, the consensus is achieved, and the value is considered agreed upon.
+
+Paxos can be designed synchronously with fixed voting time or asynchronously. Both approach tolerate potential node failures or message delays.
 
 ##### Leader Election
 
@@ -97,7 +103,7 @@ Depending on the network topology, size, communication mechanism, the algorithm 
 
 ###### Bully Algorithm
 
-One example of leader election algorithm is the bully algorithm. The algorithm is capable of choosing leader dynamically even in presence of failures.
+One example of leader election algorithm is the bully algorithm. The idea is, a leader is chosen initially. The leader can stay as a leader as long as it does not fail. When the leader fail, a new leader will be chosen dynamically.
 
 The algorithm assumes that :
 
@@ -112,8 +118,8 @@ The algorithm :
 1. Each process is assigned a unique identifier or process ID. The process with the highest ID is considered the highest-ranked process and assumes the role of the leader initially.
 2. When a process detects that the leader is unresponsive or fails, it initiates an election by sending an election message to all processes with higher IDs.
 3. Upon receiving an election message, a process with a higher ID responds with an _Alive_ message to acknowledge the election.
-4. If a process does not receive any response after sending the election message, it assumes that it has the highest ID among the active processes and declares itself as the new leader. Otherwise, it sends no further message and wait for _Victory_ message.
-5. The newly elected leader broadcasts a coordinator (victory) message to inform all other processes of its leadership status.
+4. If a process *does not* receive any response after sending the election message, it assumes that it has the highest ID among the active processes and declares itself as the new leader. Otherwise, it sends no further message and wait for the next steps.
+5. The newly elected leader should broadcast a coordinator (victory) message to inform all other processes of its leadership status.
 6. If a process receives a coordinator message, it recognizes the new leader and updates its internal state accordingly.
 
 ### Physical Model
