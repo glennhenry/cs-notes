@@ -37,6 +37,10 @@ A transaction is a logical unit of work that consists of multiple operations tha
 
 One implementation of atomic commit is the **two-phase commit (2PC)** protocol. This protocol consist of two phases, prepare and commit phase. A coordinator node responsible for managing the transaction communicates with all participating nodes and asks them to prepare for the commit. Each participating node performs its portion of the transaction and prepares to commit. If any node encounters an issue during this phase or cannot prepare for the commit, it indicates a failure. Based on the responses received during the prepare phase, the coordinator makes a final decision about whether to commit or abort the transaction. If all nodes are prepared to commit, the coordinator sends a commit message to all participating nodes, instructing them to permanently apply the changes. If any node is unable to commit or if there is a failure detected, the coordinator sends an abort message, instructing all nodes to roll back the changes.
 
+:::tip
+See also similar topic about [concurrency control in database system](/database-system/concurrency-control).
+:::
+
 - distributed database, data store
 - distriubted query processing
 - distributed transaction
