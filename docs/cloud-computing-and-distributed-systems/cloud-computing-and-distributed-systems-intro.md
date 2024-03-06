@@ -13,7 +13,6 @@ Some sources come from the book **Distributed and Cloud Computing - Kai Hwang**.
 - Distributed Systems
   - [Distributed Systems Model](cloud-computing-and-distributed-systems/distributed-systems-model)
   - [Distributed Systems Communication](cloud-computing-and-distributed-systems/distributed-systems-communication)
-  - [Distributed Hash Table](cloud-computing-and-distributed-systems/distributed-hash-table)
   - [Distributed File System](cloud-computing-and-distributed-systems/distributed-file-system)
   - [Distributed Database](cloud-computing-and-distributed-systems/distributed-database)
 - Architecture & Model

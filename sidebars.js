@@ -844,7 +844,6 @@ const sidebars = {
           items: [
             "cloud-computing-and-distributed-systems/distributed-systems-model/distributed-systems-model",
             "cloud-computing-and-distributed-systems/distributed-systems-communication/distributed-systems-communication",
-            "cloud-computing-and-distributed-systems/distributed-hash-table/distributed-hash-table",
             "cloud-computing-and-distributed-systems/distributed-file-system/distributed-file-system",
             "cloud-computing-and-distributed-systems/distributed-database/distributed-database",
           ],
