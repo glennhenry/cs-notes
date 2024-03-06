@@ -137,5 +137,6 @@ Based on the organization, there are two paradigms of distributed computing :
 Architectural model describe the high-level design and structure of the system, including the arrangement and interaction of its components. Some of architectural model (see other notes) :
 
 - [Client-Server](/cloud-computing-and-distributed-systems/client-server)
+- [Event-Driven](/cloud-computing-and-distributed-systems/event-driven)
 - [Master-Slave](/cloud-computing-and-distributed-systems/master-slave)
 - [Peer-to-Peer](/cloud-computing-and-distributed-systems/peer-to-peer)

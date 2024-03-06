@@ -5,4 +5,4 @@ title: Client-Server
 description: Client-Server
 ---
 
-See **[Cloud Computing > Client-Server](/cloud-computing/client-server)**
+See **[Cloud Computing > Client-Server](/cloud-computing-and-distributed-systems/client-server)**

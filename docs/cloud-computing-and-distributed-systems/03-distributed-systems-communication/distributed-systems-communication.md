@@ -14,10 +14,10 @@ Distributed Systems Communication page
 ### Coordination
 
 - task assignment
-  - dht
   - centralized
   - decentralized
   - message queue
+  - dht
 
 ### Message Passing
 

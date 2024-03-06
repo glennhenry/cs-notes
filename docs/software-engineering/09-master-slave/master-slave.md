@@ -5,4 +5,4 @@ title: Master-Slave
 description: Master-Slave
 ---
 
-See **[Cloud Computing > Master-Slave](/cloud-computing/master-slave)**
+See **[Cloud Computing > Master-Slave](/cloud-computing-and-distributed-systems/master-slave)**

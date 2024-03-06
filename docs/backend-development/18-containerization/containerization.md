@@ -5,4 +5,4 @@ title: Containerization
 description: Containerization
 ---
 
-See **[Cloud Computing > Containerization](/cloud-computing/containerization)**
+See **[Cloud Computing > Containerization](/cloud-computing-and-distributed-systems/containerization)**

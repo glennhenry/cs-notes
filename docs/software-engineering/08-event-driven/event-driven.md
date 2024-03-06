@@ -5,4 +5,4 @@ title: Event-Driven
 description: Event-Driven
 ---
 
-See **[Cloud Computing > Event-Driven](/cloud-computing/event-driven)**
+See **[Cloud Computing > Event-Driven](/cloud-computing-and-distributed-systems/event-driven)**
