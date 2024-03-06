@@ -5,4 +5,4 @@ title: Virtualization
 description: Virtualization
 ---
 
-See **[Cloud Computing > Virtualization](/cloud-computing/virtualization)**
+See **[Cloud Computing > Virtualization](/cloud-computing-and-distributed-systems/virtualization)**
