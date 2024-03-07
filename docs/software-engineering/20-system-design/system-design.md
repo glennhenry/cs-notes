@@ -53,7 +53,7 @@ Improving scalability is typically related to distributing the workload: :
 
   With more users present, storing all their session data can be a burden. One approach is to share the state across all the server, to reduce the burden of a single server storing the data. However, this approach require additional synchronization mechanism, which can increase the complexity of the system.
 
-- [Database partitioning](/database-system/database-optimization#partition) is a term for breaking down a large database into smaller, more manageable units called partitions. This is done within a single database instance. Partition can scale the system horizontally, this is done by distributing the partition across multiple servers, this process is called **database sharding**.
+- [Database partitioning](/database-system/database-optimization#partition) is a term for breaking down a large database into smaller, more manageable units called partitions. This is done within a single database instance. Partition can scale the system horizontally, this is done by distributing the partition across multiple servers, this process is called [database sharding](/cloud-computing-and-distributed-systems/distributed-database#database-sharding).
 
 ### Availability & Reliability
 
@@ -76,7 +76,7 @@ Two mechanisms to improve availability and reliability :
 
   Failover can be done in **active-passive** or **active-active**. In active-passive, one system is running, and the other is on standby. In the latter one, two systems are running together, to distribute workload as well as to increase the availability.
 
-- **Replication (redundancy)** : Create and maintain duplicate copies of data or system components across multiple locations or systems. Ensure that data or services are accessible even if one copy or component becomes unavailable. See also [database replication](/database-system/logging-and-recovery#replication) for replicating database.
+- **Replication (redundancy)** : Create and maintain duplicate copies of data or system components across multiple locations or systems. Ensure that data or services are accessible even if one copy or component becomes unavailable. See also [database replication](/database-system/logging-and-recovery#replication) for replicating database and [database sharding](/cloud-computing-and-distributed-systems/distributed-database#database-sharding).
 
 ### Consistency
 

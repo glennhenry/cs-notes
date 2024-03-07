@@ -154,11 +154,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 7. **[ref]** backend-development : /serverless -> ref to FaaS in Cloud Computing.
 8. **[ref]** /data-structures-and-algorithms : /complexity-theory -> ref to Turing machine and other TOC related terms.
 9. **[ref]** /computer-security : /reverse-engineering -> ref to decompilation in compilers.
-10. **[ref]** /operating-system : /virtualization -> ref to distributed systems in cloud-computing.
-11. **[ref]** /operating-system : /os-fundamentals -> ref to distributed systems in cloud-computing.
-12. **[ref]** /software-engineering : /peer-to-peer -> ref to distributed hash table in cloud-computing.
-13. **[ref]** /software-engineering : /other-architecture-patterns -> ref to state machine in theory-of-computation-and-automata.
-14. **[ref]** / software-engineering : /system-design -> ref to distributed systems in cloud-computing
-15. **[update]** /operating-system : /macos-and-ios -> add more technical detail, such as adding the detail of Mach and XNU kernel.
-16. **[update]** /index : add index page containing the list of all notes
-17. **[update]** /data-structures-and-algorithms : /graph -> add more terminology about graphs.
+10. **[ref]** /software-engineering : /peer-to-peer -> ref to distributed hash table in cloud-computing.
+11. **[ref]** /software-engineering : /other-architecture-patterns -> ref to state machine in theory-of-computation-and-automata.
+12. **[update]** /index : add index page containing the list of all notes
+13. **[update]** /data-structures-and-algorithms : /graph -> add more terminology about graphs.
