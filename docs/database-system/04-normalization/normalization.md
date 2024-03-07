@@ -21,7 +21,9 @@ One attribute, known as the **determinant**, uniquely determines the value of an
 
 Functional dependencies are denoted using arrow notation (→). For example, if A and B are attributes in a table, A → B represents a functional dependency where the value of attribute A uniquely determines the value of attribute B. So, if we need a value of B, we can find it by knowing the value of A.
 
+:::note
 In actual application, functional dependency is the one that you find on primary key and foreign key relationship.
+:::
 
 There are different types of functional dependencies :
 
@@ -31,7 +33,7 @@ There are different types of functional dependencies :
 
 #### Heath's Theorem
 
-Given a relation or table $R$ with attributes $X, Y, \text{and} Z$, where $X → Y$ is a functional dependency, and $Z$ is defined as the set difference between $U$, which is some set of $R$ and $XY$, then $R = \prod_{XY}(R) \bowtie \prod_{XZ}(R)$.
+Given a relation or table $R$ with attributes $X, Y,$ and $Z$, where $X → Y$ is a functional dependency, and $Z$ is defined as the set difference between $U$, which is some set of $R$ and $XY$, then $R = \prod_{XY}(R) \bowtie \prod_{XZ}(R)$.
 
 Where $\prod$ is a symbol for [projection](/database-system/query-language#projection), and $\bowtie$ is a symbol for natural joins.
 
