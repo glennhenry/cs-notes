@@ -7,7 +7,8 @@ description: macOS & iOS
 
 **Main Source :**
 
-- []
+- **[Architecture of macOS - Wikipedia](https://en.wikipedia.org/wiki/Architecture_of_macOS)**
+- **[[iOS] Architecture of iOS Operating System by ganeshrajugalla - Medium](https://medium.com/@ganeshrajugalla/ios-ios-introduction-and-structure-fdd7ecf08c4c)**
 
 **macOS** (originally OS X) and **iOS** are operating systems developed by Apple Inc. for different hardware platforms. macOS is the operating system used on Apple's Macintosh computers, including iMac, MacBook, Mac Pro, and Mac Mini, for desktop and laptop computers. On the other hand, iOS is the operating system used on Apple's mobile devices, including iPhone, iPad, and iPod Touch.
 
