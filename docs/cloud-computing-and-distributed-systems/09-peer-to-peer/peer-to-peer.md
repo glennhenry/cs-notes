@@ -28,7 +28,7 @@ Although client-server architecture can prevent some of these limitations by hav
 
 The specific architecture of P2P define how peers are connected to each other. The network topology can be structured, unstructured, or hybrid.
 
-- **Structured** : Peers are organized in a specific structured topology, using a **distributed hash table (DHT)**. Unique identifier is associated to each peer and resources or data onto the identifier space. So, when a peer are looking for particular resource, they will connect to specific peer that stores it.
+- **Structured** : Peers are organized in a specific structured topology, using a [distributed hash table (DHT)](/cloud-computing-and-distributed-systems/distributed-systems-communication#distributed-hash-tables). Unique identifier is associated to each peer and resources or data onto the identifier space. So, when a peer are looking for particular resource, they will connect to specific peer that stores it.
 
   ![Structured P2P](./structured.png)  
    Source : https://en.wikipedia.org/wiki/Peer-to-peer#/media/File:Structured_(DHT)_peer-to-peer_network_diagram.png
