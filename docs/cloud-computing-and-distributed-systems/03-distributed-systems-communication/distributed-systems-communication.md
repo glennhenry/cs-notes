@@ -40,7 +40,7 @@ Based on "who" will assign the task :
 
 - **[Load Balancer](/software-engineering/system-design#load-balancer)** : We can own a dedicated component that handles task distribution among nodes. Load balancing algorithm consider factors like the current workload, processing capabilities, and network conditions to make task assignment decisions. Task assignment strategies includes round-robin, which assign task in circular manner, or least-loaded, where task is assigned to node with the least workload.
 
-  Additionally, to make sure message or request received and processed in the correct order, we can employ a message queue, which can included within the load balancer. The message queue holds the submitted tasks in a [queue](/data-strucutres-and-algorithms/queue), ensuring that they are stored in the order of arrival.
+  Additionally, to make sure message or request received and processed in the correct order, we can employ a message queue, which can included within the load balancer. The message queue holds the submitted tasks in a [queue](/data-structures-and-algorithms/queue), ensuring that they are stored in the order of arrival.
 
 ![Task assignment](./task-assignment.png)  
 Source : [Colored server icon](https://www.iconfinder.com/icons/4706235/data_server_database_datacenter_main_server_server_icon)
