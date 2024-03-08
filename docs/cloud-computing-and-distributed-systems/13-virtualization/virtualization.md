@@ -12,23 +12,36 @@ description: Virtualization
 - **[Levels of Virtualization Implementation in Cloud Computing - YourTechDiet](https://yourtechdiet.com/blogs/levels-of-virtualization-implementation-in-cloud-computing/)**
 - **[Levels of Virtualization Implementation - BrainKart](https://www.brainkart.com/article/Levels-of-Virtualization-Implementation_11329/)**
 - **[Virtualization - Wikipedia](https://en.wikipedia.org/wiki/Virtualization)**
+- **[Full emulation vs. full virtualization - stackoverflow](https://stackoverflow.com/questions/6044978/full-emulation-vs-full-virtualization)**
 
-**Virtualization** is the process of creating a virtual (rather than physical) version of something, such as an operating system, a server, a storage device, a network resource, or a software system. Virtualization emulates the functionality of a physical computer system by creating virtual machines (VMs) or virtual environments. Virtual machine (VM) has its own memory, CPU, storage, file system, configuration just like a physical machine.
+A computer typically run with an operating system. The operating system then provide environment for applications to run. In the case of cloud computing, a cloud service provide dedicates a computer for people that buy their service to use it. Now, if cloud provider were to use one computer for one people, then it wouldn't be efficient. Especially because computer in data centers are powerful, wouldn't it be overkill?
 
-The machine that runs virtualization is called **host** and the virtual machine it is running is called **guest**.
+The question is: how can a single computer run multiple systems? In the context of providing services, the system should be versatile and capable of varying in the underlying system. These differences may encompass the OS, specific installed applications, and potentially different hardware allocations, allowing one system to be provided with better resources than the others, to suit with client needs. Cloud providers can use **virtualization** techniques.
+
+**Virtualization** is the process of creating a virtual (rather than physical) version of something, such as an operating system, a server, a storage device, a network resource, or a software system. Virtualization emulates the functionality of a physical computer system by creating **virtual machines (VMs)** or virtual environments. Virtual machine has its own memory, CPU, storage, file system, configuration just like a physical machine, which are provided by the machine that runs the virtualization.
+
+The machine that runs virtualization is called **host** and the virtual machine it is running is called **guest**. A host can run multiple virtual machine, each isolated from each others.
 
 ![Virtualization architecture](./virtualization-architecture.png)  
 Source : https://www.techtarget.com/searchitoperations/definition/virtualization
 
+### Virtualization vs Emulation
+
+Emulation is the technique that involve creating a software-based replica of a hardware platform or system. By replica, it is the complete imitation of the hardware architecture, including its CPU, memory, etc. On the other hand, virtualization is just creating an environment that makes it possible for guest platform to operate.
+
+Emulation is used when the guest platform cannot run or is incompatible with the machine hardware. This incompatibility can arise from differences in CPU architecture. For example, a typical desktop with [x86 architecture](/computer-organization-and-architecture/isa#x86) will not be able to run an application designed for [ARM](/computer-organization-and-architecture/isa#arm) architecture, commonly found in mobile platforms or embedded devices. Conversely, an operating system like Linux, with its distribution, can run on x86 architecture. Therefore, a Windows desktop can virtualize Linux without the need for emulation.
+
+It is said to be a virtualization if at least one functionality of the guest can be run natively on the host machine. By running natively, this mean the guest can leverages the underlying hardware capabilities of the host machine. This is not possible in emulation, because the architecture itself is different, so it wouldn't be able to rely on the host. This is one of the reason that makes virtualization faster than an emulation.
+
 ### Hypervisor
 
-**Hypervisor**, also known as **virtual machine manager (VMM)**, is the software that made virtualization possible that creates and manages virtual machine. In virtualization, it is possible that a single machine could run 3 different OSes and each of the OS run 3 different application which can't be run on other OS expect itself.
+**Hypervisor**, also known as **virtual machine manager (VMM)**, is the software that made virtualization possible that creates and manages virtual machine. In virtualization, it is possible for a single machine to run three different OSes, and each of these OSes can run three different applications that cannot be executed on the other OS except for themselves.
 
 The primary use of hypervisor is to abstract and virtualize the physical hardware, presenting it to the virtual machines as if they were running on dedicated hardware. It provides a layer of software that sits between the physical hardware and the virtual machines, allowing the virtual machines to operate independently and securely.
 
 There are two types of hypervisor :
 
-- **Type 1 Hypervisor (Bare-Metal Hypervisor)** : This hypervisor runs directly on the host computer's hardware, without the need for an underlying operating system. Examples include VMware ESXi, Microsoft Hyper-V, and Citrix XenServer.
+- **Type 1 Hypervisor (Bare-Metal Hypervisor)** : In this type, the hypervisor runs directly on the host computer's hardware, without the need for an underlying operating system. Examples include VMware ESXi, Microsoft Hyper-V, and Citrix XenServer.
 - **Type 2 Hypervisor (Hosted Hypervisor)** : This hypervisor runs on top of an existing operating system. Examples include VMware Workstation, Oracle VirtualBox, and Microsoft Virtual PC.
 
 ![Hypervisor type 1 and 2 comparison](./hypervisor.png)  
@@ -66,9 +79,9 @@ Virtualization can be implemented in four level :
 
 - **Full Virtualization** : In full virtualization, the virtualization layer (hypervisor) provides complete hardware abstraction, it can run multiple virtual machines to run simultaneously on a single physical host. Each virtual machine operates as if it has its own dedicated hardware resources, including CPU, memory, storage, and network interfaces. Examples of full virtualization hypervisors are VMware ESXi and Microsoft Hyper-V.
 
-- **Para-virtualization** : In full virtualization, the OS is not aware that it is running in a virtualized environment, **para-virtualization** instead modifies the guest operating system to be aware of the virtualization layer. The operating system and the hypervisor (or the virtualization layer) can communicate directly to perform tasks such as memory management and I/O operations.
+- **Para-virtualization** : In full virtualization, the OS is not aware that it is running in a virtualized environment, para-virtualization instead modifies the guest operating system to be aware of the virtualization layer. The operating system and the hypervisor (or the virtualization layer) can communicate directly to perform tasks such as memory management and I/O operations.
 
-- **Hardware-assisted Virtualization** : Hardware-assisted virtualization enables full virtualization with the help of hardware capabilities such as Intel VT-x or AMD-V. For example, the hardware may support for **nested page table (NPT)** memory management technique.
+- **Hardware-assisted Virtualization** : Hardware-assisted virtualization enables full virtualization with the help of hardware capabilities such as Intel VT-x or AMD-V. For example, the hardware may support for _nested page table (NPT)_ memory management technique.
 
   The NPT is a technique that translates guest's virtual address to host physical address. When a virtual machine makes a memory access, it first consults the guest page tables to translate the virtual address to a guest physical address. Then, it looks up the guest physical address in the host page tables to obtain the corresponding host physical address.
 
