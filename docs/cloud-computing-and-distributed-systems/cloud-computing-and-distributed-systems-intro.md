@@ -5,8 +5,6 @@ title: Cloud Computing & Distributed Systems
 description: Cloud Computing & Distributed Systems Notes
 ---
 
-Some sources come from the book **Distributed and Cloud Computing - Kai Hwang**.
-
 ### All pages
 
 - [Fundamentals](cloud-computing-and-distributed-systems/fundamentals)
