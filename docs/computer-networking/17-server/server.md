@@ -47,14 +47,14 @@ Source : https://www.networkstraining.com/different-types-of-servers/
   ![An illustration that shows cache being closer than database](./caching.png)  
    Source : https://www.scylladb.com/glossary/database-caching/
 
-- **Content Delivery Network (CDN)** : CDN is a distributed servers strategically located in multiple data centers around the world. When a user requests content, the CDN automatically routes the request to the nearest edge server, minimizing the distance and network latency between the user and the server.
+- **[Content Delivery Network (CDN)](/software-engineering/system-design#cdn)** : CDN is a distributed servers strategically located in multiple data centers around the world. When a user requests content, the CDN automatically routes the request to the nearest edge server, minimizing the distance and network latency between the user and the server.
 
   For example, a company has main server located in the US. A person connecting from Asia will have a higher latency due to physical distance. The company may choose to build another server in Asia, the new server will connect to the main server. This way we let the server to experience the slower connection while allowing people from Asia can connect with a lower latency or faster connection.
 
   ![Server distributed around the world making device able to connect to a closer place](./cdn.png)  
   Source : https://www.domainesia.com/tips/apa-itu-cdn-dan-fungsi-cdn/
 
-- **Load Balancing** : Load balancing is a technique used to distribute incoming network traffic across multiple servers. The primary purpose of load balancing is to evenly distribute the workload among multiple servers, preventing any single server from becoming overwhelmed or underwhelmed and improving overall system efficiency.
+- **[Load Balancing](/software-engineering/system-design#load-balancer)** : Load balancing is a technique used to distribute incoming network traffic across multiple servers. The primary purpose of load balancing is to evenly distribute the workload among multiple servers, preventing any single server from becoming overwhelmed or underwhelmed and improving overall system efficiency.
 
   ![3 user requests are handled by 3 server](./load-balancing.png)  
    Source : https://herza.id/blog/load-balancing-pengertian-cara-kerja-jenis-metode-kelebihan-dan-kekurangan/

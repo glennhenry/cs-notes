@@ -23,7 +23,7 @@ Source : https://pressidium.com/blog/browser-cache-work/
 
 - **Server-side** : Caching where the server or the developer is the one who handles it, they are typically implemented on the server to store and serve frequently accessed data or resources.
 
-  - **CDN Caching** : CDN is a geographically distributed network of servers that are strategically placed in different locations worldwide. The primary purpose of a CDN is to improve the delivery speed and performance of web content to end-users  
+  - **[CDN Caching](/software-engineering/system-design#cdn)** : CDN is a geographically distributed network of servers that are strategically placed in different locations worldwide. The primary purpose of a CDN is to improve the delivery speed and performance of web content to end-users  
     For example, a person connecting from Asia is likely to have a better connection to a server located in Asia compared to a server located in a distant region, such as North America or Europe.  
     We may also cache the resource in the CDN itself, which is what CDN caching is, they are considered **distributed caching**, which is the practice of distributing cache around multiple servers to allows efficient data access across different machines or locations.
 

@@ -141,7 +141,7 @@ Source : https://blogs.manageengine.com/clouddns/2022/10/24/how-does-a-dns-work.
 
 #### CDN
 
-**[Content Delivery Network (CDN)](/backend-development/caching#type-of-caching)** is a distributed network of servers located in various geographical locations that work together to deliver content to end users with improved performance and availability.
+**Content Delivery Network (CDN)** is a distributed network of servers located in various geographical locations that work together to deliver content to end users with improved performance and availability.
 
 The idea of CDN is to spread server around the world, so that when a user requests content, the CDN serves it from the nearest edge server instead of the origin server, reducing latency and improving delivery speed. It is commonly used to deliver static and dynamic content, such as web pages, images, videos, and other media files.
 
@@ -155,7 +155,7 @@ Source : https://www.domainesia.com/tips/apa-itu-cdn-dan-fungsi-cdn/
 
 #### Load Balancer
 
-[Load balancer](/backend-development/backend-optimization#server-optimization) distribute incoming traffic across multiple servers to reduce a burden of a single. It serves a purpose beyond just workload balancing, as it can also be utilized to reroute connections away from systems that are unhealthy or experiencing failures.
+**Load balancer** distribute incoming traffic across multiple servers to reduce a burden of a single. It serves a purpose beyond just workload balancing, as it can also be utilized to reroute connections away from systems that are unhealthy or experiencing failures.
 
 Other benefits of load balancer :
 
