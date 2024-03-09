@@ -137,7 +137,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 
    - Search engine, crawler.
 
-3. **[update]** Fix English and typo from each note of topics :
+3. **[update]** Revisit notes to fix English, typo, and possibly correct some information :
 
    - Computer Graphics
    - Frontend Web Development
@@ -158,3 +158,4 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 11. **[ref]** /software-engineering : /other-architecture-patterns -> ref to state machine in theory-of-computation-and-automata.
 12. **[update]** /index : add index page containing the list of all notes
 13. **[update]** /data-structures-and-algorithms : /graph -> add more terminology about graphs.
+14. **[update]** /backend-development : /caching -> add more about caching.
