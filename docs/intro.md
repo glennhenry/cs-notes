@@ -147,6 +147,9 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
    - Machine Learning
    - Deep Learning
    - Backend Development
+   - Computer & Programming Fundamentals
+   - Data Structures & Algorithms
+   - Computer Security
 
 4. **[update]** digital-signal-processing : /compression#svd-compression -> add svd compression.
 5. **[add]** /digital-media-processing : /iso -> add ISO file format.
