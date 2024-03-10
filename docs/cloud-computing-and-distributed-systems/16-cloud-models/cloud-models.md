@@ -1,8 +1,8 @@
 ---
-slug: /cloud-computing-and-distributed-systems/cloud-services-models
-id: cloud-services-models
-title: Cloud Services Models
-description: Cloud Services Models
+slug: /cloud-computing-and-distributed-systems/cloud-models
+id: cloud-models
+title: Cloud Models
+description: Cloud Models
 ---
 
 **Main Source :**
@@ -10,9 +10,11 @@ description: Cloud Services Models
 - **[Cloud computing, Service models - Wikipedia](https://en.wikipedia.org/wiki/Cloud_computing#Service_models)**
 - **Various Google searches**
 
+### Cloud Services Model
+
 Cloud services model are the different types or categories of services that are offered by cloud computing providers. These models define the level of control and responsibility that the cloud provider and the customer have over various aspects of the cloud infrastructure, platforms, and applications.
 
-### Common Models
+#### Common Models
 
 The standard and commonly used model of cloud service is classified into three :
 
@@ -23,9 +25,19 @@ The standard and commonly used model of cloud service is classified into three :
   ![Cloud service models arranged as layers in stack](./cloud-models.png)  
    Source : https://en.wikipedia.org/wiki/Cloud_computing#/media/File:Cloud_computing_service_models_(1).png
 
-### More Models
+#### More Models
 
 - **Function as a Service (FaaS)** : FaaS, also known as [serverless computing](/backend-development/serverless), is a model where developers can execute code in the cloud without having to manage the underlying infrastructure. The cloud provider takes care of the infrastructure provisioning and scaling, and developers only focus on writing and deploying functions or small pieces of code that are triggered by specific events or requests. Example of FaaS: Amazon's AWS Lambda, Google Cloud Functions, and Microsoft Azure Functions.
 - **Container as a Service (CaaS)** : CaaS is a cloud service model that provides a platform for managing and orchestrating [containerized applications](/cloud-computing-and-distributed-systems/containerization). CaaS platforms provide runtime environments, handle containerization, deployment, orchestration, and scaling tasks. Example of CaaS: [Kubernetes](/cloud-computing-and-distributed-systems/docker-and-kubernetes#kubernetes) and Amazon Elastic Container Service (ECS).
 - **Backend as a Service (BaaS)** : BaaS, also known as **Mobile Backend as a Service (MBaaS)**, is a cloud service model that provides a backend infrastructure and services specifically tailored for mobile and web application development. BaaS platforms offer pre-built features and functionalities, such as user authentication, data storage, push notifications, and social media integration. Example of BaaS: Firebase, AWS Amplify, and Backendless.
 - **Disaster Recovery as a Service (DRaaS)** : DRaaS is a cloud service model that provides backup, replication, and recovery capabilities for applications and data in the event of a disaster or system failure. Example of DRaaS: AWS Backup and Microsoft Azure Site Recovery.
+
+### Cloud Deployment Model
+
+- **Private** :
+- **Public** :
+- **Hybrid** :
+- **Community** :
+
+- https://en.wikipedia.org/wiki/Cloud_computing#Deployment_models
+
