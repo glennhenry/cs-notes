@@ -873,7 +873,7 @@ const sidebars = {
         "cloud-computing-and-distributed-systems/cloud-models/cloud-models",
         "cloud-computing-and-distributed-systems/cloud-database/cloud-database",
         "cloud-computing-and-distributed-systems/cloud-security/cloud-security",
-        "cloud-computing-and-distributed-systems/cloud-services-and-providers/cloud-services-and-providers",
+        "cloud-computing-and-distributed-systems/cloud-services/cloud-services",
       ],
     },
   ],

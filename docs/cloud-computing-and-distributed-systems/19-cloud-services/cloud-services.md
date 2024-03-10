@@ -1,13 +1,14 @@
 ---
-slug: /cloud-computing-and-distributed-systems/cloud-services-and-providers
-id: cloud-services-and-providers
-title: Cloud Services & Providers
-description: Cloud Services & Providers
+slug: /cloud-computing-and-distributed-systems/cloud-services
+id: cloud-services
+title: Cloud Services
+description: Cloud Services
 ---
 
 **Main Source :**
 
 - **Various Google searches**
+- **[The 25 Most Important Cloud Metrics For SaaS Companies To Monitor - CLOUDZERO](https://www.cloudzero.com/blog/cloud-metrics/)**
 - **[MTBF, MTTR, MTTA, and MTTF - ATLASSIAN](https://www.atlassian.com/incident-management/kpis/common-metrics)**
 
 ### Terminology & Metrics
@@ -38,7 +39,13 @@ The quality of cloud computing services are measured by various metrics. Some co
    - **Horizontal Scalability** : The ability to add or remove instances or virtual machines to accommodate increased or decreased workload demands.
    - **Auto-Scaling Efficiency** : The effectiveness and efficiency of the auto-scaling mechanisms in responding to workload changes.
 
-4. **Compliance** : The degree of adherence of cloud providers.
+4. **Utilization** : The extent to which computing resources are used.
+
+   - **CPU Utilization** : Measured as the percentage of time the CPU is actively executing instructions.
+   - **Memory Utilization** : Can be measured by the percentage of available physical or virtual memory that is actively used by running processes or applications.
+   - **Disk Utilization** : Measured by monitoring the I/O operations performed on the disk, such as the rate or the number of read or write requests.
+
+5. **Compliance** : The degree of adherence of cloud providers.
 
    - **Regulatory Compliance** : The cloud provider's adherence to industry-specific regulations and standards, such as HIPAA, GDPR, or PCI DSS.
    - **Certifications** : The attainment of certifications such as ISO 27001 (information security management), SOC 2 (security and privacy controls), or FedRAMP (for government agencies) to demonstrate compliance with specific security and privacy frameworks.
@@ -48,6 +55,9 @@ The quality of cloud computing services are measured by various metrics. Some co
 Cloud providers offer some pricing model :
 
 - **Pay-as-you-go** : Charges customer based on usage, typically on an hourly or per-minute basis. This model offers flexibility and cost-effectiveness as customers only pay for what they use.
+- **Reserved Instances** :
+
+### Configuration
 
 ### Examples of Cloud Services
 

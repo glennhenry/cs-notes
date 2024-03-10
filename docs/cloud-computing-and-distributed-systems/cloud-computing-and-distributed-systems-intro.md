@@ -28,4 +28,4 @@ description: Cloud Computing & Distributed Systems Notes
 - [Cloud Models](cloud-computing-and-distributed-systems/cloud-models)
 - [Cloud Database](cloud-computing-and-distributed-systems/cloud-database)
 - [Cloud Security](cloud-computing-and-distributed-systems/cloud-security)
-- [Cloud Services & Providers](cloud-computing-and-distributed-systems/cloud-services-and-providers)
+- [Cloud Services](cloud-computing-and-distributed-systems/cloud-services)
