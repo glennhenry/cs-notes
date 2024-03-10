@@ -19,6 +19,10 @@ Cloud Services & Technologies page
   - scalability
   - efficiency
   - pricing
+
+### Pricing Model
+
+
 - cloud technology
   - aws
   - gcp

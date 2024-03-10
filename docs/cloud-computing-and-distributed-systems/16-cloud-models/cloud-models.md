@@ -22,7 +22,7 @@ The standard and commonly used model of cloud service is classified into three :
 - **Platform as a Service (PaaS)** : PaaS provides a higher level of abstraction compared to IaaS. In this model, the cloud provider offers a platform that includes the underlying infrastructure as well as development tools, runtime environments, and middleware. Customers can focus on building and deploying applications without worrying about managing the underlying infrastructure. The cloud provider takes care of the hardware, operating systems, and runtime environments, while the customer is responsible for developing and deploying their applications. Example of PaaS: Google App Engine and Heroku.
 - **Software as a Service (SaaS)** : SaaS is the highest level of abstraction in the cloud services model. In this model, the cloud provider offers fully managed applications that are accessed over the internet. Customers can use the software applications without having to manage the underlying infrastructure, platform, or software stack. Example of SaaS: Gmail, Google Docs, and Zoom.
 
-  ![Cloud service models arranged as layers in stack](./cloud-models.png)  
+  ![Cloud service models arranged as layers in stack](./cloud-services-models.png)  
    Source : https://en.wikipedia.org/wiki/Cloud_computing#/media/File:Cloud_computing_service_models_(1).png
 
 #### More Models
@@ -34,10 +34,13 @@ The standard and commonly used model of cloud service is classified into three :
 
 ### Cloud Deployment Model
 
-- **Private** :
-- **Public** :
-- **Hybrid** :
-- **Community** :
+Cloud deployment model refer to the ways in which how cloud computing resources and services are made available to users. Some common models are :
 
-- https://en.wikipedia.org/wiki/Cloud_computing#Deployment_models
+- **Private** : Private cloud deployment involves the use of dedicated cloud infrastructure and services exclusively for a single organization. The infrastructure can be located on-premises within the organization's data center or hosted by a third-party provider. Private clouds offer more control, security, and customization options compared to public clouds, but they require significant upfront investment and ongoing maintenance.
+- **Public** : Cloud resources and services are provided by a third-party cloud service provider and made available to the public over the internet. Public clouds allow for ease-of-use and cost-effectiveness option but may have limitations in terms of security, as the infrastructure and services are shared among multiple customers.
+- **Hybrid** : Hybrid cloud combines the use of both public and private clouds. In a hybrid cloud, certain workloads and data are hosted in the private cloud, while others are deployed in the public cloud. Hybrid clouds may be used by organizations to achieve ease-of-use and cost-efficiency while maintaining control over sensitive data on their private cloud.
+- **Community** : Community cloud deployment shares cloud services among multiple organizations or entities with similar interests or requirements. The infrastructure, resources, and services are provisioned and maintained for the exclusive use of a specific community of users, such as government agencies, educational institutions, healthcare organizations, or industry consortiums.
+- **Multicloud** : Involve the use of multiple cloud vendors, which can reduce the risk of a single point of failure. When one provider experience failure, workloads can be shifted to another provider. Another benefit is to reduce dependency of cloud provider. When using specific cloud services, they might provide technologies, APIs, or services that we must follow. Switching to another provider becomes challenging and costly in this scenario.
 
+  ![Cloud deployment models](./cloud-deployment-models.png)  
+  Source : https://www.interhyve.com/what-are-the-cloud-computing-deployment-models/

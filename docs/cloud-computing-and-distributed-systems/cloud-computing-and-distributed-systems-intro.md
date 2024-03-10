@@ -25,7 +25,7 @@ description: Cloud Computing & Distributed Systems Notes
   - [Virtualization](cloud-computing-and-distributed-systems/virtualization)
   - [Containerization](cloud-computing-and-distributed-systems/containerization)
   - [Docker & Kubernetes](cloud-computing-and-distributed-systems/docker-and-kubernetes)
-- [Cloud Models](cloud-computing-and-distributed-systems/cloud-services-models)
+- [Cloud Models](cloud-computing-and-distributed-systems/cloud-models)
 - [Cloud Database](cloud-computing-and-distributed-systems/cloud-database)
 - [Cloud Security](cloud-computing-and-distributed-systems/cloud-security)
 - [Cloud Services & Technologies](cloud-computing-and-distributed-systems/cloud-services-and-technologies)
