@@ -60,7 +60,7 @@ Cloud providers offer some pricing model :
 
 - **Pay-as-you-go (On-Demand)** : Charges customer based on usage, typically on an hourly or per-minute basis. This model offers flexibility and cost-effectiveness as customers only pay for what they use.
 - **Reserved Instances** : Customers can commit to a specific usage level for a contracted period (usually one to three years) and receive discounted pricing compared to pay-as-you-go rates. This model is suitable for predictable or steady workloads.
-- **Function Pricing** : For [FaaS](/cloud-computing-and-distributed-systems/cloud-services-models#more-models) services, the pricing can be based on the number of function invocations and the execution duration.
+- **Function Pricing** : For [FaaS](/cloud-computing-and-distributed-systems/cloud-models#more-models) services, the pricing can be based on the number of function invocations and the execution duration.
 
 #### Configuration
 
