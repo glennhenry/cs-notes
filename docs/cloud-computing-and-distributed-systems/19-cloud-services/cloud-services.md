@@ -31,7 +31,11 @@ The quality of cloud computing services are measured by various metrics. Some co
    - **Response Time** : The time it takes for the system to respond to a request or action.
    - **Throughput** : The rate at which the system can process or transfer data.
    - **Latency** : The time delay between a request and the corresponding response.
+   - **Bandwidth** : The amount of data transferred to and from your cloud server over a given period.
    - **Transactions Per Second (TPS)** : The number of transactions or operations the system can handle in a second.
+
+   ![Performance diagram with analogy](./performance.png)  
+   Source : https://medium.com/@sandeep15mca/latency-bandwidth-throughput-and-response-time-0ee4d9028277
 
 3. **Scalability** : The ability of a system to handle increasing workloads and growing user demands.
 
@@ -54,15 +58,68 @@ The quality of cloud computing services are measured by various metrics. Some co
 
 Cloud providers offer some pricing model :
 
-- **Pay-as-you-go** : Charges customer based on usage, typically on an hourly or per-minute basis. This model offers flexibility and cost-effectiveness as customers only pay for what they use.
-- **Reserved Instances** :
+- **Pay-as-you-go (On-Demand)** : Charges customer based on usage, typically on an hourly or per-minute basis. This model offers flexibility and cost-effectiveness as customers only pay for what they use.
+- **Reserved Instances** : Customers can commit to a specific usage level for a contracted period (usually one to three years) and receive discounted pricing compared to pay-as-you-go rates. This model is suitable for predictable or steady workloads.
+- **Function Pricing** : For [FaaS](/cloud-computing-and-distributed-systems/cloud-services-models#more-models) services, the pricing can be based on the number of function invocations and the execution duration.
 
-### Configuration
+#### Configuration
+
+Customers can configure various settings to match their needs and expectations, and these configurations will impact the price.
+
+- **Type of Services** : Customer choose what services they need, such as compute, storage, networking, databases, machine learning, or serverless functions.
+- **Location** : The location of where the services will be hosted, typically based on region.
+- **Tenancy** : Decide how cloud services are deployed. Can be **shared instances** in which customer shares the same physical hardware, **dedicated instances**, customers are provided with their own isolated virtual machines, or **dedicated hosts**, customers are provided an entire physical server or host dedicated exclusively to their use.
+- **Compute Resources** : Decide the resources, including virtual machine instance type, the number of instances, operating system, how many vCPU (virtual CPU), amount of memory, cache size, and storage capacity.
+- **Networking** : Estimate the number of request and responses per period of time, amount of bandwidth, network performance, and scaling options for traffic spikes.
 
 ### Examples of Cloud Services
 
+The top three cloud services are Amazon Web Services (AWS), Google Cloud Platform (GCP), and Microsoft Azure. Below is a list of commonly used services on each of them.
+
 #### Amazon Web Services
+
+- **Amazon EC2** : Virtual servers in the cloud
+- **Amazon S3** : Object storage service
+- **Amazon RDS** : Managed [relational database](/database-system/relational-data) service
+- **Amazon VPC** : Virtual private cloud for networking
+- **Amazon SNS** : Simple Notification Service for messaging and notifications
+- **Amazon SQS** : Simple Queue Service for [message queuing](/backend-development/message-broker)
+- **Amazon DynamoDB** : Fully managed [NoSQL database](/database-system/nosql)
+- **Amazon CloudFront** : [Content delivery network (CDN)](/software-engineering/system-design#cdn)
+- **Amazon Route 53** : Scalable [domain name system (DNS)](/computer-networking/dns) web service
+- **Amazon Lambda** : [Serverless](/backend-development/serverless) compute service
+- **Amazon Redshift** : Fully managed data warehouse
+- **Amazon Elastic Beanstalk** : [Platform as a Service (PaaS)](/cloud-computing-and-distributed-systems/cloud-models#common-models) for deploying and managing applications
+- **Amazon CloudWatch** : Monitoring and observability service
+- **Amazon Glacier** : Low-cost archival storage service
 
 #### Google Cloud
 
+- **Google Compute Engine** : Virtual machines in the cloud
+- **Google App Engine** : Platform as a Service (PaaS) for building and deploying applications
+- **Google Kubernetes Engine** : Managed [Kubernetes](/cloud-computing-and-distributed-systems/docker-and-kubernetes#kubernetes) service for container orchestration
+- **Google Cloud Storage** : Object storage service
+- **Google Cloud SQL** : Fully managed relational database service
+- **Google Cloud Firestore** : Flexible, scalable NoSQL document database
+- **Google Cloud Functions** : Serverless compute platform for event-driven applications
+- **Google Cloud DNS** : Scalable domain name system (DNS) service
+- **Google Cloud CDN** : Content delivery network for low-latency and high-throughput content delivery
+- **Google Cloud AutoML** : Automated machine learning service for building custom ML models
+- **Google Cloud Vision** : Image recognition and analysis service
+
 #### Microsoft Azure
+
+- **Azure Virtual Machines** : Virtual machines for Windows and Linux
+- **Azure App Service** : Platform as a Service (PaaS) for building and deploying web and mobile applications
+- **Azure Kubernetes Service (AKS)** : Managed Kubernetes service for container orchestration
+- **Azure Storage** : Scalable and secure object, file, and block storage
+- **Azure SQL Database** : Fully managed relational database service
+- **Azure Service Bus** : Cloud messaging service for connecting distributed systems
+- **Azure Functions** : Serverless compute service for event-driven applications
+- **Azure DNS** : Scalable domain name system (DNS) service
+- **Azure CDN** : Content delivery network for fast and secure content delivery
+- **Azure Active Directory** : Identity and access management service
+- **Azure Monitor** : Monitoring and observability service
+- **Azure Log Analytics** : Centralized logging and analytics for collecting and analyzing data
+- **Azure Machine Learning** : Cloud-based machine learning service for building and deploying models
+- **Azure Databricks** : Unified analytics platform for big data and machine learning
