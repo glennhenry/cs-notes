@@ -31,7 +31,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[Machine Learning](machine-learning)**
 - **[Deep Learning](deep-learning)**
 - **[Software Engineering](software-engineering)**
-- [Cloud Computing & Distributed Systems](cloud-computing-and-distributed-systems)
+- **[Cloud Computing & Distributed Systems](cloud-computing-and-distributed-systems)**
 
 \*Bolded are completed
 
