@@ -67,7 +67,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[update]** : update existing notes
 - **[ref]** : add reference to particular notes
 
-1. **[update]** computer-graphics : Should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic. Some topic to include :
+1. **[update]** [/computer-graphics](/computer-graphics) : Should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic. Some topic to include :
 
    - fundamentals
      - scene
@@ -133,7 +133,7 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
    - depth map
    - light shadow space
 
-2. **[update]** frontend-web-development : Minor update for all note, also some topic to include for addition :
+2. **[update]** [/frontend-web-development](/frontend-web-development) : Minor update for all note, also some topic to include for addition :
 
    - Search engine, crawler.
 
@@ -151,12 +151,12 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
    - Data Structures & Algorithms
    - Computer Security
 
-4. **[update]** digital-signal-processing : /compression#svd-compression -> add svd compression.
-5. **[add]** /digital-media-processing : /iso -> add ISO file format.
-6. **[update]** backend-development : /websocket -> #data-exchange, add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
-7. **[ref]** /data-structures-and-algorithms : /complexity-theory -> ref to Turing machine and other TOC related terms.
-8. **[ref]** /computer-security : /reverse-engineering -> ref to decompilation in compilers.
-9. **[ref]** /software-engineering : /other-architecture-patterns -> ref to state machine in theory-of-computation-and-automata.
-10. **[update]** /index : add index page containing the list of all notes
-11. **[update]** /data-structures-and-algorithms : /graph -> add more terminology about graphs.
-12. **[update]** /backend-development : /caching -> add more about caching.
+4. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#svd-compression -> add svd compression.
+5. **[add]** [/digital-media-processing](/digital-media-processing)/iso -> add ISO file format.
+6. **[update]** [/backend-development/websocket](/backend-development/websocket)#data-exchange -> add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
+7. **[ref]** [/data-structures-and-algorithms/complexity-theory](/data-structures-and-algorithms/complexity-theory) -> ref to Turing machine and other TOC related terms.
+8. **[ref]** [/computer-security/reverse-engineering](/computer-security/reverse-engineering) -> ref to decompilation in compilers.
+9. **[ref]** [/software-engineering/other-architecture-patterns](/software-engineering/other-architecture-patterns) -> ref to state machine in theory-of-computation-and-automata.
+10. **[update]** /index -> add index page containing the list of all notes
+11. **[update]** [/data-structures-and-algorithms/graph](/data-structures-and-algorithms/graph) -> add more terminology about graphs.
+12. **[update]** [/backend-development/caching](/backend-development/caching) -> add more about caching.
