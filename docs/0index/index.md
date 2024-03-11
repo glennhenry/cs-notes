@@ -9,7 +9,7 @@ This page contains all the notes on this site. The structure is similar to the s
 
 A total of **19** topics, and a total of **421** notes.
 
-1. [Digital Signal Processing](/digital-signal-processing) (21 subtopics)
+1. [Digital Signal Processing](/digital-signal-processing) (**21** subtopics)
     - [Signal](digital-signal-processing/signal)
     - Fourier Analysis
       - [Fourier Series](digital-signal-processing/fourier-series)
@@ -31,7 +31,7 @@ A total of **19** topics, and a total of **421** notes.
       - [Filtering](digital-signal-processing/filtering)
       - [Compression](digital-signal-processing/compression)
       - [Denoising](digital-signal-processing/denoising)
-2. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (25 subtopics)
+2. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (**25** subtopics)
     - Computer Representation
       - [Number System](computer-and-programming-fundamentals/number-system)
       - [Binary Representation](computer-and-programming-fundamentals/binary-representation)
@@ -57,7 +57,7 @@ A total of **19** topics, and a total of **421** notes.
       - [Interpreter](computer-and-programming-fundamentals/interpreter)
       - [Runtime Environment](computer-and-programming-fundamentals/runtime-environment)
     - [Computer & Programming Terminology](computer-and-programming-fundamentals/computer-and-programming-terminology)
-3. [Digital Media Processing](/digital-media-processing) (39 subtopics)
+3. [Digital Media Processing](/digital-media-processing) (**39** subtopics)
     - Image Processing
       - [Image Properties](digital-media-processing/image-properties)
       - [Image Enhancement](digital-media-processing/image-enhancement)
@@ -97,7 +97,7 @@ A total of **19** topics, and a total of **421** notes.
         - [Markdown (MD)](digital-media-processing/markdown-md)
         - [Text File (txt)](digital-media-processing/text-file-txt)
         - [PDF](digital-media-processing/pdf)
-4. [Computer Networking](/computer-networking) (45 subtopics)
+4. [Computer Networking](/computer-networking) (**45** subtopics)
     - Network Standard
       - [OSI Model](computer-networking/osi-model)
       - [TCP/IP Model](computer-networking/tcp-ip-model)
@@ -143,7 +143,7 @@ A total of **19** topics, and a total of **421** notes.
     - [Network Security](computer-networking/network-security)
     - [Network Encryption](computer-networking/network-encryption)
     - [Networking Command](computer-networking/networking-command)
-5. [Data Structures & Algorithms](/data-structures-and-algorithms) (33 subtopics)
+5. [Data Structures & Algorithms](/data-structures-and-algorithms) (**33** subtopics)
     - [Analysis of Algorithms](data-structures-and-algorithms/analysis-of-algorithms)
     - Data Structures
       - [Array](data-structures-and-algorithms/array)
@@ -177,7 +177,7 @@ A total of **19** topics, and a total of **421** notes.
           - [Topological Sort](data-structures-and-algorithms/topological-sort)
           - [Minimum Spanning Tree](data-structures-and-algorithms/minimum-spanning-tree)
     - [Complexity Theory](data-structures-and-algorithms/complexity-theory)
-6. [Computer Organization & Architecture](/computer-organization-and-architecture) (15 subtopics)
+6. [Computer Organization & Architecture](/computer-organization-and-architecture) (**15** subtopics)
     - [COA Fundamentals](computer-organization-and-architecture/coa-fundamentals)
     - [Boolean Logic](computer-organization-and-architecture/boolean-logic)
     - CPU
@@ -193,7 +193,7 @@ A total of **19** topics, and a total of **421** notes.
       - [ISA](computer-organization-and-architecture/isa)
     - [GPU](computer-organization-and-architecture/gpu)
     - [Vector Processors & TPU](computer-organization-and-architecture/vector-processors-and-tpu)
-7. [Operating System](/operating-system) (25 subtopics)
+7. [Operating System](/operating-system) (**25** subtopics)
     - [OS Fundamentals](operating-system/os-fundamentals)
     - [Kernel](operating-system/kernel)
     - [Process Management](operating-system/process-management)
@@ -219,13 +219,13 @@ A total of **19** topics, and a total of **421** notes.
       - [Windows](operating-system/windows)
       - [Android](operating-system/android)
       - [macOS & iOS](operating-system/macos-and-ios)
-8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (5 subtopics)
+8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**5** subtopics)
     - Computability Theory
     - a
     - b
     - c
     - turing machine, turing complete (difference with turing test)
-9. [Compilers](/compilers) (11 subtopics)
+9. [Compilers](/compilers) (**11** subtopics)
     - Compiliation Process
       1. preprocessing,
       2. lexical analysis,
@@ -237,13 +237,13 @@ A total of **19** topics, and a total of **421** notes.
     - Compiler Optimization
     - Decompilation
     - Building Process
-10. [Programming Language Theory](/programming-language-theory) (5 subtopics)
+10. [Programming Language Theory](/programming-language-theory) (**5** subtopics)
     - a
     - b
     - c
     - type system (primitive, complex object, generics)
     - implementation of modern language features, such as OOP, threading, handling null, handling exception.
-11. [Database System](/database-system) (18 subtopics)
+11. [Database System](/database-system) (**18** subtopics)
     - [Relational Data](database-system/relational-data)
     - [Query Language](database-system/query-language)
     - Database Management
@@ -262,7 +262,7 @@ A total of **19** topics, and a total of **421** notes.
       - [Index Implementation](database-system/index-implementation)
       - [Query Processing](database-system/query-processing)
       - [Query Compiler](database-system/query-compiler)
-12. [Computer Graphics](/computer-graphics) (23 subtopics)
+12. [Computer Graphics](/computer-graphics) (**23** subtopics)
     - [Computer Images (Part 1)](computer-graphics/computer-images-part-1)
     - [Computer Images (Part 2)](computer-graphics/computer-images-part-2)
     - [2D Transformation](computer-graphics/2d-transformation)
@@ -286,7 +286,7 @@ A total of **19** topics, and a total of **421** notes.
     - [Computer Animation](computer-graphics/computer-animation)
     - [Physics-Based Animation](computer-graphics/physics-based-animation)
     - [Simulation](computer-graphics/simulation)
-13. [Frontend Web Development](/frontend-web-development) (13 subtopics)
+13. [Frontend Web Development](/frontend-web-development) (**13** subtopics)
     - [HTML](frontend-web-development/html)
     - [HTML DOM](frontend-web-development/html-dom)
     - [CSS](frontend-web-development/css)
@@ -300,7 +300,7 @@ A total of **19** topics, and a total of **421** notes.
     - [Node JS](frontend-web-development/node-js)
     - [React JS](frontend-web-development/react-js)
     - [Docker & Kubernetes](frontend-web-development/docker-and-kubernetes)
-14. [Backend Development](/backend-development) (24 subtopics)
+14. [Backend Development](/backend-development) (**24** subtopics)
     - [Web Server](backend-development/web-server)
     - APIs
       - [APIs & Server Logic](backend-development/apis-server-logic)
@@ -325,7 +325,7 @@ A total of **19** topics, and a total of **421** notes.
     - [Backend & Server Security](backend-development/backend-server-security)
     - [Caching](backend-development/caching)
     - [Backend Optimization](backend-development/backend-optimization)
-15. [Computer Security](/computer-security) (26 subtopics)
+15. [Computer Security](/computer-security) (**26** subtopics)
     - [Computer Security Fundamentals](computer-security/computer-security-fundamentals)
     - Cryptography
       - [Math Concepts](computer-security/math-concepts)
@@ -352,7 +352,7 @@ A total of **19** topics, and a total of **421** notes.
     - [Mobile Security](computer-security/mobile-security)
     - [Backend & Server Security](computer-security/backend-server-security)
     - [Other Attack & Exploit](computer-security/other-attack-and-exploit)
-16. [Machine Learning](/machine-learning) (11 subtopics)
+16. [Machine Learning](/machine-learning) (**11** subtopics)
     - [Linear Regression](machine-learning/linear-regression)
     - [Logistic Regression](machine-learning/logistic-regression)
     - [Naive Bayes](machine-learning/naive-bayes)
@@ -364,7 +364,7 @@ A total of **19** topics, and a total of **421** notes.
     - [Principal Component Analysis](machine-learning/principal-component-analysis)
     - [k-Means Clustering](machine-learning/k-means-clustering)
     - [Collaborative Filtering](machine-learning/collaborative-filtering)
-17. [Deep Learning](/deep-learning) (35 subtopics)
+17. [Deep Learning](/deep-learning) (**35** subtopics)
     - [Deep Learning Foundation](deep-learning/deep-learning-foundation)
     - [Deep Learning Tasks](deep-learning/deep-learning-tasks)
     - [Neural Network](deep-learning/neural-network)
@@ -400,7 +400,7 @@ A total of **19** topics, and a total of **421** notes.
         - [Policy Gradient](deep-learning/reinforcement-learning/policy-gradient)
         - [Imitation Learning](deep-learning/reinforcement-learning/imitation-learning)
       - [Multi-Agent](deep-learning/reinforcement-learning/multi-agent)
-18. [Software Engineering](/software-engineering) (25 subtopics)
+18. [Software Engineering](/software-engineering) (**25** subtopics)
     - [Software Process](software-engineering/software-process)
     - Software Design
       - [Software Principles](software-engineering/software-principles)
@@ -426,7 +426,7 @@ A total of **19** topics, and a total of **421** notes.
       - [Software Deployment](software-engineering/software-deployment)
     - [System Design](software-engineering/system-design)
     - [System Design Examples](software-engineering/system-design-examples)
-19. [Cloud Computing & Distributed Systems](/cloud-computing-and-distributed-systems) (22 subtopics)
+19. [Cloud Computing & Distributed Systems](/cloud-computing-and-distributed-systems) (**22** subtopics)
     - [Fundamentals](cloud-computing-and-distributed-systems/fundamentals)
     - Distributed Systems
       - [Distributed Systems Model](cloud-computing-and-distributed-systems/distributed-systems-model)
