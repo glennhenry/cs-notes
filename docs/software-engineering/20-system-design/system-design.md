@@ -35,7 +35,7 @@ To put it simply, `response time = latency + processing time + latency`. The goa
 Technique to improve performance includes :
 
 - Implement [caching mechanism](/backend-development/caching).
-- [Optimize database](/database-system/database-optimization), such as using [database index](/database-system/index).
+- [Optimize database](/database-system/database-optimization), such as using [database index](/database-system/database-index).
 - [Load balancing](#load-balancer), incorporate multiple servers or instance to distribute the workload.
 - Efficient algorithms and data structures.
 - Asynchronous systems, use algorithm that are capable of doing concurrent operations.

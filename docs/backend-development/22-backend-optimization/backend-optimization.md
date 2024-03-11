@@ -36,7 +36,7 @@ Backend architecture can be scaled to handle increased traffic and load. They ca
 
 ### Resource Optimization
 
-- **Efficient Database Queries** : Optimize database queries by ensuring proper [indexing](/database-system/index), avoiding unnecessary joins or subqueries, and optimizing data retrieval.
+- **Efficient Database Queries** : Optimize database queries by ensuring proper [indexing](/database-system/database-index), avoiding unnecessary joins or subqueries, and optimizing data retrieval.
 
 - **Efficient Algorithms and Data Structures** : Use algorithms and data structures that provide efficient operations for your application's use cases. For example, if you frequently search or write data, consider using [hash map](/data-structures-and-algorithms/hash-table).
 

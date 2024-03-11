@@ -30,7 +30,7 @@ To actually know which node stores a particular data, we can use [consistent has
 
 Benefits of sharding :
 
-- **Performance** : Less number of rows means the reduction in [index](/database-system/index) size, which potentially improves search performance.
+- **Performance** : Less number of rows means the reduction in [index](/database-system/database-index) size, which potentially improves search performance.
 - **Scalability** : We can scale the system horizontally by adding more nodes and shards.
 - **Availability & Fault Tolerance** : If one shard becomes unavailable or experiences a failure, the remaining shards continue to function, minimizing the impact on the overall system.
 

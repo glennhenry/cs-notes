@@ -18,7 +18,7 @@ Source : https://elogic.co/blog/how-ecommerce-search-engine-improves-business-an
 
 Search engine is a vital component in an application, it should be fast and accurate to provide a positive user experience. Below are key techniques used in search engine :
 
-- **[Indexing](/database-system/index)** : Indexing is a fundamental technique where data is structured to allow for quick retrieval of relevant information. Indexing maps the data to specific search terms or keywords, making it easier and faster to locate. For example, if the search query starts from letter "A", we can just skip anything that doesn't start with letter "A".
+- **[Indexing](/database-system/database-index)** : Indexing is a fundamental technique where data is structured to allow for quick retrieval of relevant information. Indexing maps the data to specific search terms or keywords, making it easier and faster to locate. For example, if the search query starts from letter "A", we can just skip anything that doesn't start with letter "A".
 
 - **Tokenization** : Tokenization is the process of breaking down a content into smaller units, known as tokens. Tokens can be words, phrases, or other meaningful units. For example, the sentence `Delicious Cake Recipes` can be broken down into `["Delicious", "Cake", "Recipes"]`. Tokenization helps indexing process by searching the word one by one, it can also benefits the user to find the relevant information if they make mistakes or typos in their search queries.
 

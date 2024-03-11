@@ -102,7 +102,7 @@ In comparison to sorting-based algorithms :
 
 ### Index-Based Algorithms
 
-**Index-based algorithms** is a set of algorithms that leverage [database indexes](/database-system/index), such as selection and join. In some cases, clustered indexes may be faster than non-cluster index, because the physical ordering of data in disk is already known.
+**Index-based algorithms** is a set of algorithms that leverage [database indexes](/database-system/database-index), such as selection and join. In some cases, clustered indexes may be faster than non-cluster index, because the physical ordering of data in disk is already known.
 
 - **Selection** : Index stores a pointer to record given an attribute that is used as the search key. An index-based selection would be straightforward retrieval.
 - **Index Join** : Consider two relation R(X, Y) and S(Y, Z), and S has index on attribute Y. To join them together on attributes Y, we compare each tuple in relation R with the tuple(s) of S, which we retrieve using the index on attribute Y.
