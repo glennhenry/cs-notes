@@ -29,19 +29,14 @@ Source : https://medium.com/design-microservices-architecture-with-patterns/serv
 Advantages :
 
 - **Flexibility** : SOA breaks down complex systems into smaller, independent services. These services can be developed, tested, deployed, and maintained separately, allowing for easier code reuse and increased flexibility.
-
 - **Interoperability** : Services communicate with each other using standard protocols and predefined interface. It will be easy to integrate new services without disrupting the entire architecture.
-
-- **Scalability** : SOA allows to distribute services across multiple servers, they can be scaled independently based on demand without needing to improve entire server just for scaling a heavyweight service.
-
+- **Scalability** : SOA allows for a distribution of services across multiple servers that can be scaled independently based on the demand, without needing to improve the entire server just to scale a certain service.
 - **Reusability** : SOA architecture that consists of smaller services make it possible to utilize available services combined to create new functionalities.
 
 Disadvantages :
 
 - **Complexity** : Implementing SOA introduces additional complexity due to the requirement to have proper coordination and integration among services.
-
 - **Performance Overhead** : Services that talks to each other using message routing, serialization, and network latency can introduce performance overhead.
-
 - **Increased Development Effort** : Implementing SOA requires additional effort in designing service contracts, defining interfaces, and maintaining service repositories. It may involve more development effort compared to traditional monolithic architectures.
 
 Overall, SOA architecture are suitable for complex application where it needs to be decomposed into smaller service to help manage complexity and promote code reuse. When performance is critical, SOA can be optimized by increasing server and applying load balancing technique.

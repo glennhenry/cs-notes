@@ -27,7 +27,7 @@ In monolithic architecture, the entire application is built as a single, indivis
 
 This mean all the code and dependencies are packaged and deployed together, and any changes or updates to one part of the application require redeploying the entire monolith.
 
-An example usecase of monolithic architecture is when each component are tightly coupled to each other, in other word, one component is really dependant on the other.
+An example use case of monolithic architecture is when each component are tightly coupled to each other, in other word, one component is really dependent on the other.
 
 For example, monolithic architecture may be used for an e-commerce platform that allows customers to browse products, add them to a shopping cart, and complete the checkout process. All the component are interconnected, using a unified codebase would simplify the development process.
 
@@ -40,10 +40,10 @@ Advantages :
 
 Disadvantages :
 
-- **Unflexibility** : When a small changes or updates in one component often require redeploying the entire application, causing longer release cycles and limiting the ability to adopt new technologies. This will also make the application hard to test considering
+- **Inflexibility** : When a small changes or updates in one component often require redeploying the entire application, causing longer release cycles and limiting the ability to adopt new technologies. This will also make the application hard to test considering
 - **Reliability** : A failure in one component of a monolithic application can potentially bring down the entire system, as there is no isolation between components.
 - **Technology Limitations** : Monolithic architectures often require using a single technology stack or programming language throughout the application, limiting the ability to leverage the best tools and frameworks for specific components. Migrating them would mean to migrate the entire codebase.
-- **Scalability** : Considering the application is tightly coupled, having more server means we need to distribute the entire monolithic app to these server. This will make these server interdependent, they will rely on shared resources and data, making synchronization of the shared resources becomes complex.
+- **Scalability** : Considering the application is tightly coupled, having more server means we need to distribute the entire monolithic app to each of the server. This will make these servers interdependent, as they will rely on shared resources and data, which in turns, making synchronization of the shared resources becomes complex.
 
 Overall, monolithic architecture is typically suited for smaller applications with simpler requirements, limited scalability needs, and smaller development team which are familiar with the codebase.
 

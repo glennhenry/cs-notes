@@ -32,23 +32,16 @@ Source : https://medium.com/design-microservices-architecture-with-patterns/micr
 Advantages :
 
 - **Scalability** : Microservices allow independent scaling of different components of an application. Scaling heavyweight service won't affect lightweight service, thus allowing for efficient resource utilization.
-
 - **Flexibility** : Different services can be developed using different programming languages, frameworks, and databases as long as they can communicate with each other.
-
 - **Maintainability** : Complex application can be broken down into smaller and self-contained services. Each service can be developed, deployed, and maintained independently, making it easier to add new features, fix bugs, and perform updates without impacting the entire system.
-
-- **Fault Isolation** : If one microservice were to break, the isolation charateristics of microservices will helps to prevent impacting other service.
-
+- **Fault Isolation** : If one microservice were to break, the isolation characteristics of microservices will help to prevent impacting other service.
 - **Team Development** : Different teams can work on different services easily, as each service should be independent. This allows for faster development cycles and easier team coordination.
 
 Disadvantages :
 
-- **Complexity** : Microservices still need to talk with each other, meaning they should be as general as possible to adapt with other service. The management of distributed systems, inter-service communication, and data consistency between services can be challenging
-
+- **Complexity** : Microservices still need to talk with each other, meaning they should be as general as possible to adapt with other service. The management of distributed systems, inter-service communication, and data consistency between services can be challenging.
 - **Operational Overhead** : Each service will require separate deployment, monitoring, and infrastructure management. This can increase the complexity and cost of system operations.
-
 - **Network Latency & Performance** : Microservices rely on inter-service communication, which introduces latency compared to in-process communication in monolithic architectures.
-
 - **Testing & Debugging** : Ensuring all service to work correctly while also having external dependencies if they talk to other services can be quite challenging. Coordinating between each service's logs, events, and data across different services can be time-consuming (distributed debugging)
 
 Overall, microservices architecture are suitable for complex application where each component need to be scaled independently, diverse development team, or frequent update for each component.
