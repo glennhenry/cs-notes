@@ -207,7 +207,7 @@ See also :
 
 - [Backend Optimization](/backend-development/backend-optimization)
 - [Database Optimization](/database-system/database-optimization)
-- [Database Index](/database-system/index)
+- [Database Index](/database-system/database-index)
 - [Network Security](/computer-security/network-security)
 - [Web Security](/computer-security/web-security)
 - [Mobile Security](/computer-security/mobile-security)
