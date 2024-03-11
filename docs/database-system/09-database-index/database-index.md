@@ -1,8 +1,8 @@
 ---
-slug: /database-system/index
-id: index
-title: Index
-description: Index
+slug: /database-system/database-index
+id: database-index
+title: Database Index
+description: Database Index
 ---
 
 - **[Database index - Wikipedia](https://en.wikipedia.org/wiki/Database_index)**

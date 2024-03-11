@@ -41,7 +41,7 @@ Source : https://medium.com/@saad.jameel1992/graph-vs-relational-databases-62ecc
     - [Concurrency Control](database-system/concurrency-control)
     - [Trigger & Constraints](database-system/trigger-and-constraints)
   - [Logging & Recovery](database-system/logging-and-recovery)
-  - [Index](database-system/index)
+  - [Database Index](database-system/database-index)
   - [Database Optimization](database-system/database-optimization)
 - [NoSQL](database-system/nosql)
 - Database Implementation

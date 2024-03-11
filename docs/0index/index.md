@@ -254,7 +254,7 @@ A total of **19** topics, and a total of **421** notes.
         - [Concurrency Control](database-system/concurrency-control)
         - [Trigger & Constraints](database-system/trigger-and-constraints)
       - [Logging & Recovery](database-system/logging-and-recovery)
-      - [Index](database-system/index)
+      - [Database Index](database-system/database-index)
       - [Database Optimization](database-system/database-optimization)
     - [NoSQL](database-system/nosql)
     - Database Implementation

@@ -43,6 +43,8 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
 - [Query Language](database-system/query-language) (23218 char)
 
+Excluding the [index page](/index).
+
 ### Credits
 
 #### Site Generator
