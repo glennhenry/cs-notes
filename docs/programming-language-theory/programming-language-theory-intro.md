@@ -13,5 +13,4 @@ description: Programming Language Theory Notes
 - b
 - c
 - type system (primitive, complex object, generics)
-
-implementation of modern language features, such as OOP, threading, handling null, handling exception.
+- implementation of modern language features, such as OOP, threading, handling null, handling exception.

@@ -7,7 +7,7 @@ description: Data Structures & Algorithms Notes
 
 Before this, you might see [an introduction to Data Structures and Algorithms](/computer-and-programming-fundamentals/data-structures-and-algorithms). Some explanation here might
 
-### All topics
+### All pages
 
 - [Analysis of Algorithms](data-structures-and-algorithms/analysis-of-algorithms)
 - Data Structures

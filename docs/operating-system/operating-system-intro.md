@@ -5,9 +5,9 @@ title: Operating System
 description: Operating System Notes
 ---
 
-### All pages
-
 Some source is also from the book "Abraham Silberschatz-Operating System Concepts (9th,2012_12)".
+
+### All pages
 
 - [OS Fundamentals](operating-system/os-fundamentals)
 - [Kernel](operating-system/kernel)

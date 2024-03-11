@@ -14,29 +14,23 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
 ### All pages
 
 - Image Processing
-
   - [Image Properties](digital-media-processing/image-properties)
   - [Image Enhancement](digital-media-processing/image-enhancement)
   - [Image Acquisition & Sensing](digital-media-processing/image-acquisition-sensing)
   - [Image Restoration](digital-media-processing/image-restoration)
   - [Image Editing](digital-media-processing/image-editing)
-
 - Audio Processing
-
   - [Sound & Audio Properties](digital-media-processing/sound-audio-properties)
   - [Audio Input & Output](digital-media-processing/audio-input-output)
   - [Audio Equalization](digital-media-processing/audio-equalization)
   - [Audio Effects](digital-media-processing/audio-effects)
   - [Audio Editing](digital-media-processing/audio-editing)
   - [Speech Processing](digital-media-processing/speech-processing)
-
 - Video Processing
-
   - [Video Representation](digital-media-processing/video-representation)
   - [Video Recording](digital-media-processing/video-recording)
   - [Video Effects & Enhancement](digital-media-processing/video-effects-enhancement)
   - [Flash Player SWF](digital-media-processing/flash-player-swf)
-
 - Digital Media Formats
   - [MIME Type](digital-media-processing/mime-type)
   - Image
@@ -58,7 +52,3 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
     - [Markdown (MD)](digital-media-processing/markdown-md)
     - [Text File (txt)](digital-media-processing/text-file-txt)
     - [PDF](digital-media-processing/pdf)
-
-:::tip
-Click [here](/computer-graphics/computer-animation) to know more about computer animation.
-:::

@@ -9,7 +9,7 @@ description: Computer Security Notes
 Highly recommend seeing [computer networking](computer-networking) first. This includes the various network protocol and terminology.
 :::
 
-### All topics
+### All pages
 
 - [Computer Security Fundamentals](computer-security/computer-security-fundamentals)
 - Cryptography

@@ -44,9 +44,3 @@ The overview of computer graphics process involve these 3 :
 - [Computer Animation](computer-graphics/computer-animation)
 - [Physics-Based Animation](computer-graphics/physics-based-animation)
 - [Simulation](computer-graphics/simulation)
-
-topic for remake :
-
-- Frame buffer, back buffer, vsync
-- Primitive rendering, text rendering
-- generation (perlin noise)

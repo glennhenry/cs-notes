@@ -4,6 +4,7 @@
 const sidebars = {
   sidebar: [
     "intro",
+    "0index/index",
 
     // 1. Digital Signal Processing
     {

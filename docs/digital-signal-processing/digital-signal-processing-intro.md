@@ -15,7 +15,7 @@ Find out more about signal processing related to image in [here](/computer-graph
 
 **Source : Various online resources that is included in each section**
 
-### All topics
+### All pages
 
 - [Signal](digital-signal-processing/signal)
 - Fourier Analysis

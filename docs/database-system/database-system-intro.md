@@ -8,6 +8,7 @@ description: Database System Notes
 **Main Source :**
 
 - **[Database - Wikipedia](https://en.wikipedia.org/wiki/Database)**
+- Some sources are from the book **Database Systems - The Complete Book (2nd Edition)**
 
 ### Introduction to Database
 
@@ -29,8 +30,6 @@ The purpose of having specific model is to suit with the application's requireme
 Source : https://medium.com/@saad.jameel1992/graph-vs-relational-databases-62ecc5902eb2
 
 ### All pages
-
-Some sources are from the book **Database Systems - The Complete Book (2nd Edition)**.
 
 - [Relational Data](database-system/relational-data)
 - [Query Language](database-system/query-language)

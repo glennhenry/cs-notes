@@ -12,7 +12,7 @@ description: Computer Networking Notes
 - **[PowerCert Networking Playlist](https://www.youtube.com/playlist?list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg)**
 - **[Wikipedia](https://www.wikipedia.org/)**
 
-### All topics
+### All pages
 
 - Network Standard
   - [OSI Model](computer-networking/osi-model)
