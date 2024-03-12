@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **19** topics, and a total of **421** notes.
+A total of **19** topics, and a total of **433** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
 
 1. [Digital Signal Processing](/digital-signal-processing) (**21** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -219,13 +219,31 @@ A total of **19** topics, and a total of **421** notes.
       - [Windows](operating-system/windows)
       - [Android](operating-system/android)
       - [macOS & iOS](operating-system/macos-and-ios)
-8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**5** subtopics)
-    - Computability Theory
+8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**17** subtopics)
+    - [TOC Fundamentals](theory-of-computation-and-automata/toc-fundamentals)
+    - [DFA & NFA](theory-of-computation-and-automata/dfa-and-nfa)
+    - [Regular Languages (Part 1)](theory-of-computation-and-automata/regular-languages-part-1)
+    - [Advanced Automata](theory-of-computation-and-automata/advanced-automata)
+    - [Regular Languages (Part 2)](theory-of-computation-and-automata/regular-languages-part-2)
+    - [Formal Grammar](theory-of-computation-and-automata/formal-grammar)
+    - [Derivation Trees](theory-of-computation-and-automata/derivation-trees)
+    - [CFG Simplification](theory-of-computation-and-automata/cfg-simplification)
+    - [NPDA](theory-of-computation-and-automata/npda)
+    - [PDA & CFG](theory-of-computation-and-automata/pda-and-cfg)
+    - [CFG Properties](theory-of-computation-and-automata/cfg-properties)
+    - [Turing Machine](theory-of-computation-and-automata/turing-machine)
+    - [Church-Turing Thesis](theory-of-computation-and-automata/church-turing-thesis)
+    - [Undecidability](theory-of-computation-and-automata/undecidability)
+    - [Chomsky Hierarchy](theory-of-computation-and-automata/chomsky-hierarchy)
+    - [Computability](theory-of-computation-and-automata/computability)
+    - [Complexity-Theory](theory-of-computation-and-automata/complexity-theory)
+9. [Programming Language Theory](/programming-language-theory) (**5** subtopics)
     - a
     - b
     - c
-    - turing machine, turing complete (difference with turing test)
-9. [Compilers](/compilers) (**11** subtopics)
+    - type system (primitive, complex object, generics)
+    - implementation of modern language features, such as OOP, threading, handling null, handling exception.
+10. [Compilers](/compilers) (**11** subtopics)
     - Compiliation Process
       1. preprocessing,
       2. lexical analysis,
@@ -237,12 +255,6 @@ A total of **19** topics, and a total of **421** notes.
     - Compiler Optimization
     - Decompilation
     - Building Process
-10. [Programming Language Theory](/programming-language-theory) (**5** subtopics)
-    - a
-    - b
-    - c
-    - type system (primitive, complex object, generics)
-    - implementation of modern language features, such as OOP, threading, handling null, handling exception.
 11. [Database System](/database-system) (**18** subtopics)
     - [Relational Data](database-system/relational-data)
     - [Query Language](database-system/query-language)
