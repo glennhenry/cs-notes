@@ -47,6 +47,10 @@ To be able to distinguish between record in a table, each record is associated w
 
 In a relational database, data is organized into table. A database may contain multiple table, each representing a specific entity within the database. Multiple table can be connected to together, this mean we are establishing a relationship between particular data across multiple tables.
 
+:::tip
+A relational model organizes data into separate tables, with each table capable of having relationships. In contrast, a **flat model**, that represents data in a spreadsheet-like format, consist only tables without relationships.
+:::
+
 The most common way to connect tables is by using primary key and **foreign key** relationships. A primary key in one table serves as a unique identifier for each record, and a foreign key in another table references that primary key to establish a relationship between the two tables.
 
 #### Example
