@@ -71,8 +71,8 @@ const order = [
   "Computer Organization & Architecture",
   "Operating System",
   "Theory of Computation & Automata",
-  "Compilers",
   "Programming Language Theory",
+  "Compilers",
   "Database System",
   "Computer Graphics",
   "Frontend Web Development",
@@ -119,7 +119,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **${introTopicsData.length}** topics, and a total of **${totalTopicsCount}** notes.
+A total of **${introTopicsData.length}** topics, and a total of **${totalTopicsCount}** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
 
 ${markdownContent}
 `
