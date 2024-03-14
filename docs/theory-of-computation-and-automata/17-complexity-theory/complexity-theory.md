@@ -10,3 +10,6 @@ description: Complexity-Theory
 - [] 
 
 Complexity-Theory page
+
+
+- https://en.wikipedia.org/wiki/Computational_complexity_theory
