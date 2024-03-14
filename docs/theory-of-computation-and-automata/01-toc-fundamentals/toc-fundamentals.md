@@ -10,6 +10,7 @@ description: TOC Fundamentals
 - **[Theory of computation - Wikipedia](https://en.wikipedia.org/wiki/Theory_of_computation)**
 - **[Finite state machine - Wikipedia](https://en.wikipedia.org/wiki/Finite-state_machine)**
 - **[Introduction to Theory of Computation - Neso Academy](https://youtu.be/58N2N7zJGrQ?si=ApDqs6e96kyBP1XJ)**
+- **[Finite State Machine (Prerequisites) - Neso Academy](https://youtu.be/TpIBUeyOuv8?si=FPa7InDywdw2YxoX)**
 
 ### Introduction
 
@@ -131,6 +132,14 @@ A string is a finite sequence of symbols chosen from a given alphabet. An alphab
 
   - $L_1 = \{w \in \{0, 1\}^* : w \text{ has an equal number of 0's and 1's}\}$. Language $L_1$ consist set of string that has the equal number of zeros and ones. For example, some strings that would belong to $L_1$ are "01", "0011", "1100", "000111", and so on.
   - $L_2 = \{w \in \Sigma^*: w = w^R\}$, where $w^R$ is the reverse string of $w$. This language consist of string where its original is equal to its reverse (i.e., a palindrome, such as racecar, poop.).
+
+- **Language with power** : A language with a power $\Sigma^n$, where $\Sigma = \{0, 1\}$ describe the set of all strings of length $n$ under language $\Sigma$.
+
+  - $\Sigma^0 = \{\epsilon \}$ (consist of just empty string).
+  - $\Sigma^1 = \{0, 1 \}$.
+  - and so on...
+
+  We can also write $\Sigma^*$, a set of all strings over an alphabet $\Sigma$ as $\Sigma^* = \Sigma^0 \cup \Sigma^1 \cup \Sigma^2 ...$ (infinite).
 
 - **Language concatenation** : If $L_1$ and $L_2$ are languages over alphabet $\Sigma$, their concatenation is written as $L = L_1 \cdot L_2$, or simply $L = L_1 L_2$, where $L = \{w \in \Sigma^*: w = x \cdot y \text{ for some } x \in L_1 \text{, and } y \in L_2\}$.
 
