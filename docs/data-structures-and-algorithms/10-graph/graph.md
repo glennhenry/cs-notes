@@ -20,6 +20,12 @@ description: Graph
 
 ![Graph terminology](./graph-terminology.png)
 
+- **Degree** : The number of edges incident to a vertex.
+- **Path** : A sequence of vertices connected by edges, where each vertex in the path is adjacent to the next vertex. The length of a path is the number of edges it contains.
+- **Cycle/Loop** : A closed path in a graph that starts and ends at the same vertex. It consists of at least three vertices and at least three edges.
+- **Circuit** : A circuit is a closed path in a graph that may or may not repeat vertices or edges. It starts and ends at the same vertex, but it may traverse some edges multiple times.
+- **Euler Path/Circuit** : An Euler path is a path in a graph that visits every edge exactly once. An Euler circuit is a closed path that visits every edge exactly once and starts and ends at the same vertex. In other words, an Euler circuit is an Euler path that covers all the vertices of the graph.
+
 ### Types of Graph
 
 Graph can be classified based on various characteristics :
@@ -28,11 +34,15 @@ Graph can be classified based on various characteristics :
 
 A graph where its edges have a specific direction, indicating a one-way relationship between nodes. The edges can be traversed only in the direction specified by the edge.
 
+In a directed graph, the degree is divided into the indegree (number of incoming edges) and the outdegree (number of outgoing edges) of the vertex.
+
 #### Undirected
 
 The opposite of directed, its edges have no specific direction and represent a two-way relationship between nodes. The edges can be traversed in both directions.
 
 ![Directed vs undirected graph](./directed-undirected.png)
+
+In an undirected graph, the degree is simply the count of edges connected to the vertex.
 
 #### Weighted
 

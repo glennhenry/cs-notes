@@ -160,5 +160,4 @@ Excluding the [index page](/index).
 8. **[ref]** [/computer-security/reverse-engineering](/computer-security/reverse-engineering) -> ref to decompilation in compilers.
 9. **[ref]** [/software-engineering/other-architecture-patterns](/software-engineering/other-architecture-patterns) -> ref to state machine in theory-of-computation-and-automata.
 10. **[update]** /index -> add index page containing the list of all notes
-11. **[update]** [/data-structures-and-algorithms/graph](/data-structures-and-algorithms/graph) -> add more terminology about graphs.
-12. **[update]** [/backend-development/caching](/backend-development/caching) -> add more about caching.
+11. **[update]** [/backend-development/caching](/backend-development/caching) -> add more about caching.
