@@ -221,7 +221,7 @@ A total of **19** topics, and a total of **433** notes (may not be accurate for 
       - [macOS & iOS](operating-system/macos-and-ios)
 8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**17** subtopics)
     - [TOC Fundamentals](theory-of-computation-and-automata/toc-fundamentals)
-    - [DFA & NFA](theory-of-computation-and-automata/dfa-and-nfa)
+    - [Finite Automata](theory-of-computation-and-automata/finite-automata)
     - [Regular Languages (Part 1)](theory-of-computation-and-automata/regular-languages-part-1)
     - [Advanced Automata](theory-of-computation-and-automata/advanced-automata)
     - [Regular Languages (Part 2)](theory-of-computation-and-automata/regular-languages-part-2)
