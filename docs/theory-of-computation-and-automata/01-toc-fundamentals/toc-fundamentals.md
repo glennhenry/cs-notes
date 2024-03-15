@@ -127,7 +127,7 @@ A string is a finite sequence of symbols chosen from a given alphabet. An alphab
 
 - **Prefix** : Substring that appears at the beginning of the string. If $w = vy$ for some $y$, then $v$ is a suffix of $w$.
 - **Suffix** : Substring that appears at the end of the string. If $w = xv$ for some $x$, then $v$ is a prefix of $w$.
-- **Lexicographical ordering** : Lexicographical ordering is a way to compare strings based on their alphabetical order. For example, "apple" comes before "banana" and "01" comes before "10" in lexicographical ordering. The lexicographic ordering of all strings over the alphabet $\{0, 1\}$ is $(\in, 0, 1, 00, 01, 10, 11, 000, ...)$.
+- **Lexicographical ordering** : Lexicographical ordering is a way to compare strings based on their alphabetical order. For example, "apple" comes before "banana" and "01" comes before "10" in lexicographical ordering. The lexicographic ordering of all strings over the alphabet $\{0, 1\}$ is $(\epsilon, 0, 1, 00, 01, 10, 11, 000, ...)$.
 - **Language** : Formally, it is any set of strings over an alphabet. The set of all strings, including the empty string over an alphabet $\Sigma$ is denoted as $\Sigma^*$. A language can consist of string that follows some property. Examples :
 
   - $L_1 = \{w \in \{0, 1\}^* : w \text{ has an equal number of 0's and 1's}\}$. Language $L_1$ consist set of string that has the equal number of zeros and ones. For example, some strings that would belong to $L_1$ are "01", "0011", "1100", "000111", and so on.
