@@ -1,17 +1,17 @@
 ---
-slug: /theory-of-computation-and-automata/dfa-and-nfa
-id: dfa-and-nfa
-title: DFA & NFA
-description: DFA & NFA
+slug: /theory-of-computation-and-automata/finite-automata
+id: finite-automata
+title: Finite Automata
+description: Finite Automata
 ---
 
 **Main Source :**
 
 - **[Introduction to Theory of Computation - Neso Academy](https://youtu.be/58N2N7zJGrQ?si=ApDqs6e96kyBP1XJ)**
 
-### Finite Automata
+### Finite State Machine
 
-Finite automata, or a finite state machine (FSM) is a mathematical, and the simplest model of computation. It is an abstract machine that consist of finite number of states and transitions between those states. The transitions between states is the response of the machine when taking certain input.
+**Finite state machine (FSM)** is a mathematical, and the simplest model of computation. It is an abstract machine that consist of finite number of states and transitions between those states. The transitions between states is the response of the machine when taking certain input.
 
 Components of FSM :
 

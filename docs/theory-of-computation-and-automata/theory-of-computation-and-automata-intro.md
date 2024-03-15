@@ -13,7 +13,7 @@ description: Theory of Computation & Automata Notes
 ### All pages
 
 - [TOC Fundamentals](theory-of-computation-and-automata/toc-fundamentals)
-- [DFA & NFA](theory-of-computation-and-automata/dfa-and-nfa)
+- [Finite Automata](theory-of-computation-and-automata/finite-automata)
 - [Regular Languages (Part 1)](theory-of-computation-and-automata/regular-languages-part-1)
 - [Advanced Automata](theory-of-computation-and-automata/advanced-automata)
 - [Regular Languages (Part 2)](theory-of-computation-and-automata/regular-languages-part-2)

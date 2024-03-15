@@ -472,7 +472,7 @@ const sidebars = {
       },
       items: [
         "theory-of-computation-and-automata/toc-fundamentals/toc-fundamentals",
-        "theory-of-computation-and-automata/dfa-and-nfa/dfa-and-nfa",
+        "theory-of-computation-and-automata/finite-automata/finite-automata",
         "theory-of-computation-and-automata/regular-languages-part-1/regular-languages-part-1",
         "theory-of-computation-and-automata/advanced-automata/advanced-automata",
         "theory-of-computation-and-automata/regular-languages-part-2/regular-languages-part-2",
