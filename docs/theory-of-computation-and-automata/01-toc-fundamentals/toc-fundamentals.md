@@ -111,7 +111,7 @@ Formally, a graph $G$ is defined as a triple of $(V, E, \gamma)$, where $V$ is a
 ![Graph example](./graph-example.png)  
 Source : Book page 15
 
-See [graph](/data-structures-and-algorithms/graph) for terminologies and types of graph. In addition, we can say a graph a [tree](/data-structures-and-algorithms/tree) if it is connected and has no simple cycles.
+See [graph](/data-structures-and-algorithms/graph) for terminologies and types of graph. In addition, we can say a graph is a [tree](/data-structures-and-algorithms/tree) if it is connected and has no simple cycles.
 
 #### Strings & Languages
 
