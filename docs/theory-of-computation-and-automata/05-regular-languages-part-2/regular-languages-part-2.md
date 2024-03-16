@@ -17,3 +17,5 @@ Regular Languages (Part 2) page
 - pumping lemma for regular langauges
 - closure properties
 - Myhill Node Theorem
+- neso 25-26
+- neso 51-62
