@@ -10,7 +10,8 @@ description: Finite Automata
 - **[Introduction to Theory of Computation - Neso Academy](https://youtu.be/58N2N7zJGrQ?si=ApDqs6e96kyBP1XJ)**
 - **Neso Academy playlist 2-7**
 - **Neso Academy playlist 10-13**
-- **Neso Academy playlist 15-13**
+- **Neso Academy playlist 15-19**
+- **Neso Academy playlist 20-24**
 
 In automata theory, an **automaton** is an abstract model of digital computer. Automaton consist of several components which vary depending on the type of automaton.
 
@@ -212,3 +213,56 @@ Source : https://youtu.be/i-fk9o46oVY?si=Afuzhcyp8GXaT6XW&t=697
 By combining two states, all possible transitions are merged to effectively represent the behavior of the original NFA. In the original NFA, upon receiving input "a" in state $A$, it can transition to either $A$ or $B$. Thus, a new state called $AB$ is created to represent both states $A$ and $B$. The new state $AB$ will transition to itself with input "a", reflecting the possibility of transitioning from both $A$ and $B$ to either $A$ or $B$ (it is the same as doing union operation to both state).
 
 ### Minimization
+
+Minimization is the process of reducing the number of states in a DFA while preserving the language it recognizes. There are two main steps of minimizing DFA :
+
+1. Try inputting various combination of input and determine if there are states unreachable from the initial state. Typically, they are depicted if no arrow are directed to it. Unreachable states can be safely removed without affecting the DFA.
+
+   ![Unreachable state](./minimization-unreachable-state.png)  
+   Source : https://youtu.be/kYMqDgB2GbU?si=5Os46YAwi6tYSP_j&t=101
+
+2. Combining two states into one state if they are equivalent. Two states are considered equivalent if, for every input symbol, they transition to states in the same equivalence class.
+
+Specifically, two states are equivalent if :
+
+- $\delta(A, X) \rightarrow F$ and $\delta(B, X) \rightarrow F$, or
+- $\delta(A, X) \nrightarrow F$ and $\delta(B, X) \nrightarrow F$
+
+If both are able to transition to the final state with the same input string, or if both are unable to do so.
+
+If the length of string $|X| = n$, then $A$ and $B$ are said to be $n$ equivalent. For example, given an input string of length 4, and $A$ and $B$ exhibit the same behavior with the input, then they are said to be 4 equivalent.
+
+#### First example
+
+An example of DFA and its transition table :
+
+![Minimization example 1 part 1](./minimization-example-1-part-1.png)  
+Source : https://youtu.be/0XaGAkY09Wc?si=aYXQ8rokA9oRLbEY&t=471
+
+Next, we list the states in a set belonging to some equivalence group. If states belong to the same set within the equivalence group, it means they are equivalent.
+
+![Minimization example 1 part 2, equivalence set](./minimization-example-1-part-2.png)  
+Source : https://youtu.be/0XaGAkY09Wc?si=rPwa6mZpKVfUiPWW&t=718
+
+The purpose of representing states in sets based on their number of equivalence is to group together states with similar behavior, meaning states that transition to the same state with the same input. The intuition is that if they exhibit similar behavior, then we can group them together into a single state.
+
+At 0 equivalence, which signifies when receiving an input string of length 0, obviously $A$, $B$, $C$, and $D$ will be equivalent because they haven't received any input yet. $E$ is listed in a different set because it is the final state and does not meet the definition of two states being equivalent.
+
+At 1 equivalence, $A$, $B$, and $C$ exhibit the same behavior upon receiving any input 0 or 1. Although we see in the transition table, $B$ and $C$ is different on input 1, $C$ is still equivalent with $A$, so it's fine. While $D$ starts to be different with any of $A$, $B$, or $C$, so it is listed in different set.
+
+When two rows of different equivalence class are giving the same result (i.e., the 2 equivalence and 3 equivalence have the same set of states), then we can stop listing the equivalence.
+
+![Minimization example 1 part 3, the result](./minimization-example-1-part-3.png)  
+Source : https://youtu.be/0XaGAkY09Wc?si=JJbtZFijynhE7DeK&t=935
+
+And the above is the result, $A$ and $C$ are combined into new state called $AC$.
+
+#### Minimize by combining final states
+
+![Minimization example 2 part 1](./minimization-example-2-part-1.png)  
+Source : https://youtu.be/DV8cZp-2VmM?si=AElvyhBxDWbI4YHM&t=341
+
+The above is a DFA with multiple final states. After listing out the equivalence class, it turns out that the three final states are all equivalent, therefore, we can combine them all together.
+
+![Minimization example 2 part 2, the result](./minimization-example-2-part-2.png)  
+Source : https://youtu.be/DV8cZp-2VmM?si=f2Kx9Li0LJ7Dkh-F&t=530
