@@ -145,7 +145,7 @@ An NFA is defined with a 5-tuple : $M = (Q, \Sigma, \delta, q_0, F)$
 
 - $Q$ = Finite state of "internal states"
 - $\Sigma$ = Finite set of symbols called "input alphabet"
-- $\delta$ = DFA and NFA differs here, $\delta = Q \times (\Sigma \cup \{\lambda\}) \rightarrow 2^Q$. In other words, for a given state and input symbol (or epsilon transition, can be denoted by $\lambda$ or $\epsilon$), the transition function can have multiple possible outcomes, and will take any subset from the powerset $2^Q$. In contrast, a DFA transition state only returns a set containing one state.
+- $\delta$ = DFA and NFA differs here, $\delta = Q \times \Sigma \rightarrow 2^Q$. In other words, for a given state and input symbol (or epsilon transition, can be denoted by $\lambda$ or $\epsilon$), the transition function can have multiple possible outcomes, and will take any subset from the powerset $2^Q$. In contrast, a DFA transition state only returns a set containing one state.
 - $q_0 \in Q$ = Initial state
 - $F \subseteq Q$ = Set of final states.
 
