@@ -11,6 +11,8 @@ description: Regular Languages (Part 2)
 
 Regular Languages (Part 2) page
 
+### Formal definition of automata with regular language
+
 - NFA to regular language
 - regular language to NFA
 - properties regular sets
@@ -19,3 +21,4 @@ Regular Languages (Part 2) page
 - Myhill Node Theorem
 - neso 25-26
 - neso 51-62
+- book 145, 146, 17, 18, 19, 110
