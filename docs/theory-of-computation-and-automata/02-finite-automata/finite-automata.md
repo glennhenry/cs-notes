@@ -8,6 +8,7 @@ description: Finite Automata
 **Main Source :**
 
 - **[Introduction to Theory of Computation - Neso Academy](https://youtu.be/58N2N7zJGrQ?si=ApDqs6e96kyBP1XJ)**
+- **Book chapter 1.0 - 1.3**
 - **Neso Academy playlist 2-7**
 - **Neso Academy playlist 10-13**
 - **Neso Academy playlist 15-19**

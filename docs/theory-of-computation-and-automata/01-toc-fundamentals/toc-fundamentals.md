@@ -8,6 +8,7 @@ description: TOC Fundamentals
 **Main Source :**
 
 - **[Theory of computation - Wikipedia](https://en.wikipedia.org/wiki/Theory_of_computation)**
+- **Book chapter 0**
 - **[Finite state machine - Wikipedia](https://en.wikipedia.org/wiki/Finite-state_machine)**
 - **[Introduction to Theory of Computation - Neso Academy](https://youtu.be/58N2N7zJGrQ?si=ApDqs6e96kyBP1XJ)**
 - **[Finite State Machine (Prerequisites) - Neso Academy](https://youtu.be/TpIBUeyOuv8?si=FPa7InDywdw2YxoX)**
