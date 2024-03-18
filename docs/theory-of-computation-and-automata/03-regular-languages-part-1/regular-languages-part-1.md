@@ -24,9 +24,13 @@ With alphabet $\Sigma$, the class of regular languages over $\Sigma$ is defined 
 5. If $L$ is a regular language, then so is $L^*$.
 6. Nothing else is a regular language unless its construction follows from rules (1) to (5).
 
-We can also say regular language is closed under these three operations. Suppose we say that regular languages is "closed under union," it means that if we take any two languages from that class and perform a union operation on them, the resulting language will also belong to the same class.
-
 So, a regular language can be constructed using the three mentioned operations, including any symbol, and the empty set is also considered a regular language.
+
+#### Closure Properties
+
+If an operation is said to have **closure** property, it means that performing the operation on members of the set should yield a result that is also a member of the set. For example, addition in the set of integers own the closure property, because adding two integers will always result in another integer. This is not the case for division, as it might result in fraction.
+
+In regular language, operation that owns closure property are union, concatenation, intersection, set difference, complementation, and Kleene star.
 
 ### Regular Expression
 
