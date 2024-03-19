@@ -180,3 +180,7 @@ Consider a grammar $G = (V, T, S, P)$ and $L(G) = \{w \in T^* : S \xRightarrow{*
 If a string $W$ belong to the grammar, or $W \in L(G)$, then there exists a sequence $S \Rightarrow w_1 \Rightarrow w_2 \Rightarrow w_3 ... \Rightarrow w_n \Rightarrow w$, which is a sequence of production rule applications (or a derivation) that transforms the start symbol $S$ into the string $w$.
 
 During the derivation process, we call intermediate strings produced a **sentential form**. Therefore, with the string $S$, we call $w_1, w_2, ..., w_n$ a sentential form of the derivation.
+
+:::tip
+See also [Formal grammar](/theory-of-computation-and-automata/formal-grammar).
+:::
