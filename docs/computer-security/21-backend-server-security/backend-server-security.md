@@ -47,7 +47,7 @@ Some strategy used to protect backend system :
 - **Rate Limiting** : A technique which will limit API request per time interval, this can help prevent DDoS attack.
 - **Sanitizing Input** : Make sure to always validate the input field in your application, make sure it doesn't contain exploitable character to be safe from injection attack like XSS or SQL injection.
 - **Data Encryption** : Encrypt sensitive data stored in database, communication may also use [secure protocol](/computer-networking/network-encryption) such as [HTTPS](/computer-networking/http-https#https).
-- **Port Blocking** :
+- **Port Blocking** : When connecting to a specific computer, we typically connect through a designated port number. Similar to physical ports on electronic devices serving as entry points for external devices, connecting to a specific port number allows us to select the desired service. Port blocking involve blocking specific port numbers, thus preventing outgoing network traffic to those ports.
 - **Content Security Policy (CSP)** : A security mechanism implemented by web browsers to mitigate the risk of certain types of web-based attacks. CSP works by specifying a whitelist of trusted sources for various types of content, such as scripts, stylesheets, images, fonts, and frames. For example :
 
   - `default-src` Specifies the default source for all types of content if a specific directive is not specified.
