@@ -10,7 +10,7 @@ description: Formal Grammar
 - **Book chapter 2.1**
 - **Neso Academy playlist 63-65**
 
-**Formal Grammar** is the formalization of grammar, which is the rules to describe languages. There are many types of formal grammar, the types of grammar based on [Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky) are regular grammar, context-free grammar, context-sensitive grammar, and unrestricted grammar.
+**Formal Grammar** is the formalization of grammar, which is the rules to describe languages. There are many types of formal grammar, the types of grammar based on [Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky) are regular grammar, [context-free grammar](/theory-of-computation-and-automata/context-free-grammar), context-sensitive grammar, and unrestricted grammar.
 
 ![Type of grammar](./type-of-grammar.png)  
 Source : https://youtu.be/WgEsPTAL55Q?si=4LOZ1qtkL1hunWmf&t=70
@@ -68,23 +68,4 @@ The "/" in the notation $S \rightarrow A/a$ is a shorthand to describe two $S \r
 
 ### Context-Free Grammar
 
-Context-free grammar generates context-free language, which is recognized by [pushdown automata](/theory-of-computation-and-automata/pda-and-cfg). The production rule is :
-
-$A \rightarrow \alpha$, where $\alpha = \{V \cup \Sigma^*\}$ and $A \in V$.
-
-Similar to [normal](#grammar) and [regular grammar](#regular-grammar) ($\{V \cup \Sigma^*\}$ is equivalent with $\{V \cup T\}$), a non-terminal symbol can produce $\alpha$ which can be any symbol from the set of all possible strings of symbols that can be generated using both the non-terminal symbols and the terminal symbols of the grammar, including the empty string.
-
-:::info
-From different sources, $T$ is sometimes used as $\Sigma$.
-:::
-
-The difference between regular grammar and context-free grammar lies in the production rules. Regular grammar is more restrictive, as the production rule must place non-terminal symbols either on the right or left side (i.e., non-terminals cannot be placed in the middle of the string). In contrast, context-free grammar allows the placement of non-terminals anywhere.
-
-For example, the grammar $G = \{(S, A), (a, b), (S \rightarrow aAb, A \rightarrow aAb/ \epsilon)\}$ is considered as a context-free grammar.
-
-We can generate : $S \rightarrow aAb$  
-$\rightarrow aaAbb$ (by $A \rightarrow aAb$)  
-$\rightarrow aaaAbbb$ (by $A \rightarrow aAb$)  
-$\rightarrow aaabbb$ (by $A \rightarrow \epsilon$)
-
-The language of this grammar will be in the form of $a^n b^n$.
+See the [next topic](/theory-of-computation-and-automata/context-free-grammar).

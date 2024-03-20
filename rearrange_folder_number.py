@@ -5,7 +5,7 @@
 
 import os
 
-base_path = "D:\\Programming\\Projects\\cs-notes\\docs\\cloud-computing-and-distributed-systems"
+base_path = "D:\\Programming\\Projects\\cs-notes\\docs\\theory-of-computation-and-automata"
 folders = os.listdir(base_path)
 
 for num, folder_name in enumerate(folders) :
