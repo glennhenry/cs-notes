@@ -78,7 +78,7 @@ Similar to [normal](#grammar) and [regular grammar](#regular-grammar) ($\{V \cup
 From different sources, $T$ is sometimes used as $\Sigma$.
 :::
 
-The difference between regular grammar and context-free grammar lies in the production rules. Regular grammar is more restrictive, as the production rule must place non-terminal symbols either on the right or left side (i.e., non-terminals cannot be placed in the middle of the string).
+The difference between regular grammar and context-free grammar lies in the production rules. Regular grammar is more restrictive, as the production rule must place non-terminal symbols either on the right or left side (i.e., non-terminals cannot be placed in the middle of the string). In contrast, context-free grammar allows the placement of non-terminals anywhere.
 
 For example, the grammar $G = \{(S, A), (a, b), (S \rightarrow aAb, A \rightarrow aAb/ \epsilon)\}$ is considered as a context-free grammar.
 
@@ -88,7 +88,3 @@ $\rightarrow aaaAbbb$ (by $A \rightarrow aAb$)
 $\rightarrow aaabbb$ (by $A \rightarrow \epsilon$)
 
 The language of this grammar will be in the form of $a^n b^n$.
-
-#### Right grammar
-
-#### Left grammar
