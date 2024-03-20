@@ -53,7 +53,7 @@ Regular grammar is the grammar that describes [regular language](/theory-of-comp
 
 #### Left & Right Grammar
 
-The formal description of regular grammar is same as [normal grammar](#grammar), except the production rule follows either left or right types of grammar. With $A$, $B \in V$ and $x \in T$, right and left grammar is in the form :
+The formal description of regular grammar is same as the [general grammar](#grammar), except the production rule follows either left or right types of grammar. With $A$, $B \in V$ and $x \in T$, right and left grammar is in the form :
 
 - **Right linear grammar** : $A \rightarrow xB/x$, example $S \rightarrow abS/b$.
 - **Left linear grammar** : $A \rightarrow Bx/x$, example $S \rightarrow Sbb/b$.
