@@ -477,7 +477,7 @@ const sidebars = {
         "theory-of-computation-and-automata/advanced-automata/advanced-automata",
         "theory-of-computation-and-automata/regular-languages-part-2/regular-languages-part-2",
         "theory-of-computation-and-automata/formal-grammar/formal-grammar",
-        "theory-of-computation-and-automata/derivation-trees/derivation-trees",
+        "theory-of-computation-and-automata/derivation/derivation",
         "theory-of-computation-and-automata/cfg-simplification/cfg-simplification",
         "theory-of-computation-and-automata/npda/npda",
         "theory-of-computation-and-automata/pda-and-cfg/pda-and-cfg",

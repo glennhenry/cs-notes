@@ -18,7 +18,7 @@ description: Theory of Computation & Automata Notes
 - [Advanced Automata](theory-of-computation-and-automata/advanced-automata)
 - [Regular Languages (Part 2)](theory-of-computation-and-automata/regular-languages-part-2)
 - [Formal Grammar](theory-of-computation-and-automata/formal-grammar)
-- [Derivation Trees](theory-of-computation-and-automata/derivation-trees)
+- [Derivation](theory-of-computation-and-automata/derivation)
 - [CFG Simplification](theory-of-computation-and-automata/cfg-simplification)
 - [NPDA](theory-of-computation-and-automata/npda)
 - [PDA & CFG](theory-of-computation-and-automata/pda-and-cfg)
