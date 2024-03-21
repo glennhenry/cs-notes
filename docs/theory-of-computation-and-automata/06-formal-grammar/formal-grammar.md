@@ -8,7 +8,7 @@ description: Formal Grammar
 **Main Source :**
 
 - **Book chapter 2.1**
-- **Neso Academy playlist 63-65**
+- **Neso Academy playlist 63-64**
 
 **Formal Grammar** is the formalization of grammar, which is the rules to describe languages. There are many types of formal grammar, the types of grammar based on [Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky) are regular grammar, [context-free grammar](/theory-of-computation-and-automata/context-free-grammar), context-sensitive grammar, and unrestricted grammar.
 
@@ -55,15 +55,15 @@ Regular grammar is the grammar that describes [regular language](/theory-of-comp
 
 The formal description of regular grammar is same as the [general grammar](#grammar), except the production rule follows either left or right types of grammar. With $A$, $B \in V$ and $x \in T$, right and left grammar is in the form :
 
-- **Right linear grammar** : $A \rightarrow xB/x$, example $S \rightarrow abS/b$.
-- **Left linear grammar** : $A \rightarrow Bx/x$, example $S \rightarrow Sbb/b$.
+- **Right linear grammar** : $A \rightarrow xB|x$, example $S \rightarrow abS|b$.
+- **Left linear grammar** : $A \rightarrow Bx|x$, example $S \rightarrow Sbb|b$.
 
 In right grammar, the production rule places non-terminal symbols on the right, while in a left grammar, it is the opposite.
 
 Additionally,
 
 :::info
-The "/" in the notation $S \rightarrow A/a$ is a shorthand to describe two $S \rightarrow A$ and $S \rightarrow a$.
+The "|" in the notation $S \rightarrow A|a$ is a shorthand to describe two $S \rightarrow A$ and $S \rightarrow a$.
 :::
 
 ### Context-Free Grammar
