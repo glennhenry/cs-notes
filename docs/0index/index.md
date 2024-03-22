@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **19** topics, and a total of **433** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
+A total of **19** topics, and a total of **432** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
 
 1. [Digital Signal Processing](/digital-signal-processing) (**21** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -219,15 +219,14 @@ A total of **19** topics, and a total of **433** notes (may not be accurate for 
       - [Windows](operating-system/windows)
       - [Android](operating-system/android)
       - [macOS & iOS](operating-system/macos-and-ios)
-8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**17** subtopics)
+8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**16** subtopics)
     - [TOC Fundamentals](theory-of-computation-and-automata/toc-fundamentals)
     - [Finite Automata](theory-of-computation-and-automata/finite-automata)
     - [Regular Languages (Part 1)](theory-of-computation-and-automata/regular-languages-part-1)
     - [Advanced Automata](theory-of-computation-and-automata/advanced-automata)
     - [Regular Languages (Part 2)](theory-of-computation-and-automata/regular-languages-part-2)
     - [Formal Grammar](theory-of-computation-and-automata/formal-grammar)
-    - [Derivation Trees](theory-of-computation-and-automata/derivation-trees)
-    - [CFG Simplification](theory-of-computation-and-automata/cfg-simplification)
+    - [Context-Free Grammar](theory-of-computation-and-automata/context-free-grammar)
     - [NPDA](theory-of-computation-and-automata/npda)
     - [PDA & CFG](theory-of-computation-and-automata/pda-and-cfg)
     - [CFG Properties](theory-of-computation-and-automata/cfg-properties)
