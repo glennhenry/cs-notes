@@ -7,7 +7,9 @@ description: Pushdown Automata
 
 **Main Source :**
 
-- []
+- Book chapter 3.1, 3.2
+- Neso Academy playlist 85-90
+- Neso Academy playlist 91-93
 
 ### PDA
 
