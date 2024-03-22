@@ -13,7 +13,7 @@ description: Context-Free Grammar
 - **Neso Academy playlist 78-81**
 - **Neso Academy playlist 82-83**
 
-Context-free grammar is the grammar that generates context-free language, which is recognized by [pushdown automata](/theory-of-computation-and-automata/pda-and-cfg). The production rule is :
+Context-free grammar is the grammar that generates context-free language, which is recognized by [pushdown automata](/theory-of-computation-and-automata/pushdown-automata). The production rule is :
 
 $A \rightarrow \alpha$, where $\alpha = \{V \cup \Sigma^*\}$ and $A \in V$.
 

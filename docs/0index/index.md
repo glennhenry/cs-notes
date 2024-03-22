@@ -227,7 +227,7 @@ A total of **19** topics, and a total of **430** notes (may not be accurate for 
     - [Regular Languages (Part 2)](theory-of-computation-and-automata/regular-languages-part-2)
     - [Formal Grammar](theory-of-computation-and-automata/formal-grammar)
     - [Context-Free Grammar](theory-of-computation-and-automata/context-free-grammar)
-    - [Pushdown Automata](theory-of-computation-and-automata/npda)
+    - [Pushdown Automata](theory-of-computation-and-automata/pushdown-automata)
     - [Turing Machine](theory-of-computation-and-automata/turing-machine)
     - [Church-Turing Thesis](theory-of-computation-and-automata/church-turing-thesis)
     - [Undecidability](theory-of-computation-and-automata/undecidability)
