@@ -11,6 +11,11 @@ description: Turing Machine
 
 Turing Machine page
 
-- turing test, turing complete for addition
 - nondeterministic turing machine
 - modification
+
+### Nondeterministic Turing Machine
+
+### Modification
+
+### Church-Turing Thesis

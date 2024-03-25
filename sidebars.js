@@ -480,7 +480,6 @@ const sidebars = {
         "theory-of-computation-and-automata/context-free-grammar/context-free-grammar",
         "theory-of-computation-and-automata/pushdown-automata/pushdown-automata",
         "theory-of-computation-and-automata/turing-machine/turing-machine",
-        "theory-of-computation-and-automata/church-turing-thesis/church-turing-thesis",
         "theory-of-computation-and-automata/undecidability/undecidability",
         "theory-of-computation-and-automata/chomsky-hierarchy/chomsky-hierarchy",
         "theory-of-computation-and-automata/computability/computability",

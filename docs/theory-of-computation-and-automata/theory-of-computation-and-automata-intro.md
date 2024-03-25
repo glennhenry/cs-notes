@@ -21,7 +21,6 @@ description: Theory of Computation & Automata Notes
 - [Context-Free Grammar](theory-of-computation-and-automata/context-free-grammar)
 - [Pushdown Automata](theory-of-computation-and-automata/pushdown-automata)
 - [Turing Machine](theory-of-computation-and-automata/turing-machine)
-- [Church-Turing Thesis](theory-of-computation-and-automata/church-turing-thesis)
 - [Undecidability](theory-of-computation-and-automata/undecidability)
 - [Chomsky Hierarchy](theory-of-computation-and-automata/chomsky-hierarchy)
 - [Computability](theory-of-computation-and-automata/computability)
