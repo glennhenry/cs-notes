@@ -382,7 +382,6 @@ const sidebars = {
             },
           ],
         },
-        "data-structures-and-algorithms/complexity-theory/complexity-theory",
       ],
     },
 

@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **19** topics, and a total of **427** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
+A total of **19** topics, and a total of **426** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
 
 1. [Digital Signal Processing](/digital-signal-processing) (**21** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -143,7 +143,7 @@ A total of **19** topics, and a total of **427** notes (may not be accurate for 
     - [Network Security](computer-networking/network-security)
     - [Network Encryption](computer-networking/network-encryption)
     - [Networking Command](computer-networking/networking-command)
-5. [Data Structures & Algorithms](/data-structures-and-algorithms) (**33** subtopics)
+5. [Data Structures & Algorithms](/data-structures-and-algorithms) (**32** subtopics)
     - [Analysis of Algorithms](data-structures-and-algorithms/analysis-of-algorithms)
     - Data Structures
       - [Array](data-structures-and-algorithms/array)
@@ -176,7 +176,6 @@ A total of **19** topics, and a total of **427** notes (may not be accurate for 
           - [Union Find](data-structures-and-algorithms/union-find)
           - [Topological Sort](data-structures-and-algorithms/topological-sort)
           - [Minimum Spanning Tree](data-structures-and-algorithms/minimum-spanning-tree)
-    - [Complexity Theory](data-structures-and-algorithms/complexity-theory)
 6. [Computer Organization & Architecture](/computer-organization-and-architecture) (**15** subtopics)
     - [COA Fundamentals](computer-organization-and-architecture/coa-fundamentals)
     - [Boolean Logic](computer-organization-and-architecture/boolean-logic)

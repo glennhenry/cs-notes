@@ -41,4 +41,3 @@ Before this, you might see [an introduction to Data Structures and Algorithms](/
       - [Union Find](data-structures-and-algorithms/union-find)
       - [Topological Sort](data-structures-and-algorithms/topological-sort)
       - [Minimum Spanning Tree](data-structures-and-algorithms/minimum-spanning-tree)
-- [Complexity Theory](data-structures-and-algorithms/complexity-theory)
