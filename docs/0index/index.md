@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **19** topics, and a total of **429** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
+A total of **19** topics, and a total of **427** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
 
 1. [Digital Signal Processing](/digital-signal-processing) (**21** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -219,7 +219,7 @@ A total of **19** topics, and a total of **429** notes (may not be accurate for 
       - [Windows](operating-system/windows)
       - [Android](operating-system/android)
       - [macOS & iOS](operating-system/macos-and-ios)
-8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**13** subtopics)
+8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**11** subtopics)
     - [TOC Fundamentals](theory-of-computation-and-automata/toc-fundamentals)
     - [Finite Automata](theory-of-computation-and-automata/finite-automata)
     - [Regular Languages (Part 1)](theory-of-computation-and-automata/regular-languages-part-1)
@@ -230,8 +230,6 @@ A total of **19** topics, and a total of **429** notes (may not be accurate for 
     - [Pushdown Automata](theory-of-computation-and-automata/pushdown-automata)
     - [Turing Machine](theory-of-computation-and-automata/turing-machine)
     - [Undecidability](theory-of-computation-and-automata/undecidability)
-    - [Chomsky Hierarchy](theory-of-computation-and-automata/chomsky-hierarchy)
-    - [Computability](theory-of-computation-and-automata/computability)
     - [Complexity-Theory](theory-of-computation-and-automata/complexity-theory)
 9. [Programming Language Theory](/programming-language-theory) (**5** subtopics)
     - a

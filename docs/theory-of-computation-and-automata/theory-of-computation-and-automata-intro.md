@@ -22,5 +22,4 @@ description: Theory of Computation & Automata Notes
 - [Pushdown Automata](theory-of-computation-and-automata/pushdown-automata)
 - [Turing Machine](theory-of-computation-and-automata/turing-machine)
 - [Undecidability](theory-of-computation-and-automata/undecidability)
-- [Computability](theory-of-computation-and-automata/computability)
 - [Complexity-Theory](theory-of-computation-and-automata/complexity-theory)
