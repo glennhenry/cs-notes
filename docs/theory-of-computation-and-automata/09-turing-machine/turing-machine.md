@@ -12,6 +12,7 @@ description: Turing Machine
 - **Neso Academy playlist 101-105**
 - **Neso Academy playlist 99**
 - **[Church–Turing thesis - Wikipedia](https://en.wikipedia.org/wiki/Church–Turing_thesis)**
+- **Neso Academy playlist 108**
 
 ### Turing Machine
 
@@ -186,5 +187,5 @@ Source : https://youtu.be/0D7yInuKvKs?si=DmhXS_NOnGgAYbWt&t=774
 1. **Regular Language** : These languages are represented by [regular grammar](/theory-of-computation-and-automata/formal-grammar#regular-grammar) and can be recognized by [finite automata](/theory-of-computation-and-automata/finite-automata).
 2. **Context-Free Language** : Recognized by [pushdown automata](/theory-of-computation-and-automata/pushdown-automata), represented by [context-free grammar](/theory-of-computation-and-automata/context-free-grammar).
 3. **Decidable or Recursive Language** : This language can be recognized by a Turing machine, but the machine will always halt on any input. For example, it is always possible to determine if a string belongs to a recursive language, such as giving a "yes" or "no" answer.
-4. **Turing Recognizable or Recursively Enumerable Language** : Can also be recognized by a Turing machine, but the machine may or may not halt on all inputs. For strings not belonging to the language, the Turing machine may either reject or run indefinitely without halting.
+4. **Partially Decidable or Recursively Enumerable Language** : It is also known as Turing recognizable, but the machine may or may not halt on all inputs. For strings not belonging to the language, the Turing machine may either reject them or run indefinitely without halting.
 5. **Undecidable** : Additionally, anything outside the scope of the previous language is not recognized by the Turing machine, and the machine always halts for any inputs. One example of undecidable language is the [Halting Problem](/theory-of-computation-and-automata/undecidability#halting-problem) (see next notes).
