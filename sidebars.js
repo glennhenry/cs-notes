@@ -481,7 +481,6 @@ const sidebars = {
         "theory-of-computation-and-automata/pushdown-automata/pushdown-automata",
         "theory-of-computation-and-automata/turing-machine/turing-machine",
         "theory-of-computation-and-automata/undecidability/undecidability",
-        "theory-of-computation-and-automata/chomsky-hierarchy/chomsky-hierarchy",
         "theory-of-computation-and-automata/computability/computability",
         "theory-of-computation-and-automata/complexity-theory/complexity-theory",
       ],

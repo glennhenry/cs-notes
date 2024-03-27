@@ -10,7 +10,11 @@ description: Formal Grammar
 - **Book chapter 2.1**
 - **Neso Academy playlist 63-64**
 
-**Formal Grammar** is the formalization of grammar, which is the rules to describe languages. There are many types of formal grammar, the types of grammar based on [Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky) are regular grammar, [context-free grammar](/theory-of-computation-and-automata/context-free-grammar), context-sensitive grammar, and unrestricted grammar.
+**Formal Grammar** is the formalization of grammar, which is the rules to describe languages.
+
+### Chomsky Hierarchy
+
+There are many types of formal grammar, the types of grammar based on [Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky) are [regular grammar](#regular-grammar), [context-free grammar](/theory-of-computation-and-automata/context-free-grammar), context-sensitive grammar, and unrestricted grammar.
 
 ![Type of grammar](./type-of-grammar.png)  
 Source : https://youtu.be/WgEsPTAL55Q?si=4LOZ1qtkL1hunWmf&t=70
