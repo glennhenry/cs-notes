@@ -7,7 +7,7 @@ description: Turing Machine
 
 **Main Source :**
 
-- **Book chapter 4.1, 4.2, 4.3, 4.4**
+- **Book chapter 4.1, 4.2, 4.3, 4.4, 5.2**
 - **Neso Academy playlist 94-98**
 - **Neso Academy playlist 101-105**
 - **Neso Academy playlist 99**
@@ -43,6 +43,10 @@ Turing machine $M$ is a 7-tuple $(Q, \Sigma, \Gamma, \delta, q_0, \char"2423, F)
 
 :::tip
 We can also define the transition function as $\delta: Q \times \Sigma \rightarrow Q \times \Sigma \times \{L, R\}$, as $\Gamma$ is the tape symbols that includes input symbols $\Sigma$.
+:::
+
+:::info
+Linear bounded automaton, the automaton that accepts context-sensitive grammar in the [Chomsky hierarchy](/theory-of-computation-and-automata/formal-grammar#chomsky-hierarchy), is not explained in this note. It is essentially a [Turing machine](/theory-of-computation-and-automata/turing-machine) with finite-length tape. The number of cell in the tape is $\alpha \times n$, where $\alpha$ is some constant associated with the Turing machine, and $n$ is the length of input string.
 :::
 
 #### Rules
