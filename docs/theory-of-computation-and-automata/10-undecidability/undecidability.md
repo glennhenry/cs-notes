@@ -41,7 +41,7 @@ A more realistic description of this problem would be :
 
 The answer is **NO**. One proof of this problem is the proof by contradiction.
 
-#### Proof
+#### Halting Problem Proof
 
 Let us assume that there exists such program, call that program $H(P, I)$, where $P$ is the program, and $I$ is the input. This program can produce "Halt" or "Not halt" depending on the result.
 
@@ -90,7 +90,7 @@ We can also represent PCP in simpler way, making only limited symbols, such as "
 
 Some of PCP problem can be solved, but not all in general. It is possible that a program that is supposed to solve PCP infinitely loops trying to match the sequence of domino. We won't know whether the program is "still trying" or whether the particular PCP is just unsolvable.
 
-#### Proof
+#### PCP Proof
 
 The undecidability of PCP involves making a program that can determine whether a solution to the PCP exists or not. To prove the undecidability of PCP, we will use a technique called **reduction**.
 
