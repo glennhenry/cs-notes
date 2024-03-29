@@ -68,7 +68,7 @@ Source : https://stackoverflow.com/a/59336002/18335183
 
 ### MVI
 
-**MVI (Model-View-Intent)** is an architectural pattern based on state machine, because a user interface can be thought as a predictable machine that has particular states. The state of UI can be updated through user interaction, which is modeled as **intent**.
+**MVI (Model-View-Intent)** is an architectural pattern based on a [state machine](/theory-of-computation-and-automata/finite-automata#finite-state-machine), because a user interface can be thought as a predictable machine that has particular states. The state of UI can be updated through user interaction, which is modeled as **intent**.
 
 In the actual implementation, we can still use a presenter or view model, as intent is just a form of coordination between the view and model.
 

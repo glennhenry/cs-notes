@@ -156,8 +156,5 @@ Excluding the [index page](/index).
 4. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#svd-compression -> add svd compression.
 5. **[add]** [/digital-media-processing](/digital-media-processing)/iso -> add ISO file format.
 6. **[update]** [/backend-development/websocket](/backend-development/websocket)#data-exchange -> add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
-7. **[ref]** [/data-structures-and-algorithms/complexity-theory](/data-structures-and-algorithms/complexity-theory) -> ref to Turing machine and other TOC related terms.
-8. **[ref]** [/computer-security/reverse-engineering](/computer-security/reverse-engineering) -> ref to decompilation in compilers.
-9. **[ref]** [/software-engineering/other-architecture-patterns](/software-engineering/other-architecture-patterns) -> ref to state machine in theory-of-computation-and-automata.
-10. **[update]** /index -> add index page containing the list of all notes
-11. **[update]** [/backend-development/caching](/backend-development/caching) -> add more about caching.
+7. **[ref]** [/computer-security/reverse-engineering](/computer-security/reverse-engineering) -> ref to decompilation in compilers.
+8. **[update]** [/backend-development/caching](/backend-development/caching) -> add more about caching.
