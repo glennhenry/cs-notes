@@ -22,8 +22,9 @@ function extractTopicList(filePath) {
         .substring(extractContentAfter + "### All pages".length)
         .trim();
       const topicsCount = topicsContent
-        .split("\n")
-        .filter((line) => line.trim().length > 0).length;
+        .split("\n") 
+        // A specific topic should be linked to a note, implies that it has "[name](/link-to-name)" for the link.
+        .filter((line) => line.trim().length > 0 && line.includes("[")).length;
       return {
         slug,
         title,

@@ -484,15 +484,7 @@ const sidebars = {
       ],
     },
 
-    // 9. Compilers
-    {
-      type: "category",
-      label: "Compilers",
-      link: { type: "doc", id: "compilers/compilers" },
-      items: [],
-    },
-
-    // 10. Programming Language Theory
+    // 9. Programming Language Theory
     {
       type: "category",
       label: "Programming Language Theory",
@@ -500,6 +492,28 @@ const sidebars = {
         type: "doc",
         id: "programming-language-theory/programming-language-theory",
       },
+      items: [
+        "programming-language-theory/plt-fundamentals/plt-fundamentals",
+        "programming-language-theory/syntax/syntax",
+        "programming-language-theory/names-binding-scoping/names-binding-scoping",
+        "programming-language-theory/semantic-analysis/semantic-analysis",
+        "programming-language-theory/target-architecture/target-architecture",
+        "programming-language-theory/control-flow/control-flow",
+        "programming-language-theory/data-types/data-types",
+        "programming-language-theory/subroutines/subroutines",
+        "programming-language-theory/data-abstraction/data-abstraction",
+        "programming-language-theory/functional-languages/functional-languages",
+        "programming-language-theory/logic-languages/logic-languages",
+        "programming-language-theory/concurrency/concurrency",
+        "programming-language-theory/implementation/implementation",
+      ],
+    },
+
+    // 10. Compilers
+    {
+      type: "category",
+      label: "Compilers",
+      link: { type: "doc", id: "compilers/compilers" },
       items: [],
     },
 

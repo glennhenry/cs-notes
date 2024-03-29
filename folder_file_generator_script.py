@@ -3,48 +3,40 @@
 
 import os
 
-topic_title = "theory-of-computation-and-automata"
+topic_title = "programming-language-theory"
 
 # List of content in kebab title
 content_id = [
-    "toc-fundamentals",
-    "dfa-and-nfa",
-    "regular-languages-part-1",
-    "advanced-automata",
-    "regular-languages-part-2",
-    "regular-grammar",
-    "derivation-trees",
-    "cfg-simplification",
-    "npda",
-    "pda-and-cfg",
-    "cfg-properties",
-    "turing-machine",
-    "church-turing-thesis",
-    "undecidability",
-    "chomsky-hierarchy",
-    "computability",
-    "complexity-theory",
+    "plt-fundamentals",
+    "syntax",
+    "names-binding-scoping",
+    "semantic-analysis",
+    "target-architecture",
+    "control-flow",
+    "data-types",
+    "subroutines",
+    "data-abstraction",
+    "functional-languages",
+    "logic-languages",
+    "concurrency",
+    "implementation"
 ]
 
 # List of content in title case
 content_title = [
-    "TOC Fundamentals",
-    "DFA & NFA",
-    "Regular Languages (Part 1)",
-    "Advanced Automata",
-    "Regular Languages (Part 2)",
-    "Regular Grammar",
-    "Derivation Trees",
-    "CFG Simplification",
-    "NPDA",
-    "PDA & CFG",
-    "CFG Properties",
-    "Turing Machine",
-    "Church-Turing Thesis",
-    "Undecidability",
-    "Chomsky Hierarchy",
-    "Computability",
-    "Complexity-Theory",
+    "PLT Fundamentals",
+    "Syntax",
+    "Names, Binding, Scoping",
+    "Semantic Analysis",
+    "Target Architecture",
+    "Control Flow",
+    "Data Types",
+    "Subroutines",
+    "Data Abstraction",
+    "Functional Languages",
+    "Logic Languages",
+    "Concurrency",
+    "Implementation"
 ]
 
 # Create temp folder for debugging
@@ -122,5 +114,5 @@ def generate_folder_file():
 if __name__ == "__main__":
     # generate_folder_file()
     # generate_topic_links()
-    generate_topic_sidebars()
+    # generate_topic_sidebars()
     pass
