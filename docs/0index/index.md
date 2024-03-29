@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **19** topics, and a total of **369** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
+A total of **19** topics, and a total of **371** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
 
 1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -299,18 +299,20 @@ A total of **19** topics, and a total of **369** notes (may not be accurate for 
     - [Computer Animation](computer-graphics/computer-animation)
     - [Physics-Based Animation](computer-graphics/physics-based-animation)
     - [Simulation](computer-graphics/simulation)
-13. [Frontend Web Development](/frontend-web-development) (**13** subtopics)
+13. [Frontend Web Development](/frontend-web-development) (**15** subtopics)
     - [HTML](frontend-web-development/html)
     - [HTML DOM](frontend-web-development/html-dom)
     - [CSS](frontend-web-development/css)
     - [Javascript](frontend-web-development/javascript)
     - [JSON](frontend-web-development/json)
     - [HTML + CSS + Javascript](frontend-web-development/html-css-javascript)
-    - [Browser](frontend-web-development/web-browser)
+    - [Web URL](frontend-web-development/web-url)
+    - [Web Browser](frontend-web-development/web-browser)
+    - [Search Engine](frontend-web-development/search-engine)
     - [Static & Dynamic Site](frontend-web-development/static-and-dynamic-site)
     - [Web Hosting](frontend-web-development/web-hosting)
-    - [NPM (Node Package Manager)](frontend-web-development/npm)
     - [Node JS](frontend-web-development/node-js)
+    - [NPM (Node Package Manager)](frontend-web-development/npm)
     - [React JS](frontend-web-development/react-js)
     - [Docker & Kubernetes](frontend-web-development/docker-and-kubernetes)
 14. [Backend Development](/backend-development) (**22** subtopics)
