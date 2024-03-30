@@ -62,7 +62,7 @@ See **[Concurrency Mechanism](/cloud-computing-and-distributed-systems/distribut
 
 ##### Consensus
 
-Consensus is a process of reaching agreement or a shared decision on a single value among a group of participants in a distributed system. A consensus algorithm must be fault-tolerant and capable of reaching a final decision even in the case of node failures.
+Consensus is a process of reaching agreement or a shared decision on a single value among a group of participants in a distributed system. By making decision, it can be anything from agreeing on specific  configurations, shared state, data value, order of operations, etc. A consensus algorithm must be fault-tolerant and capable of reaching a final decision even in the case of node failures.
 
 Properties of consensus algorithms that must be satisfied :
 
@@ -91,7 +91,9 @@ Paxos can be designed synchronously with fixed voting time or asynchronously. Bo
 
 ##### Leader Election
 
-Leader election is type of algorithm used to select a leader or coordinator among a group of nodes (also called processes) in a distributed system.
+A leader or coordinator in a distributed system coordinates the activities of other nodes. This includes  allocating resources, distributing tasks, monitoring their workload, detecting other nodes failures, and sometimes routing messages or requests from other nodes to the appropriate destinations.
+
+A leader may also fail, and the type of algorithm used to select a new leader among a group of nodes (also called processes) in a distributed system is called **leader election**.
 
 A leader election algorithm must satisfy following conditions :
 
