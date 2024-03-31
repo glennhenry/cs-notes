@@ -64,7 +64,7 @@ Virtualization level is the level of how depth is virtualization implemented in 
 
 - **Hardware Abstraction Level (HAL)** : This level implement the abstraction of hardware components to higher-level interface for software. It implements the device drivers and APIs that allow software to interact with hardware.
 
-- **Operating System Level** : This level implement the [operating system (OS)](/operating-system). The OS manages system resources, provides services to applications, and facilitates communication between software and hardware. It includes components such as the kernel, file system, memory management, process management, and device drivers.
+- **Operating System Level** : This level sits between the OS and application level. Multiple VM in this level shares a single OS with isolated resources.
 
 - **Library or API Level** : This level implements software libraries and frameworks that provide pre-built functions and modules to simplify application development.
 
