@@ -66,7 +66,7 @@ Virtualization level is the level of how depth is virtualization implemented in 
 
 - **Operating System Level** : This level sits between the OS and application level. Multiple VM in this level shares a single OS with isolated resources.
 
-- **Library or API Level** : This level implements software libraries and frameworks that provide pre-built functions and modules to simplify application development.
+- **Library or API Level** : Also known as **Application Binary Interface (ABI)**, this level implements software libraries or APIs that provide pre-built functions and modules to simplify application development. This will allow application to be run on different environment. Software calls that are supposed to be called on that environment are intercepted and translated into the implemented APIs.
 
 - **Application Level** : Also known as **process-level virtualization**, this level focuses on virtualizing specific applications or software frameworks. It allows applications to run in isolated environments, separate from the underlying operating system and other applications.
 
