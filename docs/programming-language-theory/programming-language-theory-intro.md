@@ -5,6 +5,10 @@ title: Programming Language Theory
 description: Programming Language Theory Notes
 ---
 
+:::tip
+Recommend taking a look at [theory of computation and automata](/theory-of-computation-and-automata) first.
+:::
+
 **Main Source** :
 
 - **Programming Language Pragmatics - Michael L. Scott**
