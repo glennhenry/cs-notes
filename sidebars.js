@@ -495,7 +495,7 @@ const sidebars = {
       items: [
         "programming-language-theory/plt-fundamentals/plt-fundamentals",
         "programming-language-theory/syntax/syntax",
-        "programming-language-theory/syntax/parsing",
+        "programming-language-theory/parsing/parsing",
         "programming-language-theory/names-binding-scoping/names-binding-scoping",
         "programming-language-theory/semantic-analysis/semantic-analysis",
         "programming-language-theory/target-architecture/target-architecture",
