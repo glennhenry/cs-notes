@@ -25,7 +25,7 @@ A **non-terminal symbol** represents a syntactic category or a language construc
 A syntax rule for any number greater than 100 would be :
 
 ```markdown
-<greater-than-100> -> <non-zero-digit> <digit> <digit> <digit>*
+<greater-than-100> -> <non-zero-digit> <digit> <digit> <digit>\*
 <non-zero-digit> -> 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 <digit> -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 ```
@@ -57,7 +57,7 @@ Regular expression is a simple formal rules, it helps to define tokens. A classi
 With regular expression, we can represent an integer :
 
 ```markdown
-<integer> -> (- | ε) <digit> <digit>*
+<integer> -> (- | ε) <digit> <digit>\*
 <digit> -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 ```
 
@@ -153,7 +153,3 @@ See [regular expression to finite automata](/theory-of-computation-and-automata/
 The practical way of designing a scanner is making our own regular expression based on the language syntax, then use a **scanner generator**. A scanner generator will generate the logic to tokenize the input source code based on the defined lexical rules. The actual code for scanner may involve the use of switch statement and nested loop to simulate an automaton behavior.
 
 Obviously, potential error will occur during scanning, this is called **lexical error**. It can arise from invalid characters, unrecognized character sequences, or violations of the language's lexical rules. The scanner may stop the scanning and report the error to user or ignoring the invalid token and continuing the scanning process.
-
-### Parsing
-
-...

@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **19** topics, and a total of **371** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
+A total of **19** topics, and a total of **372** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
 
 1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -230,9 +230,10 @@ A total of **19** topics, and a total of **371** notes (may not be accurate for 
     - [Turing Machine](theory-of-computation-and-automata/turing-machine)
     - [Undecidability](theory-of-computation-and-automata/undecidability)
     - [Complexity Theory](theory-of-computation-and-automata/complexity-theory)
-9. [Programming Language Theory](/programming-language-theory) (**13** subtopics)
+9. [Programming Language Theory](/programming-language-theory) (**14** subtopics)
     - [PLT Fundamentals](programming-language-theory/plt-fundamentals)
     - [Syntax](programming-language-theory/syntax)
+    - [Parsing](programming-language-theory/parsing)
     - [Names, Binding, Scoping](programming-language-theory/names-binding-scoping)
     - [Semantic Analysis](programming-language-theory/semantic-analysis)
     - [Target Architecture](programming-language-theory/target-architecture)
