@@ -8,8 +8,13 @@ description: Parsing
 **Main Source :**
 
 - **Book chapter 2**
+- **[Introduction to Parsers - Neso Academy](https://youtu.be/OIKL6wFjFOo?si=iRFE0__ImeaKu38n)**
+- **[LL(1) Parsing - Neso Academy](https://youtu.be/clkHOgZUGWU?si=-z878_LOxoCrsdBP)**
+- **[What is the difference between LALR and LR parsing? [duplicate] - stackoverflow](https://stackoverflow.com/questions/19663564/what-is-the-difference-between-lalr-and-lr-parsing)**
 
-The parser takes sequence of tokens produced in the [previous step](/programming-language-theory/syntax#scanning). The objective of parser is to analyze whether source code (now in tokens) is correct syntactically. Parser does this by finding if it is possible to create a parse tree with given the input and the language grammar.
+The parser takes sequence of tokens produced in the [previous step](/programming-language-theory/syntax#scanning). The objective of parser is to analyze whether source code (now in stream of token) is correct syntactically. Parser does this by finding if it is possible to create a parse tree with given the input and the language grammar.
+
+### Parsing Example
 
 ![Grammar example](./grammar-example.png)  
  Source : Book page 62
@@ -30,43 +35,55 @@ The technique we just used to derive `A, B;` is called **top-down parsing**.
 
 ### Top-down Parsing
 
-The top-down parsing generates parse tree starting from the language grammar. In the list example, we started from `id_list`, then see how can we replace it according to the production rule of the grammar. Remember, for a string to be valid in the language, all non-terminals must be replaced by terminals according to the grammar production rules.
+The top-down parsing generates parse tree starting from the language grammar. In the list example, we started from `id_list`, then the parser analyze how can `id_list` be replaced according to the production rule of the grammar.
 
-It turns out that `id_list` can only be replaced with `id id_list_tail`. So, we will replace `id_list` with `id id_list_tail`. This production rule asks for an identifier. The identifier will be taken from the input tokens.
+:::tip
+Remember, for a string to be valid in the language, all non-terminals must be replaced by terminals according to the grammar production rules.
+:::
 
-The next step, we see that there are two choices to replace `id_list_tail`. The first choice replaces it with another `id id_list_tail`. This will only be chosen if there's still token available. If not, then we should replace it to semicolon, ending the parse tree generation.
+It turns out that `id_list` can only be replaced with `id id_list_tail`. So, the parser will replace `id_list` with `id id_list_tail`. This production rule asks for an identifier. The parser assumes that the identifier exist in the input tokens.
 
 ![Top-down parsing](./top-down-parsing.png)  
 Source : Book page 63
 
-This image illustrates the parse tree generation of input `A, B, C;`. Starting from the `id_list`, it is replaced with an identifier and `id_list_tail`. The `A`, being the first token in the stream will be the assigned as the identifier. Then, we see there is a comma and `B`, so `id_list_tail` must not end yet. This is continued until we see there are no identifiers, only a semicolon.
+This image illustrates the parse tree generation of input `A, B, C;`. Starting from the `id_list`, it is replaced with an `id` and `id_list_tail`. The `A`, being the first token in the input stream is assigned as the identifier.
 
-The top-down approach generates a parse tree by predicting which particular non-terminal will be replaced next. It does this by examining the available tokens in the token stream. If the prediction made by the top-down parser is incorrect—perhaps the production rule does not match the current input token—then the parser may raise a **syntax error**.
+The next step, `id_list_tail` is a non-terminal that we must replace. We see that there are two choices to replace. The first choice replaces it with another `id id_list_tail`. This will only be chosen if there's still token available. If not, then we should replace it to semicolon, ending the parse tree generation.
 
-### Bottom-up Parsing 1
+In the input, we see there is a comma and `B`, so `id_list_tail` must not end yet. Then, parser chose to replace `id_list_tail` with `, id id_list_tail`, and assigning `B` as the `id`. This process continues until there are no more tokens, making only the possible rule `id_list_tail → ;`, which doesn't have anymore non-terminals.
 
-In contrast, bottom-up parser starts from the input instead of the grammar.
+Notice that the top-down approach somewhat predicts what will happen next. It must predict which rule should be chosen next to replace the non-terminals and create the parse tree. When an unexpected prediction occurs, such as the parser expecting a token, but there are no more tokens available, the parser may raise a **syntax error**, indicating that the input is incorrect.
+
+### Bottom-up Parsing
+
+In contrast, bottom-up parser starts from the input instead of the grammar. Bottom-up parser keeps track a token [stack](/data-structures-and-algorithms/stack), which will be used to keep track the symbols it has encountered so far.
+
+The objective of bottom-up parser is to keep adding symbol to the stack, then construct the parse tree when it recognizes some grammar rule.
 
 ![Bottom-up parsing](./bottom-up-parsing.png)  
 Source : Book page 63
 
-It realizes that `A` is an identifier, then it encounters a comma, then another identifier `B`, and so on. This continues until the point it encounters a semicolon, where the only possible production rule is from `id_list_tail`. So, it began replacing the semicolon to `id_list_tail` from that point.
+Using the same example, it first encounters `A`. It is an identifier, and there are no direct rule that replace an identifier. The parser does do anything other than adding the symbol to the stack. Keeping on, it encounters a comma `,`, `B`, `C`, and then a semicolon `;`.
 
-Afterwards, there are `C` and a comma on the previously encountered tokens. The possible production rule for this is the rule of `id_list_tail -> , id id_list_tail`, where `C` is the identifier here. So, it continues making the tree from bottom to up. The generation ends until the parser doesn't encounter comma anymore, when the only possible production rule is `id_list -> id id_list_tail`.
+The parser recognizes that there exist a rule in the grammar, where a non-terminal is replaced with a semicolon. The rule is `id_list_tail → ;`. The parser starts building up the tree from here, replacing the semicolon with a non-terminal `id_list_tail`. It replaces by popping the semicolon, and pushing `id_list_tail` onto the stack.
 
-The bottom-up parsing is also known as **shift-reduce parser**. It consists of two main actions, shifting and reducing.
+Going back to the stack, it now realizes another pattern. The two previous tokens are `C` and `,`. There exists a rule for this, namely `id_list_tail → , id id_list_tail`, where `id` is `C` and `id_list_tail` is what we just pushed before. Now, it popped the last three symbols, and pushes another `id_list_tail`.
 
-- In shifting, the parser reads the next input token and shifts it onto the parsing stack. The parser maintains a [stack](/data-structures-and-algorithms/stack) to keep track of the symbols it has seen and their corresponding states.
-- When a specific pattern of symbols on the top of the parsing stack matches the right-hand side of a production rule, the parser reduces (replaces) those symbols with the corresponding non-terminal symbol on the left-hand side of the production rule.
+This process continues until `A` is encountered without a comma, making the only possible rule is `id_list → id id_list_tail`.
+
+More regularly, the bottom-up parsing is also known as **shift-reduce parser**. It consists of two main actions, shifting and reducing.
+
+- In shifting, the parser reads the next input token and shifts it (push) onto the parsing stack. The parser maintains the stack to keep track of the symbols it has seen and their corresponding states.
+- When a specific pattern of symbols on the top of the parsing stack matches the right-hand side of a production rule, the parser reduces (pop) and shifts (push) those symbols with the corresponding non-terminal symbol on the left-hand side of the production rule.
 
 #### Choice
 
-Depending on the grammar, top-down or bottom-up parsing may or may not be efficient. In a large program of this list grammar, bottom-up parsing can take up many spaces. This is because it needs to expand keep track tokens until semicolon is reached.
+Depending on the grammar, top-down or bottom-up parsing may or may not be efficient. In a large program with this list grammar, the bottom-up parsing can take up many spaces. This is because it keeps shifting tokens until a semicolon is reached. In other word, grammar affects how parser performs.
 
 ![Changed grammar](./changed-grammar.png)  
 Source : Book page 64
 
-This grammar allows for bottom-up parser to reduce the space of stack if needed. It doesn't need to encounter a semicolon in order to reduce them, we may choose to reduce it in the middle of parsing. However, this grammar can't be parsed top-down, because we can't really predict whether to replace `id_list_prefix` with the first rule or the second one.
+The above is an optimized grammar for bottom-up parser. It allows for bottom-up parser to reduce the space of stack if needed. It doesn't need to encounter a semicolon in order to reduce them, we may choose to reduce it in the middle of parsing. However, this grammar can't be parsed top-down, because we can't really predict whether to replace `id_list_prefix` with the first rule or the second one.
 
 ![Improved bottom-up parsing](./improved-bottom-up.png)  
 Source : Book page 65
@@ -75,18 +92,22 @@ Source : Book page 65
 
 There are many types of parser. One way to categorize them is based on where it starts to derive.
 
-- **LL (Left-to-right, Leftmost derivation)** : LL parsers are typically class of top-down parsers. It reads the input from left-to-right and derive starting from the leftmost non-terminals.
-- **LR (Left-to-right, Rightmost derivation)** : Similar to LL, it reads the input from left-to-right, but instead derives the rightmost non-terminal, resulting in the construction of the parse tree bottom-up.
+- **LL (Left-to-right, Leftmost derivation)** : The top-down parsers are also known as LL parsers. It reads the input from left-to-right and derive starting from the leftmost non-terminals.
+- **LR (Left-to-right, Rightmost derivation)** : Bottom-up parsers are known as LR parsers. Similar to LL, it reads the input from left-to-right, but instead derives the rightmost non-terminal, resulting in the construction of the parse tree bottom-up.
 
 Some parser uses something called **lookahead token**. It is an information about the next token or input symbol in the input stream used for parser to make better parsing decisions.
 
 The number of lookahead token is denoted with number and parenthesis after the parser type. For example, LL(0), LL(1), LL(k) refers to LL parser with 0, 1, and k many lookahead tokens. As the value of lookahead token increases, the complexity of the parsing algorithm also increases exponentially. Even the single lookahead token in LR(1) makes it significantly larger than LR(0). The additional lookahead token introduces more possibilities for state transitions in the parsing automaton. For each state in the LR(1) parser, the parser needs to consider all possible lookahead tokens and create distinct states based on their combinations.
 
+:::note
+The grammar needs to be adapted with different type of parser, including different numbers of lookahead token.
+:::
+
 ### More Detail
 
 #### Recursive Descent Parser
 
-Recursive descent is the implementation of top-down parsing technique that works by recursively applying production rules of a grammar to parse an input string. Recursive descent parsers can be handwritten for a relatively simple language.
+Recursive descent is the **top-down parsing** technique that works by recursively applying production rules of a grammar to parse an input string. Recursive descent parsers can be handwritten for a relatively simple language.
 
 This technique works by associating each non-terminal in the grammar with a function that handles them individually based on every possible production rule.
 
@@ -97,7 +118,7 @@ Source : Book page 66
 "$$" is an end symbol.
 :::
 
-This is LL(1) grammar for a calculator language, below are the pseudocode for each of the function.
+Above is LL(1) grammar for a calculator language, below are the pseudocode for each of the function.
 
 ![Calculator pseudocode](./calculator-pseudocode.png)  
 Source : Book page 67, 68
@@ -107,19 +128,19 @@ And the input program as well as its top-down parse tree. The $\epsilon$ denotes
 ![Calculator program and parse tree](./calculator-example.png)  
 Source : Book page 66, 69
 
-Similar to the [list example in top-down parsing](#top-down-parsing), it predicts which production rule used to replace certain non-terminal based on the input stream. At the first, it chose to replace `stmt_list` with `stmt stmt_list` rather than empty string because there are available input. Then, `stmt` is replaced with `read id`, because it encounters `read` and an id `A`.
+Similar to the [list example in top-down parsing](#top-down-parsing), it predicts which production rule used to replace certain non-terminal based on the input stream. At the first, it chose to replace `stmt_list` with `stmt stmt_list` rather than empty string because there are available input. Then, `stmt` is replaced with `read id`, because it encounters `read` and an id `A`. The behavior of this parser that sees next input is what makes it an LL(1) parser, seeing the next token count as one lookahead token.
 
-After parse tree is constructed, the parser will save it for the next compilation step. The parse tree can be represented as node-link data structure such as [graph](/data-structures-and-algorithms/graph), [linked list](/data-structures-and-algorithms/linked-list), or [tree](/data-structures-and-algorithms/tree).
+After parse tree is constructed, it is confirmed that the input is syntactically correct. The parser can save important information for the next compilation step. The information of parse tree can be represented as node-link data structure such as [graph](/data-structures-and-algorithms/graph), [linked list](/data-structures-and-algorithms/linked-list), or [tree](/data-structures-and-algorithms/tree).
 
 :::info
 Sometimes parser doesn't create full parse tree explicitly, it may create an abstract syntax tree, which is the simpler version of parse tree that omits certain nodes and details that are not relevant to the syntax analysis.
 :::
 
-#### Table-Driven Top-Down Parsing
+#### Predictive Parsing
 
-Table-driven top-down parsing uses a **parsing table** to guide the parsing process. It is a top-down parsing approach where the parser predicts the next production rule to apply based on the current input symbol and the top of the parsing stack.
+Predictive parsing is another **top-down parsing** technique where it uses a **parsing table** to guide the parsing process. The parser predicts the next production rule to apply by consulting the parsing table based on the current input symbol and the top of the parsing stack.
 
-The parser maintains a stack to keep track of the non-terminals and terminals encountered so far. The stack initially contains the start symbol of the grammar. The parser reads the input symbols one by one and uses the parsing table to guide its actions.
+The parser maintains an explicit stack (rather than recursion call stack) to keep track of the non-terminals and terminals encountered so far. The stack initially contains the start symbol of the grammar.
 
 The parser will generate three sets that provide information about the grammar. These will be used for prediction and error recovery. The three sets are :
 
@@ -140,20 +161,34 @@ Afterwards, parsing table will be constructed. Typically, it is represented as a
 ![Parse table](./parse-table.png)  
 Source : Book page 72
 
-Parsing table help to decide parser what action to takes depending on the non-terminal on the top of stack and the current input symbol. Each entry in the table specifies the production rule in the predict sets the to be applied.
+The table is constructed by assigning certain production rules of non-terminals to each of their terminals in the first or follow set. For example, the predict set of `program` contains terminals like `id`, `read`, `write`, and `$$`. Then, all the associated cell on the table, such as (program, id), (program, read), (program, write), and (program, \$\$), are assigned the production rule for `program`, that is `program → stmt_list $$`.
+
+Now, the parser can just look at the table given the non-terminal and current input token (also called lookahead token) to choose which action to take. For constructing the parse tree and saving the information, the parser may use additional data structure such as tree.
 
 The action can be one of the following:
 
-- **Predict** : If the table entry specifies the number of production rule, the parser applies the rule by replacing the non-terminal on top of the stack with the right-hand side of the production rule. For example, if `program` is on top of the non-terminal stack, and current input token is `id`, then the rule `program → stmt_list $$ {id, read, write, $$}` is applied (for constructing the parse tree).
-- **Error** : If the table entry is empty or undefined, the parser detects an error and takes appropriate error recovery actions, such as error reporting or error synchronization. We don't say the parser simply halts and returns an error to the user, because it is possible that the parser catches more errors that need to be reported as well.
+- **Predict** : If the table entry specifies the number of production rule, the parser applies the rule by replacing the non-terminal on top of the stack with the right-hand side of the production rule. For example, if `program` is on top of the stack, and current input token is `id`, then the rule `program → stmt_list $$` is applied. This is done by popping the left-hand side (`program`) and pushing the right-hand side of the rule (`stmt_list $$`).
+- **Match** : Match happens when the topmost symbol on the stack matches the current input token. This indicates the parse tree we are constructing doesn't have children. In other word, we won't expand the particular symbol on the parse tree, the branch ends there.
+- **Error** : If the table entry is empty or undefined (denoted by `-` on the image), the parser detects an error and takes appropriate error recovery actions, such as error reporting or error synchronization. We don't say the parser simply halts and returns an error to the user, because it is possible that the parser catches more errors that need to be reported as well.
 
-:::tip
-The parser that uses parsing table and top-down parsing is an LL(1) parser.
+![Visualization help](./visual-help.png)  
+Source : https://youtu.be/clkHOgZUGWU?si=gEQ3mf3ZhNwzNQsC&t=467 (modified)
+
+The above image is a help for visualization from a video example. Starting from the start symbol `S` that act as the root of the tree, the grammar rule is `S → aABb`. The tree is created with four branches from the right-hand side of the rule. The symbols from the right-hand side of the rule is also pushed into the stack.
+
+At some point, the current input symbol and the topmost symbol on the stack matches, that is when "match" action occurs. The `a` symbol in the input matches the topmost stack symbol. When "match" action occur, we stop expanding the branch and designate it as a leaf node. Also, `a` symbol is popped from the stack.
+
+On the next step, `A` is topmost symbol on the stack, and `d` is our current token. Because they don't match, the action "predict" occur, and we should consult the table. On the constructed tree, this indicates we have to expand a branch. Turns out the table want us to replace the `A` with `ε`.
+
+The end result of this parsing is the constructed parse tree. All the leaf nodes, if combined, will resemble the input stream.
+
+:::note
+In summary, the parsing table in predictive parsing helps us to know which rule to use to replace certain non-terminal in order to create the parse tree.
 :::
 
-#### Bottom-up Parsing 2
+#### LR Parsers
 
-Bottom-up parser adds tokens to the stack until it recognizes a production rule, and then constructs the tree. The parser incrementally constructs the tree and joins them together.
+For review, bottom-up parser adds tokens to the stack until it recognizes a production rule, and then constructs the tree. The parser incrementally constructs the tree and joins them together.
 
 ![Review of bottom-up parsing](./bottom-up-parsing-review.png)  
 Source : Book page 81
@@ -165,7 +200,7 @@ Source : Book page 82
 
 If top-down parsing creates a table and consults it to decide what to do based on the non-terminal on top of the stack and input token, a bottom-up parser instead consults the table based on the current input token and a **parser state**. The parser state is actually determined by the configuration of the stack.
 
-There are two actions : **shift and reduce**. Shift places current input token on the stack, while reduce applies a production rule by popping the corresponding number of symbols from the stack and replacing them with the non-terminal symbol on the left-hand side of the rule. After shifting or reducing happens, the state may also be updated accordingly.
+There are two actions : **shift and reduce**. Shift pushes current input token on the stack, while reduce applies a production rule by popping the part of symbols on the right-hand side of the rule and replacing them (by pushing it onto the stack) with the non-terminal symbol on the left-hand side of the rule. After shifting or reducing happens, the state may also be updated accordingly.
 
 This process continues until the entire input sentence is recognized, that is when "accept" action is encountered on the table. Error that indicates a parsing error or a syntactical mistake in the input string may also occur.
 
@@ -180,7 +215,7 @@ The parsing process starts from an empty stack, we will start from the `program`
 
 Currently, we only have a single LR item in our **list**. If we encounter a non-terminal in the right-hand side of the production rule, we will add that rule to the list, as well as "dotting" them. We will keep adding LR item to the list until a terminal is encountered.
 
-In the example, we encountered the non-terminal `stmt_list` from the `program`. The `stmt_list` has two rules that replaces to `stmt_list stmt` or `stmt`. So, we will at both of the rule to the list. Our list now :
+In the example, we encountered the non-terminal `stmt_list` from the `program`. The `stmt_list` has two rules that replaces to `stmt_list stmt` or `stmt`. So, we will add both of the rule to the list. Our list now :
 
 ![Visualization part 2](./visualization-part-2.png)  
 Source : Book page 83
@@ -190,11 +225,11 @@ Then, the `stmt_list` has another non-terminal `stmt`, it can be replaced to `id
 ![Visualization part 3](./visualization-part-3.png)  
 Source : Book page 83, 84
 
-Now that we don't encounter non-terminal anymore, we can stop adding item to the list. There are three rule that starts with terminals from the `stmt`. Based on the program on [top](#bottom-up-parsing-2), we encountered `read`.
+Now that we don't encounter non-terminal anymore, we can stop adding item to the list. There are three rule that starts with terminals from the `stmt`. Based on the program on [top](#lr-parsers), we encountered `read`.
 
-When we encounter a terminal, we have to shift a symbol and similarly, move the dot. Now that we encountered `read`, we will shift this to the stack. By the way, when we move the dot or shift a symbol, this will change the parser state.
+When we encounter a terminal, we have to shift a token and similarly, move the dot. Now that we encountered `read` token, we will shift this to the stack. By the way, when we move the dot or shift a token, this will change the parser state.
 
-With the `stmt → read id` production rule, there must be `id`. Turns out the identifier is `A` on the input program. So, shift it again to the stack and move the dot.
+Following the `stmt → read id` production rule, there must be `id`. Turns out the identifier is `A` from the input program. So, shift the token again to the stack and move the dot.
 
 ![Visualization part 4](./visualization-part-4.png)  
 Source : Book page 84
@@ -230,6 +265,11 @@ For example, when all the dot position are like above, it is considered as state
 ![Bottom-up parsing table](./bottom-up-table.png)  
 Source : Book page 89
 
+- `s2` indicates shifting and move to state 2.
+- `r7` indicates reduce and move to state 7.
+- `b3` indicates shift, reduce, and move to state 3.
+- `-` indicates a syntax error.
+
 ##### Bottom-up Algorithm
 
 With the constructed table, we can now look at it every time we parse a program. The general process of bottom-up parsing of LR parser :
@@ -246,10 +286,17 @@ When consulting the table, two conflict situations may happen. In the visualizat
 1. **Shift-Reduce conflict** : It is when a cell in the table has both shift and reduce action. The parser could either shift the current input symbol onto the stack or reduce a portion of the stack using a production rule. We can resolve this conflict by modifying the table based on some precedence or associativity rule defined for the conflicting grammar symbols.
 2. **Reduce-Reduce conflict** : This is when multiple reduce are encountered on the table cell. It is when there are multiple production rule to be applied for the same non-terminal at a particular point of the parsing process. This will occur when the grammar is ambiguous. So, one way to resolve this conflict is by applying a grammar modification to eliminate the ambiguity.
 
-##### Types of LR
+### Parser Classification
 
-After seeing the bottom-up parsing implementation, we can now cover several types of LR parsers :
+We can now classify different types of parsers.
 
-- **LR (Canonical LR)** : LR itself is the most powerful variant of LR parsing. It uses the full LR(1) items, which include lookahead symbols, and constructs a parsing table with the most states compared to SLR and LALR. LR parsing can handle a wide range of grammars, including those that SLR and LALR cannot handle. However, constructing LR parsing tables can be more complex and time-consuming compared to SLR and LALR. LR(1) grammars are the class of grammars suitable for LR parsing.
-- **SLR (Simple LR)** : SLR parsing is a simple and less powerful variant of LR parsing. It uses a simplified version of LR(0) items and constructs a parsing table with a smaller number of states compared to other variants. SLR parsing tables are relatively easy to construct but may suffer from conflicts, such as shift-reduce or reduce-reduce conflicts, in certain situations. SLR parsing is suitable for a subset of grammars called SLR(1) grammars.
-- **LALR (Look-Ahead LR)** : LALR parsing is a more powerful variant that addresses the limitations of SLR parsing. It uses a more compact representation of item sets by merging similar sets while preserving the same parsing power. LALR parsing tables are larger than SLR tables but smaller than LR(1) tables. LALR parsing can handle a larger class of grammars than SLR parsing, and it resolves many of the conflicts that arise in SLR parsing. LALR(1) grammars are the class of grammars suitable for LALR parsing.
+![Classification of parsers](./classification.png)  
+Source : https://youtu.be/OIKL6wFjFOo?si=1JD7d0vdyh7BR5hA&t=775
+
+- **Brute forcing** : We haven't covered this yet, but this approach is straightforward. The idea is, the parser will generate all the possible parse tree from a particular grammar. It then checks if any of the parse tree produce the same language as the input program.
+- **Recursive Descent Parsers** : A top-down approach without [backtracking](/data-structures-and-algorithms/backtracking), where each non-terminal is associated with a recursive function that expands all production rule according to the next input token.
+- **Predictive Parsers** : Uses a parsing table to consult what action to take next when constructing the parse tree.
+- **LR** : A bottom-up parser, the LR(1) is the one that uses parse table.
+- **SLR (Simple LR)** : Less powerful variant of LR parsing, where it uses a simplified parsing table, and will construct a parsing table with a smaller number of states compared to LR variants. SLR parsing tables are relatively easy to construct but may suffer from conflicts.
+- **LALR (Look-Ahead LR)** : LALR(1) is more powerful than LR(0), but less than LR(1). It includes extra information about the grammar that makes it performs better than LR(0), but not as large as LR(1).
+- **CLR (Canonical LR)** : CLR parsing tables are derived directly from the LR(1) parsing tables without any merging or simplification. This makes CLR the most powerful, but the parsing tables for CLR parsing can be larger, more complex, and often not used in practice.
