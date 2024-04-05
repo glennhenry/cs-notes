@@ -18,7 +18,7 @@ Recommend taking a look at [theory of computation and automata](/theory-of-compu
 - [PLT Fundamentals](programming-language-theory/plt-fundamentals)
 - [Syntax](programming-language-theory/syntax)
 - [Parsing](programming-language-theory/parsing)
-- [Names, Binding, Scoping](programming-language-theory/names-binding-scoping)
+- [Names, Scopes, Bindings](programming-language-theory/names-scopes-bindings)
 - [Semantic Analysis](programming-language-theory/semantic-analysis)
 - [Target Architecture](programming-language-theory/target-architecture)
 - [Control Flow](programming-language-theory/control-flow)

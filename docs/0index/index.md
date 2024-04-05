@@ -234,7 +234,7 @@ A total of **19** topics, and a total of **372** notes (may not be accurate for 
     - [PLT Fundamentals](programming-language-theory/plt-fundamentals)
     - [Syntax](programming-language-theory/syntax)
     - [Parsing](programming-language-theory/parsing)
-    - [Names, Binding, Scoping](programming-language-theory/names-binding-scoping)
+    - [Names, Scopes, Bindings](programming-language-theory/names-scopes-bindings)
     - [Semantic Analysis](programming-language-theory/semantic-analysis)
     - [Target Architecture](programming-language-theory/target-architecture)
     - [Control Flow](programming-language-theory/control-flow)
