@@ -8,6 +8,7 @@ description: Peer-to-Peer
 **Main Source :**
 
 - **[Peer-to-peer - Wikipedia](https://en.wikipedia.org/wiki/Peer-to-peer)**
+- **Book : Chapter 8 of Distributed and Cloud Computing - Kai Hwang**
 
 **Peer-to-Peer (P2P)** is a decentralized architecture which participants, called **peers**, interact and collaborate with each other directly, without the need for a central server or authority. Each peer can act both as a client and a server, they can request resources, or even serving others request.
 
@@ -24,6 +25,16 @@ In contrast to [client-server architecture](/software-engineering/client-server)
 Although client-server architecture can prevent some of these limitations by having multiple servers to handle requests in a balanced manner ([load balancing](/computer-networking/server#server-optimization)) or distribute the server around the world ([CDN](/computer-networking/server#server-optimization)).
 :::
 
+### Target & Challenge
+
+Some target and challenge of P2P architecture :
+
+- The lack of centralized server makes it harder to search for certain resources. We will need an efficient discovery algorithm to solve this.
+- Need a method to connect peers based on proximity factors. It will be beneficial in terms of reducing bandwidth and time when we prioritize closer peers to share resources together.
+- P2P architecture doesn't have consistent computation that can facilitate the network needs. Peers have autonomy and can join or leave the network based on their individual needs and interests. Such peers that don't contribute much to the network are often called as **free-riders**.
+- While P2P architecture helps to reduce central computation, the computational capabilities of individual peers can vary. Not all peers in a P2P network will necessarily have strong computational power or resources that can accommodate computing needs.
+- Since peers are typically ordinary users, they may be vulnerable to other malicious peers in the network when interacting directly. The system may implement trust system with metric such as reputation based on their past interactions and contributions.
+
 ### Architecture
 
 The specific architecture of P2P define how peers are connected to each other. The network topology can be structured, unstructured, or hybrid.
@@ -39,6 +50,24 @@ The specific architecture of P2P define how peers are connected to each other. T
    Source : https://en.wikipedia.org/wiki/Peer-to-peer#/media/File:Unstructured_peer-to-peer_network_diagram.png
 
 - **Hybrid** : Hybrid P2P networks combine elements of both structured and unstructured topologies to leverage their respective advantages.
+
+### Network Model
+
+In reality, app or services that uses P2P architecture is not always completely peer-to-peer. Some service that offers [file transfer protocol (FTP)](/computer-networking/ftp) may need a central server to store global information about file sharing.
+
+Overall, there are three variants of P2P :
+
+- **Pure P2P** : A fully P2P model where all peers are equivalent in terms of computation.
+- **Centralized** : Centralized in a sense of not a complete [client-server](/cloud-computing-and-distributed-systems/), it may keep track global information to facilitate efficient search and discovery.
+- **Hierarchical** : Some peers may be selected to be a _super node_ in the P2P network. It may coordinate or manage the lower-level peers. For example, a host in an online meeting app could keep track some useful meeting information. Super node often have more resources, higher processing power, or better connectivity compared to others.
+
+### Routing
+
+Routing determines the paths or routes through which data or messages can be transmitted between participating peers.
+
+- **Centralized** : With a central server that keeps track global information, it can handle the routing and forwarding of the messages to the intended recipients.
+- **DHT** : The use of DHT as explained in [structured architecture](#architecture).
+- Three other methods in [computer networking routing](/computer-networking/routing#routing-technique).
 
 ### Usage
 
