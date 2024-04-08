@@ -174,6 +174,14 @@ These two are related to the execution of program in CPU.
 
 The CPU will execute instruction from memory, it will take some amount of data from the memory. The fixed amount of data that can be processed by CPU in one go is called **word**. The size of a word can vary, for example, word sizes can be 8 bits (1 byte), 16 bits (2 bytes), 32 bits (4 bytes), or 64 bits (8 bytes).
 
+#### Padding
+
+Some processors may access data per 1 byte, 2 bytes, 4 bytes, or more (also known as a word). Data that is not a multiple of these increments may not be efficiently accessed, as it may require multiple data fetches. For instance, if the data size is 6 bytes and the processor accesses data in chunks of 4 bytes, two fetches would be needed. However, the last 2 bytes fetched could be unnecessary or irrelevant.
+
+To address this issue, data can be **padded** with dummy data to align it with the designated chunk size. For example, a 6-byte data could be padded with 2 bytes to align it with 4-byte chunks.
+
+Other advantage of padding related to performance is more cache utilization. Cache memory is accessed in a fixed-size block called **cache lines**. The size of a cache line is typically larger than the word size of the CPU. When data structures with padding are aligned to cache lines, they are more likely to fit entirely within a single cache line. This means that when the CPU accesses a portion of the data structure, it can also bring in other nearby data within the same cache line. This reduces the number of cache misses (situation where cache is not available) and improves overall cache performance.
+
 #### Endianness
 
 **Endianness** refers to the ordering of bytes in a multibyte data type, such as integers or floating-point numbers, in computer memory. It determines how the bytes of a larger data value are stored and retrieved.
