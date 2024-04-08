@@ -64,6 +64,28 @@ However, problems may happen during the pipeline process, these problems are cal
 
 This technique dynamically order and execute instruction based on their availability of operands, rather than strictly following the sequential order of the program. This can reduce resource and data hazards.
 
+One benefit of rearrangement of instruction is when **load penalty** occur. Load penalties occur when a processor needs to fetch data from memory and encounters a delay due to the slower access time of the memory subsystem compared to the processor's execution speed.
+
+It is when the processor needs a data, so it requests it from memory, but the time it takes to fetch the memory can be long, causing the processor to wait. To mitigate this, we can load the data ahead of time so that it's already available when needed. This technique is called **prefetching**.
+
+It can be illustrated by :
+
+```
+r2 = r1 + r2
+r3 = A -- load
+r3 = r3 + r2
+```
+
+Transformed into
+
+```
+r3 = A -- load
+r2 = r1 + r2
+r3 = r3 + r2
+```
+
+Source : Programming Language Pragmatics - Michael L. Scott, page 213
+
 #### Prediction
 
 **Prediction** is the technique to make educated guesses or predictions about future events, such as the outcome of a branch instruction or the behavior of memory accesses.
