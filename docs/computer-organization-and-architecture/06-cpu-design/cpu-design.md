@@ -50,7 +50,7 @@ Source : [left](https://cs.stanford.edu/people/eroberts/courses/soco/projects/ri
 
 Pipelining can be likened to doing laundry. Instead of waiting for the washing machine to complete the entire wash cycle before using the dryer, we can start washing a portion of the clothes and transfer the already washed portion to the dryer. This approach enhances the efficiency of the laundry process by overlapping washing and drying tasks, similar to execution of tasks in CPU.
 
-However, problems may happen during the pipeline process, these are called **hazards**.
+However, problems may happen during the pipeline process, these problems are called **hazards**, and they may _stall_ the pipeline.
 
 - **Structural Hazards** : Also known as **resource hazard**, arise when multiple instructions require the same hardware resource simultaneously. It's when two instructions need to access the same functional unit or register simultaneously.
 - **Data Hazards** : Occur when an instruction depends on the result of a previous instruction that is not yet available. Data hazards can be further classified into three types : **read-after-write (RAW)**, **write-after-read (WAR)**, and **write-after-write (WAW)**.
