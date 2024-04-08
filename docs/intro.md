@@ -165,3 +165,4 @@ Excluding the [index page](/index).
 	- replication, redundancy, reassignment, checkpointing, restart.
 	- heartbeat mechanism, timeout, neighbour-based, gossip.
 	- hot standby server clusters, active-takeover clusters, failover cluster.
+12. **[ref]** [/programming-language-theory/target-architecture](/programming-language-theory/target-architecture) -> ref to compiler optimization in compilers.
