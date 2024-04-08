@@ -52,7 +52,7 @@ Pipelining can be likened to doing laundry. Instead of waiting for the washing m
 
 However, problems may happen during the pipeline process, these are called **hazards**.
 
-- **Structural Hazards** : Arise when multiple instructions require the same hardware resource simultaneously. It's when two instructions need to access the same functional unit or register simultaneously.
+- **Structural Hazards** : Also known as **resource hazard**, arise when multiple instructions require the same hardware resource simultaneously. It's when two instructions need to access the same functional unit or register simultaneously.
 - **Data Hazards** : Occur when an instruction depends on the result of a previous instruction that is not yet available. Data hazards can be further classified into three types : **read-after-write (RAW)**, **write-after-read (WAR)**, and **write-after-write (WAW)**.
 - **Control Hazards** : Arise due to conditional branches or jumps that affect the sequential execution of instructions. Control hazards occur when the outcome of a branch or jump instruction is not known in the early stages of the pipeline, causing a potential misprediction. For example, we didn't know that some expression returns false, yet we keep executing the branch that only needs to be executed when the expression returns true.
 
@@ -62,7 +62,7 @@ However, problems may happen during the pipeline process, these are called **haz
 
 #### Out-of-order Execution
 
-This technique dynamically order and execute instruction based on their availability of operands, rather than strictly following the sequential order of the program.
+This technique dynamically order and execute instruction based on their availability of operands, rather than strictly following the sequential order of the program. This can reduce resource and data hazards.
 
 #### Prediction
 
