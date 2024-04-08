@@ -157,7 +157,7 @@ Excluding the [index page](/index).
 5. **[add]** [/digital-media-processing](/digital-media-processing)/iso -> add ISO file format.
 6. **[update]** [/backend-development/websocket](/backend-development/websocket)#data-exchange -> add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
 7. **[ref]** [/computer-security/reverse-engineering](/computer-security/reverse-engineering) -> ref to decompilation in compilers.
-8. **[update]** [/backend-development/caching](/backend-development/caching) -> add more about caching.
+8. **[update]** [/backend-development/caching](/backend-development/caching) -> move caching to [computer-and-programming-fundamentals](/computer-and-programming-fundamentals), since it is a general topic. Also, add info about cpu cache, backend cache, local cache, and other cache terminology or techniques.
 9. **[update]** [/backend-development/microservice](/backend-development/microservice) -> clarify wrong information.
 10. **[update]** [/backend-development/soa](/backend-development/soa) -> clarify wrong information (its different with microservice).
 11. **[add]** [/cloud-computing-and-distributed-systems](/cloud-computing-and-distributed-systems)/distributed-systems-failure-detection-and-recovery -> should add more about distributed failure detection and recovery mechanism.
