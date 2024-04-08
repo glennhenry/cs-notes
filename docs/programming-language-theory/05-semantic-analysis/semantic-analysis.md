@@ -7,6 +7,7 @@ description: Semantic Analysis
 
 **Main Source :**
 
+- **Book chapter 4**
 - **[Compilation - Part Three: Syntax Analysis - Computer Science](https://youtu.be/8nBoVjEOCMI?si=wnzyRj8DnkWHiebu)**
 - **[Symbol table - Wikipedia](https://en.wikipedia.org/wiki/Symbol_table)**
 
