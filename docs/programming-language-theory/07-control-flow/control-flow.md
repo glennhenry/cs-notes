@@ -239,7 +239,41 @@ Compiler can make optimization by making **jump table**. It is a data structure 
 
 ### Iteration
 
-Iteration: Iteration allows a block of code to be repeated multiple times. It involves loop constructs such as "for" loops, "while" loops, or "do-while" loops. The control flow loops back to a specific point until a condition becomes false or a certain number of iterations is reached.
+Iteration allows a block of code to be repeated multiple times. The two types of loops are enumeration-based (e.g., for-loop) and conditional-based loop (e.g., while-loop and do-while loop).
+
+The number of repetition in enumeration-based loop can be controlled in advance, it typically iterates over a range of values or elements using a counter or index variable. In contrast, conditional-based loop are used when the number of iterations is not known in advance and depends on a specific condition.
+
+With a for-loop like `for (int i = 0; i < 5; i++)`, under the hood, the compiler is actually keeping up the variable `i` and check for the condition `i < 5` in every iteration. If it's true, execute the loop body, and also modify the variable `i`; in this case, we are incrementing it.
+
+#### Loop Behavior
+
+Let's say a for-loop syntax is like `for (i = start; i < end; i += step)`
+
+For-loop can introduce some unusual usage :
+
+- **Loop variable modified inside loop** : Some languages don't allow the modification of loop variables, including the `start`, `end`, and `step`. Modification involves assigning a value to them directly or through reference, or using an external source for their value (e.g., reading from a file and the value inside the file is changed by other program). Modifying loop variables in languages that allow it could potentially cause unexpected behavior, such as loop terminating too early.
+- **Empty bounds** : A situation where the first iteration already terminates the loop. A compiler may translate loop code into lower-level instruction like :
+
+  ![For-loop low-level instructions](./for-loop.png)  
+   Source : Book page 274
+
+  It uses `r1`, `r2`, and `r3` to store loop variables, with `L1` acting as the loop body and `L2` acting as the code outside the loop. Before executing the loop body, including the first iteration, the condition is always checked first. This will prevent the loop body to be executed even in the first iteration.
+
+- **Loop variable used outside loop** : Languages prevent this by making the loop variables as local variable, with the loop body being the scope.
+
+:::tip
+A problem can arise when incrementing the loop variable, be aware of data type overflow. For instance, a common mistake is using small data types with a large loop condition, such as `for (short i = 0; i < 100000; i++)`. This code will result in an infinite loop because a `short`, or a 16-bit integer, has a range value of -32.768 to 32.767. Before it reaches 100.000, it will wrap around to the minimum value, -32.768, making it impossible to terminate the loop.
+:::
+
+:::tip
+Another subtle problem that can arise in compilers (and for programmers as well) is when the compiler adds the `start` value with the `step` value and data overflows occur. This can lead to unexpected behavior since the loop may be executed more times than expected due to the wrap-around behavior of data overflows.
+:::
+
+#### Iterators
+
+An alternative method of iteration is through the use of iterator objects. These can be considered as abstractions of loops, capable of traversing and manipulating the elements of a collection (such as an array, list, or other container) in a controlled manner. Such iterator objects become even more useful when implemented in complex data structures like [trees](/data-structures-and-algorithms/tree) or [graphs](/data-structures-and-algorithms/graphs). Iterator for tree data structure may be implemented to traverse in pre-order, in-order, or post-order.
+
+See [iterator](/software-engineering/behavioral-patterns#iterator) for example.
 
 ### Procedural Abstraction
 
@@ -247,7 +281,52 @@ The use of functions or procedures (subroutines) to encapsulate a block of code.
 
 ### Recursion
 
-Recursion: Recursion is a control flow mechanism where a function calls itself to solve a problem by dividing it into smaller subproblems. The control flow repeatedly enters and exits the same function until a base case is reached.
+[Recursion](/data-structures-and-algorithms/recursion) itself doesn't have special syntax or convention, because it is a concept of a function that calls itself. It is useful to "automatically" create an iteration, especially in recursive data structure like [tree](/data-structures-and-algorithms/tree) or [linked list](/data-structures-and-algorithms/linked-list).
+
+Recursion is commonly found on functional language, while iteration is found on imperative language, although modern languages combines them both.
+
+Recursion doesn't involve changing variable, because essentially variables are copied onto the call stack on each recursive call. Functional programming languages often emphasize immutability, where variables are not meant to be changed once assigned. In such languages, recursion is commonly used to achieve repetition and control flow, as it avoids explicit mutable state.
+
+#### Tail Recursion
+
+Often argued that iteration is more efficient and easier to implement in some cases, recursion can be optimized. A recursive function can be optimized by moving the recursive call to the last operation in the function, this is called **tail recursion**.
+
+Non-tail recursive :
+
+```python
+def fact(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fact(n - 1)
+```
+
+This is not tail recursive because there is `n *` before the recursive call.
+
+A function to calculate factorial of `n`. If starting from `fact(6)`, recursive call will happen until `fact(0)`. Once the recursive call `fact(0)` is reached and the base case is satisfied, the recursive calls start returning to `fact(6)`.
+
+Tail recursive :
+
+```python
+def fact(n, accumulation):
+    if n == 0:
+        return accumulation
+    else:
+        return fact(n - 1, accumulation * n)
+```
+
+We remove the `n *` and modify the function's structure to make it work in tail recursion. Instead of `fact(n)` depending on the result of `fact(n - 1)` and so on until `fact(0)`, we introduce an `accumulation`. This `accumulation` is calculated not after, but before the recursive call. This way, we don't need to return the value all the way to `fact(n)` from `fact(0)`, as they are calculated along the way (i.e., the expression `accumulation * n` depends on the current recursive call argument, which is available at any time).
+
+![Tail recursion](./tail-recursion.png)  
+Source : https://maxglassie.github.io/2017/08/24/tail-recursion.html
+
+This optimization reduces the amount of memory used in runtime for call stack.
+
+:::info
+Sometimes, arguments to subroutine is not always evaluated when function is called. When arguments are evaluated before function call, we call this **applicative-order evaluation**. It is possible that evaluation is deferred until the argument is actually used. This evaluation is called **normal-order evaluation**, and it can avoid unnecessary computation where argument is passed but not used (even avoid some runtime error).
+
+Normal-order evaluation is safe to use if the expression doesn't cause side effects because it might change one argument, leading to a different result when evaluated earlier.
+:::
 
 ### Concurrency
 
@@ -255,4 +334,4 @@ The execution of multiple tasks or instructions simultaneously. See [concurrency
 
 ### Nondeterminacy
 
-Nondeterminacy: Nondeterminacy refers to situations where the order of execution is not predetermined or predictable. It is commonly associated with concurrent or parallel execution, where the execution order can vary each time the program runs.
+Nondeterminacy is a situation where the order of execution is not predetermined or predictable. It is commonly associated with concurrent or parallel execution; or probabilistic, where the execution order can vary each time the program runs.
