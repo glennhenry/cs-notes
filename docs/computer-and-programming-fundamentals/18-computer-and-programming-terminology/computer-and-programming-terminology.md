@@ -62,6 +62,10 @@ Type safety refers to the degree to which a programming language helps prevent t
 
 For example, if a type-safe function is declared to return an integer, it guarantees that the function will consistently return an integer whenever it is called.
 
+:::tip
+See also [type system](/programming-language-theory/data-types#type-system).
+:::
+
 #### Standard Library
 
 Standard library is a collection of pre-written code modules or libraries that are included with a programming language. It is a programming language built-in functionality consisting a wide range of common function, data structures, and algorithms that can be used to develop program.
