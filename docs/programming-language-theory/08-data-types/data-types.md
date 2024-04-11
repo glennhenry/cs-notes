@@ -73,11 +73,137 @@ mutable x?: Int; // mutable variable, nullable
 immutable x?: Int; // mutable variable, nullable
 ```
 
-We can say immutability and nullable types are orthogonal features of this language.
+We can say immutability is the orthogonal features of this language and the nullable types as the orthogonal feature of the type system.
 
 ### Type Checking
 
+Type checking involves verifying that the types of operands in an operation or expression are compatible, converting between them if necessary, and determining a possibly new type after the operation.
+
+#### Type Equivalence
+
+Two types are considered equivalent according to structural equivalence and name equivalence.
+
+- **Structural Equivalence** : Structural equivalence compares the structure of two types to determine if they have the same composition of fields, methods, and properties. It looks at the internal structure of types, disregarding their names or declarations.
+
+  The compiler compares their order of declaration, formatting, and evaluate any expression.
+
+  ```cpp
+  // All these three are same.
+  struct Person {
+      int age;
+      string name;
+  };
+
+  struct Person {
+      string name;
+      int age;
+  };
+
+  struct Person { int age; string name; };
+  ```
+
+  Another example is the subrange type : `type test_score = 0..100;` should be same as `type test_score = 0..10*10;` (10 times 10), but different with `type test_score = 0..99;`.
+
+- **Name Equivalence** : Name equivalence compares types based on their names or declarations. It assumes that programmer that writes two types definition treat these types differently. If two types have the same name, they are considered equivalent regardless of their internal structure.
+
+  A language is said to have **strict name equivalence** if aliased types are considered distinct from each other, otherwise, if they are considered equivalent, it is said to have **loose name equivalence**.
+
+  :::tip
+  Aliased types or type aliases allow programmer to create alternative names or aliases for existing types. We can define type alias like `using age = int` in C++. This defines a new type `age` that can be used just like a normal type, but it is actually just an `int`.
+  :::
+
+#### Type Conversion
+
+Type conversion involves changing the type of a value from one data type to another, it can be done explicitly by the programmer (also called type cast), or implicitly by the compiler (also called type coercion).
+
+There are three case in conversion :
+
+1. In languages that use name equivalence, two types are considered the same if they have the same name, regardless of their structural differences. This means that if two types have different names but are structurally equivalent, they are considered interchangeable in terms of type conversions, because they have the same representation under the hood.
+2. A potentially unsafe type checking that occurs during runtime, that is when two types are different, but they can be represented as other depending on the actual value in runtime. For example, two subrange types are different, but one subrange is just subrange of another.
+3. Types have different low-level representation, but we can define conversion between them.
+
+For example, integer (typically 4 bytes) is a whole number, while double type (typically 8 bytes) is an [IEEE floating-point representation](/computer-and-programming-fundamentals/floating-number#floating-number-representation) with 15 decimal points of precision.
+
+If that integer were to be converted into double, then this would be no problem because double is essentially more precise than an integer. It would be only converting it into larger data types by adding more bit. This is also called **type promotion** or **widening conversion**. Type promotion is typically performed implicitly by the programming language without requiring explicit syntax or cast operators.
+
+On the other hand, a double conversion into integer is called **type demotion** or **narrowing conversion**. Type demotion can result in potential data loss or truncation, as the value may not fit within the smaller type's range or precision. Therefore, type demotion usually requires explicit casting or conversion operations to indicate that the programmer is aware of the potential loss of information.
+
+For example, converting an integer to a double is "as simple as adding .0" to the number (i.e., `5` becomes `5.0`). Conversely, converting a double to an integer involves removing the decimal point (i.e., `5.3` becomes `5`), which results in losing some information.
+
+#### Type Compatibility
+
+Type doesn't have to be same to be operated together. In other word, both operands must be at least compatible. The compatibility between types can be defined by the language or sometimes by the user. When it is defined by the language, the compiler can implicitly do the type conversion, this is known as **type coercion**.
+
+Some coercion can be helpful or even lead to an unexpected behavior. For example, it may make sense to allow addition of a string with an integer, this will append the integer to the string. For example, `"a string" + 1 = "a string1"`.
+
+:::info
+In type coercion, the compiler typically prioritizes one conversion over another. For example, in an addition between an integer and a double, the compiler would convert the integer to a double instead of the opposite, in order to avoid information loss.
+:::
+
+Other coercion are :
+
+- Integer to boolean : 0 is false, anything not 0 is true (C language)
+- Truthy and falsy values : In Python, values such as non-zero numeric values, non-empty sequences (e.g., strings, lists, tuples), non-empty containers (e.g., dictionaries, sets) are considered as True.
+
+We can define our own coercion by overloading operators or overloading the conversion itself. In C++ :
+
+```cpp
+class MyInt {
+private:
+    int value;
+public:
+    MyInt(int val) : value(val) {}
+
+    operator int() const {
+        return value;
+    }
+
+    MyInt operator+(const MyInt& other) const {
+        return MyInt(value + other.value);
+    }
+};
+
+int main() {
+    MyInt myInt(42);
+    int regularInt = myInt;  // Implicit conversion using the conversion operator
+    // regularInt now holds the value of myInt
+
+    return 0;
+}
+```
+
+`MyInt` simply holds an `int`, but it cannot be coerced or operated with a normal `int`. To enable such operations, we overload the conversion operator to convert `MyInt` to an integer using `operator int()` (called automatically by the compiler), and we also overload the `+` operator to perform addition between two `MyInt` objects. Additionally, we can define other operations between a `MyInt` object and a regular integer or even other types.
+
+#### Type Inference
+
+Some expressions are straightforward to deduce the resulting type. Arithmetic operation typically yield the same type as the operands, comparison typically produces boolean, and assignment can be inferred based on the expression being assigned to it. For example, if right-hand side assignment is addition of integer and double, resulting type will be double (assuming integer is converted into double).
+
 ### Structs & Unions
+
+Structs (also known as records) are used to define custom data types that encapsulate related data fields or members. A union is a special data type that allows different data types to be stored in the same memory location. This mean, union allocate memory that is shared among all its members. As a result, only one member of the union can be stored and accessed at a time. The union will accommodate size for the largest member within the union.
+
+As seen before, the syntax of declaring a named struct (or union with `union` keyword instead of `struct`) in C++ is like :
+
+```c
+struct StructName {
+    type1 member1;
+    type2 member2;
+    // ...
+    typeN memberN;
+};
+```
+
+In memory, struct will be stored in memory layout like below.
+
+![Struct in memory](./struct-in-memory.png)  
+Source : https://nerdyelectronics.com/memory-layout-of-a-structure/
+
+This is an array of `room` structs, each containing 2 ints and 2 floats, with each element having a size of 4 bytes. The fields of struct are stored next to each other in memory. Some structs may have larger size than they should be, due to [data alignment](/computer-organization-and-architecture/coa-fundamentals#padding) with padding.
+
+Memory allocation of struct and union :
+
+![Struct vs union memory allocation](./struct-vs-union-in-memory.png)  
+Source : https://fastbitlab.com/microcontroller-embedded-c-programming-lecture-157-unions/ (with modification)
 
 ### Arrays
 
