@@ -271,7 +271,7 @@ Another subtle problem that can arise in compilers (and for programmers as well)
 
 #### Iterators
 
-An alternative method of iteration is through the use of iterator objects. These can be considered as abstractions of loops, capable of traversing and manipulating the elements of a collection (such as an array, list, or other container) in a controlled manner. Such iterator objects become even more useful when implemented in complex data structures like [trees](/data-structures-and-algorithms/tree) or [graphs](/data-structures-and-algorithms/graphs). Iterator for tree data structure may be implemented to traverse in pre-order, in-order, or post-order.
+An alternative method of iteration is through the use of iterator objects. These can be considered as abstractions of loops, capable of traversing and manipulating the elements of a collection (such as an array, list, or other container) in a controlled manner. Such iterator objects become even more useful when implemented in complex data structures like [trees](/data-structures-and-algorithms/tree) or [graphs](/data-structures-and-algorithms/graph). Iterator for tree data structure may be implemented to traverse in pre-order, in-order, or post-order.
 
 See [iterator](/software-engineering/behavioral-patterns#iterator) for example.
 
