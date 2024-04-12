@@ -207,14 +207,117 @@ Source : https://fastbitlab.com/microcontroller-embedded-c-programming-lecture-1
 
 ### Arrays
 
+:::tip
+Array as a data structure is explained [here](/data-structures-and-algorithms/array).
+:::
+
+The syntax of arrays varies between languages. Some languages may require an explicit number for the size of the array, use parentheses instead of square brackets to access elements, and start indexing from 1 instead of 0.
+
+In C language, array is declared in the following syntax `dataType arrayName[Size] = {element1, element2, ..., elementN};`. For example, an array of integers is declared by `int arr[5] = {1, 2, 3, 4, 5};`. Then, to access it, we can call the name of array with square bracket and put the index of element we want to access inside it. Accessing element of index 3 is `arr[3]`.
+
+In C++, `[]` is treated as an operator. Calling `arr[3]` is a shorthand for `arr.operator[](3)`. Like other operators in C++, they are considered as functions. This makes it possible to overload them, meaning we can use `[]` to access something from any objects of our classes. Overloading `operator[]` can be a good way to create an intuitive way of accessing elements from our own custom data structure.
+
+#### Allocation
+
+If array size is known at compile-time, then it is easy to allocate memory for it. Sometimes, people specify size of array based on something only known at runtime. For example, declaring an array with the same size of some input integer. Size is indeed specified, but it is based on some runtime input.
+
+There are five cases of allocating an array :
+
+1. **Global Lifetime, Static Shape** : When array is created in the global scope, it will exist throughout the entire program's execution. The dimension or the shape of the array (i.e., the size), is known (specified in declaration) and fixed at compile time. Memory for the array is allocated in the static memory.
+2. **Local Lifetime, Static Shape** : The size of array is specified in the declaration, but it is declared within a function or a block and has a local scope. Memory for the array is allocated on the [stack frame](/computer-and-programming-fundamentals/memory#stack) during runtime.
+3. **Local Lifetime, Shape Bound at Runtime** : The array is declared within a function or a block, but the size is not known until runtime. Memory is allocated within the stack frame, but the allocation is hybrid. Stack frame is divided into fixed-size part, to place object whose size is known, and the variable-size part contains object whose size depends on runtime. An example in Python would be: `def my_function(): my_array = [0] * n`.
+4. **Arbitrary Lifetime, Shape Bound at Runtime** : The array's lifetime is not strictly tied to a specific scope or function. This is the case when creating an array is just making some reference. We can choose to bound the reference at any time. Languages like Java and C#, which use reference types, rely on this. Declaring an array like `int[] A` creates a reference; only if we assign it, like `A = new int[5];`, will the array then be allocated.
+5. **Arbitrary Lifetime, Dynamic Shape** : In this case, the array's shape can change dynamically during its lifetime. Memory for the array is allocated on the [heap](/computer-and-programming-fundamentals/memory#heap), and the size can be adjusted as needed by resizing or reallocating the memory.
+
+   An example in Java would be using an `ArrayList`.
+
+   ```java
+   ArrayList<Integer> dynamicList = new ArrayList<>();
+   dynamicList.add(5);
+   ```
+
+#### Memory Layout
+
+Elements of array are placed contiguously in memory (see also [array in memory](/data-structures-and-algorithms/array#array-in-memory)). The name we use for array is essentially just a pointer that points to the address of first element of the array in memory.
+
+In a multidimensional array, the placement can either be **row-major** or **column-major**.
+
+- In a row-major order, the elements of each row are stored consecutively in memory, and the rows themselves are stored one after another. This means that the elements of the second dimension are stored after the first, and so on.
+- In a column-major order, the elements of each column are stored consecutively in memory, and the columns themselves are stored one after another.
+
+With this array :
+
+```json
+arr = [[1, 2, 3, 4],
+       [5, 6, 7, 8],
+       [9, 10, 11, 12]]
+```
+
+Row-major is `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]`.  
+Column-major is `[1, 5, 9, 2, 6, 10, 3, 7, 11, 4, 8, 12]`.
+
 ### Strings
+
+String is implemented as an array of character. See [string as an array](/data-structures-and-algorithms/array#string-as-an-array).
 
 ### Sets
 
+See [set data structure](/data-structures-and-algorithms/set).
+
 ### Pointers & Recursive Types
+
+Pointers hold memory addresses. It allows for indirect access of an element through its address by dereferencing it. Pointers are commonly used to dynamically allocate memory on the [heap](/computer-and-programming-fundamentals/memory#heap). Programming languages that offer manual memory management (e.g., C++) provide the power of pointer, but often introduce [memory issues](/computer-and-programming-fundamentals/memory#pointer--reference-problems) like dangling pointers and memory leaks. Some languages provide tools like [garbage collection](/computer-and-programming-fundamentals/memory#garbage-collection) to automatically manage dynamic allocated memory.
+
+:::tip
+See also [pointer & reference](/computer-and-programming-fundamentals/memory#pointer--reference).
+:::
+
+Recursive types like [struct](#structs--unions) may consist of fields whose type is itself. This is common in data structures like [linked list](/data-structures-and-algorithms/linked-list). These types have an unknown size since they may consist of another type, which in turn consists of another type, and so on. For this purpose, we will need to allocate them in memory whose size can change dynamically.
+
+For example, we can create a linked list in C++ like below.
+
+```cpp
+class Node {
+public:
+    int m_data;
+    Node* next;
+
+    Node(int data) {
+        m_data = data;
+        next = nullptr;
+    }
+};
+
+int main() {
+    Node* head = new Node(1);
+    Node* second = new Node(2);
+    Node* third = new Node(3);
+
+    // (*head).next = second;
+    // (*second).next = second;
+    // or simply
+    head->next = second;
+    second->next = third;
+
+    // Clean up memory
+    delete head;
+    delete second;
+    delete third;
+
+    return 0;
+}
+```
+
+When creating linked list, we can use dynamic allocation using the `new` keyword. The `new` keyword returns a pointer for the newly allocated memory on the heap.
+
+We created three linked list nodes, and link them together by assigning the appropriate next pointers. `head`, `second`, `third` are all pointer, so we will need to dereference them to actually access the element it contains. It is done by using asterisk in front of the pointer. After dereferencing it, we can access the `next` field and assign it to appropriate next node. C and C++ provide a way to shorthand the dereferencing and field access. The `ptr->field` is a shorthand for `(*ptr).field`.
+
+Lastly, use `delete` keyword after we have finished using it to deallocate the previously allocated memory. After deleting it, we shouldn't use the pointer anymore. Otherwise, it will cause a [dangling reference problem](/computer-and-programming-fundamentals/memory#pointer--reference-problems).
+
+:::tip
+Pointer and array are closely linked in C/C++. See these [two](/data-structures-and-algorithms/array#array-in-memory) [notes](/computer-and-programming-fundamentals/memory#pointer-arithmetic).
+:::
 
 ### Lists
 
-### Files I/O
-
-### Equality Testing & Assignment
+List is by concept, a data structure that stores a collection of elements in a specific order. List in programming language can be implemented in many ways. One typical implementation is through [linked list](/data-structures-and-algorithms/linked-list), [array](/data-structures-and-algorithms/array), or [dynamic array](/data-structures-and-algorithms/array#dynamic-array).
