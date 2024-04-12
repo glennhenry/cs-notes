@@ -75,6 +75,14 @@ a = 3
 
 When we assign `a = 5`, a memory object representing the value `5` is created and stored. The variable `a` is then associated with this object. Later, when we assign `a = 3`, assuming numbers are immutable, a new memory object representing the value `3` is created. The variable `a` is updated to reference this new object. The original object representing `5` remains in memory until it is cleaned up by the [garbage collector](/computer-and-programming-fundamentals/memory#garbage-collection) or manually released in lower-level programming languages.
 
+#### Object
+
+Object can refer to object in [OOP](/computer-and-programming-fundamentals/object-oriented-programming), which is a particular instance of a class. In general, when we refer to object, we tend to describe it as anything that has name or identifier, such as a variable.
+
+#### Null
+
+Null, also known as **nil**, is a special value that represents the absence of a value. It is often used to indicate that a variable or pointer does not currently point to any valid data.
+
 #### Pointer & Reference
 
 A **pointer** is a variable that stores the memory address of another variable. It "points" to the location in memory where the actual data is stored.
@@ -142,7 +150,7 @@ The two important type of reference :
 
 There are also soft, phantom, and unreachable reference.
 
-#### Pointer Arithmetic
+##### Pointer Arithmetic
 
 Pointer arithmetic is a feature that allow programmer to perform arithmetic operations (i.e., add, subtract, multiply, divide) on pointers. It enables us to manipulate memory addresses directly.
 
@@ -174,13 +182,14 @@ Accessing index 3 with `arr[3]` is essentially same as adding 3 to the pointer `
 Array indexing is just one use of pointer arithmetic, it can be thought as pointer arithmetic that is done internally.
 :::
 
-#### Object
+##### Pointer & Reference Problems
 
-Object is a fundamental concept in [OOP](/computer-and-programming-fundamentals/object-oriented-programming), which mean a particular instance of a data structure or a variable that has its own state (data).
-
-#### Null
-
-Null, also known as **nil**, is a special value that represents the absence of a value. It is often used to indicate that a variable or pointer does not currently point to any valid data.
+- use after free
+- dangling reference
+- dangling pointer
+- null pointer
+- memory leak
+- double free
 
 ### Memory Management
 

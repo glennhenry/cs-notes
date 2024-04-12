@@ -169,4 +169,5 @@ Excluding the [index page](/index).
 13. **[ref]** [/programming-language-theory/target-architecture](/programming-language-theory/target-architecture) -> ref to compiler optimization in compilers.
 14. **[ref]** [/programming-language-theory/control-flow](/programming-language-theory/control-flow) -> ref to compiler optimization, jump table in compilers.
 15. **[ref]** [/programming-language-theory/control-flow](/programming-language-theory/control-flow) -> ref to compiler optimization, tail recursion in compilers.
-15. **[update]** [/data-structures-and-algorithms/array](/data-structures-and-algorithms/array)#string-as-an-array -> add information about string.
+16. **[update]** [/data-structures-and-algorithms/array](/data-structures-and-algorithms/array)#string-as-an-array -> add information about string.
+17. **[update]** [/computer-and-programming-fundamentals/memory](/data-structures-and-algorithms/array)#pointer--references-problems -> add information about pointer and reference problems.
