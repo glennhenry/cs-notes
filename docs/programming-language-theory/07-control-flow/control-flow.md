@@ -56,6 +56,10 @@ Overall there are two ways to handle variables.
 ![Reference and value model](./reference-value-model.png)  
 Source : Book page 240 (with my own code example)
 
+:::info
+In equality testing, the process of comparing two values to determine if they are equal or not, equality can be determined through reference or value. If we consider two objects equal when their reference is the same, this is called **shallow comparison**. We only check if two objects are referring to the same object. On the other hand, when we consider the internal structure of objects to determine their equality, this is called **deep comparison**. Deep comparison may be complicated to determine in a complex structure like [graph](/data-structures-and-algorithms/graph).
+:::
+
 When r-value is expected, yet l-value is received, the l-value needs to be **dereferenced**. L-value holds location of a variable, in a language that supports pointer or reference, l-value can be pointer (variable that holds memory address).
 
 ```cpp
