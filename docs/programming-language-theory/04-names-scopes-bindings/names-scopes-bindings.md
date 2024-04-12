@@ -121,8 +121,8 @@ struct Node; // Declaration
 
 struct Node { // Definition, it defines that struct Node has int data and another struct Node
     int data;
-    struct Node; // Can't use if not declared
-}
+    struct Node* next; // Can't use if not declared first
+};
 ```
 
 #### Dynamic Scope
