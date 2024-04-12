@@ -90,7 +90,7 @@ Here's an example taken from a YouTube video :
 
 1. In the line 1, we are declaring a variable named `ptr` which is a pointer (marked by `*` symbol), that pointer will "point" to a memory address of an `int`. Currently, it doesn't point to anything yet.
 2. In the line 2 and 3, we are declaring two variable that holds an `int`, named `var` and `foo`, respectively. Memory will be allocated to store these values, and both variables will hold their respective values.
-3. We are assigning an address to `ptr` variable, the value will be `&var`. The symbol `&` is the "address-of" operator, when we say `&var`, it means we are taking the address of `var` variable. Based on the image, the `ptr` will now store the address of `var` variable, which is `0xA`.
+3. We are assigning an address to `ptr` variable, the value will be `&var`. The symbol `&` is the **address-of operator**, when we say `&var`, it means we are taking the address of `var` variable. Based on the image, the `ptr` will now store the address of `var` variable, which is `0xA`.
 4. We are changing the address of `ptr` variable to `&foo`. Now, `ptr` will hold the address of `foo` variable, which is `0xB`.
 5. In the line 5, we are creating a variable that named `ref` that holds reference to an `int` variable, which is `var`. The `ref` variable will have the same exact address as `var`.
 
@@ -104,7 +104,9 @@ int* ptr = &x;
 *ptr = 10;
 ```
 
-`x` is an `int` variable with a value of `5`, while `ptr` is an `int` pointer that stores the memory address of `x`. When we say `*ptr = 10`, we are directly accessing the memory address held by the `ptr` variable, which is the address of `x`, and updating the value at that address to `10`. As a result, any variable associated with that address, such as `x`, will also be modified. Using pointer, we can effectively modify other variables indirectly through their shared memory address.
+`x` is an `int` variable with a value of `5`, while `ptr` is an `int` pointer that stores the memory address of `x`. Now that `ptr` holds the address of `x`, to actually get element stored in it, we would need to **dereference** the pointer.
+
+When we say `*ptr = 10`, we are dereferencing the pointer and assigning a value 10 to that address. What we did is changing the value directly from the memory address that holds it. As a result, any variable associated with that address, such as `x`, will also be modified. Using pointer, we can effectively modify other variables indirectly through their shared memory address.
 
 Pointer which stores memory address allows us to have direct memory access. This is useful for implementing data structures like [tree](/data-structures-and-algorithms/tree) or [linked list](/data-structures-and-algorithms/linked-list), where each node need to connection with other node. We can allow connection between node by having a pointer that points to other node's address.
 
@@ -136,10 +138,41 @@ Some purpose of using reference :
 The two important type of reference :
 
 - **Strong Reference** : A strong reference is the default type of reference in many programming languages. It keeps an object in memory as long as there is at least one strong reference pointing to it. As long as there are active strong references, the object will not be [garbage-collected](/computer-and-programming-fundamentals/memory#garbage-collection).
-
 - **Weak Reference** : A weak reference is a type of reference that does not prevent the object from being garbage-collected. In other word, when a variable have weak reference to an object, we can't guarantee that the variable will always contain that object, as the object may be garbage-collected or cleaned from the memory. If the object is garbage-collected and we are accessing the variable, we may get [null](/computer-and-programming-fundamentals/memory#null) value.
 
 There are also soft, phantom, and unreachable reference.
+
+#### Pointer Arithmetic
+
+Pointer arithmetic is a feature that allow programmer to perform arithmetic operations (i.e., add, subtract, multiply, divide) on pointers. It enables us to manipulate memory addresses directly.
+
+```c
+int arr[5] = {1, 2, 3, 4, 5};
+int* p = arr;
+```
+
+In this C code, an array of integer called `arr` is created. Then, we create a pointer called `p` that points to `arr`. This works, because essentially [array is just a pointer under the hood](/data-structures-and-algorithms/array) that points to the first element of the array. So, `arr` and `p` both points to the address of element 1.
+
+In programming languages, array access is typically done with square bracket. `arr[3]` is accessing element of index 3 from the `arr`. Under the hood, we are calculating the memory address of element of index 3 and through that memory address, we obtained the actual element. This can be done using pointer arithmetic.
+
+The formula of array access is `memory_address = base_address + (data_types_size * index)`. The `base_address` is obtained from the pointer that points to the first element, that is pointer `p` or the `arr` itself. With `arr[3]`, we are essentially specifying that the index is 3. The program knows that `arr` is an integer array, whose size is 4 bytes. If the `base_address` is 200, then element of index 3 would be in address 200 + (4 × 3) = 212.
+
+Let's illustrate this in code.
+
+```c
+int arr[5] = {1, 2, 3, 4, 5}; // arr actually holds address of 1
+int* p = arr; // p holds address of 1
+
+arr[3]
+// is same as
+*(p + 3)
+```
+
+Accessing index 3 with `arr[3]` is essentially same as adding 3 to the pointer `p`, then dereference that pointer to actually obtain the element stored in that address (`data_types_size` is calculated automatically).
+
+:::note
+Array indexing is just one use of pointer arithmetic, it can be thought as pointer arithmetic that is done internally.
+:::
 
 #### Object
 
