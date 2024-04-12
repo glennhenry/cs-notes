@@ -191,6 +191,8 @@ Array indexing is just one use of pointer arithmetic, it can be thought as point
 - memory leak
 - double free
 
+- tombstones
+
 ### Memory Management
 
 #### Memory Allocation

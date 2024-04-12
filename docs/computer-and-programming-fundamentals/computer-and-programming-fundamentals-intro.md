@@ -8,8 +8,7 @@ description: Computer & Programming Fundamentals Notes
 These topics serve as an introduction to a more advanced and specific topics, it also contains fundamental terminology or technique used in computer science and programming.
 
 :::note
-Some explanations are not beginner-friendly.  
-Explanation such as programming concepts are hard to explain for me, because I already know them beforehand, making me not cautious if the explanation is simple enough or not. Another reason is because some concept relates to other concept in other topic, making it harder to explain.
+Although the topic seems introductory, it actually assumes certain programming knowledge. Anyway, this is essentially just a note, which mean I already know them beforehand.
 :::
 
 ### All pages

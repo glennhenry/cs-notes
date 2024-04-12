@@ -139,20 +139,7 @@ Excluding the [index page](/index).
 
    - Search engine, crawler.
 
-3. **[update]** Revisit notes to fix English, typo, and possibly correct some information :
-
-   - Computer Graphics
-   - Frontend Web Development
-   - Digital Signal Processing
-   - Digital Media Processing
-   - Computer Networking
-   - Machine Learning
-   - Deep Learning
-   - Backend Development
-   - Computer & Programming Fundamentals
-   - Data Structures & Algorithms
-   - Computer Security
-
+3. **[update]** Revisit all notes to fix English, typo, update/edit information, add reference.
 4. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#svd-compression -> add svd compression.
 5. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#bitmap-encoding -> add bitmap encoding as compression.
 6. **[add]** [/digital-media-processing](/digital-media-processing)/iso -> add ISO file format.
