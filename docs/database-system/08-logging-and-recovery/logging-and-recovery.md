@@ -12,6 +12,7 @@ description: Logging & Recovery
 - **[Write-ahead logging - Wikipedia](https://en.wikipedia.org/wiki/Write-ahead_logging)**
 - **[Replication (computing) - Wikipedia](<https://en.wikipedia.org/wiki/Replication_(computing)>)**
 - **[Schema migration - Wikipedia](https://en.wikipedia.org/wiki/Schema_migration)**
+- **Chapter 5, Designing Data Intensive Applications - Martin Kleppmann**
 
 ### Logging
 
@@ -48,22 +49,26 @@ The transaction and logging usually happens periodically. Transaction are writte
 
 ### Replication
 
-**Replication** is the process of maintaining a copy of data for fault-tolerance.
+**Replication** is the process of maintaining a copy of data for improved availability, fault-tolerance, and serving more request. When one instance of database fails, we can use the others. Furthermore, with more instance being present, they can help to serve database request. This can be done locally or in [distributed database](/cloud-computing-and-distributed-systems/distributed-database).
 
 Key concept of data replication :
 
-- Replicated data can be stored in the same device or distributed in multiple device.
+- Replicated data can be stored in the same device or distributed in multiple device. We typically call an instance of database in distributed system as a **node**.
 - Replicated data can be all or some subset of the data.
-- Replica is typically updated frequently.
-- To synchronize with modification, we can either modify the primary and replicas simultaneously, or modify the primary data first and all the replicas after.
+- The device or system a copy of data is called replica. Replica is updated frequently to ensure data is consistent.
+- To synchronize with modification, we can either modify the primary and replicas simultaneously (asynchronous), or modify the primary data first and all the replicas after (synchronous).
 
 Some techniques of replication :
 
-- **Master-Slave Replication** : In this approach, there is a single master database that handles write operations, while one or more slave databases replicate the data from the master. The slaves are read-only replicas, they can only serve read queries from clients. The master propagates the changes to the slaves asynchronously or synchronously in some amount of time.
+- **Master-Slave Replication** : Also known as leader-follower replication, this approach rely on two types of node. A *master* database handles write operations, while one or more *slave* databases replicate the data from the master. The slaves are intended to be read-only, they can only serve read queries from clients. The master should be responsible for propagating the changes to the slaves asynchronously or synchronously in some amount of time.
 - **Multi-Master Replication** : In this approach, multiple database instances function as both masters and slaves. Each master can handle write operations independently, and changes made on one master are replicated to the other masters.
 - **Multi-Level Replication** : This approach creates a hierarchy of replicas, where changes are propagated through multiple levels of replication. For example, changes made to a primary database are replicated to secondary replicas, which in turn replicate the data to tertiary replicas.
 
 It is common for conflict to occurs in multi-master replication. One way to resolve conflict is to abort and rollback based on timestamp of when the transaction was done.
+
+In synchronous replication, the master always waits for the slave to update changes with new data until it completes, indicated when the slave sends a message. Consequently, this can be slower, but we can guarantee data consistency. The concern is not the performance, but rather when the slave fails. This could be due to hardware failure or network problems, which frequently encountered in distributed systems. Resolving these issues takes much longer than waiting for the write update. If all the slaves fail, the entire system could even halt entirely.
+
+In asynchronous replication, the master does not wait for the slave, which may lead to data inconsistency. There is also a semi-asynchronous approach where one node is made synchronous for maintaining consistent data, while others are made asynchronous. If the synchronous node fails, we can make the asynchronous slave synchronous.
 
 #### RAID
 

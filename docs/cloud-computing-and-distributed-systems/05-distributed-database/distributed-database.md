@@ -15,7 +15,7 @@ Distributed Database is a database system that is spread across multiple nodes o
 
 In order for distributed database to be useful, each node being able to serve content, it should be up-to-date.
 
-- **Replication** : Every change in one node, all other nodes should replicate the change by following some protocol. This process can be intensive and time-consuming as the size of data and the number of nodes in the system increase.
+- **[Replication](/database-system/logging-and-recovery#replication)** : Every change in one node, all other nodes should replicate the change by following some protocol. This process can be intensive and time-consuming as the size of data and the number of nodes in the system increase.
 - **Duplication** : Duplication don't actively copy data from one to another. In duplication, there will be a node acting as a master (related to [master-slave architecture](/cloud-computing-and-distributed-systems/master-slave)). Periodically, the master database will be duplicated to other slave nodes. When making changes to database, only the master can be mutated.
 
 ### Database Sharding
