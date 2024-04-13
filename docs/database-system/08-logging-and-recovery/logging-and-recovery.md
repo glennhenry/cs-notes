@@ -49,7 +49,7 @@ The transaction and logging usually happens periodically. Transaction are writte
 
 ### Replication
 
-**Replication** is the process of maintaining a copy of data for improved availability, fault-tolerance, and serving more request. When one instance of database fails, we can use the others. Furthermore, with more instance being present, they can help to serve database request. This can be done locally or in [distributed database](/cloud-computing-and-distributed-systems/distributed-database).
+**Replication** is the process of maintaining a copy of data for improved availability, fault-tolerance, and serving more request. When one instance of database fails, we can use the others. Furthermore, with more instance being present, they can help to serve multiple database request. This can be done locally or in a [distributed database](/cloud-computing-and-distributed-systems/distributed-database).
 
 Key concept of data replication :
 
@@ -60,11 +60,21 @@ Key concept of data replication :
 
 Some techniques of replication :
 
-- **Master-Slave Replication** : Also known as leader-follower replication, this approach rely on two types of node. A *master* database handles write operations, while one or more *slave* databases replicate the data from the master. The slaves are intended to be read-only, they can only serve read queries from clients. The master should be responsible for propagating the changes to the slaves asynchronously or synchronously in some amount of time.
-- **Multi-Master Replication** : In this approach, multiple database instances function as both masters and slaves. Each master can handle write operations independently, and changes made on one master are replicated to the other masters.
+- **Master-Slave Replication** : Also known as leader-follower replication, this approach rely on two types of node. A _master_ database handles write operations, while one or more _slave_ databases replicate the data from the master. The slaves are intended to be read-only, they can only serve read queries from clients. The master should be responsible for propagating the changes to the slaves asynchronously or synchronously in some amount of time.
+
+  The downside of using single master is, it could be overwhelmed by all the write request. Furthermore, it can lead to a single point of failures when the master fails. For that reason, when a master fails, it may be needed to select a new master through algorithm like [leader election](/cloud-computing-and-distributed-systems/distributed-systems-model#leader-election).
+
+- **Multi-Master Replication** : In this approach, multiple master are present in the system. Each master can handle write operations independently, and changes made on one master are replicated to the other masters.
+
+  While multi-master replication solves certain problems of master-slave replication, another [conflict](/database-system/concurrency-control#conflict-serializability) may occur. It arises when two or more master receive conflicting write operations that affect the same piece of data, therefore asking us which write is accepted. One way to resolve conflicts is to abort the operation and rollback to a specific timestamp when a change in one master was made. The choice of timestamp can be based on the **last-writer-wins (LWW)** principle, where the latest write operation is retained (although result in data loss).
+
 - **Multi-Level Replication** : This approach creates a hierarchy of replicas, where changes are propagated through multiple levels of replication. For example, changes made to a primary database are replicated to secondary replicas, which in turn replicate the data to tertiary replicas.
 
-It is common for conflict to occurs in multi-master replication. One way to resolve conflict is to abort and rollback based on timestamp of when the transaction was done.
+When there is delay for accessing data because of replication (e.g., slow read/write, node fails), we call it **replication lag**. This delay can be bother the system, as various consistency problem may occur.
+
+For instance, a client might update data through the master instance. Later, it reads data from a slave instance. This scenario can happen, for example, when a user submits a form through a web browser, and then refreshes the web browser to view the updated data. However, the slave instance hasn't received the write from the master yet. This can result in unexpected behavior observed by the user.
+
+#### Synchronous vs Asynchronous
 
 In synchronous replication, the master always waits for the slave to update changes with new data until it completes, indicated when the slave sends a message. Consequently, this can be slower, but we can guarantee data consistency. The concern is not the performance, but rather when the slave fails. This could be due to hardware failure or network problems, which frequently encountered in distributed systems. Resolving these issues takes much longer than waiting for the write update. If all the slaves fail, the entire system could even halt entirely.
 
