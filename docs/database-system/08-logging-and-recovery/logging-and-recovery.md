@@ -68,7 +68,9 @@ It is common for conflict to occurs in multi-master replication. One way to reso
 
 In synchronous replication, the master always waits for the slave to update changes with new data until it completes, indicated when the slave sends a message. Consequently, this can be slower, but we can guarantee data consistency. The concern is not the performance, but rather when the slave fails. This could be due to hardware failure or network problems, which frequently encountered in distributed systems. Resolving these issues takes much longer than waiting for the write update. If all the slaves fail, the entire system could even halt entirely.
 
-In asynchronous replication, the master does not wait for the slave, which may lead to data inconsistency. There is also a semi-asynchronous approach where one node is made synchronous for maintaining consistent data, while others are made asynchronous. If the synchronous node fails, we can make the asynchronous slave synchronous.
+In asynchronous replication, the master does not wait for the slave, which may lead to data inconsistency. Practically, the downside of synchronous replication is worse the asynchronous replication.
+
+Then there is also a semi-asynchronous approach where one node is made synchronous for maintaining consistent data, while others are made asynchronous. If the synchronous node fails, we can make the asynchronous slave synchronous.
 
 #### RAID
 
