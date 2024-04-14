@@ -9,6 +9,7 @@ description: Database Optimization
 
 - **[Query optimization - Wikipedia](https://en.wikipedia.org/wiki/Query_optimization)**
 - **[Partition (database) - Wikipedia](<https://en.wikipedia.org/wiki/Partition_(database)>)**
+- **Chapter 6, Designing Data Intensive Applications - Martin Kleppmann**
 
 [Query language](/database-system/query-language), typically being a declarative language, allows it to make its own optimization. It is up to the database engine how will it perform the database operation. Query language doesn't rely on specific instruction from the programmer, this makes the compiler able to produce a highly optimized query in a controlled way.
 
@@ -72,17 +73,19 @@ DBMS can introduce [caching](/backend-development/caching) mechanism to improve 
 
 Database partitioning is a technique to logically divide a large database into smaller, more manageable partitions. Partitioning is particularly useful when dealing with large datasets or when performance bottlenecks occur due to the size and complexity of the database.
 
-Partitioning also improves scalability and availability, it ensures that a failure of one partition does not affect the availability of the other partitions. Those partitions can be distributed across multiple servers.
+Partitioning also improves scalability and availability, it ensures that a failure of one database instance does not affect the availability of the whole system. Partitions can be distributed across multiple servers in distributed system.
 
-For example, a global company with customers in multiple regions could partition its customer data by region. This would allow the company to store the customer data for each region on a server in that region, which would improve data locality and reduce latency.
+For example, a global company with customers in multiple regions could partition its customer data by region. A server located in Asia would primarily hold data from customers coming from Asia as well. This would improve data locality and reduce latency.
 
 Type of database partitioning :
 
 1. **Range Partitioning** : Data is divided based on a specific range of values from a chosen attribute. For example, a date attribute could be partitioned into monthly or yearly ranges. Each partition contains data that falls within that specific range.
 2. **List Partitioning** : Divides data based on specific values or a list of values from a chosen attribute. For instance, a database could be partitioned based on region attribute, where each partition contains data related to a specific region.
 3. **Composite Partitioning** : Composite partitioning combines multiple partitioning techniques to create more complex partitioning strategies.
-4. **Round-robin Partitioning** : Round-robin partitioning evenly distributes data across partitions in a circular fashion. Each new record is inserted into the next partition cyclically. This technique can be useful when the data distribution is expected to be uniform and there is no specific criterion for partitioning.
-5. **Hash Partitioning** : Hash partitioning distributes the data across partitions based on a [hash function](/computer-security/hash-function) applied to a chosen attribute. The hash function ensures an even distribution of data across partitions, making it useful when there is no natural range or list criterion for partitioning.
+4. **Round-robin Partitioning** : Round-robin partitioning evenly distributes data across partitions circularly. Each new record is inserted into the next partition cyclically. This technique can be useful when the data distribution is expected to be uniform and there is no specific criterion for partitioning.
+5. **Hash Partitioning** : Hash partitioning distributes the data across partitions based on a [hash function](/computer-security/hash-function) applied to a chosen attribute. The hash function ensures an even distribution of data across partitions, making it useful when there is no natural range or list criterion for partitioning. One technique for this is the [consistent hashing](/cloud-computing-and-distributed-systems/distributed-systems-communication#distributed-hash-tables).
 
-![Database partition](./partition.png)  
-Source : https://www.enjoyalgorithms.com/blog/data-partitioning-system-design-concept
+   A scenario where partition is not fair, where one instance hold more than the other, we would call the system _skewed_. Unfair partition would make certain instance experience more workload (being a _hotspots_) and some are potentially idle.
+
+   ![Database partition](./partition.png)  
+   Source : https://www.enjoyalgorithms.com/blog/data-partitioning-system-design-concept

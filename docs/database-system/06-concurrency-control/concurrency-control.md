@@ -75,7 +75,8 @@ The above is example of a schedule that is conflict-serializable. A sequence of 
 Some common problem that occurs in concurrent transactions :
 
 - **[Deadlock](/operating-system/process-synchronization#deadlock)** : Deadlock is a situation where two or more transactions are waiting indefinitely for resources that are held by other transactions.
-- **Dirty Reads** : Dirty read occurs when one transaction reads data that has been modified by another transaction that has not yet been committed. In other words, a transaction reads uncommitted data that may be rolled back later, leading to data inconsistency.
+- **Dirty Reads** : Dirty read occurs when one transaction reads data that has been modified by another transaction that has not yet been committed. In other words, a transaction reads uncommitted data that may be rolled back later, leading to a potential data inconsistency.
+- **Dirty Writes** : Occur when a write operation that hasn't been committed is overwriten by another write operation.
 - **Non-repeatable Reads** : Non-repeatable reads occur when a transaction reads the same data multiple times during its execution, but the values of the data change between each read. This inconsistency can happen when another transaction modifies the data that the first transaction is reading.
 - **Phantom Reads** : Phantom reads occur when a transaction reads a set of rows that satisfy a certain condition, but when it repeats the same read, additional rows are found that meet the condition. This can occur when another transaction inserts or deletes rows that match the condition.
 
@@ -95,6 +96,10 @@ The schedule of transactions execution can be represented by a graph called the 
 Source : https://www.geeksforgeeks.org/equivalent-serial-schedule-of-conflict-serializable-schedule-in-dbms/
 
 In the precedence graph, each transaction is represented by a node, and there is a directed edge from one transaction to another if the former transaction must precede the latter transaction in the schedule. The edges in the graph represent the dependencies between transactions based on their read and write operations.
+
+:::tip
+Checking serializability through precedence graph is a pessimistic approach.
+:::
 
 #### Locks
 
@@ -123,7 +128,7 @@ Transaction 1 acquire lock and read the value database element $A$. It increases
 
 ##### Two-Phase Locking
 
-**Two-phase locking (2PL)** is a locking mechanism that enforces a specific order of actions within a transaction that guarantees serializability.
+**Two-phase locking (2PL)** is a pessimistic locking mechanism that enforces a specific order of actions within a transaction that guarantees serializability.
 
 It divides a schedule into two distinct phases : the **lock acquisition phase** and the **lock release phase**. In the lock acquisition phase, a transaction acquires _all_ the necessary locks it needs to read or modify database elements before proceeding with its operations. In other word, all lock actions precede all unlock actions.
 
@@ -147,4 +152,4 @@ Each database element is associated with two timestamps and a **commit bit**. Th
 
 The commit bit gives an information to prevent a situation where one transaction reads data written by another transaction that subsequently aborts (dirty read).
 
-In the case of conflict, we can allow the transaction with the earlier timestamp to proceed, while the transaction with the later timestamp may be rolled back and restarted or delayed.
+Timestamp ordering can be considered optimistic because it assumes that conflicts between transactions are rare. Transactions are allowed to execute concurrently based on their timestamps, without acquiring locks. If conflicts occur, we can allow the transaction with the earlier timestamp to proceed, while the transaction with the later timestamp may be rolled back and restarted or delayed.
