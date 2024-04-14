@@ -195,19 +195,19 @@ Source : https://www.scaler.com/topics/c/user-defined-functions-in-c/
 
 ### Debugging & Error Handling
 
-A **bug** in software is an error or unexpected behavior in software. **Debugging** is the process of identifying and resolving which part of the program's code causes the error. **Error handling**, is the process of handling or anticipating error that may occur during the execution of program. Error handling helps us to recover the program from error and preventing it to terminate abruptly.
+A **bug** in software is an error or unexpected behavior in software. **Debugging** is the process of identifying and resolving which part of the program's code causes the error. **Error handling** is the process of handling or anticipating error that may occur during the execution of program. Error handling helps us to recover the program from error and ideally prevent it to terminate abruptly (at least returning a helpful error message).
 
 #### Type of Error
 
-- Syntax Error : Syntax errors occur when the code violates the rules of the programming language's syntax. A syntax error typically occurs before the program execution, such as during the process of writing the code. Common examples of syntax errors include misspelled keywords, missing or mismatched parentheses or brackets, incorrect variable names, or improper use of operators.
-- Runtime Error : Runtime errors are the error that occurs during the execution of program. These errors may arise due to unexpected conditions, such as invalid user input (e.g., entering number when the application ask you to enter a character).
-- Logic Error : On the other hand, logic error doesn't involve the error of execution. They occur when the code executes correctly but does not produce the expected or desired result. Logical errors are typically caused by mistakes in the program's logic. For example, in a calculator application, the programmer mistakenly implemented a button intended for adding two numbers to instead perform subtraction between the numbers.
+- **Syntax Error** : Syntax errors occur when the code violates the rules of the programming language's syntax. A syntax error typically occurs before the program execution, such as during the process of writing the code. Common examples of syntax errors include misspelled keywords, missing or mismatched parentheses or brackets, incorrect variable names, or improper use of operators.
+- **Runtime Error** : Runtime errors are the error that occurs during the execution of program. These errors may arise due to unexpected conditions, such as invalid user input (e.g., entering number when the application ask you to enter a character).
+- **Logic Error** : On the other hand, logic error doesn't involve the error of execution. They occur when the code executes correctly but does not produce the expected or desired result. Logical errors are typically caused by mistakes in the program's logic. For example, in a calculator application, the programmer mistakenly implemented a button intended for adding two numbers to instead perform subtraction between the numbers.
 
 #### Exception
 
 An exception is an event or condition that occurs during the execution of a program and disrupts the normal flow of instructions (considered as runtime error). It represents an unexpected situation in program which require to be handled.
 
-When an error occurs, the program raises or throws the exception. When we throw an exception, it typically involves creating an exception object that contains information about the exception, such as the type of exception and additional details.
+When an error occurs, the program raises or throws the exception. Exception can be thrown by the programmer's code or by the programming language. Exception is thrown using the `throw` or `raise` keyword. Furthermore, exception is typically included with details such as error information.
 
 #### Try-Catch
 
@@ -219,17 +219,19 @@ Here is an example of try-catch block in the Kotlin programming language :
 try {
   // user should input number
 } catch (e: InvalidInput) {
-  // user inputted character, send alert message to them
+  // user an inputted invalid input, send alert message to them
 } finally {
-  // send a "message received" message to user
+  // log to the system
 }
 ```
 
-In the `catch` block, we will need to specify what kind of error is expected to happen. For example, the type of error is the `InvalidInput`, which tells us that user has invalid input. We can also anticipate multiple kind of error by specifying more catch block. If the error we get is different to what we specified, then the catch block may be ignored, unless the type of error is a more general type or if it includes a broader exception type.
+Kotlin define exception as a hierarchy of error. Exceptions are provided by the language, but it can also be defined by the programmer.
 
-The `finally` block will send a "message received" message to the user, to indicate that their input has been acknowledged.
+We will consider a program where the user is expected to input a number. In the `catch` block, we should specify that `InvalidInput` is a potential error that could happen in the program. The `InvalidInput` is an exception that we defined ourselves. It is a generic exception for input that is invalid. We can also anticipate multiple kind of error by specifying more catch block with different type of error.
 
-When an error is thrown and is not handled, the program executor will try to find which part of the program is supposed to handle the error. The program will keep finding the error handler up to the part of code that responsible for calling or invoking the function that makes the error happens, this is called **error propagation** or **call stack unwinding**. If we reach the highest-level point and error handler is still not found, the program may crash abruptly.
+The `finally` block consist of instruction that will always be executed. In this case, we are just logging the error. It can be useful in a scenario where we need to perform resource clean up. By cleaning up, it means taking care of any resources that our program has used and making sure they are properly released or freed up when they are no longer needed.
+
+When an error is thrown and is not handled, the program executor will try to find which part of the program is supposed to handle the error. The program will keep finding the error handler up to the part of code that responsible for calling or invoking the function that makes the error happens, this is called **error propagation** or **call stack unwinding**. If we reach the highest-level point and error handler is still not found, the program may crash abruptly (along with error message if provided).
 
 ![Flowchart of a try-catch block](./try-catch.jpeg)  
 Source : https://www.wikitechy.com/tutorials/java/java-try-catch-finally-blocks
