@@ -16,7 +16,7 @@ description: Object-Oriented Programming
 
 #### Object
 
-Objects are the building block of OOP, object is a representation of an entity which has its own characteristics and behavior. The characteristics of an object is called **attributes** or **properties** and the behavior or the action it can perform is called **methods**.
+Objects are the building block of OOP, object is a representation of an entity which has its own characteristics and behavior. The characteristics of an object is called **attributes**, **fields**, or **properties** and the behavior or the action it can perform is called **methods**.
 
 In OOP, we model an object based on real-world entities, consider making a `Bird` object.
 
@@ -67,7 +67,9 @@ OOP doesn't only revolve around classes and objects, there are more concepts in 
 
 #### Abstraction
 
-**Abstraction** is the process of hiding internal details of a system and instead presenting a simplified and high-level view. Abstraction is typically achieved through :
+**Abstraction** is the process of hiding the internal details of a system and instead presenting a simplified and high-level view. This allows users (developers) to focus less on the internal workings and rely on what is presented. Not only does it simplify things, but it also reduces the possibility of mistakes made by users, as everything is handled behind the scenes and they only need to interact with the abstraction.
+
+In OOP, abstraction is achieved through many things.
 
 ##### Interface
 
@@ -96,7 +98,7 @@ Source : https://www.scaler.com/topics/abstraction-in-oop/
 
 Visibility modifier is a keyword that determines the accessibility and visibility of class members. A class member refers to the components of a class, including its attributes and methods.
 
-There are typically two visibility modifiers used in OOP :
+There are typically three visibility modifiers used in OOP :
 
 - **Public** : A public keyword is used to make class members accessible from anywhere. External code can interact and modify the detail of an object.
 - **Private** : A private keyword is used to make class members accessible only within the class in which it is declared. It cannot be accessed or modified from outside the class.
@@ -105,6 +107,8 @@ By using private modifier, we can prevent external code from making unauthorized
 
 ![Encapsulation](./encapsulation.png)  
 Source : https://www.crio.do/blog/encapsulation-in-java/
+
+With this concept, it is possible that we have class as high-level as `BankAccount`. We will only present the `deposit`, `withdraw`, `seeBalance` method. All the complexity of handling the system is made private. Programmers won't be able to see or use the internal method (unless checking source code directly).
 
 #### Inheritance
 
@@ -153,7 +157,7 @@ There are two types of polymorphism :
 Compile-time is period in which code is being translated into machine language that computer can understand.
 :::
 
-- **Runtime Polymorphism (Dynamic Polymorphism)** : This polymorphism is resolved in rutime, one of the example is **method overriding**, which occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. The decision of which method implementation will be executed determined at runtime (at the program execution) based on the actual type of the object being referenced.
+- **Runtime Polymorphism (Dynamic Polymorphism)** : This polymorphism is resolved in runtime, one of the example is **method overriding**, which occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. The decision of which method implementation will be executed determined at runtime (at the program execution) based on the actual type of the object being referenced.
 
   ```kotlin
   // open indicates a class, attributes, or methods is inheritable
@@ -193,4 +197,4 @@ Compile-time is period in which code is being translated into machine language t
 
   The `draw()` method has three different implementation, the first in the original `Shape` class, the second in the `Circle`, and the third in the `Rectangle` class. The specific implementation which will be used is determined at runtime based on the actual type of the object. For example, `shape1` has the type of `Shape`, but it actually has the value of the `Circle` class. When `shape1.draw()` is called, it will invoke the `draw()` method of the `Circle` class rather than the one in the `Shape` or `Rectangle` class.
 
-  Under the hood, the program stores information about the actual type of an object at runtime. This information is used to determine the appropriate method to call.
+  Under the hood, the program stores information about the actual type of object at runtime. This information is used to determine the appropriate method to call.
