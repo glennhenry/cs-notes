@@ -102,7 +102,7 @@ In C++, base class constructors are invoked before the derived class constructor
 
 When initializing an object variable, we are implicitly calling the class constructor. For example, with an initialization of `foo a`, we are creating an object named `a` of type `foo` using the default constructor of the class `foo`. Because we are not giving arguments, the compiler will call constructor which doesn't take any argument. If we don't have the default constructor, the compiler will generate one for us, unless we have other constructor, then it will be a semantic error.
 
-So, saying `foo a` is shorthand of `foo::foo()` (accessing the namespace then calling the constructor). `foo a(2, 'c')` is shorthand of `foo::foo(int, char)`, the constructor for `foo` which takes `int` and `char`.
+So, saying `foo a` is shorthand of `foo::foo()` (accessing the namespace with `foo::` then calling the constructor `foo()`). `foo a(2, 'c')` is shorthand of `foo::foo(int, char)`, the constructor for `foo` which takes `int` and `char`.
 
 When we say `foo a(b)`, where `b` is another object of `foo`, we are invoking the copy constructor of the class `foo` to create a new object `b` by making a copy of `a`. The copy constructor is a special constructor that takes a reference to an object of the same class as its parameter. It is used to create a new object by copying the state of an existing object.
 
@@ -113,3 +113,74 @@ foo(const foo& other) {}
 ```
 
 So, a `foo a(b)` is same as `foo::foo(foo&)`. This applies not only when the argument is of the same class foo but also when the argument is an object of another class that can be implicitly converted to foo or matches a constructor overload.
+
+### Dynamic Method Binding
+
+Inheritance allow for [subtype polymorphism](/programming-language-theory/data-types#polymorphism), in which we are able to use any method, either from superclass or subclass based on the type of object we are operating on.
+
+```cpp
+class Base {
+public:
+    virtual void someMethod() {
+        std::cout << "Base" << '\n';
+    }
+};
+
+class Derived : public Base {
+public:
+    void someMethod() override {
+        std::cout << "Base" << '\n';
+    }
+};
+
+int main() {
+    Base* obj = new Derived();  // Pointer of type base class pointing to derived class object
+    obj->someMethod();  // Calls the overridden method in the derived class
+    delete obj;
+    return 0;
+}
+```
+
+In this C++ code, we are making a pointer of type base class, but it actually points to a subclass `Derived`. This is possible since `Derived` is just the subclass of `Base` As a result, calling `someMethod` on `obj` would call `someMethod` inside `Derived`.
+
+Dynamic method binding is made possible in C++ through `virtual` keyword. `virtual` denotes a method that can be overridden by derived classes (where the most derived class overriding is chosen) and a dynamic dispatch should be used to determine the appropriate implementation at runtime. The `override` denotes a method is overriding a method of subclass (although it is not required, just for readability).
+
+Under the hood, the compiler is making a **virtual table (vtable)** to keep track method binding for each class.
+
+![vtable in C++](./vtable.png)  
+Source : https://www.learncpp.com/cpp-tutorial/the-virtual-table/
+
+Essentially, it's an array of function pointers where each entry corresponds to a virtual function in the class. The vtable is generated at compile-time, storing the addresses of the actual function implementations for each virtual function. The compiler also generates a hidden pointer field in the class that points to the address of the table. A separate table and inherited pointer will be created for derived class.
+
+#### Abstract Class
+
+With `virtual` keyword, we can also make a class abstract, meaning it can't be instantiated directly and is designed to be used as a base class for concrete classes. A class is abstract when there is at least one abstract method. In C++, making a class abstract is done by assigning any method to 0 like `virtual void pureVirtualFunction() = 0`.
+
+In language like Java and C#, marking a class as abstract is simpler, it is done by labeling the class and method with `abstract` keyword.
+
+#### Multiple Inheritance
+
+Multiple inheritance is known to cause a problem called **diamond problem**. It is an ambiguity that arise when two base classes of a derived class share a common base class, and they both override a common method or field.
+
+![Diamond problem](./diamond.png)  
+Source : https://en.wikipedia.org/wiki/Multiple_inheritance
+
+C++ mitigate this issue by virtual inheritance.
+
+```cpp
+class BaseClass {
+};
+
+class DerivedClass1 : public virtual BaseClass {
+};
+
+class DerivedClass2 : public virtual BaseClass {
+};
+
+class Diamond : public DerivedClass1, public DerivedClass2 {
+};
+```
+
+In this example, both `DerivedClass1` and `DerivedClass2` inherit virtually from `BaseClass` using the virtual keyword. Using this, a shared base class for both class is constructed only once to avoid duplicate member issues.
+
+Then, `Diamond` inherits from both `DerivedClass1` and `DerivedClass2`. With virtual inheritance, there is only one instance of `BaseClass` in `Diamond`, preventing the diamond problem.
