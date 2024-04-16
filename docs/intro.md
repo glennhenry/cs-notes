@@ -162,3 +162,4 @@ Excluding the [index page](/index).
 19. **[ref]** [/backend-development/rpc#protocol-buffers](/backend-development/rpc#protocol-buffers) -> ref to the previous serialization method, namely protocol buffer.
 20. **[update]** [/data-structures-and-algorithms/hash-table](/data-structures-and-algorithms/hash-table)#log-structured-hash-table -> add log-structured hash table.
 21. **[update]** [/database-system/logging-and-recovery#migration](/database-system/logging-and-recovery#migration) -> add more about migration, particularly how it works.
+22. **[update]** -> [/cloud-computing-and-distributed-systems/distributed-systems-model#consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus) add about byzantine failures, Two Generals' Problem.
