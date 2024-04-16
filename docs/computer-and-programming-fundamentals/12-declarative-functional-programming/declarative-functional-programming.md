@@ -25,16 +25,29 @@ Source : https://steemit.com/programming/@nv-vn/getting-started-with-functional-
 
 ### Functional Programming
 
-**Functional Programming (FP)** is a programming paradigm (type of declarative programming) which treats computation as the evaluation of mathematical functions. Mathematical function is the framework of FP. In mathematics, a function is defined as a relation between a set of inputs (called **arguments**) and a set of possible outputs (called **results**), where each input is related to exactly one output.
+**Functional Programming (FP)** is a programming paradigm (type of declarative programming) which treats computation as the evaluation of mathematical functions. Mathematical function is the framework of FP. In mathematics, a function is defined as a relation between a set of inputs (called **arguments**) and a set of possible outputs (called **ranges**), where each input is related to exactly one output.
 
 ![Function relation in math](./function-relation.png)  
 Source : https://web.cecs.pdx.edu/~antoy/Courses/CS250/slides/2b/Functions_2.html, https://danielpecos.com/2014/06/24/function-composition/ (function relation in math)
 
-Some characteristics of mathematical functions :
+Characteristics of mathematical functions, which inherited into functional programming :
 
 - **Deterministic Mapping** : For a given input, a mathematical function must produce a unique and deterministic output (same input should produce same output). The output is solely determined by the input.
-- **No Side Effects** : A mathematical function should be pure, meaning it shouldn't have side effects, which mean it doesn't modify external state. For example, producing an output from an input shouldn't change the function output for other input.
-- **Referential Transparency** : Referential transparency means that a function's output should be replaceable by its equivalent output.
+- **No Side Effects** : A mathematical function should be pure, meaning it shouldn't have side effects. It shouldn't modify external state that cause the function to change its behavior.
+
+  For example, a function `f` look like this :
+
+  ```python
+  n = 2
+  def f(x):
+      result = x ** n
+      n += 1
+      return result
+  ```
+
+  It computes `x` to the power of `n`, then increments `n`, and finally returns the previous computation. This function has a side effect because its behavior modifies the variable `n` outside the function's scope. Even if it doesn't directly affect the function's output, we still consider it to produce a side effect. Side effects like this should be avoided in functional programming. A good principle is to avoid using global state altogether.
+
+- **Referential Transparency** : Referential transparency is a property of function that allows a function's output to be replaced by its equivalent output.
 
   Here's an example of referential transparency in Python programming language :
 
@@ -50,25 +63,48 @@ Some characteristics of mathematical functions :
   # 'result1' and 'result2' will always be equal.
   ```
 
-In order to adhere with the principles of mathematical functions, functional programming has some characteristics :
+- **Immutability** : Immutability is a concept where once a variable (or data structure) is assigned a value, that value cannot be changed. Immutability is promoted in functional programming because it provides consistency; and again, it reduces potential side effects.
 
-- **Immutability** : Immutability is a concept where once a variable (or data structure) is assigned a value, that value cannot be changed. In mathematics, a function maps inputs to outputs, the mapping should be deterministic. Immutability provides consistency and reduce side effects to align with the purity of mathematical function.
-- **Minimizing Global State** : Mathematical functions are independent of external factors, their behavior is determined solely by their inputs. Functional programming minimize global state to make functions more self-contained and modular.
+#### Lambda Calculus
+
+**Lambda Calculus** is a concept of expressing computation in mathematical logic and computer science using functions.
+
+Function is abstracted to anonymous function, they do not have name and is symbolized with the lambda symbol : $\lambda$. A function can take a parameter, it is placed in front of the lambda symbol. For example, a function with parameter $x$ is denoted as $\lambda x$.
+
+After constructing a function, the next step is to apply an expression to the parameter, an expression or function body is denoted as $M$. Putting it all together, a function that takes a parameter $x$ and apply expression $M$ is denoted as $\lambda x.M$, where $.$ is just a symbol to separate the parameter from the body of the function.
+
+##### Example
+
+A function that takes some variable and return the variable incremented by 1, the lambda calculus notation for this is $\lambda x.x + 1$. When we apply this function with the argument of $3$, it would be written as $(\lambda x.x + 1) \space 3$, which is equal to $4$. The variable $x$ is **bound** to the argument $3$ during the function application.
+
+That was just the basic concept of lambda calculus. Overall, it serves as the theoretical foundation for many concepts in functional programming languages. It provides a formal and mathematical framework for understanding functions, function application, and the manipulation of functions.
 
 #### First-Class Citizen
 
-In programming, an entity is called as a **first-class citizen** if it can be treated like other basic data types or values in the programming language. In functional programming, a function is treated as first-class citizen, it has several key characteristics :
+In programming, an entity is called as a **first-class citizen** if it can be treated like other basic data types in the programming language. In functional programming, a function is treated as first-class citizen, it has several key characteristics :
 
-- **Assigned to Variables** : You can assign a function to a variable, just like you would with a primitive data type or any other value.
-- **Stored in Data Structures** : Functions can be stored in data structures such as arrays.
-- **Passed as an Argument** : A function can be passed as an argument to another function, in other word, a function can accept other functions as parameters.
+- **Assigned to Variables** : We can assign a function to a variable, just like you would with a primitive data type.
+- **Stored in Data Structures** : Functions can be stored in data structures, such as arrays.
+- **Passed as an Argument** : A function can be passed as an argument to another function. In other word, a function can accept other functions as parameters.
 - **Returned from a Function** : Functions can produce other functions as output.
 
-The concept of treating a function as an argument or as an output from another function is also known as a **higher-order function**.
+In mathematics, the concept of first-class citizen is also known as a **higher-order function**.
+
+:::info
+In language like C, function is not considered as first-class citizen. However, it still allows us to pass function through argument, specifically using function pointer; that is, a pointer that holds an address of a function.
+
+Language like Kotlin treat function as first-class citizen. We can, for example, define a function and assign it to a variable :
+
+```kotlin
+val add: (Int, Int) -> Int = { a, b -> a + b }
+```
+
+A variable named `add` has a data type of function that takes two `Int` values and returns an `Int`. Inside the function, we refer to the two `Int` arguments as `a` and `b`, and the output is produced by `a + b`.
+:::
 
 #### Recursion
 
-Because functional languages depend on function, iterating is based on **[recursion](/data-structures-and-algorithms/recursion)**. Quick concept, recursion is where a function call itself until some condition is achieved. For example, we could make an illusion of loop in a function like :
+Functional languages depend on function, many features, such as iteration (e.g., for-loop) is not available. So, they must invent their "hacky" way to achieve such thing with function. Iteration can be achieved through **[recursion](/data-structures-and-algorithms/recursion)**, which is a function that call itself until some condition is achieved. For example, we could make an illusion of loop in a function like :
 
 ```python
 def loop_for(n):
@@ -81,26 +117,6 @@ loop_for(3)
 ```
 
 When we call the function with `n = 3`, the function will check if the input has reached zero or not. If not, it will print the "still looping..." and will call itself with its own input decremented by 1. This will be done until the `n` reached zero and the "loop end" will be printed.
-
-So, even though there's no explicit loop, recursion provides a way to achieve iteration-like behavior in functional programming languages.
-
-#### Lambda Calculus
-
-**Lambda Calculus** is a concept of expressing computation in mathematical logic and computer science that represents computation based on the concept of **anonymous functions** (functions without names).
-
-A function doesn't have name, it is denoted using the lambda symbol : $\lambda$. A function can take a parameter, it is placed in front of the lambda symbol. A function with parameter $x$ is denoted as $\lambda x$.
-
-After constructing a function, the next step is to apply an expression to the parameter, an expression or the function body is denoted as $M$. Putting all together, a function that takes a parameter $x$ and apply expression $M$ is denoted as $\lambda x.M$, where $.$ is just a symbol to separate the parameter from the body of the function.
-
-##### Example
-
-A function that takes some variable and return the variable incremented by 1, the lambda calculus notation for this is $\lambda x.x + 1$. When we apply this function with the argument of $3$, it would be written as $(\lambda x.x + 1) \space 3$, which is equal to $4$. The variable $x$ is **bound** to the argument $3$ during the function application.
-
-That was just the basic concept of lambda calculus, there are many more concepts.
-
-:::note
-Overall, lambda calculus serves as the theoretical foundation for many concepts in functional programming languages. It provides a formal and mathematical framework for understanding functions, function application, and the manipulation of functions.
-:::
 
 #### Functional Programming Application
 
@@ -123,3 +139,7 @@ Here is another example from Wikipedia that compares imperative and functional p
 
 ![Comparison of imperative and functional programming approach](./imperative-vs-functional.png)  
 Source : https://en.wikipedia.org/wiki/Functional_programming#Imperative_vs._functional_programming
+
+:::info
+Modern programming languages often encompass different programming paradigms, combining one with another. Even though JavaScript supports for-loops, as typically found in imperative paradigms, it also supports functions as first-class citizens, which is the fundamental of functional programming.
+:::

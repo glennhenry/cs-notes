@@ -10,3 +10,5 @@ description: Functional Languages
 - [] 
 
 Functional Languages page
+
+[functional programming](/computer-and-programming-fundamentals/declarative-functional-programming#functional-programming)
