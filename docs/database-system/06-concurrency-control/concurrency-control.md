@@ -12,9 +12,15 @@ description: Concurrency Control
 
 Database operations are grouped into a transaction unit. The execution of each transaction unit is scheduled by the **scheduler** of DBMS. This is to ensure database operations executed in controller manner, avoiding concurrency issues such as [data races](/computer-and-programming-fundamentals/concurrency-and-parallelism#race-condition). The overall process of handling concurrency is called **concurrency control**.
 
-The two property of concurrency control :
+The three property of concurrency control (whether in local database or [distributed database](/cloud-computing-and-distributed-systems/distributed-database)) :
 
-- **Serializability** : Serializability is a property of a schedule in concurrent transactions that guarantees the execution to produces the same outcome as if they had executed in other sequential order, without any overlap.
+- **Serializability** : Serializability is a property of a schedule in concurrent transactions that guarantees the execution to produces the same outcome as if they had executed in other sequential order, without any overlap. In other word, a database system with serializability means that even if we execute multiple transaction simultaneously, we can guarantee that the end result of executing those transactions is equivalent to some serial execution of the transactions (i.e., as if they had executed one after another in a specific order).
+- **Linearizability** : Also known as strict serializability, is a strong consistency condition, where execution of operations appears as if they occurred atomically and in a specific global order, even though they may be executed concurrently across different processes or devices. We could describe it in an example.
+
+  In a system with three servers (S1, S2, and S3), S1 accepts write operations while S2 and S3 accept read operations. This division of roles helps balance the system load. Suppose a client initially reads a value from S2 because it is geographically close. Later, the client wants to update the value and writes it to S1. S1 is responsible for propagating the update to S2 and S3. However, there is a possibility that the update has reached S3 but not S2, and the client reads the value from S2 again before the update reaches it. In this scenario, S2 is unaware of the update while S3 knows about it.
+
+  To ensure the linearizability property, the distributed system must ensure that the client's read operation on S2 appears to take effect atomically at a single point in time, regardless of the server's location. It should observe a consistent and globally agreed-upon state of the system, even across servers in the distributed system.
+
 - **Recoverability** : Recoverability in concurrency control does not mean the ability to recover, but rather the property to not read invalid or inconsistent data written by aborted transactions. Changes made by aborted or uncommitted transactions shouldn't be valid.
 
 ![An example of transactions](./transactions.png)  
@@ -47,7 +53,7 @@ $r_i(X)$ means that a value $X$ is being read by transaction $i$. In the case of
 
 ### Conflict Serializability
 
-**Conflict** is a situation where changing the order of two or more transactions leads to data inconsistencies or incorrect results. **Conflict serializability** is a concept that extends serializable. It ensures that a schedule is serializable and avoid conflict. Conflict serializability is a desirable property as it guarantees the correctness and consistency of the database state.
+**Conflict** is a situation where changing the order of two or more transactions leads to data inconsistencies or incorrect results. **Conflict serializability** focuses on making schedule that has serializability property.
 
 Conflict will _not_ occur when :
 
