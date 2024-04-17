@@ -45,7 +45,7 @@ Characteristics of mathematical functions, which inherited into functional progr
       return result
   ```
 
-  It computes `x` to the power of `n`, then increments `n`, and finally returns the previous computation. This function has a side effect because its behavior modifies the variable `n` outside the function's scope. Even if it doesn't directly affect the function's output, we still consider it to produce a side effect. Side effects like this should be avoided in functional programming. A good principle is to avoid using global state altogether.
+  It computes `x` to the power of `n`, then increments `n`, and finally returns the previous computation. This function has a side effect because its behavior modifies the variable `n` outside the function's scope. Even if it doesn't directly affect the function's output, we still consider it to produce a side effect. Side effects like this should be avoided in functional programming. A good principle is to not use global state or initial state at all.
 
 - **Referential Transparency** : Referential transparency is a property of function that allows a function's output to be replaced by its equivalent output.
 
@@ -142,4 +142,8 @@ Source : https://en.wikipedia.org/wiki/Functional_programming#Imperative_vs._fun
 
 :::info
 Modern programming languages often encompass different programming paradigms, combining one with another. Even though JavaScript supports for-loops, as typically found in imperative paradigms, it also supports functions as first-class citizens, which is the fundamental of functional programming.
+:::
+
+:::tip
+See also [functional languages](/programming-language-theory/functional-languages).
 :::
