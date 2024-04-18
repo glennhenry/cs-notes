@@ -106,6 +106,7 @@ const sidebars = {
                   items: [
                     "computer-and-programming-fundamentals/declarative-functional-programming/declarative-functional-programming",
                     "computer-and-programming-fundamentals/query-language/query-language",
+                    "computer-and-programming-fundamentals/logic-programming/logic-programming",
                   ],
                 },
                 "computer-and-programming-fundamentals/concurrency-and-parallelism/concurrency-and-parallelism",

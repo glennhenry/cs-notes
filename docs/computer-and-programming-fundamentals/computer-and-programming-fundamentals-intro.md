@@ -32,6 +32,7 @@ Although the topic seems introductory, it actually assumes certain programming k
     - Declarative
       - [Declarative & Functional Programming](computer-and-programming-fundamentals/declarative-functional-programming)
       - [Query Language](computer-and-programming-fundamentals/query-language)
+      - [Logic Programming](computer-and-programming-fundamentals/logic-programming)
     - [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism)
 - Code Execution
   - [Compilation](computer-and-programming-fundamentals/compilation)

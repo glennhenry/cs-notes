@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **19** topics, and a total of **372** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
+A total of **19** topics, and a total of **373** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
 
 1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -31,7 +31,7 @@ A total of **19** topics, and a total of **372** notes (may not be accurate for 
       - [Filtering](digital-signal-processing/filtering)
       - [Compression](digital-signal-processing/compression)
       - [Denoising](digital-signal-processing/denoising)
-2. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (**18** subtopics)
+2. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (**19** subtopics)
     - Computer Representation
       - [Number System](computer-and-programming-fundamentals/number-system)
       - [Binary Representation](computer-and-programming-fundamentals/binary-representation)
@@ -51,6 +51,7 @@ A total of **19** topics, and a total of **372** notes (may not be accurate for 
         - Declarative
           - [Declarative & Functional Programming](computer-and-programming-fundamentals/declarative-functional-programming)
           - [Query Language](computer-and-programming-fundamentals/query-language)
+          - [Logic Programming](computer-and-programming-fundamentals/logic-programming)
         - [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism)
     - Code Execution
       - [Compilation](computer-and-programming-fundamentals/compilation)
