@@ -507,7 +507,7 @@ const sidebars = {
         "programming-language-theory/functional-languages/functional-languages",
         "programming-language-theory/logic-languages/logic-languages",
         "programming-language-theory/concurrency/concurrency",
-        "programming-language-theory/implementation/implementation",
+        "programming-language-theory/scripting-languages/scripting-languages",
       ],
     },
 

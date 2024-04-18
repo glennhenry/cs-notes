@@ -245,7 +245,7 @@ A total of **19** topics, and a total of **373** notes (may not be accurate for 
     - [Functional Languages](programming-language-theory/functional-languages)
     - [Logic Languages](programming-language-theory/logic-languages)
     - [Concurrency](programming-language-theory/concurrency)
-    - [Implementation](programming-language-theory/implementation)
+    - [Scripting Languages](programming-language-theory/scripting-languages)
 10. [Compilers](/compilers) (**0** subtopics)
     - Compiliation Process
       1. preprocessing,

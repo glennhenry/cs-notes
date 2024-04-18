@@ -28,4 +28,4 @@ Recommend taking a look at [theory of computation and automata](/theory-of-compu
 - [Functional Languages](programming-language-theory/functional-languages)
 - [Logic Languages](programming-language-theory/logic-languages)
 - [Concurrency](programming-language-theory/concurrency)
-- [Implementation](programming-language-theory/implementation)
+- [Scripting Languages](programming-language-theory/scripting-languages)
