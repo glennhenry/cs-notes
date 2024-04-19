@@ -10,7 +10,7 @@ description: Concurrency Control
 - **Chapter 18 - Database Systems - The Complete Book (2nd Edition)**
 - **[Concurrency control - Wikipedia](https://en.wikipedia.org/wiki/Concurrency_control)**
 
-Database operations are grouped into a transaction unit. The execution of each transaction unit is scheduled by the **scheduler** of DBMS. This is to ensure database operations executed in controller manner, avoiding concurrency issues such as [data races](/computer-and-programming-fundamentals/concurrency-and-parallelism#race-condition). The overall process of handling concurrency is called **concurrency control**.
+Database operations are grouped into a transaction unit. The execution of each transaction unit is scheduled by the **scheduler** of DBMS. This is to ensure database operations executed in controller manner, avoiding concurrency issues such as [data races](/computer-and-programming-fundamentals/concurrency#race-condition). The overall process of handling concurrency is called **concurrency control**.
 
 The three property of concurrency control (whether in local database or [distributed database](/cloud-computing-and-distributed-systems/distributed-database)) :
 

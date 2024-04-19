@@ -51,7 +51,7 @@ Source : https://stackoverflow.com/a/59336002/18335183
 
 **MVVM (Model-View-ViewModel)** separates the application into model, view, and view model.
 
-MVVM is very similar to MVP, view and model is still the same, and the role of presenter is replaced with view model. The view model still acts as an intermediary between the model and the view. The difference is, more [reactive programming](/computer-and-programming-fundamentals/concurrency-and-parallelism#reactive-programming) is involved, as they now observe each other.
+MVVM is very similar to MVP, view and model is still the same, and the role of presenter is replaced with view model. The view model still acts as an intermediary between the model and the view. The difference is, more [reactive programming](/computer-and-programming-fundamentals/concurrency#reactive-programming) is involved, as they now observe each other.
 
 Typically, a binding mechanism is done between these three components. The view model holds the state of the model, and it is connected or bound to a view. Through this binding, the model's state becomes exposed, and the view should observe any changes in it.
 

@@ -194,7 +194,7 @@ The two ways to keep track exception handler :
 
 ### Coroutine
 
-[Coroutine](/computer-and-programming-fundamentals/concurrency-and-parallelism#coroutine) is feature that enables cooperative multitasking. It allows a program to have multiple independent execution flows, that can be paused and resumed at specific points.
+[Coroutine](/computer-and-programming-fundamentals/concurrency#coroutine) is feature that enables cooperative multitasking. It allows a program to have multiple independent execution flows, that can be paused and resumed at specific points.
 
 Coroutine can be implemented using **continuation**. It is a representation of the program's control flow stored in a data structure accessible within the programming language, rather than being hidden in the runtime environment. A continuation may contain the current point of execution, variable values, and the program's call stack state.
 

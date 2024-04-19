@@ -88,7 +88,7 @@ Multiple threads exist within the same process, threads communicate using the [I
 
 Synchronizing threads is crucial to ensure proper coordination and consistency when multiple threads access shared resources while communicating, to prevent [concurrency issues](#multithreading-problems).
 
-When a code or data structure can be safely accessed and modified by multiple threads concurrently without causing unexpected or incorrect behavior, this is called **[thread safe](/computer-and-programming-fundamentals/concurrency-and-parallelism#thread-safe)**.
+When a code or data structure can be safely accessed and modified by multiple threads concurrently without causing unexpected or incorrect behavior, this is called **[thread safe](/computer-and-programming-fundamentals/concurrency#thread-safe)**.
 
 ##### Synchronization Primitives
 

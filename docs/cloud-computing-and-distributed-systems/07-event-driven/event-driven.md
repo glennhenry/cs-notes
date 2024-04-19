@@ -8,7 +8,7 @@ description: Event-Driven
 **Main Source :**
 
 - **[Event-driven architecture - Wikipedia](https://en.wikipedia.org/wiki/Event-driven_architecture)**
-- **[Previous notes on reactive programming](/computer-and-programming-fundamentals/concurrency-and-parallelism#reactive-programming)**
+- **[Previous notes on reactive programming](/computer-and-programming-fundamentals/concurrency#reactive-programming)**
 
 **Event-Driven** is an architecture that structures an application or system around the production, detection, and consumption of events.
 
