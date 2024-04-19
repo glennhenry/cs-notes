@@ -109,7 +109,7 @@ const sidebars = {
                     "computer-and-programming-fundamentals/logic-programming/logic-programming",
                   ],
                 },
-                "computer-and-programming-fundamentals/concurrency-and-parallelism/concurrency-and-parallelism",
+                "computer-and-programming-fundamentals/concurrency/concurrency",
               ],
             },
           ],

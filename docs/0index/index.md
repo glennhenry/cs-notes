@@ -52,7 +52,7 @@ A total of **19** topics, and a total of **373** notes (may not be accurate for 
           - [Declarative & Functional Programming](computer-and-programming-fundamentals/declarative-functional-programming)
           - [Query Language](computer-and-programming-fundamentals/query-language)
           - [Logic Programming](computer-and-programming-fundamentals/logic-programming)
-        - [Concurrency & Parallelism](computer-and-programming-fundamentals/concurrency-and-parallelism)
+        - [Concurrency](computer-and-programming-fundamentals/concurrency)
     - Code Execution
       - [Compilation](computer-and-programming-fundamentals/compilation)
       - [Interpreter](computer-and-programming-fundamentals/interpreter)

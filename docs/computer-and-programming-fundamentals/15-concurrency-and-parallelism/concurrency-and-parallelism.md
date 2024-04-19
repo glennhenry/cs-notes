@@ -1,8 +1,8 @@
 ---
-slug: /computer-and-programming-fundamentals/concurrency-and-parallelism
-id: concurrency-and-parallelism
-title: Concurrency & Parallelism
-description: Concurrency & Parallelism
+slug: /computer-and-programming-fundamentals/concurrency
+id: concurrency
+title: Concurrency
+description: Concurrency
 ---
 
 **Main Source :**
