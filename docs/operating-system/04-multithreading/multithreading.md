@@ -12,13 +12,13 @@ description: Multithreading
 - **[Multithreading (computer architecture) - Wikipedia](<https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)>)**
 - **[Thread (computing) - Wikipedia](<https://en.wikipedia.org/wiki/Thread_(computing)>)**
 
-**Multithreading** is a concept that enable us to use multiple thread to execute tasks.
+**Multithreading** is a concept that enable us to use multiple thread to execute tasks. See [concurrency](/computer-and-programming-fundamentals/concurrency) for an introduction to concurrency.
 
 ### Thread
 
-Thread is a unit of execution in CPU, it can execute a set of instruction, basically it is a "worker" in a CPU. Thread exist within a [process](/operating-system/process-management#process--thread) and has its own data including thread ID, program counter, a register set, and a stack.
+Thread is a unit of execution in CPU, it can execute a set of instruction. Basically, it is a "worker" in a CPU. Thread exist within a [process](/operating-system/process-management#process--thread) and has its own data including thread ID, program counter, a register set, and a stack.
 
-In multithreading, instead of just one thread or one worker in a process, multiple thread is utilized. The benefit is we are not limited to complete a single task at a time, for example, a mobile app can fetch data from remote server while also loading data from local storage. If possible, we can also divide a computationally intensive task into smaller, parallelizable subtasks, and use multiple threads to speeds up the overall execution time.
+In multithreading, instead of just one thread or one worker in a process, multiple thread is utilized. The benefit is we are not limited to complete a single task at a time. For example, a mobile app can fetch data from remote server while also loading data from local storage. If possible, we can also divide a computationally intensive task into smaller, parallelizable subtasks, and use multiple threads to speeds up the overall execution time (achieving parallelism).
 
 A thread can also be **blocked**, which means the thread is unable to make progress or continue its execution because it is waiting for a certain event such as I/O results or condition to occur. Blocked thread can be inefficient, as it is unable to perform any useful work.
 
@@ -27,7 +27,7 @@ Source : https://towardsdatascience.com/multithreading-and-multiprocessing-in-10
 
 The image above shows the illustration of multithreading. Each thread holds different data, but they share the same memory space and resources of the parent process. In contrast, multiprocessing is when we utilize a processor that has several cores. Each core would have their own data and thread that will execute simultaneously.
 
-Utilizing multiple threads is typically more efficient than making multiple process that execute the same tasks. Threads have a smaller memory footprint, require less time for [context switching](/operating-system/process-management#context-switch), and have lower scheduling overhead. Also, separate process means [IPC](/operating-system/inter-process-communication) is required to communicate between processes, whereas thread shares the same memory within a process, thus communication will be easier.
+Utilizing multiple threads is typically more efficient than making multiple process that execute the same tasks ([multiprocessing](/computer-and-programming-fundamentals/concurrency#multiprocessing)). Threads have a smaller memory footprint, require less time for [context switching](/operating-system/process-management#context-switch), and have lower scheduling overhead. Also, separate process means [IPC](/operating-system/inter-process-communication) is required to communicate between processes, whereas thread shares the same memory within a process, thus communication will be easier.
 
 ### Multithreading Model
 
@@ -35,7 +35,7 @@ Utilizing multiple threads is typically more efficient than making multiple proc
 
 There are two types of thread, **user thread** and **kernel thread**.
 
-User threads, also known as **green threads**, are implemented and managed by a thread library or runtime system at the user level, without direct involvement of the operating system kernel. The creation, scheduling, and synchronization of user threads are handled entirely in the user space (memory space where user applications run).
+User threads, also known as **green threads**, are implemented and managed by a thread library or runtime system at the user level, without direct involvement of the operating system kernel. The creation, scheduling, utilization, and synchronization of user threads are handled entirely in the user space (memory space where user applications run). They may not be able to access the memory used by kernel.
 
 On the other hand, kernel threads, which is also known as **native threads**, are managed directly by the operating system kernel. Each kernel thread is represented as a separate entity within the operating system and has its own program counter, stack, and thread control block.
 
@@ -45,7 +45,9 @@ Kernel threads are heavyweight, they require system calls and interaction with t
 
 #### Relationship Model
 
-- **Many-to-One** : This model involves mapping multiple user-level threads to a single kernel-level thread. The thread management and scheduling are performed by a thread library or runtime system at the user level, and the operating system sees only a single thread. This model has efficient management, but may not take full advantage of multiprocessor systems as the execution of multiple threads is handled by a single kernel-level thread.
+Relationship model between user and kernel thread describe how they are associated with each other.
+
+- **Many-to-One** : This model involves mapping multiple user-level threads to a single kernel-level thread. The thread management and scheduling are performed by a thread library or runtime system at the user level. From the programming language, we can see and use multiple thread, but under the hood the operating system sees only a single thread. This model has efficient management, but may not take full advantage of multiprocessor systems as the execution of multiple threads is handled by a single kernel-level thread.
 - **One-to-One** : In this model, each user-level thread is mapped to a separate kernel-level thread by the operating system. This model provides more concurrency and true parallelism to the kernel-level. However, the overhead of creating and managing kernel-level threads can be higher compared to other models.
 - **Many-to-Many** : This model combines the aspect of many-to-one and one-to-one. Many-to-many model consist of many kernel threads and smaller or equal number of user thread. The operating system can create multiple kernel-level threads, while the thread library manages and schedules the user-level threads across the available kernel-level threads.
 
@@ -58,7 +60,7 @@ Multithreading implementation depends on the programming language used. Threadin
 
 #### Thread Creation & Termination
 
-The thread library provided by programming languages have specific function or method to create and manage threads. For example, in Java, we can create a thread by extending the `Thread` class or implementing the `Runnable` interface and then invoking the `start()` method. In C++, you can use the `std::thread` class or the threading utilities provided by libraries like POSIX threads (`pthread_create()` function).
+The thread library provided by programming languages have specific function or method to create and manage threads. For example, in Java, we can create a thread by implementing the `Thread` class or the `Runnable` interface and then invoking the `start()` method. In C++, you can use the `std::thread` class or the threading utilities provided by libraries like POSIX threads (`pthread_create()` function).
 
 When creating thread, we can specify thread attributes such as stack size, thread priority, CPU affinity. After a thread is created, it is assigned a unique identifier called the thread ID.
 
@@ -68,6 +70,78 @@ Source : http://java-latte.blogspot.com/2015/07/create-thread-using-method-refer
 Thread can be stopped explicitly using function like `stop()` in Java. Sometimes, the thread may not stop immediately due to specific logic or condition that is required to execute before it can safely terminate. Thread can also terminate naturally when it finishes its execution, where it automatically exits, and its resources are released by the system (or saved to [thread pool](#thread-pool)).
 
 It is important to note that thread termination should be handled carefully. For example, a thread may have used some data structure, but when it is not freed before the termination, this can cause [memory leak](/computer-security/other-attack-and-exploit#memory-leak).
+
+##### Example
+
+One reason to implement the `Thread` class is to encapsulate application logic that is intended to be run in separate thread. In a server app, it is expected that the server handle multiple request in parallel. Let's say server is trying to read and write an input.
+
+```javascript
+public class ClientHandlerThread extends Thread {
+    private Socket clientSocket;
+
+    public ClientHandlerThread(Socket clientSocket) {
+        this.clientSocket = clientSocket;
+    }
+
+    public void run() {
+        try {
+            // Get the input stream from the client
+            InputStream inputStream = clientSocket.getInputStream();
+
+            // Read the client's request
+            byte[] buffer = new byte[1024];
+            int bytesRead = inputStream.read(buffer);
+
+            // Process the request (example: convert to uppercase)
+            String request = new String(buffer, 0, bytesRead);
+            String response = request.toUpperCase();
+
+            // Get the output stream to send the response to the client
+            OutputStream outputStream = clientSocket.getOutputStream();
+
+            // Send the response back to the client
+            outputStream.write(response.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            // Close the client socket
+            try {
+                clientSocket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
+
+This implementation of thread encapsulate the logic of reading, processing, and responding back to user request. We can use it like below.
+
+```javascript
+public class Server {
+    public static void main(String[] args) {
+        try {
+            // Create a server socket
+            ServerSocket serverSocket = new ServerSocket(8080);
+            System.out.println("Server listening on port 8080");
+
+            while (true) {
+                // Accept client connections
+                Socket clientSocket = serverSocket.accept();
+                System.out.println("Client connected: " + clientSocket.getInetAddress());
+
+                // Create a new thread to handle the client connection
+                ClientHandlerThread clientHandlerThread = new ClientHandlerThread(clientSocket);
+                clientHandlerThread.start();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+For each client connection, we create a new thread through the `ClientHandlerThread` and start it to handle the connection.
 
 #### Thread Execution & Scheduling
 
@@ -82,7 +156,11 @@ Source : https://medium.com/spring-boot/multithreading-in-java-with-examples-25b
 
 #### Thread Communication
 
-Multiple threads exist within the same process, threads communicate using the [IPC mechanism](/operating-system/inter-process-communication). There are two method, the first method is **[shared memory](/operating-system/inter-process-communication#shared-memory)**, where each thread read and write data in the same region of memory. The other method is **[message passing](/operating-system/inter-process-communication#message-passing)**, where they send messages or signals to each other. One thread can send a message to another thread, which then receives and processes the message.
+Multiple threads exist within the same process, external threads can communicate using the [IPC mechanism](/operating-system/inter-process-communication). There are two method, the first method is [shared memory](/operating-system/inter-process-communication#shared-memory), where each thread read and write data in the same region of memory. The other method is [message passing](/operating-system/inter-process-communication#message-passing), where they send messages or signals to each other. One thread can send a message to another thread, which then receives and processes the message.
+
+:::note
+Although they are for process communication, it may be used to communicate between thread if they are running in separate processes. If threads were to communicate between the same process, typically they would directly access and communicate with each other through shared variables or data structures.
+:::
 
 #### Thread Synchronization
 
@@ -96,7 +174,7 @@ These are fundamental tools used in multithreaded programming to synchronize.
 
 ###### Locks / Mutex
 
-**Mutex (mutual exclusion)** is a synchronization primitive that ensure only one thread to access a shared resource. It works by having a lock, a thread that wants to access the resource must acquire the lock first. If the lock is already held by another thread, the requesting thread will be blocked until the lock is released. When the thread that access the resource has finished, then the lock will be released.
+**Mutex (mutual exclusion)** is a synchronization primitive that ensure only one thread to access a shared resource. It works by having a lock, a thread that wants to access the resource must _acquire_ the lock first. If the lock is already held by another thread, the requesting thread will be blocked until the lock is _released_. If the thread that access the resource has finished, only then the lock will be released.
 
 The mutex technique can be implemented in the software-level by memory synchronization instructions provided by the hardware architecture.
 

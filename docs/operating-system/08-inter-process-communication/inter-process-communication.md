@@ -36,7 +36,7 @@ For example, when a process want to access some data in the address "0x05", the 
 ![Virtual memory](./virtual-memory.png)  
 Source : https://en.wikipedia.org/wiki/Virtual_memory
 
-The same concept applies for shared memory, where there are several processes each with their own isolated virtual memory. When a process want to share memory, the OS will allocate some shared memory somewhere. After that, the process will attach to it, meaning the process will be given some range of address on their virtual address that it can use to access the shared data. Essentially, the OS maps the shared memory to the virtual memory owned by the process.
+The same concept applies to shared memory, where multiple processes each have their own isolated virtual memory. When a process wants to share memory, the operating system allocates some shared memory. Then, the process attaches the shared memory to each process. This means that every process is given a range of addresses on their virtual address space that they can use to access the shared data.
 
 ![Shared memory](./shared-memory.png)  
 Source : https://www.linkedin.com/pulse/interprocess-communicationipc-using-shared-memory-pratik-parvati
@@ -53,16 +53,17 @@ Message passing can be synchronous or asynchronous. In the synchronous model, th
 
 Some example of message passing :
 
-- **Pipes** : Pipes are a form of [inter-process communication (IPC)](/operating-system/inter-process-communication) that allows the output of one process to be used as the input of another process. In a pipe, data flows in a unidirectional manner from the writer process to the reader process. Pipes can be either named or unnamed, with unnamed pipes typically used for communication between related processes (e.g., parent-child processes).
+- **Pipes** : Pipes are a form of IPC that allows the output of one process to be used as the input of another process. In a pipe, data flows in a unidirectional manner from the writer process to the reader process. Pipes can be either named or unnamed, with the latter typically used for communication between related processes (e.g., parent-child processes).
+
+  ![Pipe](./pipe.png)  
+   Source : https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/Pipes.html
 
 - **Sockets** : Sockets are a communication endpoint that enables bidirectional communication between processes over a network. They can be used for IPC within the same machine (domain sockets) or across different machines (network sockets).
-
 - **[Message Queues](/backend-development/message-broker)** : Message queues is where processes exchange messages through a shared [queue](/data-structures-and-algorithms/queue) in the operating system. Each message has a specific format and is placed into the queue by the sending process. The receiving process can then retrieve messages from the queue in a first-in-first-out (FIFO) order.
-
 - **Channels** : Channels is a higher-level concept for message passing. Channels typically provide a set of operations, such as sending and receiving messages, and may incorporate synchronization mechanisms like blocking or non-blocking operations. Channels can be implemented using various underlying mechanisms, including shared memory, pipes, or sockets.
 
-![Message passing](./message-passing.png)  
-Source : https://beingintelligent.com/difference-between-shared-memory-and-message-passing-process-communication.html
+  ![Message passing](./message-passing.png)  
+   Source : https://beingintelligent.com/difference-between-shared-memory-and-message-passing-process-communication.html
 
 ### RPC
 

@@ -109,6 +109,12 @@ const sidebars = {
                     "computer-and-programming-fundamentals/logic-programming/logic-programming",
                   ],
                 },
+              ],
+            },
+            {
+              type: "category",
+              label: "General Concepts",
+              items: [
                 "computer-and-programming-fundamentals/concurrency/concurrency",
               ],
             },
