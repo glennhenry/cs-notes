@@ -258,5 +258,5 @@ Source : https://dip-mazumder.medium.com/how-to-determine-java-thread-pool-size-
   Source : http://15418.courses.cs.cmu.edu/spring2014/lecture/snoopimpl1/slide_021
 
 :::tip
-In relation to concurrency, see also [concurrency and parallelism](/computer-and-programming-fundamentals/concurrency-and-parallelism).
+In relation to concurrency, see also [concurrency](/computer-and-programming-fundamentals/concurrency).
 :::

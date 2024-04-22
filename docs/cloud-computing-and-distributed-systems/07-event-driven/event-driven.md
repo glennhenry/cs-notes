@@ -35,7 +35,7 @@ Source : https://www.vmware.com/topics/glossary/content/message-brokers.html
 The characteristics of event-driven architecture that decouple producer and consumer make it scalable. Event producers generate events without needing to know if there is someone interested in them. Consumers do not need to periodically check for the occurrence of events; instead, they can be notified about events they are interested in simply by subscribing to the producer.
 
 :::tip
-See also [reactive programming](/computer-and-programming-fundamentals/concurrency-and-parallelism#reactive-programming).
+See also [reactive programming](/computer-and-programming-fundamentals/concurrency#reactive-programming).
 :::
 
 ### Example
