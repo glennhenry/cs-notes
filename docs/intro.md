@@ -69,7 +69,8 @@ Excluding the [index page](/index).
 - **[update]** : update existing notes
 - **[ref]** : add reference to particular notes
 
-1. **[update]** [/computer-graphics](/computer-graphics) : Should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic. Some topic to include :
+1. **[update]** Revisit all notes to fix English, typo, update/edit information, add reference.
+2. **[update]** [/computer-graphics](/computer-graphics) : Should be major updated. Rewrite most of the notes due to lack of detail, lack of more important topic. Some topic to include :
 
    - fundamentals
      - scene
@@ -135,11 +136,10 @@ Excluding the [index page](/index).
    - depth map
    - light shadow space
 
-2. **[update]** [/frontend-web-development](/frontend-web-development) : Minor update for all note, also some topic to include for addition :
+3. **[update]** [/frontend-web-development](/frontend-web-development) : Minor update for all note, also some topic to include for addition :
 
    - Search engine, crawler.
 
-3. **[update]** Revisit all notes to fix English, typo, update/edit information, add reference.
 4. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#svd-compression -> add svd compression.
 5. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#bitmap-encoding -> add bitmap encoding as compression.
 6. **[add]** [/digital-media-processing](/digital-media-processing)/iso -> add ISO file format.
@@ -162,4 +162,4 @@ Excluding the [index page](/index).
 19. **[ref]** [/backend-development/rpc#protocol-buffers](/backend-development/rpc#protocol-buffers) -> ref to the previous serialization method, namely protocol buffer.
 20. **[update]** [/data-structures-and-algorithms/hash-table](/data-structures-and-algorithms/hash-table)#log-structured-hash-table -> add log-structured hash table.
 21. **[update]** [/database-system/logging-and-recovery#migration](/database-system/logging-and-recovery#migration) -> add more about migration, particularly how it works.
-22. **[update]** -> [/cloud-computing-and-distributed-systems/distributed-systems-model#consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus) add about byzantine failures, Two Generals' Problem.
+22. **[update]** -> [/cloud-computing-and-distributed-systems/distributed-systems-model#consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus) add about Byzantine failures, Two Generals' Problem.
