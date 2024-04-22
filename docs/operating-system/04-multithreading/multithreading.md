@@ -11,6 +11,7 @@ description: Multithreading
 - **[Chapter 5 Process Synchronization - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 - **[Multithreading (computer architecture) - Wikipedia](<https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)>)**
 - **[Thread (computing) - Wikipedia](<https://en.wikipedia.org/wiki/Thread_(computing)>)**
+- - **Chapter 12, Programming Language Pragmatics - Michael L. Scott**
 
 **Multithreading** is a concept that enable us to use multiple thread to execute tasks. See [concurrency](/computer-and-programming-fundamentals/concurrency) for an introduction to concurrency.
 
@@ -154,6 +155,13 @@ Java provides methods like `yield()` and `sleep()` to influence thread schedulin
 ![Thread state in Java](./thread-state-in-java.png)  
 Source : https://medium.com/spring-boot/multithreading-in-java-with-examples-25b0bc80831b
 
+#### Thread Implementation
+
+The [relationship model](#relationship-model) of thread relates to how they are implemented. One process correspond to one kernel thread that executes tasks for that process. The language runtime or library implement a **thread scheduler** that will schedule the execution of thread as well as managing thread pool for the process. The OS kernel implements a **process scheduler** that will schedule the physical processor to execute certain process. This implementation is known as the **two-level implementation of thread**.
+
+![Thread implementation](./thread-implementation.png)  
+Source : Programming Language Pragmatics - Michael L. Scott page 614
+
 #### Thread Communication
 
 Multiple threads exist within the same process, external threads can communicate using the [IPC mechanism](/operating-system/inter-process-communication). There are two method, the first method is [shared memory](/operating-system/inter-process-communication#shared-memory), where each thread read and write data in the same region of memory. The other method is [message passing](/operating-system/inter-process-communication#message-passing), where they send messages or signals to each other. One thread can send a message to another thread, which then receives and processes the message.
@@ -164,13 +172,13 @@ Although they are for process communication, it may be used to communicate betwe
 
 #### Thread Synchronization
 
-Synchronizing threads is crucial to ensure proper coordination and consistency when multiple threads access shared resources while communicating, to prevent [concurrency issues](#multithreading-problems).
+Synchronizing threads is crucial to ensure proper coordination and consistency when multiple threads access shared resources and communicate. This helps prevent [concurrency issues](#multithreading-problems).
 
 When a code or data structure can be safely accessed and modified by multiple threads concurrently without causing unexpected or incorrect behavior, this is called **[thread safe](/computer-and-programming-fundamentals/concurrency#thread-safe)**.
 
 ##### Synchronization Primitives
 
-These are fundamental tools used in multithreaded programming to synchronize.
+These are fundamental, low-level mechanism used in multithreaded environment to synchronize.
 
 ###### Locks / Mutex
 
@@ -183,6 +191,9 @@ There are three types of locks :
 - **Shared lock** : Multiple thread is able to read same data simultaneously.
 - **Exclusive lock (mutex)** : When a thread acquire an exclusive lock, it has exclusive access to the data until the lock is released.
 - **Update lock** : Combination of shared and exclusive locks, allowing multiple thread to read, but only one thread to update the data at a time.
+
+![Mutex](./mutex.png)  
+Source : https://www.javatpoint.com/mutex-vs-semaphore
 
 ###### Monitor & Condition Variables
 
@@ -211,24 +222,40 @@ Source : https://dev.to/l04db4l4nc3r/process-synchronization-monitors-in-go-4g4k
 
 Semaphore allows specified number of thread to access a shared resource. A semaphore maintains a count, and when a thread wants to access resource, it attempts to acquire the semaphore. If the count is greater than zero, the thread is allowed to proceed, and the count is decremented. If the count is zero, indicating that the resource is currently in use, the thread will be blocked until another thread releases the semaphore, which increments the count.
 
+![Semaphores](./semaphore.png)  
+Source : https://stackoverflow.com/questions/34519/what-is-a-semaphore
+
 ###### Barriers
 
-Barriers synchronize a group of threads at a specific point in code. Threads reach the barrier and wait until all participating threads have arrived. Once all threads have reached the barrier, they are released simultaneously, allowing them to continue their execution.
+Barrier is a way to synchronize a group of threads at a specific point in code. Threads reach the barrier and wait until all participating threads have arrived. Once all threads have reached the barrier, they are released simultaneously, allowing them to continue their execution.
+
+It is typically used in parallel tasks where they need to synchronize their progress at certain stages of execution, such as dividing a larger computation into smaller parts and waiting for all parts to complete before proceeding to the next stage.
+
+![Barriers](./barrier.png)  
+Source : https://www.ictdemy.com/java/threads/multithreading-in-java-barrier-countdownlatch
 
 ###### Spinlocks
 
-Spinlock is when a thread "spins", which means that it continuously executes a loop, frequently checking a condition or waiting for a certain state to be reached.
+A thread *spins*, which means that it continuously executes a loop that frequently checks a condition, waiting for a certain state to be reached.
 
 The basic idea of a spinlock is that a thread attempting to acquire the lock repeatedly checks if the lock is available in a tight loop, spinning until it becomes available. The thread keeps spinning until it successfully acquires the lock, at which point it can proceed with the critical section of code or the shared resource it wants to access.
 
 This differs from traditional locks where the thread would be put to sleep if the lock is unavailable. Spinlocks are useful in situations where the expected wait time for acquiring a lock is very short, and the overhead of putting a thread to sleep and waking it up is considered too costly.
 
-![Various synchronization primitives](./synchronization-primitives.png)  
-Source : [mutex](https://www.javatpoint.com/mutex-vs-semaphore), [semaphores](https://stackoverflow.com/questions/34519/what-is-a-semaphore), [barriers](https://www.ictdemy.com/java/threads/multithreading-in-java-barrier-countdownlatch), [spinlocks](https://www.quora.com/What-are-the-advantages-and-disadvantages-of-using-a-spinlock-in-the-kernel-of-an-operating-system-keep-in-mind-there-may-be-multiple-processors)
+![Spinlocks](./spinlock.png)  
+Source : https://www.quora.com/What-are-the-advantages-and-disadvantages-of-using-a-spinlock-in-the-kernel-of-an-operating-system-keep-in-mind-there-may-be-multiple-processors
+
+##### Scheduler-based & Busy-waiting
+
+Locks, monitors, and semaphores are considered **scheduler-based synchronization** mechanisms. With these mechanisms, threads are required to yield CPU time to a scheduler and depend on it to schedule their execution. Barriers and spinlocks are considered **busy-waiting synchronization** mechanisms, in which threads repeatedly check for synchronization conditions to be satisfied in a loop.
+
+Scheduler-based synchronization introduces potential delays due to [context switches](/operating-system/process-management#context-switch) that occur when a thread is switched during scheduling. When a thread encounters a synchronization point and needs to wait for a condition to be satisfied (e.g., acquiring a lock or waiting for a signal), it enters a blocked or waiting state. The thread is then removed from the set of active threads that can execute, and the scheduler performs a context switch to switch to another eligible thread that can make progress.
+
+In contrast, without relying on the scheduler, the busy-waiting mechanism can achieve lower latency, but it may consume more CPU resources as the thread continuously loops.
 
 ##### Atomic Operation
 
-Atomic operations are operations that are guaranteed to be executed atomically, without interruption. They provide a way to perform thread-safe operations on shared variables without the need for locks or synchronization primitives. Atomic operations are typically used for simple operations like incrementing or decrementing a variable. Atomic operations can be supported by the OS or hardware, with specific instructions.
+Atomic operations are operations that are guaranteed to be executed atomically without interruption. They provide a way to perform thread-safe operations on shared variables without the need for locks or synchronization primitives. Atomic operations are typically used for simple operations like incrementing or decrementing a variable. Atomic operations are supported directly by the OS or hardware with specific instructions. For example, we may be able to write to a memory location and return the old value, this is often called **test-and-set** instruction.
 
 #### Thread Pool
 

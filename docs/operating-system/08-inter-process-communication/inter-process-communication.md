@@ -10,6 +10,8 @@ description: Inter-process Communication
 - **[Inter-process communication - Wikipedia](https://en.wikipedia.org/wiki/Inter-process_communication)**
 - **[Interprocess communication(IPC) using shared memory by Pratik Parvati - Linkedin blog](https://www.linkedin.com/pulse/interprocess-communicationipc-using-shared-memory-pratik-parvati)**
 - **[Remote procedure call - Wikipedia](https://en.wikipedia.org/wiki/Remote_procedure_call)**
+- **Chapter 12, Programming Language Pragmatics - Michael L. Scott**
+- **[How can you choose between message passing and shared memory for interprocess communication? - Linkedin](https://www.linkedin.com/advice/0/how-can-you-choose-between-message-passing-shared)**
 
 **Inter-process Communication (IPC)** is the mechanism used to communicate between processes.
 
@@ -23,7 +25,7 @@ Although they are for process communication, it may be used to communicate betwe
 
 ### IPC Mechanism
 
-There are two main technique to communicate, by utilizing shared memory, or passing messages.
+There are two main techniques to communicate, shared memory and message passing.
 
 #### Shared Memory
 
@@ -47,9 +49,7 @@ After all the mapping, the process can now read/write to the shared memory as us
 
 #### Message Passing
 
-**Message Passing** is an act of communication between processes or thread without using shared memory, it is inherently associated with "message".
-
-Message passing can be synchronous or asynchronous. In the synchronous model, the sender process blocks until the message is received by the recipient process. In the asynchronous model, the sender process continues execution immediately after sending the message, without waiting for a response from the recipient. The recipient process can receive the message at a later time.
+Message passing is an act of communication between processes or thread without using shared memory, it is inherently associated with sending a message. It is typically used in scenario where communication is done across different machine or platform (such as across different process in distributed systems). When a communication happens on the same machine or high speed is required, shared memory can be used.
 
 Some example of message passing :
 
@@ -58,12 +58,20 @@ Some example of message passing :
   ![Pipe](./pipe.png)  
    Source : https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/Pipes.html
 
-- **Sockets** : Sockets are a communication endpoint that enables bidirectional communication between processes over a network. They can be used for IPC within the same machine (domain sockets) or across different machines (network sockets).
+- **[Sockets](/computer-networking/socket)** : Sockets are a communication endpoint that enables bidirectional communication between processes over a network. They can be used for IPC within the same machine (domain sockets) or across different machines (network sockets). Socket is responsible for commonly heard transport protocol like [TCP](/computer-networking/tcp) and [UDP](/computer-networking/udp).
 - **[Message Queues](/backend-development/message-broker)** : Message queues is where processes exchange messages through a shared [queue](/data-structures-and-algorithms/queue) in the operating system. Each message has a specific format and is placed into the queue by the sending process. The receiving process can then retrieve messages from the queue in a first-in-first-out (FIFO) order.
 - **Channels** : Channels is a higher-level concept for message passing. Channels typically provide a set of operations, such as sending and receiving messages, and may incorporate synchronization mechanisms like blocking or non-blocking operations. Channels can be implemented using various underlying mechanisms, including shared memory, pipes, or sockets.
 
   ![Message passing](./message-passing.png)  
    Source : https://beingintelligent.com/difference-between-shared-memory-and-message-passing-process-communication.html
+
+Message passing can be synchronous or asynchronous. In the synchronous model, the sender process blocks until the message is received by the recipient process. In the asynchronous model, the sender process continues execution immediately after sending the message, without waiting for a response from the recipient. The recipient process can receive the message at a later time.
+
+It is common for message to be placed in temporary storage while being received or processed. It is known as [buffering](/computer-and-programming-fundamentals/memory#buffer). There are two types of buffering.
+
+- **Zero Buffering (without buffer)** : Without using buffer, the sender waits until the receiver retrieves the message. The sender and receiver synchronize their actions, and the message is directly transferred from the sender to the receiver without being stored in a buffer.
+- **Bounded Buffering** : Bounded buffering uses a fixed-size buffer to store messages. The sender can deposit a message in the buffer even if the receiver is not ready to receive it. If the buffer is full, the sender may need to wait until there is space available. The receiver can retrieve messages from the buffer at its own pace.
+- **Unbounded Buffering** : The buffer has an unlimited capacity to store messages. This approach decouples between the sender and receiver, allowing for asynchronous communication. However, it may lead to memory consumption issues if messages accumulate faster than they are consumed.
 
 ### RPC
 

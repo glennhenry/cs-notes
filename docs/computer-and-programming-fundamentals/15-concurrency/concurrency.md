@@ -14,6 +14,7 @@ description: Concurrency
 - **[Asynchronous programming techniques - Kotlin Docs](https://kotlinlang.org/docs/async-programming.html)**
 - **[What is a race condition? - stackoverflow](https://stackoverflow.com/questions/34510/what-is-a-race-condition)**
 - **[Some simple Google search](https://www.google.com)**
+- **Chapter 12, Programming Language Pragmatics - Michael L. Scott**
 
 ### Concurrency
 
