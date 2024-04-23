@@ -58,7 +58,7 @@ Some example of message passing :
   ![Pipe](./pipe.png)  
    Source : https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/Pipes.html
 
-- **[Sockets](/computer-networking/socket)** : Sockets are a communication endpoint that enables bidirectional communication between processes over a network. They can be used for IPC within the same machine (domain sockets) or across different machines (network sockets). Socket is responsible for commonly heard transport protocol like [TCP](/computer-networking/tcp) and [UDP](/computer-networking/udp).
+- **[Sockets](/computer-networking/socket)** : Sockets are a communication endpoint that enables bidirectional communication between processes over a network. They can be used for IPC within the same machine (domain sockets) or across different machines (network sockets). Socket is responsible for commonly heard transport protocol like [TCP](/computer-networking/tcp-protocol) and [UDP](/computer-networking/udp).
 - **[Message Queues](/backend-development/message-broker)** : Message queues is where processes exchange messages through a shared [queue](/data-structures-and-algorithms/queue) in the operating system. Each message has a specific format and is placed into the queue by the sending process. The receiving process can then retrieve messages from the queue in a first-in-first-out (FIFO) order.
 - **Channels** : Channels is a higher-level concept for message passing. Channels typically provide a set of operations, such as sending and receiving messages, and may incorporate synchronization mechanisms like blocking or non-blocking operations. Channels can be implemented using various underlying mechanisms, including shared memory, pipes, or sockets.
 
