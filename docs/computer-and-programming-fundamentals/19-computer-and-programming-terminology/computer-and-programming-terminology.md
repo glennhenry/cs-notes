@@ -132,6 +132,10 @@ Example of brute forcing is when you try to guess a 3-digit PIN code. Each of th
 - **Terminal** : Simply any program that uses text-based interface for input/output, it can be a CLI, but it doesn't have to be.
 - **Console** : Historically, it is a terminal which is connected into physical machine (a physical terminal). Nowadays, console is commonly referred as a terminal that displays output.
 
+:::tip
+See also [shell](/programming-language-theory/scripting-languages#shell)
+:::
+
 ##### Environment Variables
 
 Environment Variables are variables that contains value defined by user that are set outside the program, typically within the environment in which processes operate. Environment variables are commonly used in operating systems and programming frameworks to store information such as system paths, network configurations, authentication credentials, and application-specific settings.
