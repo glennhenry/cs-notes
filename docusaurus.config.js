@@ -33,7 +33,15 @@ const config = {
     locales: ["en"],
   },
 
-  plugins: [require.resolve("docusaurus-lunr-search")],
+  plugins: [
+    [
+      require.resolve("docusaurus-lunr-search"),
+      {
+        stopWords: ["All pages"],
+        maxHits: 10,
+      },
+    ],
+  ],
 
   presets: [
     [
