@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **19** topics, and a total of **373** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
+A total of **19** topics, and a total of **383** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
 
 1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -247,18 +247,17 @@ A total of **19** topics, and a total of **373** notes (may not be accurate for 
     - [Logic Languages](programming-language-theory/logic-languages)
     - [Concurrency](programming-language-theory/concurrency)
     - [Scripting Languages](programming-language-theory/scripting-languages)
-10. [Compilers](/compilers) (**0** subtopics)
-    - Compiliation Process
-      1. preprocessing,
-      2. lexical analysis,
-      3. parsing,
-      4. semantic analysis (syntax-directed translation),
-      5. conversion of input programs to an intermediate representation
-      6. code optimization
-      7. machine specific code generation.
-    - Compiler Optimization
-    - Decompilation
-    - Building Process
+10. [Compilers](/compilers) (**10** subtopics)
+    - [Compilers Fundamentals](compilers/compilers-fundamentals)
+    - [Scanning](compilers/scanning)
+    - [Parsing](compilers/parsing)
+    - [Abstract Syntax Tree](compilers/abstract-syntax-tree)
+    - [Semantic Analysis](compilers/semantic-analysis)
+    - [Intermediate Representation](compilers/intermediate-representation)
+    - [Memory Organization](compilers/memory-organization)
+    - [Assembly Language](compilers/assembly-language)
+    - [Code Generation](compilers/code-generation)
+    - [Compiler Optimization](compilers/compiler-optimization)
 11. [Database System](/database-system) (**15** subtopics)
     - [Relational Data](database-system/relational-data)
     - [Query Language](database-system/query-language)

@@ -5,7 +5,9 @@ title: Compilers
 description: Compilers
 ---
 
-**Compilers**
+**Main Source** :
+
+- **Introduction to Compilers and Language Design - Douglas Thain**
 
 ### Temporary
 
@@ -17,14 +19,13 @@ A compiled source code can either be an executable program that can be executed 
 
 ### All pages
 
-- Compiliation Process
-  1. preprocessing,
-  2. lexical analysis,
-  3. parsing,
-  4. semantic analysis (syntax-directed translation),
-  5. conversion of input programs to an intermediate representation
-  6. code optimization
-  7. machine specific code generation.
-- Compiler Optimization
-- Decompilation
-- Building Process
+- [Compilers Fundamentals](compilers/compilers-fundamentals)
+- [Scanning](compilers/scanning)
+- [Parsing](compilers/parsing)
+- [Abstract Syntax Tree](compilers/abstract-syntax-tree)
+- [Semantic Analysis](compilers/semantic-analysis)
+- [Intermediate Representation](compilers/intermediate-representation)
+- [Memory Organization](compilers/memory-organization)
+- [Assembly Language](compilers/assembly-language)
+- [Code Generation](compilers/code-generation)
+- [Compiler Optimization](compilers/compiler-optimization)

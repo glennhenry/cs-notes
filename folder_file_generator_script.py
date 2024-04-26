@@ -3,40 +3,34 @@
 
 import os
 
-topic_title = "programming-language-theory"
+topic_title = "compilers"
 
 # List of content in kebab title
 content_id = [
-    "plt-fundamentals",
-    "syntax",
-    "names-binding-scoping",
+    "compilers-fundamentals",
+    "scanning",
+    "parsing",
+    "abstract-syntax-tree",
     "semantic-analysis",
-    "target-architecture",
-    "control-flow",
-    "data-types",
-    "subroutines",
-    "data-abstraction",
-    "functional-languages",
-    "logic-languages",
-    "concurrency",
-    "implementation"
+    "intermediate-representation",
+    "memory-organization",
+    "assembly-language",
+    "code-generation",
+    "compiler-optimization"
 ]
 
 # List of content in title case
 content_title = [
-    "PLT Fundamentals",
-    "Syntax",
-    "Names, Binding, Scoping",
+    "Compilers Fundamentals",
+    "Scanning",
+    "Parsing",
+    "Abstract Syntax Tree",
     "Semantic Analysis",
-    "Target Architecture",
-    "Control Flow",
-    "Data Types",
-    "Subroutines",
-    "Data Abstraction",
-    "Functional Languages",
-    "Logic Languages",
-    "Concurrency",
-    "Implementation"
+    "Intermediate Representation",
+    "Memory Organization",
+    "Assembly Language",
+    "Code Generation",
+    "Compiler Optimization"
 ]
 
 # Create temp folder for debugging

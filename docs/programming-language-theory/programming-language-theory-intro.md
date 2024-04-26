@@ -6,7 +6,7 @@ description: Programming Language Theory Notes
 ---
 
 :::tip
-Recommend taking a look at [theory of computation and automata](/theory-of-computation-and-automata) first.
+Recommend taking a look at [theory of computation and automata](/theory-of-computation-and-automata) and [compilers](/compilers) first, specifically the [scanning](/compilers/scanning) and [parsing](/compilers/parsing) (both topics are originally here but moved for better organization).
 :::
 
 **Main Source** :

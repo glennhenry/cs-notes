@@ -522,7 +522,18 @@ const sidebars = {
       type: "category",
       label: "Compilers",
       link: { type: "doc", id: "compilers/compilers" },
-      items: [],
+      items: [
+        "compilers/compilers-fundamentals/compilers-fundamentals",
+        "compilers/scanning/scanning",
+        "compilers/parsing/parsing",
+        "compilers/abstract-syntax-tree/abstract-syntax-tree",
+        "compilers/semantic-analysis/semantic-analysis",
+        "compilers/intermediate-representation/intermediate-representation",
+        "compilers/memory-organization/memory-organization",
+        "compilers/assembly-language/assembly-language",
+        "compilers/code-generation/code-generation",
+        "compilers/compiler-optimization/compiler-optimization",
+      ],
     },
 
     // 11. Database System
