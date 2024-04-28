@@ -83,6 +83,8 @@ const order = [
   "Deep Learning",
   "Software Engineering",
   "Cloud Computing & Distributed Systems",
+  "Android OS",
+  "Android Development",
 ];
 
 const introTopicsData = getAllIntroFiles("docs");
@@ -120,7 +122,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **${introTopicsData.length}** topics, and a total of **${totalTopicsCount}** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
+A total of **${introTopicsData.length}** topics, and a total of **${totalTopicsCount}** notes.
 
 ${markdownContent}
 `

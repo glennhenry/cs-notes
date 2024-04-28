@@ -921,6 +921,22 @@ const sidebars = {
         "cloud-computing-and-distributed-systems/cloud-services/cloud-services",
       ],
     },
+
+    // 20. Android OS
+    {
+      type: "category",
+      label: "Android OS",
+      link: { type: "doc", id: "android-os/android-os" },
+      items: [],
+    },
+
+    // 21. Android Development
+    {
+      type: "category",
+      label: "Android Development",
+      link: { type: "doc", id: "android-development/android-development" },
+      items: [],
+    },
   ],
 };
 

@@ -5,13 +5,9 @@ title: Intro
 description: CS Notes
 ---
 
-# CS Notes
+My computer science notes from various online courses, tutorial, books, blogs, Wikipedia pages, and lectures. I wanted to make my notes in website, so I can access it anywhere and anytime. I also made it to look like a documentation to improve the overall readability and presentation.
 
-My Computer Science notes from various online courses, tutorial, and lectures. I wanted to make my notes into a documentation-like layout to improve the overall readability and presentation.
-
-**Most of the topics covers more on the theoretical side and less on the technical side.**
-
-### All topics
+### Main CS topics
 
 - **[Digital Signal Processing](digital-signal-processing)**
 - **[Computer & Programming Fundamentals](computer-and-programming-fundamentals)**
@@ -33,7 +29,14 @@ My Computer Science notes from various online courses, tutorial, and lectures. I
 - **[Software Engineering](software-engineering)**
 - **[Cloud Computing & Distributed Systems](cloud-computing-and-distributed-systems)**
 
-\*Bolded are completed
+\*Bolded are completed. Although minor or major changes to the content are likely in the future. Possibly being actively updated and added with more topics if time comply.
+
+### Android
+
+These will never complete since it is intended to be written and updated from time to time.
+
+- [Android OS](android-os)
+- [Android Development](android-development)
 
 ### Longest Notes
 
@@ -53,17 +56,19 @@ Excluding the [index page](/index).
 
 #### AI Chatbot Software
 
-- Assisted with few AI tools [Assistant Poe](https://poe.com), [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/). **Most of the source here are also from AI**. I combined what the resources say with extra explanation from AI bots (or paraphrasing).
+- Assisted with few AI tools [Assistant Poe](https://poe.com), [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/). **Most of the source here are also from AI**. I combined what main resources say with extra explanation from AI bots. They are heavily used for paraphrasing.
 
-#### Online Courses and Media Source
+#### Online CS Resources
 
-- Various online resource were used in the creation of this site, I try to include all resource in each section. These resources act as the curriculum of what should I learn and the structure of what a topic contains.
+- Various online resource were used in the creation of this site. These sources are included in each note. The fact that some information may come from myself after reading from arbitrary source. These resources mainly act as the curriculum of what should a topic contains and definitely for the information itself.
 
 #### Additional Resources
 
 - [GitHub](https://github.com/) - For storing and hosting this site.
 
 ### TODO :
+
+For simplicity, TODOs are placed here instead of something like GitHub issues.
 
 - **[add]** : add new notes
 - **[update]** : update existing notes

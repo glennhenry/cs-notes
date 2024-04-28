@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **19** topics, and a total of **383** notes (may not be accurate for now, as it calculates the count by the number of lines it appear on topic list, in which some topic's list consist of placeholder).
+A total of **21** topics, and a total of **383** notes.
 
 1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -466,3 +466,11 @@ A total of **19** topics, and a total of **383** notes (may not be accurate for 
     - [Cloud Database](cloud-computing-and-distributed-systems/cloud-database)
     - [Cloud Security](cloud-computing-and-distributed-systems/cloud-security)
     - [Cloud Services](cloud-computing-and-distributed-systems/cloud-services)
+20. [Android OS](/android-os) (**0** subtopics)
+    - TBA
+    - TBA
+    - TBA
+21. [Android Development](/android-development) (**0** subtopics)
+    - TBA
+    - TBA
+    - TBA
