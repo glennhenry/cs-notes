@@ -502,6 +502,7 @@ const sidebars = {
       items: [
         "programming-language-theory/plt-fundamentals/plt-fundamentals",
         "programming-language-theory/syntax/syntax",
+        "programming-language-theory/scanning/scanning",
         "programming-language-theory/parsing/parsing",
         "programming-language-theory/names-scopes-bindings/names-scopes-bindings",
         "programming-language-theory/semantic-analysis/semantic-analysis",
@@ -524,6 +525,7 @@ const sidebars = {
       link: { type: "doc", id: "compilers/compilers" },
       items: [
         "compilers/compilers-fundamentals/compilers-fundamentals",
+        "compilers/syntax/syntax",
         "compilers/scanning/scanning",
         "compilers/parsing/parsing",
         "compilers/abstract-syntax-tree/abstract-syntax-tree",
