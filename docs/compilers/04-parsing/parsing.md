@@ -12,7 +12,7 @@ description: Parsing
 - **[LL(1) Parsing - Neso Academy](https://youtu.be/clkHOgZUGWU?si=-z878_LOxoCrsdBP)**
 - **[What is the difference between LALR and LR parsing? [duplicate] - stackoverflow](https://stackoverflow.com/questions/19663564/what-is-the-difference-between-lalr-and-lr-parsing)**
 
-The parser takes sequence of tokens produced in the [previous step](/programming-language-theory/syntax#scanning). The objective of parser is to analyze whether source code (now in stream of token) is correct syntactically. Parser does this by finding if it is possible to create a parse tree with given the input and the language grammar.
+The parser takes sequence of tokens produced in the [previous step](/compilers/scanning). The objective of parser is to analyze whether source code (now in stream of token) is correct syntactically. Parser does this by finding if it is possible to create a parse tree with given the input and the language grammar.
 
 ### Parsing Example
 

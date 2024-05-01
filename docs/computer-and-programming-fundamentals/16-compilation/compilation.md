@@ -7,7 +7,7 @@ description: Compilation
 
 **Main Source :**
 
-- **[Compiler](https://en.wikipedia.org/wiki/Compiler)**
+- **[Compiler - Wikipedia](https://en.wikipedia.org/wiki/Compiler)**
 - **[What is the difference between assembly code and bytecode? - stackoverflow](https://stackoverflow.com/questions/1782415/what-is-the-difference-between-assembly-code-and-bytecode)**
 
 When we write code using a particular programming language, it is still in the form of high-level source code. By high-level source code, it means the code is human-readable and involves less direct interaction with the underlying hardware. The purpose high-level programming language is to provide abstraction that make it easier for programmer to make a program.
@@ -60,5 +60,5 @@ The compilation process typically involves the following stages :
    Source : https://medium.com/@3681/steps-of-compilation-5c02935a3904
 
 :::tip
-Find out more about [compilers](/compilers) or the more detailed introductory information in [compilation process](/compilers/compilers-fundamentals#compilation-process).
+More detailed [compilation process](/compilers/compilers-fundamentals#compiler-toolchain).
 :::

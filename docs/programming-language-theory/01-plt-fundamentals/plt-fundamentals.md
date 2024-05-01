@@ -50,4 +50,4 @@ Language like Java interprets source code into intermediate language called **by
 
 ### Compilation Process
 
-See [compilation process on compilers fundamentals](/compilers/compilers-fundamentals).
+See [compilation process on compilers fundamentals](/compilers/compilers-fundamentals#compilation-process).
