@@ -22,7 +22,7 @@ Source : Book 1 page 5
 Let's assume we are using language like C and C++.
 
 1. **Preprocessing** : Preprocessor prepare the source code before the actual compilation. It handles directives like `#include`, `#define`, and conditional compilation (`#ifdef`, `#ifndef`). For example, it may substitute a macro with actual value defined, including function defined in header files to the main source code, etc.
-2. **Compiliation** : The main part of the toolchain, explained [below](#compilation-process).
+2. **Compilation** : The main part of the toolchain, explained [below](#compilation-process).
 3. **Assembler** : Compilation generates machine code, typically in the form of [assembly language](/compilers/assembly-language). This assembly language is lower-level enough to be considered as machine code, but it is still human-readable. Assembler takes generated assembly code to produce **object files**.
 4. **Linking** : The object file contains real machine code to be executed on the CPU, but it is not yet complete. The linking process is required to resolve external references used in our program to create a complete executable. For example, the function `printf` is provided by the C standard library. Our source code, which is already in the form of machine code, should locate and load the definition of the function. The linker, divided into static and dynamic linker, loads and links together all object files and library files into memory.
 
