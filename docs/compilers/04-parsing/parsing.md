@@ -1,5 +1,5 @@
 ---
-slug: /programming-language-theory/parsing
+slug: /compilers/parsing
 id: parsing
 title: Parsing
 description: Parsing
@@ -7,7 +7,7 @@ description: Parsing
 
 **Main Source :**
 
-- **Book chapter 2**
+- **Chapter 2, Programming Language Pragmatics - Michael L. Scott**
 - **[Introduction to Parsers - Neso Academy](https://youtu.be/OIKL6wFjFOo?si=iRFE0__ImeaKu38n)**
 - **[LL(1) Parsing - Neso Academy](https://youtu.be/clkHOgZUGWU?si=-z878_LOxoCrsdBP)**
 - **[What is the difference between LALR and LR parsing? [duplicate] - stackoverflow](https://stackoverflow.com/questions/19663564/what-is-the-difference-between-lalr-and-lr-parsing)**

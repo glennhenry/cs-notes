@@ -6,7 +6,7 @@ description: Programming Language Theory Notes
 ---
 
 :::tip
-Recommend taking a look at [theory of computation and automata](/theory-of-computation-and-automata) and [compilers](/compilers) first, specifically the [scanning](/compilers/scanning) and [parsing](/compilers/parsing) (both topics are originally here but moved for better organization).
+Recommend taking a look at [theory of computation and automata](/theory-of-computation-and-automata). This topic is also related to [compilers](/compilers). The notes [scanning](/compilers/scanning) and [parsing](/compilers/parsing) were originally here but moved for better organization.
 :::
 
 **Main Source** :
@@ -17,6 +17,7 @@ Recommend taking a look at [theory of computation and automata](/theory-of-compu
 
 - [PLT Fundamentals](programming-language-theory/plt-fundamentals)
 - [Syntax](programming-language-theory/syntax)
+- [Scanning](programming-language-theory/scanning)
 - [Parsing](programming-language-theory/parsing)
 - [Names, Scopes, Bindings](programming-language-theory/names-scopes-bindings)
 - [Semantic Analysis](programming-language-theory/semantic-analysis)

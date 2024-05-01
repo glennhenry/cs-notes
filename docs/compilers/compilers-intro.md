@@ -8,6 +8,7 @@ description: Compilers
 **Main Source** :
 
 - **Introduction to Compilers and Language Design - Douglas Thain**
+- **Programming Language Pragmatics - Michael L. Scott**
 
 ### Temporary
 

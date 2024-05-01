@@ -60,5 +60,5 @@ The compilation process typically involves the following stages :
    Source : https://medium.com/@3681/steps-of-compilation-5c02935a3904
 
 :::tip
-Find out more about [compilers](/compilers) or the more detailed introductory information in [compilation process](/programming-language-theory/plt-fundamentals#compilation-process).
+Find out more about [compilers](/compilers) or the more detailed introductory information in [compilation process](/compilers/compilers-fundamentals#compilation-process).
 :::
