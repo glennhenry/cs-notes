@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **21** topics, and a total of **383** notes.
+A total of **21** topics, and a total of **385** notes.
 
 1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -232,9 +232,10 @@ A total of **21** topics, and a total of **383** notes.
     - [Turing Machine](theory-of-computation-and-automata/turing-machine)
     - [Undecidability](theory-of-computation-and-automata/undecidability)
     - [Complexity Theory](theory-of-computation-and-automata/complexity-theory)
-9. [Programming Language Theory](/programming-language-theory) (**14** subtopics)
+9. [Programming Language Theory](/programming-language-theory) (**15** subtopics)
     - [PLT Fundamentals](programming-language-theory/plt-fundamentals)
     - [Syntax](programming-language-theory/syntax)
+    - [Scanning](programming-language-theory/scanning)
     - [Parsing](programming-language-theory/parsing)
     - [Names, Scopes, Bindings](programming-language-theory/names-scopes-bindings)
     - [Semantic Analysis](programming-language-theory/semantic-analysis)
@@ -247,8 +248,9 @@ A total of **21** topics, and a total of **383** notes.
     - [Logic Languages](programming-language-theory/logic-languages)
     - [Concurrency](programming-language-theory/concurrency)
     - [Scripting Languages](programming-language-theory/scripting-languages)
-10. [Compilers](/compilers) (**10** subtopics)
+10. [Compilers](/compilers) (**11** subtopics)
     - [Compilers Fundamentals](compilers/compilers-fundamentals)
+    - [Syntax](compilers/syntax)
     - [Scanning](compilers/scanning)
     - [Parsing](compilers/parsing)
     - [Abstract Syntax Tree](compilers/abstract-syntax-tree)

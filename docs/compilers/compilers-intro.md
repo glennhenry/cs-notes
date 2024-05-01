@@ -21,6 +21,7 @@ A compiled source code can either be an executable program that can be executed 
 ### All pages
 
 - [Compilers Fundamentals](compilers/compilers-fundamentals)
+- [Syntax](compilers/syntax)
 - [Scanning](compilers/scanning)
 - [Parsing](compilers/parsing)
 - [Abstract Syntax Tree](compilers/abstract-syntax-tree)
