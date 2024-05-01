@@ -5,18 +5,14 @@ title: Compilers
 description: Compilers
 ---
 
+:::tip
+Recommend taking a look at [theory of computation and automata](/theory-of-computation-and-automata) first.
+:::
+
 **Main Source** :
 
-- **Introduction to Compilers and Language Design - Douglas Thain**
-- **Programming Language Pragmatics - Michael L. Scott**
-
-### Temporary
-
-Source code typically need an entry point, which acts as the starting point of execution for the program. These entry points are typically called **main function**.
-
-Software is made using human-readable programming languages. The source code needs to be converted into machine-code that can be executed by computers, this converting process is called [compilation](/computer-and-programming-fundamentals/compilation).
-
-A compiled source code can either be an executable program that can be executed directly, or an **object file**. Relocations
+- **Introduction to Compilers and Language Design - Douglas Thain** (book 1)
+- **Programming Language Pragmatics - Michael L. Scott** (book 2)
 
 ### All pages
 
