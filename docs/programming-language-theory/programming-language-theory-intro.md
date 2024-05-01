@@ -6,8 +6,10 @@ description: Programming Language Theory Notes
 ---
 
 :::tip
-Recommend taking a look at [theory of computation and automata](/theory-of-computation-and-automata). This topic is also related to [compilers](/compilers). The notes [scanning](/compilers/scanning) and [parsing](/compilers/parsing) were originally here but moved for better organization.
+Recommend taking a look at [theory of computation and automata](/theory-of-computation-and-automata) first.
 :::
+
+This topic is also related to [compilers](/compilers). In fact, the notes [scanning](/compilers/scanning) and [parsing](/compilers/parsing) were originally here but moved for better organization. [PLT fundamentals](programming-language-theory/plt-fundamentals) refer to compilation process in compilers, but the [syntax](/compilers/syntax) note in compilers refer to here.
 
 **Main Source** :
 
