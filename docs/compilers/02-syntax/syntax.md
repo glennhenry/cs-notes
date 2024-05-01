@@ -5,4 +5,4 @@ title: Syntax
 description: Syntax
 ---
 
-See **[Programming Language Theory > Syntax](/progrmaming-language-theory/syntax)**.
+See **[Programming Language Theory > Syntax](/programming-language-theory/syntax)**.
