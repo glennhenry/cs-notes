@@ -5,7 +5,7 @@ title: Data Structures & Algorithms
 description: Data Structures & Algorithms Notes
 ---
 
-Before this, you might see [an introduction to Data Structures and Algorithms](/computer-and-programming-fundamentals/data-structures-and-algorithms). Some explanation here might
+See the [introduction to data structures and algorithms](/computer-and-programming-fundamentals/data-structures-and-algorithms) first.
 
 ### All pages
 
