@@ -61,7 +61,7 @@ Sometimes the process is divided into three-stage, it is called the **three-stag
 
 ### Compilation Example
 
-Suppose we have a hypothetical programming language and machine code. We want to compile these three lines of code.
+Suppose we have a hypothetical programming language, and we want to compile these three lines of code.
 
 ```
 a = 5;
@@ -69,9 +69,9 @@ b = 1;
 c = a + b;
 ```
 
-The scanning process removes unnecessary characters, such as whitespace and semicolon that acts as end of line. For example, in the first line of code, we will obtain the token `a`, `=`, `5`. The `a` doesn't correspond to any keyword of the language, so it is considered as an identifier that comes from the user. The `=` is the assignment operator that indicates right-hand side value is assigned to left-hand side identifier. The `5` is a literal number, suppose it is an integer.
+The scanning process removes unnecessary characters, such as whitespace, newline character, and semicolon that acts as end of line. For example, in the first line of code, we will obtain the tokens `a`, `=`, `5`. The `a` doesn't correspond to any keyword of the language, so it is considered as an identifier that comes from the user. The `=` is the assignment operator that indicates right-hand side value is assigned to left-hand side identifier. The `5` is a literal number, suppose it is an integer.
 
-The language will need a grammar to describe what a valid expression is. The grammar for this language is specified with [BNF](/programming-language-theory/syntax#bnf). This will be explained more later at [basic syntax](/programming-language-theory/syntax#basic-syntax).
+The language will need a grammar to describe what a valid expression is. The grammar for this language is specified with [BNF](/programming-language-theory/syntax#bnf). This will be explained more later at [syntax](/programming-language-theory/syntax).
 
 ```
 <assignment> ::= <identifier> = <expression>
@@ -83,11 +83,11 @@ The language will need a grammar to describe what a valid expression is. The gra
 
 The `::=` denotes "can be replaced by" or "is defined as" (i.e., the left-hand side can be replaced with expression on the right-hand side). The `|` denotes an "or", it signifies that the left-hand side can be replaced to any one of the alternatives on the right-hand side.
 
-In the `<assignment> ::= <identifier> = <expression>` rule, it simply says that for an assignment to be valid, it must consist of an identifier, followed by the symbol `=` right after it, and an expression. For the identifier itself to be valid, it must consist of valid character for identifier, denoted by the `<identifier>` rule. An expression must either be a term (which itself can be an identifier or a number) or can be another expression with the addition operator (+) and a term.
+In the `<assignment> ::= <identifier> = <expression>` rule, it simply says that : for an assignment to be valid, it must consist of an identifier, followed by the `=` symbol right after it, and an expression. For the identifier itself to be valid, it must consist of valid character for identifier, denoted by the `<identifier>` rule. An expression must either be a term (which itself can be an identifier or a number) or can be another expression with the addition operator (+) and a term.
 
-With the expression `a = 5` or `b = 1`, the parser recognize that this conforms to the grammar rule for assignment (i.e., `a` is valid identifier and; `5` and `1` are expression which is replaced into a term and further replaced to number.). While `c = a + b` is an assignment, in which the expression follows the rule `<expression> ::= <expression> + <term>`.
+With the expression `a = 5` or `b = 1`, the parser recognize that this conforms to the grammar rule for assignment (i.e., `a` is valid identifier and; `5` and `1` are expression which is replaced into a term and further replaced to number). The `c = a + b` is an assignment, in which the right-hand side expression follows the rule `<expression> ::= <expression> + <term>`.
 
-After all this parsing, the language appear to be correct, therefore an abstract syntax tree (AST) will be constructed. For the three lines of code, it will look something like below.
+After all this parsing, the code appear to be correct, therefore an abstract syntax tree (AST) will be constructed. For the three lines of code, the constructed will look something like below.
 
 ```
    =          =
@@ -120,7 +120,7 @@ STORE c R3
 
 For instance, it "LOAD" the integer 5 into R1 (register 1), then store the value on R1 into an identifier `a`. Notice that the first two assignment can be simplified. It is not necessary to load a value into register if we eventually store it back to a variable. The `LOAD R1 5 STORE a R1` can be simplified into `STORE a 5`.
 
-With this IR, we can finally transform it into assembly code. For example, one may look like below.
+With this IR, we can finally transform the program into assembly code instructions, which a CPU can execute. For example, one may look like below.
 
 ```
 mov [a], dword 5
@@ -137,11 +137,11 @@ mov [c], eax
 Classification on how compiler process source code :
 
 - **One-pass Compiler** : Scanning, parsing, semantic analysis, up to code generation is done in a single pass. Source code can be directly translated into final machine code without intermediate representation. Parse tree may not be generated, so semantic analysis is performed during parsing. It is said one-pass compiler to be smaller and faster, but difficult to make and may not be able to generate program as efficient as multi-pass compiler.
-- **Multi-pass Compiler** : Processes the source several of times. This allows for better code generation at the higher cost of time and memory (depending on the number of passes).
+- **Multi-pass Compiler** : Processes the source several of times. This allows for better code generation at the higher cost of time and memory (depending on the number of passes and the algorithm itself).
 
 Types of compilers :
 
 - **Cross Compiler** : Compiler that generates executable code for a target platform different from the one on which the compiler itself runs. For example, compiling code on a Windows machine for execution on a Linux system.
 - **Decompiler** : Takes an executable or binary file as input and attempts to reconstruct the original source code from which the executable was compiled. It is the reverse of compilation, going from low-level language to a higher-level language.
-- **Transpiler** : Also known as **source-to-source compiler**, it is a compiler that translate source language to an equivalent source code in the same or different language. This includes tools like obfuscator (transform source code into a less readable and more difficult-to-understand form), minimizer (reduces the size of the source code by removing unnecessary characters such as, whitespace, and comments.), and optimizer (analyses source code and optimize it).
+- **Transpiler** : Also known as **source-to-source compiler**, it is a compiler that translate source language to an equivalent source code in the same or different language. This includes tools like obfuscator (transform source code into a less readable and more difficult-to-understand form), minimizer (reduces the size of the source code by removing unnecessary characters such as, whitespace, and comments), and optimizer (analyzes source code and optimize it).
 - **[Just-In-Time (JIT)](/computer-and-programming-fundamentals/interpreter#jit-compilation) Compiler** : A compiler that compiles code just-in-time it is executed. It dynamically compiles and optimizes code while the program is running.
