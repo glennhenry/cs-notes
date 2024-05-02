@@ -10,17 +10,17 @@ description: Syntax
 - **Book chapter 2**
 - **[Backus-Naur form - Wikipedia](https://en.wikipedia.org/wiki/Backus–Naur_form)**
 
-Syntax is the rules that specifies the valid structure of a program. It defines how the elements of a programming language, such as keywords, identifiers, operators, expressions, and statements, can be combined to form well-formed programs. The structure of program need to be standardized in order to avoid ambiguity. By ambiguity, we mean situations where a given sequence of symbols can be interpreted in multiple ways, leading to different meanings or interpretations.
+Syntax is the rules that specifies the valid structure of a program. It defines how the elements of a programming language, such as keywords, identifiers, operators, expressions, and statements can be combined to form well-formed programs. The structure of program need to be standardized in order to avoid ambiguity. By ambiguity, we mean situations where a given sequence of symbols can be interpreted in multiple ways, leading to different meanings or interpretations.
 
-An example of ambiguity is the simple arithmetic expression : 2 + 3 × 4. This can either be interpreted as 2 + 3 then × 4, if the language always process anything from left-to-right (also known as left-to-right evaluation), or 3 × 4 then + 2, if the language follows typical math operations.
+An example of ambiguity can be illustrated with simple arithmetic expression : 2 + 3 × 4. This can either be interpreted as 2 + 3 then × 4, if the language always process anything from left-to-right (also known as left-to-right evaluation), or 3 × 4 then + 2, if the language follows typical math operations.
 
 ### Basic Syntax
 
 One way to represent a syntax is through a non-terminal symbols, then using production rules to define how these non-terminal symbols can be expanded. Example :
 
-`digit -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 `, this mean `digit` is non-terminal that can be expanded to either `0`, `1`, `2`, and so on until `9`. The `|` represent "or".
+`digit -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 `, this mean `digit` is a non-terminal that can be expanded to either `0`, `1`, `2`, and so on until `9`. The `|` represent "or".
 
-A **non-terminal symbol** represents a syntactic category or a language construct in a grammar. In English language, non-terminals are the sentence, noun, verb, or phrase. There is also **terminal symbol**, which represent the actual elements or words in the language. For example, the word "cat" is a terminal that belongs to noun non-terminal. The grammar rule for noun would be `noun -> cat | dog | tree | ...`.
+A **non-terminal symbol** represents a syntactic category or a language construct in a grammar. In English language, non-terminals are general term like sentence, noun, verb, or phrase. There is also **terminal symbol** which represent the actual elements or words in the language. For example, the word "cat" is a terminal that belongs to noun non-terminal. The grammar rule for noun would be `noun -> cat | dog | tree | ...`.
 
 A syntax rule for any number greater than 100 would be :
 
@@ -34,9 +34,13 @@ A syntax rule for any number greater than 100 would be :
 Sometimes we use `<>` angle bracket to enclose the non-terminal.
 :::
 
-A number greater than 100 must be anything beyond 100, like 101, 102, 103, and so on. So, the first digit should be any digit that is non-zero. We added another rule called `<non-zero-digit>` for this. Then, the non-zero digit is followed by two digits, signifying it must be followed by two digit, so number like 99 is invalid according to this syntax.
+A number greater than 100 must be anything beyond 100, like 101, 102, 103, and so on. So, the first digit should be any digit that is non-zero. We should add another rule `<non-zero-digit>` for this. Then, the non-zero digit is followed by two digits, signifying it must be followed by two digit, so number like 99 is invalid according to this syntax.
 
 After the two digit, there is another digit included with the `*` symbol. This corresponds to **Kleene star operator**, which mean the particular non-terminal can be repeated zero or more times. A single `<digit>` with Kleene star means we can put any digit as many as we want. So, it is possible to create long number like 10000000000 or 123123123 with this syntax.
+
+:::tip
+A note on [languages](/theory-of-computation-and-automata/toc-fundamentals#strings--languages) and [grammar](/theory-of-computation-and-automata/toc-fundamentals#grammar).
+:::
 
 ### Regular Expression
 
@@ -44,9 +48,9 @@ A [regular expression](/theory-of-computation-and-automata/regular-languages-par
 
 Syntax are built on **tokens**, which are the smallest individual units or elements in a programming language. They represent predefined categories of lexical elements, such as keywords, identifiers, literals, operators, and punctuation symbols.
 
-For example, the symbol `+`, `-`, `*`, and `/` are mostly literals in most programming languages for arithmetic operation. Keyword like `while`, `if`, and `else` are also common.
+For example, the symbol `+`, `-`, `*`, and `/` are mostly literals in most programming languages for arithmetic operation. Keyword like `while`, `if`, and `else` are also common for defining control flow.
 
-Regular expression is a simple formal rules, it helps to define tokens. A classification of regular expression :
+Regular expression is a formal rule to define tokens, some rules are :
 
 1. **Character** : Must contain character or symbol that specify the pattern.
 2. **Empty String** : Empty string is represented with $\epsilon$ or epsilon symbol.
