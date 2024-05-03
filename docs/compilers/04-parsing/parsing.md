@@ -249,44 +249,52 @@ The steps to make parsing table is below. We will make the table from the given 
 ![Visualization part 1](./visualization-part-1.png)  
 Source : Book page 83
 
-The parsing process starts from an empty stack, we will start from the `program`. The `program` rule is `program → stmt_list $$`. We typically denote the position of the stack with a dot `.` on the right-hand side of the production rule. We call anything that is indicated with dot, or currently being processed as **LR item**.
+The parsing process starts from an empty stack, and from the starting symbol `program`. The `program` rule is `program → stmt_list $$`. We typically denote the parsing progress within a rule with a dot `.` on the right-hand side of the production rule. We call anything that is indicated with dot, or currently being processed as **LR item**. Any symbol beyond the dot is considered as the lookahead token, which the parser expects to see next in the input in order to continue parsing.
 
-Currently, we only have a single LR item in our list. If we encounter a non-terminal in the right-hand side of the production rule, we will add that rule to the list, as well as "dotting" them. We will keep adding LR item to the list until a terminal is encountered.
+Currently, we only have a single LR item in our list. The list is nothing but all the possible parsing configurations or states. If we encounter a non-terminal in the right-hand side of the production rule, the rule should be added to the list. We will keep adding LR item to the list until no more LR item can be added, that is when a terminal is encountered.
 
 In the example, we encountered the non-terminal `stmt_list` from the `program`. The `stmt_list` has two rules that replaces to `stmt_list stmt` or `stmt`. So, we will add both of the rule to the list. Our list now :
 
 ![Visualization part 2](./visualization-part-2.png)  
 Source : Book page 83
 
-Then, the `stmt_list` has another non-terminal `stmt`, it can be replaced to `id := expr`, `read id`, and `write expr`. Once again, add that to our list.
+Then, the `stmt_list` has another non-terminal `stmt`, it can either be replaced into `id := expr`, `read id`, and `write expr`. Once again, add these to our list.
 
 ![Visualization part 3](./visualization-part-3.png)  
 Source : Book page 83, 84
 
-Now that we don't encounter non-terminal anymore, we can stop adding item to the list. There are three rule that starts with terminals from the `stmt`. Based on the program on [top](#lr-parsers), we encountered `read`.
+Now that we don't encounter non-terminal anymore, we can stop adding item to the list.
 
-When we encounter a terminal, we have to shift a token and similarly, move the dot. Now that we encountered `read` token, we will shift this to the stack. By the way, when we move the dot or shift a token, this will change the parser state.
-
-Following the `stmt → read id` production rule, there must be `id`. Turns out the identifier is `A` from the input program. So, shift the token again to the stack and move the dot.
+The parser can now consumes input tokens. Based on the program on [top](#lr-parsers), the parser encounters `read`. When we encounter a terminal, we have to shift a token (i.e., push `read` to stack) and similarly, move the dot (now becomes `stmt → read . id`). Continuing, parser will consume the token `A`. It will be shifted and the dot is also moved.
 
 ![Visualization part 4](./visualization-part-4.png)  
 Source : Book page 84
 
 When dot reaches the end of the production rule, this indicates that the entire right-hand side of the production rule has been successfully matched, thus we have to reduce it. This will involve popping the two symbol (`read` and `id`), and then replacing them with the left-hand side symbol `stmt`.
 
-Since we have reduced the `stmt`, we need to advance the dot on `stmt_list`.
+Since `stmt` is reduced, the dot on rule `stmt_list → . stmt` has to be moved.
 
 ![Visualization part 5](./visualization-part-5.png)  
 Source : Book page 84
 
-We are at the end again, so we will pop the left part of the dot (`stmt`), and replace it by pushing the left-hand side of the rule, `stmt_list`.
+The dot on `stmt_list → stmt .` is at the end, so we have to reduce it again. We will pop `stmt`, and replace it with the left-hand side of the rule, `stmt_list`.
 
 ![Visualization part 6](./visualization-part-6.png)  
 Source : Book page 84
 
-All of this will change the state of `program` earlier, the dot is now after the `stmt_list`. Since it's not at the end yet, we will shift another token from the input (the next is `read B`). This will be repeated until we have reached the end of the input.
+All of this will change the state of `program` earlier. One `stmt_list` is now gone since it has just been reduced. The reduction of `stmt_list` will cause the other `stmt_list` dot to be advanced (from `stmt_list → . stmt_list stmt` to `stmt_list → stmt_list . stmt`).
 
-Notice that sometimes we will encounter the similar state. In other word, if we encounter `read` again, we will be at the place where the dot in `stmt → read id` goes from the start to the end again. Then, we will reduce again similar to the previous state. The dots all over the production rule represent the states of the LR parser's parse stack.
+Token is still available in the input, so the parser will consume another token from the input (the next is `read B`). This will be repeated until we have reached the end of the input.
+
+:::note
+The parsing pattern is like :
+
+- Read tokens until the dot is on the rightmost side.
+- Once the dot is on the rightmost side, we reduce the left-hand side of the production rule.
+- By reducing, we update the other rules by moving the dot whenever the symbol immediately following the dot is the one we just reduced. For instance, if we reduced `stmt`, we move the dot if the next symbol after the dot is `stmt`. For example, in `stmt_list → . stmt_list stmt`, we do not move the dot because the symbol after the dot is `stmt_list`, which is not the one we reduced.
+  :::
+
+Notice that sometimes we will encounter the similar state. In other word, if we encounter `read` again, the dot on `stmt → read id` will goes from the start to the end again. Then, we will reduce again similar to the previous state. The dots all over the production rule represent the states of the LR parser's parse stack.
 
 The state behavioral of bottom-up parsing makes it depict a finite automaton, it's called **Characteristics Finite State Machine (CSFM)**. This is same for any LR parser, such as SLR and LALR.
 
@@ -298,7 +306,9 @@ For each different state encountered (i.e., the position of the dot on the stack
 ![Visualization part 7](./visualization-part-7.png)  
 Source : Book page 83
 
-For example, when all the dot position are like above, it is considered as state 0. We can then map all the state transition into a table :
+For example, when all the dot position are like above, it is considered as state 0. State 0 typically represent the starting point of the parsing before any input is encountered. The dot will all be in the beginning.
+
+The table is populated as more input is encountered. For example, because `read` is first encountered, we number it as the state 1. The dot position will be `stmt → read . id`, where the remaining is the same as state 0.
 
 ![Bottom-up parsing table](./bottom-up-table.png)  
 Source : Book page 89
@@ -308,8 +318,12 @@ Source : Book page 89
 - `b3` indicates shift, reduce, and move to state 3.
 - `-` indicates a syntax error.
 
+:::tip
+In LR parsing, there are terms called action and goto tables. The table above shows the action table, which tells parser what to do when encountering specific state and input token. The goto table, representing on which state to transition next after reduction, is not shown.
+:::
+
 :::info
-With more lookahead token we use for the parser, it will introduce more possibilities for state transitions in the parsing automaton. For each state in an LR(1) parser, the parser needs to consider all possible lookahead tokens and create distinct states based on their combinations.
+In this table we are considering only the one token next, that is the current input symbol. With more lookahead token being used, the table is expanded to include all the possibility. This expansion results in more states in the LR parsing automaton.
 :::
 
 ##### Bottom-up Algorithm
@@ -349,7 +363,7 @@ Source : https://youtu.be/OIKL6wFjFOo?si=1JD7d0vdyh7BR5hA&t=775
         Source : https://www.slideserve.com/yael/bottom-up-parsing
 
   - **LR** : Also known as **CLR (canonical LR)**, they are a bottom-up parser that uses parse table from the CFSM automaton. LR(1) is larger than LR(0) due to incorporating a lookahead token. LR(1) has more state, due to each state included with different lookahead information.
-  - **SLR (Simple LR)** : LR(0) suffers from conflicts, SLR resolve it by using FOLLOW set to distinguish between shift and reduce actions in certain situations.
+  - **SLR (Simple LR)** : LR(0) can suffers from conflicts, SLR resolve it by using FOLLOW set to distinguish between shift and reduce actions during the dotting process.
   - **LALR (Look-Ahead LR)** : LALR(1) is more powerful than LR(0), but less than LR(1). It simplifies automaton of LR(1) such that the size is close to automaton of LR(0), but still included with lookahead information.
 
 The strength of each parser can somewhat be described as follows: $\text{LL}(1) < \text{SLR} < \text{LALR} < \text{LR}(1)$. We can also describe it in terms of the languages it can parse: $\text{LL}(1) ⊂ \text{SLR} ⊂ \text{LALR} ⊂ \text{LR}(1) \subset \text{CFG}$, where the rightmost parser represents a larger subset of the languages it can parse.
