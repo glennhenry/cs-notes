@@ -528,7 +528,6 @@ const sidebars = {
         "compilers/syntax/syntax",
         "compilers/scanning/scanning",
         "compilers/parsing/parsing",
-        "compilers/abstract-syntax-tree/abstract-syntax-tree",
         "compilers/semantic-analysis/semantic-analysis",
         "compilers/intermediate-representation/intermediate-representation",
         "compilers/memory-organization/memory-organization",

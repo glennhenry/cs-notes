@@ -20,7 +20,6 @@ Recommend taking a look at [theory of computation and automata](/theory-of-compu
 - [Syntax](compilers/syntax)
 - [Scanning](compilers/scanning)
 - [Parsing](compilers/parsing)
-- [Abstract Syntax Tree](compilers/abstract-syntax-tree)
 - [Semantic Analysis](compilers/semantic-analysis)
 - [Intermediate Representation](compilers/intermediate-representation)
 - [Memory Organization](compilers/memory-organization)

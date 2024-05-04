@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **21** topics, and a total of **385** notes.
+A total of **21** topics, and a total of **384** notes.
 
 1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -248,12 +248,11 @@ A total of **21** topics, and a total of **385** notes.
     - [Logic Languages](programming-language-theory/logic-languages)
     - [Concurrency](programming-language-theory/concurrency)
     - [Scripting Languages](programming-language-theory/scripting-languages)
-10. [Compilers](/compilers) (**11** subtopics)
+10. [Compilers](/compilers) (**10** subtopics)
     - [Compilers Fundamentals](compilers/compilers-fundamentals)
     - [Syntax](compilers/syntax)
     - [Scanning](compilers/scanning)
     - [Parsing](compilers/parsing)
-    - [Abstract Syntax Tree](compilers/abstract-syntax-tree)
     - [Semantic Analysis](compilers/semantic-analysis)
     - [Intermediate Representation](compilers/intermediate-representation)
     - [Memory Organization](compilers/memory-organization)
