@@ -48,7 +48,7 @@ Attribute grammars are formal methods for specifying semantics of programming la
 
 The production rule of context-free grammar are "decorated" with **attributes**, which are properties or values associated with the nodes (nonterminals and terminals) of the syntax tree. Attributes can represent various information such as types, values, or intermediate results of computations.
 
-Below is an example of a grammar of arithmetic expressions in [LR](/programming-language-theory/parsing#bottom-up-parsing).
+Below is an example of a grammar of arithmetic expressions in [LR](/compilers/parsing#bottom-up-parsing).
 
 ![Grammar example](./grammar-example.png)  
 Source : Book page 166
@@ -118,7 +118,7 @@ Now, we can actually decorate the syntax tree with the attribute grammars. There
 ![Decorate syntax tree part 1](./decorate-syntax-tree-1.png)  
 Source : Book page 182, 183
 
-The example is the upgraded [calculator language example](/programming-language-theory/parsing#recursive-descent-parser).
+The example is the upgraded [calculator language example](/compilers/parsing#recursive-descent-parser).
 
 - The first approach in the top image modifies the CFG.
 - The second approach in the bottom image uses tree grammar. A parse tree is first generated, then transformed into a syntax tree, followed by the decoration. Tree grammar is a form like `A : B → C B`. The `A : B` means that `A` is considered the part (or category) of `B`, and that `B` can be placed around `C`. For example, in `read : item → id item`, `read` is considered as an `item` and an `item` can be placed around `id`.

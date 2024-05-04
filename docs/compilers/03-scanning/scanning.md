@@ -38,7 +38,7 @@ A typical behavior of scanner is :
 4. If it is digit, keep saving it until the sequence ends. If it encounters token like `.`, it may indicate the start of a floating-point number literal instead of just integer.
 5. If it is a letter, keep saving it until the sequence ends. If the string is a known keyword, then save it as a keyword token, else as an identifier token.
 
-[Regular expression](#regular-expression) is used to define the lexical rules or patterns that a scanner should recognize. This is why earlier we mentioned that regular expressions are helpful in defining tokens, as they are used to specify the patterns that scanner recognizes.
+[Regular expression](/programming-language-theory/syntax#regular-expression) is used to define the lexical rules or patterns that a scanner should recognize. This is why earlier we mentioned that regular expressions are helpful in defining tokens, as they are used to specify the patterns that scanner recognizes.
 
 Since a scanner reflects a finite automaton, creating a scanner specified with a regular expression involves converting the regular expression into an equivalent finite automaton. The regular expression is converted into an [NFA](/theory-of-computation-and-automata/finite-automata#nfa) first, then converted into a DFA. Optionally, we may [minimize the DFA](/theory-of-computation-and-automata/finite-automata#minimization) to reduce the number of states.
 

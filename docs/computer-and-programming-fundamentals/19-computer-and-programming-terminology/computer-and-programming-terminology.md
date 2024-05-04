@@ -63,7 +63,7 @@ Type safety refers to the degree to which a programming language helps prevent t
 For example, if a type-safe function is declared to return an integer, it guarantees that the function will consistently return an integer whenever it is called.
 
 :::tip
-See also [type system](/programming-language-theory/data-types#type-system).
+See also [type systems](/programming-language-theory/data-types#type-systems).
 :::
 
 #### Standard Library

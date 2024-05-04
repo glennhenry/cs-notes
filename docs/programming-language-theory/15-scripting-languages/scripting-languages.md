@@ -30,7 +30,7 @@ public class Main {
 print("Hello World!")
 ```
 
-Furthermore, they provide high-level data types such as lists, sets, and dictionaries, as well as high-level functions through built-in functionality for common tasks like file manipulation and string manipulation. They are often [dynamically typed](/programming-language-theory/data-types#type-system), providing flexibility in declaring and operating with variables (e.g., allows [implicit type conversion](/programming-language-theory/data-types#type-conversion)), allowing programmers to write code quickly.
+Furthermore, they provide high-level data types such as lists, sets, and dictionaries, as well as high-level functions through built-in functionality for common tasks like file manipulation and string manipulation. They are often [dynamically typed](/programming-language-theory/data-types#type-systems), providing flexibility in declaring and operating with variables (e.g., allows [implicit type conversion](/programming-language-theory/data-types#type-conversion)), allowing programmers to write code quickly.
 
 They do not even require variable to be declared, undeclared variable may be automatically associated to the global scope.
 

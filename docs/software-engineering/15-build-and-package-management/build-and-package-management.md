@@ -93,7 +93,7 @@ In order to run a program, it needs to be compiled, or converted into machine co
 
 A build process includes :
 
-- **[Compilation](/compilers#compiler-toolchain)** : Translating human-readable source code into machine-readable code, or intermediate language in the case of [interpreted languages](/computer-and-programming-fundamentals/interpreter).
+- **[Compilation](/compilers/compilers-fundamentals#compiler-toolchain)** : Translating human-readable source code into machine-readable code, or intermediate language in the case of [interpreted languages](/computer-and-programming-fundamentals/interpreter).
 - **Dependency Resolution**: Identifies and resolves the dependencies required by the software project. Ensures that the necessary external libraries, frameworks, or modules are available and compatible with the project. Some build tools such as Gradle includes a package manager for this.
 - **Quality Assurance** : During build process, code quality is tested. This includes doing automated unit tests or analyzing code with integrated static analyzer tools.
 - **Code Packaging** : Packages the necessary files and resources into a distributable format. This may involve creating an executable file, a library, an archive, or a deployable package, depending on the nature of the project.
