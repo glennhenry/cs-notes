@@ -296,10 +296,7 @@ The parsing pattern is like :
 
 Notice that sometimes we will encounter the similar state. In other word, if we encounter `read` again, the dot on `stmt → read id` will goes from the start to the end again. Then, we will reduce again similar to the previous state. The dots all over the production rule represent the states of the LR parser's parse stack.
 
-The state behavioral of bottom-up parsing makes it depict a finite automaton, it's called **Characteristics Finite State Machine (CSFM)**. This is same for any LR parser, such as SLR and LALR.
-
-![CSFM of LR parser](./cfsm.png)  
-Source : Book page 89
+The state behavioral of bottom-up parsing makes it depict a [finite automaton](/theory-of-computation-and-automata/finite-automata), it's called **Characteristics Finite State Machine (CSFM)**. This is same for any LR parser, such as SLR and LALR.
 
 For each different state encountered (i.e., the position of the dot on the stack), we can assign them numbers.
 
@@ -309,6 +306,21 @@ Source : Book page 83
 For example, when all the dot position are like above, it is considered as state 0. State 0 typically represent the starting point of the parsing before any input is encountered. The dot will all be in the beginning.
 
 The table is populated as more input is encountered. For example, because `read` is first encountered, we number it as the state 1. The dot position will be `stmt → read . id`, where the remaining is the same as state 0.
+
+![Other states](./other-states.png)  
+Source : Book page 83, 84
+
+In the bottom-up grammar, we did a little modification in the `stmt_list` rule, from `stmt_list → stmt_list stmt | ` to `stmt_list → stmt_list stmt | stmt` (see [this](#recursive-descent-parser)). We will change it back to the previous rule.
+
+![Visualization part 8](./visualization-part-8.png)  
+Source : Book page 86
+
+The full state machine included with all the stack's state should look like below.
+
+![CSFM of LR parser](./cfsm.png)  
+Source : Book page 89
+
+Then, this is the table representation.
 
 ![Bottom-up parsing table](./bottom-up-table.png)  
 Source : Book page 89
@@ -368,4 +380,6 @@ Source : https://youtu.be/OIKL6wFjFOo?si=1JD7d0vdyh7BR5hA&t=775
 
 The strength of each parser can somewhat be described as follows: $\text{LL}(1) < \text{SLR} < \text{LALR} < \text{LR}(1)$. We can also describe it in terms of the languages it can parse: $\text{LL}(1) ⊂ \text{SLR} ⊂ \text{LALR} ⊂ \text{LR}(1) \subset \text{CFG}$, where the rightmost parser represents a larger subset of the languages it can parse.
 
-When creating a parser, the choices are similar to those when making a [scanner](/compilers/scanning). We can use a parser generator (e.g., with programs like Yacc and Bison), which typically generate bottom-up parsers like LALR(1) and LR(1). Alternatively, we can choose to make it manually, as we may not have full control over the generated parser, such as not being able to provide the best error messages or finding it harder to understand and modify because we didn't create it. When we make a parser manually, we typically create a top-down parser, with a common implementation being the [recursive descent parser](#recursive-descent-parser).
+When creating a parser, the choices are similar to those when making a [scanner](/compilers/scanning). We can use a parser generator (e.g., with programs like Yacc and Bison), which typically generate bottom-up parsers like LALR(1) and LR(1). Similarly, these tools work by generating a parser from the specifications we provide, and we need to integrate the generated parser as well as a scanner (which may be generated as well) with our main function.
+
+Alternatively, we can choose to make it manually, as we may not have full control over the generated parser, such as not being able to provide the best error messages or finding it harder to understand and modify because we didn't create it. When we make a parser manually, we typically create a top-down parser, with a common implementation being the [recursive descent parser](#recursive-descent-parser). If we were to create an LR parser, we would have to create a table to reflect the correct automaton, which could have a large number of states, resulting in a significantly large automaton.

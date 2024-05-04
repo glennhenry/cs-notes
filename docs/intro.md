@@ -41,7 +41,7 @@ These will never complete since it is intended to be written and updated from ti
 ### Longest Notes
 
 - [File System](operating-system/file-system) (36282 char)
-- [Parsing](/compilers/parsing) (32643 char)
+- [Parsing](/compilers/parsing) (33624 char)
 - [Software Principles](software-engineering/software-principles) (30368 char, due to many code examples)
 - [Memory Management](operating-system/memory-management) (27368 char)
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
