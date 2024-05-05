@@ -11,6 +11,7 @@ description: Semantic Analysis
 - **Chapter 4, Programming Language Pragmatics - Michael L. Scott**
 - **[Compilation - Part Three: Syntax Analysis - Computer Science](https://youtu.be/8nBoVjEOCMI?si=wnzyRj8DnkWHiebu)**
 - **[Symbol table - Wikipedia](https://en.wikipedia.org/wiki/Symbol_table)**
+- [](https://www.linkedin.com/advice/1/what-purpose-symbol-table-compiler-skills-computer-science-8csde)
 
 ### Abstract Syntax Tree
 
@@ -21,7 +22,7 @@ Source : https://ruslanspivak.com/lsbasi-part7/
 
 The AST contains only the necessary information for code generation. It doesn't include explicit grammatical information or unnecessary tokens like parentheses. The tree structure is arranged in such a way that it preserves the same without these.
 
-In the compilation process, the AST is used to keep track of syntactical information. It is a data structure used by the compiler to generate code later on. Sometimes, it is transformed into an intermediate representation first, then into real machine code. The AST is frequently represented as [tree](/data-structures-and-algorithms/tree) or [graph](/data-structures-and-algorithms/graph) structure.
+In the compilation process, the AST is used to keep track of syntactical information. It is a data structure used by the compiler to generate code later on. Sometimes, it is transformed into an intermediate representation first, then into real machine code. The AST is frequently represented as linked structure, such as [linked list](/data-structures-and-algorithms/linked-list), [tree](/data-structures-and-algorithms/tree), or [graph](/data-structures-and-algorithms/graph) structure.
 
 #### AST Representation in Code
 
@@ -177,32 +178,36 @@ The AST would look like below.
 ![Example program AST](./example-program-ast.png)  
 Source : Book 1 page 95
 
-This AST would be constructed during parsing. For example, when a bottom-up parser reduces, it should append a node to the appropriate parent. The node would be a struct it has created beforehand. If it encounters if-else syntax, it would create a statement struct with the `kind` being `STMT_IF_ELSE`, and other fields would be specified depending on the circumstances.
+This AST would be constructed during parsing. For example, when a bottom-up parser reduces, it should append a node to the appropriate parent. The node would be a struct it has created beforehand. If it encounters if-else syntax, the struct would be a statement struct with the `kind` being `STMT_IF_ELSE`, and other fields would be specified depending on the circumstances.
 
 ### Semantic Analysis
 
-After a parse tree is constructed in the parsing step, the next step is to analyze the real meaning of the code.
+Semantic analysis takes AST and decorate it. This mean the structure of the grammar is added with additional semantic information to provide sufficient detail for generating intermediate or machine code.
 
-The output of semantic analysis is a decorated AST, where additional semantic information is attached to the nodes to provide sufficient detail for generating intermediate or machine code. Semantic analysis may also involve looking up or adding information to the symbol table. The **symbol table** is a data structure used to store information about identifiers (variables, functions, classes, etc.) encountered in the program. It keeps track of various attributes associated with each identifier, such as its name, type, scope, memory location, and other relevant information.
+Semantic analysis helps enforce programming language rules, which are typically specific to each language and cannot be captured in a parse tree with context-free grammar alone. This is because grammar is used to specify syntax rather than semantics. Semantics involve implementing type systems, checking declarations and usages of identifiers, etc.
 
-![Symbol table](./symbol-table.png)  
-Source : https://www.slideshare.net/DrKuppusamyP/symbol-table-in-compiler-design
-
-The symbol table is frequently accessed throughout the [lexical analysis step](/programming-language-theory/syntax) until optimization. One common implementation of symbol table is a [hash table](/data-structures-and-algorithms/hash-table).
-
-Semantic analysis helps enforce programming language rules, which are typically specific to each language and cannot be captured in parse tree with context-free grammar alone. This process may involve type systems, checking if a keyword is reserved in the language, checking if an identifier has been declared before its use, etc.
-
-Semantic analysis can be categorized into two based on when it applied : **static semantic analysis** and **dynamic semantic analysis**. The former occurs during compile-time and the latter occurs during runtime. Some error, such as the use of identifier without declaring it first can be known at compile-time, while error like division by zero that is based on input can't be guaranteed.
+Semantic analysis can be categorized into two types based on when it is applied: **static semantic analysis** and **dynamic semantic analysis**. The former occurs during compile-time, and the latter occurs during runtime. Some errors, such as the use of an identifier without prior declaration, can be identified at compile-time, while errors like division by zero are based on input, which is not known at compile-time.
 
 :::info
 Although, some tools may do semantic analysis during the time programmer write code (we can say during compile-time) to catch trivial or potential error as well as enforcing certain rules such as coding guidelines. The tools that do this in a way that they predict the runtime behavior are known as **static analyzer**.
 :::
 
-### Attribute Grammars
+#### Symbol Table
+
+Semantic analysis may also involve looking up or adding information to the symbol table. The **symbol table** is a data structure used to store global information about identifiers (e.g., variables, functions, classes, etc.) encountered in the program.
+
+![Symbol table](./symbol-table.png)  
+Source : https://www.slideshare.net/DrKuppusamyP/symbol-table-in-compiler-design
+
+The symbol table is frequently accessed throughout many compilation steps. It is created during scanning and parsing. One common implementation for storing symbols is in a [hash table](/data-structures-and-algorithms/hash-table). Each entry could be contained within a struct that has several properties commonly associated with an identifier, such as name, type, scope, memory location, etc.
+
+With a hash table, a lookup with the variable name as the key could be made easily and quickly. **Name resolution** is the process of determining the correct declaration or definition of an identifier from symbol table based on the current scope and context of the program. One common approach to handle local and global scope is by nesting several symbol tables, where each table corresponds to a scope. This way, name resolution will always look to the nearest scope first.
+
+#### Attribute Grammars
 
 Attribute grammars are formal methods for specifying semantics of programming languages to a formal language like [context-free grammar](/theory-of-computation-and-automata/context-free-grammar).
 
-The production rule of context-free grammar are "decorated" with **attributes**, which are properties or values associated with the nodes (nonterminals and terminals) of the syntax tree. Attributes can represent various information such as types, values, or intermediate results of computations.
+The production rule of context-free grammar are "decorated" with **attributes**, which are properties or values associated with the nodes (nonterminals and terminals) of the parse tree. Attributes can represent various information such as types, values, or intermediate results of computations. Association of semantic within the grammar allows us to perform semantic actions during parsing.
 
 Below is an example of a grammar of arithmetic expressions in [LR](/compilers/parsing#bottom-up-parsing).
 
@@ -222,15 +227,15 @@ Source : Book 2 page 167
 
 - Each symbol is numbered to be distinguished.
 - Attribute grammar is written with equations that describe how can we describe the computation of attribute values. There are two types of attribute rules, **copy rules** and **semantic function**.
-- Copy rules are attribute rule where one attribute is just a copy of another.
+- Copy rules are attribute rule where one attribute is just a copy of another (e.g., `E → T ▷ E.val := T.val`).
 - Semantic function is a function that describe an attribute value is computed with input of another attribute values. It can be any arbitrarily function the language designer want, and we can associate each non-terminal with a value. For example the $E_1.\text{val}$ describe the value of $E_1$. The function $\text{sum}(x, y)$ may describe the sum of $x$ and $y$.
 - The value $.\text{val}$ or function $\text{sum}(x, y)$ doesn't actually have meaning, they are not fixed or standardized, but rather a convention that language designer adopt for clarity.
 
-### Attribute Evaluation
+#### Attribute Evaluation
 
-The next step is to decorate the parse tree by evaluating attributes. Attribute values are computed and passed from child nodes to parent nodes or from parent nodes to child nodes during the evaluation process. This is called **evaluation flow**.
+The grammar is now associated with attributes, it is time to evaluate them. Attribute values are computed and passed from child nodes to parent nodes or from parent nodes to child nodes during the evaluation process. This is called **evaluation flow**.
 
-#### Synthesizes Attributes
+##### Synthesize Attributes
 
 ![Attribute evaluation](./attribute-evaluation.png)  
 Source : Book 2 page 169
@@ -239,7 +244,7 @@ For this particular example, the flow of evaluation is bottom-to-up. We call att
 
 When all attributes are synthesizes, such as [our example above](#attribute-grammars), we call it **S-attributed**. The property of S-attributed is, left-hand side is always produced by the right-hand side. This is true for all attribute in the attribute grammar. This property makes each node in the decorated parse tree to obtain value from their child nodes, causing the tree to be evaluated bottom-to-up.
 
-#### Inherited Attributes
+##### Inherited Attributes
 
 The opposite, where information is allowed to pass from parent nodes or side nodes are called **inherited attributes**. Below is an example where bottom-up evaluation is not possible due to subtraction, in which its mathematical property is left-associative (i.e., have to be evaluated from left).
 
@@ -258,28 +263,31 @@ An attribute grammar is well-defined if it is unique and unambiguous. This means
 We call algorithm that transform a language into an equivalent representation in another language or formalism, such as through attribute evaluation a **translation scheme**.
 :::
 
-#### Attribute Evaluator
+##### Attribute Evaluators
 
-Just like parsing, there is automated tool that will generate a semantic analyzer from an attribute grammar, these are called **attribute evaluator**. The evaluator is typically associated with specific production rule of the attribute grammar. The associated rule of attribute grammar is called **action routine**. It is included in the parser, such as LL or LR. When the parser encounters a production rule while parsing the input, it may execute an action routine associated with that rule.
+**Attribute evaluators** are responsible for computing the values of the attributes associated with the grammar symbols. The associated computation rule of an attribute grammar is called an **action routine**. It is included in the parser, which means the parser will execute the specific action routine during parsing when encountering the associated production rule.
 
 ![Grammar with action routine](./attribute-evaluator.png)  
 Source : Book 2 page 176, 180
 
-The left is the original grammar (top-down) and the right is the LL(1) grammar associated with the attribute grammar. For example, when it encounters a form like `E → T TT`, it will know that `TT.st := T.ptr`, and so on.
+The left is a top-down attribute grammar to construct syntax tree. Now, it is modified so that each attribute on the grammar is associated with piece of code to compute that attribute (they are embedded within the attribute, delimited with curly braces).
 
-### Decorating Syntax Tree
+The parser will generate syntax tree while parsing. For instance, when it encounters something like `E → T TT`, it should assign field `ptr` of `T` to `st` of `TT` (`st` and `ptr` are pointer fields). Moreover, the function `make_leaf` used in the rule `F → const` would probably be used to make a leaf node for constant term. They are sort of connecting pointer to create linked structure for the syntax tree.
 
-Now, we can actually decorate the syntax tree with the attribute grammars. There are two ways for this, modifying the context-free grammar with semantic rules or making changes to syntax tree following a formalism called **tree grammar**.
+##### Decorating Syntax Tree
+
+We modified the [calculator language example](/compilers/parsing#recursive-descent-parser) to include types and declaration semantics. A sample program and its syntax tree as well as the production rule used to derive it can be seen below.
 
 ![Decorate syntax tree part 1](./decorate-syntax-tree-1.png)  
 Source : Book 2 page 182, 183
 
-The example is the upgraded [calculator language example](/compilers/parsing#recursive-descent-parser).
+The syntax tree follows a formalism called **tree grammar**. It is used to specify the structure and behavior of tree-like structures, such as parse trees or syntax tree. Unlike context-free grammars, which operate on linear sequences of symbols, tree grammars operate on hierarchical structures represented by trees.
 
-- The first approach in the top image modifies the CFG.
-- The second approach in the bottom image uses tree grammar. A parse tree is first generated, then transformed into a syntax tree, followed by the decoration. Tree grammar is a form like `A : B → C B`. The `A : B` means that `A` is considered the part (or category) of `B`, and that `B` can be placed around `C`. For example, in `read : item → id item`, `read` is considered as an `item` and an `item` can be placed around `id`.
+Tree grammar is a form like `A : B → C B`. The `A : B` means that `A` is considered the part (or category) of `B`, and that `B` can be placed around `C`. For example, in `read : item → id item`, `read` is considered as an `item` and an `item` can be placed around `id`.
 
-  ![Decorate syntax tree part 2](./decorate-syntax-tree-2.png)  
-   Source : Book 2 page 185-187
+This tree grammar can also be included with attribute grammar like below.
 
-  The above image is the attribute grammar for the second approach (`symtab` may refer to symbol table). One thing to note is, it catches error by making a dummy type called `error`, which is associated with the error message in the symbol table.
+![Decorate syntax tree part 2](./decorate-syntax-tree-2.png)  
+Source : Book 2 page 185-187
+
+Each attribute is associated with fragment of code to evaluate them. Some even contains control flow, checking symbol table (`symtab`), and error reporting. One thing to note is, it catches error by making a dummy type called `error`. This error type is associated with an error message in the symbol table.
