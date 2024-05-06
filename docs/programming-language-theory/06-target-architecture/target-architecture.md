@@ -70,16 +70,16 @@ Depending on the architecture, they have the different number of physical regist
 For example, given an expression `(a + b) × (c − (d / e))`. One way to calculate this is using 9 separate register.
 
 ```
-R1 = a
-R2 = b
-R3 = c
-R4 = d
-R5 = e
+R1 := a
+R2 := b
+R3 := c
+R4 := d
+R5 := e
 
-R6 = R1 + R2   // (a + b)
-R7 = R4 / R5   // (d / e)
-R8 = R3 - R7   // (c - (d / e))
-R9 = R6 * R8   // ((a + b) * (c - (d / e)))
+R6 := R1 + R2   // (a + b)
+R7 := R4 / R5   // (d / e)
+R8 := R3 - R7   // (c - (d / e))
+R9 := R6 * R8   // ((a + b) * (c - (d / e)))
 ```
 
 The end result is stored at R9. However, registers are limited, and we can't just use all the available registers.
@@ -88,6 +88,10 @@ The end result is stored at R9. However, registers are limited, and we can't jus
 Source : Book page 772
 
 This evaluation uses 4 register, reusing the previous register for the new intermediate value. There are many factors in optimizing this, such as reducing the number of registers used, the number of memory accesses, the number of spills (moving values between registers and memory), and the overall performance of the generated code.
+
+:::info
+This example uses an intermediate representation called [three-address code (TAC)](/compilers/intermediate-representation#linear-ir).
+:::
 
 :::tip
 More about compiler optimization.

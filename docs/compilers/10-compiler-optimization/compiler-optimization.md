@@ -10,3 +10,7 @@ description: Compiler Optimization
 - [] 
 
 Compiler Optimization page
+
+### Constant Folding
+
+### Register Allocation
