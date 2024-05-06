@@ -13,7 +13,7 @@ Behavioral patterns are design patterns that focus on the interaction and commun
 
 ### Command
 
-Command pattern encapsulates a request as an object that contains information about the request. Each command object encapsulates a specific request along with any necessary parameters. We can provide useful information in the object, such as what it executes briefly, which allows us to support undo-redo operations.
+Command pattern encapsulates a request as an object that contains information about the request. It is basically modeling action in terms of object-oriented. Each command object encapsulates a specific request along with any necessary parameters. We can provide useful information in the object, such as what it executes briefly, which allows us to support undo-redo operations.
 
 Consider a simplified text editor :
 
@@ -47,9 +47,9 @@ fun main() {
 
 It's a simple class that hold a text (in `StringBuilder`), which we can edit through the `write` and `delete` method.
 
-If we were to implement undo functionality, one way to do that is storing a list of previously written text. So we would add current text to the list everytime we edit it. While this is easy to implement, it can consume so much space to store the string and a lot of time to copy the string.
+If we were to implement undo functionality, one way to do that is storing a list of previously written text. So we would add current text to the list every time we edit it. While this is easy to implement, it can consume so much space to store the string and a lot of time to copy the string.
 
-Following command pattern, we would make another object that encapsulate the writing or deleting operation along with extra information, and another class that handles the undo. With the given information, we will reverse the text operation.
+Following command pattern, we would make another object that encapsulate the writing or deleting operation along with extra information, and another class that handles undo operation. With the given information, we will reverse the text operation.
 
 The text commands :
 
@@ -282,71 +282,71 @@ While this code works, it may not make sense because the one adding or removing 
 
 ### State
 
-State pattern allows an object to change its behavior dynamically as its internal state changes. It encapsulates each state as a separate class, and the object delegates its behavior to the current state class.
+State pattern allows an object to change its behavior dynamically as its internal state changes. In other word, the behavior of an object depend on its current state, and that state can change overtime.
 
-An example would be a vending machine that operates differently based on the condition if an item is selected or not. Each state would have access to the machine to change its internal state.
+One way to do this is by defining a state with an interface, and then each different state would implement its own behavior. The object on which we want to implement the state pattern would hold a particular state, which would control how that object behaves. In other words, the object delegates its behavior to the current state class.
 
-The vending machine would work this way :
+An example would be a vending machine that operates differently based on its current condition, such as if an item is selected or not.
 
-- User selects an item
-  - If item is not selected yet, select it
-  - If item is already selected, don't do anything
-- User dispense an item
-  - If item is not selected yet, don't do anything
-  - If item is already selected, dispense it
+The vending machine operates as follows :
 
-The vending machine state is modeled by an interface :
+- When a user selects an item :
+  - If the item has not been selected yet, it is selected.
+  - If the item has already been selected, no action is taken.
+- When a user dispenses an item :
+  - If no item has been selected yet, no action is taken.
+  - If an item has already been selected, it is dispensed.
+
+We model every state with the `VendingMachineState`. We have two actions, selecting an item and dispensing an item. Each state should implement each action, which will return the new state.
 
 ```kotlin
 interface VendingMachineState {
-    fun selectItem(item: String)
-    fun dispenseItem()
+    fun handleSelection(item: String): VendingMachineState
+    fun handleDispense(): VendingMachineState
 }
 
-class NoSelectionState(private val vm: VendingMachine) : VendingMachineState {
-    override fun selectItem(item: String) {
+class NoSelectionState : VendingMachineState {
+    override fun handleSelection(item: String): VendingMachineState {
         println("Selected item: $item")
-        vm.changeState(ItemSelectedState(vm))
+        return ItemSelectedState()
     }
 
-    override fun dispenseItem() {
+    override fun handleDispense(): VendingMachineState {
         println("Please select an item first.")
+        return this
     }
 }
 
-class ItemSelectedState(private val vm: VendingMachine) : VendingMachineState {
-    override fun selectItem(item: String) {
+class ItemSelectedState : VendingMachineState {
+    override fun handleSelection(item: String): VendingMachineState {
         println("Item $item is already selected.")
+        return this
     }
 
-    override fun dispenseItem() {
+    override fun handleDispense(): VendingMachineState {
         println("Dispensing item...")
-        vm.changeState(NoSelectionState(vm))
+        return NoSelectionState()
     }
 }
 ```
 
-The vending machine :
+The vending machine simply takes action by "asking" its current state :
 
 ```kotlin
 class VendingMachine {
-    private var currentState: VendingMachineState = NoSelectionState(this)
-
-    fun changeState(newState: VendingMachineState) {
-        currentState = newState
-    }
+    private var currentState: VendingMachineState = NoSelectionState()
 
     fun selectItem(item: String) {
-        currentState.selectItem(item)
+        currentState = currentState.handleSelection(item)
     }
 
     fun dispenseItem() {
-        currentState.dispenseItem()
+        currentState = currentState.handleDispense()
     }
 }
 ```
 
-State changes go through `changeState` method, which overwrite the current state.
+Whenever the state change, it will overwrite the current state through `changeState` method.
 
 ```kotlin
 fun main() {
@@ -372,78 +372,123 @@ fun main() {
 }
 ```
 
+State pattern is related to [finite state machine](/theory-of-computation-and-automata/finite-automata#finite-state-machine). It can be thought as the object-oriented style of a state machine. This particular vending machine is quite simple, a pictorial representation looks like below.
+
+![Vending machine state transition](./vending-machine-state.png)
+
+The advantage of the state pattern is that it simplifies the modeling of state machines. Without it, we would use a bunch of if-else statements in one place, each of which could contain code that changes the state. This state is accessed by many pieces of code, making maintenance and bug-finding challenging. The state pattern instead encapsulates each state's behavior and connects them through an interface.
+
 ### Chain of Responsibility
 
-Chain of Responsibility pattern allows an object to pass a request along a chain of potential handlers until the request is handled or reaches the end of the chain. Each handler in the chain has the ability to handle the request or pass it to the next handler in the chain.
+Chain of responsibility pattern allows an object to pass a request in a chain of potential handlers. Each handler in the chain has the ability to handle the request or pass it to the next handler in the chain. A request can be handled by multiple handlers.
 
-Consider a math function that we can customize its behavior, maybe add the number first, then multiply, and finally subtract. Here's a simplified implementation of this :
+Consider a chain of mathematical arithmetic handler that we can choose which operation to do. Obviously it is unnecessary to use this pattern for it, but this is for the sake of example. Here's a simplified implementation of this :
 
 ```kotlin
-abstract class MathOperationHandler {
-    abstract val operand: Int
-    abstract fun handle(prevResult: Int): Int
-
-    var nextHandler: MathOperationHandler? = null
-    fun m_setNextHandler(handler: MathOperationHandler) {
-        nextHandler = handler
-    }
+abstract class MathHandler {
+    lateinit var nextHandler: MathHandler
+    abstract fun handle(request: MathRequest): Int
 }
+
+data class MathRequest(val operator: Char, val operand1: Int, val operand2: Int)
 ```
 
-Each math operator has a handler, which has an operand provided for its calculation. They are able to set the `nextHandler` by the `m_setNextHandler` method (prefixed with m\_ to avoid JVM conflict).
+Each math operator would implement this `MathHandler`, particularly the `handle` method which is specific to each operator. A math request will be encoded in `MathRequest`. It contains selected operator and its operands. Depending on the selected operator, each handler will only handle if the given operator match their responsibility (i.e., math handler for addition should only handle addition operation).
 
-The `handle` method takes the previous result from the previous operand (or the initial value if they are the first operator). The handler will calculate the result with their given operand based on what type of math operation are they. The result is then passed again to the next handler.
+If it's not their responsibility, they simply pass the request to the next handler.
 
-We also made `MathOperationHandler` abstract instead of an interface, because the `nextHandler` and `m_setNextHandler` should be the same for any operator.
+:::tip
+`lateinit` keyword mark a property as being "late initialized". We will not define the chain of handler here, it is done in another portion of code. The use of this keyword help us to avoid temporarily assigning `nextHandler` to default value like null, which could cause issues.
+:::
 
 And here's all the operator implemented :
 
 ```kotlin
-class AddHandler(override val operand: Int) : MathOperationHandler() {
-    override fun handle(prevResult: Int): Int {
-        val currentResult = prevResult + operand // Here lies the difference between operator
-        return nextHandler?.handle(currentResult) ?: currentResult
+class AdditionHandler : MathHandler() {
+    override fun handle(request: MathRequest): Int {
+        if (request.operator == '+') {
+            return request.operand1 + request.operand2
+        } else {
+            return nextHandler.handle(request)
+        }
     }
 }
 
-class SubHandler(override val operand: Int) : MathOperationHandler() {
-    override fun handle(prevResult: Int): Int {
-        val currentResult = prevResult - operand
-        return nextHandler?.handle(currentResult) ?: currentResult
+class SubtractionHandler : MathHandler() {
+    override fun handle(request: MathRequest): Int {
+        if (request.operator == '-') {
+            return request.operand1 - request.operand2
+        } else {
+            return nextHandler.handle(request)
+        }
     }
 }
 
-class MulHandler(override val operand: Int) : MathOperationHandler() {
-    override fun handle(prevResult: Int): Int {
-        val currentResult = prevResult * operand
-        return nextHandler?.handle(currentResult) ?: currentResult
+class MultiplicationHandler : MathHandler() {
+    override fun handle(request: MathRequest): Int {
+        if (request.operator == '*') {
+            return request.operand1 * request.operand2
+        } else {
+            return nextHandler.handle(request)
+        }
     }
 }
 
-class DivHandler(override val operand: Int) : MathOperationHandler() {
-    override fun handle(prevResult: Int): Int {
-        val currentResult = prevResult / operand
-        return nextHandler?.handle(currentResult) ?: currentResult
+class DivisionHandler : MathHandler() {
+    override fun handle(request: MathRequest): Int {
+        if (request.operator == '/') {
+            return request.operand1 / request.operand2
+        } else {
+            return nextHandler.handle(request)
+        }
+    }
+}
+
+class UnknownHandler : MathHandler() {
+    override fun handle(request: MathRequest): Int {
+        return 0
     }
 }
 ```
 
-:::tip
-`?` and `?:` is a Kotlin operator related to [Kotlin null safety](https://kotlinlang.org/docs/null-safety.html). In short, using `?` on a method call ensure that we are only invoking the method if the object we are invoking on is not null. On the other hand, the `?:` replace a null value with an alternative value.
-:::
+To handle user that gives undefined operator, we will also put `UnknownHandler` at the end of the chain to return a default 0 value.
+
+Then, clients can use this chain of math handler through the `MathOperator` class. In this class we will also define the chain of handler, including assigning `UnknownHandler` at the end of the chain.
+
+```
+class MathOperator {
+    private val handlerChain: MathHandler
+
+    init {
+        val first = AdditionHandler()
+        val second = SubtractionHandler()
+        val third = MultiplicationHandler()
+        val fourth = DivisionHandler()
+
+        first.nextHandler = second
+        second.nextHandler = third
+        third.nextHandler = fourth
+        fourth.nextHandler = UnknownHandler()
+
+        handlerChain = first
+    }
+
+    operator fun evaluate(request: MathRequest): Int {
+        return handlerChain.handle(request)
+    }
+}
+```
+
+Client use it like below.
 
 ```kotlin
 fun main() {
-    val add = AddHandler(2)
-    val mul = MulHandler(5)
-    val sub = SubHandler(1)
+    val math = MathOperator()
 
-    add.m_setNextHandler(mul)
-    mul.m_setNextHandler(sub)
-
-    val result = add.handle(0)
-    println(result) // Output : 9
+    println(math.evaluate(MathRequest('+', 5, 3)))
+    println(math.evaluate(MathRequest('-', 10, 7)))
+    println(math.evaluate(MathRequest('*', 4, 6)))
+    println(math.evaluate(MathRequest('/', 15, 3)))
+    println(math.evaluate(MathRequest('%', 8, 2)))
 }
 ```
-
-The code set addition, multiplication, and subtraction operation respectively. The number 0 we passed in the first `handle` method that we call on `additionHandler` act as the initial value.
