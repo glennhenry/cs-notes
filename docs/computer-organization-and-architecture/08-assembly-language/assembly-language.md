@@ -80,7 +80,7 @@ There are many instruction keyword in asm :
   - **JNZ (Jump if Not Zero)** : Jumps to a specified location if the zero flag is not - set.
   - **JE (Jump if Equal)** : Jumps to a specified location if the equal flag is set.
   - **JNE (Jump if Not Equal)** : Jumps to a specified location if the equal flag is not - set.
-  - **CALL (Call)** : Calls a subroutine or function at a specified location.
+  - **CALL (Call)** : Calls a subroutine or function at a specified location. This instruction actually include jumping to the function address and leaving a return address for the stack pointer to return after the subroutine is finished.
   - **RET (Return)** : Returns from a subroutine to the calling code.
 
 - **Stack Operations**
@@ -135,3 +135,7 @@ section .data
 The syntax is typically `<instruction> <operand1> <operand2>`, where operand can be a register, which is specified by its name, or immediate value.
 
 The `section .data` is a section directive to define and initialize data such as variables, constants, and strings. The `section .text` is the section for program's executable instructions. `_start` is a label that marks the entry point of the program.
+
+### Calling Convention
+
+stack, register
