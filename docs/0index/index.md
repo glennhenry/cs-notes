@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **21** topics, and a total of **383** notes.
+A total of **21** topics, and a total of **382** notes.
 
 1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -178,7 +178,7 @@ A total of **21** topics, and a total of **383** notes.
           - [Union Find](data-structures-and-algorithms/union-find)
           - [Topological Sort](data-structures-and-algorithms/topological-sort)
           - [Minimum Spanning Tree](data-structures-and-algorithms/minimum-spanning-tree)
-6. [Computer Organization & Architecture](/computer-organization-and-architecture) (**13** subtopics)
+6. [Computer Organization & Architecture](/computer-organization-and-architecture) (**12** subtopics)
     - [COA Fundamentals](computer-organization-and-architecture/coa-fundamentals)
     - [Boolean Logic](computer-organization-and-architecture/boolean-logic)
     - CPU
@@ -192,8 +192,7 @@ A total of **21** topics, and a total of **383** notes.
       - [Von Neumann](computer-organization-and-architecture/von-neumann)
       - [Harvard](computer-organization-and-architecture/harvard)
       - [ISA](computer-organization-and-architecture/isa)
-    - [GPU](computer-organization-and-architecture/gpu)
-    - [Vector Processors & TPU](computer-organization-and-architecture/vector-processors-and-tpu)
+    - [Other Processing Units](computer-organization-and-architecture/other-processing-units)
 7. [Operating System](/operating-system) (**24** subtopics)
     - [OS Fundamentals](operating-system/os-fundamentals)
     - [Kernel](operating-system/kernel)

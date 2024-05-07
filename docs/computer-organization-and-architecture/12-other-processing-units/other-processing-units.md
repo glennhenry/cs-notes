@@ -86,7 +86,7 @@ Vector processors excel at performing repetitive, data-parallel computations tha
 Source : https://www.cs.uic.edu/~ajayk/c566/VectorProcessors.pdf
 
 :::tip
-[GPU](/computer-organization-and-architecture/gpu) can be considered as a type of vector processor. While GPUs are primarily designed for graphics processing, they have evolved to include significant vector processing capabilities.
+GPU can be considered as a type of vector processor. While GPUs are primarily designed for graphics processing, they have evolved to include significant vector processing capabilities.
 :::
 
 #### SIMD
