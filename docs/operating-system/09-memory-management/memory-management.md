@@ -15,6 +15,7 @@ description: Memory Management
 - **[Buddy memory allocation - Wikipedia](https://en.wikipedia.org/wiki/Buddy_memory_allocation)**
 - **[Virtual memory - Wikipedia](https://en.wikipedia.org/wiki/Virtual_memory)**
 - **[Memory paging - Wikipedia](https://en.wikipedia.org/wiki/Memory_paging)**
+- **Chapter 9, Introduction to Compilers and Language Design - Douglas Thain**
 - **Various Google searches**
 
 Memory is used to store program's data and instruction. The CPU will fetch the instructions from memory and execute them. The data required by the instructions is also fetched from memory and manipulated by the CPU. After execution is done, the data is stored back on the memory.
@@ -39,38 +40,48 @@ In the case of automatic memory management, here's what might happen :
 Here is the overview of memory allocation :
 
 1. **Memory Request** : When a program or process requests memory, it communicates with the operating system to obtain the required memory space.
-2. **Allocating Memory** : The operating system will allocate the requested memory and maps the requested memory space to a specific location in the physical memory. By mapping, it means that it sets aside a specific portion of the computer's physical memory for a program or process to use. The allocated memory becomes reserved and dedicated to the program or process that requested it.
+2. **Allocating Memory** : The operating system find available free space considering factor like memory size and allocation strategy. Then, it allocates the requested memory and maps the requested memory space to a specific location in the physical memory. By mapping, it means that it sets aside a specific portion of the computer's physical memory for a program or process to use. The allocated memory becomes reserved and dedicated to the program or process that requested it.
 3. **Memory Access** : The program or process can now access the allocated memory space. It can read from and write to the memory within the allocated boundaries. The OS won't allow when the program try to access region outside the boundary. When the program tries to access a part of the computer's memory that it shouldn't be accessing, an error called **segmentation fault** may occur.
 4. **Deallocation** : When a program no longer needs the allocated memory, it should inform the operating system to deallocate the memory space. The operating system marks the previously allocated memory as available for reuse.
 
 ![Memory allocation](./memory-allocation.png)  
 Source : https://www.embedded.com/dynamic-memory-and-heap-contiguity/
 
+:::tip
+The usage of memory by program is related to [virtual memory](#virtual-memory).
+:::
+
 #### Memory Segmentation
 
 Depending on the strategy and purpose of allocation, the memory allocated can take place in various location. Memory is divided into variable-sized segments, where each segment is associated with a particular process or program.
 
-Overall, there are four segments, code segment, data segment, stack segment, and heap segment. The code segment contains the executable code of a program, the data segment holds the static and global variables used by a program, the stack segment is used for storing local variables and function call information, and the heap segment for dynamic allocation.
+Overall, there are four segments, code segment, data segment, stack segment, and heap segment. The code segment contains the executable code of a program, the data segment holds the static, literals, and global variables used by a program, the stack segment is used for storing local variables and function call information, and the heap segment for dynamic allocation.
 
-- **Stack** : The stack is a region of memory used for the execution of programs. It is a data structure that follows the [LIFO principle](/data-structures-and-algorithms/stack). The stack is used for storing function call information, local variables, and other data associated with function execution. Each time a function is called, a stack frame is created, which contains the function's parameters, return address, and local variables. When the function completes, its stack frame is removed, and control returns to the calling function.
+:::note
+The stack and the heap are the segment that will grow overtime, where the former grows down, and the latter grows up.
+:::
+
+- **Stack** : The stack is a region of memory used for the execution of programs. It is a data structure that follows the [LIFO principle](/data-structures-and-algorithms/stack). The stack is used for storing function call information, local variables, and other data associated with function execution. Each time a function is called, a stack frame is created, which contains the function's parameters, return address (the address of the next instruction after the function call), and local variables. This includes the main function, which is typically the program entry point. When the function completes, its stack frame is removed, and control returns to the calling function.
 - **Heap** : Heap is a region of memory that is a larger and more flexible area of memory compared to the stack. The heap is used for allocating memory dynamically at runtime when the size or lifetime of data is unknown or needs to be managed explicitly. In [manual memory management](#dynamic-allocation), memory allocated on the heap must be explicitly requested and released by the program.
 - **Static** : Static memory is a region of memory that stores global variables, static variables, and constants. It is allocated and initialized before the program execution begins and remains throughout the entire lifespan of the program. Variables declared outside any function (global variables) and variables declared with the static keyword have static storage duration and are stored in the static memory.
+
+  :::info
+  The properties of static data being global means we can access it directly by addressing the exact location of the static data. However, this approach can generate more complex machine code instruction, since an absolute address must be a full word (e.g., can be 8-bytes in 64-bit system). There is another approach which access the static data relative to a known reference point with offset (e.g., program counter (PC)).
+  :::
 
 ![Three area of memory](./stack-heap-static-memory.png)  
 Source : https://www.digikey.com/en/maker/projects/introduction-to-rtos-solution-to-part-4-memory-management/6d4dfcaa1ff84f57a2098da8e6401d9c
 
 The other two regions :
 
-- **Literals** : Literals are fixed values that appear directly in the source code of a program. They represent specific data types and are used to provide explicit values for variables or expressions. For example, if you have the code snippet `int x = 5;`, the literal value 5 is stored as part of the initialization of the variable `x`.
-- **Instruction** : They represent individual operations that the CPU can execute (executable). In memory, instructions are stored as part of the program's **code segment**. The code segment contains the machine code instructions that make up the program's executable code.
+- **Literals** : Stored within the data segment, literals are fixed values that appear directly in the source code of a program. They have specific data types is used to provide explicit values for variables or expressions. For example, with the code snippet `int x = 5`, the literal value 5 of type integer is stored as part of the initialization of the variable `x`.
+- **Instruction** : Stored within the code segment (also known as **text segment**), they contain the machine code of the program that the CPU can execute.
 
 ![All five memory regions](./memory-regions.png)  
 Source : https://stackoverflow.com/questions/32418750/stack-and-heap-locations-in-ram
 
 :::note
-For correction on the image, the stack is not managed automatically by the compiler; rather, it is managed by the generated machine code based on the instructions provided by the compiler.
-
-The compiler generates machine code that includes instructions for manipulating the stack, such as pushing or popping values onto or off the stack. These instructions are responsible for managing the stack frame during function calls and local variable allocation.
+To clarify, the stack is not managed automatically by the compiler; rather, the compiler generate machine code that may manage the stack. In other word, compiler takes source code and generate instructions that manipulate the stack, such as calling function and declaring local variable.
 :::
 
 #### Stack Allocation
@@ -93,16 +104,20 @@ Source : https://www.simplilearn.com/tutorials/data-structure-tutorial/stacks-vs
 
 #### Dynamic Allocation
 
-Also known as **heap allocation**, which is done manual by the programmer. It is the process of allocating memory at runtime (when the program is running) on the heap region, rather than the stack. Dynamic allocation is typically used when the size or lifetime of the data structure or object cannot be determined at compile-time or when it needs to be allocated and deallocated dynamically during program execution.
+Also known as **heap allocation**, is done manually by the programmer. It is the process of allocating memory at runtime (when the program is running) on the heap region, rather than the stack. Dynamic allocation is typically used when the size or lifetime of the data structure or object cannot be determined at compile-time or when it needs to be allocated and deallocated dynamically during program execution.
 
 ![Dynamic allocation](./dynamic-allocation.png)  
 Source : https://cdinuwan.medium.com/java-memory-management-garbage-collection-f2075f07e43a
 
+:::info
+In language like Java, whenever we declare an object, such as `Student student = new Student()`, this effectively allocate memory on the stack and the heap. Java allocates an object `Student` in the heap, allowing it to live for arbitrary time. The variable `student` is stored in the stack region, this is because it is not the actual object, but rather a reference to the newly allocated `Student` object. When this variable is unreachable, such as when it goes out of scope, the stack variable is released, and the object on the heap is deallocated.
+:::
+
 ##### Manual Memory Management
 
-In manual memory management, programmers take control of memory allocation by requesting memory directly instead of relying on the compiler to do so on their behalf. When programmers allocate memory manually, they explicitly request memory from the operating system through the compiler or interpreter. Similarly, deallocation is also done explicitly by the programmer, releasing memory when it is no longer needed. In this process, the compiler acts as an intermediary, making requests to the operating system based on the programmer's instructions.
+Allocation on the heap is managed manually by programmer. The programmers can allocate memory allocation by making an allocation request to the operating system through the programming language API. Similarly, deallocation is also done explicitly by the programmer, to release memory when it is no longer needed.
 
-In languages that require manual memory management, such as C and C++, the programmer has direct control over the allocation and deallocation of memory. For example, we can use the `malloc()` and `free()` function to dynamically allocate and free the memory, respectively.
+In languages with manual memory management, such as C and C++, the programmer can use the `malloc()` and `free()` (or `new` and `delete` in C++) function to dynamically allocate and deallocate memory on the heap, respectively.
 
 Dynamic allocation is flexible when resizing memory. We can use the `realloc()` function to resize it, increasing or decreasing its size as needed. Resizing dynamic memory involves allocating a new memory with the desired size, copying the existing data to the new block if necessary, and deallocating the old block.
 
@@ -112,23 +127,30 @@ The direct control of memory in manual management can either be an up or down.
 
 One of the major advantages of manual memory management is the potential for improved performance. Since the programmer has direct control over memory, they can optimize memory usage based on the specific needs of the program. However, manual memory management also introduces challenges and potential risks. It requires careful attention to small detail to avoid issues like invalid memory access, or **memory leaks**. Memory leak is a problem that occurs when unused memory is not released. While it may not be a significant concern if the leaked memory is small, it can accumulate over time.
 
-There are many techniques to automatically manage memory, two examples are :
+Some languages offer the ability to automatically manage memory, the two techniques for this :
 
-- **Garbage Collection (GC)** : Garbage collection automatically detect if objects or data are still in use and which are not. It identifies objects that are no longer reachable through any references from the program's root objects or variables, and marks them as eligible for garbage collection. After identifying the garbage objects, the GC reclaims the memory occupied by these objects, making it available for future allocations. When scanning for memory, the GC typically pauses the execution of program. This is to ensure consistent state of object, avoiding concurrent modifications (i.e., what if the object we just marked as garbage is actually assigned new reference right after?). While GC is very useful, it can introduce some overhead depending on the application.
+- **Garbage Collection (GC)** : Garbage collection automatically detect if objects or data are still in use and which are not. It identifies objects that are no longer reachable through any references from the program's root objects or variables, and marks them as eligible for garbage collection. After identifying the garbage objects, the GC reclaims the memory occupied by these objects, making it available for future allocations. This garbage collection happens periodically, typically depend on memory usage and requirements.
+
+  When scanning for memory, the GC typically pauses the execution of program. This is to ensure consistent state of object, avoiding concurrent modifications (i.e., what if the object we just marked as garbage is actually assigned new reference right after?). While GC is very useful, it can introduce some overhead depending on the application.
+
 - **Reference Counting** : Reference counting is a strategy to determine if an object is no longer used and should be freed from the memory. Reference counting may be used in GC. In reference counting, every object has a reference count associated with it. When an object is created or a reference to an object is assigned, its reference count is incremented. When a reference to an object is removed or goes out of scope, the reference count is decremented. When the reference count of an object reaches zero, it means there are no more references to the object, and it is considered garbage. At this point, the memory occupied by the object can be freed.
 
 ![Garbage collection and reference counting](./garbage-collection.png)  
 _Garbage collection in Java language_  
 Source : https://www.startertutorials.com/corejava/garbage-collection.html
 
+:::info
+Garbage collection is typically found in [interpreted](/computer-and-programming-fundamentals/interpreter) languages rather than [compiled](/computer-and-programming-fundamentals/compilation) languages. The behavior of garbage collection, which periodically scans and reclaims memory, is more suitable in languages whose instructions are generated at runtime rather than ahead of time. A compiled language turns source code into machine code. Typically, garbage collection reclaims memory due to factors like memory availability, which is not the case in compiled languages because it is not possible to know the memory requirements at compile time. Compiled languages with garbage collection would need to insert garbage collection code into the generated machine code.
+:::
+
 #### Contiguous Memory Allocation
 
-**Contiguous memory allocation** is a memory management technique where memory is divided into continuous blocks or regions. In this scheme, each process is allocated a block of memory that is contiguous next to each other, meaning it occupies a single continuous range of memory addresses.
+**Contiguous memory allocation** is a memory management technique where memory is divided into continuous blocks or regions. In this scheme, each process is allocated a block of memory that is adjacent next to each other. The process views its allocated memory as a single continuous space with an increasing range of memory addresses.
 
 The block partition can be fixed or variable.
 
 - **Fixed (Static Partitioning)** : Total memory is divided into fixed-sized partitions or blocks in advance. Each partition is assigned to a process at the time of process creation based on its size. Once a partition is allocated to a process, it remains fixed for the lifetime of the process, even if the process doesn't fully utilize the entire partition. This partitioning suffer from **internal fragmentation**.
-- **Variable (Dynamic Partitioning)** : Memory is dynamically divided into variable-sized partitions based on the size requirements of processes. The OS keep track of free and occupied memory in a table. When a process requests memory, it will search for a suitable contiguous block of memory that is large enough to accommodate the process. This partitioning is efficiently utilized memory, but it suffers from **external fragmentation**.
+- **Variable (Dynamic Partitioning)** : Memory is dynamically divided into variable-sized partitions based on the size requirements of processes. The OS keep track of free and occupied memory in a table. When a process requests memory, it will search for a suitable contiguous block of memory that is large enough to accommodate the process. This partitioning is efficiently utilized memory, but it suffers from [external fragmentation](#fragmentation).
 
 ![Contiguous memory allocation](./contiguous-memory-allocation.png)  
 _fixed size partition_  
@@ -140,7 +162,7 @@ Contiguous memory allocation requires proper memory protection mechanisms to pre
 
 **Slab allocation** is a memory allocation mechanism that involves allocating a fixed-size block of memory called **slab**, whose size is supposed to fit an object, thereby minimizing memory waste due to [fragmentation](#fragmentation).
 
-Collection of slabs is stored in **cache**, it is used to track slab status. The cache maintains a list of free slabs, partially used slabs, and full slabs.
+Collection of slabs is stored in **cache**, a place to track slab status. The cache maintains a list of free slabs, partially used slabs, and full slabs.
 
 The slab allocator sets up a pool of memory, which is then divided into slabs of a fixed size. When an allocation request is made for an object of a specific size, the slab allocator looks for a cache dedicated to that size. If a cache is found, the allocator checks if there are free objects within the cache's slabs. If there are, it assigns one of the free objects to the requester. If not, it allocates a new slab and assigns an object from that slab.
 
@@ -162,7 +184,7 @@ Source : https://www.researchgate.net/figure/Memory-management-in-Linux-via-the-
 
 #### Allocation Strategy
 
-During allocation, there are few strategies to determine the best location to allocate a block of memory from a free memory pool :
+The OS keep track free memory in a memory pool. During allocation, there are few strategies to determine the best location to allocate a block of memory :
 
 - **First-Fit** :
   - Allocator searches for the first available memory block that is large enough to accommodate the requested size.
@@ -182,7 +204,7 @@ Source : https://prepinsta.com/operating-systems/page-replacement-algorithms/bes
 
 #### Fragmentation
 
-**Fragmentation** is a phenomenon where memory or storage space that is divided into blocks keep dividing until it becomes very small, non-contiguous blocks that are not efficiently utilized. It can occur in both RAM and disk storage.
+**Fragmentation** is a situation where memory or storage space that is divided into blocks keep dividing until it becomes very small, non-contiguous blocks that are not efficiently utilized. It can occur in both RAM and disk storage.
 
 - **Internal** : Internal fragmentation occurs when allocated memory or storage space is larger than what is required by a process or file. The unused portion within an allocated block, which cannot be utilized by other processes or files, is wasted.
 - **External** : External fragmentation occurs when free memory or storage space is divided into small, non-contiguous blocks, making it challenging to allocate large contiguous blocks to processes or files, even if the total free space is sufficient. They occur in variable partitioning, when there are memory or storage gaps between allocated blocks.
