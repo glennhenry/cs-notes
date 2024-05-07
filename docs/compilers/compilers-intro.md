@@ -22,7 +22,6 @@ Recommend taking a look at [theory of computation and automata](/theory-of-compu
 - [Parsing](compilers/parsing)
 - [Semantic Analysis](compilers/semantic-analysis)
 - [Intermediate Representation](compilers/intermediate-representation)
-- [Memory Organization](compilers/memory-organization)
 - [Assembly Language](compilers/assembly-language)
 - [Code Generation](compilers/code-generation)
 - [Compiler Optimization](compilers/compiler-optimization)

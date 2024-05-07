@@ -530,7 +530,6 @@ const sidebars = {
         "compilers/parsing/parsing",
         "compilers/semantic-analysis/semantic-analysis",
         "compilers/intermediate-representation/intermediate-representation",
-        "compilers/memory-organization/memory-organization",
         "compilers/assembly-language/assembly-language",
         "compilers/code-generation/code-generation",
         "compilers/compiler-optimization/compiler-optimization",
