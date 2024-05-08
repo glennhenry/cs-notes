@@ -493,7 +493,7 @@ const sidebars = {
     // 9. Compilers & Programming Languages
     {
       type: "category",
-      label: "Compilers",
+      label: "Compilers & Programming Languages",
       link: { type: "doc", id: "compilers-and-programming-languages/compilers-and-programming-languages" },
       items: [
         "compilers-and-programming-languages/cpl-fundamentals/cpl-fundamentals",
