@@ -1,8 +1,8 @@
 ---
-slug: /compilers-and-programming-langauges
-id: compilers-and-programming-langauges
-title: Compilers & Programming Langauges
-description: Compilers & Programming Langauges
+slug: /compilers-and-programming-languages
+id: compilers-and-programming-languages
+title: Compilers & Programming Languages
+description: Compilers & Programming Languages
 ---
 
 :::tip
@@ -20,26 +20,26 @@ Originally, compilers and programming language (formerly called programming lang
 
 ### All pages
 
-- [CPL Fundamentals](compilers-and-programming-langauges/cpl-fundamentals)
+- [CPL Fundamentals](compilers-and-programming-languages/cpl-fundamentals)
 - Compiler Frontend
-  - [Syntax](compilers-and-programming-langauges/syntax)
-  - [Scanning](compilers-and-programming-langauges/scanning)
-  - [Parsing](compilers-and-programming-langauges/parsing)
-  - [Semantic Analysis](compilers-and-programming-langauges/semantic-analysis)
+  - [Syntax](compilers-and-programming-languages/syntax)
+  - [Scanning](compilers-and-programming-languages/scanning)
+  - [Parsing](compilers-and-programming-languages/parsing)
+  - [Semantic Analysis](compilers-and-programming-languages/semantic-analysis)
 - Programming Languages Constructs
-  - [Names, Scopes, Bindings](compilers-and-programming-langauges/names-scopes-bindings)
-  - [Control Flow](compilers-and-programming-langauges/control-flow)
-  - [Data Types](compilers-and-programming-langauges/data-types)
-  - [Subroutines](compilers-and-programming-langauges/subroutines)
-  - [Data Abstraction](compilers-and-programming-langauges/data-abstraction)
+  - [Names, Scopes, Bindings](compilers-and-programming-languages/names-scopes-bindings)
+  - [Control Flow](compilers-and-programming-languages/control-flow)
+  - [Data Types](compilers-and-programming-languages/data-types)
+  - [Subroutines](compilers-and-programming-languages/subroutines)
+  - [Data Abstraction](compilers-and-programming-languages/data-abstraction)
 - Compiler Backend
-  - [Target Architecture](compilers-and-programming-langauges/target-architecture)
-  - [Intermediate Representation](compilers-and-programming-langauges/intermediate-representation)
-  - [Assembly Language](compilers-and-programming-langauges/assembly-language)
-  - [Code Generation](compilers-and-programming-langauges/code-generation)
-  - [Compiler Optimization](compilers-and-programming-langauges/compiler-optimization)
+  - [Target Architecture](compilers-and-programming-languages/target-architecture)
+  - [Intermediate Representation](compilers-and-programming-languages/intermediate-representation)
+  - [Assembly Language](compilers-and-programming-languages/assembly-language)
+  - [Code Generation](compilers-and-programming-languages/code-generation)
+  - [Compiler Optimization](compilers-and-programming-languages/compiler-optimization)
 - Other Programming Model
-  - [Functional Languages](compilers-and-programming-langauges/functional-languages)
-  - [Logic Languages](compilers-and-programming-langauges/logic-languages)
-  - [Concurrency](compilers-and-programming-langauges/concurrency)
-  - [Scripting Languages](compilers-and-programming-langauges/scripting-languages)
+  - [Functional Languages](compilers-and-programming-languages/functional-languages)
+  - [Logic Languages](compilers-and-programming-languages/logic-languages)
+  - [Concurrency](compilers-and-programming-languages/concurrency)
+  - [Scripting Languages](compilers-and-programming-languages/scripting-languages)

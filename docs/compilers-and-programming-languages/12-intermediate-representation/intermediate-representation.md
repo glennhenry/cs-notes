@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/intermediate-representation
+slug: /compilers-and-programming-languages/intermediate-representation
 id: intermediate-representation
 title: Intermediate Representation
 description: Intermediate Representation

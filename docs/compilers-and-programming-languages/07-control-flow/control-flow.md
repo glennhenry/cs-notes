@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/control-flow
+slug: /compilers-and-programming-languages/control-flow
 id: control-flow
 title: Control Flow
 description: Control Flow

@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/code-generation
+slug: /compilers-and-programming-languages/code-generation
 id: code-generation
 title: Code Generation
 description: Code Generation

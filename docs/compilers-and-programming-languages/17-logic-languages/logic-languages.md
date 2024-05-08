@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/logic-languages
+slug: /compilers-and-programming-languages/logic-languages
 id: logic-languages
 title: Logic Languages
 description: Logic Languages

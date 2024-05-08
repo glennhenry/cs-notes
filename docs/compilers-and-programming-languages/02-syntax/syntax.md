@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/syntax
+slug: /compilers-and-programming-languages/syntax
 id: syntax
 title: Syntax
 description: Syntax

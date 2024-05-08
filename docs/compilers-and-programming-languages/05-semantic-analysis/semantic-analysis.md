@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/semantic-analysis
+slug: /compilers-and-programming-languages/semantic-analysis
 id: semantic-analysis
 title: Semantic Analysis
 description: Semantic Analysis

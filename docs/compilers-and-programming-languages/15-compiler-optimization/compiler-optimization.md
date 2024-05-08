@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/compiler-optimization
+slug: /compilers-and-programming-languages/compiler-optimization
 id: compiler-optimization
 title: Compiler Optimization
 description: Compiler Optimization

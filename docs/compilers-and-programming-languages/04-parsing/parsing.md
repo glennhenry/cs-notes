@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/parsing
+slug: /compilers-and-programming-languages/parsing
 id: parsing
 title: Parsing
 description: Parsing

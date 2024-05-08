@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/data-types
+slug: /compilers-and-programming-languages/data-types
 id: data-types
 title: Data Types
 description: Data Types

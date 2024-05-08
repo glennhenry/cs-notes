@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/concurrency
+slug: /compilers-and-programming-languages/concurrency
 id: concurrency
 title: Concurrency
 description: Concurrency

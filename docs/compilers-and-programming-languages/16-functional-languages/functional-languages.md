@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/functional-languages
+slug: /compilers-and-programming-languages/functional-languages
 id: functional-languages
 title: Functional Languages
 description: Functional Languages

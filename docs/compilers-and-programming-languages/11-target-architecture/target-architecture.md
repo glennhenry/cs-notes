@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/target-architecture
+slug: /compilers-and-programming-languages/target-architecture
 id: target-architecture
 title: Target Architecture
 description: Target Architecture

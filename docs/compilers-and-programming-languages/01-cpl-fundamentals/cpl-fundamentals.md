@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/cpl-fundamentals
+slug: /compilers-and-programming-languages/cpl-fundamentals
 id: cpl-fundamentals
 title: CPL Fundamentals
 description: CPL Fundamentals

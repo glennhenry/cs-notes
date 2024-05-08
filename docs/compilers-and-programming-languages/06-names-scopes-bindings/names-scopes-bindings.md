@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/names-scopes-bindings
+slug: /compilers-and-programming-languages/names-scopes-bindings
 id: names-scopes-bindings
 title: Names, Scopes, Bindings
 description: Names, Scopes, Bindings

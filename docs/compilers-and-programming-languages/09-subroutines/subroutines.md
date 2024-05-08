@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/subroutines
+slug: /compilers-and-programming-languages/subroutines
 id: subroutines
 title: Subroutines
 description: Subroutines

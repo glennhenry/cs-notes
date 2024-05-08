@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/scripting-languages
+slug: /compilers-and-programming-languages/scripting-languages
 id: scripting-languages
 title: Scripting Languages
 description: Scripting Languages

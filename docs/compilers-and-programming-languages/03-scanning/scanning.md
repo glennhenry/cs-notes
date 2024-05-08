@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/scanning
+slug: /compilers-and-programming-languages/scanning
 id: scanning
 title: Scanning
 description: Scanning

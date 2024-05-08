@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **21** topics, and a total of **382** notes.
+A total of **20** topics, and a total of **377** notes.
 
 1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -231,33 +231,31 @@ A total of **21** topics, and a total of **382** notes.
     - [Turing Machine](theory-of-computation-and-automata/turing-machine)
     - [Undecidability](theory-of-computation-and-automata/undecidability)
     - [Complexity Theory](theory-of-computation-and-automata/complexity-theory)
-9. [Programming Language Theory](/programming-language-theory) (**15** subtopics)
-    - [PLT Fundamentals](programming-language-theory/plt-fundamentals)
-    - [Syntax](programming-language-theory/syntax)
-    - [Scanning](programming-language-theory/scanning)
-    - [Parsing](programming-language-theory/parsing)
-    - [Semantic Analysis](programming-language-theory/semantic-analysis)
-    - [Target Architecture](programming-language-theory/target-architecture)
-    - [Names, Scopes, Bindings](programming-language-theory/names-scopes-bindings)
-    - [Control Flow](programming-language-theory/control-flow)
-    - [Data Types](programming-language-theory/data-types)
-    - [Subroutines](programming-language-theory/subroutines)
-    - [Data Abstraction](programming-language-theory/data-abstraction)
-    - [Functional Languages](programming-language-theory/functional-languages)
-    - [Logic Languages](programming-language-theory/logic-languages)
-    - [Concurrency](programming-language-theory/concurrency)
-    - [Scripting Languages](programming-language-theory/scripting-languages)
-10. [Compilers](/compilers) (**9** subtopics)
-    - [Compilers Fundamentals](compilers/compilers-fundamentals)
-    - [Syntax](compilers/syntax)
-    - [Scanning](compilers/scanning)
-    - [Parsing](compilers/parsing)
-    - [Semantic Analysis](compilers/semantic-analysis)
-    - [Intermediate Representation](compilers/intermediate-representation)
-    - [Assembly Language](compilers/assembly-language)
-    - [Code Generation](compilers/code-generation)
-    - [Compiler Optimization](compilers/compiler-optimization)
-11. [Database System](/database-system) (**15** subtopics)
+9. [Compilers & Programming Languages](/compilers-and-programming-languages) (**19** subtopics)
+    - [CPL Fundamentals](compilers-and-programming-languages/cpl-fundamentals)
+    - Compiler Frontend
+      - [Syntax](compilers-and-programming-languages/syntax)
+      - [Scanning](compilers-and-programming-languages/scanning)
+      - [Parsing](compilers-and-programming-languages/parsing)
+      - [Semantic Analysis](compilers-and-programming-languages/semantic-analysis)
+    - Programming Languages Constructs
+      - [Names, Scopes, Bindings](compilers-and-programming-languages/names-scopes-bindings)
+      - [Control Flow](compilers-and-programming-languages/control-flow)
+      - [Data Types](compilers-and-programming-languages/data-types)
+      - [Subroutines](compilers-and-programming-languages/subroutines)
+      - [Data Abstraction](compilers-and-programming-languages/data-abstraction)
+    - Compiler Backend
+      - [Target Architecture](compilers-and-programming-languages/target-architecture)
+      - [Intermediate Representation](compilers-and-programming-languages/intermediate-representation)
+      - [Assembly Language](compilers-and-programming-languages/assembly-language)
+      - [Code Generation](compilers-and-programming-languages/code-generation)
+      - [Compiler Optimization](compilers-and-programming-languages/compiler-optimization)
+    - Other Programming Model
+      - [Functional Languages](compilers-and-programming-languages/functional-languages)
+      - [Logic Languages](compilers-and-programming-languages/logic-languages)
+      - [Concurrency](compilers-and-programming-languages/concurrency)
+      - [Scripting Languages](compilers-and-programming-languages/scripting-languages)
+10. [Database System](/database-system) (**15** subtopics)
     - [Relational Data](database-system/relational-data)
     - [Query Language](database-system/query-language)
     - Database Management
@@ -276,7 +274,7 @@ A total of **21** topics, and a total of **382** notes.
       - [Index Implementation](database-system/index-implementation)
       - [Query Processing](database-system/query-processing)
       - [Query Compiler](database-system/query-compiler)
-12. [Computer Graphics](/computer-graphics) (**23** subtopics)
+11. [Computer Graphics](/computer-graphics) (**23** subtopics)
     - [Computer Images (Part 1)](computer-graphics/computer-images-part-1)
     - [Computer Images (Part 2)](computer-graphics/computer-images-part-2)
     - [2D Transformation](computer-graphics/2d-transformation)
@@ -300,7 +298,7 @@ A total of **21** topics, and a total of **382** notes.
     - [Computer Animation](computer-graphics/computer-animation)
     - [Physics-Based Animation](computer-graphics/physics-based-animation)
     - [Simulation](computer-graphics/simulation)
-13. [Frontend Web Development](/frontend-web-development) (**15** subtopics)
+12. [Frontend Web Development](/frontend-web-development) (**15** subtopics)
     - [HTML](frontend-web-development/html)
     - [HTML DOM](frontend-web-development/html-dom)
     - [CSS](frontend-web-development/css)
@@ -316,7 +314,7 @@ A total of **21** topics, and a total of **382** notes.
     - [NPM (Node Package Manager)](frontend-web-development/npm)
     - [React JS](frontend-web-development/react-js)
     - [Docker & Kubernetes](frontend-web-development/docker-and-kubernetes)
-14. [Backend Development](/backend-development) (**22** subtopics)
+13. [Backend Development](/backend-development) (**22** subtopics)
     - [Web Server](backend-development/web-server)
     - APIs
       - [APIs & Server Logic](backend-development/apis-server-logic)
@@ -341,7 +339,7 @@ A total of **21** topics, and a total of **382** notes.
     - [Backend & Server Security](backend-development/backend-server-security)
     - [Caching](backend-development/caching)
     - [Backend Optimization](backend-development/backend-optimization)
-15. [Computer Security](/computer-security) (**22** subtopics)
+14. [Computer Security](/computer-security) (**22** subtopics)
     - [Computer Security Fundamentals](computer-security/computer-security-fundamentals)
     - Cryptography
       - [Math Concepts](computer-security/math-concepts)
@@ -368,7 +366,7 @@ A total of **21** topics, and a total of **382** notes.
     - [Mobile Security](computer-security/mobile-security)
     - [Backend & Server Security](computer-security/backend-server-security)
     - [Other Attack & Exploit](computer-security/other-attack-and-exploit)
-16. [Machine Learning](/machine-learning) (**11** subtopics)
+15. [Machine Learning](/machine-learning) (**11** subtopics)
     - [Linear Regression](machine-learning/linear-regression)
     - [Logistic Regression](machine-learning/logistic-regression)
     - [Naive Bayes](machine-learning/naive-bayes)
@@ -380,7 +378,7 @@ A total of **21** topics, and a total of **382** notes.
     - [Principal Component Analysis](machine-learning/principal-component-analysis)
     - [k-Means Clustering](machine-learning/k-means-clustering)
     - [Collaborative Filtering](machine-learning/collaborative-filtering)
-17. [Deep Learning](/deep-learning) (**31** subtopics)
+16. [Deep Learning](/deep-learning) (**31** subtopics)
     - [Deep Learning Foundation](deep-learning/deep-learning-foundation)
     - [Deep Learning Tasks](deep-learning/deep-learning-tasks)
     - [Neural Network](deep-learning/neural-network)
@@ -416,7 +414,7 @@ A total of **21** topics, and a total of **382** notes.
         - [Policy Gradient](deep-learning/reinforcement-learning/policy-gradient)
         - [Imitation Learning](deep-learning/reinforcement-learning/imitation-learning)
       - [Multi-Agent](deep-learning/reinforcement-learning/multi-agent)
-18. [Software Engineering](/software-engineering) (**21** subtopics)
+17. [Software Engineering](/software-engineering) (**21** subtopics)
     - [Software Process](software-engineering/software-process)
     - Software Design
       - [Software Principles](software-engineering/software-principles)
@@ -442,7 +440,7 @@ A total of **21** topics, and a total of **382** notes.
       - [Software Deployment](software-engineering/software-deployment)
     - [System Design](software-engineering/system-design)
     - [System Design Examples](software-engineering/system-design-examples)
-19. [Cloud Computing & Distributed Systems](/cloud-computing-and-distributed-systems) (**19** subtopics)
+18. [Cloud Computing & Distributed Systems](/cloud-computing-and-distributed-systems) (**19** subtopics)
     - [Fundamentals](cloud-computing-and-distributed-systems/fundamentals)
     - Distributed Systems
       - [Distributed Systems Model](cloud-computing-and-distributed-systems/distributed-systems-model)
@@ -465,11 +463,11 @@ A total of **21** topics, and a total of **382** notes.
     - [Cloud Database](cloud-computing-and-distributed-systems/cloud-database)
     - [Cloud Security](cloud-computing-and-distributed-systems/cloud-security)
     - [Cloud Services](cloud-computing-and-distributed-systems/cloud-services)
-20. [Android OS](/android-os) (**0** subtopics)
+19. [Android OS](/android-os) (**0** subtopics)
     - TBA
     - TBA
     - TBA
-21. [Android Development](/android-development) (**0** subtopics)
+20. [Android Development](/android-development) (**0** subtopics)
     - TBA
     - TBA
     - TBA

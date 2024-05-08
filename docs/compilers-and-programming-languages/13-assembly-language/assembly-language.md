@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/assembly-language
+slug: /compilers-and-programming-languages/assembly-language
 id: assembly-language
 title: Assembly Language
 description: Assembly Language

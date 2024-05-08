@@ -1,5 +1,5 @@
 ---
-slug: /compilers-and-programming-langauges/data-abstraction
+slug: /compilers-and-programming-languages/data-abstraction
 id: data-abstraction
 title: Data Abstraction
 description: Data Abstraction
