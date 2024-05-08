@@ -17,8 +17,7 @@ My computer science notes from various online courses, tutorial, books, blogs, W
 - **[Computer Organization & Architecture](computer-organization-and-architecture)**
 - **[Operating System](operating-system)**
 - **[Theory of Computation & Automata](theory-of-computation-and-automata)**
-- **[Programming Language Theory](programming-language-theory)**
-- [Compilers](compilers)
+- [Compilers & Programming Language](compilers-and-programming-languages)
 - **[Database System](database-system)**
 - **[Computer Graphics](computer-graphics)**
 - **[Frontend Web Development](frontend-web-development)**
@@ -41,7 +40,7 @@ These will never complete since it is intended to be written and updated from ti
 ### Longest Notes
 
 - [File System](operating-system/file-system) (36282 char)
-- [Parsing](/compilers/parsing) (33624 char)
+- [Parsing](/compilers-and-programming-languages/parsing) (33647 char)
 - [Software Principles](software-engineering/software-principles) (30368 char, due to many code examples)
 - [Memory Management](operating-system/memory-management) (27368 char)
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
@@ -158,9 +157,9 @@ For simplicity, TODOs are placed here instead of something like GitHub issues.
     - replication, redundancy, reassignment, checkpointing, restart.
     - heartbeat mechanism, timeout, neighbour-based, gossip.
     - hot standby server clusters, active-takeover clusters, failover cluster.
-13. **[ref]** [/programming-language-theory/target-architecture](/programming-language-theory/target-architecture) -> ref to compiler optimization in compilers.
-14. **[ref]** [/programming-language-theory/control-flow](/programming-language-theory/control-flow) -> ref to compiler optimization, jump table in compilers.
-15. **[ref]** [/programming-language-theory/control-flow](/programming-language-theory/control-flow) -> ref to compiler optimization, tail recursion in compilers.
+13. **[ref]** [/compilers-and-programming-languages/target-architecture](/compilers-and-programming-languages/target-architecture) -> ref to compiler optimization in compilers.
+14. **[ref]** [/compilers-and-programming-languages/control-flow](/compilers-and-programming-languages/control-flow) -> ref to compiler optimization, jump table in compilers.
+15. **[ref]** [/compilers-and-programming-languages/control-flow](/compilers-and-programming-languages/control-flow) -> ref to compiler optimization, tail recursion in compilers.
 16. **[update]** [/data-structures-and-algorithms/array](/data-structures-and-algorithms/array)#string-as-an-array -> add information about string.
 17. **[update]** [/computer-and-programming-fundamentals/memory](/data-structures-and-algorithms/array)#pointer--references-problems -> add information about pointer and reference problems.
 18. **[add]** [/backend-development](/backend-development)/serialization -> add full topic about serialization, possibly comparing various serialization method such as json, xml, language gnostic, protocol buffer.

@@ -490,52 +490,59 @@ const sidebars = {
       ],
     },
 
-    // 9. Programming Language Theory
-    {
-      type: "category",
-      label: "Programming Language Theory",
-      link: {
-        type: "doc",
-        id: "programming-language-theory/programming-language-theory",
-      },
-      items: [
-        "programming-language-theory/plt-fundamentals/plt-fundamentals",
-        "programming-language-theory/syntax/syntax",
-        "programming-language-theory/scanning/scanning",
-        "programming-language-theory/parsing/parsing",
-        "programming-language-theory/semantic-analysis/semantic-analysis",
-        "programming-language-theory/target-architecture/target-architecture",
-        "programming-language-theory/names-scopes-bindings/names-scopes-bindings",
-        "programming-language-theory/control-flow/control-flow",
-        "programming-language-theory/data-types/data-types",
-        "programming-language-theory/subroutines/subroutines",
-        "programming-language-theory/data-abstraction/data-abstraction",
-        "programming-language-theory/functional-languages/functional-languages",
-        "programming-language-theory/logic-languages/logic-languages",
-        "programming-language-theory/concurrency/concurrency",
-        "programming-language-theory/scripting-languages/scripting-languages",
-      ],
-    },
-
-    // 10. Compilers
+    // 9. Compilers & Programming Languages
     {
       type: "category",
       label: "Compilers",
       link: { type: "doc", id: "compilers/compilers" },
       items: [
-        "compilers/compilers-fundamentals/compilers-fundamentals",
-        "compilers/syntax/syntax",
-        "compilers/scanning/scanning",
-        "compilers/parsing/parsing",
-        "compilers/semantic-analysis/semantic-analysis",
-        "compilers/intermediate-representation/intermediate-representation",
-        "compilers/assembly-language/assembly-language",
-        "compilers/code-generation/code-generation",
-        "compilers/compiler-optimization/compiler-optimization",
+        "compilers-and-programming-langauges/cpl-fundamentals/cpl-fundamentals",
+        {
+          type: "category",
+          label: "Compiler Frontend",
+          items: [
+            "compilers-and-programming-langauges/syntax/syntax",
+            "compilers-and-programming-langauges/scanning/scanning",
+            "compilers-and-programming-langauges/parsing/parsing",
+            "compilers-and-programming-langauges/semantic-analysis/semantic-analysis",
+          ],
+        },
+        {
+          type: "category",
+          label: "Programming Languages Constructs",
+          items: [
+            "compilers-and-programming-langauges/names-scopes-bindings/names-scopes-bindings",
+            "compilers-and-programming-langauges/control-flow/control-flow",
+            "compilers-and-programming-langauges/data-types/data-types",
+            "compilers-and-programming-langauges/subroutines/subroutines",
+            "compilers-and-programming-langauges/data-abstraction/data-abstraction",
+          ],
+        },
+        {
+          type: "category",
+          label: "Compiler Backend",
+          items: [
+            "compilers-and-programming-langauges/target-architecture/target-architecture",
+            "compilers-and-programming-langauges/intermediate-representation/intermediate-representation",
+            "compilers-and-programming-langauges/assembly-language/assembly-language",
+            "compilers-and-programming-langauges/code-generation/code-generation",
+          ],
+        },
+        {
+          type: "category",
+          label: "Other Programming Model",
+          items: [
+            "compilers-and-programming-langauges/compiler-optimization/compiler-optimization",
+            "compilers-and-programming-langauges/functional-languages/functional-languages",
+            "compilers-and-programming-langauges/logic-languages/logic-languages",
+            "compilers-and-programming-langauges/concurrency/concurrency",
+            "compilers-and-programming-langauges/scripting-languages/scripting-languages",
+          ],
+        },
       ],
     },
 
-    // 11. Database System
+    // 10. Database System
     {
       type: "category",
       label: "Database System",
@@ -577,7 +584,7 @@ const sidebars = {
       ],
     },
 
-    // 12. Computer Graphics
+    // 11. Computer Graphics
     {
       type: "category",
       label: "Computer Graphics",
@@ -609,7 +616,7 @@ const sidebars = {
       ],
     },
 
-    // 13. Frontend Web Development
+    // 12. Frontend Web Development
     {
       type: "category",
       label: "Frontend Web Development",
@@ -636,7 +643,7 @@ const sidebars = {
       ],
     },
 
-    // 14. Backend Development
+    // 13. Backend Development
     {
       type: "category",
       label: "Backend Development",
@@ -679,7 +686,7 @@ const sidebars = {
       ],
     },
 
-    // 15. Computer Security
+    // 14. Computer Security
     {
       type: "category",
       label: "Computer Security",
@@ -734,7 +741,7 @@ const sidebars = {
       ],
     },
 
-    // 16. Machine Learning
+    // 15. Machine Learning
     {
       type: "category",
       label: "Machine Learning",
@@ -754,7 +761,7 @@ const sidebars = {
       ],
     },
 
-    // 17. Deep Learning
+    // 16. Deep Learning
     {
       type: "category",
       label: "Deep Learning",
@@ -818,7 +825,7 @@ const sidebars = {
       ],
     },
 
-    // 18. Software Engineering
+    // 17. Software Engineering
     {
       type: "category",
       label: "Software Engineering",
@@ -872,7 +879,7 @@ const sidebars = {
       ],
     },
 
-    // 19. Cloud Computing
+    // 18. Cloud Computing
     {
       type: "category",
       label: "Cloud Computing & Distributed Systems",
@@ -921,7 +928,7 @@ const sidebars = {
       ],
     },
 
-    // 20. Android OS
+    // 19. Android OS
     {
       type: "category",
       label: "Android OS",
@@ -929,7 +936,7 @@ const sidebars = {
       items: [],
     },
 
-    // 21. Android Development
+    // 20. Android Development
     {
       type: "category",
       label: "Android Development",

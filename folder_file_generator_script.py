@@ -3,34 +3,52 @@
 
 import os
 
-topic_title = "compilers"
+topic_title = "compilers-and-programming-langauges"
 
 # List of content in kebab title
 content_id = [
-    "compilers-fundamentals",
+    "cpl-fundamentals",
+    "syntax",
     "scanning",
     "parsing",
-    "abstract-syntax-tree",
     "semantic-analysis",
+    "names-scopes-bindings",
+    "control-flow",
+    "data-types",
+    "subroutines",
+    "data-abstraction",
+    "target-architecture",
     "intermediate-representation",
-    "memory-organization",
     "assembly-language",
     "code-generation",
-    "compiler-optimization"
+    "compiler-optimization",
+    "functional-languages",
+    "logic-languages",
+    "concurrency",
+    "scripting-languages",
 ]
 
 # List of content in title case
 content_title = [
-    "Compilers Fundamentals",
+    "CPL Fundamentals",
+    "Syntax",
     "Scanning",
     "Parsing",
-    "Abstract Syntax Tree",
     "Semantic Analysis",
+    "Names, Scopes, Bindings",
+    "Control Flow",
+    "Data Types",
+    "Subroutines",
+    "Data Abstraction",
+    "Target Architecture",
     "Intermediate Representation",
-    "Memory Organization",
     "Assembly Language",
     "Code Generation",
-    "Compiler Optimization"
+    "Compiler Optimization",
+    "Functional Languages",
+    "Logic Languages",
+    "Concurrency",
+    "Scripting Languages"
 ]
 
 # Create temp folder for debugging
@@ -108,5 +126,5 @@ def generate_folder_file():
 if __name__ == "__main__":
     # generate_folder_file()
     # generate_topic_links()
-    # generate_topic_sidebars()
+    generate_topic_sidebars()
     pass
