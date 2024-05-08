@@ -5,4 +5,4 @@ title: Logic Programming
 description: Logic Programming
 ---
 
-See **[Programming Language Theory > Logic Languages](/programming-language-theory/logic-languages)**.
+See **[Compilers & Programming Languages > Logic Languages](/compilers-and-programming-languages/logic-languages)**.

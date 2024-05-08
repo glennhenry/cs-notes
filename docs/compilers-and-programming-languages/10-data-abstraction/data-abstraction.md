@@ -116,7 +116,7 @@ So, a `foo a(b)` is same as `foo::foo(foo&)`. This applies not only when the arg
 
 ### Dynamic Method Binding
 
-Inheritance allow for [subtype polymorphism](/programming-language-theory/data-types#polymorphism), in which we are able to use any method, either from superclass or subclass based on the type of object we are operating on.
+Inheritance allow for [subtype polymorphism](/compilers-and-programming-languages/data-types#polymorphism), in which we are able to use any method, either from superclass or subclass based on the type of object we are operating on.
 
 ```cpp
 class Base {

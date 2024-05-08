@@ -145,5 +145,5 @@ Modern programming languages often encompass different programming paradigms, co
 :::
 
 :::tip
-See also [functional languages](/programming-language-theory/functional-languages).
+See also [functional languages](/compilers-and-programming-languages/functional-languages).
 :::

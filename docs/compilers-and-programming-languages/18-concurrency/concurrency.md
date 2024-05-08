@@ -9,7 +9,7 @@ description: Concurrency
 
 - **Book 2 chapter 12**
 
-A program is concurrent when it contains more than one active execution context, whether both is run together or interleaved. By execution context, it means the state associated with the execution of a particular task. It includes information such as the values of registers, [stack pointer](/computer-organization-and-architecture/registers-and-ram#type-of-registers), [call stack](/programming-language-theory/subroutines#call-stack), etc.
+A program is concurrent when it contains more than one active execution context, whether both is run together or interleaved. By execution context, it means the state associated with the execution of a particular task. It includes information such as the values of registers, [stack pointer](/computer-organization-and-architecture/registers-and-ram#type-of-registers), [call stack](/compilers-and-programming-languages/subroutines#call-stack), etc.
 
 The approach for concurrency :
 

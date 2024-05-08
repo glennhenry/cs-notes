@@ -63,7 +63,7 @@ Type safety refers to the degree to which a programming language helps prevent t
 For example, if a type-safe function is declared to return an integer, it guarantees that the function will consistently return an integer whenever it is called.
 
 :::tip
-See also [type systems](/programming-language-theory/data-types#type-systems).
+See also [type systems](/compilers-and-programming-languages/data-types#type-systems).
 :::
 
 #### Standard Library
@@ -133,7 +133,7 @@ Example of brute forcing is when you try to guess a 3-digit PIN code. Each of th
 - **Console** : Historically, it is a terminal which is connected into physical machine (a physical terminal). Nowadays, console is commonly referred as a terminal that displays output.
 
 :::tip
-See also [shell](/programming-language-theory/scripting-languages#shell)
+See also [shell](/compilers-and-programming-languages/scripting-languages#shell)
 :::
 
 ##### Environment Variables

@@ -53,7 +53,7 @@ An automaton that recognizes or accepts certain input strings is called **accept
 
 The purpose of an acceptor is to determine whether the input string belong to certain language. If the input string satisfies the criteria defined by the acceptor, it is accepted. If it does not meet the criteria, it is rejected.
 
-A complex example of acceptors is a [compiler](/compilers). It is a program that determine whether a code from certain programming language follows the grammar rules and syntax of that language.
+A complex example of acceptors is a [compiler](/compilers-and-programming-languages). It is a program that determine whether a code from certain programming language follows the grammar rules and syntax of that language.
 
 Finite state machine can be categorized into to, DFA and NFA.
 
