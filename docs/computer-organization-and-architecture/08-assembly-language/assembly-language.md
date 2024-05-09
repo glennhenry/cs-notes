@@ -10,39 +10,53 @@ description: Assembly Language
 - **[Assembly language - Wikipedia](https://en.wikipedia.org/wiki/Assembly_language)**
 - **[Assembly Language in 100 Seconds - Fireship](https://youtu.be/4gwYkEK0gOk?si=faihHjHQNrGx28NV)**
 
-**Assembly Language (asm)** is a low-level programming language that is between the machine code (binary instructions understood by the computer's hardware) and high-level programming languages (which is readable by humans). asm is a human-readable representation of machine code instructions, programmers can see the code that interacts directly with the computer's hardware.
+**Assembly Language (asm)** is a low-level programming language that is between the machine code (binary instructions understood by the computer's hardware) and high-level programming languages (which is readable by humans). asm can be thought as a human-readable representation of machine code instructions. With asm, programmers can see the code that interacts directly with the computer's hardware.
 
-Due to the direct interaction with the hardware, asm is specific to a particular computer architecture or processor family. Different processors have their own assembly languages, tailored to their instruction sets, registers, and addressing modes. Therefore, code written in assembly language is not portable across different hardware platforms without modification.
+Due to the direct interaction with the hardware, asm is specific to a particular computer architecture or processor family. Different processors have their own assembly languages, tailored to their instruction sets, registers, and addressing modes. Therefore, code written in assembly language is not portable across different hardware platforms without modification. Similarly, this what makes one program can't always be run in any platform, because it has to be compiled to different asm.
 
 ![ASM](./asm.png)  
 Source : https://www.investopedia.com/terms/a/assembly-language.asp
 
-### Translatation to Machine Code
+### Translation to Machine Code
 
-Assembly language uses mnemonic instructions, which are short and easy to remember symbol that represent a single instruction in the machine.
+Assembly language uses mnemonic instructions, which are short and easy to remember symbol that represent a single instruction in the machine. The instructions are then combined with operands, which are values or addresses that the instructions operate on.
 
-Once assembly language is written, it needs to be translated into machine code, this process is known as **assembly** or **assembling**. An assembler is used to convert the mnemonic instructions and symbolic names into the binary instructions understood by the target processor. The assembler looks up on the instruction table how the mnemonic instructions map to the binary codes. It will also perform other necesarry steps, such as, calculating memory addresses, combining the instruction with the operands, etc.
+Once assembly language is written, it needs to be translated into machine code, this process is known as **assembly**. An assembler is used to convert the mnemonic instructions and symbolic names into the binary instructions understood by the target processor. The assembler looks up on the instruction table how the mnemonic instructions map to the binary codes. It will also perform other necessary steps, such as, calculating memory addresses, calculating constant expressions, combining the instruction with the operands, etc.
 
-Assembly language also provide a way for programmers to define instruction that are not executed by the processor but provide instructions to the assembler, they are called **directives**. They help programmer to organize and control the assembly code. Also, in some cases, assembly programs may require multiple source files or external libraries that need to be linked together. This process is called **linking**, it is necesarry to resolve references to symbols and ensures that all required components are properly integrated.
+Assembly language also provide a way for programmers to define instruction that are not executed by the processor but provide instructions to the assembler, they are called **directives**. They help programmer to organize and control the assembly code.
 
-![Translation or assembly process](./translation.png)  
-Source : https://users.ece.utexas.edu/~valvano/assmbly/index.html
+Assembler translates assembly language into machine code called **object files**. An assembly program that depends on external source files or libraries needs to be linked together. After object file of each is produced, a linker will resolve all external references to them. It locates and loads various definition of function to create the final executable.
 
-### Instruction
+#### Example
 
-The commons types of instruction in assembly language :
+For example, we can write instruction (or produced from compilation) like `MOV AL, 61h`, which instructs the processor to move the immediate value `61h` (number 61 hexadecimal or 97 in decimal) to the register `AX`. The assembler will translate this particular instruction to binary code : `10110000 01100001`.
+
+- `10110` is the `MOV` instruction in binary.
+- Register `AX` is identified by `000`.
+- The binary equivalent of hexadecimal `61` is `01100001`.
+
+![Assembly process from compilation](./assembler.png)  
+Source : https://www.techtarget.com/searchdatacenter/definition/assembler
+
+### Type of Instruction
+
+Common type of instructions in assembly language :
 
 - **Data Movement Instructions** : These instructions move or copy data between registers, memory, and I/O devices.
 - **Arithmetic and Logic Instructions** : These instructions perform arithmetic operations such as addition, subtraction, and multiplication; and logical operations such as bitwise AND, OR, NOT, and XOR on data.
 - **Control Flow Instructions** : These instructions control the flow of execution within a program. Examples include changing program flow with or without a condition, or jumping to specific part of program after a function finishes its execution.
 - **Input/Output Instructions** : These instructions facilitate communication between the processor and I/O devices.
-- **Stack and Memory Management Instructions** : These instructions manipulate the stack (adding or removing values) and manage memory operations such as allocating and deallocating memory.
+- **Stack and Memory Management Instructions** : These instructions manipulate the stack (pushing or popping values) and manage memory operations such as allocating and deallocating memory.
 
 ### Syntax & Instructions
 
-Assembly code is typically written line by line, with each line representing a single instruction. Assembly code is divided into several section, there are section for code, which contains the actual logic of the program, section to declare variable and constants, and defining linker.
+Three elements of assembly code :
 
-There are many instruction keyword in asm :
+- **Directives** : Directives start with a dot, which indicates starting position of a section. Assembly code is divided into several sections, there are sections for code, which contains the actual logic of the program, section to declare variable and constants, and defining linker.
+- **Labels** : End with a colon, indicating a point of interest in the program, which can be used in the code section, such as the beginning of a subroutine, a loop, or a branch target.
+- **Instructions** : The actual assembly code, which is typically written line by line, with each line representing a single instruction.
+
+There are many instruction keywords in asm :
 
 - **Instructions**
 
@@ -114,10 +128,10 @@ section .data
 section .text
     global _start
 _start:
-    ; Load the first number into a register
+    ; Load num1 into al register
     mov al, [num1]
 
-    ; Add the second number to the first number
+    ; Add num2 with num1 in al
     add al, [num2]
 
     ; Store the result in another variable
@@ -132,10 +146,144 @@ section .data
     result db 0      ; Variable to store the result
 ```
 
-The syntax is typically `<instruction> <operand1> <operand2>`, where operand can be a register, which is specified by its name, or immediate value.
-
 The `section .data` is a section directive to define and initialize data such as variables, constants, and strings. The `section .text` is the section for program's executable instructions. `_start` is a label that marks the entry point of the program.
 
-### Calling Convention
+### x86 Assembly Language
 
-stack, register
+They are assembly language that represent instructions for [x86 architecture](/computer-organization-and-architecture/isa#x86), which originate from the original Intel 8086 processor.
+
+#### Registers
+
+There are 16 general purpose register for the 64-bit x86 architecture.
+
+![x86_64 registers](./x86-register.png)  
+Source : Book 1 page 152
+
+- `%rax` : Accumulator register
+- `%rbx` : Base register
+- `%rcx` : Counter register
+- `%rdx` : Data register
+- `%rsi` : Source index register
+- `%rdi` : Destination index register
+- `%rbp` : Base pointer register
+- `%rsp` : Stack pointer register
+- `%r8` - `%r15` : Additional general-purpose registers
+
+Each register has evolved sizing from 8 bits, 16 bits, 32 bits, and 64 bits. For example `%rax` was known ax `%eax` in 32 bits.
+
+#### Addressing Modes
+
+To specify the location of data operands or instructions (also known as **addressing modes**) :
+
+- Instruction is provided with the data types for its operand. The `MOV` instruction moves data between registers and memory. `MOVB`, `MOVW`, `MOVL`, `MOVQ`, moves byte (8 bits), word (16 bits), long (32 bits), and quadword (64 bits), respectively.
+- **Global addressing** : Operand is global value, can be a defined label.
+- **Immediate addressing** : The operand 42 is a constant value `MOVQ %rax, 42`.
+- **Register addressing** : Operand `rbx` originate from a register `MOVQ %rax, %rbx`.
+- **Indirect addressing** : Operand is indirectly located in a register by memory address, such as the stack pointer `%rsp`.
+- **Base-relative addressing** : Operand is specified from an address added with constant (e.g., `-16(%rcx)`, 16 bytes before `%rcx`).
+- **Complex addressing** : Used to address element in an array in the form of `D(Ra, Rb, C)`, which refers to the value at address `Ra + Rb * C + D`. `Ra` and `Rb` are general purpose registers, which gives size of the array and index of the array, respectively. `C` gives the size of the items in the array and `D` is offset relative to that item.
+  ![x86 addressing modes](./x86-addressing-modes.png)  
+  Source : Book 1 page 155
+
+#### Arithmetic
+
+`ADD` and `SUB` adds and subtracts, respectively, both require two operands, which a source and target. For example, `ADDQ %rbx, %rax` adds `%rbx` to `%rax`, overwriting previous content of `%rax`.
+
+More complex example can be translated into :
+
+```
+c = a + b + b
+
+MOVQ a, %rax
+MOVQ b, %rbx
+ADDQ %rbx, %rax
+ADDQ %rbx, %rax
+MOVQ %rax, c
+```
+
+`IMUL` (integer multiply) of two 64 bits integer can potentially result in 126 bits integer. To multiply, we must provide one operand in the `IMUL` instruction and place one operand in `%rax`. The lower 64 bits of the result is stored in `%rax`, while the higher one is placed implicitly in `%rdx`.
+
+```
+c = b * (b + a)
+
+MOVQ a, %rax
+MOVQ b, %rbx
+ADDQ %rbx, %rax
+IMULQ %rbx
+MOVQ %rax, c
+```
+
+`IDIV` instruction performs division by dividing a 128-bit dividend, by a specified divisor. The low 64 bits and high 64 bits are stored in `%rax` and `%rdx`, respectively. The quotient is then stored in `%rax`, and the remainder is stored in `%rdx`.
+
+`INC` and `DEC` increment and decrement register destructively.
+
+```
+a = ++b
+
+MOVQ b, %rax
+INCQ %rax
+MOVQ %rax,b
+MOVQ %rax, a
+```
+
+`AND`, `OR`, `XOR` perform [bitwise operations](/computer-and-programming-fundamentals/bitwise-operation) on two values, while `NOT` performs on one value.
+
+```
+c = (a & ~b)
+
+MOVQ a, %rax
+MOVQ b, %rbx
+NOTQ %rbx
+ANDQ %rax, %rbx
+MOVQ %rbx, c
+```
+
+#### Comparisons & Jumps
+
+`JMP` may be used to jump between part of program. It can be used with label to create a loop :
+
+```
+      MOVQ $0, %rax
+loop: INCQ %rax
+      CMPQ $5, %rax
+      JLE loop
+```
+
+This initializes `%rax` with the value 0. It is then incremented with `INCQ` and compared with the value 5 using the `CMPQ` instruction. If the comparison fails, it jumps back to the starting loop. Under the hood, the comparison should set internal registers (called `EFLAGS`) to 0 or 1, indicating the result. We don't need to look at that register directly; it is done implicitly.
+
+If we were to remove comparison and use `JMP` instead of `JLE`, this would result in infinite loop.
+
+#### Stack
+
+Stack operation that pushes and pops element from the stack is done by manipulating the stack pointer (`%rsp`).
+
+```
+SUBQ $8, %rsp
+MOVQ %rax, (%rsp)
+```
+
+This is essentially pushing `%rax` to the stack. Stack pointer, keeping track the bottom-most item on the stack (actually the top of stack because the stack grows to bottom), is subtracted by 8 (the size of `%rax` in bytes), then we move content of `%rax` to the location pointed by the stack pointer.
+
+Popping a value is kind of the reverse process.
+
+```
+MOVQ (%rsp), %rax
+ADDQ $8, %rsp
+```
+
+Both operation is frequently used that they have their own instructions, namely `PUSH` and `POP`.
+
+#### Calling Function
+
+A function can be called with the `CALL` instruction. Under the hood, it pushes the current instruction pointer (return address) onto the stack, then jump to the code location of the function. Also, we need to place the function arguments (as well as evaluate them) in some specified registers, this is same for the return value.
+
+Registers need to be preserved and restored across function call. Depending on the language, it can either be the caller or the callee that saves the value. See [calling sequences](/compilers-and-programming-languages/subroutines#calling-sequences).
+
+![Example of function call in C translated into x86 assembly](./x86-function-call.png)  
+Source : Book 1 page 161
+
+:::tip
+See also [call stack](/compilers-and-programming-languages/subroutines#call-stack)
+:::
+
+### ARM Assembly Language
