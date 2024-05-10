@@ -152,11 +152,11 @@ The `section .data` is a section directive to define and initialize data such as
 
 They are assembly language that represent instructions for [x86 architecture](/computer-organization-and-architecture/isa#x86), which originate from the original Intel 8086 processor.
 
-#### Registers
+#### x86 Registers
 
 There are 16 general purpose register for the 64-bit x86 architecture.
 
-![x86_64 registers](./x86-register.png)  
+![x86_64 registers](./x86-registers.png)  
 Source : Book 1 page 152
 
 - `%rax` : Accumulator register
@@ -171,7 +171,7 @@ Source : Book 1 page 152
 
 Each register has evolved sizing from 8 bits, 16 bits, 32 bits, and 64 bits. For example `%rax` was known ax `%eax` in 32 bits.
 
-#### Addressing Modes
+#### x86 Addressing Modes
 
 To specify the location of data operands or instructions (also known as **addressing modes**) :
 
@@ -185,7 +185,7 @@ To specify the location of data operands or instructions (also known as **addres
   ![x86 addressing modes](./x86-addressing-modes.png)  
   Source : Book 1 page 155
 
-#### Arithmetic
+#### x86 Arithmetic
 
 `ADD` and `SUB` adds and subtracts, respectively, both require two operands, which a source and target. For example, `ADDQ %rbx, %rax` adds `%rbx` to `%rax`, overwriting previous content of `%rax`.
 
@@ -238,7 +238,7 @@ ANDQ %rax, %rbx
 MOVQ %rbx, c
 ```
 
-#### Comparisons & Jumps
+#### x86 Comparisons & Jumps
 
 `JMP` may be used to jump between part of program. It can be used with label to create a loop :
 
@@ -253,7 +253,7 @@ This initializes `%rax` with the value 0. It is then incremented with `INCQ` and
 
 If we were to remove comparison and use `JMP` instead of `JLE`, this would result in infinite loop.
 
-#### Stack
+#### x86 Stack
 
 Stack operation that pushes and pops element from the stack is done by manipulating the stack pointer (`%rsp`).
 
@@ -273,7 +273,7 @@ ADDQ $8, %rsp
 
 Both operation is frequently used that they have their own instructions, namely `PUSH` and `POP`.
 
-#### Calling Function
+#### x86 Calling Function
 
 A function can be called with the `CALL` instruction. Under the hood, it pushes the current instruction pointer (return address) onto the stack, then jump to the code location of the function. Also, we need to place the function arguments (as well as evaluate them) in some specified registers, this is same for the return value.
 
@@ -287,3 +287,157 @@ See also [call stack](/compilers-and-programming-languages/subroutines#call-stac
 :::
 
 ### ARM Assembly Language
+
+The [ARM](/computer-organization-and-architecture/isa#arm) assembly starts from 32 bits. It is based on [RISC](/computer-organization-and-architecture/isa#risc), rather than [x86](/computer-organization-and-architecture/isa#x86) which is based on [CISC](/computer-organization-and-architecture/isa#cisc).
+
+#### ARM Registers
+
+ARM-32 has 16 general purposes registers, named from `r0` to `r15`.
+
+![ARM registers](./arm-registers.png)  
+Source : Book 1 page 167
+
+There are additional registers which can't be accessed directly, namely Current Program Status Register (CPSR) and Saved Program Status Register (SPSR). They are used to store processor's status and control information, such as the result of comparison instruction.
+
+Data types in ARM :
+
+![ARM data types](./arm-data-types.png)  
+Source : Book 1 page 168
+
+#### ARM Addressing Modes
+
+ARM separates instruction to copy data between registers and between registers and memory. `MOV` can be used to copy data and constants between register, `LDR` (load) and `STR` (store), to move data between registers and memory.
+
+This is an example of moving data between registers using `MOV`. Immediate value is denoted with `#`, and they must be lower than 16 bits, else `LDR` should be used. ARM places destination register on the left, while source is on the right (except for `STR`).
+
+![ARM addressing modes 1](./arm-addressing-modes-1.png)  
+Source : Book 1 page 168
+
+- Move value 3 to register r0.
+- Move value of register r0 to register r1.
+
+![ARM addressing modes 2](./arm-addressing-modes-2.png)  
+Source : Book 1 page 169
+
+- Rd : destination register
+- Rs : source register
+- Ra : register that holds address
+
+Moving between registers and memory using `LDR` and `STR`, we typically denote address given by register with square brackets. Both takes the destination (for `LDR`) or source register (for `STR`) as the first argument, and source (for `LDR`) or destination (for `STR`) memory address as the second argument.
+
+For example, to load a value from an address and store it in register :
+
+```
+LDR r0, =address
+LDR r1, [r0]
+```
+
+We must do it in two instruction. ARM assembly does not have a single instruction that loads a value from a given memory address directly into a register. Address must be loaded to register first, then the address is actually loaded when moving it to another register.
+
+For a large literal or absolute address, which do not fit in 32 bits, they must be stored in **literal pool**. It is section of the program that stores data and can be accessed using `=` sign. It is similar to accessing a label.
+
+![ARM literal pool](./arm-literal-pool.png)  
+Source : Book 1 page 170
+
+![ARM pre- and post-indexing](./arm-pre-post-indexing.png)  
+Source : Book 1 page 169, 170
+
+The pre-indexing means that we are modifying the source address before it is loaded, while the post-indexing modifies the source address after the load, both happen before the `LDR` instruction. The pre-indexing is useful to specify offset relative to the base address, while the post-indexing is useful to specify offset relative to the loaded address.
+
+#### ARM Arithmetic
+
+Basic arithmetic are performed with `ADD`, `SUB`, and `MUL`. There are also `ADC` and `SBC` to add and subtract with carried value from the register flag.
+
+![ARM arithmetic](./arm-arithmetic.png)  
+Source : Book 1 page 171
+
+These take destination register as the first argument, in which it performs the desired operation using the two operands provided in the second and third argument.
+
+Multiplication instruction is different to add and subtract, similar to x86. The multiplication between two 32-bit number can possibly result in 64-bit value, so the result of the multiplication is stored in two 32-bit registers (the `RdHi` and `RdLo`).
+
+:::info
+ARM doesn't support `DIV` instruction directly due to its relatively complex operation. Implementing a dedicated hardware unit for division would increase complexity and require more cost. Instead, division is performed by standard library that implement division using other method, typically involving other arithmetic operators and bitwise operations.
+:::
+
+Below is bitwise operations on ARM.
+
+![ARM bitwise operations](./arm-bitwise.png)  
+Source : Book 1 page 171
+
+#### ARM Comparisons & Branches
+
+As mentioned before, result of comparison is stored in the CPSR. It may result in :
+
+- Z (zero) : Operands are equal
+- N (negative) : First operand is less than second operand
+
+For example, when comparing between register and immediate value, we put the immediate value in the second operand :
+
+```
+CMP Rd, Rn
+CMP Rd, #imm
+```
+
+:::tip
+Arithmetic instruction can also modify the CPSR. It is done by appending "S" to instruction (e.g., `SUBS`). This will do the desired arithmetic operation and storing the result, while also updating the CPSR.
+:::
+
+![ARM branch](./arm-branch.png)  
+Source : Book 1 page 172
+
+With comparison, we can now construct loops. There are various branching mechanism in ARM. For example, to loop from 0 to 5 :
+
+```
+      MOV r0, #0
+loop: ADD r0, r0, 1
+      CMP r0, #5
+      BLT loop
+```
+
+:::tip
+In addition, ARM provides way to reduce branching by providing arithmetic instruction that checks the CPSR after comparison.
+
+```
+CMP r0, r1
+ADDLT r0, r0, #1
+ADDGE r1, r1, #1
+```
+
+Depending on the flag, either ADD less than or ADD greater than is executed.
+:::
+
+#### ARM Stack
+
+The stack pointer register is known as `sp`. Pushing an item, such as register `r0` require us to subtract the `sp` and store (using `STR`) the `r0` into `sp`.
+
+```
+SUB sp, sp, #4
+STR r0, [sp]
+```
+
+Recall that `STR` place destination on the right and source on the left. This can be simplified with pre-indexing : `STR r0, [sp, #-4]!`. `sp` is added with `-4`, and the result is also written back to `sp` (using the `!`), then the result serve as the destination for `r0`.
+
+Further, can be simplified into the `PUSH` instruction : `PUSH {r0, r1, r2}`
+
+It's the opposite for pop.
+
+```
+LDR r0, [sp]
+ADD sp, sp, #4
+
+LDR r0, [sp], #4
+
+POP {r0,r1,r2}
+```
+
+#### ARM Calling Function
+
+ARM describes the convention of calling function below.
+
+![ARM calling convention](./arm-calling-convention.png)  
+Source : Book 1 page 174
+
+Jumping to a function is done with `BL` instruction. Example of C function and its ARM assembly.
+
+![C function in ARM](./arm-function.png)  
+Source : Book 1 page 174, 175
