@@ -100,7 +100,7 @@ Source : https://en.wikipedia.org/wiki/Three-address_code
 This IR model computation as it is performed on [stack-based data structure](/data-structures-and-algorithms/stack). In this IR, instructions manipulate values on top of a stack rather than using explicit registers or operands. It is designed to be executed on a [virtual machine](/cloud-computing-and-distributed-systems/virtualization), which executes stack-based instruction.
 
 :::info
-Stack machine code is considered **p-code (portable code)**, which is a general term for the assembly language of a hypothetical CPU. It is designed to be executed on a **p-code machine**, or a virtual machine that emulates a CPU, such as the Java Virtual Machine (JVM). In this case, the hypothetical CPU execute stack-based instruction.
+Stack machine code is considered **p-code (portable code)** (also known as **bytecode**), which can be thought as an assembly language of a hypothetical CPU. It is designed to be executed on a **p-code machine**, which is a virtual machine that emulates a CPU. In this case, the hypothetical CPU within the virtual machine execute stack-based instruction.
 :::
 
 Stack machine typically has several instructions :
