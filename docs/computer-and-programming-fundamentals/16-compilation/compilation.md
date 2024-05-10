@@ -12,9 +12,15 @@ description: Compilation
 
 When we write code using a particular programming language, it is still in the form of high-level source code. By high-level source code, it means the code is human-readable and involves less direct interaction with the underlying hardware. The purpose high-level programming language is to provide abstraction that make it easier for programmer to make a program.
 
-However, computer doesn't understand high-level code. At the lowest level, computer can only understand binary instructions (1s and 0s). So, writing code in high-level language is just one way to program computer through natural language. The code written in programming language will need to be translated into binary code before they can be executed. The translation process may include more than once, it may be translated into intermediate representation before translated to final binary code. The translation process is done by **compilers** or **[interpreters](/computer-and-programming-fundamentals/interpreter)**.
+However, computers don't understand high-level code. At the lowest level, a computer can only understand binary instructions (1s and 0s). Generally, we refer to code intended to be read and executed directly by a machine as **machine code**.
+
+So, writing code in high-level language is just one way to program computer through natural language. The code written in programming language will need to be translated into machine code before they can be executed. The translation process may include more than once, it may be translated into intermediate representation before translated to final binary code. The translation process is done by **compilers**.
 
 **Compiler** is a program that translates code written in one language into another, typically converting high-level language code into low-level language code.
+
+:::info
+An **[interpreter](/computer-and-programming-fundamentals/interpreter)** doesn't translate code, but rather read and understand code. Based on its understanding, it performs the corresponding actions. This means that an interpreted programming language won't be translated into machine code.
+:::
 
 ### Language Abstraction
 
@@ -24,9 +30,15 @@ Computer executes the lowest-level codes, which is binary instruction. Programme
 
 2.  **[Intermediate Representation (IR)](/compilers-and-programming-languages/intermediate-representation)** : IR is a representation of source code between a high-level language and low-level machine code. It is a general term for an abstraction of machine code that is higher than assembly language (see next) but lower than a high-level code. An intermediate representation can be transformed into lower-level representation through additional process, or directly behave as instructions for the computer. One popular IR for the latter is the **bytecode**, which is also known as **p-code (portable code)**.
 
-    In general, instructions of IR are basic and fundamental to the machine. Even a single line of code can result in few lines of instruction. The characteristic of bytecode is, an instruction is identified with a one-byte _opcode_, followed by several parameters. Bytecode is designed to be executed in a [virtual machine](/cloud-computing-and-distributed-systems/virtualization). A virtual machine can be thought as a virtualized computer system. It isn't a real computer, but can be thought as one. We don't call it a real computer system, because it isn't actually executing machine code. In the virtual machine that executes bytecode, there exists something called [interpreter](/computer-and-programming-fundamentals/interpreter). The bytecode is fed to the interpreter, which dynamically do things according to the instruction.
+    In general, instructions of IR are basic and fundamental to the machine. Even a single line of code can result in a few lines of instruction. The characteristic of bytecode is that an instruction is identified with a one-byte opcode, followed by several parameters.
 
-    Examples of languages that use bytecode include Java and Python.
+    Bytecode is designed to be executed in a [virtual machine](/cloud-computing-and-distributed-systems/virtualization).
+
+    :::note
+    A virtual machine can be thought of as a virtualized computer system. It isn't a real computer, but can be thought of as one. In simple term, we don't call it a real computer system because technically it doesn't consist of typical constructs like a CPU, but rather something that simulates it. In the context of code execution, it isn't actually executing machine code.
+    :::
+
+    In the virtual machine that executes bytecode, there exists something called an [interpreter](/computer-and-programming-fundamentals/interpreter). The bytecode is fed to the interpreter, which dynamically does things according to the instruction. Examples of languages that use bytecode include Java and Python.
 
     :::info
     Another term that is often heard is [operation code (opcode)](/computer-organization-and-architecture/isa#instructions). Opcode refers to the instruction of machine language that specifies the operation to be performed by the computer's processor. It represents the fundamental operations that the hardware can execute, such as arithmetic operations, memory access, and control flow instructions. Typically, they are identified by raw binaries or represented in hexadecimal. For example, if we want to add between numbers, we must specify the instruction with the hexadecimal `B1`.
@@ -34,7 +46,7 @@ Computer executes the lowest-level codes, which is binary instruction. Programme
 
 3.  **Assembly Language** : Assembly language is a low-level programming language that represent machine code instructions in human-readable form. It provides a close representation to machine code and is specific to a particular hardware architecture.
 
-4.  **Machine Language & Binary** : Machine language is the lowest level of abstraction in programming. It can be [binary](/computer-and-programming-fundamentals/number-system#binary) code (sequences of 0s and 1s) or [hexadecimal](/computer-and-programming-fundamentals/number-system#hexadecimal) that directly represents the instructions and data that a computer's hardware can execute. Machine language instructions are specific to the hardware architecture and are directly understood and executed by the processor.
+4.  **Machine Code** : Machine code is the lowest level of abstraction in programming. It can be [binary](/computer-and-programming-fundamentals/number-system#binary) code (sequences of 0s and 1s) or [hexadecimal](/computer-and-programming-fundamentals/number-system#hexadecimal) that directly represents the instructions and data that a computer's hardware can execute. Machine language instructions are specific to the hardware architecture and are directly understood and executed by the processor.
 
 ![Language abstraction comparison](./language-abstraction.png)  
 Source : [High-level code](https://stackify.com/python-tips-10-tricks-for-optimizing-your-code/), [Bytecode](https://www.sciencedirect.com/topics/computer-science/bytecode), [assembly and machine code](https://www.nayuki.io/page/a-fundamental-introduction-to-x86-assembly-programming)
