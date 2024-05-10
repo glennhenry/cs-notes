@@ -25,7 +25,7 @@ description: Runtime Environment
 **Java Runtime Environment (JRE)** is the runtime environment for executing Java programs. It consists of several components :
 
 :::note
-A Java program in source code (with format of `.java`), needs to be compiled into [bytecode](/computer-and-programming-fundamentals/compilation#language-abstraction) (intermediate representation with format of `.class`).
+A Java program in source code (with format of `.java`), needs to be compiled into [bytecode](/computer-and-programming-fundamentals/compilation#language-abstraction) (an intermediate representation with format of `.class`).
 :::
 
 - **Java Class Library** : The Java class library is a set of pre-compiled Java's APIs that provide a wide range of functionality for Java applications. It includes standard classes for tasks such as I/O operations, networking, database access, GUI development, concurrency, and more.
