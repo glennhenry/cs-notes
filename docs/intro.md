@@ -168,3 +168,4 @@ For simplicity, TODOs are placed here instead of something like GitHub issues.
 21. **[update]** [/database-system/logging-and-recovery#migration](/database-system/logging-and-recovery#migration) -> add more about migration, particularly how it works.
 22. **[update]** -> [/cloud-computing-and-distributed-systems/distributed-systems-model#consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus) add about Byzantine failures, Two Generals' Problem.
 23. **[update]** [/data-structures-and-algorithms/graph](/data-structures-and-algorithms/graph)#graph-problems -> add common problem about graph, such as graph coloring.
+24. **[ref]** [/compilers-and-programming-languages/compiler-optimization](/compilers-and-programming-languages/compiler-optimization) -> ref to graph coloring.

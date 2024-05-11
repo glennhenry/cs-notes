@@ -92,3 +92,7 @@ This evaluation uses 4 register, reusing the previous register for the new inter
 :::info
 This example uses an intermediate representation called [three-address code (TAC)](/compilers-and-programming-languages/intermediate-representation#linear-ir).
 :::
+
+:::tip
+More about [register allocation](/compilers-and-programming-languages/compiler-optimization#register-allocation).
+:::
