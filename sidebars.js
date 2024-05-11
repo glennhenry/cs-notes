@@ -494,7 +494,10 @@ const sidebars = {
     {
       type: "category",
       label: "Compilers & Programming Languages",
-      link: { type: "doc", id: "compilers-and-programming-languages/compilers-and-programming-languages" },
+      link: {
+        type: "doc",
+        id: "compilers-and-programming-languages/compilers-and-programming-languages",
+      },
       items: [
         "compilers-and-programming-languages/cpl-fundamentals/cpl-fundamentals",
         {
@@ -526,13 +529,13 @@ const sidebars = {
             "compilers-and-programming-languages/intermediate-representation/intermediate-representation",
             "compilers-and-programming-languages/assembly-language/assembly-language",
             "compilers-and-programming-languages/code-generation/code-generation",
+            "compilers-and-programming-languages/compiler-optimization/compiler-optimization",
           ],
         },
         {
           type: "category",
           label: "Other Programming Model",
           items: [
-            "compilers-and-programming-languages/compiler-optimization/compiler-optimization",
             "compilers-and-programming-languages/functional-languages/functional-languages",
             "compilers-and-programming-languages/logic-languages/logic-languages",
             "compilers-and-programming-languages/concurrency/concurrency",
