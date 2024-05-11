@@ -9,6 +9,8 @@ description: Assembly Language
 
 - **[Assembly language - Wikipedia](https://en.wikipedia.org/wiki/Assembly_language)**
 - **[Assembly Language in 100 Seconds - Fireship](https://youtu.be/4gwYkEK0gOk?si=faihHjHQNrGx28NV)**
+- **Chapter 10, Introduction to Compilers and Language Design - Douglas Thain**
+
 
 **Assembly Language (asm)** is a low-level programming language that is between the machine code (binary instructions understood by the computer's hardware) and high-level programming languages (which is readable by humans). asm can be thought as a human-readable representation of machine code instructions. With asm, programmers can see the code that interacts directly with the computer's hardware.
 
