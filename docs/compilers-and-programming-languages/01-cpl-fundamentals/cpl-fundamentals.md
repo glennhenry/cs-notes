@@ -158,18 +158,19 @@ ADD R1, R2 R3
 STORE c R3
 ```
 
-For instance, it "LOAD" the integer 5 into R1 (register 1), then store the value on R1 into an identifier `a`. Notice that the first two assignment can be simplified. It is not necessary to load a value into register if we eventually store it back to a variable. The `LOAD R1 5 STORE a R1` can be simplified into `STORE a 5`.
-
 With this IR, we can finally transform the program into assembly code instructions, which a CPU can execute. For example, one may look like below.
 
 ```
-mov [a], dword 5
-mov [b], dword 1
+mov eax, $5
+mov   b, eax
 
-mov eax, [a]
-mov ebx, [b]
+mov eax, $1
+mov   b, eax
+
+mov eax, a
+mov ebx, b
 add eax, ebx
-mov [c], eax
+mov   c, eax
 ```
 
 #### Types & Classification of Compilers
