@@ -17,7 +17,7 @@ My computer science notes from various online courses, tutorial, books, blogs, W
 - **[Computer Organization & Architecture](computer-organization-and-architecture)**
 - **[Operating System](operating-system)**
 - **[Theory of Computation & Automata](theory-of-computation-and-automata)**
-- [Compilers & Programming Language](compilers-and-programming-languages)
+- **[Compilers & Programming Language](compilers-and-programming-languages)**
 - **[Database System](database-system)**
 - **[Computer Graphics](computer-graphics)**
 - **[Frontend Web Development](frontend-web-development)**
