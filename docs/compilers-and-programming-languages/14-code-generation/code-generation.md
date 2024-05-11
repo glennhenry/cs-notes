@@ -108,7 +108,7 @@ This mean that we can't use `%rax` and `%rdx` during multiplication. We better n
 `a = f(10, b + c)`  
 Source : Book 1 page 187
 
-When calling a function, the `ARG` node corresponds to a function argument. Depending on the case, function arguments may be passed by placing them on the stack or by placing them in registers. With the former (also called stack calling convention), we will use the `PUSH` instruction. With the latter (also called register calling convention), we should copy each of them to the argument registers. The `%rdi` and `%rsi` are typically used for first and second arguments of a function.
+When calling a function, the `ARG` node corresponds to a function argument. Depending on the case, function arguments may be passed by placing them on the stack or by placing them in registers. With the former (also called **stack calling convention**), we will use the `PUSH` instruction. With the latter (also called **register calling convention**), we should copy each of them to the argument registers. The `%rdi` and `%rsi` are typically used for first and second arguments of a function.
 
 Before calling the function with `CALL f`, we have to preserve any registers used before doing this function call. Save caller-saved registers before `CALL` and restore them after it returns. In this case, the caller-saved registers are `%r10` and `%r11`. They contain the value of `b` and `c`, which is computed as argument already, yet we still include them. This is because it is possible that function `f` depends on or modifies them, which means it causes side effects to the registers. By preserving them, we ensure that `f` is provided with the expected values and that the original values are restored afterwards.
 
