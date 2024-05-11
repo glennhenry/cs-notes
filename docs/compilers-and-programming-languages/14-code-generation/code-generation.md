@@ -51,7 +51,7 @@ To generate an expression, we need to traverse the [AST](/compilers-and-programm
 
 The AST represents the expression's operands in the left and right child nodes, while the operation performed on them is the parent node itself. A [post-order traversal](/data-structures-and-algorithms/traversal#postorder-traversal) ensures that the left and right child nodes are visited first, so we know what the operands are.
 
-The strategy is to store left and right node's value in registers. To let the parent node know which register to perform the operation on, we store the register used by each node in the nodes themselves. On each visit to node, we should generate corresponding assembly code.
+The strategy is to store left and right node's value temporarily in registers. To let the parent node know which register we used, we store an information about it in each node. On each visit to node, we should generate corresponding assembly code.
 
 ![Expression generation](./expression-example.png)  
 Source : Book 1 page 184
@@ -67,7 +67,7 @@ Each step correspond to each line of the assembly code.
 3. The parent `IADD` is visited. It should know that its children hold values on `R0` and `R1`. It will generate `ADDQ R0, R1`. Since `ADD` is destructive that leaves result in the second argument `R1`, `scratch_free(R0)` will be called.
 4. The `b` is visited, similarly, `scratch_alloc` is called to allocate the register `R0`.
 5. The parent `ISUB` is visited. It should compute based on registers on `IADD`, which stores its value in `R1` and `b`, which stores in `R0`. Result is stored in `R1` and `R0` is freed again.
-6. Visit the `c` node, but it will not produce code, since it is a target assignment.
+6. Visit the `c` node, but this will not produce code, since it is a target assignment.
 7. Visit the `ASSIGN` node and produce `MOVQ R1, c`.
 
 We should also call `scratch_name` on each register to obtain the real register name.
@@ -116,9 +116,128 @@ The function returns value should be stored in `%rax`, and it will be moved to n
 
 ### Generating Statements
 
+Various statements can be encountered, this includes control flow statements. We should create a function that generates code for any kind of statements. One could look like below.
+
+![Statements generator code](./statement-generator.png)  
+Source : Book 1 page 188
+
+[Recall the AST representation of statements](/compilers-and-programming-languages/semantic-analysis#statements), all information about a statement is encapsulated in the `stmt` struct. The struct includes several optional fields, such as body expression, else expression (if an if statement), declaration (if a declaration).
+
+Each statement may call another specific generator.
+
+- A declaration is simple; it simply calls the code generator for declaration.
+- A statement that includes expression will obviously need to generate expression, which can call the previously discussed `expr_codegen` and free the registers used by the expression after.
+- A return statement must be evaluated as well, hence `expr_codegen` should be called on the given statement. After a function returns, it is expected that the execution continue to the caller. In other word, we must jump to the return address on the call stack.
+
+#### Control Flow
+
+A control flow like if-else statement should look like :
+
+```
+if (expr) {
+    true-statement
+} else {
+    false-statement
+}
+```
+
+The approach is to evaluate the expression first, then use `CMP` to evaluate to true or false. Depending on the result, jump to the corresponding statement.
+
+The assembly should be like below.
+
+```
+expr
+CMP $0, register
+JE false-label
+true-statement
+JMP done-label
+
+false-label:
+    false-statement
+
+done-label:
+    ...next code
+```
+
+It evaluates expression, compares whether it is 0 (false). If it's a yes, jump to `false-label`, which contains the false statement. Else, the true statement will be evaluated, and once it is done, skip the `false-label` by jumping directly to the next code (`done-label`).
+
+![If statement generator](./if-statement.png)  
+Source : Book 1 page 190
+
+A for loop is :
+
+```
+for (init-expr; expr; next-expr) {
+    body-statement
+}
+```
+
+In assembly :
+
+```
+            init-expr
+top-label:
+            epxr
+            CMP $0, register
+            JE done-label
+            body-statement
+            next-expression
+            JMP top-label
+done-label:
+            ...next code
+```
+
+The initialization expression should be evaluated first. A typical loop is constructed by :
+
+1. Compare result of an expression.
+2. Depending on the result, either execute the body statement, execute next expression (e.g., increment counter), then jump back to the start of the loop, or jump to the next code.
+
 ### Conditional Expressions
 
+Conditional expression includes comparison between data types that returns boolean values. They can be less than, greater than, equal, etc. It is a form of `left-expr < right-expr`. If we assign the result of comparison to a variable, such as `b: boolean = x < y;`.
+
+```
+            left-expr
+            right-expr
+            CMP left-register, right-register
+            JLT true-label
+            MOV false, result-register
+            JMP done-label
+true-label:
+            MOV true, result-register
+done-label:
+            ...next code
+```
+
+Left and right expression is evaluated. Both results are stored on their corresponding register. `CMP` is performed on the two, which set the register flag. Depending on the result, it can execute the `JLT` (jump if less than) to the `true-label`, which assign true to the result register, or execute the `MOV false, result-register`, which assign false instead.
+
 ### Generating Declarations
+
+Declarations can be local variable declaration, global variable, and function declaration. Global declaration is simple, we just need to generate label on the data section of the assembly code.
+
+```
+i: integer = 10;
+s: string = "hello";
+b: array [4] boolean = {true, false, true, false};
+```
+
+```
+.data
+i: .quad 10
+s: .string "hello"
+b: .quad 1, 0, 1, 0
+```
+
+If there were conflicting declaration, the further declaration will overwrite the previous values. If the declaration contains expression, they will need to be evaluated first, because data section must contain constant values.
+
+A local variable declaration is contained within a function. This mean that it is pushed onto the stack during the function execution.
+
+To declare a function, we will need to generate label for the function name to start executing the function, and another label for the return statement. Inside the function, we will need to do necessary steps, this includes the function prologue and epilogue.
+
+- Prologue : Setting up function's stack frame, including allocating space for parameters and local variables.
+- Epilogue : Cleaning up the function's stack frame before returning, such as restoring the stack pointer, restoring the previous base pointer.
+
+Overall, the relationship of the code generator functions can be summarized as follows.
 
 ![Relationship between code generation functions](./code-generation-functions.png)  
 Source : Book 1 page 182
