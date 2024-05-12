@@ -28,7 +28,7 @@ My computer science notes from various online courses, tutorial, books, blogs, W
 - **[Software Engineering](software-engineering)**
 - **[Cloud Computing & Distributed Systems](cloud-computing-and-distributed-systems)**
 
-\*Bolded are completed. Although minor or major changes to the content are likely in the future. Possibly being actively updated and added with more topics if time comply.
+Everything is completed. However, there are still many minor and major changes to be made in the future. Changes are probably grammar/typo fix, clarification, revision, update of more correct information, and adding more notes. Mostly, they are listed under [TODOs](#todo). It is not known when I will be able to complete all of this.
 
 ### Android
 
@@ -59,18 +59,18 @@ Excluding the [index page](/index).
 
 #### Online CS Resources
 
-- Various online resource were used in the creation of this site. These sources are included in each note. The fact that some information may come from myself after reading from arbitrary source. These resources mainly act as the curriculum of what should a topic contains and definitely for the information itself.
+- Various online resource were used in the creation of this site. These sources are included in each note. In fact, some information may come from myself after reading from arbitrary source. These resources mainly act as the curriculum of what should a topic contains and definitely for the information itself.
 
 #### Additional Resources
 
 - [GitHub](https://github.com/) - For storing and hosting this site.
 
-### TODO :
+### TODO
 
 For simplicity, TODOs are placed here instead of something like GitHub issues.
 
-- **[add]** : add new notes
-- **[update]** : update existing notes
+- **[add]** : add new notes (new page)
+- **[update]** : update existing notes, whether it is fixing sentences, adding more information, or giving clarification.
 - **[ref]** : add reference to particular notes
 
 1. **[update]** Revisit all notes to fix English, typo, update/edit information, add reference.
@@ -148,24 +148,20 @@ For simplicity, TODOs are placed here instead of something like GitHub issues.
 5. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#bitmap-encoding -> add bitmap encoding as compression.
 6. **[add]** [/digital-media-processing](/digital-media-processing)/iso -> add ISO file format.
 7. **[update]** [/backend-development/websocket](/backend-development/websocket)#data-exchange -> add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
-8. **[ref]** [/computer-security/reverse-engineering](/computer-security/reverse-engineering) -> ref to decompilation in compilers.
-9. **[update]** [/backend-development/caching](/backend-development/caching) -> move caching to [computer-and-programming-fundamentals](/computer-and-programming-fundamentals), since it is a general topic. Also, add info about cpu cache, backend cache, local cache, and other cache terminology or techniques.
-10. **[update]** [/backend-development/microservice](/backend-development/microservice) -> clarify wrong information.
-11. **[update]** [/backend-development/soa](/backend-development/soa) -> clarify wrong information (its different with microservice).
-12. **[add]** [/cloud-computing-and-distributed-systems](/cloud-computing-and-distributed-systems)/distributed-systems-failure-detection-and-recovery -> should add more about distributed failure detection and recovery mechanism.
+8. **[update]** [/backend-development/caching](/backend-development/caching) -> move caching to [computer-and-programming-fundamentals](/computer-and-programming-fundamentals), since it is a general topic. Also, add info about cpu cache, backend cache, local cache, and other cache terminology or techniques.
+9. **[update]** [/backend-development/microservice](/backend-development/microservice) -> clarify wrong information.
+10. **[update]** [/backend-development/soa](/backend-development/soa) -> clarify wrong information (its different with microservice).
+11. **[add]** [/cloud-computing-and-distributed-systems](/cloud-computing-and-distributed-systems)/distributed-systems-failure-detection-and-recovery -> should add more about distributed failure detection and recovery mechanism.
     - Additional note:
     - replication, redundancy, reassignment, checkpointing, restart.
     - heartbeat mechanism, timeout, neighbour-based, gossip.
     - hot standby server clusters, active-takeover clusters, failover cluster.
-13. **[ref]** [/compilers-and-programming-languages/target-architecture](/compilers-and-programming-languages/target-architecture) -> ref to compiler optimization in compilers.
-14. **[ref]** [/compilers-and-programming-languages/control-flow](/compilers-and-programming-languages/control-flow) -> ref to compiler optimization, jump table in compilers.
-15. **[ref]** [/compilers-and-programming-languages/control-flow](/compilers-and-programming-languages/control-flow) -> ref to compiler optimization, tail recursion in compilers.
-16. **[update]** [/data-structures-and-algorithms/array](/data-structures-and-algorithms/array)#string-as-an-array -> add information about string.
-17. **[update]** [/computer-and-programming-fundamentals/memory](/data-structures-and-algorithms/array)#pointer--references-problems -> add information about pointer and reference problems.
-18. **[add]** [/backend-development](/backend-development)/serialization -> add full topic about serialization, possibly comparing various serialization method such as json, xml, language gnostic, protocol buffer.
-19. **[ref]** [/backend-development/rpc#protocol-buffers](/backend-development/rpc#protocol-buffers) -> ref to the previous serialization method, namely protocol buffer.
-20. **[update]** [/data-structures-and-algorithms/hash-table](/data-structures-and-algorithms/hash-table)#log-structured-hash-table -> add log-structured hash table.
-21. **[update]** [/database-system/logging-and-recovery#migration](/database-system/logging-and-recovery#migration) -> add more about migration, particularly how it works.
-22. **[update]** -> [/cloud-computing-and-distributed-systems/distributed-systems-model#consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus) add about Byzantine failures, Two Generals' Problem.
-23. **[update]** [/data-structures-and-algorithms/graph](/data-structures-and-algorithms/graph)#graph-problems -> add common problem about graph, such as graph coloring.
-24. **[ref]** [/compilers-and-programming-languages/compiler-optimization](/compilers-and-programming-languages/compiler-optimization) -> ref to graph coloring.
+12. **[update]** [/data-structures-and-algorithms/array](/data-structures-and-algorithms/array)#string-as-an-array -> add information about string.
+13. **[update]** [/computer-and-programming-fundamentals/memory](/data-structures-and-algorithms/array)#pointer--references-problems -> add information about pointer and reference problems.
+14. **[add]** [/backend-development](/backend-development)/serialization -> add full topic about serialization, possibly comparing various serialization method such as json, xml, language gnostic, protocol buffer.
+15. **[ref]** [/backend-development/rpc#protocol-buffers](/backend-development/rpc#protocol-buffers) -> ref to the previous serialization method, namely protocol buffer.
+16. **[update]** [/data-structures-and-algorithms/hash-table](/data-structures-and-algorithms/hash-table)#log-structured-hash-table -> add log-structured hash table.
+17. **[update]** [/database-system/logging-and-recovery#migration](/database-system/logging-and-recovery#migration) -> add more about migration, particularly how it works.
+18. **[update]** -> [/cloud-computing-and-distributed-systems/distributed-systems-model#consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus) add about Byzantine failures, Two Generals' Problem.
+19. **[update]** [/data-structures-and-algorithms/graph](/data-structures-and-algorithms/graph)#graph-problems -> add common problem about graph, such as graph coloring.
+20. **[ref]** [/compilers-and-programming-languages/compiler-optimization](/compilers-and-programming-languages/compiler-optimization) -> ref to graph coloring.

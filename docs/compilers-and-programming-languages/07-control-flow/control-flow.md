@@ -219,7 +219,7 @@ else:
     # Code executed when condition is false
 ```
 
-Python itself relies on indentation as part of its syntax, interpreter knows that blocks of code is associated with the if and else clauses when they have different indentation level.
+The above Python code relies on indentation as part of its syntax, interpreter knows that blocks of code is associated with the if and else clauses when they have different indentation level.
 
 ```cpp
 switch (expression) {
@@ -235,10 +235,10 @@ switch (expression) {
 }
 ```
 
-C++ analyze the switch statement from top-to-bottom, matching expression with each case. When one case is matched, it executes the expression under it. However, it won't stop afterwards, it will keep matching the subsequent case. This is called **fall-through behavior**, and it relies on `break` keyword to actually stop the switch matching.
+With this C++ code, it analyze the switch statement from top-to-bottom, matching expression with each case. When one case is matched, it executes the expression under it. However, it won't stop afterwards, it will keep matching the subsequent case. This is called **fall-through behavior**, and it relies on `break` keyword to actually stop the switch matching.
 
 :::info
-Compiler can make optimization by making **jump table**. It is a data structure constructed by the compiler to efficiently map a set of input values to corresponding actions or code blocks, typically through pointers or goto statements. It is useful for state machine as it eliminates the need for conditional checks when encountering a specific state, allowing actions to be executed directly upon encountering that state.
+Compiler can optimize switch stataments by making a **jump table**. It is a data structure (typically an arrat) constructed by the compiler to map a set of input values to corresponding actions or code blocks. When the compiler encounter a switch statement, the compiler takes the input values, transform it, then the result is an offset to the jump table array. It eliminates the need to evaluate each conditional checks when encountering a specific state, allowing actions to be executed directly upon encountering specific input.
 :::
 
 ### Iteration
@@ -324,7 +324,7 @@ We remove the `n *` and modify the function's structure to make it work in tail 
 ![Tail recursion](./tail-recursion.png)  
 Source : https://maxglassie.github.io/2017/08/24/tail-recursion.html
 
-This optimization reduces the amount of memory used in runtime for call stack.
+This optimization reduce the amount of memory used in runtime for call stack, which make it possible to store data in the registers (for faster access).
 
 :::info
 Sometimes, arguments to subroutine is not always evaluated when function is called. When arguments are evaluated before function call, we call this **applicative-order evaluation**. It is possible that evaluation is deferred until the argument is actually used. This evaluation is called **normal-order evaluation**, and it can avoid unnecessary computation where argument is passed but not used (even avoid some runtime error).
