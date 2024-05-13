@@ -424,7 +424,9 @@ The `MessageBroadcaster` no longer instantiates an instance of `MessageService` 
 
 ### Composition Over Inheritance
 
-In OOP, there is a concept called [inheritance](/computer-and-programming-fundamentals/object-oriented-programming#inheritance). Inheritance allows a class to inherit all the properties and behaviors from a parent class. While inheritance can be useful in some cases, it can also lead to a rigid and inflexible class hierarchy. Inheritance creates a tight coupling between classes, making it difficult to modify or extend the behavior of a class without affecting other classes in the hierarchy.
+In OOP, there is a concept called [inheritance](/computer-and-programming-fundamentals/object-oriented-programming#inheritance). Inheritance allows a class to inherit all the properties and behaviors from a parent class. While inheritance can be useful in some cases, it can also lead to a rigid and inflexible class hierarchy. Child class exactly inherit anything the parent has. This means if the child class wants to remove some behaviors associated with the parent, the parent would need to do it. The impact is all the subclasses within the hierarchy is affected.
+
+In other word, inheritance creates a tight coupling between classes, making it difficult to modify or extend the behavior of a class without affecting other classes in the hierarchy.
 
 Inheritance is often associated with an **"is-a" relationship**. When a class inherits from another class, it is stating that the derived class is a specialized version of the base class. The derived class shares the characteristics and behaviors of the base class and adds additional features or overrides existing ones.
 
@@ -442,7 +444,13 @@ class Car(
 
 Inheritance is not suitable for this code. While a car is associated with a manufacturer, but a car doesn't have an "is-a" relationship. A car is not a manufacturer, but rather associated with particular manufacturer.
 
-A scenario that would be suitable with inheritance is `Person` and `Employee` class. A person is a general representation of person, while an employee is a specialized person. An employee can definitely inherit a person and extend its properties and behavior.
+The inflexibility comes when we have actual manufacturer brand that inherits `Manufacturer`. They would have behavior like `produce` to produce a car. We would need to modify `Manufacturer` class by adding the method. However, this means that `Car` also need to implement `produce`, which doesn't make sense. Inheritance sometimes force an object to do something while it is not actually needed.
+
+:::tip
+A scenario that would fit with inheritance is the relationship of `Person` and `Employee` class. A person is a general representation of person, while an employee is a specialized person. An employee can definitely inherit a person and extend its properties and behavior.
+
+If `Person` were to change, then it is okay for `Employee` to change as well, since it is also a person.
+:::
 
 Here's how `Manufacturer` and `Car` class would look like with composition :
 
@@ -458,11 +466,13 @@ class Car(
 
 Instead of inheriting the manufacturer, we chose to include it inside car.
 
-In summary, the principle of composition over inheritance doesn't mean we have use composition all the time. It suggests that, in certain cases, it is preferable to favor composition over inheritance when the class is actually composed of the other class. Inheritance is not the only choice when a class has particular characteristics of another class.
+:::note
+This principle says that inheritance is not the only thing to solve a relationship problem between objects. In certain cases, it is preferable to favor composition over inheritance when the class is actually composed of the other class. Inheritance does have its own use, but it's not always the solution.
+:::
 
 ### Clean Code
 
-The definition of clean code typically refers to well-structured, readable, and maintainable code that follows best practices and conventions to make it is easy to understand and modify.
+The definition of clean code typically refers to well-structured, readable, and maintainable code that follows best practices and conventions to make it is easy to understand and modify. Of course, it is not needed to follow every best practices or conventions, since some exist to solve certain problem, and not everyone has that problem.
 
 Some principles of clean code :
 
