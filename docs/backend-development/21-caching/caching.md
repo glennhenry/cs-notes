@@ -110,3 +110,14 @@ Source : https://blog.hackajob.com/how-to-implement-redis-in-go/
 :::tip
 See also [distributed systems](/cloud-computing-and-distributed-systems).
 :::
+
+- data locality
+- spatial locality
+- cpu caching
+- client caching
+- server caching (cdn, load balancer)
+- cache line
+- cpu stall
+- loop interchange
+- matrix mul opitimization
+- cache policies
