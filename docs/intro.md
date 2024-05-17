@@ -165,3 +165,4 @@ For simplicity, TODOs are placed here instead of something like GitHub issues.
 18. **[update]** -> [/cloud-computing-and-distributed-systems/distributed-systems-model#consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus) add about Byzantine failures, Two Generals' Problem.
 19. **[update]** [/data-structures-and-algorithms/graph](/data-structures-and-algorithms/graph)#graph-problems -> add common problem about graph, such as graph coloring.
 20. **[ref]** [/compilers-and-programming-languages/compiler-optimization](/compilers-and-programming-languages/compiler-optimization) -> ref to graph coloring.
+21. **[update]** [/computer-organization-and-architecture](/computer-organization-and-architecture) -> add about low level instruction, actual example of simple processor like 8080 with emulation as the example.
