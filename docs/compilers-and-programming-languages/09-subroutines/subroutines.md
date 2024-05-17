@@ -10,6 +10,7 @@ description: Subroutines
 - **Book 2 chapter 8**
 - **[Call stack - Wikipedia](https://en.wikipedia.org/wiki/Call_stack)**
 - **[Continuation - Wikipedia](https://en.wikipedia.org/wiki/Continuation)**
+- **[What are callee and caller saved registers? - stackoverflow](https://stackoverflow.com/questions/9268586/what-are-callee-and-caller-saved-registers)**
 
 Subroutines can abstract away a piece of code that perform a specific task or carry out a sequence of operations. They are feature like functions, procedures (typically refer to function without return statement), and methods.
 
@@ -34,10 +35,10 @@ When a function is being called many times (e.g., in recursion), a potential err
 
 Calling sequences are instructions executed before and after subroutine call. The code executed at the beginning is called **prologue**, while the code executed at the end is called **epilogue**. Calling sequence is responsible for executing task like passing parameters, saving return address, returning function values, deallocating call stack, etc.
 
-During the execution of program, registers are used to store the current execution context. When a subroutine is called, it may need to use registers to perform its operations. Therefore, it is required to save the registers value before calling the subroutine. There are two approach of saving the register :
+During the execution of program, registers are used to store the current execution context. When a subroutine is called, it may need to use registers to perform its operations. Therefore, it is required to save the registers value before calling the subroutine. There are two terminologies of saving register :
 
-- **Caller-saves** : In this case, the responsibility of saving register is given to the caller. It saves all the register that are used before subroutine call and restore them afterwards.
-- **Callee-saves** : In this case, the callee or the subroutine being called is responsible for saving and restoring the registers it will overwrite.
+- **Caller-saves** : Also known as **volatile** or **call-clobbered register**, in this case, the responsibility of saving register is given to the caller. It saves all the register that are used before subroutine call and restore them afterwards. It is used when value of registers aren't meant to be used by the callee, allowing them to freely use these registers without worrying about corrupting the caller's state.
+- **Callee-saves** : Also known as **non-volatile** or **call-preserved register**, in this case, the callee or the subroutine being called is responsible for saving and restoring the registers it will overwrite. This allows the callee function to use these registers for its own computations without affecting the caller's state.
 
 #### Static Chain
 
