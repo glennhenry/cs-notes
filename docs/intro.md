@@ -41,7 +41,7 @@ These will never complete since it is intended to be written and updated from ti
 
 - [File System](operating-system/file-system) (36282 char)
 - [Parsing](/compilers-and-programming-languages/parsing) (33647 char)
-- [Software Principles](software-engineering/software-principles) (30368 char, due to many code examples)
+- [Software Principles](software-engineering/software-principles) (32161 char, due to many code examples)
 - [Memory Management](operating-system/memory-management) (27368 char)
 - [Diffusion Model](deep-learning/diffusion-model) (27316 char)
 
@@ -166,3 +166,5 @@ For simplicity, TODOs are placed here instead of something like GitHub issues.
 19. **[update]** [/data-structures-and-algorithms/graph](/data-structures-and-algorithms/graph)#graph-problems -> add common problem about graph, such as graph coloring.
 20. **[ref]** [/compilers-and-programming-languages/compiler-optimization](/compilers-and-programming-languages/compiler-optimization) -> ref to graph coloring.
 21. **[update]** [/computer-organization-and-architecture](/computer-organization-and-architecture) -> add about low level instruction, actual example of simple processor like 8080 with emulation as the example.
+	- hex code disassemble to original assembly
+	- cpu opcode emulation, simulate each kind of instruction

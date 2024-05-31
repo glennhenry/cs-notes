@@ -16,6 +16,7 @@ description: Software Principles
 - **[Prefer composition over inheritance? - stackoverflow](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance)**
 - **[Summary of 'Clean code' by Robert C. Martin - wojteklu GitHub Gist](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)**
 - **[SOLID - Wikipedia](https://en.wikipedia.org/wiki/SOLID) and the 5 articles**
+- **[Difference Between Cohesion and Coupling - stackoverflow](https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling)**
 
 **Software Principles** are collection of guidelines, styles, tips, good practices, by various software and engineers to help to guide the process of developing a good software. By good software, it means they are reliable, maintainable, scalable, and many more listed in [software characteristics](/software-engineering#software-characteristics).
 
@@ -164,57 +165,66 @@ Unnecessary development sacrifice time and effort for future development and mai
 
 Both describe the relationship and dependency between software components. **Coupling** refers to the inter-component interaction, while **cohesion** refers to the intra-component interaction.
 
-Cohesion is the degree to which elements within a component or module are related and work together to accomplish a single, well-defined purpose.
+Cohesion is the degree to which elements within a component or module are related to accomplish a single, well-defined purpose.
 
-- **High Cohesion** : High cohesion indicates that the elements within a component are closely related and focused on a specific functionality or responsibility. A highly cohesive component performs a single task or represents a cohesive set of related tasks, making it easier to understand, reuse, and maintain.
-- **Low Cohesion** : Low cohesion occurs when a component has multiple unrelated responsibilities or tasks. This can lead to a component that is difficult to understand, modify, and test. Low cohesion may also result in code duplication and reduced reusability.
+- **High Cohesion** : A high cohesion component indicates that the elements within it are closely related and focused on a specific functionality or responsibility. A highly cohesive component performs a single task or represents a set of related tasks, forming a logically atomic unit. It is a preferred property to understand codebase easier.
+- **Low Cohesion** : Low cohesion is the opposite, which is when a component has multiple unrelated functionalities and responsibilities. This can lead to a component that is difficult to understand. Low cohesion may also result in code duplication and reduced reusability.
 
 On the other hand, coupling describe the interaction between modules.
 
-- **Loose Coupling** : In a loosely coupled system, components are independent and interact through well-defined interfaces. Loose coupling principle encourages components to have minimal dependencies on each other. Changes to one component have minimal impact on other components, making the system more flexible, modular, and easier to maintain.
+- **Loose Coupling** : In a loosely coupled system, components are independent and they interact through well-defined interfaces. Loose coupling principle encourages components to have minimal dependencies on each other. Changes to one component have minimal impact on other components, making the system more flexible, modular, and easier to maintain.
 - **Tight Coupling** : Tight coupling occurs when components have strong dependencies and rely heavily on each other's internal details or implementation. In a tightly coupled system, changes in one component may require corresponding changes in multiple other components. This can lead to code that is harder to modify, test, and maintain.
 
 ![Cohesion and coupling](./cohesion-coupling.png)  
+_with and without high cohesion and low coupling_  
 Source : [top](https://www.boardinfinity.com/blog/cohesion/), [down](https://www.engati.com/glossary/cohesion-and-coupling)
 
 Below are code that demonstrate cohesion and coupling.
 
-**Low Cohesion :**
+Low Cohesion :
 
 ```kotlin
 class Customer {
-    fun calculateOrderTotal(order: Order) {}
-    fun sendOrderConfirmationEmail(order: Order) {}
-    fun updateCustomerInformation(customerData: CustomerData) {}
+    fun calculateOrderTotal(order: Order) {
+		// calculate order logic...
+	}
+	
+    fun sendOrderConfirmationEmail(order: Order) {
+		// send email to this customer object...
+	}
+	
+    fun updateCustomerInformation() {
+		// operate on this object...
+	}
 }
 ```
 
-**High Cohesion :**
+High Cohesion :
 
 ```kotlin
 class OrderProcessor {
-    fun processOrder(order: Order) {
+    fun processOrder(order: Order, customer: Customer) {
         validateOrder(order)
         calculateOrderTotal(order)
-        updateInventory(order)
-        notifyCustomer(order)
+        notifyCustomer(customer)
     }
     private fun validateOrder(order: Order) {}
     private fun calculateOrderTotal(order: Order) {}
-    private fun updateInventory(order: Order) {}
-    private fun notifyCustomer(order: Order) {}
+    private fun notifyCustomer(customer: Customer) {
+		// customer.updateCustomerInformation(customer)
+	}
 }
 ```
 
-The class in low cohesion code have their own responsibility within the class. On the other hand, the high cohesion code focuses on the `processOrder` method, where it calls the other private method.
+The `Customer` class in the low cohesion code combine order functionality with customer functionality, simply because customer needs to know an order subtotal. On the other hand, the high cohesion code create an `OrderProcessor` class solely to process order.
 
-The high cohesion code may be preferable as it makes the caller easier to interact with the class. The caller can just call the method `processOrder` passing in an `Order` to process it. In contrast, in the low cohesion code, caller requires an understanding of how `Customer` class process order. (i.e., should we call `sendOrderConfirmationEmail` or `updateCustomerInformation` first?)
+The high cohesion code makes the caller easier to interact with the class. The caller can just call the method `processOrder` passing in an `Order` and `Customer` to process it. In contrast, in the low cohesion code, caller requires an understanding of how `Customer` class process order. (i.e., should we call `sendOrderConfirmationEmail` or `updateCustomerInformation` first?)
 
 :::info
 We typically call component that invokes or calls a function or method **caller**, while the one that is being invoked or called is called **callee**.
 :::
 
-**Tight Coupling :**
+Tight Coupling :
 
 ```kotlin
 class UserService {
@@ -235,7 +245,7 @@ class UserRepository {
 }
 ```
 
-**Loose Coupling :**
+Loose Coupling :**
 
 ```kotlin
 interface UserRepository {
@@ -254,11 +264,15 @@ class UserService(private val userRepository: UserRepository) {
 }
 ```
 
-The `UserService` class in tight coupling code depends a lot on `UserRepository` class. By depend, it means that the class really need to suit their method and the way of how it operates based on the class it depends on. If somehow we want to change the behavior of `UserRepository`, we will need to change the `UserService` as well. Tight coupling decrease flexibility and maintainability.
+The `UserService` class in tight coupling code depends a lot on `UserRepository` class. It literally holds an instance of `UserRepository` inside it. By depend, it will affect how the class operates based on the class it depends on. If somehow we want to change the behavior of `UserRepository`, such as changing specific method functionality, we will need to alter the behavior of `UserService` as well. Tight coupling decrease flexibility and maintainability.
 
 On the other hand, the loose coupling code introduce an interface, which allows for different implementation of `UserRepository` to be provided for `UserService` class. The `UserService` depend on the interface, and the implementor adhere to it. A modification to `UserRepository` behavior doesn't require us to modify many things, this is because they are based on the interface contract.
 
-The contract is nothing but a specification that the method `getUserById` must take a `userId` of type `String` and return an object `User`, similar to the `saveUser` method. This allows us to create a variety of class that may have different way of processing the data internally.
+The contract is nothing but a specification that a `UserRepository` must contain method `getUserById`, which take a `userId` of type `String` and return an object `User`, and a `saveUser` method that takes `User`. This allows us to create a variety of class that may have different way of processing data internally. All they have to do is to follow the interface specification.
+
+:::note
+The ideal properties are high cohesion and low coupling.
+:::
 
 ### Law of Demeter (LoD)
 
