@@ -168,3 +168,8 @@ For simplicity, TODOs are placed here instead of something like GitHub issues.
 21. **[update]** [/computer-organization-and-architecture](/computer-organization-and-architecture) -> add about low level instruction, actual example of simple processor like 8080 with emulation as the example.
 	- hex code disassemble to original assembly
 	- cpu opcode emulation, simulate each kind of instruction
+22. **[update]** [/software-engineering](/software-engineering) -> add/update/edit more about terminologies:
+	- [/software-engineering/version-control](/software-engineering/version-control): release tags, feature-based vs trunk-based development (refer to [/software-engineering/software-process](/software-engineering/software-process)).
+	- [/software-engineering/software-deployment](/software-engineering/software-deployment): a/b testing, canary release, feature flags factory.
+	- [/software-engineering/creational-patterns](/software-engineering/creational-patterns): factory pattern and its use in configuration file.
+	- [/software-engineering/behavioral-patterns](/software-engineering/behavioral-patterns): strategy pattern.
