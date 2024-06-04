@@ -143,6 +143,7 @@ For simplicity, TODOs are placed here instead of something like GitHub issues.
 3. **[update]** [/frontend-web-development](/frontend-web-development) : Minor update for all note, also some topic to include for addition :
 
    - Search engine, crawler.
+   - Rename the topic to web-and-internet, because it doesn't contain development.
 
 4. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#svd-compression -> add svd compression.
 5. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#bitmap-encoding -> add bitmap encoding as compression.
