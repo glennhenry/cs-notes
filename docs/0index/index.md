@@ -7,7 +7,7 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **20** topics, and a total of **368** notes.
+A total of **20** topics, and a total of **367** notes.
 
 1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
@@ -307,7 +307,7 @@ A total of **20** topics, and a total of **368** notes.
     - [Web Browser](internet-and-web/web-browser)
     - [Search Engine](internet-and-web/search-engine)
     - [Web Hosting](internet-and-web/web-hosting)
-13. [Backend System](/backend-system) (**20** subtopics)
+13. [Backend System](/backend-system) (**19** subtopics)
     - [Web Server](backend-system/web-server)
     - APIs
       - [APIs & Server Logic](backend-system/apis-server-logic)
@@ -318,7 +318,6 @@ A total of **20** topics, and a total of **368** notes.
       - [Webhook](backend-system/webhook)
       - [WebSocket](backend-system/websocket)
     - [Authentication](backend-system/authentication)
-    - [Authentication Technique](backend-system/authentication-technique)
     - [Authorization](backend-system/authorization)
     - [Search Engine](backend-system/search-engine)
     - [Message Broker](backend-system/message-broker)
