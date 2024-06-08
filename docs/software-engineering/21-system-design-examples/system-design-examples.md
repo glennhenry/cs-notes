@@ -69,11 +69,11 @@ Use as many libraries as possible to reduce development time and cost.
   - Client connect to the meeting server through some endpoint with `meetingId` and `passcode` as the parameters, initially using HTTP.
   - If there exist such ID with the correct password, then client and server will start exchanging streams, also upgrading the protocol to RTP.
   - The server listens to participants that broadcast their video, and also shares the data with other meeting server. Received broadcast is gathered and sent to all nearby participants.
-  - Could use [message broker](/backend-development/message-broker) technology like RabbitMQ to handle the distribution of messages and events among meeting server instances.
+  - Could use [message broker](/backend-system/message-broker) technology like RabbitMQ to handle the distribution of messages and events among meeting server instances.
 
 - **Web Server** : We will have another server for serving web-based client. This server will also be used for serving request that aren't meeting related, such as authentication.
 
-  - Provide [REST API](/backend-development/rest-api) services. Similarly, we can use [Ktor](https://ktor.io/) for this. Ktor provide a simple way to create authentication, serialization, and other server stuff.
+  - Provide [REST API](/backend-system/rest-api) services. Similarly, we can use [Ktor](https://ktor.io/) for this. Ktor provide a simple way to create authentication, serialization, and other server stuff.
   - Also, deploy the Compose Multiplatform app for the web.
 
 - **Cloud Server** : Used for database. There are many options, such as Amazon S3 for video, Amazon DynamoDB for user's data, and Amazon CloudFront for static data.

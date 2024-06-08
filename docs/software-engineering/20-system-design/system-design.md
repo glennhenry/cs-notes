@@ -34,7 +34,7 @@ To put it simply, `response time = latency + processing time + latency`. The goa
 
 Technique to improve performance includes :
 
-- Implement [caching mechanism](/backend-development/caching).
+- Implement [caching mechanism](/backend-system/caching).
 - [Optimize database](/database-system/database-optimization), such as using [database index](/database-system/database-index).
 - [Load balancing](#load-balancer), incorporate multiple servers or instance to distribute the workload.
 - Efficient algorithms and data structures.
@@ -48,7 +48,7 @@ To handle more workload, a system can either be scaled horizontally or verticall
 
 Improving scalability is typically related to distributing the workload: :
 
-- Use load balancer with distributed architecture like [SOA](/backend-development/soa) or [microservice](/backend-development/microservice), allowing the system to be decomposed into smaller and independent server that can be developed, deployed, and scaled individually. For example, the authentication system may struggle with workload, but not the file uploader, which means we can scale up the authentication system.
+- Use load balancer with distributed architecture like [SOA](/backend-system/soa) or [microservice](/backend-system/microservice), allowing the system to be decomposed into smaller and independent server that can be developed, deployed, and scaled individually. For example, the authentication system may struggle with workload, but not the file uploader, which means we can scale up the authentication system.
 - Make service or system that are **stateless**. Stateless refer to the ability of a system or service to operate without relying on stored state information. A stateless system treats each request as an independent transaction and does not maintain any session or context information between requests.
 
   With more users present, storing all their session data can be a burden. One approach is to share the state across all the server, to reduce the burden of a single server storing the data. However, this approach require additional synchronization mechanism, which can increase the complexity of the system.
@@ -178,14 +178,14 @@ Source : https://azure.microsoft.com/en-us/blog/build-a-globally-resilient-archi
 
 Several choices of architecture are :
 
-- **[Monolithic](/backend-development/monolithic)** : Simple to develop and deploy but can become harder to maintain and scale as the application grows.
-- **[Microservice](/backend-development/microservice)** : Flexible, scalable, and isolate fault, but introduces additional complexity in terms of service coordination and communication.
-- **[Service Oriented Architecture (SOA)](/backend-development/soa)** : Similar to microservice, it can lead to complexity in terms of service coordination and communication.
-- **[Serverless](/backend-development/serverless)** : Easy development, automatic scaling, and cost efficiency but may have limited control over low-level components.
+- **[Monolithic](/backend-system/monolithic)** : Simple to develop and deploy but can become harder to maintain and scale as the application grows.
+- **[Microservice](/backend-system/microservice)** : Flexible, scalable, and isolate fault, but introduces additional complexity in terms of service coordination and communication.
+- **[Service Oriented Architecture (SOA)](/backend-system/soa)** : Similar to microservice, it can lead to complexity in terms of service coordination and communication.
+- **[Serverless](/backend-system/serverless)** : Easy development, automatic scaling, and cost efficiency but may have limited control over low-level components.
 
 #### Message Broker
 
-[Message broker](/backend-development/message-broker) can be useful to handle the communication and coordination between components or services in a system.
+[Message broker](/backend-system/message-broker) can be useful to handle the communication and coordination between components or services in a system.
 
 Benefits :
 
@@ -196,7 +196,7 @@ Benefits :
 
 Ways to improve security :
 
-- Implement [authentication](/backend-development/authentication) and [authorization](/backend-development/authorization) mechanism.
+- Implement [authentication](/backend-system/authentication) and [authorization](/backend-system/authorization) mechanism.
 - Use secure protocols such as [SSL/TLS](/computer-networking/network-encryption#ssltls).
 - Avoid [various security vulnerability](/computer-security) and apply best practices.
 - Maintain IP whitelists and blacklists to allow or block traffic from specific IP addresses or ranges.
@@ -205,7 +205,7 @@ Ways to improve security :
 :::tip
 See also :
 
-- [Backend Optimization](/backend-development/backend-optimization)
+- [Backend Optimization](/backend-system/backend-optimization)
 - [Database Optimization](/database-system/database-optimization)
 - [Database Index](/database-system/database-index)
 - [Network Security](/computer-security/network-security)

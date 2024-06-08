@@ -51,13 +51,9 @@ Authentication may also include more than just one evidence from the user, there
 ![Example of an authentication process](./auth-example.png)  
 Source : https://swoopnow.com/user-authentication/
 
-:::tip
-See [authentication technique](/backend-system/authentication-technique) for implementation.
-:::
-
 ### Authentication Techniques
 
-There are many types and technique used in authentication, these methods can be categorized into two general types which is **session-based authentication** and **token-based authentication**.
+Many types and techniques are used to implement authentication system, these methods can be categorized into two general types which are **session-based authentication** and **token-based authentication**.
 
 #### Session-based Authentication
 

@@ -19,7 +19,6 @@ Backend development is the process of creating a backend system, which is the se
   - [Webhook](backend-system/webhook)
   - [WebSocket](backend-system/websocket)
 - [Authentication](backend-system/authentication)
-- [Authentication Technique](backend-system/authentication-technique)
 - [Authorization](backend-system/authorization)
 - [Search Engine](backend-system/search-engine)
 - [Message Broker](backend-system/message-broker)

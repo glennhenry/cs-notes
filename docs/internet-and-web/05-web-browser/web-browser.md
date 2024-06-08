@@ -14,7 +14,7 @@ A web browser, is a software application used to access and view websites and ot
 
 - **Connect to Server** : Browsers connects a server or website first by sending a [web address or URL (Uniform Resource Locator)](/internet-and-web/web-url) entered by user to [DNS](/computer-networking/dns) to find the [IP address](/computer-networking/ip-address) of the web server that hosts the requested web page.
 - **Communicate with Server** : After that browser will sends a request to the web server for the specific web page or resource that the user requested, using the [HTTP or HTTPS](/computer-networking/http-https) protocol. The web server responds by sending the requested web page or resource back to the browser.
-- **Render Pages** : The received page and resource are then rendered to user, meaning browser will interpret the content of a webpage defined by [HTML, CSS, and JavaScript](/internet-and-web/html-css-javascript) code for the page from the web server and uses a [rendering engine](/internet-and-web/javascript#v8-javascript-engine) to translate that code into a visual representation that can be displayed on the screen.
+- **Render Pages** : The received page and resource are then rendered to user, meaning browser will interpret the content of a webpage defined by [HTML, CSS, and JavaScript](/internet-and-web/javascript#html-css-javascript) code for the page from the web server and uses a [rendering engine](/internet-and-web/javascript#v8-javascript-engine) to translate that code into a visual representation that can be displayed on the screen.
 
 Browser also act as a [JavaScript runtime environment](/internet-and-web/javascript#javascript-run-time-environment) which is where JavaScript will be executed. Browser provides component such as event loop and able to schedule asynchronous operations, such as making an HTTP request.
 
@@ -24,7 +24,7 @@ The rendering process involves 2 steps :
 
 #### DOM Creation
 
-HTML code is parsed to create [DOM (Document Object Model)](/internet-and-web/html-dom), this process is broken down into 3 steps :
+HTML code is parsed to create [DOM](/internet-and-web/html#html-dom), this process is broken down into 3 steps :
 
 - **Tokenization** : The browser breaks the HTML code into tokens, which are small units of the code that represent different elements, attributes, and text content.
 - **Lexing** : The browser converts the tokens into a series of nodes, which are the building blocks of the DOM. Each node corresponds to a different element, attribute, or piece of text content in the HTML code.

@@ -54,7 +54,7 @@ Source : https://developer.blackberry.com/devzone/files/blackberry-workspaces/ja
 
 Under the summary, the detail of each method is provided. The detail contains more comprehensive information about the parameters, return values, exceptions, and any additional usage notes or examples.
 
-Here's another example, a [REST API](/backend-development/rest-api) documentation.
+Here's another example, a [REST API](/backend-system/rest-api) documentation.
 
 ![REST API documentation](./rest-api-documentation.png)  
 Source : https://cdn.emnify.net/api/doc/swagger.html
