@@ -49,6 +49,7 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
     - [MP4](digital-media-processing/mp4)
   - Document
     - [XML](digital-media-processing/xml)
+    - [JSON](digital-media-processing/json)
     - [Markdown (MD)](digital-media-processing/markdown-md)
     - [Text File (txt)](digital-media-processing/text-file-txt)
     - [PDF](digital-media-processing/pdf)

@@ -1,15 +1,17 @@
 ---
-slug: /frontend-web-development/css
+slug: /internet-and-web/css
 id: css
 title: CSS
 description: CSS
 ---
 
-**Main Source : [Wikipedia CSS](https://en.wikipedia.org/wiki/CSS)**
+**Main Source :**
 
-CSS stands for Cascading Style Sheets, and it is a stylesheet language used for describing the presentation and formatting of a document written in HTML or XML. CSS separates the presentation of a webpage from its content, allowing designers to define the layout, fonts, colors, and other visual aspects of a webpage without affecting the underlying content.
+- **[CSS - Wikipedia](https://en.wikipedia.org/wiki/CSS)**
 
-CSS file is typically saved with a .css file extension and linked to an HTML document using a `<link>` element in the head section of the HTML file.
+**CSS (Cascading Style Sheets)** is a stylesheet language used for describing the presentation and formatting of a document written in HTML or XML. CSS separates the presentation of a webpage from its content, allowing designers to define the layout, fonts, colors, and other visual aspects of a webpage without affecting the underlying content.
+
+CSS file is typically saved with a `.css` file extension and linked to an HTML document using a `<link>` element in the head section of the HTML file.
 
 CSS works by searching specific HTML elements in the DOM tree and applies styles to elements using a cascading model, which means that multiple styles can apply to the same element, and the final style is determined by a set of rules that prioritize styles based on their specificity, inheritance, and other factors.
 
@@ -50,7 +52,7 @@ When the browser encounters a CSS file linked to an HTML document, it reads the 
 The syntax is :
 
 - Selectors is specified which can be class, ID, attribute, type, or any other selector.
-- Define the style property and value wrapped in curly brackets, CSS has various style property such as `color`, `font-size`, `font-weight`, and etc.
+- Define the style property and value wrapped in curly brackets, CSS has various style property such as `color`, `font-size`, `font-weight`, etc.
 
 For example, if a CSS rule specifies that all `<p>` elements should have a font size of 16 pixels, the browser will apply that style to all `<p>` elements in the DOM tree.
 
@@ -66,7 +68,7 @@ We specify the class name and put a dot behind it `.<class name>`
 ![Applying style to CSS class selector](./css-example.png)  
 Source : https://web.dev/learn/css/selectors/
 
-If we are using id selector, then we will use `#` instead of `.` in front of the HTML selector name.
+If we are using ID selector, then we will use `#` instead of `.` in front of the HTML selector name.
 
 ### CSS Features
 

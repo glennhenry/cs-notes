@@ -7,9 +7,17 @@ description: Index
 
 This page contains all the notes on this site. The structure is similar to the sidebar on the left.
 
-A total of **20** topics, and a total of **377** notes.
+A total of **20** topics, and a total of **370** notes.
 
-1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
+1. [Internet & Web](/internet-and-web) (**7** subtopics)
+    - [HTML](internet-and-web/html)
+    - [CSS](internet-and-web/css)
+    - [JavaScript](internet-and-web/javascript)
+    - [Web URL](internet-and-web/web-url)
+    - [Web Browser](internet-and-web/web-browser)
+    - [Search Engine](internet-and-web/search-engine)
+    - [Web Hosting](internet-and-web/web-hosting)
+2. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
     - Fourier Analysis
       - [Fourier Series](digital-signal-processing/fourier-series)
@@ -31,7 +39,7 @@ A total of **20** topics, and a total of **377** notes.
       - [Filtering](digital-signal-processing/filtering)
       - [Compression](digital-signal-processing/compression)
       - [Denoising](digital-signal-processing/denoising)
-2. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (**19** subtopics)
+3. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (**19** subtopics)
     - Computer Representation
       - [Number System](computer-and-programming-fundamentals/number-system)
       - [Binary Representation](computer-and-programming-fundamentals/binary-representation)
@@ -59,7 +67,7 @@ A total of **20** topics, and a total of **377** notes.
       - [Interpreter](computer-and-programming-fundamentals/interpreter)
       - [Runtime Environment](computer-and-programming-fundamentals/runtime-environment)
     - [Computer & Programming Terminology](computer-and-programming-fundamentals/computer-and-programming-terminology)
-3. [Digital Media Processing](/digital-media-processing) (**31** subtopics)
+4. [Digital Media Processing](/digital-media-processing) (**32** subtopics)
     - Image Processing
       - [Image Properties](digital-media-processing/image-properties)
       - [Image Enhancement](digital-media-processing/image-enhancement)
@@ -96,10 +104,11 @@ A total of **20** topics, and a total of **377** notes.
         - [MP4](digital-media-processing/mp4)
       - Document
         - [XML](digital-media-processing/xml)
+        - [JSON](digital-media-processing/json)
         - [Markdown (MD)](digital-media-processing/markdown-md)
         - [Text File (txt)](digital-media-processing/text-file-txt)
         - [PDF](digital-media-processing/pdf)
-4. [Computer Networking](/computer-networking) (**37** subtopics)
+5. [Computer Networking](/computer-networking) (**37** subtopics)
     - Network Standard
       - [OSI Model](computer-networking/osi-model)
       - [TCP/IP Model](computer-networking/tcp-ip-model)
@@ -145,7 +154,7 @@ A total of **20** topics, and a total of **377** notes.
     - [Network Security](computer-networking/network-security)
     - [Network Encryption](computer-networking/network-encryption)
     - [Networking Command](computer-networking/networking-command)
-5. [Data Structures & Algorithms](/data-structures-and-algorithms) (**27** subtopics)
+6. [Data Structures & Algorithms](/data-structures-and-algorithms) (**27** subtopics)
     - [Analysis of Algorithms](data-structures-and-algorithms/analysis-of-algorithms)
     - Data Structures
       - [Array](data-structures-and-algorithms/array)
@@ -178,7 +187,7 @@ A total of **20** topics, and a total of **377** notes.
           - [Union Find](data-structures-and-algorithms/union-find)
           - [Topological Sort](data-structures-and-algorithms/topological-sort)
           - [Minimum Spanning Tree](data-structures-and-algorithms/minimum-spanning-tree)
-6. [Computer Organization & Architecture](/computer-organization-and-architecture) (**12** subtopics)
+7. [Computer Organization & Architecture](/computer-organization-and-architecture) (**12** subtopics)
     - [COA Fundamentals](computer-organization-and-architecture/coa-fundamentals)
     - [Boolean Logic](computer-organization-and-architecture/boolean-logic)
     - CPU
@@ -193,7 +202,7 @@ A total of **20** topics, and a total of **377** notes.
       - [Harvard](computer-organization-and-architecture/harvard)
       - [ISA](computer-organization-and-architecture/isa)
     - [Other Processing Units](computer-organization-and-architecture/other-processing-units)
-7. [Operating System](/operating-system) (**24** subtopics)
+8. [Operating System](/operating-system) (**24** subtopics)
     - [OS Fundamentals](operating-system/os-fundamentals)
     - [Kernel](operating-system/kernel)
     - [Process Management](operating-system/process-management)
@@ -219,7 +228,7 @@ A total of **20** topics, and a total of **377** notes.
       - [Windows](operating-system/windows)
       - [Android](operating-system/android)
       - [macOS & iOS](operating-system/macos-and-ios)
-8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**11** subtopics)
+9. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**11** subtopics)
     - [TOC Fundamentals](theory-of-computation-and-automata/toc-fundamentals)
     - [Finite Automata](theory-of-computation-and-automata/finite-automata)
     - [Regular Languages (Part 1)](theory-of-computation-and-automata/regular-languages-part-1)
@@ -231,7 +240,7 @@ A total of **20** topics, and a total of **377** notes.
     - [Turing Machine](theory-of-computation-and-automata/turing-machine)
     - [Undecidability](theory-of-computation-and-automata/undecidability)
     - [Complexity Theory](theory-of-computation-and-automata/complexity-theory)
-9. [Compilers & Programming Languages](/compilers-and-programming-languages) (**19** subtopics)
+10. [Compilers & Programming Languages](/compilers-and-programming-languages) (**19** subtopics)
     - [CPL Fundamentals](compilers-and-programming-languages/cpl-fundamentals)
     - Compiler Frontend
       - [Syntax](compilers-and-programming-languages/syntax)
@@ -255,7 +264,7 @@ A total of **20** topics, and a total of **377** notes.
       - [Logic Languages](compilers-and-programming-languages/logic-languages)
       - [Concurrency](compilers-and-programming-languages/concurrency)
       - [Scripting Languages](compilers-and-programming-languages/scripting-languages)
-10. [Database System](/database-system) (**15** subtopics)
+11. [Database System](/database-system) (**15** subtopics)
     - [Relational Data](database-system/relational-data)
     - [Query Language](database-system/query-language)
     - Database Management
@@ -274,7 +283,7 @@ A total of **20** topics, and a total of **377** notes.
       - [Index Implementation](database-system/index-implementation)
       - [Query Processing](database-system/query-processing)
       - [Query Compiler](database-system/query-compiler)
-11. [Computer Graphics](/computer-graphics) (**23** subtopics)
+12. [Computer Graphics](/computer-graphics) (**23** subtopics)
     - [Computer Images (Part 1)](computer-graphics/computer-images-part-1)
     - [Computer Images (Part 2)](computer-graphics/computer-images-part-2)
     - [2D Transformation](computer-graphics/2d-transformation)
@@ -298,22 +307,6 @@ A total of **20** topics, and a total of **377** notes.
     - [Computer Animation](computer-graphics/computer-animation)
     - [Physics-Based Animation](computer-graphics/physics-based-animation)
     - [Simulation](computer-graphics/simulation)
-12. [Frontend Web Development](/frontend-web-development) (**15** subtopics)
-    - [HTML](frontend-web-development/html)
-    - [HTML DOM](frontend-web-development/html-dom)
-    - [CSS](frontend-web-development/css)
-    - [Javascript](frontend-web-development/javascript)
-    - [JSON](frontend-web-development/json)
-    - [HTML + CSS + Javascript](frontend-web-development/html-css-javascript)
-    - [Web URL](frontend-web-development/web-url)
-    - [Web Browser](frontend-web-development/web-browser)
-    - [Search Engine](frontend-web-development/search-engine)
-    - [Static & Dynamic Site](frontend-web-development/static-and-dynamic-site)
-    - [Web Hosting](frontend-web-development/web-hosting)
-    - [Node JS](frontend-web-development/node-js)
-    - [NPM (Node Package Manager)](frontend-web-development/npm)
-    - [React JS](frontend-web-development/react-js)
-    - [Docker & Kubernetes](frontend-web-development/docker-and-kubernetes)
 13. [Backend Development](/backend-development) (**22** subtopics)
     - [Web Server](backend-development/web-server)
     - APIs

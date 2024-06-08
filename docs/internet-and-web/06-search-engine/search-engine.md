@@ -1,5 +1,5 @@
 ---
-slug: /frontend-web-development/search-engine
+slug: /internet-and-web/search-engine
 id: search-engine
 title: Search Engine
 description: Search Engine
@@ -18,7 +18,7 @@ These search engines have to determine the relevance of a web page to a particul
 
 Search engine involves several processes :
 
-1. **Crawling** : The first step in the search engine process is crawling. Crawling is the process by which search engines look into web pages. Search engines use automated software known as "spiders" or "bots" to crawl the web and follow links from one page to another. They start with a list of [URLs](/frontend-web-development/web-url) and follow any hyperlinks [recursively](/data-structures-and-algorithms/recursion) that exist within each page. The bots collect information about each page they crawl, such as the page title, meta tags, and content. Some website also have `robots.txt` which is a file containing directives for search spiders, telling it which pages to crawl and which pages not to crawl. The bots will stop the crawling process until it meets certain rules, such as enough number of pages, amount of data indexed, or time spent on that website.
+1. **Crawling** : The first step in the search engine process is crawling. Crawling is the process by which search engines look into web pages. Search engines use automated software known as "spiders" or "bots" to crawl the web and follow links from one page to another. They start with a list of [URLs](/internet-and-web/web-url) and follow any hyperlinks [recursively](/data-structures-and-algorithms/recursion) that exist within each page. The bots collect information about each page they crawl, such as the page title, meta tags, and content. Some website also have `robots.txt` which is a file containing directives for search spiders, telling it which pages to crawl and which pages not to crawl. The bots will stop the crawling process until it meets certain rules, such as enough number of pages, amount of data indexed, or time spent on that website.
 
    :::note
    The crawling process may be repeated every period of times based on certain policy (e.g., a fixed time such as every 2 weeks) because of the dynamic nature of internet that changes its content frequently.

@@ -1,11 +1,13 @@
 ---
-slug: /frontend-web-development/web-url
+slug: /internet-and-web/web-url
 id: web-url
 title: Web URL
 description: Web URL
 ---
 
-**Main Source : [Wikipedia URL](https://en.wikipedia.org/wiki/URL)**
+**Main Source :**
+
+- **[URL - Wikipedia](https://en.wikipedia.org/wiki/URL)**
 
 **URL (Uniform Resource Locator)** also the same as **web address** is a string of characters that identifies a web page or resource on the internet. URL provide a standard way of identifying and accessing resources on the internet also is flexible enough to accommodate a wide range of resource types, while also being easy to parse and interpret by software.
 
@@ -30,7 +32,7 @@ The syntax of a URL consists of several parts, separated by special characters. 
 
 - **Query String** : The query string is an optional string of parameters that can be appended to the end of the URL, separated by a question mark. It is used to provide additional information or data to the server, such as search terms or user preferences. The query string consists of one or more key-value pairs, separated by an ampersand `&`, and each key-value pair is separated by an equals sign `=`. For example, `?id=1234&name=example` might represent a query string with two parameters, `id` and `name`, with values of `1234` and `example`, respectively.
 
-- **Fragment** : The fragment is an optional component of a URL that specifies a specific location or section within a web page. It is indicated by a hash symbol `#` followed by the name of the anchor or section. The fragment is used to provide a direct link to a specific section of a web page, such as a heading or paragraph, and it can be useful for navigating long or complex pages. For example, clicking [this](/frontend-web-development/web-url#url-syntax) will take you the the beginning of this lists.
+- **Fragment** : The fragment is an optional component of a URL that specifies a specific location or section within a web page. It is indicated by a hash symbol `#` followed by the name of the anchor or section. The fragment is used to provide a direct link to a specific section of a web page, such as a heading or paragraph, and it can be useful for navigating long or complex pages. For example, clicking [this](/internet-and-web/web-url#url-syntax) will take you the the beginning of this lists.
 
 This is an example URL that brings them all together :
 `https://www.example.com:8080/path/to/resource.html?id=1234&name=example#section1`

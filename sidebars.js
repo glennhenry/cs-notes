@@ -217,6 +217,7 @@ const sidebars = {
               label: "Document",
               items: [
                 "digital-media-processing/xml/xml",
+                "digital-media-processing/json/json",
                 "digital-media-processing/markdown-md/markdown-md",
                 "digital-media-processing/text-file-txt/text-file-txt",
                 "digital-media-processing/pdf/pdf",
@@ -619,30 +620,22 @@ const sidebars = {
       ],
     },
 
-    // 12. Frontend Web Development
+    // 12. Internet & Web
     {
       type: "category",
-      label: "Frontend Web Development",
+      label: "Internet & Web",
       link: {
         type: "doc",
-        id: "frontend-web-development/frontend-web-development",
+        id: "internet-and-web/internet-and-web",
       },
       items: [
-        "frontend-web-development/html/html",
-        "frontend-web-development/html-dom/html-dom",
-        "frontend-web-development/css/css",
-        "frontend-web-development/javascript/javascript",
-        "frontend-web-development/json/json",
-        "frontend-web-development/html-css-javascript/html-css-javascript",
-        "frontend-web-development/web-url/web-url",
-        "frontend-web-development/web-browser/web-browser",
-        "frontend-web-development/search-engine/search-engine",
-        "frontend-web-development/static-and-dynamic-site/static-and-dynamic-site",
-        "frontend-web-development/web-hosting/web-hosting",
-        "frontend-web-development/node-js/node-js",
-        "frontend-web-development/npm/npm",
-        "frontend-web-development/react-js/react-js",
-        "frontend-web-development/docker-and-kubernetes/docker-and-kubernetes",
+        "internet-and-web/html/html",
+        "internet-and-web/css/css",
+        "internet-and-web/javascript/javascript",
+        "internet-and-web/web-url/web-url",
+        "internet-and-web/web-browser/web-browser",
+        "internet-and-web/search-engine/search-engine",
+        "internet-and-web/web-hosting/web-hosting",
       ],
     },
 
