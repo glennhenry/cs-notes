@@ -14,49 +14,56 @@ description: JavaScript
 - **[npm - Wikipedia](https://en.wikipedia.org/wiki/Npm)**
 - **[React (software) - Wikipedia](<https://en.wikipedia.org/wiki/React_(software)>)**
 
-**JavaScript** is a high-level programming language first introduced in 1995, it is mostly used for web development. JavaScript was specifically created to be run in web browsers, which means it can integrate with the browser and access the [DOM (Document Object Model)](/internet-and-web/html#html-dom) to change or manipulate it such as adding or deleting elements, changing style like color, modify content and etc.
+**JavaScript** is a high-level programming language first introduced in 1995, it is mostly used for web development. JavaScript was specifically created to be run in web browsers, which means it can integrate with the browser and access the [DOM](/internet-and-web/html#html-dom) to change or manipulate it such as adding or deleting elements, changing style like color, modify content, etc.
 
 JavaScript is based on ECMAScript (ES) which is a scripting language specification or the standard that defines JavaScript language. JavaScript is now based on the ES6 (ECMAScript 2015) which was released in 2015.
 
 ### V8 JavaScript Engine
 
-JavaScript is an interpreted language meaning that it is executed line-by-line at runtime rather than being compiled before execution. JavaScript code is executed by a **JavaScript engine** which is typically included in web browsers.
+JavaScript is a [just-in-time (JIT) compiled language](/computer-and-programming-fundamentals/interpreter#jit-compilation), meaning that JavaScript source code is compiled into machine code line-by-line when it is going to be executed, rather than a compiled language, which require a compilation of all code before code execution.
 
-One of a JavaScript engine is V8 which was developed by Google and is used in Google Chrome. The V8 engine is a just-in-time (JIT) compiler that compiles JavaScript code into machine code at runtime. The engine consists of several components that work together to execute JavaScript code efficiently :
+JavaScript code is executed by a JavaScript engine, which is typically included in web browsers. One of JavaScript engine is the **V8** (so it's a JIT compiler), which was developed by Google and is used in Google Chrome browser. The engine consists of several components that work together to execute JavaScript code efficiently :
 
-1. **Parsing and Bytecode Generation** : The first step is V8 engine parse JavaScript and turns it into an abstract syntax tree (AST) which is a tree-like data structure that represents the abstract syntactic structure of a program in a programming language. The parser checks the syntax of the code for correctness and creates a tree structure that represents the structure of the code.  
+1. **Parsing and Bytecode Generation** : The first step is V8 engine parse JavaScript and turns it into an abstract syntax tree (AST) which is a tree-like data structure that represents the abstract syntactic structure of a program in a programming language. The parser checks the syntax of the code for correctness and creates a tree structure that represents the structure of the code.
+
    After it's parsed, bytecode is generated and will be interpreted in the next step.
 
    ![Abstract syntax tree breaking up code into small expression](./abstract-syntax-tree.png)  
     Source : https://en.wikipedia.org/wiki/Abstract_syntax_tree
 
 2. **Interpreter** : Once AST has been created, V8 engine executes the code using an interpreter called Ignition reading the codes line by line following the control flow.
-
 3. **Profiler & Optimizer** : V8 engine includes a profiler that collects information about how the code is being executed. The information collected by the profiler, the V8 engine uses an optimizing compiler to generate more efficient machine code.
-
 4. **Hidden Class** : Hidden Class is one of the optimization technique to improves the performance of object creation. V8 generates a class based on the structure of the objects we create in our JavaScript code. JavaScript is a dynamic language which means variables, data types, and function calls are evaluated and executed at runtime. This can slow down the process of accessing properties, because the engine need to do type checks. Hidden classes provide certainty for the engine about the types of object properties which can improve efficiency of property accessing and object creation.
-
-5. **Garbage Collector** : V8 engine manages memory allocation and deallocation using a garbage collector. The garbage collector identifies objects that are no longer needed by the code and deallocates the memory they occupy.
-
+5. **Garbage Collector** : V8 engine manages memory allocation and deallocation using a garbage collector. The garbage collector identifies objects that are no longer needed by the code and deallocate the memory they occupy.
 6. **Code Generation** : After everything is parsed and optimized, the code is compiled into machine code by the V8 engine's compiler. The machine code is then executed directly by the CPU, which results in faster execution times compared to interpreting the bytecode.
+
+:::info
+More about [general compilation process](/computer-and-programming-fundamentals/compilation).
+:::
 
 ### JavaScript Run-Time Environment
 
-JavaScript relies on run-time environment for managing the execution of JavaScript code. JavaScript runs on a single-threaded environment which means it can only execute one task at a time. JavaScript uses **call stack** which is a data structure that keeps track of the currently executing functions in the JavaScript call hierarchy.
+JavaScript relies on run-time environment for managing the execution of JavaScript code. JavaScript runs on a single-threaded environment which means it can only execute one task at a time. JavaScript uses [call stack](/compilers-and-programming-languages/subroutines#call-stack) which is a data structure that keeps track of the currently executing functions in the JavaScript call hierarchy.
 
-The environment also includes **callback queue** which is a data structure that holds callback functions that are waiting to be executed such as asynchronous events like waiting for user input or making a network call.
+The environment also includes **callback queue** which is a [queue-like data structure](/data-structures-and-algorithms/queue) that holds callback functions that are waiting to be executed such as asynchronous events like waiting for user input or making a network call.
 
-Another mechanism to manages the execution is the **event loop**. When the call stack is empty, the event loop checks the callback queue for new events. If there is a callback function waiting in the queue, the event loop retrieves the function and adds it to the call stack for execution. This allows JavaScript to handle asynchronous events without blocking the execution of other code.
+Another mechanism to manage the execution is the **event loop**. When the call stack is empty, the event loop checks the callback queue for new events. If there is a callback function waiting in the queue, the event loop retrieves the function and adds it to the call stack for execution. This allows JavaScript to handle asynchronous events without blocking the execution of other code.
 
 ![JavaScript event loops consisting call stack, callback queue and the web API](./event-loop.png)
+
+:::note
+The execution of JavaScript code is [event-driven](/cloud-computing-and-distributed-systems/event-driven), meaning it does thing whenever an event occur.
+:::
 
 #### Node JS
 
 **Node.js** is a JavaScript runtime environment that allows developers to run JavaScript on the server-side.
 
-JavaScript is a client-side language, meaning that it runs in the context of a web browser on the client-side (i.e., the user's computer). However, with Node.js which provide runtime environment, developers can also run JavaScript code on the server-side.
+JavaScript is a client-side language, meaning that it runs in the context of a web browser on the client-side (i.e., the user's computer). However, with Node.js which provide runtime environment, developers can also run JavaScript code on the server-side (not by running browser on the server).
 
-Node.js is able to make JavaScript to run on server because it uses V8 engine which is the same engine used by Google Chrome in the client-side to run JavaScript. Node.js instead uses this engine to run JavaScript on server.
+Node.js is able to make JavaScript to run on server because it provides a runtime environment, including a V8 engine, which is the same engine used by Google Chrome in the client-side to run JavaScript. Node.js instead uses this engine to run JavaScript on server.
+
+Node JS works by ... (TBA)
 
 ##### Node JS Features
 
@@ -67,11 +74,13 @@ Node.js uses an event-driven, non-blocking I/O model, single event loop to handl
 ![Shows how Node JS provide space from JS file to be executed with the helps of event loop and callback queue](./node-js.png)  
 Source : https://www.freecodecamp.org/news/what-exactly-is-node-guide-for-beginners/
 
-**NPM (short for Node Package Manager)** is a [package manager](/software-engineering/build-and-package-management) for the JavaScript programming language also as the default package manager for [Node JS](#node-js). It is primarily used for managing and sharing packages of reusable code that can be easily integrated into web applications.
+### NPM
+
+**npm (Node Package Manager)** is a [package manager](/software-engineering/build-and-package-management) for the JavaScript programming language and also as the default package manager for [Node JS](#node-js). It is primarily used for managing and sharing packages of reusable code that can be easily integrated into web applications.
 
 NPM provides a command-line interface (CLI) for working with packages and managing dependencies. When you need specific library or packages for your web app, developers can use the npm command to install packages from the NPM registry, which is a public repository of packages that can be easily searched and browsed.
 
-### Dependencies
+#### Dependencies
 
 A dependency is a requirement that one piece of code has on another piece of code to function properly. If a web app uses specific library, the library will be included in the packages.
 

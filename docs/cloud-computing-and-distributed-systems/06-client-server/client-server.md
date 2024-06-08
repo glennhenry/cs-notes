@@ -14,7 +14,7 @@ description: Client-Server
 ![Client requests a webpage](./client-server.png)  
 Source : https://www.scaler.com/topics/nodejs/client-server-architecture/
 
-One of the biggest application that uses client-server model is the **World Wide Web (WWW or the web)**. For example, when we open a website from our browser, we are essentially sending a request to a server. The browser act as the client that requests to that server. In the case of opening a website, we are requesting webpage resources ([HTML, CSS, JavaScript code](/internet-and-web/javascript#html-css-javascript)), which the browser will use to show us the website. The server is run by the organization or individual responsible for hosting the website or providing the service.
+One of the biggest application that uses client-server model is the **World Wide Web (WWW or the web)**. For example, when we open a website from our browser, we are essentially sending a request to a server. The browser act as the client that requests to that server. In the case of opening a website, we are requesting webpage resources ([HTML, CSS, JavaScript code](/internet-and-web/javascript#html--css--javascript)), which the browser will use to show us the website. The server is run by the organization or individual responsible for hosting the website or providing the service.
 
 ### Communication
 
