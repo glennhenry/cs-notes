@@ -26,7 +26,7 @@ HTML Selectors are used to identify each HTML elements, this includes :
 
 ### CSS Selectors
 
-CSS selectors are used to apply styles to specific elements or groups of elements on a webpage and it often uses HTML Selectors to identify the elements. There are many types of CSS selectors, including :
+CSS selectors are used to apply styles to specific elements or groups of elements on a webpage, and it often uses HTML Selectors to identify the elements. There are many types of CSS selectors, including :
 
 - **Type Selectors** : These selectors target elements of a specific type, such as `<p>` or `<h1>`.
 - **Class Selectors** : These selectors target elements with a specific class attribute.
@@ -51,7 +51,7 @@ When the browser encounters a CSS file linked to an HTML document, it reads the 
 
 The syntax is :
 
-- Selectors is specified which can be class, ID, attribute, type, or any other selector.
+- Selectors are specified which can be class, ID, attribute, type, or any other selector.
 - Define the style property and value wrapped in curly brackets, CSS has various style property such as `color`, `font-size`, `font-weight`, etc.
 
 For example, if a CSS rule specifies that all `<p>` elements should have a font size of 16 pixels, the browser will apply that style to all `<p>` elements in the DOM tree.
@@ -62,8 +62,7 @@ p {
 }
 ```
 
-This image below shows how style is applied using class selectors.  
-We specify the class name and put a dot behind it `.<class name>`
+This image below shows how style is applied using class selectors. We specify the class name and put a dot behind it `.<class name>`.
 
 ![Applying style to CSS class selector](./css-example.png)  
 Source : https://web.dev/learn/css/selectors/
@@ -91,13 +90,14 @@ CSS supports many feature such as :
   }
   ```
 
-- **Flexbox and Grid** : These are two layout models that allow you to create complex and flexible layouts for webpages. Flexbox is designed for one-dimensional layouts, such as rows or columns, while Grid is designed for two-dimensional layouts, such as grids.
+- **Flex box and Grid** : These are two layout models that allow you to create complex and flexible layouts for webpages. Flex box is designed for one-dimensional layouts, such as rows or columns, while Grid is designed for two-dimensional layouts, such as grids.
 
-  ![Using Flexbox for one dimension layout and Grid for two dimension layout](./flexbox-grid.png)  
+  ![Using Flex box for one dimension layout and Grid for two dimension layout](./flexbox-grid.png)  
   Source : https://codepolitan.com/blog/css-grid-vs-flexbox-5b4336849183d
 
-- **Transition and Animation** : CSS transitions and animations allow you to create dynamic and interactive effects, such as hover effects, fade-ins, slide-outs, and more. Transitions and animations can be applied to various style properties, such as color, position, size, and opacity.  
-  Transition can be defined by specifying transition effect and the duration while animation can be defined using keyframes.
+- **Transition and Animation** : CSS transitions and animations allow you to create dynamic and interactive effects, such as hover effects, fade-ins, slide-outs, and more. Transitions and animations can be applied to various style properties, such as color, position, size, and opacity.
+
+  Transition can be defined by specifying transition effect and the duration while animation can be defined using key frames.
 
   ```css
   /* Will make opacity transition in exactly 1 second and uses easing function which 

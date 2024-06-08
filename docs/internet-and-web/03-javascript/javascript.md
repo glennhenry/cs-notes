@@ -1,6 +1,6 @@
 ---
-slug: /internet-and-web/JavaScript
-id: JavaScript
+slug: /internet-and-web/javascript
+id: javascript
 title: JavaScript
 description: JavaScript
 ---
@@ -9,7 +9,7 @@ description: JavaScript
 
 - **[JavaScript - Wikipedia](https://en.wikipedia.org/wiki/JavaScript)**
 - **[V8 (JavaScript Engine) - Wikipedia](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>)**
-- **[V8 Hidden Classes by Chameera Dulanga - Medium](https://blog.bitsrc.io/secret-behind-JavaScript-performance-v8-hidden-classes-ba4d0ebfb89d)**
+- **[V8 Hidden Classes by Chameera Dulanga - Medium](https://blog.bitsrc.io/secret-behind-javascript-performance-v8-hidden-classes-ba4d0ebfb89d)**
 - **[Node JS - Wikipedia](https://en.wikipedia.org/wiki/Node.js)**
 - **[npm - Wikipedia](https://en.wikipedia.org/wiki/Npm)**
 - **[React (software) - Wikipedia](<https://en.wikipedia.org/wiki/React_(software)>)**
@@ -27,7 +27,7 @@ One of a JavaScript engine is V8 which was developed by Google and is used in Go
 1. **Parsing and Bytecode Generation** : The first step is V8 engine parse JavaScript and turns it into an abstract syntax tree (AST) which is a tree-like data structure that represents the abstract syntactic structure of a program in a programming language. The parser checks the syntax of the code for correctness and creates a tree structure that represents the structure of the code.  
    After it's parsed, bytecode is generated and will be interpreted in the next step.
 
-   ![Abstract syntax tree broking up code into small expression](./abstract-syntax-tree.png)  
+   ![Abstract syntax tree breaking up code into small expression](./abstract-syntax-tree.png)  
     Source : https://en.wikipedia.org/wiki/Abstract_syntax_tree
 
 2. **Interpreter** : Once AST has been created, V8 engine executes the code using an interpreter called Ignition reading the codes line by line following the control flow.
@@ -62,7 +62,7 @@ Node.js is able to make JavaScript to run on server because it uses V8 engine wh
 
 Node.js also provides a collection of modules related to server such as file system I/O, networking (DNS, HTTP, TCP, TLS/SSL, or UDP), binary data (buffers), cryptography functions, data streams, and other core functions.
 
-Node.js uses an event-driven, non-blocking I/O model, single event loop to handle incoming requests. This means that instead of waiting for a request to complete before moving on to the next one, Node.js processes incoming requests in an asynchronous manner. Node.js registers a callback function, meaning another task will be executed once the currently executing task is completed.
+Node.js uses an event-driven, non-blocking I/O model, single event loop to handle incoming requests. This means that instead of waiting for a request to complete before moving on to the next one, Node.js processes incoming requests asynchronously. Node.js registers a callback function, meaning another task will be executed once the currently executing task is completed.
 
 ![Shows how Node JS provide space from JS file to be executed with the helps of event loop and callback queue](./node-js.png)  
 Source : https://www.freecodecamp.org/news/what-exactly-is-node-guide-for-beginners/
@@ -79,7 +79,7 @@ When a package is installed, NPM automatically resolves and installs any depende
 
 #### package.json
 
-`package.json` is the file used in Node.js projects to define the metadata, dependencies, and scripts for the project. NPM will reads the dependencies property in package.json and downloads and installs the listed modules and all their dependencies.
+`package.json` is the file used in Node.js projects to define the metadata, dependencies, and scripts for the project. NPM will read the dependencies' property in `package.json` and downloads and installs the listed modules and all their dependencies.
 
 Here is an example package.json file :
 
@@ -111,12 +111,12 @@ Source : https://medium.com/helpshift-engineering/package-lock-json-the-complete
 
 HTML, CSS, and JavaScript are three different technologies that work together to create modern web applications.
 
-- HTML (Hypertext Markup Language) define the structure and content of a web page. It consists of a series of elements that define the various parts of a web page, such as headings, paragraphs, images, and links.
-- CSS (Cascading Style Sheets) is used to style and layout the content created with HTML. It allows developers to control the visual presentation of a web page, including its colors, fonts, spacing, and layout.
+- [HTML](/internet-and-web/html) defines the structure and content of a web page. It consists of a series of elements that define the various parts of a web page, such as headings, paragraphs, images, and links.
+- [CSS](/internet-and-web/css) is used to style and layout the content created with HTML. It allows developers to control the visual presentation of a web page, including its colors, fonts, spacing, and layout.
 - JavaScript is used to add interactivity and dynamic functionality for the behavior of a web application. It allows developers to create interactive elements such as dropdown menus, sliders, and pop-up windows, and to perform actions in response to user input.
 
-  ![Analogy of HTML, CSS and JavaScript as car component includes the structure, style, and functionality](./html-css-JavaScript-analogy.png)  
-   Source : https://scrimba.com/articles/html-css-JavaScript/
+  ![Analogy of HTML, CSS and JavaScript as car component includes the structure, style, and functionality](./html-css-javascript-analogy.png)  
+   Source : https://scrimba.com/articles/html-css-javascript/
 
 #### DOM Manipulation
 
@@ -130,7 +130,7 @@ For example consider the following code that shows how JavaScript access an elem
 <div id="myDiv">Hello, world!</div>
 ```
 
-```JavaScript
+```javascript
 // Get the element with the ID "myDiv"
 var myDiv = document.getElementById("myDiv");
 
@@ -146,7 +146,7 @@ DOM manipulation with JavaScript can do a lot of things to a web page, including
 - Modify style with `.style` followed by the style element such as `backgroundColor`.
 - Creating new elements and adding them to the DOM like below :
 
-  ```JavaScript
+  ```javascript
   var newParagraph = document.createElement("p");
   newParagraph.textContent = "This is a new paragraph.";
   document.body.appendChild(newParagraph);
@@ -154,7 +154,7 @@ DOM manipulation with JavaScript can do a lot of things to a web page, including
 
 And many other methods and techniques…
 
-### JQuery
+### jQuery
 
 TBA
 
@@ -166,7 +166,7 @@ React allows developer to use JavaScript with HTML-like code, this is called JSX
 
 React uses a declarative syntax to define the UI, which means that developers describe what the UI should look like and React takes care of updating the actual UI as necessary. This is achieved by making a virtual DOM, React generates a virtual representation of the actual DOM. This virtual DOM is a lightweight copy of the actual DOM and is used to keep track of the state of the UI.
 
-![Example of react component video that contains thumbnail and like button with the parameter such as title, url, and description](./react-example.png)  
+![Example of react component video that contains thumbnail and like button with the parameter such as title, URL, and description](./react-example.png)  
 Source : https://react.dev/
 
 #### React State
@@ -185,12 +185,12 @@ After writing HTML and JavaScript code in a JSX file, React will render this and
 
 When the state of a React component changes, React uses diffing algorithm to check which component has changed. This is an efficient way to only make the necessary changes, after this React generates a new virtual DOM tree that represents the updated state of the UI.
 
-![Virtual dom tree computing diff based on state change and re-render the component](./virtual-dom.webp)  
+![Virtual DOM tree computing diff based on state change and re-render the component](./virtual-dom.webp)  
 Source : https://programmingwithmosh.com/react/react-virtual-dom-explained/
 
 #### Lifting State Up & React Props
 
-When developing a web app we will try to breaks the UI down into smaller component, often times a child component has some data that other child component needs it. These child component can't communicate directly, a way to solve this is to **lift the state up**. This mean we will store the data to the closest common ancestor of the components that need it.
+When developing a web app we will try to break the UI down into smaller component, often times a child component has some data that other child component needs it. These children component can't communicate directly, a way to solve this is to **lift the state up**. This mean we will store the data to the closest common ancestor of the components that need it.
 
 ![Chosen.js needs data from Dropdown.js which is passed from App.js, the parent of both component](./state-lifting.jpeg)  
 Source : https://dev.to/lauratoddcodes/a-really-simple-intro-to-lifting-state-in-react-1fli
@@ -221,7 +221,7 @@ function ClickCountButton() {
 }
 ```
 
-In this example, we made a button and a text that should displays the click count. However, the `ClickCountDisplay` doesn't know how many clicks are now, because the click count is stored in the button.
+In this example, we made a button and a text that should display the click count. However, the `ClickCountDisplay` doesn't know how many clicks are now, because the click count is stored in the button.
 
 The solution for this is to make a parent that holds the state and pass the required data.
 
@@ -264,7 +264,7 @@ function ClickCountButton({ onClick }) {
 
 When a state changes, React only updates the UI. Often times there's something in our web app that we also want to update every time a state changes. For example, we want to always back up user data in local storage. This is called side effect, any code that is not related to rendering your component, but that needs to be executed as a result of some state or prop changes.
 
-We can achieve this using react `useEffect`, this will allow you to run some code in your functional components after every render.
+We can achieve this using react `useEffect`, this allows you to run some code in your functional components after every render.
 
 ![React use effect runs after component is re-rendered after state changes](./react-use-effect.png)  
 Source : https://www.memberstack.com/blog/uselayouteffect-vs-useeffect

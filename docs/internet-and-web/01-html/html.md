@@ -53,18 +53,18 @@ DOM is not limited to HTML it is also used in **[Extensible Markup Language (XML
 
 DOM is represented as tree-like structure, with each HTML element represented as a node in the tree and is represented as an object, with properties. The root of the tree is the document object, which represents the entire HTML document.
 
-Objects and properties make each HTML element in the document possible to be accessed and manipulated using JavaScript. For example, the document object has properties such as title and URL, while HTML elements have properties such as innerHTML, className, and style.
+Objects and properties make each HTML element in the document possible to be accessed and manipulated using JavaScript. For example, the document object has properties such as title and URL, while HTML elements have properties such as `innerHTML`, `className`, and `style`.
 
 Developers can use JavaScript to access and modify individual elements in the document, change their attributes and styles, add or remove elements from the document, and respond to user interactions.
 
-See how Javascript access the DOM : [DOM Manipulation](/internet-and-web/html-css-javascript#dom-manipulation)
+See how JavaScript access the DOM : [DOM Manipulation](/internet-and-web/html-css-javascript#dom-manipulation)
 
-![HTML represented in tree structure with html tags as the root and has head and body as children which also contains another children elements such as p, ul, li](./dom-tree.png)  
+![HTML represented in tree structure with HTML tags as the root and has head and body as children which also contains another children elements such as p, ul, li](./dom-tree.png)  
 Source : https://www.tutorialstonight.com/js/js-dom-introduction
 
 #### Nodes Type
 
-There are several different types of nodes in the Document Object Model (DOM), with each type of node representing a different kind of object in an HTML or XML document. Here are the most common types of nodes in the DOM :
+There are several types of nodes in the Document Object Model (DOM), with each type of node representing a different kind of object in an HTML or XML document. Here are the most common types of nodes in the DOM :
 
 - **Element Nodes** : Element nodes represent the actual elements in an HTML or XML document, such as `<div>`, `<p>`, and `<img>`.
 - **Text Nodes** : Text nodes represent the text content of an element, such as the text between two HTML tags.
@@ -87,14 +87,14 @@ The Document Object Model (DOM) has evolved over time, with different versions o
 
 Semantic HTML is the practice of using HTML markup to convey the meaning and structure of content on a web page. Semantic HTML elements, such as `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, and `<footer>`, provide a clear and meaningful structure to web pages.
 
-Using just traditional `div` container would works fine, but using semantic HTML provide a clear and meaningful structure to web pages, which can improve **accessibility**, **search engine optimization (SEO)**, and **user experience**.
+Using just traditional `div` container would work fine, but using semantic HTML provide a clear and meaningful structure to web pages, which can improve accessibility, search engine optimization (SEO) (making it easier for search engine to index our website), etc.
 
 ![Showing how semantic elements use varying tags while non-semantic mostly just use div tags](./semantic-html.png)  
 Source : https://www.semrush.com/blog/semantic-html5-guide/
 
 ### XHTML
 
-**XHTML** stands for Extensible HyperText Markup Language, and it is a markup language that is designed to be a stricter, more standardized version of HTML. XHTML is based on XML, which means that it is syntactically stricter than HTML and conforms to the rules of XML syntax such as element nesting, attribute quoting, and other syntax rules.
+**XHTML (Extensible HyperText Markup Language)**, and it is a markup language that is designed to be a stricter, more standardized version of HTML. XHTML is based on [XML](/digital-media-processing/xml), which means that it is syntactically stricter than HTML and conforms to the rules of XML syntax such as element nesting, attribute quoting, and other syntax rules.
 
 XHTML was developed as a response to the proliferation of non-standard, poorly formed HTML documents on the web, which made it difficult for web browsers to render pages consistently. By adopting XML syntax and enforcing strict rules for document structure and syntax, XHTML aims to create a more consistent and predictable web browsing experience.
 

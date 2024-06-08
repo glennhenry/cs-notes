@@ -47,7 +47,7 @@ When a user requests a page on a dynamic website, the server processes the reque
 
 Dynamic Website can be further classified into two :
 
-- Client-Side : Client-side is similar to static as it doesn't involves server, but in client-side website aren't pre-built, the content are generated on the fly.
+- Client-Side : Client-side is similar to static as it doesn't involve server, but in client-side website aren't pre-built, the content are generated on the fly.
 - Server-Side : Server-side relies on server processing the data and generate the HTML before sending it to the user's browser.
 
 ![Dynamic sites that process data from user and sends back HTML page](./dynamic-site.jpg)  
