@@ -674,8 +674,6 @@ const sidebars = {
             "backend-system/serverless/serverless",
           ],
         },
-        "backend-system/containerization/containerization",
-        "backend-system/docker-kubernetes/docker-kubernetes",
         "backend-system/backend-server-security/backend-server-security",
         "backend-system/caching/caching",
         "backend-system/backend-optimization/backend-optimization",
