@@ -21,7 +21,7 @@ My computer science notes from various online courses, tutorial, books, blogs, W
 - **[Database System](database-system)**
 - **[Computer Graphics](computer-graphics)**
 - **[Internet & Web](internet-and-web)**
-- **[Backend Development](backend-development)**
+- **[Backend System](backend-system)**
 - **[Computer Security](computer-security)**
 - **[Machine Learning](machine-learning)**
 - **[Deep Learning](deep-learning)**
@@ -148,10 +148,10 @@ For simplicity, TODOs are placed here instead of something like GitHub issues.
 4. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#svd-compression -> add svd compression.
 5. **[update]** [/digital-signal-processing/compression](/digital-signal-processing/compression)#bitmap-encoding -> add bitmap encoding as compression.
 6. **[add]** [/digital-media-processing](/digital-media-processing)/iso -> add ISO file format.
-7. **[update]** [/backend-development/websocket](/backend-development/websocket)#data-exchange -> add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
-8. **[update]** [/backend-development/caching](/backend-development/caching) -> move caching to [computer-and-programming-fundamentals](/computer-and-programming-fundamentals), since it is a general topic. Also, add info about cpu cache, backend cache, local cache, and other cache terminology or techniques.
-9. **[update]** [/backend-development/microservice](/backend-development/microservice) -> clarify wrong information.
-10. **[update]** [/backend-development/soa](/backend-development/soa) -> clarify wrong information (its different with microservice).
+7. **[update]** [/backend-system/websocket](/backend-system/websocket)#data-exchange -> add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
+8. **[update]** [/backend-system/caching](/backend-system/caching) -> move caching to [computer-and-programming-fundamentals](/computer-and-programming-fundamentals), since it is a general topic. Also, add info about cpu cache, backend cache, local cache, and other cache terminology or techniques.
+9. **[update]** [/backend-system/microservice](/backend-system/microservice) -> clarify wrong information.
+10. **[update]** [/backend-system/soa](/backend-system/soa) -> clarify wrong information (its different with microservice).
 11. **[add]** [/cloud-computing-and-distributed-systems](/cloud-computing-and-distributed-systems)/distributed-systems-failure-detection-and-recovery -> should add more about distributed failure detection and recovery mechanism.
     - Additional note:
     - replication, redundancy, reassignment, checkpointing, restart.
@@ -159,8 +159,8 @@ For simplicity, TODOs are placed here instead of something like GitHub issues.
     - hot standby server clusters, active-takeover clusters, failover cluster.
 12. **[update]** [/data-structures-and-algorithms/array](/data-structures-and-algorithms/array)#string-as-an-array -> add information about string.
 13. **[update]** [/computer-and-programming-fundamentals/memory](/data-structures-and-algorithms/array)#pointer--references-problems -> add information about pointer and reference problems.
-14. **[add]** [/backend-development](/backend-development)/serialization -> add full topic about serialization, possibly comparing various serialization method such as json, xml, language gnostic, protocol buffer.
-15. **[ref]** [/backend-development/rpc#protocol-buffers](/backend-development/rpc#protocol-buffers) -> ref to the previous serialization method, namely protocol buffer.
+14. **[add]** [/backend-system](/backend-system)/serialization -> add full topic about serialization, possibly comparing various serialization method such as json, xml, language gnostic, protocol buffer.
+15. **[ref]** [/backend-system/rpc#protocol-buffers](/backend-system/rpc#protocol-buffers) -> ref to the previous serialization method, namely protocol buffer.
 16. **[update]** [/data-structures-and-algorithms/hash-table](/data-structures-and-algorithms/hash-table)#log-structured-hash-table -> add log-structured hash table.
 17. **[update]** [/database-system/logging-and-recovery#migration](/database-system/logging-and-recovery#migration) -> add more about migration, particularly how it works.
 18. **[update]** -> [/cloud-computing-and-distributed-systems/distributed-systems-model#consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus) add about Byzantine failures, Two Generals' Problem.

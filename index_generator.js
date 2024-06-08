@@ -76,7 +76,7 @@ const order = [
   "Database System",
   "Computer Graphics",
   "Internet & Web",
-  "Backend Development",
+  "Backend System",
   "Computer Security",
   "Machine Learning",
   "Deep Learning",
