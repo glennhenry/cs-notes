@@ -64,7 +64,7 @@ More about [query processing](/database-system/query-processing) and [query comp
 
 ### Caching
 
-DBMS can introduce [caching](/backend-system/caching) mechanism to improve database queries.
+DBMS can introduce [caching](/computer-and-programming-fundamentals/caching) mechanism to improve database queries.
 
 - **Buffer caching** : Buffer pool is a region of memory that is allocated by the buffer manager as the place to transfer disk blocks. It is basically the "transit" area between the disk storage and the CPU. When query happens, the DBMS may check the buffer pool if the required data is available already.
 - **Query caching** : When a query is executed, the DBMS checks if the same query with the same parameters has been executed before and if the result is already present in the query cache. If the result is found in the cache, it can be directly returned without the need for re-executing the query and accessing the disk, resulting in performance improvement.

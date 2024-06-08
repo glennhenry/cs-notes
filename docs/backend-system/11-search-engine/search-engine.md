@@ -28,7 +28,7 @@ Search engine is a vital component in an application, it should be fast and accu
 
 - **Filtering** : Filtering is a techniques used to filter search results based on specific criteria. Filters allow users to narrow down the search results based on attributes such as category, date range, location, or other custom metadata.
 
-- **[Caching](/backend-system/caching)** : Caching is a technique where frequently accessed search results or frequently executed queries are stored in memory for faster retrieval.
+- **[Caching](/computer-and-programming-fundamentals/caching)** : Caching is a technique where frequently accessed search results or frequently executed queries are stored in memory for faster retrieval.
 
   ![Search operation](./search.png)
 

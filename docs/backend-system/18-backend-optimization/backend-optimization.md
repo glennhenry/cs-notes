@@ -27,7 +27,7 @@ Backend architecture can be scaled to handle increased traffic and load. They ca
 
 ### Server Optimization
 
-- **Server Caching** : Implement caching mechanisms like [Redis caching](/backend-system/caching#type-of-caching) or [reverse proxies](/computer-networking/proxy#reverse-proxy) to store frequently accessed data closer to the server.
+- **Server Caching** : Implement caching mechanisms like [Redis caching](/computer-and-programming-fundamentals/caching#type-of-caching) or [reverse proxies](/computer-networking/proxy#reverse-proxy) to store frequently accessed data closer to the server.
 
 - **[Load Balancing](/software-engineering/system-design#load-balancer)** : Distribute incoming traffic across multiple servers using load balancers, this will reduce the burden of a single server.
 
