@@ -35,8 +35,8 @@ In computer security, a common model to understand goals and principles of compu
 
 To ensure computer systems are not disrupted by malicious actors, **authentication** and **authorization** techniques are employed.
 
-- **[Authentication](/backend-development/authentication)** : Authentication is the process of verifying identity of users attempting to access a computer system. A simple authentication mechanism used in our daily life is the password mechanism.
-- **[Authorization](/backend-development/authorization)** : Authorization is the process of giving appropriate level of access to users. We need to ensure authenticated users are only allowed to perform specific actions. For example, in a blog website, a regular user may not have the permission to delete blog posts or delete other user's comments.
+- **[Authentication](/backend-system/authentication)** : Authentication is the process of verifying identity of users attempting to access a computer system. A simple authentication mechanism used in our daily life is the password mechanism.
+- **[Authorization](/backend-system/authorization)** : Authorization is the process of giving appropriate level of access to users. We need to ensure authenticated users are only allowed to perform specific actions. For example, in a blog website, a regular user may not have the permission to delete blog posts or delete other user's comments.
 
 ### Cryptography
 

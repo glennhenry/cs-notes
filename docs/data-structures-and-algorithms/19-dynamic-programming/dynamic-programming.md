@@ -64,7 +64,7 @@ The pseudocode above is a naive solution that recursively computes the sequence 
 
 The pseudocode above results in $O(2^n)$ time complexity, this is because, for each `n` we will always calculate the two preceding Fibonacci numbers, `n - 1` and `n - 2`. Each of those calls, in turn, calls the function for their preceding Fibonacci numbers, and so on. As a result, the number of function calls grows exponentially with the input value `n`. Specifically, for each Fibonacci number, two additional function calls are made, resulting in a branching factor of 2. Therefore, the total number of function calls follows a recursive pattern where the number of calls doubles with each increase in `n`.
 
-Memoization is a technique used in dynamic programming, specifically in the top-down approach to improve the algorithm efficiency. Memoization optimize the execution by storing (or **[caching](/backend-development/caching)**) the result of function calls for specific input values and reusing them when the same inputs occur again.
+Memoization is a technique used in dynamic programming, specifically in the top-down approach to improve the algorithm efficiency. Memoization optimize the execution by storing (or **[caching](/backend-system/caching)**) the result of function calls for specific input values and reusing them when the same inputs occur again.
 
 We know that when we input `n = 2`, we will always obtain 1. If we store the result of F(2), we can eliminate some repeated work, therefore improving the overall efficiency.
 

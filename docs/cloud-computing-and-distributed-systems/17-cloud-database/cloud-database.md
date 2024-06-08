@@ -30,7 +30,7 @@ Upon deploying the database, user can now configure the service based on their n
 
 The database type correspond to how the data are stored within the cloud database. Typically, the data are classified into two model, [SQL database](/database-system/query-language#sql) and [NoSQL database](/database-system/nosql).
 
-To actually use the database, we will use APIs provided by the cloud providers to access it. The APIs vary between provider, and it may use protocols like SQL for relational databases or [RESTful APIs](/backend-development/rest-api) for NoSQL databases.
+To actually use the database, we will use APIs provided by the cloud providers to access it. The APIs vary between provider, and it may use protocols like SQL for relational databases or [RESTful APIs](/backend-system/rest-api) for NoSQL databases.
 
 #### Example
 

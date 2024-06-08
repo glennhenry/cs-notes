@@ -26,7 +26,7 @@ Some security concerns from the customer :
 
 - **Securing Application** : Customer are responsible for securing their applications deployed in the cloud. This includes implementing secure coding practices to prevent attacks such as [SQL injection](/computer-security/web-security#sql-injection), [cross-site scripting (XSS)](/computer-security/web-security#cross-site-scripting-xss), etc.
 - **Data Encryption** : Customer data should be encrypted both in transit and at rest.
-- **Authentication** : Implement a strong authentication system, such as enforcing strong passwords, adding a [multi-factor authentication](/backend-development/authentication#authentication-factor-number), and using role-based access control (RBAC), in which users are given specific role that makes them eligible to access certain resources.
+- **Authentication** : Implement a strong authentication system, such as enforcing strong passwords, adding a [multifactor authentication](/backend-system/authentication#authentication-factor-number), and using role-based access control (RBAC), in which users are given specific role that makes them eligible to access certain resources.
 
 Cloud computing use [virtualization](/cloud-computing-and-distributed-systems/virtualization) technology heavily. It provides a good isolation even when multiple applications are being run on single host. This isolation helps prevent interference between applications, thereby reducing the potential for the malicious activities of one app to affect the system, which could, in turn, impact others.
 

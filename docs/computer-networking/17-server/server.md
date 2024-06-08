@@ -40,7 +40,7 @@ Source : https://www.networkstraining.com/different-types-of-servers/
 
 ### Server Optimization
 
-- **[Caching](/backend-development/caching)** : Caching is a technique used to achieve high-speed and efficient operation while accessing data. The idea is a frequently accessed data can be placed in an easier place to access. Server will first check if the requested data exists in cache, if yes, the server can quickly return the data without accessing a database or generating the data from scratch.
+- **[Caching](/backend-system/caching)** : Caching is a technique used to achieve high-speed and efficient operation while accessing data. The idea is a frequently accessed data can be placed in an easier place to access. Server will first check if the requested data exists in cache, if yes, the server can quickly return the data without accessing a database or generating the data from scratch.
 
   For example, a web server may cache HTML and CSS files, or other static resources that are frequently requested by clients.
 

@@ -90,7 +90,7 @@ HTTP request and response follows a specific format and syntax for communication
   - **Status Line** : Specifies the HTTP version, status code, and a brief status message.
   - **Response Headers** : Provide additional information about the response, such as content type, server information, and etc.
   - **Blank Line** : A blank line indicating the end of the headers section.
-  - **Response Body** : Contains the actual content of the response, such as HTML pages, [JSON](/digital-media-procesing/json), or binary data.
+  - **Response Body** : Contains the actual content of the response, such as HTML pages, [JSON](/digital-media-processing/json), or binary data.
 
   Example :
 

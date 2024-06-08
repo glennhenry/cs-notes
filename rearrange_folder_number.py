@@ -5,7 +5,7 @@
 
 import os
 
-base_path = "D:\\Programming\\Projects\\cs-notes\\docs\\internet-and-web"
+base_path = "D:\\Programming\\Projects\\cs-notes\\docs\\backend-system"
 folders = os.listdir(base_path)
 
 for num, folder_name in enumerate(folders) :

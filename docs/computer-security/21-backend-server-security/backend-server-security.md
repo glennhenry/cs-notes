@@ -34,7 +34,7 @@ APIs are very important in software development to enable communication and data
 
 Authentication is a crucial aspect in application, developers must ensure that only legitimate users and authorized individuals are able to authenticate to a system.
 
-Authentication system can be upgraded to be more secure by having [multiple factor consideration](/backend-development/authentication#authentication-factor-number), [various other identity of user](/backend-development/authentication#authentication-factor) (e.g., uses fingerprint or face to authenticate rather than password that can be cracked).
+Authentication system can be upgraded to be more secure by having [multiple factor consideration](/backend-system/authentication#authentication-factor-number), [various other identity of user](/backend-system/authentication#authentication-factor) (e.g., uses fingerprint or face to authenticate rather than password that can be cracked).
 
 Always validate and sanitize input from user to prevent common vulnerabilities such as [SQL injection](/computer-security/web-security#sql-injection), [cross-site scripting](/computer-security/web-security#cross-site-scripting-xss)
 

@@ -24,7 +24,7 @@ The idea of event-driven architecture is, an entity in the system produces an ev
 
 The entity responsible for generating an event is referred to as a **producer** (or **publisher**, **emitter**). The event is then broadcasted to the system. The entity interested in the event is known as a **consumer** and should **subscribe** to the specific producer to receive notifications whenever an event occurs. Once the event is received, the consumer will then **consume** it.
 
-Broadcast of events are sent to **channel**, which is a medium for publishing and subscribing to events. It serves as a central hub where events are published by event producers and then delivered to the interested event consumers. Channel can be implemented in many ways, such as event bus or [message broker](/backend-development/message-broker).
+Broadcast of events are sent to **channel**, which is a medium for publishing and subscribing to events. It serves as a central hub where events are published by event producers and then delivered to the interested event consumers. Channel can be implemented in many ways, such as event bus or [message broker](/backend-system/message-broker).
 
 ![An event bus](./event-bus.png)  
 Source : https://medium.com/elixirlabs/event-bus-implementation-s-d2854a9fafd5

@@ -79,7 +79,7 @@ Abstraction is a fundamental concept in computer science and programming that in
 **Application Programming Interface (API)** is an interface for programmer to interact with different software component in a system. An API defines how different components of software systems should interact, specifying the methods, data formats, and conventions that should be used.
 
 :::tip
-See a more detailed explanation about [API](/backend-development/apis-server-logic#what-is-api)
+See a more detailed explanation about [API](/backend-system/apis-server-logic#what-is-api)
 :::
 
 #### Reflection

@@ -83,11 +83,11 @@ The top three cloud services are Amazon Web Services (AWS), Google Cloud Platfor
 - **Amazon RDS** : Managed [relational database](/database-system/relational-data) service
 - **Amazon VPC** : Virtual private cloud for networking
 - **Amazon SNS** : Simple Notification Service for messaging and notifications
-- **Amazon SQS** : Simple Queue Service for [message queuing](/backend-development/message-broker)
+- **Amazon SQS** : Simple Queue Service for [message queuing](/backend-system/message-broker)
 - **Amazon DynamoDB** : Fully managed [NoSQL database](/database-system/nosql)
 - **Amazon CloudFront** : [Content delivery network (CDN)](/software-engineering/system-design#cdn)
 - **Amazon Route 53** : Scalable [domain name system (DNS)](/computer-networking/dns) web service
-- **Amazon Lambda** : [Serverless](/backend-development/serverless) compute service
+- **Amazon Lambda** : [Serverless](/backend-system/serverless) compute service
 - **Amazon Redshift** : Fully managed data warehouse
 - **Amazon Elastic Beanstalk** : [Platform as a Service (PaaS)](/cloud-computing-and-distributed-systems/cloud-models#common-models) for deploying and managing applications
 - **Amazon CloudWatch** : Monitoring and observability service
