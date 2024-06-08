@@ -10,9 +10,9 @@ description: Web Server
 - **[What is a web server? - MDN](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)**
 - **[Apache vs NGINX - IBM Technology](https://youtu.be/9nyiY-psbMs?si=awdYABj62-vySNKk)**
 
-When we attempt to access a website using a [web browser](/frontend-web-development/web-browser), the browser initiates communication by sending a message to a [server](/computer-networking/server) through an [HTTP request](/computer-networking/http-https).
+When we attempt to access a website using a [web browser](/internet-and-web/web-browser), the browser initiates communication by sending a message to a [server](/computer-networking/server) through an [HTTP request](/computer-networking/http-https).
 
-A server that is responsible for responding to client requests, specifically for delivering web pages, is known as a **web server**. Web server will respond to client request (e.g. web browser request) by delivering web pages resources such as [HTML documents](/frontend-web-development/html).
+A server that is responsible for responding to client requests, specifically for delivering web pages, is known as a **web server**. Web server will respond to client request (e.g. web browser request) by delivering web pages resources such as [HTML documents](/internet-and-web/html).
 
 A web server is typically hosted in dedicated computer equipped with specialized hardware to reduce downtime and system troubles.
 

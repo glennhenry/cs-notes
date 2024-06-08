@@ -59,3 +59,7 @@ Source : https://co.delante.co/definitions/pagerank/
 The image above is an illustration of the algorithm that shows `A` being linked the most has the highest rank.
 
 The output of the PageRank algorithm is a probability of someone will end up on a particular page. The algorithm model itself as a random surfer, meaning it doesn't strictly follow hyperlink when assigning score, but sometimes randomly jumping to unrelated page. This behavior accurately model actual browsing behavior of users, who sometimes type in a new URL or use a search engine to navigate to a new page, rather than just clicking on links. The random surf is affected by something called damping factor.
+
+:::tip
+See also [search engine on backend development](/backend-development/search-engine).
+:::

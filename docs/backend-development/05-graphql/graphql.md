@@ -10,9 +10,9 @@ description: GraphQL
 - **[GraphQL Explained in 100 Seconds - Fireship](https://youtu.be/eIQh02xuVw4?si=NZATScKXA3s8jYv9)**
 - **[What is GraphQL? GraphQL introduction - Apollo Blog](https://www.apollographql.com/blog/graphql/basics/what-is-graphql-introduction/)**
 
-**GraphQL** is a query language specifically designed for querying APIs data, GraphQL accesses resource on server in a similar way we query a database. Compared to [REST API](/backend-development/rest-api) that accesses resource in a fixed way (e.g. GET /books endpoint), GraphQL allows clients to request specific data from the server in a flexible way by defining the structure of the response they need.
+**GraphQL** is a query language specifically designed for querying APIs data, GraphQL accesses resource on server in a similar way we query a database. Compared to [REST API](/backend-development/rest-api) that accesses resource in a fixed way (e.g., GET /books endpoint), GraphQL allows clients to request specific data from the server in a flexible way by defining the structure of the response they need.
 
-GraphQL typically uses [HTTP](/computer-networking/http-https#http) as the transport layer, same as [SOAP](/backend-development/soap), the request is encapsulated in HTTP POST method. GraphQL respond with HTTP response followed by a [JSON](/frontend-web-development/json) data object that contains the data requested by client.
+GraphQL typically uses [HTTP](/computer-networking/http-https#http) as the transport layer, same as [SOAP](/backend-development/soap), the request is encapsulated in HTTP POST method. GraphQL responds with HTTP response followed by a [JSON](/digital-media-processing/json) data object that contains the data requested by client.
 
 ### Schema
 

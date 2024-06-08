@@ -88,7 +88,7 @@ Reflection is a feature that enables program to examine internal detail about a 
 
 #### Serialization
 
-Serialization is the process of converting an object or data structure into a format that can be easily stored, transmitted, or reconstructed later. For example, when transferring data in the form of object through the network, we will need to convert it to format that can be transmitted such as [JSON](/frontend-web-development/json) file.
+Serialization is the process of converting an object or data structure into a format that can be easily stored, transmitted, or reconstructed later. For example, when transferring data in the form of object through the network, we will need to convert it to format that can be transmitted such as [JSON](/digital-media-processing/json) file.
 
 For example, here is a simple object in Kotlin :
 

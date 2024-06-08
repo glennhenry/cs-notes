@@ -47,7 +47,7 @@ Document database may organize or groups document by :
 - **Non-visible metadata** : Non-visible metadata include information such as timestamps, versioning, access control, or any additional attributes related to the documents that doesn't impact the visual content.
 - **Directory hierarchies** : Document database such as XML organizes its data into a hierarchical, directory-like structure through the use of nested tags.
 
-Document database includes [JSON](/frontend-web-development/json), [XML](/digital-media-processing/xml), and YAML.
+Document database includes [JSON](/digital-media-processing/json), [XML](/digital-media-processing/xml), and YAML.
 
 ![Document database](./document.png)  
 Source : https://thedeveloperstory.com/2021/10/03/everything-you-need-to-know-about-yaml-files/

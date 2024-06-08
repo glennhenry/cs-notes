@@ -75,7 +75,7 @@ const order = [
   "Compilers & Programming Languages",
   "Database System",
   "Computer Graphics",
-  "Frontend Web Development",
+  "Internet & Web",
   "Backend Development",
   "Computer Security",
   "Machine Learning",

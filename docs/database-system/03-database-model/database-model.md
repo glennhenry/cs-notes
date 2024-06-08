@@ -228,7 +228,7 @@ Source : https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping
 
 #### Document
 
-Document model stores and organizes data in a flexible, semi-structured format known as documents. In this database model, data is stored in self-contained documents, typically in formats such as [JSON (JavaScript Object Notation)](/frontend-web-development/json).
+Document model stores and organizes data in a flexible, semi-structured format known as documents. In this database model, data is stored in self-contained documents, typically in formats such as [JSON (JavaScript Object Notation)](/digital-media-processing/json).
 
 :::tip
 [XML](#xml) is considered as a document model as well.

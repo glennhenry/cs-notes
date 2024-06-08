@@ -44,7 +44,7 @@ Three example types of search engine are :
 
 ### Elasticsearch
 
-**Elasticsearch** is a search and analytics engine, at its core, it is a [document-oriented database](/database-system/nosql#document) that stores data in [JSON](/frontend-web-development/json)-like format. It allows you to index and search structured and unstructured data, making it suitable for many use cases such as full-text search, log analytics, and real-time analytics.
+**Elasticsearch** is a search and analytics engine, at its core, it is a [document-oriented database](/database-system/nosql#document) that stores data in [JSON](/digital-media-processing/json)-like format. It allows you to index and search structured and unstructured data, making it suitable for many use cases such as full-text search, log analytics, and real-time analytics.
 
 Elasticsearch operates in a distributed architecture. An engine of elasticsearch capable of storing data and performing search operation is considered as a **node**. These nodes work together to form a **cluster**.
 
@@ -55,3 +55,7 @@ In elasticsearch, every time we index data, it is divided into smaller subsets c
 Also, as an analytics engine, elasticsearch allows us to perform analytics and statistical analysis (using tool called logstash); and data visualization (using tool called Kibana).
 
 Overall, the key features of elasticsearch is combining distributed computing and scalable storage with also various analytics feature.
+
+:::tip
+See also [search engine on internet and web](/internet-and-web/search-engine).
+:::

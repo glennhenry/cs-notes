@@ -20,7 +20,7 @@ My computer science notes from various online courses, tutorial, books, blogs, W
 - **[Compilers & Programming Language](compilers-and-programming-languages)**
 - **[Database System](database-system)**
 - **[Computer Graphics](computer-graphics)**
-- **[Frontend Web Development](frontend-web-development)**
+- **[Internet & Web](internet-and-web)**
 - **[Backend Development](backend-development)**
 - **[Computer Security](computer-security)**
 - **[Machine Learning](machine-learning)**
@@ -140,7 +140,7 @@ For simplicity, TODOs are placed here instead of something like GitHub issues.
    - depth map
    - light shadow space
 
-3. **[update]** [/frontend-web-development](/frontend-web-development) : Minor update for all note, also some topic to include for addition :
+3. **[update]** [/internet-and-web](/internet-and-web) : Minor update for all note, also some topic to include for addition :
 
    - Search engine, crawler.
    - Rename the topic to web-and-internet, because it doesn't contain development.

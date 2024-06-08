@@ -57,7 +57,9 @@ Objects and properties make each HTML element in the document possible to be acc
 
 Developers can use JavaScript to access and modify individual elements in the document, change their attributes and styles, add or remove elements from the document, and respond to user interactions.
 
-See how JavaScript access the DOM : [DOM Manipulation](/internet-and-web/html-css-javascript#dom-manipulation)
+:::tip
+See how [JavaScript manipulates the DOM](/internet-and-web/javascript#dom-manipulation).
+:::
 
 ![HTML represented in tree structure with HTML tags as the root and has head and body as children which also contains another children elements such as p, ul, li](./dom-tree.png)  
 Source : https://www.tutorialstonight.com/js/js-dom-introduction

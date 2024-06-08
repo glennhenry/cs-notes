@@ -12,7 +12,7 @@ description: Webhook
 
 #### Polling
 
-Polling is a process in which a client or system repeatedly checks or requests information from a server or data source. The client will first initiates an initial request to the server, after that the client will send a request again periodically. The server will send a response that include requested data or a message that indicate no update are available.
+Polling is a process in which a client or system repeatedly checks or requests information from a server or data source. The client will first initiate an initial request to the server, after that the client will send a request again periodically. The server will send a response that include requested data or a message that indicate no update are available.
 
 There are different type of polling :
 
@@ -27,7 +27,7 @@ There are different type of polling :
 
 ### Webhook
 
-**Webhook** is a mechanism for two system to communicate with each other in real-time. The system will make an automated [HTTP request](/computer-networking/http-https#http-request--method) containing notification or data to a specific URL (called **Webhook URL**) whenever particular event or trigger occurs. Webhooks are event-driven, it help to address the continous request in pooling that waste resource.
+**Webhook** is a mechanism for two system to communicate with each other in real-time. The system will make an automated [HTTP request](/computer-networking/http-https#http-request--method) containing notification or data to a specific URL (called **Webhook URL**) whenever particular event or trigger occurs. Webhooks are event-driven, it helps to address the continuous request in pooling that waste resource.
 
 #### Webhook Process
 
@@ -37,7 +37,7 @@ There are different type of polling :
 
 3. **Monitor Event** : The sender system monitors for specific events or triggers that should initiate a WebHook. These events could be actions performed by users, changes in data, or any other predefined conditions.
 
-4. **WebHook Request** : When an event or trigger occurs, the sender system constructs an HTTP request with relevant data (can be in [JSON](/frontend-web-development/json) format) and sends it to the WebHook URL provided during the configuration step.
+4. **WebHook Request** : When an event or trigger occurs, the sender system constructs an HTTP request with relevant data (can be in [JSON](/digital-media-processing/json) format) and sends it to the WebHook URL provided during the configuration step.
 
 5. **Receiver Processing** : The receiver system receives the WebHook request at the specified URL. It parses the request and process it based on the information received.
 

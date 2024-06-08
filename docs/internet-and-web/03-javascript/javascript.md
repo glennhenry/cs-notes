@@ -14,7 +14,7 @@ description: JavaScript
 - **[npm - Wikipedia](https://en.wikipedia.org/wiki/Npm)**
 - **[React (software) - Wikipedia](<https://en.wikipedia.org/wiki/React_(software)>)**
 
-**JavaScript** is a high-level programming language first introduced in 1995, it is mostly used for web development. JavaScript was specifically created to be run in web browsers, which means it can integrate with the browser and access the [DOM (Document Object Model)](/internet-and-web/html-dom) to change or manipulate it such as adding or deleting elements, changing style like color, modify content and etc.
+**JavaScript** is a high-level programming language first introduced in 1995, it is mostly used for web development. JavaScript was specifically created to be run in web browsers, which means it can integrate with the browser and access the [DOM (Document Object Model)](/internet-and-web/html#html-dom) to change or manipulate it such as adding or deleting elements, changing style like color, modify content and etc.
 
 JavaScript is based on ECMAScript (ES) which is a scripting language specification or the standard that defines JavaScript language. JavaScript is now based on the ES6 (ECMAScript 2015) which was released in 2015.
 
@@ -67,7 +67,7 @@ Node.js uses an event-driven, non-blocking I/O model, single event loop to handl
 ![Shows how Node JS provide space from JS file to be executed with the helps of event loop and callback queue](./node-js.png)  
 Source : https://www.freecodecamp.org/news/what-exactly-is-node-guide-for-beginners/
 
-**NPM (short for Node Package Manager)** is a [package manager](/software-engineering/build-and-package-management) for the JavaScript programming language also as the default package manager for [Node JS](/internet-and-web/node-js). It is primarily used for managing and sharing packages of reusable code that can be easily integrated into web applications.
+**NPM (short for Node Package Manager)** is a [package manager](/software-engineering/build-and-package-management) for the JavaScript programming language also as the default package manager for [Node JS](#node-js). It is primarily used for managing and sharing packages of reusable code that can be easily integrated into web applications.
 
 NPM provides a command-line interface (CLI) for working with packages and managing dependencies. When you need specific library or packages for your web app, developers can use the npm command to install packages from the NPM registry, which is a public repository of packages that can be easily searched and browsed.
 

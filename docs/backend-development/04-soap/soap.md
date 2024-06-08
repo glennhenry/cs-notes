@@ -34,8 +34,8 @@ Content-Length: [length]
 
 Request is sent to the `/exampleWebService` endpoint on the `www.example.com` server encapsulated in `POST` method. The content type specified is in SOAP XML format.
 
-The `soap:Envelope` is the root element of a SOAP message, it defines the namespace with the soap envelope URI. The header contains optional information. The body specify the actual SOAP message. The SOAP message here is using the `<getWeather>` operation with the New York city as the parameter.
+The `soap:Envelope` is the root element of a SOAP message, it defines the namespace with the soap envelope URI. The header contains optional information. The body specifies the actual SOAP message. The SOAP message here is using the `<getWeather>` operation with the New York City as the parameter.
 
 :::info
-SOAP is not very used in modern days, using XML may add complexity for a relatively simple use case. [REST API](/backend-development/rest-api) is more used due to its better performance, XML parsing can be slower than [JSON](/frontend-web-development/json) data format as JSON has a simpler structure and syntax.
+SOAP is not very used in modern days, using XML may add complexity for a relatively simple use case. [REST API](/backend-development/rest-api) is more used due to its better performance, XML parsing can be slower than [JSON](/digital-media-processing/json) data format as JSON has a simpler structure and syntax.
 :::

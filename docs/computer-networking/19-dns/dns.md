@@ -7,12 +7,12 @@ description: DNS
 
 **Main Source :**
 
-- **[How a DNS Server (Domain Name System) works | PowerCert](https://youtu.be/mpQZVYPuDGU?si=HkwtlF9fHOXMEvN7)**
-- **[DNS Records Explained](https://youtu.be/HnUDtycXSNE?si=owMYV2iZG8w72g_r)**
+- **[How a DNS Server (Domain Name System) works - PowerCert](https://youtu.be/mpQZVYPuDGU?si=HkwtlF9fHOXMEvN7)**
+- **[DNS Records Explained - PowerCert](https://youtu.be/HnUDtycXSNE?si=owMYV2iZG8w72g_r)**
 
 **Domain Name System (DNS)** is a server acting as a service that translates human-readable domain name into an [IP address](/computer-networking/ip-address), which used to identify a device connecting to the network.
 
-In computer networking, we uses [IP address](/computer-networking/ip-address) to identify each devices on the network. When accessing a specific website on the internet, we usually enter the domain name or website name in our browser. Browser will need to establish a connection to their server to get the required resource to show the website. Establishing a connection will require IP address as the destination address of where the network is.
+In computer networking, we use [IP address](/computer-networking/ip-address) to identify each device on the network. When accessing a specific website on the internet, we usually enter the domain name or website name in our browser. Browser will need to establish a connection to their server to get the required resource to show the website. Establishing a connection will require IP address as the destination address of where the network is.
 
 However, the browser doesn't understand the domain name entered by user. To resolve this, the browser sends a request to the DNS server, which translates the human-readable name into an IP address. Once the browser obtains the destination address, it can establish a connection and access the desired resource.
 
@@ -20,7 +20,7 @@ However, the browser doesn't understand the domain name entered by user. To reso
 Source : https://www.geeksforgeeks.org/working-of-domain-name-system-dns-server/
 
 :::tip
-Find out in [here](/frontend-web-development/web-url) to know more about domain name or URL
+Find more about [domain name and URL](/internet-and-web/web-url).
 :::
 
 ### DNS Record

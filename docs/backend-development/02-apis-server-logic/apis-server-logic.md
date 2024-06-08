@@ -55,13 +55,13 @@ API is considered as a contract because the caller and the API needs to agree wh
 
 When the client sends a request to the server, the request must be handled with the appropriate actions. **Routing** is the mechanism of handling specific request specified by request's URL and [HTTP method](/computer-networking/http-https#http-request--method) to the appropriate codes that should handle them.
 
-The request's URL can vary depending on the request, a URL must contain some component including scheme, domain name, and etc (find more about URL [here](/frontend-web-development/web-url)). A web URL typically have a starting point or the root of all URL, it represents the primary address that clients use to communicate with the server. The primary address is called **base URL**.
+The request's URL can vary depending on the request, a URL must contain some component including scheme, domain name, and etc (find more about URL [here](/internet-and-web/web-url)). A web URL typically have a starting point or the root of all URL, it represents the primary address that clients use to communicate with the server. The primary address is called **base URL**.
 
 When making request to the base URL, the server will typically respond by returning the default page of the website. If we want to do certain operations or access specific resources, we need to add additional path, this is called **endpoint**. Endpoint is typically concatenated to the base URL and is separated by `/`.
 
-For example, the `https://jsonplaceholder.typicode.com` is an online web API we can use. The `https://jsonplaceholder.typicode.com/` is the base URL or the root of all page the site has, accessing the base URL directly will give you the [HTML](/frontend-web-development/html) file which is then rendered by the browser to display the website's content.
+For example, the `https://jsonplaceholder.typicode.com` is an online web API we can use. The `https://jsonplaceholder.typicode.com/` is the base URL or the root of all page the site has, accessing the base URL directly will give you the [HTML](/internet-and-web/html) file which is then rendered by the browser to display the website's content.
 
-The website provides some endpoint including `/posts`, `/comments`, `/albums`, and some other. Accessing the base URL concatenated with the `/posts` endpoint `https://jsonplaceholder.typicode.com/posts` will give us a [JSON](/frontend-web-development/json) file containing some user posts.
+The website provides some endpoint including `/posts`, `/comments`, `/albums`, and some other. Accessing the base URL concatenated with the `/posts` endpoint `https://jsonplaceholder.typicode.com/posts` will give us a [JSON](/digital-media-processing/json) file containing some user posts.
 
 Overall, routing and endpoint determines how the server should respond to different requests by mapping them to specific endpoints or routes. The behavior of accessing specific endpoints will depend on the web API.
 

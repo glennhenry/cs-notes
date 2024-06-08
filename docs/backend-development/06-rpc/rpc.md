@@ -12,7 +12,7 @@ description: RPC
 
 ### RPC
 
-**Remote Procedure Call (RPC)** is a communication protocol that allows a computer program to run procedule on a remote server. By procedure, it is a sequence of instruction that such as codes, it will be executed as if it were a local function call.
+**Remote Procedure Call (RPC)** is a communication protocol that allows a computer program to run procedure on a remote server. By procedure, it is a sequence of instruction that such as codes, it will be executed as if it were a local function call.
 
 Function invocation can be achieved through a contract called IDL (Interface Definition Language) or a schema definition. This definition is used to specify which function or procedures that can be called remotely. The IDL is designed to be language-agnostic, this mean even if the client requested a function call on a server that uses different programming language, the server still know what to do.
 
@@ -20,7 +20,7 @@ Function invocation can be achieved through a contract called IDL (Interface Def
 
 The RPC framework will generate language-specific code for the client and the server to use to communicate. The function or procedure used may also include argument to pass additional data.
 
-1. **Serialization** : Serialization is the process of transforming data into something that can be transmitted over the network. The RPC framework will generate code following the IDL definition and will serialize the code into format like [JSON](/frontend-web-development/json), [XML](/digital-media-processing/xml), or Protocol Buffers. The generated code is called **client stub**.
+1. **Serialization** : Serialization is the process of transforming data into something that can be transmitted over the network. The RPC framework will generate code following the IDL definition and will serialize the code into format like [JSON](/digital-media-processing/json), [XML](/digital-media-processing/xml), or Protocol Buffers. The generated code is called **client stub**.
 
    The serialized request will be transmitted over the network using protocol like [TCP](/computer-networking/tcp-protocol) or [UDP](/computer-networking/udp) and the server will receive it.
 

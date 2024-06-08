@@ -43,5 +43,5 @@ JavaScript is a programming language mainly used for client-side web development
 **Node JS** is a JavaScript programming language runtime environment that allows developers to run JavaScript on the server-side. By enabling JavaScript on the server side, JavaScript can be used to build server-side applications, handle incoming requests, process data, interact with databases, and perform various server-side operations.
 
 :::tip
-Another note about [Node JS](/frontend-web-development/node-js)
+Another note about [Node JS](/internet-and-web/javascript#node-js)
 :::

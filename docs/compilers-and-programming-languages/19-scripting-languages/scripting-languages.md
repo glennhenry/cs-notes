@@ -60,7 +60,7 @@ Programming language can be categorized based on their purposes, **general purpo
 Scripting languages can be any of the two, examples are :
 
 - **Python** : While it is a general purpose language, it is known for its simplicity and readability. It is widely used for scripting tasks, such as automation, web scraping, manipulating files, sending email, etc.
-- **JavaScript** : JavaScript was once a highly specific DSL intended to manipulate applications ([web browsers](/frontend-web-development/web-browser)) through a specific API called the [DOM](/frontend-web-development/html-dom) to add interactivity and dynamic behavior to webpages. With [Node JS](/frontend-web-development/node-js), it evolved from a browser scripting language into general purpose language capable to be run on server-side application.
+- **JavaScript** : JavaScript was once a highly specific DSL intended to manipulate applications ([web browsers](/internet-and-web/web-browser)) through a specific API called the [DOM](/internet-and-web/html#html-dom) to add interactivity and dynamic behavior to webpages. With [Node JS](/internet-and-web/javascript#node-js), it evolved from a browser scripting language into general purpose language capable to be run on server-side application.
 - **PowerShell** : It is a scripting language developed by Microsoft for Windows systems. It provides [command-line shell](/computer-and-programming-fundamentals/computer-and-programming-terminology#command-line-command-prompt-shell-bash-terminal-console) environment to allows system administrators to automate tasks, manage system configurations, and interact with various Windows services and components.
 
 #### Shell

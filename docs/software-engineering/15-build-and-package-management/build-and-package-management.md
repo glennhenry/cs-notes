@@ -65,7 +65,7 @@ The functions of package manager :
   Over time, new versions of packages may be released. Without locking the version, it is possible that the package manager accidentally update the package, which may introduce compatibility issue with the existing dependencies.
 
 :::info
-An example of package manager is [npm](/frontend-web-development/npm), which is the default package manager for [Node.js](/frontend-web-development/node-js) projects.
+An example of package manager is [npm](/internet-and-web/javascript#npm), which is the default package manager for [Node.js](/internet-and-web/javascript#node-js) projects.
 :::
 
 :::warning

@@ -16,6 +16,10 @@ This topic doesn't explain the development aspect but rather focuses on what is 
 A web app without a backend is often called a static page, which requires us to download only the webpage.
 :::
 
+:::tip
+See also backend system.
+:::
+
 ### All pages
 
 - [HTML](internet-and-web/html)
