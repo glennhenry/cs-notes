@@ -28,5 +28,4 @@ Backend development is the process of creating a backend system, which is the se
   - [SOA](backend-system/soa)
   - [Serverless](backend-system/serverless)
 - [Backend & Server Security](backend-system/backend-server-security)
-- [Caching](backend-system/caching)
 - [Backend Optimization](backend-system/backend-optimization)

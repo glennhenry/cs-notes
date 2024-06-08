@@ -31,7 +31,7 @@ A total of **20** topics, and a total of **367** notes.
       - [Filtering](digital-signal-processing/filtering)
       - [Compression](digital-signal-processing/compression)
       - [Denoising](digital-signal-processing/denoising)
-2. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (**19** subtopics)
+2. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (**20** subtopics)
     - Computer Representation
       - [Number System](computer-and-programming-fundamentals/number-system)
       - [Binary Representation](computer-and-programming-fundamentals/binary-representation)
@@ -54,6 +54,7 @@ A total of **20** topics, and a total of **367** notes.
           - [Logic Programming](computer-and-programming-fundamentals/logic-programming)
       - General Concepts
         - [Concurrency](computer-and-programming-fundamentals/concurrency)
+        - [Caching](computer-and-programming-fundamentals/caching)
     - Code Execution
       - [Compilation](computer-and-programming-fundamentals/compilation)
       - [Interpreter](computer-and-programming-fundamentals/interpreter)
@@ -307,7 +308,7 @@ A total of **20** topics, and a total of **367** notes.
     - [Web Browser](internet-and-web/web-browser)
     - [Search Engine](internet-and-web/search-engine)
     - [Web Hosting](internet-and-web/web-hosting)
-13. [Backend System](/backend-system) (**19** subtopics)
+13. [Backend System](/backend-system) (**18** subtopics)
     - [Web Server](backend-system/web-server)
     - APIs
       - [APIs & Server Logic](backend-system/apis-server-logic)
@@ -327,7 +328,6 @@ A total of **20** topics, and a total of **367** notes.
       - [SOA](backend-system/soa)
       - [Serverless](backend-system/serverless)
     - [Backend & Server Security](backend-system/backend-server-security)
-    - [Caching](backend-system/caching)
     - [Backend Optimization](backend-system/backend-optimization)
 14. [Computer Security](/computer-security) (**22** subtopics)
     - [Computer Security Fundamentals](computer-security/computer-security-fundamentals)

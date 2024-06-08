@@ -116,6 +116,7 @@ const sidebars = {
               label: "General Concepts",
               items: [
                 "computer-and-programming-fundamentals/concurrency/concurrency",
+                "computer-and-programming-fundamentals/caching/caching",
               ],
             },
           ],
@@ -674,7 +675,6 @@ const sidebars = {
           ],
         },
         "backend-system/backend-server-security/backend-server-security",
-        "backend-system/caching/caching",
         "backend-system/backend-optimization/backend-optimization",
       ],
     },

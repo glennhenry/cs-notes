@@ -35,6 +35,7 @@ Although the topic seems introductory, it actually assumes certain programming k
       - [Logic Programming](computer-and-programming-fundamentals/logic-programming)
   - General Concepts
     - [Concurrency](computer-and-programming-fundamentals/concurrency)
+    - [Caching](computer-and-programming-fundamentals/caching)
 - Code Execution
   - [Compilation](computer-and-programming-fundamentals/compilation)
   - [Interpreter](computer-and-programming-fundamentals/interpreter)

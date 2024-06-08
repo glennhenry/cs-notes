@@ -1,5 +1,5 @@
 ---
-slug: /backend-system/caching
+slug: /computer-and-programming-fundamentals/caching
 id: caching
 title: Caching
 description: Caching
