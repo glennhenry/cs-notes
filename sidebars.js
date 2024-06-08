@@ -639,10 +639,10 @@ const sidebars = {
       ],
     },
 
-    // 13. Backend Development
+    // 13. Backend System
     {
       type: "category",
-      label: "Backend Development",
+      label: "Backend System",
       link: { type: "doc", id: "backend-system/backend-system" },
       items: [
         "backend-system/web-server/web-server",
@@ -660,7 +660,6 @@ const sidebars = {
           ],
         },
         "backend-system/authentication/authentication",
-        "backend-system/authentication-technique/authentication-technique",
         "backend-system/authorization/authorization",
         "backend-system/search-engine/search-engine",
         "backend-system/message-broker/message-broker",
