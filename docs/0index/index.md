@@ -78,11 +78,10 @@ A total of **20** topics, and a total of **367** notes.
       - [Video Representation](digital-media-processing/video-representation)
       - [Video Recording](digital-media-processing/video-recording)
       - [Video Effects & Enhancement](digital-media-processing/video-effects-enhancement)
-      - [Flash Player SWF](digital-media-processing/flash-player-swf)
     - Digital Media Formats
       - [MIME Type](digital-media-processing/mime-type)
       - Image
-        - [Bitmap (BMP)](digital-media-processing/bitmap-bmp)
+        - [BMP](digital-media-processing/bmp)
         - [JPG / JPEG](digital-media-processing/jpg-jpeg)
         - [PNG](digital-media-processing/png)
         - [WebP](digital-media-processing/webp)
@@ -95,11 +94,12 @@ A total of **20** topics, and a total of **367** notes.
       - Video
         - [AVI](digital-media-processing/avi)
         - [MP4](digital-media-processing/mp4)
+        - [SWF](digital-media-processing/swf)
       - Document
         - [XML](digital-media-processing/xml)
         - [JSON](digital-media-processing/json)
-        - [Markdown (MD)](digital-media-processing/markdown-md)
-        - [Text File (txt)](digital-media-processing/text-file-txt)
+        - [MD](digital-media-processing/md)
+        - [TXT](digital-media-processing/txt)
         - [PDF](digital-media-processing/pdf)
 4. [Computer Networking](/computer-networking) (**37** subtopics)
     - Network Standard

@@ -5,11 +5,11 @@ title: Digital Media Processing
 description: Digital Media Processing Notes
 ---
 
-**Main Source : Various source that is included in each topics**
+**Digital Media Processing** is the manipulation of digital data that represents multimedia content, such as images, video, and audio. This topic will cover media processing and some common file format, including a high-level explanation to how they work.
 
-**Digital Media Processing** is the manipulation of digital data that represents multimedia content, such as images, video, and audio. This topic will covers media processing and some common format including how do they works.
-
-Most of the fundamental concepts are covered in [Digital Signal Processing](/digital-signal-processing). Some concept about image and graphics are also in [Computer Graphics](/computer-graphics). With these other topic, most of the topic here are addition or application, so there may be many reference to other pages.
+:::tip
+See also [digital signal processing](/digital-signal-processing) and [computer graphics](/computer-graphics), as this topic and these two are related.
+:::
 
 ### All pages
 
@@ -30,11 +30,10 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
   - [Video Representation](digital-media-processing/video-representation)
   - [Video Recording](digital-media-processing/video-recording)
   - [Video Effects & Enhancement](digital-media-processing/video-effects-enhancement)
-  - [Flash Player SWF](digital-media-processing/flash-player-swf)
 - Digital Media Formats
   - [MIME Type](digital-media-processing/mime-type)
   - Image
-    - [Bitmap (BMP)](digital-media-processing/bitmap-bmp)
+    - [BMP](digital-media-processing/bmp)
     - [JPG / JPEG](digital-media-processing/jpg-jpeg)
     - [PNG](digital-media-processing/png)
     - [WebP](digital-media-processing/webp)
@@ -47,9 +46,10 @@ Most of the fundamental concepts are covered in [Digital Signal Processing](/dig
   - Video
     - [AVI](digital-media-processing/avi)
     - [MP4](digital-media-processing/mp4)
+    - [SWF](digital-media-processing/swf)
   - Document
     - [XML](digital-media-processing/xml)
     - [JSON](digital-media-processing/json)
-    - [Markdown (MD)](digital-media-processing/markdown-md)
-    - [Text File (txt)](digital-media-processing/text-file-txt)
+    - [MD](digital-media-processing/md)
+    - [TXT](digital-media-processing/txt)
     - [PDF](digital-media-processing/pdf)
