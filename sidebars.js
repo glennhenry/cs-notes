@@ -175,7 +175,7 @@ const sidebars = {
             "digital-media-processing/video-representation/video-representation",
             "digital-media-processing/video-recording/video-recording",
             "digital-media-processing/video-effects-enhancement/video-effects-enhancement",
-            "digital-media-processing/flash-player-swf/flash-player-swf",
+            "digital-media-processing/swf/swf",
           ],
         },
 
@@ -188,7 +188,7 @@ const sidebars = {
               type: "category",
               label: "Image",
               items: [
-                "digital-media-processing/bitmap-bmp/bitmap-bmp",
+                "digital-media-processing/bmp/bmp",
                 "digital-media-processing/jpg-jpeg/jpg-jpeg",
                 "digital-media-processing/png/png",
                 "digital-media-processing/webp/webp",
@@ -219,8 +219,8 @@ const sidebars = {
               items: [
                 "digital-media-processing/xml/xml",
                 "digital-media-processing/json/json",
-                "digital-media-processing/markdown-md/markdown-md",
-                "digital-media-processing/text-file-txt/text-file-txt",
+                "digital-media-processing/md/md",
+                "digital-media-processing/txt/txt",
                 "digital-media-processing/pdf/pdf",
               ],
             },
