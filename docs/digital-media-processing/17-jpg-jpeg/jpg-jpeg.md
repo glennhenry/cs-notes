@@ -7,7 +7,7 @@ description: JPG / JPEG
 
 **Main Source : [Wikipedia JPEG](https://en.wikipedia.org/wiki/JPEG)**
 
-**JPG or JPEG (Joint Photographic Experts Group)** is a digital image format known for using [lossy compression](/digital-signal-processing/compression#lossy-compression) which should reduce alot of file size compared to [lossless compression](/digital-signal-processing/compression#lossy-compression) or even more compared to [BMP](/digital-media-processing/bitmap-bmp) without compression at all.
+**JPG or JPEG (Joint Photographic Experts Group)** is a digital image format known for using [lossy compression](/digital-signal-processing/compression#lossy-compression) which should reduce alot of file size compared to [lossless compression](/digital-signal-processing/compression#lossy-compression) or even more compared to [BMP](/digital-media-processing/bmp) without compression at all.
 
 ![Comparison between original and compressed jpg image](./jpg-comparison.png)  
 Source : https://theinformaticists.com/2019/08/29/human-based-image-compression-using-a-deterministic-computer-algorithm-to-reconstruct-pre-segmented-images/
