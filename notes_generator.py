@@ -1,12 +1,11 @@
-# Python script to generate default notes template including folder and md file
-# May not work for some title with uppercase abbreviation e.g. HTML CSS, need to use content_title
+# Python script to generate empty note with its folder, sidebar entries, and topic links.
 
 import os
 
 topic_title = "compilers-and-programming-langauges"
 
-# List of content in kebab title
-content_id = [
+# List of pages in kebab-title
+pages_id = [
     "cpl-fundamentals",
     "syntax",
     "scanning",
@@ -28,8 +27,8 @@ content_id = [
     "scripting-languages",
 ]
 
-# List of content in title case
-content_title = [
+# List of pages in Title Case
+pages_title = [
     "CPL Fundamentals",
     "Syntax",
     "Scanning",
@@ -51,19 +50,15 @@ content_title = [
     "Scripting Languages"
 ]
 
-# Create temp folder for debugging
-parent_folder = "C:\\Users\\USER\\Desktop\\temp"
-os.makedirs(parent_folder, exist_ok=True)
 
-
-def toKebabCase(title):
+def to_kebab_case(title):
     """
     Title Case -> title-case
     """
     return title.capitalize().replace('-', ' ')
 
 
-def toTitleCase(kebab):
+def to_title_case(kebab):
     """
     title-case -> Title Case
     """
@@ -72,33 +67,32 @@ def toTitleCase(kebab):
 
 def generate_topic_links():
     """
-    Doesn't create file, just print output in terminal
+    Print topic links on console.
     """
-    for i, kebab_title in enumerate(content_id, start=0):
-        os.makedirs(parent_folder, exist_ok=True)
-        print(f"- [{content_title[i]}]({topic_title}/{kebab_title})")
+    for i, kebab_title in enumerate(pages_id, start=0):
+        print(f"- [{pages_title[i]}]({topic_title}/{kebab_title})")
 
 
 def generate_topic_sidebars():
     """
-    Doesn't create file aswell
+    Print sidebar entries on console.
     """
-    for i, kebab_title in enumerate(content_id, start=0):
-        title = toTitleCase(kebab_title)
+    for i, kebab_title in enumerate(pages_id, start=0):
+        title = to_title_case(kebab_title)
         print(f'"{topic_title}/{kebab_title}/{kebab_title}",')
 
 
 def generate_folder_file():
     """
-    Creates actual folder and file
+    Creates folder and file on temp folder.
     """
     # Create folders and MD files
-    for i, kebab_title in enumerate(content_id, start=1):
-        title = content_title[i - 1]
+    for i, kebab_title in enumerate(pages_id, start=1):
+        title = pages_title[i - 1]
 
-        # Folder numbering system e.g. 01-title ... 99-title
+        # Folder numbering system: 01-title, 02-title, 03-title ... 99-title
         folder_name = f"{i:02d}-{kebab_title}"
-        folder_path = os.path.join(parent_folder, folder_name)
+        folder_path = os.path.join("temp", folder_name)
         os.makedirs(folder_path, exist_ok=True)
 
         md_file_name = f"{kebab_title}.md"
@@ -124,7 +118,10 @@ def generate_folder_file():
 
 
 if __name__ == "__main__":
-    # generate_folder_file()
+    # Temp folder for generate_folder_file output
+    os.makedirs("temp", exist_ok=True)
+
+    generate_folder_file()
     # generate_topic_links()
-    generate_topic_sidebars()
+    # generate_topic_sidebars()
     pass

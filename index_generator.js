@@ -1,6 +1,6 @@
 /**
- * A script to obtain all topics intro file and take the list of topics listed under
- * the ### All pages heading. Then, combine all result to generate an index.md file
+ * A script to obtain all topics' intro file and take the list of topics listed under
+ * the "### All pages" heading. All the result will be combined to generate an index.md file.
  *
  * This script depends on the topic list on each intro file, so make sure they are right!
  * Always put topic list after the heading and never put anything below it.
@@ -22,7 +22,7 @@ function extractTopicList(filePath) {
         .substring(extractContentAfter + "### All pages".length)
         .trim();
       const topicsCount = topicsContent
-        .split("\n") 
+        .split("\n")
         // A specific topic should be linked to a note, implies that it has "[name](/link-to-name)" for the link.
         .filter((line) => line.trim().length > 0 && line.includes("[")).length;
       return {

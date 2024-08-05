@@ -1,5 +1,8 @@
+# A script to find out how many notes are there, how many characters in each notes and the total of the; and the longest notes.
+
 import heapq
 import os
+
 
 def stats(directory):
     total_sum = 0
@@ -27,5 +30,5 @@ def stats(directory):
         c, n = heapq.heappop(alls)
         print(f"  Character: {-c} | {n}")
 
-directory_path = "D:\\Programming\\Projects\\cs-notes\\docs"
-stats(directory_path)
+
+stats("docs")
