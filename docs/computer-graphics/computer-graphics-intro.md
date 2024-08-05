@@ -5,6 +5,70 @@ title: Computer Graphics
 description: Computer Graphics Notes
 ---
 
+### temporary
+
+- Computer Graphics Fundamentals
+  - scene
+  - rendering
+  - local, world, view, clip screen space
+  - terminologies
+  - interpolation
+  - normalizing
+  - vertex
+    - VBO, VAO, EBO, vertices, indices
+- 2d/3d transformation
+  - coordinate system
+  - euler rotation
+  - gimbal lock
+  - quarternion
+  - why use 4d coordinate (afinne transformation)
+- Render loop
+- More about rendering
+  - transparency rendering order
+  - backface culling
+- Graphics pipeline
+- GUI
+  - window system
+- Frame buffer, front & back buffer, vsync.
+- Primitive rendering, text rendering.
+- Physics and implementation
+  - gravity
+  - rigid body
+  - fluid
+- Projection
+  - orthographic, near plane, far plane
+  - perspective, FOV
+- Blurring, edge detection, filter
+- Meshes
+  - loading
+  - model
+- Depth buffer, buffer test, z buffer, z fighting
+  - scene data -> transformation -> projection to view space -> depth value formula -> depth value -> depth value testing
+- Stencil testing
+- Blending, color, formula
+- Shader
+  - vertex shader
+  - fragment shader
+  - geometry shader
+- Lightning
+  - directional, point, spotlight
+  - attenuation
+  - specular, diffuse, ambient, phong, blinn phong
+  - normal mapping
+  - parallax mapping
+  - HDR
+  - bloom
+  - SSAO / ambient occulsion
+  - g buffer and deferred shading
+- Directional shadow and point shadow
+- Texture Mapping / Mipmapping
+- PCF
+- Over/under sampling
+- Peter panning
+- Shadow acne
+- Depth map
+- Light shadow space
+
 # Computer Graphics
 
 **Main source : [Cem Yuksel Introduction to Computer Graphics](https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh)**
