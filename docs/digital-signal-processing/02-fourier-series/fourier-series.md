@@ -5,79 +5,82 @@ title: Fourier Series
 description: Fourier Series
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Dr. Trefor Bazett, Intro to Fourier Series](https://youtu.be/wmCIrpLBFds)**
-- **Various source from Google and Youtube**
+- **[Intro to FOURIER SERIES: The Big Idea — Dr. Trefor Bazett](https://youtu.be/wmCIrpLBFds)**
 
-**Fourier Series** is a mathematical method for representing a periodic function as a sum of sine and cosine functions with different frequencies.
+**Fourier series** is a mathematical method for representing (approximating) a periodic function as a sum of sine and cosine functions with different frequencies.
 
-We can approximate various of function such as below
+Common types of waves exhibit sine or cosine-like pattern. With Fourier series, we can even represent a square or triangle waves.
 
 ![Fourier series can approximate square, sawtooth, triangle, semicircle wave](./fourier-series-variation.png)  
-Source : https://byjus.com/maths/fourier-series/
+Source: https://byjus.com/maths/fourier-series/
 
 ### Approximating Square Wave
 
-A function is called periodic when it satisfies the following : $f(t + T) = f(t)$.  
-Meaning function will repeats its values at some intervals or periods.
+A function is called periodic when it satisfies the following: $f(t + T) = f(t)$. This means the function will repeat its values at some intervals or periods.
 
 ![A wave that starts and ends in some x value](./periodic-function.png)  
-Source : https://www.analyzemath.com/function/periodic.html
+Source: https://www.analyzemath.com/function/periodic.html
 
-A square wave like this is also a periodic function
+A square wave like below is considered as a periodic function.
+
 ![Square wave that repeats every pi or have period of pi](square-wave-periodic-function.png)  
-Source : https://youtu.be/wmCIrpLBFds?t=89
+Source: https://youtu.be/wmCIrpLBFds?t=89
 
-We can approximate a square wave with the sum of sine wave. With a single sine wave, we will get a pretty bad approximation.
+We will attempt to create a function that behaves similarly like that square wave using sine waves. With a single sine wave, we will get a pretty bad approximation. We see that the output is not always -1 or 1, so our approximation is still pretty far.
 
 ![An inaccurate approximation of square wave using sine wave](./approximate-square-wave-1.png)  
-Source : https://youtu.be/wmCIrpLBFds?t=131
+Source: https://youtu.be/wmCIrpLBFds?t=131
 
 Here, a closer look at the approximation using $\frac{4}{\pi} \sin(x)$ function.
 
 ![A zoomed in approximation of square wave using some sin x function](./approximate-square-wave-2.png)  
-Source : https://youtu.be/wmCIrpLBFds?t=195
+Source: https://youtu.be/wmCIrpLBFds?t=195
 
-We can add another sine wave so that the amplitude will lower down. Adding wave will either add up or cancel each other.
+To improve our approximation, we will add another sine wave. This will cause some amplitude to decrease and increase where they are required (we must add the corresponding wave). This is the constructive and destructive interference property of waves, in which two waves added together will either add up (constructive interference) or cancel each other out (destructive interference).
 
 ![A sine wave addition that lowers down the amplitude](./approximate-square-wave-3.png)  
-Source : https://youtu.be/wmCIrpLBFds?t=221
+Source: https://youtu.be/wmCIrpLBFds?t=221
 
-It will result in much better approximation.
+The addition results in better approximation.
 
 ![Better approximation after adding another sine wave with different frequency](./approximate-square-wave-4.png)  
-Source : https://youtu.be/wmCIrpLBFds?t=257
+Source: https://youtu.be/wmCIrpLBFds?t=257
 
 We can keep adding sine wave until we are satisfied with the result.
 
 ![More sine wave addition making the wave fits the square wave better](./approximate-square-wave-5.png)  
-Source : https://youtu.be/wmCIrpLBFds?t=312
+Source: https://youtu.be/wmCIrpLBFds?t=312
 
 #### Gibbs Phenomena
 
-We may encounter a problem in our series of sine wave. While approximating a discontinued function, the Fourier series attempts to "fill in" the gaps with the sum of the sine and cosine functions. However, the sum of the infinite number of sine and cosine functions is not able to perfectly match the discontinuous function, resulting in the overshoot or ringing effect.
+Now that our function looks square-ish, we encounter a problem in our series of sine wave. While approximating a discontinued function, such as the square wave, the Fourier series attempts to "fill in" the gaps with the sum of the sine and cosine functions, so that a continuous function can look like a discontinuous function. However, the sum of the infinite number of sine and cosine functions is not able to perfectly match the discontinuous function, resulting in the overshoot or ringing effect.
 
-![Approximation "jumps" in discontiunity](./gibbs-phenomenon.png)  
-Source : https://youtu.be/wmCIrpLBFds?t=384
+![Approximation "jumps" in discontinuity](./gibbs-phenomenon.png)  
+Source: https://youtu.be/wmCIrpLBFds?t=384
+
+This is a fundamental limitation in representing discontinuous functions using Fourier series. Some method, such as [filtering](/digital-signal-processing/filtering) can dampen the oscillations near the discontinuities.
 
 ### Fourier Series Formula
 
-Below are the formula for Fourier series for a periodic function $f(x)$ with period of $2\pi$, note that we can also add up with cosine wave.
+The formula for Fourier series for a periodic function $f(x)$ with period of $2\pi$.
 
 ![Fourier series formula involving coefficient terms](./fourier-series-formula.png)  
-Source : https://www.cuemath.com/fourier-series-formula/
+Source: https://www.cuemath.com/fourier-series-formula/
 
-These coefficient can be thought of as how we will represent the amplitude and phase of each frequency component in the Fourier series expansion of a periodic function.
+So, with a given function $f(x)$, we can compute this formula to obtain the approximation of that function with the sum of sine and cosine function.
 
 ### Complex Fourier Series
 
-Fourier series is represented in sine and cosine wave, we can represent this as a sum of complex exponential functions using Euler's formula.  
+Fourier series is represented as sum of sine and cosine wave. We may also represent this as a sum of complex exponential functions, utilizing the Euler's identity.
 
-![Euler formula connecting exponential function with sine and cosine terms](./euler-formula.png)  
-The formula for complex Fourier series with period of $2\pi$ :  
-![Formula for complex fourier series involving imaginary terms](./complex-fourier-series-formula.png)  
+![Euler formula connecting exponential function with sine and cosine terms](./euler-formula.png)
+
+The formula for complex Fourier series with period of $2\pi$:
+
+![Formula for complex Fourier series involving imaginary terms](./complex-fourier-series-formula.png)  
 Where $n$ is frequency and $i$ is the imaginary terms.
 
-![Sine wave converted to circle using euler's formula involving exponential function](./complex-representation.png)  
-Source : https://pidlaboratory.com/4-complex-fourier-series/ (With modification)
+![Sine wave converted to circle using Euler's formula involving exponential function](./complex-representation.png)  
+Source: https://pidlaboratory.com/4-complex-fourier-series/ (With modification)

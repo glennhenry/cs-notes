@@ -5,15 +5,7 @@ title: Digital Signal Processing
 description: Digital Signal Processing Notes
 ---
 
-**Signal Processing** is the field of study concerned with the analysis, manipulation, and interpretation of signals. **Digital Signal Processing (DSP)** is subfield of signal processing that deals with the processing of digital signals. DSP is widely used in computer for audio and video compression and decompression, noise reduction in audio signals, image and video enhancement, etc.
-
-This topic will mostly covers the theory, the application will be included more in [Digital Media Processing](/digital-media-processing).
-
-:::tip
-Find out more about signal processing related to image in [here](/computer-graphics/signal-processing)
-:::
-
-**Source : Various online resources that is included in each section**
+**Signal processing** is the field of study concerned with the analysis, manipulation, and interpretation of signals. **Digital signal processing (DSP)** is a subfield of signal processing that deals with the processing of digital signals. DSP is widely used in computer for audio and video compression and decompression, noise reduction in audio signals, image and video enhancement, etc.
 
 ### All pages
 
