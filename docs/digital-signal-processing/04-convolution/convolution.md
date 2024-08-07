@@ -21,7 +21,7 @@ Convolution of two function $f(t)$ and $g(t)$ is defined as follows:
 ![Convolution formula with function of time involving integral](./convolution-formula.png)
 
 - $\ast$ is the convolution operator
-- $\tau$ is just a placeholder variable
+- $\tau$ is just a placeholder variable.
 
 The formula represents the infinite sum (integration) of the product between two function at different time delays. When we multiply two function at different time delays, we are essentially adding together the waves of the two signals at different frequencies.
 

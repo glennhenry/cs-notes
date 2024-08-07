@@ -30,20 +30,18 @@ Fourier transform formula for continuous signal is given by below.
 
 ![Fourier transform formula involving complex exponential term with the function of time representing the signal](./fourier-transform-formula.png)
 
-- $\omega$ is the frequency with unit of radians per unit time.
-- $F(\omega)$ is the output of Fourier transform with input frequency $\omega$.
-- $f(t)$ is the original signal in the time domain.
+- $\omega$ is the frequency with unit of radians per unit time
+- $F(\omega)$ is the output of Fourier transform with input frequency $\omega$
+- $f(t)$ is the original function of signal in the time domain
 - $e^{-i\omega t}$ is a complex exponential term.
 
-The complex exponential term is used to represent the oscillating property of the wave. In this formula, wave is represented as a vector that has certain magnitude, which correspond to the amplitude of the sinusoidal wave.
-
-In the wave, phase angle represents the phase shift of the wave relative to a reference point. With the vector, this is represented with the $\theta$.
-
-Multiplying the $f(t)$ with the exponential term would make the vector now rotate based on the function.
+The complex exponential term is used to represent wave in terms of sine and cosine waves (by [utilizing Euler's identity](/digital-signal-processing/fourier-series#complex-fourier-series)). In this formula, wave is represented as a vector that has certain magnitude, which correspond to the amplitude of the sinusoidal wave.
 
 ![Wave representation using complex exponential term](./complex-rotation.gif)  
 Source: https://tutorial.math.lamar.edu/Extras/ComplexPrimer/Forms.aspx
 
-To be able to separate the function based on each waves' frequency, Fourier transform attempt to isolate the amplitude and the phase. The magic comes from taking the integral of the product of the exponential term and the input signal $f(t)$. The product of them represent the contribution of the frequency component at frequency $\omega$ to the original signal $f(t)$. The idea is, we need to find out how much of the signal at time $t$ is contributed by the frequency component at frequency $\omega$. Do this for all $t$ to know the product for all time domain. This is where integral comes to play. Essentially, taking the integral for all values of $t$ measures the amount of overlap between the original signal and the oscillating function at frequency $\omega$.
+Multiplying the original signal $f(t)$ with the exponential term would give us a number that represent the correlation between them, for which we know its contribution to the input wave frequency.
 
-Taking the integral produces the $F(\omega)$ function, which is a complex-valued function that will take frequency $\omega$ and shows the amplitude and phase of each frequency component present in $f(t)$.
+A product represents the contribution of the frequency component at frequency $\omega$ to the original signal $f(t)$. In order to know the contribution of the whole signal function, we can multiply the signal over time. This is where integral comes to play. Essentially, taking the integral for all values of $t$ measures the amount of overlap between the original signal and the oscillating function at frequency $\omega$.
+
+All this produces the $F(\omega)$ function, which is a complex-valued function that will take frequency $\omega$ and shows the amplitude and phase of each frequency component present in $f(t)$.
