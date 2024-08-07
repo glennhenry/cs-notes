@@ -5,38 +5,27 @@ title: Z-Transform
 description: Z-Transform
 ---
 
-**Main Source : Various source from Google and Youtube**
+**Main Source:**
 
-**Z-Transform** is the discrete version of [Laplace transform](/digital-signal-processing/laplace-transform). The discrete input of signal makes Z-transform usable in the digital world.
+- **Various source from Google and YouTube**
 
-![Comparison between continous and discrete signal](./continous-discrete-signal.png)  
-Source : https://www.geeksforgeeks.org/what-is-z-transform/
+**Z-transform** is the discrete version of [Laplace transform](/digital-signal-processing/laplace-transform), often used in the digital world.
 
-Z-transform is defined as follows :
+![Comparison between continuous and discrete signal](./continous-discrete-signal.png)  
+Source: https://www.geeksforgeeks.org/what-is-z-transform/
+
+Z-transform is defined as follows:
 
 ![Z-transform formula](./z-transform-formula.png)
 
-- $x(n)$ : the n-th term of the sample
-- z : complex variable
-- A : magnitude of z
-- j : imaginary unit
-- $\phi$ : angle or phase in radian
+- $x(n)$: the n-th term of the sample
+- $z$: complex variable
+- $A$: magnitude
+- $j$: imaginary unit
+- $\phi$: phase angle in radian.
 
-Because Z-transform is discrete, $\sum$ is used instead of continous sum integral. Typically we don't sum all the way from negative infninity up to positive infinity, because it's not always possible to compute as the discrete signal may not be defined for all n values.
+Discrete sum $\sum$ is used instead of continuous integration. The sum goes from negative infinity to positive infinity, which is not possible in the real world. Typically, only some number of sample is used, as long as the number of sample is sufficiently large, so it doesn't affect the accuracy of the Z-transform.
 
-Instead, we truncate the sum. it won't affect the accuracy of the Z-transform as long as the number of terms is sufficiently large.
+### How does it work
 
-### How does it works
-
-Z-transform is just the discrete version of Laplace transform, the way of how it works is similar as the [Discrete Fourier Transform](/digital-signal-processing/discrete-fourier-transform) to [Fourier Transform](/digital-signal-processing/fourier-transform). Multiplying each discrete sample by the complex variable would capture the phase and magnitude.
-
-Z-transform is just the discrete version of Laplace transform, the way of how it works is similar as the Discrete Fourier Transform toFourier Transform. Multiplying each discrete sample by the complex variable $z^{-n}$, we are essentially converting the sample from the time domain to the frequency domain by shifting the sample to a different frequency. It will be shifted by power of n that vary between samples.
-
-After getting the complex function output, it can be used for a variety of purposes, such as frequency analysis, filter design, system analysis.
-
-#### Visualization
-
-![Z-transform visualization](./z-transform-visualization.png)  
-Source : https://wirelesspi.com/a-visualization-of-causality-and-stability-in-z-transform/
-
-Same as Laplace transform, x-axis represents real part, y-axis represents imaginary part, and z-axis represents magnitude.
+Z-transform is just the discrete version of Laplace transform, the way of how it works is similar as the [discrete Fourier transform](/digital-signal-processing/discrete-fourier-transform) to [Fourier transform](/digital-signal-processing/fourier-transform). By multiplying each discrete sample by the complex variable $z^{-n}$, we are essentially converting the sample from the time domain to the frequency domain by shifting the sample to a different frequency. The shifts depend on the power of $n$ that vary between samples.
