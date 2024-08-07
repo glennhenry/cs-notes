@@ -88,7 +88,7 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/favicon.jpg",
       navbar: {
         title: "Notes",
         style: "dark",
