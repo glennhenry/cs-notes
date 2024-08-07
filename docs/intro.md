@@ -65,6 +65,11 @@ Excluding the [index page](/index).
 
 - [GitHub](https://github.com/) — For storing and hosting this site.
 - [LT<sub>E</sub>X Extension for VS Code](https://github.com/valentjn/vscode-ltex) — Grammar/spell checker.
+- [Perchance](https://perchance.org/ai-icon-generator) — favicon.ico generator.
+
+> personal computer science notes website (art style waifu) by [@Perchance](https://perchance.org/ai-icon-generator)
+
+![CS waifu](./cs-waifu.jpg)
 
 ### TO-DOs
 
