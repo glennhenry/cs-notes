@@ -6,55 +6,7 @@ const sidebars = {
     "intro",
     "0index/index",
 
-    // 1. Digital Signal Processing
-    {
-      type: "category",
-      label: "Digital Signal Processing",
-      link: {
-        type: "doc",
-        id: "digital-signal-processing/digital-signal-processing",
-      },
-      items: [
-        "digital-signal-processing/signal/signal",
-        {
-          type: "category",
-          label: "Fourier Analysis",
-          items: [
-            "digital-signal-processing/fourier-series/fourier-series",
-            "digital-signal-processing/fourier-transform/fourier-transform",
-            "digital-signal-processing/convolution/convolution",
-            "digital-signal-processing/discrete-fourier-transform/discrete-fourier-transform",
-            "digital-signal-processing/fast-fourier-transform/fast-fourier-transform",
-            "digital-signal-processing/discrete-cosine-transform/discrete-cosine-transform",
-            "digital-signal-processing/wavelets/wavelets",
-            "digital-signal-processing/laplace-transform/laplace-transform",
-            "digital-signal-processing/z-transform/z-transform",
-          ],
-        },
-        {
-          type: "category",
-          label: "Signal Transmission",
-          items: [
-            "digital-signal-processing/sampling/sampling",
-            "digital-signal-processing/quantization/quantization",
-            "digital-signal-processing/encoding-and-decoding/encoding-and-decoding",
-            "digital-signal-processing/multiplexing/multiplexing",
-            "digital-signal-processing/signal-transmission-medium/signal-transmission-medium",
-          ],
-        },
-        {
-          type: "category",
-          label: "Signal Processing",
-          items: [
-            "digital-signal-processing/filtering/filtering",
-            "digital-signal-processing/compression/compression",
-            "digital-signal-processing/denoising/denoising",
-          ],
-        },
-      ],
-    },
-
-    // 2. Computer & Programming Fundamentals
+    // 1. Computer & Programming Fundamentals
     {
       type: "category",
       label: "Computer & Programming Fundamentals",
@@ -131,6 +83,54 @@ const sidebars = {
           ],
         },
         "computer-and-programming-fundamentals/computer-and-programming-terminology/computer-and-programming-terminology",
+      ],
+    },
+
+    // 2. Digital Signal Processing
+    {
+      type: "category",
+      label: "Digital Signal Processing",
+      link: {
+        type: "doc",
+        id: "digital-signal-processing/digital-signal-processing",
+      },
+      items: [
+        "digital-signal-processing/signal/signal",
+        {
+          type: "category",
+          label: "Fourier Analysis",
+          items: [
+            "digital-signal-processing/fourier-series/fourier-series",
+            "digital-signal-processing/fourier-transform/fourier-transform",
+            "digital-signal-processing/convolution/convolution",
+            "digital-signal-processing/discrete-fourier-transform/discrete-fourier-transform",
+            "digital-signal-processing/fast-fourier-transform/fast-fourier-transform",
+            "digital-signal-processing/discrete-cosine-transform/discrete-cosine-transform",
+            "digital-signal-processing/wavelets/wavelets",
+            "digital-signal-processing/laplace-transform/laplace-transform",
+            "digital-signal-processing/z-transform/z-transform",
+          ],
+        },
+        {
+          type: "category",
+          label: "Signal Transmission",
+          items: [
+            "digital-signal-processing/sampling/sampling",
+            "digital-signal-processing/quantization/quantization",
+            "digital-signal-processing/encoding-and-decoding/encoding-and-decoding",
+            "digital-signal-processing/multiplexing/multiplexing",
+            "digital-signal-processing/signal-transmission-medium/signal-transmission-medium",
+          ],
+        },
+        {
+          type: "category",
+          label: "Signal Processing",
+          items: [
+            "digital-signal-processing/filtering/filtering",
+            "digital-signal-processing/compression/compression",
+            "digital-signal-processing/denoising/denoising",
+          ],
+        },
       ],
     },
 

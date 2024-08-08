@@ -64,8 +64,8 @@ function getAllIntroFiles(directoryPath) {
 
 // Topics order
 const order = [
-  "Digital Signal Processing",
   "Computer & Programming Fundamentals",
+  "Digital Signal Processing",
   "Digital Media Processing",
   "Computer Networking",
   "Data Structures & Algorithms",

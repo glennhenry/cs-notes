@@ -9,8 +9,8 @@ My computer science notes from various online courses, tutorial, books, blogs, W
 
 ### Main Topics
 
-- **[Digital Signal Processing](digital-signal-processing)**
 - **[Computer & Programming Fundamentals](computer-and-programming-fundamentals)**
+- **[Digital Signal Processing](digital-signal-processing)**
 - **[Digital Media Processing](digital-media-processing)**
 - **[Computer Networking](computer-networking)**
 - **[Data Structures & Algorithms](data-structures-and-algorithms)**
