@@ -37,7 +37,7 @@ const sidebars = {
           items: [
             "digital-signal-processing/sampling/sampling",
             "digital-signal-processing/quantization/quantization",
-            "digital-signal-processing/coding/coding",
+            "digital-signal-processing/encoding-and-decoding/encoding-and-decoding",
             "digital-signal-processing/multiplexing/multiplexing",
             "digital-signal-processing/signal-transmission-medium/signal-transmission-medium",
           ],

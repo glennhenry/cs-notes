@@ -23,7 +23,7 @@ description: Digital Signal Processing Notes
 - Signal Transmission
   - [Sampling](digital-signal-processing/sampling)
   - [Quantization](digital-signal-processing/quantization)
-  - [Coding](digital-signal-processing/coding)
+  - [Encoding & Decoding](digital-signal-processing/encoding-and-decoding)
   - [Multiplexing](digital-signal-processing/multiplexing)
   - [Signal Transmission Medium](digital-signal-processing/signal-transmission-medium)
 - Signal Processing

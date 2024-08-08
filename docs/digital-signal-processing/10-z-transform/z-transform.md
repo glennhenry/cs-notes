@@ -11,9 +11,6 @@ description: Z-Transform
 
 **Z-transform** is the discrete version of [Laplace transform](/digital-signal-processing/laplace-transform), often used in the digital world.
 
-![Comparison between continuous and discrete signal](./continous-discrete-signal.png)  
-Source: https://www.geeksforgeeks.org/what-is-z-transform/
-
 Z-transform is defined as follows:
 
 ![Z-transform formula](./z-transform-formula.png)

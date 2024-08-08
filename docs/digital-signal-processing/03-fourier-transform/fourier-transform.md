@@ -16,7 +16,7 @@ Wave functions, such as the Fourier series, is typically associated with time (t
 When we add together various wave, the wave function contain multiple frequency components. Fourier transform is a method to extract the individual frequency components within the wave function. It will represent the signal in the **frequency-domain** as a sum of sinusoidal waves with different frequencies.
 
 ![A complex wave is being separated by its frequency](./separating-wave.png)  
-Source: https://kinder-chen.medium.com/denoising-data-with-fast-fourier-transform-a81d9f38cc4c
+Source: [top](https://kinder-chen.medium.com/denoising-data-with-fast-fourier-transform-a81d9f38cc4c), [bottom](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YGJ7CAO&l=en-US)
 
 :::tip
 

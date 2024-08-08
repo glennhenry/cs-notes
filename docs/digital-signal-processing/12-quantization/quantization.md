@@ -20,7 +20,7 @@ However, quantization may introduce some inaccuracy during reconstruction. We ca
 
 ### Quantization Level
 
-Typically, the number of possible values is expressed as a power of 2, as this simplifies the digital representation and processing (allows for easy representation using [binary](/computer-and-programming-fundamentals/binary-representation)). The number of bit is called the **bit depth**, which determines the resolution or precision of the quantized representation.
+Typically, the number of possible values is expressed as a power of 2, as this simplifies the digital representation and processing (allows for easy representation using [binary](/computer-and-programming-fundamentals/number-system#binary)). The number of bit is called the **bit depth**, which determines the resolution or precision of the quantized representation.
 
 The number of possible output or representation is mathematically written as: $\text{quantization levels} = 2^{(\text{bit depth})}$.
 
