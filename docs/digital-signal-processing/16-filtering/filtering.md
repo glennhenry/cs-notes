@@ -5,27 +5,23 @@ title: Filtering
 description: Filtering
 ---
 
-**Main Source : Various source from Google and Youtube**
+**Main Source:**
 
-In digital signal processing, **Filtering** refers to the process of modifying or manipulating a digital signal to remove unwanted components or extract specific information from the signal.
+- **Various source from Google and YouTube**
 
-For example, we can remove unwanted component by applying techniques like the [Fourier transform](/digital-signal-processing/fourier-transform) to separate the signal based on each frequency and we can analyze it further.
+In digital signal processing, **filtering** refers to the process of modifying or manipulating a digital signal to remove unwanted components or extract specific information. For example, unwanted components can be removed by applying techniques like the [Fourier Transform](/digital-signal-processing/fourier-transform), which separates signals based on their frequency components, allowing the removal of a particular frequency.
 
-![Fourier transform filtering the highest magnitude signal to reduce noise in sound wave](./filter-type.png)  
-Source : https://towardsdatascience.com/the-fourier-transform-4-putting-the-fft-to-work-38dd84dc814
+![Fourier transform filtering the highest magnitude signal to reduce noise in sound wave](./ft-filtering.png)  
+Source: https://towardsdatascience.com/the-fourier-transform-4-putting-the-fft-to-work-38dd84dc814
 
-Applying a filter works by selectively reduce or amplify certain frequency components based on the desired filtering characteristics.
+Applying filter works by selectively reducing or amplifying certain frequency components based on the desired filtering characteristics.
 
-Some common filtering includes :
+Some common filtering includes:
 
-- Lowpass Filter : Allows low-frequency components of a signal to pass through while reducing higher-frequency components.
-- Highpass Filter : Allows high-frequency components of a signal to pass through while or reducing lower-frequency components.
-- Bandpass Filter : Filters out both low and high-frequency content, allowing only the frequencies within the desired range to be present in the output signal.
-- Bandstop Filter / Notch Filter : Reduces a specific range or band of frequencies while allowing frequencies outside that range to pass through.
+- **Low-pass filter**: Allows low-frequency components of a signal to pass through while reducing higher-frequency components.
+- **High-pass filter**: Allows high-frequency components of a signal to pass through while or reducing lower-frequency components.
+- **Band-pass filter**: Filters out both low and high-frequency content, allowing only the frequencies within the desired range to be present in the output signal.
+- **Band-stop filter**: Reduces a specific range or band of frequencies while allowing frequencies outside that range to pass through.
 
-![Common filter type including lowpass, highpass, bandstop, and bandpass](./filter-type.png)  
-Source : https://en.wikipedia.org/wiki/Filter_(signal_processing)
-
-:::tip
-Find out more about filter related to image in [here](/computer-graphics/signal-processing#image-filters).
-:::
+![Common filter type including low-pass, high-pass, band-stop, and band-pass](./filter-type.png)  
+Source: https://en.wikipedia.org/wiki/Filter_(signal_processing)

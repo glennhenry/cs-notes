@@ -9,29 +9,7 @@ This page contains all the notes on this site. The structure is similar to the s
 
 A total of **20** topics, and a total of **367** notes.
 
-1. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
-    - [Signal](digital-signal-processing/signal)
-    - Fourier Analysis
-      - [Fourier Series](digital-signal-processing/fourier-series)
-      - [Fourier Transform](digital-signal-processing/fourier-transform)
-      - [Convolution](digital-signal-processing/convolution)
-      - [Discrete Fourier Transform](digital-signal-processing/discrete-fourier-transform)
-      - [Fast Fourier Transform](digital-signal-processing/fast-fourier-transform)
-      - [Discrete Cosine Transform](digital-signal-processing/discrete-cosine-transform)
-      - [Wavelets](digital-signal-processing/wavelets)
-      - [Laplace Transform](digital-signal-processing/laplace-transform)
-      - [Z Transform](digital-signal-processing/z-transform)
-    - Signal Transmission
-      - [Sampling](digital-signal-processing/sampling)
-      - [Quantization](digital-signal-processing/quantization)
-      - [Coding](digital-signal-processing/coding)
-      - [Multiplexing](digital-signal-processing/multiplexing)
-      - [Signal Transmission Medium](digital-signal-processing/signal-transmission-medium)
-    - Signal Processing
-      - [Filtering](digital-signal-processing/filtering)
-      - [Compression](digital-signal-processing/compression)
-      - [Denoising](digital-signal-processing/denoising)
-2. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (**20** subtopics)
+1. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (**20** subtopics)
     - Computer Representation
       - [Number System](computer-and-programming-fundamentals/number-system)
       - [Binary Representation](computer-and-programming-fundamentals/binary-representation)
@@ -60,6 +38,28 @@ A total of **20** topics, and a total of **367** notes.
       - [Interpreter](computer-and-programming-fundamentals/interpreter)
       - [Runtime Environment](computer-and-programming-fundamentals/runtime-environment)
     - [Computer & Programming Terminology](computer-and-programming-fundamentals/computer-and-programming-terminology)
+2. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
+    - [Signal](digital-signal-processing/signal)
+    - Fourier Analysis
+      - [Fourier Series](digital-signal-processing/fourier-series)
+      - [Fourier Transform](digital-signal-processing/fourier-transform)
+      - [Convolution](digital-signal-processing/convolution)
+      - [Discrete Fourier Transform](digital-signal-processing/discrete-fourier-transform)
+      - [Fast Fourier Transform](digital-signal-processing/fast-fourier-transform)
+      - [Discrete Cosine Transform](digital-signal-processing/discrete-cosine-transform)
+      - [Wavelets](digital-signal-processing/wavelets)
+      - [Laplace Transform](digital-signal-processing/laplace-transform)
+      - [Z Transform](digital-signal-processing/z-transform)
+    - Signal Transmission
+      - [Sampling](digital-signal-processing/sampling)
+      - [Quantization](digital-signal-processing/quantization)
+      - [Encoding & Decoding](digital-signal-processing/encoding-and-decoding)
+      - [Multiplexing](digital-signal-processing/multiplexing)
+      - [Signal Transmission Medium](digital-signal-processing/signal-transmission-medium)
+    - Signal Processing
+      - [Filtering](digital-signal-processing/filtering)
+      - [Compression](digital-signal-processing/compression)
+      - [Denoising](digital-signal-processing/denoising)
 3. [Digital Media Processing](/digital-media-processing) (**32** subtopics)
     - Image Processing
       - [Image Properties](digital-media-processing/image-properties)
