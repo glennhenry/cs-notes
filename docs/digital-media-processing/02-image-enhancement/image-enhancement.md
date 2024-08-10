@@ -11,7 +11,7 @@ description: Image Enhancement
 
 **Image enhancement** is the process of improving the visual quality of an image by adjusting its properties.
 
-Image enhancement differs slightly from image editing. Image editing is a broader term that includes altering the content of an image, such as removing objects or changing the background. In contrast, image enhancement refers to the process that adjusts the properties of the image without changing its content.
+Image enhancement differs slightly from [image editing](/digital-media-processing/image-editing). Image editing is a broader term that includes altering the content of an image, such as removing objects or changing the background. In contrast, image enhancement refers to the process that adjusts the properties of the image without changing its content.
 
 ![Comparison before and after image is enhanced](./image-enhancement.jpeg)  
 _before and after image enhancement_  
