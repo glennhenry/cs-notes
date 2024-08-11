@@ -110,3 +110,5 @@ For simplicity, TO-DOs are placed here instead of something like GitHub issues.
     - [/software-engineering/software-deployment](/software-engineering/software-deployment): a/b testing, canary release, feature flags factory.
     - [/software-engineering/creational-patterns](/software-engineering/creational-patterns): factory pattern and its use in configuration file.
     - [/software-engineering/behavioral-patterns](/software-engineering/behavioral-patterns): strategy pattern.
+21. **[add]** [/digital-media-processing](/digital-media-processing)/zip: add ZIP archive as "other" digital media formats.
+22. **[ref]** [/digital-media-processing/mime-type](/digital-media-processing/mime-type): ref to ZIP archive.

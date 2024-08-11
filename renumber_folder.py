@@ -5,7 +5,7 @@
 
 import os
 
-path_to_topic_folder = os.path.join("docs", "digital-signal-processing")
+path_to_topic_folder = os.path.join("docs", "digital-media-processing")
 all_pages = os.listdir(path_to_topic_folder)
 
 for num, folder_name in enumerate(all_pages) :

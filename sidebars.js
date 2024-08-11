@@ -175,7 +175,6 @@ const sidebars = {
             "digital-media-processing/video-representation/video-representation",
             "digital-media-processing/video-recording/video-recording",
             "digital-media-processing/video-effects-enhancement/video-effects-enhancement",
-            "digital-media-processing/swf/swf",
           ],
         },
 
@@ -222,6 +221,13 @@ const sidebars = {
                 "digital-media-processing/md/md",
                 "digital-media-processing/txt/txt",
                 "digital-media-processing/pdf/pdf",
+              ],
+            },
+            {
+              type: "category",
+              label: "Other",
+              items: [
+                "digital-media-processing/swf/swf"
               ],
             },
           ],
