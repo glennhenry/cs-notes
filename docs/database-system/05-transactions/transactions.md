@@ -5,10 +5,10 @@ title: Transactions
 description: Transactions
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Database transaction - Wikipedia](https://en.wikipedia.org/wiki/Database_transaction)**
-- **[ACID - Wikipedia](https://en.wikipedia.org/wiki/ACID)**
+- **[Database transaction — Wikipedia](https://en.wikipedia.org/wiki/Database_transaction)**
+- **[ACID — Wikipedia](https://en.wikipedia.org/wiki/ACID)**
 
 **Transaction** is a technique to group together related database operation.
 
@@ -33,14 +33,14 @@ Another purpose of transactions is to control concurrency in the case of multipl
 ### Transactions State
 
 ![State of transactions](./transactions-state.png)  
-Source : https://www.scaler.com/topics/dbms/transaction-in-dbms/
+Source: https://www.scaler.com/topics/dbms/transaction-in-dbms/
 
-1. **Active** : The transaction is in progress and actively performing database operations.
-2. **Partially Committed** : In partially committed state, all database operation has been completed, but only on memory (volatile memory such as RAM). Changes made by the database operations are not permanently saved to the database, they are instead performed on memory. This mean other unit of transactions cannot see the changes made by this transaction until it is fully committed. In the case of failure, it will go to the failed state.
-3. **Committed** : If there is no failure, the database changes will be permanently stored on the real database (non-volatile memory such as hard disk). The changes made by the transaction are now visible to other transactions.
-4. **Terminated** : The terminated state indicates the end of transaction.
-5. **Failed** : In failed state, the transaction will be rolled back.
-6. **Aborted** : The transaction has been aborted or rolled back. This means that all the changes made by the transaction are discarded.
+1. **Active**: The transaction is in progress and actively performing database operations.
+2. **Partially Committed**: In partially committed state, all database operation has been completed, but only on memory (volatile memory such as RAM). Changes made by the database operations are not permanently saved to the database, they are instead performed on memory. This mean other unit of transactions cannot see the changes made by this transaction until it is fully committed. In the case of failure, it will go to the failed state.
+3. **Committed**: If there is no failure, the database changes will be permanently stored on the real database (non-volatile memory such as hard disk). The changes made by the transaction are now visible to other transactions.
+4. **Terminated**: The terminated state indicates the end of transaction.
+5. **Failed**: In failed state, the transaction will be rolled back.
+6. **Aborted**: The transaction has been aborted or rolled back. This means that all the changes made by the transaction are discarded.
 
 The ability to roll back is possible because when transaction begins, the DBMS keep tracks an **undo log**, which is a record of the original values of any data that the transaction modifies. When the system needs to roll back, the data in the log will be applied to the database again.
 
@@ -48,7 +48,7 @@ The ability to roll back is possible because when transaction begins, the DBMS k
 
 **ACID (atomicity, consistency, isolation, durability)** is a set of properties that guarantee reliable and predictable behavior of database transactions.
 
-- **Atomicity** : Atomicity ensures that a transaction is treated as a single, indivisible unit of work. It means that either all the operations within the transaction are successfully completed, or none of them are.
-- **Consistency** : Consistency ensures that a transaction brings the database from one consistent state to another. It means that the data must satisfy certain constraints defined by the database schema before and after the transaction.
-- **Isolation** : Isolation ensures that concurrent transactions do not interfere with each other. Each transaction operates as if it is the only transaction running on the database, and the intermediate states of a transaction are not visible to other transactions until it is committed.
-- **Durability** : Durability ensures that once a transaction is committed, its effects are permanent and will survive any subsequent failures, such as power outages or system crashes. The changes made by the committed transaction are stored in non-volatile memory (such as a hard disk) to make it persistent.
+- **Atomicity**: Atomicity ensures that a transaction is treated as a single, indivisible unit of work. It means that either all the operations within the transaction are successfully completed, or none of them are.
+- **Consistency**: Consistency ensures that a transaction brings the database from one consistent state to another. It means that the data must satisfy certain constraints defined by the database schema before and after the transaction.
+- **Isolation**: Isolation ensures that concurrent transactions do not interfere with each other. Each transaction operates as if it is the only transaction running on the database, and the intermediate states of a transaction are not visible to other transactions until it is committed.
+- **Durability**: Durability ensures that once a transaction is committed, its effects are permanent and will survive any subsequent failures, such as power outages or system crashes. The changes made by the committed transaction are stored in non-volatile memory (such as a hard disk) to make it persistent.

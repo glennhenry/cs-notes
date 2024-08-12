@@ -5,18 +5,18 @@ title: Distributed Database
 description: Distributed Database
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Distributed database - Wikipedia](https://en.wikipedia.org/wiki/Distributed_database)**
-- **[Distributed transaction - Wikipedia](https://en.wikipedia.org/wiki/Distributed_transaction)**
-- **[Query Processing in Distributed Database System - IEEE Transactions on Software Engineering](<https://www.pdma.gov.pk/sub/uploads/query%20proceessing%20(1).pdf>)**
+- **[Distributed database — Wikipedia](https://en.wikipedia.org/wiki/Distributed_database)**
+- **[Distributed transaction — Wikipedia](https://en.wikipedia.org/wiki/Distributed_transaction)**
+- **[Query Processing in Distributed Database System — IEEE Transactions on Software Engineering](<https://www.pdma.gov.pk/sub/uploads/query%20proceessing%20(1).pdf>)**
 
 Distributed Database is a database system that is spread across multiple nodes or servers, often located in different physical locations or connected through a network. Data is partitioned and stored on multiple nodes, allowing for parallel processing and improved scalability, fault tolerance, and performance.
 
 In order for distributed database to be useful, each node being able to serve content, it should be up-to-date.
 
-- **[Replication](/database-system/logging-and-recovery#replication)** : Every change in one node, all other nodes should replicate the change by following some protocol. This process can be intensive and time-consuming as the size of data and the number of nodes in the system increase.
-- **Duplication** : Duplication don't actively copy data from one to another. In duplication, there will be a node acting as a master (related to [master-slave architecture](/cloud-computing-and-distributed-systems/master-slave)). Periodically, the master database will be duplicated to other slave nodes. When making changes to database, only the master can be mutated.
+- **[Replication](/database-system/logging-and-recovery#replication)**: Every change in one node, all other nodes should replicate the change by following some protocol. This process can be intensive and time-consuming as the size of data and the number of nodes in the system increase.
+- **Duplication**: Duplication don't actively copy data from one to another. In duplication, there will be a node acting as a master (related to [master-slave architecture](/cloud-computing-and-distributed-systems/master-slave)). Periodically, the master database will be duplicated to other slave nodes. When making changes to database, only the master can be mutated.
 
 ### Database Sharding
 
@@ -28,28 +28,28 @@ In contrast, a vertical partition split the dataset by columns, and what [normal
 
 To actually know which node stores a particular data, we can use [consistent hashing](/cloud-computing-and-distributed-systems/distributed-systems-communication#consistent-hashing) technique.
 
-Benefits of sharding :
+Benefits of sharding:
 
-- **Performance** : Less number of rows means the reduction in [index](/database-system/database-index) size, which potentially improves search performance.
-- **Scalability** : We can scale the system horizontally by adding more nodes and shards.
-- **Availability & Fault Tolerance** : If one shard becomes unavailable or experiences a failure, the remaining shards continue to function, minimizing the impact on the overall system.
+- **Performance**: Less number of rows means the reduction in [index](/database-system/database-index) size, which potentially improves search performance.
+- **Scalability**: We can scale the system horizontally by adding more nodes and shards.
+- **Availability & Fault Tolerance**: If one shard becomes unavailable or experiences a failure, the remaining shards continue to function, minimizing the impact on the overall system.
 
 ![Database sharding](./database-sharding.png)  
-Source : https://www.digitalocean.com/community/tutorials/understanding-database-sharding
+Source: https://www.digitalocean.com/community/tutorials/understanding-database-sharding
 
 ### Distributed Query
 
-The distribution of database across multiple nodes enables query to be parallelized. The process of query in distributed system :
+The distribution of database across multiple nodes enables query to be parallelized. The process of query in distributed system:
 
-1. **Query Decomposition** : Complex query is broke down into subqueries that can be executed in parallel across multiple nodes. Each subquery operates on a subset of the data distributed across the nodes.
-2. **Query Optimization** : Query optimization aims to find the most efficient execution plan for a query. In a distributed setting, query optimization considers factors such as data distribution, network latency, and the cost of data transfer between nodes to determine the optimal plan. Distributed query optimizers often use techniques like cost-based optimization and statistical information about the distributed data.
-3. **Data Localization** : Get the data that needs to be accessed to execute a query and identifying the nodes where that data resides. Data localization will reduce latency by minimizing unnecessary data transfer across the network.
-4. **Parallel Execution** : Each node processes its portion of the query and returns the intermediate results to be combined at a later stage.
-5. **Data Exchange & Communication** : During the execution of a distributed query, nodes need to exchange intermediate results and coordinate their actions.
-6. **Result Aggregation** : Once the subqueries are executed in parallel, the intermediate results need to be combined or aggregated to produce the final result of the query. Aggregation can involve merging or joining intermediate results, sorting, grouping, or applying other operations to obtain the desired output.
+1. **Query Decomposition**: Complex query is broke down into subqueries that can be executed in parallel across multiple nodes. Each subquery operates on a subset of the data distributed across the nodes.
+2. **Query Optimization**: Query optimization aims to find the most efficient execution plan for a query. In a distributed setting, query optimization considers factors such as data distribution, network latency, and the cost of data transfer between nodes to determine the optimal plan. Distributed query optimizers often use techniques like cost-based optimization and statistical information about the distributed data.
+3. **Data Localization**: Get the data that needs to be accessed to execute a query and identifying the nodes where that data resides. Data localization will reduce latency by minimizing unnecessary data transfer across the network.
+4. **Parallel Execution**: Each node processes its portion of the query and returns the intermediate results to be combined at a later stage.
+5. **Data Exchange & Communication**: During the execution of a distributed query, nodes need to exchange intermediate results and coordinate their actions.
+6. **Result Aggregation**: Once the subqueries are executed in parallel, the intermediate results need to be combined or aggregated to produce the final result of the query. Aggregation can involve merging or joining intermediate results, sorting, grouping, or applying other operations to obtain the desired output.
 
 ![Query processing](./query-processing.png)  
-Source : https://www.javatpoint.com/query-processing-in-dbms
+Source: https://www.javatpoint.com/query-processing-in-dbms
 
 ### Concurrency Mechanism
 
@@ -87,7 +87,7 @@ One implementation of atomic commit is the **two-phase commit (2PC)** protocol. 
 2. Based on the responses received during the prepare phase, the coordinator makes a final decision about whether to commit or abort the transaction. If all nodes are prepared to commit, the coordinator sends a commit message to all participating nodes, instructing them to permanently apply the changes. If any node is unable to commit or if there is a failure detected, the coordinator sends an abort message, instructing all nodes to roll back the changes.
 
 ![Two-phase commit](./two-phase-commit.png)  
-Source : https://medium.com/geekculture/distributed-transactions-two-phase-commit-c82752d69324
+Source: https://medium.com/geekculture/distributed-transactions-two-phase-commit-c82752d69324
 
 :::tip
 See also similar topic about [concurrency control in database system](/database-system/concurrency-control).

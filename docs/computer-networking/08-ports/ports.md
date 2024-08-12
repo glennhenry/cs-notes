@@ -5,14 +5,14 @@ title: Ports
 description: Ports
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Port (computer networking)](<https://en.wikipedia.org/wiki/Port_(computer_networking)>)**
-- **[Network Ports Explained | PowerCert](https://youtu.be/g2fT-g9PX9o)**
-- **[Port Forwarding Explained | PowerCert](https://youtu.be/2G1ueMDgwxw)**
-- **[Wikipedia Port scanner](https://en.wikipedia.org/wiki/Port_scanner)**
+- **[Port (computer networking) — Wikipedia](<https://en.wikipedia.org/wiki/Port_(computer_networking)>)**
+- **[Network Ports Explained — PowerCert](https://youtu.be/g2fT-g9PX9o)**
+- **[Port Forwarding Explained — PowerCert](https://youtu.be/2G1ueMDgwxw)**
+- **[Port scanner — Wikipedia](https://en.wikipedia.org/wiki/Port_scanner)**
 
-**Ports** is a number that identify communication endpoint that allows a computer to send and receive data over a network. Ports is used in two common protocols : [TCP](/computer-networking/tcp-protocol) and [UDP](/computer-networking/udp).
+**Ports** is a number that identify communication endpoint that allows a computer to send and receive data over a network. Ports is used in two common protocols: [TCP](/computer-networking/tcp-protocol) and [UDP](/computer-networking/udp).
 
 The purpose of port number is to determine how to handle network data. When a device receives data, it examines the destination port number to determine which process or service should handle the data. Similarly, when sending data, an application or service chooses a source port number to identify itself to the receiving device.
 
@@ -21,7 +21,7 @@ Port number range from 0 to 65535, ports below 1024 are known as well-known port
 So for example, port 80 which is the HTTP port is a common port used. When you enter a website address (URL) in your browser's address bar and press Enter, the browser establishes a connection to the web server hosting that website using port 80 by default. The web server listens for incoming requests on port 80 and responds by sending back the requested web page or other resources to the browser.
 
 ![Port 80](./port-80.jpeg)  
-Source : https://www.howtonetwork.com/comptia-network-study-guide-free/port-numbers-and-network-protocols/
+Source: https://www.howtonetwork.com/comptia-network-study-guide-free/port-numbers-and-network-protocols/
 
 A list of used port can be found in this [Wikipedia](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers) article.
 
@@ -36,7 +36,7 @@ Our router receives data from external network along with our router's IP addres
 The router doesn't know how to process the port received from external network without any port forwarding configuration.
 
 ![Port forwarding](./port-forwarding.png)  
-Source : https://getquicktech.com.au/blog/benefits-of-port-forwarding/
+Source: https://getquicktech.com.au/blog/benefits-of-port-forwarding/
 
 ### Port Scanner
 
@@ -46,29 +46,29 @@ A **port scanner** is a technique used to discover which ports are open on a spe
 
 Ports can be in different states based on the response received during scanning:
 
-- **Open** : If a port responds to the scan, it is considered open, indicating that a service or application is actively listening on that port.
+- **Open**: If a port responds to the scan, it is considered open, indicating that a service or application is actively listening on that port.
 
-- **Closed** : If a port responds with a specific message indicating that it is closed, it means that no service or application is listening on that port.
+- **Closed**: If a port responds with a specific message indicating that it is closed, it means that no service or application is listening on that port.
 
-- **Filtered** : If a port does not respond to the scan or the response is blocked by a [firewall](/computer-security/network-security#firewall) or network filtering device, it is considered filtered. The port scanner cannot determine whether the port is open or closed.
+- **Filtered**: If a port does not respond to the scan or the response is blocked by a [firewall](/computer-security/network-security#firewall) or network filtering device, it is considered filtered. The port scanner cannot determine whether the port is open or closed.
 
 This port state is related to port forwarding. If we haven't configured the port forwarding in our router, the default state will be closed.
 
 ![Port states on GitHub, Twitter, and Google](./port-states.png)  
-Source : https://codepen.io/umarcbs/pen/NWradwg
+Source: https://codepen.io/umarcbs/pen/NWradwg
 
 #### Scan Types
 
 Port scanners use different scan types or techniques to gather information about the target ports. Some common scan types include:
 
-- **TCP Connect Scan** : This scan attempts to establish a full TCP connection with the target port to determine if it is open, closed, or filtered.
+- **TCP Connect Scan**: This scan attempts to establish a full TCP connection with the target port to determine if it is open, closed, or filtered.
 
-- **SYN/Stealth Scan** : Also known as half-open scanning, this technique sends SYN packets to the target ports and analyzes the responses to determine the port status without completing the full connection.
+- **SYN/Stealth Scan**: Also known as half-open scanning, this technique sends SYN packets to the target ports and analyzes the responses to determine the port status without completing the full connection.
 
-- **UDP Scan** : UDP ports are connectionless, so UDP scanning involves sending UDP packets to the target ports and analyzing the responses.
+- **UDP Scan**: UDP ports are connectionless, so UDP scanning involves sending UDP packets to the target ports and analyzing the responses.
 
 ![Port scanning](./port-scan.png)  
-Source : https://www.mdpi.com/1424-8220/20/16/4423
+Source: https://www.mdpi.com/1424-8220/20/16/4423
 
 :::tip
 Find out about [TCP](/computer-networking/tcp-protocol) and [UDP](/computer-networking/udp)

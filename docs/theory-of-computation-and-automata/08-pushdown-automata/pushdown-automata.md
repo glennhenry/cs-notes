@@ -5,7 +5,7 @@ title: Pushdown Automata
 description: Pushdown Automata
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book chapter 3.1, 3.2**
 - **Neso Academy playlist 85-89**
@@ -15,18 +15,18 @@ description: Pushdown Automata
 
 A [finite automaton](/theory-of-computation-and-automata/finite-automata) has a very limited memory to keep track its computation. If we were to design an automaton that determine the length of string, a finite automaton wouldn't work. **Pushdown Automata (PDA)** is the extension of finite automaton that has more memory, specifically a [stack memory with the LIFO principle](/data-structures-and-algorithms/stack). A PDA recognizes context-free languages governed by [context-free grammar](/theory-of-computation-and-automata/context-free-grammar). Similar to finite automaton, it can either accept or reject the language.
 
-Component of PDA :
+Component of PDA:
 
-- **Input file/tape** : Contains the input symbols that the PDA reads from left to right.
-- **Finite state control** : The control unit of the PDA that determines its state.
-- **Pushdown store** : It's the stack that is used to store symbols from the input tape. It has infinite size, and it allows for two stack operations : push (adding a symbol to the stack) and pop (removing the top symbol from the stack).
+- **Input file/tape**: Contains the input symbols that the PDA reads from left to right.
+- **Finite state control**: The control unit of the PDA that determines its state.
+- **Pushdown store**: It's the stack that is used to store symbols from the input tape. It has infinite size, and it allows for two stack operations: push (adding a symbol to the stack) and pop (removing the top symbol from the stack).
 
 ![Pushdown automata's components](./pda.png)  
-Source : Book page 160
+Source: Book page 160
 
 #### Formal Definition
 
-Formally, a PDA is defined as 7 tuples : $P = (Q, \Sigma, \Gamma, \delta, q_0, z_0, F)$
+Formally, a PDA is defined as 7 tuples: $P = (Q, \Sigma, \Gamma, \delta, q_0, z_0, F)$
 
 - $Q$ is the finite set of states.
 - $\Sigma$ is the finite set of input alphabet/symbols.
@@ -38,7 +38,7 @@ Formally, a PDA is defined as 7 tuples : $P = (Q, \Sigma, \Gamma, \delta, q_0, z
 
 The thing worth to note is the transition function, it takes the current state $Q$, input symbols $\Sigma$, including the empty string $\epsilon$, and the current topmost symbol of the stack $\Gamma$. When transitioning, the topmost symbol may or not be popped, a new state will be produced, and a new symbol may be pushed onto the stack.
 
-For example, $\delta(q_1, a, X)$ could yield a set of pairs $\{(q_2, XY), (q_3, YZ), (q_4, \epsilon)\}$, indicating that from state $q_1$ reading input symbol "a" while having "X" on topmost of the stack, the PDA could :
+For example, $\delta(q_1, a, X)$ could yield a set of pairs $\{(q_2, XY), (q_3, YZ), (q_4, \epsilon)\}$, indicating that from state $q_1$ reading input symbol "a" while having "X" on topmost of the stack, the PDA could:
 
 - Transition to state $q_2$ with "XY" on the stack, meaning it pushes "Y" onto the stack.
 - Transition to state $q_3$ with "YZ" on the stack, meaning it pop "X", then pushes "YZ".
@@ -51,7 +51,7 @@ In the case when the topmost stack is $\epsilon$ or empty, then the stack is sim
 #### Example
 
 ![PDA example](./pda-example.png)  
-Source : https://youtu.be/eY7fwj5jvC4?si=eRqTnkjH7ODIc1kN&t=627
+Source: https://youtu.be/eY7fwj5jvC4?si=eRqTnkjH7ODIc1kN&t=627
 
 The PDA should accept language with equal length of "0"'s and "1"'s.
 
@@ -68,7 +68,7 @@ Sometimes, the symbol $z_0$ is pushed at the beginning of the PDA and popped at 
 #### PDA Even Palindrome
 
 ![PDA example 2 part 1](./pda-example-2-part-1.png)  
-Source : https://youtu.be/TEQcJybMMFU?si=NcawjrirsnjL8ybx&t=803
+Source: https://youtu.be/TEQcJybMMFU?si=NcawjrirsnjL8ybx&t=803
 
 This PDA should accept even-length palindrome, meaning the string length should be even, and it is palindrome, or can be read the same from the front or backward (e.g., try reversing the string "abba", we will obtain the same thing, but not with "abab").
 
@@ -81,14 +81,14 @@ For example, with the input "abab", we will have $z_0$, $a$, and $b$, respective
 However, the problem with this analysis is, how can we assume that an input is $\epsilon$ or empty? Typically, input is $\epsilon$ when we have reached at the end of the input, but in the PDA, we keep expecting for input even after the $\epsilon$ transition from the $q_2$ to $q_3$.
 
 ![PDA example 2 part 2](./pda-example-2-part-2.png)  
-Source : https://youtu.be/BxA-aI2dyRo?si=mmMY52_ormtTd3bB&t=152
+Source: https://youtu.be/BxA-aI2dyRo?si=mmMY52_ormtTd3bB&t=152
 
 We can make assumption that $\epsilon$ symbol appears before and after every input. After that, we can list all possible transition when input has or not $\epsilon$ symbol. We will also include the current state and stack content for each of the path. If at least a single path exist in the list that leads from the start state to the final state, we can say that the PDA accepts the string.
 
 This is similar to [NFA](/theory-of-computation-and-automata/finite-automata#nfa), in which it is possible to transition to every path with any input and theoretically, each transition is done in parallel.
 
 ![PDA example 2 part 3](./pda-example-2-part-3.png)  
-Source : https://youtu.be/BxA-aI2dyRo?si=K0ysvgZgszM3dMsH&t=555 (combined images)
+Source: https://youtu.be/BxA-aI2dyRo?si=K0ysvgZgszM3dMsH&t=555 (combined images)
 
 ### CFG to PDA
 
@@ -99,56 +99,56 @@ One way to convert from a CFG to PDA is, we can transform the CFG into a [GNF](/
 The PDA simulates the derivation process of the CFG by using its stack from the start symbol to keep track of non-terminals and terminals. In the conversion of CFG in GNF to PDA, the stack will only contain non-terminals, because of the properties of GNF (non-terminals are always on the end of the right-hand side of the production rule).
 
 ![Example of CFG to PDA part 1](./cfg-pda-example-part-1.png)  
-Source : Book page 168
+Source: Book page 168
 
 For example, given a grammar $G = (\{S, A, B\}, \{a, b\}, S, P)$ and $P = \{S \rightarrow a, S \rightarrow aAB, A \rightarrow aA, A \rightarrow a, B \rightarrow bB, B \rightarrow b\}$.
 
 $S \rightarrow aAB$ means that we transform the start symbol into a terminal and two non-terminals. Converting this to PDA, the start symbol can be thought as the start of the stack. The non-terminals, which eventually will produce some terminals, act as the stack symbols. Lastly, the terminal, which is the building block of actual language, act as the input for the PDA. Therefore, the conversion to PDA from this particular derivation will result in a transition $\delta(q_1, a, S) \rightarrow \{q_1, AB\}$.
 
 ![Example of CFG to PDA part 2](./cfg-pda-example-part-2.png)  
-Source : Book page 168, 169
+Source: Book page 168, 169
 
 ### PDA to CFG
 
-Component of PDA to CFG :
+Component of PDA to CFG:
 
-- **States** : The states of PDA act as the non-terminals in CFG. This is because a state represent different stages of computation, which in turns is associated with specific derivation process.
-- **Input** : As explained before, the input act as the terminals of CFG, because it is what define a language itself.
-- **Stack** : Additional state or condition of the current derivation process.
-- **Transitions** : The transitions of the PDA are converted into production rules in the CFG.
+- **States**: The states of PDA act as the non-terminals in CFG. This is because a state represent different stages of computation, which in turns is associated with specific derivation process.
+- **Input**: As explained before, the input act as the terminals of CFG, because it is what define a language itself.
+- **Stack**: Additional state or condition of the current derivation process.
+- **Transitions**: The transitions of the PDA are converted into production rules in the CFG.
 
 ![Conversion of PDA to CFG](./pda-to-cfg.png)  
-Source : https://youtu.be/kyvLetfjOhc?si=oE4zxzBRi3VFe5WE&t=230
+Source: https://youtu.be/kyvLetfjOhc?si=oE4zxzBRi3VFe5WE&t=230
 
 The video denotes notation like $A_{pq}$, this represents a non-terminal that is produced from transitioning from state $p$ to $q$. There will be non-terminal for every pair of states.
 
 #### Simplifying
 
-Before converting it, we should simplify the PDA first. The steps to simplify the PDA :
+Before converting it, we should simplify the PDA first. The steps to simplify the PDA:
 
 1. PDA should be simplified (i.e., only have one final state). One way to simplify it is that, we unite all the final state into one common final state, where the input as well as the stack for transition is $\epsilon$.
 
    ![PDA to CFG step 1](./pda-cfg-step-1.png)  
-    Source : https://youtu.be/kyvLetfjOhc?si=F6qVhF3AQ6CLgiSb&t=459
+    Source: https://youtu.be/kyvLetfjOhc?si=F6qVhF3AQ6CLgiSb&t=459
 
 2. The PDA should begin with an empty stack and end with an empty stack before accepting. During the first transition, we can push a $z_0$ symbol onto the stack. This symbol acts as an indicator of the last symbol on the stack. Consequently, just before reaching the final state, we can check if $z_0$ is the last symbol on the stack. If it is, we pop it and advance to the final state, leaving the stack empty.
 
    Additionally, over the transition from beginning to end, we have to avoid stack underflow. It is a scenario where we pop from an empty stack. The stack start symbol $z_0$ must be pushed on the start, and popped at the end.
 
    ![PDA to CFG step 2](./pda-cfg-step-2.png)  
-   Source : https://youtu.be/kyvLetfjOhc?si=5wdSVXJa_WEgc94V&t=694
+   Source: https://youtu.be/kyvLetfjOhc?si=5wdSVXJa_WEgc94V&t=694
 
 3. Make sure the PDA either push or pop, but not both at the same time. If we are popping and pushing altogether, we can add extra transition that pop or push first then do the other. The input transition between them will be $\epsilon$, to make sure it can be done as same as the original transition. If it doesn't pop or push, we can add a dummy symbol that we push and then pop afterwards.
 
    ![PDA to CFG step 3](./pda-cfg-step-3.png)  
-   Source : https://youtu.be/kyvLetfjOhc?si=pFeC1f1mnsSaE3zb&t=835
+   Source: https://youtu.be/kyvLetfjOhc?si=pFeC1f1mnsSaE3zb&t=835
 
 #### Conversion Rules
 
 During the conversion of a PDA to CFG, especially when creating the production rules, there will be two cases happening, which will results in two forms of production rules.
 
 ![PDA to CFG case 1](./pda-cfg-case-1.png)  
-Source : https://youtu.be/DjbukiTf-48?si=c0Gg0_hqgheTv4dC&t=586
+Source: https://youtu.be/DjbukiTf-48?si=c0Gg0_hqgheTv4dC&t=586
 
 **Case 1** will occur when there are more than two states, let's denote the beginning and the end as states $p$ and $q$. The state $p$ accept some input, such as "a", and a symbol (call this "z") will be pushed onto the stack. The state $q$ accept input "b" and will eventually pop the "z".
 
@@ -159,7 +159,7 @@ The states between them, denote them as $r$ and $s$, where $A_{rs}$ represent th
 The production rule for this particular case will be in the form of $A_{pq} \rightarrow aA_{rs}b$. In other words, transitioning from state $p$ to $q$ will generate a string that starts and ends with terminals that are the same as the input of states $p$ and $q$, as well as the string generated by the state transition between them, which is located in the middle.
 
 ![PDA to CFG case 2](./pda-cfg-case-2.png)  
-Source : https://youtu.be/DjbukiTf-48?si=7xcOPszJWzK91F--&t=651
+Source: https://youtu.be/DjbukiTf-48?si=7xcOPszJWzK91F--&t=651
 
 The **case 2** happens when we encounter a state that pushes something to the stack, let's call this "w". Then, at some point during the middle of state transition, the "w" gets popped. Afterwards, different symbol, such as "p" get pushed.
 

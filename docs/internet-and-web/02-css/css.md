@@ -5,9 +5,9 @@ title: CSS
 description: CSS
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[CSS - Wikipedia](https://en.wikipedia.org/wiki/CSS)**
+- **[CSS — Wikipedia](https://en.wikipedia.org/wiki/CSS)**
 
 **CSS (Cascading Style Sheets)** is a stylesheet language used for describing the presentation and formatting of a document written in HTML or XML. CSS separates the presentation of a webpage from its content, allowing designers to define the layout, fonts, colors, and other visual aspects of a webpage without affecting the underlying content.
 
@@ -17,24 +17,24 @@ CSS works by searching specific HTML elements in the DOM tree and applies styles
 
 ### HTML Selectors
 
-HTML Selectors are used to identify each HTML elements, this includes :
+HTML Selectors are used to identify each HTML elements, this includes:
 
-- **Tag Selectors** : These selectors target all elements with a specific tag name, such as `<p>` or `<h1>`.
-- **Class Selectors** : These selectors target elements with a specific class attribute, which **can be applied to multiple elements on a page**. Class selector can be specified like `<div class="my-class">`.
-- **ID Selectors** : These selectors target elements with a specific ID attribute, which **should be unique on a page**. ID selector can be specified like `<div id="my-div">`.
-- **Attribute Selectors** : These selectors target elements with a specific attribute or attribute value, such as `<a href="#">`.
+- **Tag Selectors**: These selectors target all elements with a specific tag name, such as `<p>` or `<h1>`.
+- **Class Selectors**: These selectors target elements with a specific class attribute, which **can be applied to multiple elements on a page**. Class selector can be specified like `<div class="my-class">`.
+- **ID Selectors**: These selectors target elements with a specific ID attribute, which **should be unique on a page**. ID selector can be specified like `<div id="my-div">`.
+- **Attribute Selectors**: These selectors target elements with a specific attribute or attribute value, such as `<a href="#">`.
 
 ### CSS Selectors
 
-CSS selectors are used to apply styles to specific elements or groups of elements on a webpage, and it often uses HTML Selectors to identify the elements. There are many types of CSS selectors, including :
+CSS selectors are used to apply styles to specific elements or groups of elements on a webpage, and it often uses HTML Selectors to identify the elements. There are many types of CSS selectors, including:
 
-- **Type Selectors** : These selectors target elements of a specific type, such as `<p>` or `<h1>`.
-- **Class Selectors** : These selectors target elements with a specific class attribute.
-- **ID Selectors** : These selectors target elements with a specific ID attribute.
-- **Descendant Selectors** : These selectors target elements that are descendants of other elements, such as `<ul>` elements inside `<li>` elements.
-- **Child Selectors** : These selectors target elements that are direct children of other elements, such as `<li>` elements that are direct children of `<ul>` elements.
-- **Attribute Selectors** : These selectors target elements with a specific attribute or attribute value. For example using `input[type="text"]` means that it will apply style to all input elements which has type of text.
-- **Pseudo-Selectors** : These selectors target elements based on their state or position, such as `:hover` or `:first-child.` For example defining a style on :hover means that style will be applied if such elements is hovered.
+- **Type Selectors**: These selectors target elements of a specific type, such as `<p>` or `<h1>`.
+- **Class Selectors**: These selectors target elements with a specific class attribute.
+- **ID Selectors**: These selectors target elements with a specific ID attribute.
+- **Descendant Selectors**: These selectors target elements that are descendants of other elements, such as `<ul>` elements inside `<li>` elements.
+- **Child Selectors**: These selectors target elements that are direct children of other elements, such as `<li>` elements that are direct children of `<ul>` elements.
+- **Attribute Selectors**: These selectors target elements with a specific attribute or attribute value. For example using `input[type="text"]` means that it will apply style to all input elements which has type of text.
+- **Pseudo-Selectors**: These selectors target elements based on their state or position, such as `:hover` or `:first-child.` For example defining a style on:hover means that style will be applied if such elements is hovered.
 
 ### CSSOM
 
@@ -43,13 +43,13 @@ CSSOM (CSS Object Model) is a representation of the styles and layout of a web p
 The CSSOM is created by parsing the CSS code of a web page and generating a hierarchical tree-like structure that represents the styles and layout of the web page. Each node in the tree corresponds to a different CSS selector, property, or value, and the hierarchy of the tree reflects the cascading nature of CSS, where styles defined in one place can be overridden by styles defined in another place.
 
 ![Shows how CSSOM populate the style of DOM](./cssom.png)  
-Source : https://www.hongkiat.com/blog/css-object-model-cssom/
+Source: https://www.hongkiat.com/blog/css-object-model-cssom/
 
 ### Applying Styles
 
 When the browser encounters a CSS file linked to an HTML document, it reads the CSS code and matches the selectors in the CSS rules to the elements in the DOM tree.
 
-The syntax is :
+The syntax is:
 
 - Selectors are specified which can be class, ID, attribute, type, or any other selector.
 - Define the style property and value wrapped in curly brackets, CSS has various style property such as `color`, `font-size`, `font-weight`, etc.
@@ -65,15 +65,15 @@ p {
 This image below shows how style is applied using class selectors. We specify the class name and put a dot behind it `.<class name>`.
 
 ![Applying style to CSS class selector](./css-example.png)  
-Source : https://web.dev/learn/css/selectors/
+Source: https://web.dev/learn/css/selectors/
 
 If we are using ID selector, then we will use `#` instead of `.` in front of the HTML selector name.
 
 ### CSS Features
 
-CSS supports many feature such as :
+CSS supports many feature such as:
 
-- **Responsive Design** : We can apply different styles to adapt to different webpage based on the screen size, orientation, resolution, or other features of the device used to view the webpage.
+- **Responsive Design**: We can apply different styles to adapt to different webpage based on the screen size, orientation, resolution, or other features of the device used to view the webpage.
 
   ```css
   /* If height of the screen is less than 768px, then apply the following styles */
@@ -90,12 +90,12 @@ CSS supports many feature such as :
   }
   ```
 
-- **Flex box and Grid** : These are two layout models that allow you to create complex and flexible layouts for webpages. Flex box is designed for one-dimensional layouts, such as rows or columns, while Grid is designed for two-dimensional layouts, such as grids.
+- **Flex box and Grid**: These are two layout models that allow you to create complex and flexible layouts for webpages. Flex box is designed for one-dimensional layouts, such as rows or columns, while Grid is designed for two-dimensional layouts, such as grids.
 
   ![Using Flex box for one dimension layout and Grid for two dimension layout](./flexbox-grid.png)  
-  Source : https://codepolitan.com/blog/css-grid-vs-flexbox-5b4336849183d
+  Source: https://codepolitan.com/blog/css-grid-vs-flexbox-5b4336849183d
 
-- **Transition and Animation** : CSS transitions and animations allow you to create dynamic and interactive effects, such as hover effects, fade-ins, slide-outs, and more. Transitions and animations can be applied to various style properties, such as color, position, size, and opacity.
+- **Transition and Animation**: CSS transitions and animations allow you to create dynamic and interactive effects, such as hover effects, fade-ins, slide-outs, and more. Transitions and animations can be applied to various style properties, such as color, position, size, and opacity.
 
   Transition can be defined by specifying transition effect and the duration while animation can be defined using key frames.
 

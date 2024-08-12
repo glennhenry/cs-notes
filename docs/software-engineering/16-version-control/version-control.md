@@ -5,9 +5,9 @@ title: Version Control
 description: Version Control
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Version control - Wikipedia](https://en.wikipedia.org/wiki/Version_control)**
+- **[Version control — Wikipedia](https://en.wikipedia.org/wiki/Version_control)**
 
 **Version Control** is a system that is used to track and manage changes to files and directories over time. It is commonly used in software development to track the changes over a software.
 
@@ -46,7 +46,7 @@ Once the branch is completes, it can be merged to the main repository. Merge mea
 Similar to main repository, each branch has its own copy of the files and its own revision history. With some configuration, the branch history can also be combined to main.
 
 ![Branch](./branch.png)  
-Source : https://towardsdatascience.com/a-quick-primer-to-version-control-using-git-3fbdbb123262
+Source: https://towardsdatascience.com/a-quick-primer-to-version-control-using-git-3fbdbb123262
 
 ##### Conflicts
 
@@ -59,28 +59,28 @@ Furthermore, consider a scenario becomes developer A fixing bugs and developer B
 This conflict is typically easier to solve. As long as they are working on different tasks, and their changes do not overlap, Developer B can simply pull or fetch the latest main code before merging it.
 
 ![Conflict](./conflict.png)  
-Source : https://www.datacamp.com/tutorial/how-to-resolve-merge-conflicts-in-git-tutorial
+Source: https://www.datacamp.com/tutorial/how-to-resolve-merge-conflicts-in-git-tutorial
 
 ### Terminologies
 
-- **Baseline** : Specific version of a file that serves as a reference point or a stable snapshot of the codebase.
-- **Master or Main** : A common term for the name of the default branch (typically containing the main codebase) in VCS.
-- **Blame** : Identify the author or contributor responsible for the contribution of a particular line or section of code.
-- **Checkout** : Switching to a different branch or a specific commit in a version control system.
-- **Clone** : Creating a copy of a repository, including all of its files, commit history, and branches.
-- **Fork** : Creating a personal copy of a repository, including all its files, history, and branches.
-- **Push** : Upload local commits and changes to a remote repository.
-- **Pull or Fetch** : Retrieve the latest changes from a remote repository.
-- **Head** : Reference to the currently checked-out commit or branch, representing the latest state of the code that we are currently working on.
+- **Baseline**: Specific version of a file that serves as a reference point or a stable snapshot of the codebase.
+- **Master or Main**: A common term for the name of the default branch (typically containing the main codebase) in VCS.
+- **Blame**: Identify the author or contributor responsible for the contribution of a particular line or section of code.
+- **Checkout**: Switching to a different branch or a specific commit in a version control system.
+- **Clone**: Creating a copy of a repository, including all of its files, commit history, and branches.
+- **Fork**: Creating a personal copy of a repository, including all its files, history, and branches.
+- **Push**: Upload local commits and changes to a remote repository.
+- **Pull or Fetch**: Retrieve the latest changes from a remote repository.
+- **Head**: Reference to the currently checked-out commit or branch, representing the latest state of the code that we are currently working on.
 
 :::info
 The most commonly used version control system is Git. Not to be confused it is different with GitHub, a web-based platform that provides hosting services for Git repositories.
 :::
 
-In systems like Git & GitHub, another common terminology are :
+In systems like Git & GitHub, another common terminology are:
 
-- **Pull request** : A request made by developer that wants to merge their code into another branch. It's called pull request because we are requesting for the branch to pull our code. Pull request is typically reviewed and discussed before accepted.
-- **Issues** : Issues are task, bug report, or feature request that is tracked and managed within a project. Issues serve as a way to document, discuss, and track work items or problems related to a software project.
+- **Pull request**: A request made by developer that wants to merge their code into another branch. It's called pull request because we are requesting for the branch to pull our code. Pull request is typically reviewed and discussed before accepted.
+- **Issues**: Issues are task, bug report, or feature request that is tracked and managed within a project. Issues serve as a way to document, discuss, and track work items or problems related to a software project.
 
 :::tip
 See also [open sourcing](/software-engineering/open-sourcing) for more information about collaboration and contributing.

@@ -5,9 +5,9 @@ title: Reverse Engineering
 description: Reverse Engineering
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Reverse engineering - Wikipedia](https://en.wikipedia.org/wiki/Reverse_engineering)**
+- **[Reverse engineering — Wikipedia](https://en.wikipedia.org/wiki/Reverse_engineering)**
 - **Other Google search**
 
 **Reverse Engineering** is the process of analyzing software or computer system to understand their inner workings, design, or functionality. It is a broad term that encompasses various techniques and approaches.
@@ -33,4 +33,4 @@ Decompiling can recreate (or at least approximate) the original source code from
 Disassembly provides more detail about the low-level instruction, it doesn't need to approximate high-level abstraction. It can reveal specific instructions executed by the processor, including memory accesses, register operations, and control flow.
 
 ![Disassembling a code](./disassembly.png)  
-Source : https://blog.ret2.io/2017/11/16/dangers-of-the-decompiler/
+Source: https://blog.ret2.io/2017/11/16/dangers-of-the-decompiler/

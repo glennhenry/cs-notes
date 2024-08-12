@@ -5,9 +5,9 @@ title: Hash Table
 description: Hash Table
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Hash table - Wikipedia](https://en.wikipedia.org/wiki/Hash_table)**
+- **[Hash table — Wikipedia](https://en.wikipedia.org/wiki/Hash_table)**
 
 **Hash Table**, also known as **hash map**, is a data structure where we access element based on a unique identifier called **key**. To add an element, we must provide a key and a **value**, which contains the actual value of the element. To retrieve back an element, we will need to access it with the associated key, which is the same key used while adding the element.
 
@@ -33,7 +33,7 @@ Another technique to mitigate collision, which is a trivial one is just increasi
 
 ### Example
 
-One of a simple hash function for hash table is the **division hash function**. The formula is :  
+One of a simple hash function for hash table is the **division hash function**. The formula is:  
 $\text{hash code} = \text{key } \% \text{ array size}$  
 The hash code for some key will be obtained by calculating the remainder (% modulo) of dividing the key by the array size.
 

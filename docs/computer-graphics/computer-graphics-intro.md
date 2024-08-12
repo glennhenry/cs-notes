@@ -71,13 +71,13 @@ description: Computer Graphics Notes
 
 # Computer Graphics
 
-**Main source : [Cem Yuksel Introduction to Computer Graphics](https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh)**
+**Main source: [Cem Yuksel Introduction to Computer Graphics](https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh)**
 
 This may includes source outside the main source.
 
 **Computer Graphics** is the branch of computer science that deals with creating, manipulating, and displaying visual content using computers.
 
-The overview of computer graphics process involve these 3 :
+The overview of computer graphics process involve these 3:
 
 - **Modeling**, the process of representing 3D object or scene using mathematical models such as polygons, curves, or surfaces.
 - **Rendering**, generating 2D images from 3D object to be shown in computer screen. Rendering also simulate virtual environment such as lighting. Involves a combination of techniques such as ray tracing, rasterization, and shading.

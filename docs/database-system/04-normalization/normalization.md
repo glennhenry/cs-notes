@@ -5,11 +5,11 @@ title: Normalization
 description: Normalization
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Database normalization - Wikipedia](https://en.wikipedia.org/wiki/Database_normalization)**
-- **[Denormalization - Wikipedia](https://en.wikipedia.org/wiki/Denormalization)**
-- **[Functional dependency - Wikipedia](https://en.wikipedia.org/wiki/Functional_dependency)**
+- **[Database normalization — Wikipedia](https://en.wikipedia.org/wiki/Database_normalization)**
+- **[Denormalization — Wikipedia](https://en.wikipedia.org/wiki/Denormalization)**
+- **[Functional dependency — Wikipedia](https://en.wikipedia.org/wiki/Functional_dependency)**
 
 In database, Normalization is the process of organizing data in a relational database to eliminate redundancy and improve data integrity and efficiency. Database normalization is done in several levels, called **normal forms**, each building upon the previous one.
 
@@ -25,11 +25,11 @@ Functional dependencies are denoted using arrow notation (→). For example, if 
 In actual application, functional dependency is the one that you find on primary key and foreign key relationship.
 :::
 
-There are different types of functional dependencies :
+There are different types of functional dependencies:
 
-- **Full functional dependency** : A functional dependency A → B is considered full if no proper subset of A determines B. In other words, removing any attribute from A would result in the dependency no longer holding.
-- **Partial functional dependency** : A functional dependency A → B is considered partial if there is a proper subset of A that also determines B. In this case, removing any attribute from A would still preserve the dependency.
-- **Transitive dependency** : A transitive dependency occurs when there is a functional dependency A → B and B → C, which implies a transitively dependent relationship between A and C. In other words, A indirectly determines C through B.
+- **Full functional dependency**: A functional dependency A → B is considered full if no proper subset of A determines B. In other words, removing any attribute from A would result in the dependency no longer holding.
+- **Partial functional dependency**: A functional dependency A → B is considered partial if there is a proper subset of A that also determines B. In this case, removing any attribute from A would still preserve the dependency.
+- **Transitive dependency**: A transitive dependency occurs when there is a functional dependency A → B and B → C, which implies a transitively dependent relationship between A and C. In other words, A indirectly determines C through B.
 
 #### Heath's Theorem
 
@@ -38,7 +38,7 @@ Given a relation or table $R$ with attributes $X, Y,$ and $Z$, where $X → Y$ i
 Where $\prod$ is a symbol for [projection](/database-system/query-language#projection), and $\bowtie$ is a symbol for natural joins.
 
 :::info
-Natural join : a join that combines two relations based on matching values in their common attributes, without duplicate columns for the common attributes.
+Natural join: a join that combines two relations based on matching values in their common attributes, without duplicate columns for the common attributes.
 :::
 
 In simpler term, the expression says that a relation can be decomposed into two smaller relations to eliminate redundancy while still maintaining the original functional dependency, which is used to reconstruct the decomposed relation.
@@ -49,14 +49,14 @@ The expression describes the decomposition, it is achieved by projecting the att
 
 In **First Normal Form (1NF)**, a table must **satisfy atomicity**.
 
-- **Atomic Values** : Each column in a table should contain only atomic values, meaning that each value is indivisible. There should be no repeating groups or arrays of values within a single column.
+- **Atomic Values**: Each column in a table should contain only atomic values, meaning that each value is indivisible. There should be no repeating groups or arrays of values within a single column.
 
 :::info
-Example here are taken from the Wikipedia page.
+Example here are taken from the — Wikipediapage.
 :::
 
 ![1NF normalization](./1nf.png)  
-Source : https://en.wikipedia.org/wiki/Database_normalization#Satisfying_1NF
+Source: https://en.wikipedia.org/wiki/Database_normalization#Satisfying_1NF
 
 A book record containing an array in the subject column can be separated into two tables. The first table holds the book data without the subject column, and the second table contains the removed subject data, with a foreign key of ISBN that refers to the primary key in the book table.
 
@@ -65,7 +65,7 @@ A book record containing an array in the subject column can be separated into tw
 In **Second Normal Form (2NF)**, the table must **meet 1NF** and **has no partial dependency**.
 
 ![2NF normalization](./2nf.png)  
-Source : https://en.wikipedia.org/wiki/Database_normalization#Satisfying_2NF
+Source: https://en.wikipedia.org/wiki/Database_normalization#Satisfying_2NF
 
 In the book data above, the [composite key](/database-system/relational-data#other-keys) is title and format. Partial dependency is when one of the column depend on one of the composite key, but not all. For example, the `Price` column depends on format, but not title.
 
@@ -82,7 +82,7 @@ A transitive dependency occurs when a non-key attribute in a table depends on an
 For example, in the 2NF book table, the `Author Nationality` is dependent on `Author`, which is dependent on `Title`. To eliminate transitive dependency, we would separate all the column that violates it.
 
 ![3NF normalization](./3nf.png)  
-Source : https://en.wikipedia.org/wiki/Database_normalization#Satisfying_3NF
+Source: https://en.wikipedia.org/wiki/Database_normalization#Satisfying_3NF
 
 ### 4NF
 
@@ -95,7 +95,7 @@ A non-trivial multivalued dependency is one that is not trivially implied by the
 To eliminate multivalued dependencies, we would need to decompose the columns into separate tables.
 
 ![4NF normalization](./4nf.png)  
-Source : https://en.wikipedia.org/wiki/Database_normalization#Satisfying_4NF
+Source: https://en.wikipedia.org/wiki/Database_normalization#Satisfying_4NF
 
 In this table, `Title` depend on `Franchisee ID`, and `Location` depend on title. In the normalized form, now `Location` can depend on `Franchisee ID` directly.
 
@@ -108,7 +108,7 @@ So, to meet 5NF, a table must not be able to be reconstructed from join query. T
 Typically, a 4NF table already meets 5NF.
 
 ![5NF normalization](./5nf.png)  
-Source : https://en.wikipedia.org/wiki/Database_normalization#Satisfying_5NF
+Source: https://en.wikipedia.org/wiki/Database_normalization#Satisfying_5NF
 
 We will first decompose the first table into two separate tables. We won't be able to fully reconstructed the table if we join them. We will then decompose the table again into three separate tables. At this point, the three table can't be joined anymore, therefore the original table meet 5NF.
 

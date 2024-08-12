@@ -5,9 +5,9 @@ title: Backtracking
 description: Backtracking
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Backtracking - Wikipedia](https://en.wikipedia.org/wiki/Backtracking)**
+- **[Backtracking — Wikipedia](https://en.wikipedia.org/wiki/Backtracking)**
 
 **Backtracking** is algorithmic technique that involves doing certain steps then undoing that steps if it turns out to be incorrect. It is commonly used in a complex problem that require you to adhere to specific constraint. For example, solving a Sudoku puzzle involves constraints such as filling in all empty cells with unique numbers in each row and column.
 
@@ -26,9 +26,9 @@ On the other hand, backtracking takes into account problem constraints and uses 
 Consider a maze with some wall obstacle in it.
 
 ![Solving maze](./maze-solve.gif)  
-Source : https://brilliant.org/wiki/depth-first-search-dfs/
+Source: https://brilliant.org/wiki/depth-first-search-dfs/
 
-A pseudocode to solve it using backtracking :
+A pseudocode to solve it using backtracking:
 
 ```
 function solve(row, col):

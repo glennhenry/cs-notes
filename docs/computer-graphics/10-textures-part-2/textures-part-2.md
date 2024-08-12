@@ -7,14 +7,14 @@ description: Textures (Part 2)
 
 # Textures (Part 2)
 
-**Main Source : [Intro to Graphics 14 - Textures on the GPU](https://youtu.be/WULOKMqEGA0)**
+**Main Source: [Intro to Graphics 14 — Textures on the GPU](https://youtu.be/WULOKMqEGA0)**
 
 ### Texture On GPU
 
 Texture fall into the fragment shader process in the gpu pipeline. In fragment shader, texture are sampled and mapped into the object pixel at particular point. This can be done using barycentric coordinate which interpolate 3 vertices to find the specific point. Fragment shader also calculate other shading information, such as lighting, material properties, and any additional effects or algorithms applied to the scene.
 
 ![A triangle with 3 vertices is mapped onto texture](./texture-on-gpu.png)  
-Source : [https://youtu.be/Yjv6hc4Zqjk?t=1233](https://youtu.be/Yjv6hc4Zqjk?t=1233)
+Source: [https://youtu.be/Yjv6hc4Zqjk?t=1233](https://youtu.be/Yjv6hc4Zqjk?t=1233)
 
 ### Texture Setup
 
@@ -22,7 +22,7 @@ Texture setup is the process by which a texture is loaded into memory on a graph
 
 The component responsible for handling texture are called **Texture Unit.** Texture need to be set up and binded into the texture unit. Texture binding process include providing data and parameter to textures.
 
-The data and parameter includes :
+The data and parameter includes:
 
 - Texture size
 - Texture format, such as RGB or RGBA
@@ -31,7 +31,7 @@ The data and parameter includes :
 - Texture tiling mode, including repeat, clamp to edge, etc
 
 ![Process of texture setup](./texture-setup.png)  
-Source : [https://math.hws.edu/graphicsbook/c6/s4.html](https://math.hws.edu/graphicsbook/c6/s4.html)
+Source: [https://math.hws.edu/graphicsbook/c6/s4.html](https://math.hws.edu/graphicsbook/c6/s4.html)
 
 ### Shader Access
 
@@ -40,4 +40,4 @@ After binding the texture, **shaders** which are small programs that run on the 
 Texture mapping involves calculating the texture coordinates that are used to look up the corresponding texel in the texture map. This mean texture unit need to access vertex shader which provide information about the coordinates.
 
 ![Showing GPU pipeline consisting vertex shader, rasterizer, and fragment shader. Texture unit is in fragment shader but it points to vertex shader](./texture-unit-access.png)  
-Source : [https://youtu.be/WULOKMqEGA0?t=2543](https://youtu.be/WULOKMqEGA0?t=2543)
+Source: [https://youtu.be/WULOKMqEGA0?t=2543](https://youtu.be/WULOKMqEGA0?t=2543)

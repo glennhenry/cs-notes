@@ -5,14 +5,14 @@ title: JavaScript
 description: JavaScript
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[JavaScript - Wikipedia](https://en.wikipedia.org/wiki/JavaScript)**
-- **[V8 (JavaScript Engine) - Wikipedia](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>)**
-- **[V8 Hidden Classes by Chameera Dulanga - Medium](https://blog.bitsrc.io/secret-behind-javascript-performance-v8-hidden-classes-ba4d0ebfb89d)**
-- **[Node JS - Wikipedia](https://en.wikipedia.org/wiki/Node.js)**
-- **[npm - Wikipedia](https://en.wikipedia.org/wiki/Npm)**
-- **[React (software) - Wikipedia](<https://en.wikipedia.org/wiki/React_(software)>)**
+- **[JavaScript — Wikipedia](https://en.wikipedia.org/wiki/JavaScript)**
+- **[V8 (JavaScript Engine) — Wikipedia](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>)**
+- **[V8 Hidden Classes by Chameera Dulanga — Medium](https://blog.bitsrc.io/secret-behind-javascript-performance-v8-hidden-classes-ba4d0ebfb89d)**
+- **[Node JS — Wikipedia](https://en.wikipedia.org/wiki/Node.js)**
+- **[npm — Wikipedia](https://en.wikipedia.org/wiki/Npm)**
+- **[React (software) — Wikipedia](<https://en.wikipedia.org/wiki/React_(software)>)**
 
 **JavaScript** is a high-level programming language first introduced in 1995, it is mostly used for web development. JavaScript was specifically created to be run in web browsers, which means it can integrate with the browser and access the [DOM](/internet-and-web/html#html-dom) to change or manipulate it such as adding or deleting elements, changing style like color, modify content, etc.
 
@@ -22,20 +22,20 @@ JavaScript is based on ECMAScript (ES) which is a scripting language specificati
 
 JavaScript is a [just-in-time (JIT) compiled language](/computer-and-programming-fundamentals/interpreter#jit-compilation), meaning that JavaScript source code is compiled into machine code line-by-line when it is going to be executed, rather than a compiled language, which require a compilation of all code before code execution.
 
-JavaScript code is executed by a JavaScript engine, which is typically included in web browsers. One of JavaScript engine is the **V8** (so it's a JIT compiler), which was developed by Google and is used in Google Chrome browser. The engine consists of several components that work together to execute JavaScript code efficiently :
+JavaScript code is executed by a JavaScript engine, which is typically included in web browsers. One of JavaScript engine is the **V8** (so it's a JIT compiler), which was developed by Google and is used in Google Chrome browser. The engine consists of several components that work together to execute JavaScript code efficiently:
 
-1. **Parsing and Bytecode Generation** : The first step is V8 engine parse JavaScript and turns it into an abstract syntax tree (AST) which is a tree-like data structure that represents the abstract syntactic structure of a program in a programming language. The parser checks the syntax of the code for correctness and creates a tree structure that represents the structure of the code.
+1. **Parsing and Bytecode Generation**: The first step is V8 engine parse JavaScript and turns it into an abstract syntax tree (AST) which is a tree-like data structure that represents the abstract syntactic structure of a program in a programming language. The parser checks the syntax of the code for correctness and creates a tree structure that represents the structure of the code.
 
    After it's parsed, bytecode is generated and will be interpreted in the next step.
 
    ![Abstract syntax tree breaking up code into small expression](./abstract-syntax-tree.png)  
-    Source : https://en.wikipedia.org/wiki/Abstract_syntax_tree
+    Source: https://en.wikipedia.org/wiki/Abstract_syntax_tree
 
-2. **Interpreter** : Once AST has been created, V8 engine executes the code using an interpreter called Ignition reading the codes line by line following the control flow.
-3. **Profiler & Optimizer** : V8 engine includes a profiler that collects information about how the code is being executed. The information collected by the profiler, the V8 engine uses an optimizing compiler to generate more efficient machine code.
-4. **Hidden Class** : Hidden Class is one of the optimization technique to improves the performance of object creation. V8 generates a class based on the structure of the objects we create in our JavaScript code. JavaScript is a dynamic language which means variables, data types, and function calls are evaluated and executed at runtime. This can slow down the process of accessing properties, because the engine need to do type checks. Hidden classes provide certainty for the engine about the types of object properties which can improve efficiency of property accessing and object creation.
-5. **Garbage Collector** : V8 engine manages memory allocation and deallocation using a garbage collector. The garbage collector identifies objects that are no longer needed by the code and deallocate the memory they occupy.
-6. **Code Generation** : After everything is parsed and optimized, the code is compiled into machine code by the V8 engine's compiler. The machine code is then executed directly by the CPU, which results in faster execution times compared to interpreting the bytecode.
+2. **Interpreter**: Once AST has been created, V8 engine executes the code using an interpreter called Ignition reading the codes line by line following the control flow.
+3. **Profiler & Optimizer**: V8 engine includes a profiler that collects information about how the code is being executed. The information collected by the profiler, the V8 engine uses an optimizing compiler to generate more efficient machine code.
+4. **Hidden Class**: Hidden Class is one of the optimization technique to improves the performance of object creation. V8 generates a class based on the structure of the objects we create in our JavaScript code. JavaScript is a dynamic language which means variables, data types, and function calls are evaluated and executed at runtime. This can slow down the process of accessing properties, because the engine need to do type checks. Hidden classes provide certainty for the engine about the types of object properties which can improve efficiency of property accessing and object creation.
+5. **Garbage Collector**: V8 engine manages memory allocation and deallocation using a garbage collector. The garbage collector identifies objects that are no longer needed by the code and deallocate the memory they occupy.
+6. **Code Generation**: After everything is parsed and optimized, the code is compiled into machine code by the V8 engine's compiler. The machine code is then executed directly by the CPU, which results in faster execution times compared to interpreting the bytecode.
 
 :::info
 More about [general compilation process](/computer-and-programming-fundamentals/compilation).
@@ -72,7 +72,7 @@ Node.js also provides a collection of modules related to server such as file sys
 Node.js uses an event-driven, non-blocking I/O model, single event loop to handle incoming requests. This means that instead of waiting for a request to complete before moving on to the next one, Node.js processes incoming requests asynchronously. Node.js registers a callback function, meaning another task will be executed once the currently executing task is completed.
 
 ![Shows how Node JS provide space from JS file to be executed with the helps of event loop and callback queue](./node-js.png)  
-Source : https://www.freecodecamp.org/news/what-exactly-is-node-guide-for-beginners/
+Source: https://www.freecodecamp.org/news/what-exactly-is-node-guide-for-beginners/
 
 ### NPM
 
@@ -90,7 +90,7 @@ When a package is installed, NPM automatically resolves and installs any depende
 
 `package.json` is the file used in Node.js projects to define the metadata, dependencies, and scripts for the project. NPM will read the dependencies' property in `package.json` and downloads and installs the listed modules and all their dependencies.
 
-Here is an example package.json file :
+Here is an example package.json file:
 
 ```json
 {
@@ -114,7 +114,7 @@ Here is an example package.json file :
 While `package.json` is file that contains all the required dependencies and other data, `package-lock.json` specifically used for exact versions of dependencies and their transitive dependencies that should be installed for a project.
 
 ![Package lock json that shows the dependencies and their version](./package-lock-json.png)  
-Source : https://medium.com/helpshift-engineering/package-lock-json-the-complete-guide-2ae40175ebdd
+Source: https://medium.com/helpshift-engineering/package-lock-json-the-complete-guide-2ae40175ebdd
 
 ### HTML + CSS + JavaScript
 
@@ -125,7 +125,7 @@ HTML, CSS, and JavaScript are three different technologies that work together to
 - JavaScript is used to add interactivity and dynamic functionality for the behavior of a web application. It allows developers to create interactive elements such as dropdown menus, sliders, and pop-up windows, and to perform actions in response to user input.
 
   ![Analogy of HTML, CSS and JavaScript as car component includes the structure, style, and functionality](./html-css-javascript-analogy.png)  
-   Source : https://scrimba.com/articles/html-css-javascript/
+   Source: https://scrimba.com/articles/html-css-javascript/
 
 #### DOM Manipulation
 
@@ -133,7 +133,7 @@ When a web page is loaded in a browser, the browser creates a DOM tree based on 
 
 This allows developers to manipulate HTML and CSS in a web page. JavaScript will access specific element by searching the DOM tree based on ID, class, selector, and tags.
 
-For example consider the following code that shows how JavaScript access an element based on id selector :
+For example consider the following code that shows how JavaScript access an element based on id selector:
 
 ```html
 <div id="myDiv">Hello, world!</div>
@@ -147,13 +147,13 @@ var myDiv = document.getElementById("myDiv");
 myDiv.textContent = "Hello, JavaScript!";
 ```
 
-DOM manipulation with JavaScript can do a lot of things to a web page, including :
+DOM manipulation with JavaScript can do a lot of things to a web page, including:
 
 - Changing text content of an element using `.textContent`.
 - Change attribute of an element using `.setAttribute`, for example changing an img src.
 - Adding or removing classes from an element by `.classList.add("anotherClass")` or `.classList.remove("existingClass")`.
 - Modify style with `.style` followed by the style element such as `backgroundColor`.
-- Creating new elements and adding them to the DOM like below :
+- Creating new elements and adding them to the DOM like below:
 
   ```javascript
   var newParagraph = document.createElement("p");
@@ -176,7 +176,7 @@ React allows developer to use JavaScript with HTML-like code, this is called JSX
 React uses a declarative syntax to define the UI, which means that developers describe what the UI should look like and React takes care of updating the actual UI as necessary. This is achieved by making a virtual DOM, React generates a virtual representation of the actual DOM. This virtual DOM is a lightweight copy of the actual DOM and is used to keep track of the state of the UI.
 
 ![Example of react component video that contains thumbnail and like button with the parameter such as title, URL, and description](./react-example.png)  
-Source : https://react.dev/
+Source: https://react.dev/
 
 #### React State
 
@@ -186,7 +186,7 @@ For example in the image below, when the button is clicked, the text showing a v
 
 ![An example of react state which is a text that should be incremented when the button is clicked](./react-state-1.png)
 ![The text changes because the button is clicked](./react-state-2.png)  
-Source : https://www.geeksforgeeks.org/reactjs-setstate/
+Source: https://www.geeksforgeeks.org/reactjs-setstate/
 
 #### Virtual DOM
 
@@ -195,16 +195,16 @@ After writing HTML and JavaScript code in a JSX file, React will render this and
 When the state of a React component changes, React uses diffing algorithm to check which component has changed. This is an efficient way to only make the necessary changes, after this React generates a new virtual DOM tree that represents the updated state of the UI.
 
 ![Virtual DOM tree computing diff based on state change and re-render the component](./virtual-dom.webp)  
-Source : https://programmingwithmosh.com/react/react-virtual-dom-explained/
+Source: https://programmingwithmosh.com/react/react-virtual-dom-explained/
 
 #### Lifting State Up & React Props
 
 When developing a web app we will try to break the UI down into smaller component, often times a child component has some data that other child component needs it. These children component can't communicate directly, a way to solve this is to **lift the state up**. This mean we will store the data to the closest common ancestor of the components that need it.
 
 ![Chosen.js needs data from Dropdown.js which is passed from App.js, the parent of both component](./state-lifting.jpeg)  
-Source : https://dev.to/lauratoddcodes/a-really-simple-intro-to-lifting-state-in-react-1fli
+Source: https://dev.to/lauratoddcodes/a-really-simple-intro-to-lifting-state-in-react-1fli
 
-For example, consider the following code :
+For example, consider the following code:
 
 ```jsx
 function ClickCountDisplay() {
@@ -276,7 +276,7 @@ When a state changes, React only updates the UI. Often times there's something i
 We can achieve this using react `useEffect`, this allows you to run some code in your functional components after every render.
 
 ![React use effect runs after component is re-rendered after state changes](./react-use-effect.png)  
-Source : https://www.memberstack.com/blog/uselayouteffect-vs-useeffect
+Source: https://www.memberstack.com/blog/uselayouteffect-vs-useeffect
 
 ### AJAX
 

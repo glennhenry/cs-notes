@@ -5,10 +5,10 @@ title: Assembly Language
 description: Assembly Language
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Assembly language - Wikipedia](https://en.wikipedia.org/wiki/Assembly_language)**
-- **[Assembly Language in 100 Seconds - Fireship](https://youtu.be/4gwYkEK0gOk?si=faihHjHQNrGx28NV)**
+- **[Assembly language — Wikipedia](https://en.wikipedia.org/wiki/Assembly_language)**
+- **[Assembly Language in 100 Seconds — Fireship](https://youtu.be/4gwYkEK0gOk?si=faihHjHQNrGx28NV)**
 - **Chapter 10, Introduction to Compilers and Language Design - Douglas Thain**
 
 
@@ -17,7 +17,7 @@ description: Assembly Language
 Due to the direct interaction with the hardware, asm is specific to a particular computer architecture or processor family. Different processors have their own assembly languages, tailored to their instruction sets, registers, and addressing modes. Therefore, code written in assembly language is not portable across different hardware platforms without modification. Similarly, this what makes one program can't always be run in any platform, because it has to be compiled to different asm.
 
 ![ASM](./asm.png)  
-Source : https://www.investopedia.com/terms/a/assembly-language.asp
+Source: https://www.investopedia.com/terms/a/assembly-language.asp
 
 ### Translation to Machine Code
 
@@ -31,50 +31,50 @@ Assembler translates assembly language into machine code called **object files**
 
 #### Example
 
-For example, we can write instruction (or produced from compilation) like `MOV AL, 61h`, which instructs the processor to move the immediate value `61h` (number 61 hexadecimal or 97 in decimal) to the register `AX`. The assembler will translate this particular instruction to binary code : `10110000 01100001`.
+For example, we can write instruction (or produced from compilation) like `MOV AL, 61h`, which instructs the processor to move the immediate value `61h` (number 61 hexadecimal or 97 in decimal) to the register `AX`. The assembler will translate this particular instruction to binary code: `10110000 01100001`.
 
 - `10110` is the `MOV` instruction in binary.
 - Register `AX` is identified by `000`.
 - The binary equivalent of hexadecimal `61` is `01100001`.
 
 ![Assembly process from compilation](./assembler.png)  
-Source : https://www.techtarget.com/searchdatacenter/definition/assembler
+Source: https://www.techtarget.com/searchdatacenter/definition/assembler
 
 ### Type of Instruction
 
-Common type of instructions in assembly language :
+Common type of instructions in assembly language:
 
-- **Data Movement Instructions** : These instructions move or copy data between registers, memory, and I/O devices.
-- **Arithmetic and Logic Instructions** : These instructions perform arithmetic operations such as addition, subtraction, and multiplication; and logical operations such as bitwise AND, OR, NOT, and XOR on data.
-- **Control Flow Instructions** : These instructions control the flow of execution within a program. Examples include changing program flow with or without a condition, or jumping to specific part of program after a function finishes its execution.
-- **Input/Output Instructions** : These instructions facilitate communication between the processor and I/O devices.
-- **Stack and Memory Management Instructions** : These instructions manipulate the stack (pushing or popping values) and manage memory operations such as allocating and deallocating memory.
+- **Data Movement Instructions**: These instructions move or copy data between registers, memory, and I/O devices.
+- **Arithmetic and Logic Instructions**: These instructions perform arithmetic operations such as addition, subtraction, and multiplication; and logical operations such as bitwise AND, OR, NOT, and XOR on data.
+- **Control Flow Instructions**: These instructions control the flow of execution within a program. Examples include changing program flow with or without a condition, or jumping to specific part of program after a function finishes its execution.
+- **Input/Output Instructions**: These instructions facilitate communication between the processor and I/O devices.
+- **Stack and Memory Management Instructions**: These instructions manipulate the stack (pushing or popping values) and manage memory operations such as allocating and deallocating memory.
 
 ### Syntax & Instructions
 
-Three elements of assembly code :
+Three elements of assembly code:
 
-- **Directives** : Directives start with a dot, which indicates starting position of a section. Assembly code is divided into several sections, there are sections for code, which contains the actual logic of the program, section to declare variable and constants, and defining linker.
-- **Labels** : End with a colon, indicating a point of interest in the program, which can be used in the code section, such as the beginning of a subroutine, a loop, or a branch target.
-- **Instructions** : The actual assembly code, which is typically written line by line, with each line representing a single instruction.
+- **Directives**: Directives start with a dot, which indicates starting position of a section. Assembly code is divided into several sections, there are sections for code, which contains the actual logic of the program, section to declare variable and constants, and defining linker.
+- **Labels**: End with a colon, indicating a point of interest in the program, which can be used in the code section, such as the beginning of a subroutine, a loop, or a branch target.
+- **Instructions**: The actual assembly code, which is typically written line by line, with each line representing a single instruction.
 
-There are many instruction keywords in asm :
+There are many instruction keywords in asm:
 
 - **Instructions**
 
-  - **MOV (Move)** : Copies the value from one location to another. It is used to transfer data between registers, memory locations, and immediate values.
-  - **ADD (Addition)** : Performs addition between two values and stores the result.
-  - **SUB (Subtraction)** : Performs subtraction between two values and stores the result.
-  - **MUL (Multiplication)** : Performs multiplication between two values and stores the result.
-  - **DIV (Division)** : Performs division between two values and stores the quotient.
-  - **INC (Increment)** : Increments the value of a register or memory location by 1.
-  - **DEC (Decrement)** : Decrements the value of a register or memory location by 1.
+  - **MOV (Move)**: Copies the value from one location to another. It is used to transfer data between registers, memory locations, and immediate values.
+  - **ADD (Addition)**: Performs addition between two values and stores the result.
+  - **SUB (Subtraction)**: Performs subtraction between two values and stores the result.
+  - **MUL (Multiplication)**: Performs multiplication between two values and stores the result.
+  - **DIV (Division)**: Performs division between two values and stores the quotient.
+  - **INC (Increment)**: Increments the value of a register or memory location by 1.
+  - **DEC (Decrement)**: Decrements the value of a register or memory location by 1.
 
 - **Bitwise Operations**
 
-  - **AND (Bitwise AND)** : Performs a bitwise AND operation between two values.
-  - **OR (Bitwise OR)** : Performs a bitwise OR operation between two values.
-  - **XOR (Bitwise XOR)** : Performs a bitwise XOR operation between two values.
+  - **AND (Bitwise AND)**: Performs a bitwise AND operation between two values.
+  - **OR (Bitwise OR)**: Performs a bitwise OR operation between two values.
+  - **XOR (Bitwise XOR)**: Performs a bitwise XOR operation between two values.
 
 - **Registers**
 
@@ -90,19 +90,19 @@ There are many instruction keywords in asm :
 
 - **Control Flow**
 
-  - **CMP (Compare)** : Compares two values and sets the flags based on the result.
-  - **JMP (Jump)** : Transfers program control to a specified location in the code.
-  - **JZ (Jump if Zero)** : Jumps to a specified location if the zero flag is set.
-  - **JNZ (Jump if Not Zero)** : Jumps to a specified location if the zero flag is not - set.
-  - **JE (Jump if Equal)** : Jumps to a specified location if the equal flag is set.
-  - **JNE (Jump if Not Equal)** : Jumps to a specified location if the equal flag is not - set.
-  - **CALL (Call)** : Calls a subroutine or function at a specified location. This instruction actually include jumping to the function address and leaving a return address for the stack pointer to return after the subroutine is finished.
-  - **RET (Return)** : Returns from a subroutine to the calling code.
+  - **CMP (Compare)**: Compares two values and sets the flags based on the result.
+  - **JMP (Jump)**: Transfers program control to a specified location in the code.
+  - **JZ (Jump if Zero)**: Jumps to a specified location if the zero flag is set.
+  - **JNZ (Jump if Not Zero)**: Jumps to a specified location if the zero flag is not - set.
+  - **JE (Jump if Equal)**: Jumps to a specified location if the equal flag is set.
+  - **JNE (Jump if Not Equal)**: Jumps to a specified location if the equal flag is not set.
+  - **CALL (Call)**: Calls a subroutine or function at a specified location. This instruction actually include jumping to the function address and leaving a return address for the stack pointer to return after the subroutine is finished.
+  - **RET (Return)**: Returns from a subroutine to the calling code.
 
 - **Stack Operations**
 
-  - **PUSH (Push)** : Pushes a value onto the top of the stack.
-  - **POP (Pop)** : Removes a value from the top of the stack.
+  - **PUSH (Push)**: Pushes a value onto the top of the stack.
+  - **POP (Pop)**: Removes a value from the top of the stack.
 
 - **Directives**
 
@@ -113,10 +113,10 @@ There are many instruction keywords in asm :
 
 - **Data Types**
 
-  - **BYTE** : A single byte of data
-  - **WORD** : 16-bit value or two bytes of data.
-  - **DWORD** : 32-bit value or four bytes of data.
-  - **QWORD** : 64-bit value or eight bytes of data.
+  - **BYTE**: A single byte of data
+  - **WORD**: 16-bit value or two bytes of data.
+  - **DWORD**: 32-bit value or four bytes of data.
+  - **QWORD**: 64-bit value or eight bytes of data.
 
 #### Example
 
@@ -159,39 +159,39 @@ They are assembly language that represent instructions for [x86 architecture](/c
 There are 16 general purpose register for the 64-bit x86 architecture.
 
 ![x86_64 registers](./x86-registers.png)  
-Source : Book 1 page 152
+Source: Book 1 page 152
 
-- `%rax` : Accumulator register
-- `%rbx` : Base register
-- `%rcx` : Counter register
-- `%rdx` : Data register
-- `%rsi` : Source index register
-- `%rdi` : Destination index register
-- `%rbp` : Base pointer register
-- `%rsp` : Stack pointer register
-- `%r8` - `%r15` : Additional general-purpose registers
+- `%rax`: Accumulator register
+- `%rbx`: Base register
+- `%rcx`: Counter register
+- `%rdx`: Data register
+- `%rsi`: Source index register
+- `%rdi`: Destination index register
+- `%rbp`: Base pointer register
+- `%rsp`: Stack pointer register
+- `%r8` - `%r15`: Additional general-purpose registers
 
 Each register has evolved sizing from 8 bits, 16 bits, 32 bits, and 64 bits. For example `%rax` was known ax `%eax` in 32 bits.
 
 #### x86 Addressing Modes
 
-To specify the location of data operands or instructions (also known as **addressing modes**) :
+To specify the location of data operands or instructions (also known as **addressing modes**):
 
 - Instruction is provided with the data types for its operand. The `MOV` instruction moves data between registers and memory. `MOVB`, `MOVW`, `MOVL`, `MOVQ`, moves byte (8 bits), word (16 bits), long (32 bits), and quadword (64 bits), respectively.
-- **Global addressing** : Operand is global value, can be a defined label.
-- **Immediate addressing** : The operand 42 is a constant value `MOVQ %rax, 42`.
-- **Register addressing** : Operand `rbx` originate from a register `MOVQ %rax, %rbx`.
-- **Indirect addressing** : Operand is indirectly located in a register by memory address, such as the stack pointer `%rsp`.
-- **Base-relative addressing** : Operand is specified from an address added with constant (e.g., `-16(%rcx)`, 16 bytes before `%rcx`).
-- **Complex addressing** : Used to address element in an array in the form of `D(Ra, Rb, C)`, which refers to the value at address `Ra + Rb * C + D`. `Ra` and `Rb` are general purpose registers, which gives size of the array and index of the array, respectively. `C` gives the size of the items in the array and `D` is offset relative to that item.
+- **Global addressing**: Operand is global value, can be a defined label.
+- **Immediate addressing**: The operand 42 is a constant value `MOVQ %rax, 42`.
+- **Register addressing**: Operand `rbx` originate from a register `MOVQ %rax, %rbx`.
+- **Indirect addressing**: Operand is indirectly located in a register by memory address, such as the stack pointer `%rsp`.
+- **Base-relative addressing**: Operand is specified from an address added with constant (e.g., `-16(%rcx)`, 16 bytes before `%rcx`).
+- **Complex addressing**: Used to address element in an array in the form of `D(Ra, Rb, C)`, which refers to the value at address `Ra + Rb * C + D`. `Ra` and `Rb` are general purpose registers, which gives size of the array and index of the array, respectively. `C` gives the size of the items in the array and `D` is offset relative to that item.
   ![x86 addressing modes](./x86-addressing-modes.png)  
-  Source : Book 1 page 155
+  Source: Book 1 page 155
 
 #### x86 Arithmetic
 
 `ADD` and `SUB` adds and subtracts, respectively, both require two operands, which a source and target. For example, `ADDQ %rbx, %rax` adds `%rbx` to `%rax`, overwriting previous content of `%rax`.
 
-More complex example can be translated into :
+More complex example can be translated into:
 
 ```
 c = a + b + b
@@ -242,7 +242,7 @@ MOVQ %rbx, c
 
 #### x86 Comparisons & Jumps
 
-`JMP` may be used to jump between part of program. It can be used with label to create a loop :
+`JMP` may be used to jump between part of program. It can be used with label to create a loop:
 
 ```
       MOVQ $0, %rax
@@ -282,7 +282,7 @@ A function can be called with the `CALL` instruction. Under the hood, it pushes 
 Registers need to be preserved and restored across function call. Depending on the language, it can either be the caller or the callee that saves the value. See [calling sequences](/compilers-and-programming-languages/subroutines#calling-sequences).
 
 ![Example of function call in C translated into x86 assembly](./x86-function-call.png)  
-Source : Book 1 page 161
+Source: Book 1 page 161
 
 :::tip
 See also [call stack](/compilers-and-programming-languages/subroutines#call-stack)
@@ -297,14 +297,14 @@ The [ARM](/computer-organization-and-architecture/isa#arm) assembly starts from 
 ARM-32 has 16 general purposes registers, named from `r0` to `r15`.
 
 ![ARM registers](./arm-registers.png)  
-Source : Book 1 page 167
+Source: Book 1 page 167
 
 There are additional registers which can't be accessed directly, namely Current Program Status Register (CPSR) and Saved Program Status Register (SPSR). They are used to store processor's status and control information, such as the result of comparison instruction.
 
-Data types in ARM :
+Data types in ARM:
 
 ![ARM data types](./arm-data-types.png)  
-Source : Book 1 page 168
+Source: Book 1 page 168
 
 #### ARM Addressing Modes
 
@@ -313,21 +313,21 @@ ARM separates instruction to copy data between registers and between registers a
 This is an example of moving data between registers using `MOV`. Immediate value is denoted with `#`, and they must be lower than 16 bits, else `LDR` should be used. ARM places destination register on the left, while source is on the right (except for `STR`).
 
 ![ARM addressing modes 1](./arm-addressing-modes-1.png)  
-Source : Book 1 page 168
+Source: Book 1 page 168
 
 - Move value 3 to register r0.
 - Move value of register r0 to register r1.
 
 ![ARM addressing modes 2](./arm-addressing-modes-2.png)  
-Source : Book 1 page 169
+Source: Book 1 page 169
 
-- Rd : destination register
-- Rs : source register
-- Ra : register that holds address
+- Rd: destination register
+- Rs: source register
+- Ra: register that holds address
 
 Moving between registers and memory using `LDR` and `STR`, we typically denote address given by register with square brackets. Both takes the destination (for `LDR`) or source register (for `STR`) as the first argument, and source (for `LDR`) or destination (for `STR`) memory address as the second argument.
 
-For example, to load a value from an address and store it in register :
+For example, to load a value from an address and store it in register:
 
 ```
 LDR r0, =address
@@ -339,10 +339,10 @@ We must do it in two instruction. ARM assembly does not have a single instructio
 For a large literal or absolute address, which do not fit in 32 bits, they must be stored in **literal pool**. It is section of the program that stores data and can be accessed using `=` sign. It is similar to accessing a label.
 
 ![ARM literal pool](./arm-literal-pool.png)  
-Source : Book 1 page 170
+Source: Book 1 page 170
 
 ![ARM pre- and post-indexing](./arm-pre-post-indexing.png)  
-Source : Book 1 page 169, 170
+Source: Book 1 page 169, 170
 
 The pre-indexing means that we are modifying the source address before it is loaded, while the post-indexing modifies the source address after the load, both happen before the `LDR` instruction. The pre-indexing is useful to specify offset relative to the base address, while the post-indexing is useful to specify offset relative to the loaded address.
 
@@ -351,7 +351,7 @@ The pre-indexing means that we are modifying the source address before it is loa
 Basic arithmetic are performed with `ADD`, `SUB`, and `MUL`. There are also `ADC` and `SBC` to add and subtract with carried value from the register flag.
 
 ![ARM arithmetic](./arm-arithmetic.png)  
-Source : Book 1 page 171
+Source: Book 1 page 171
 
 These take destination register as the first argument, in which it performs the desired operation using the two operands provided in the second and third argument.
 
@@ -364,16 +364,16 @@ ARM doesn't support `DIV` instruction directly due to its relatively complex ope
 Below is bitwise operations on ARM.
 
 ![ARM bitwise operations](./arm-bitwise.png)  
-Source : Book 1 page 171
+Source: Book 1 page 171
 
 #### ARM Comparisons & Branches
 
-As mentioned before, result of comparison is stored in the CPSR. It may result in :
+As mentioned before, result of comparison is stored in the CPSR. It may result in:
 
-- Z (zero) : Operands are equal
-- N (negative) : First operand is less than second operand
+- Z (zero): Operands are equal
+- N (negative): First operand is less than second operand
 
-For example, when comparing between register and immediate value, we put the immediate value in the second operand :
+For example, when comparing between register and immediate value, we put the immediate value in the second operand:
 
 ```
 CMP Rd, Rn
@@ -385,9 +385,9 @@ Arithmetic instruction can also modify the CPSR. It is done by appending "S" to 
 :::
 
 ![ARM branch](./arm-branch.png)  
-Source : Book 1 page 172
+Source: Book 1 page 172
 
-With comparison, we can now construct loops. There are various branching mechanism in ARM. For example, to loop from 0 to 5 :
+With comparison, we can now construct loops. There are various branching mechanism in ARM. For example, to loop from 0 to 5:
 
 ```
       MOV r0, #0
@@ -417,9 +417,9 @@ SUB sp, sp, #4
 STR r0, [sp]
 ```
 
-Recall that `STR` place destination on the right and source on the left. This can be simplified with pre-indexing : `STR r0, [sp, #-4]!`. `sp` is added with `-4`, and the result is also written back to `sp` (using the `!`), then the result serve as the destination for `r0`.
+Recall that `STR` place destination on the right and source on the left. This can be simplified with pre-indexing: `STR r0, [sp, #-4]!`. `sp` is added with `-4`, and the result is also written back to `sp` (using the `!`), then the result serve as the destination for `r0`.
 
-Further, can be simplified into the `PUSH` instruction : `PUSH {r0, r1, r2}`
+Further, can be simplified into the `PUSH` instruction: `PUSH {r0, r1, r2}`
 
 It's the opposite for pop.
 
@@ -437,9 +437,9 @@ POP {r0,r1,r2}
 ARM describes the convention of calling function below.
 
 ![ARM calling convention](./arm-calling-convention.png)  
-Source : Book 1 page 174
+Source: Book 1 page 174
 
 Jumping to a function is done with `BL` instruction. Example of C function and its ARM assembly.
 
 ![C function in ARM](./arm-function.png)  
-Source : Book 1 page 174, 175
+Source: Book 1 page 174, 175

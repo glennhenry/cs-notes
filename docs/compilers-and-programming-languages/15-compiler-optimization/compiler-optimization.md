@@ -5,7 +5,7 @@ title: Compiler Optimization
 description: Compiler Optimization
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 1 chapter 12.**
 
@@ -17,11 +17,11 @@ The point of optimization is to improve the code while also ensuring that the ov
 
 As much as optimization benefits us, it can make debugging and decompilation challenging, since the original code is gone. For example, result, breakpoints, line numbers, and variable values observed during debugging may not directly correspond to the original source code.
 
-Some type of optimization :
+Some type of optimization:
 
-- **Simplification** : This includes removing redundancy and removing unnecessary computations.
-- **Control flow** : Targets control flow structure (e.g., loops and conditionals), such as reducing the number of branching to reduce [pipelining stall](/computer-organization-and-architecture/cpu-design#pipelining).
-- **Memory and registers** : Efficient and correct allocation of registers and memory to reduce their usage and improve speed. For example, we can store frequently used variables in registers instead of the memory to increase access speed.
+- **Simplification**: This includes removing redundancy and removing unnecessary computations.
+- **Control flow**: Targets control flow structure (e.g., loops and conditionals), such as reducing the number of branching to reduce [pipelining stall](/computer-organization-and-architecture/cpu-design#pipelining).
+- **Memory and registers**: Efficient and correct allocation of registers and memory to reduce their usage and improve speed. For example, we can store frequently used variables in registers instead of the memory to increase access speed.
 
 ### Constant Folding
 
@@ -113,7 +113,7 @@ int x = 1;
 int result = quadratic(a, b, c, x);
 ```
 
-This simple calculation can be optimized to :
+This simple calculation can be optimized to:
 
 ```
 int quadratic(int a, int b, int c, int x) {
@@ -134,7 +134,7 @@ In relation to math, compiler can apply mathematical-based optimization. This le
 
 ### Dead Code Elimination
 
-Dead code refers code that will never be executed or code that has no impact on the program's behavior or output. This can be :
+Dead code refers code that will never be executed or code that has no impact on the program's behavior or output. This can be:
 
 - The unreachable piece of code after a return statement in a function.
 - Conditional that rely on constant which is known at compile-time, this mean we can calculate the result of the branch beforehand, further removing the conditional code.
@@ -143,7 +143,7 @@ Dead code refers code that will never be executed or code that has no impact on 
 The detection of dead code is typically performed on [control flow graph](/compilers-and-programming-languages/intermediate-representation#control-flow-graph).
 
 ![Dead code in control flow graph](./deadcode.png)  
-Source : Book 1 page 203
+Source: Book 1 page 203
 
 In the top control flow graph, a true evaluation would return 10 immediately, without executing the other code. On the other hand, a false evaluation of `x < y` would print hello, print goodbye, then finally return 30. With this code, we can't eliminate any piece of code because all of them is possible to be executed (unless `x < y` is a known constant).
 
@@ -159,7 +159,7 @@ These optimizations include those that takes account of target machine. It targe
 
 Peephole optimizations are applied on short sequences of instructions, typically within a fixed-size window or "peephole." It is to reduce redundancy and simplify code, while also making safe improvement.
 
-For example, removing unnecessary load to register :
+For example, removing unnecessary load to register:
 
 ```
 MOVQ %R8, x
@@ -189,14 +189,14 @@ Some machine has optimized unit to perform certain operation or able to execute 
 It uses a technique called **tree coverage**, where we keep track the patterns of tree (also called **tree templates**), and match them during traversal of AST. The visited nodes are compared to the templates (which may be tons).
 
 ![X86 tree templates](./x86-instruction-patterns.png)  
-Source : Book 1 page 206
+Source: Book 1 page 206
 
 The above is an image of tree templates of some instructions in [x86](/computer-organization-and-architecture/isa#x86).
 
-Then we can perform **tree rewriting** :
+Then we can perform **tree rewriting**:
 
 ![Tree rewriting](./tree-rewriting.png)  
-Source : Book 1 page 207 (included with steps)
+Source: Book 1 page 207 (included with steps)
 
 For example, if we see a tree of `IADD` with two operands, we should place the first operand in some register `Ri`, the second operand in register `Cj`, then make the instruction as `ADDQ Cj, Ri`, so that the subtree can be omitted and `Ri` can be used directly as the replacement (step 1 to 3).
 
@@ -219,7 +219,7 @@ Overlapping live ranges of variables mean they cannot be assigned to the same re
 We can draw a **conflict graph** to describe this.
 
 ![Conflict graph](./conflict-graph.png)  
-Source : Book 1 page 210
+Source: Book 1 page 210
 
 This conflict graph describes a [graph coloring problem](/data-structures-and-algorithms/graph), where the nodes represent variables and the edges represent interference between variables. The goal is to assign each node a different color (registers), such that no two adjacent nodes has the same color (avoiding interference).
 

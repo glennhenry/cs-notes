@@ -5,10 +5,10 @@ title: RPC
 description: RPC
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[What is RPC? - Valentin Despa](https://youtu.be/MdaGuP6-bKs?si=dG0FRHjE415_s9no)**
-- **[What is RPC? gRPC Introduction - ByteByteGo](https://youtu.be/gnchfOojMk4?si=JaNEHWB8mTH6j4ot)**
+- **[What is RPC? — Valentin Despa](https://youtu.be/MdaGuP6-bKs?si=dG0FRHjE415_s9no)**
+- **[What is RPC? gRPC Introduction — ByteByteGo](https://youtu.be/gnchfOojMk4?si=JaNEHWB8mTH6j4ot)**
 
 ### RPC
 
@@ -20,16 +20,16 @@ Function invocation can be achieved through a contract called IDL (Interface Def
 
 The RPC framework will generate language-specific code for the client and the server to use to communicate. The function or procedure used may also include argument to pass additional data.
 
-1. **Serialization** : Serialization is the process of transforming data into something that can be transmitted over the network. The RPC framework will generate code following the IDL definition and will serialize the code into format like [JSON](/digital-media-processing/json), [XML](/digital-media-processing/xml), or Protocol Buffers. The generated code is called **client stub**.
+1. **Serialization**: Serialization is the process of transforming data into something that can be transmitted over the network. The RPC framework will generate code following the IDL definition and will serialize the code into format like [JSON](/digital-media-processing/json), [XML](/digital-media-processing/xml), or Protocol Buffers. The generated code is called **client stub**.
 
    The serialized request will be transmitted over the network using protocol like [TCP](/computer-networking/tcp-protocol) or [UDP](/computer-networking/udp) and the server will receive it.
 
-2. **Deserialization** : The RPC framework in the server will deserialize the data received and transform it into the language the server use, this is called **stub decoding**.
+2. **Deserialization**: The RPC framework in the server will deserialize the data received and transform it into the language the server use, this is called **stub decoding**.
 
-3. **Execution & Responses** : The server will execute the function with its parameters and will generate the response. The response can be the result data or an error information including its error code and message. The response will be sent to the client following the similar step that includes serialization and deserialization as before.
+3. **Execution & Responses**: The server will execute the function with its parameters and will generate the response. The response can be the result data or an error information including its error code and message. The response will be sent to the client following the similar step that includes serialization and deserialization as before.
 
    ![RPC Process](./rpc-process.png)  
-   Source : https://www.javatpoint.com/what-is-rpc-in-operating-system
+   Source: https://www.javatpoint.com/what-is-rpc-in-operating-system
 
 RPC provide a way for client to communicate with the server with code or function call instead of communicating by specifying specific operation like GET or POST request in [REST API](/backend-system/rest-api).
 
@@ -43,7 +43,7 @@ gRPC uses protocol buffers as the default Interface Definition Language (IDL) fo
 
 The protocol buffer is what makes RPC able to bridge between the difference of the language used, it provide a contract for both client and server language.
 
-Here is an example of protobuf message definition :
+Here is an example of protobuf message definition:
 
 ```protobuf
 message Person {
@@ -57,7 +57,7 @@ In the example, we are defining a `Person` type of message. It has 3 fields and 
 
 When the client make an gRPC call, the function executed will be serialized into binary format based on the protobuf definition and will be transmitted over the network. On the receiving end, it will be deserialized with the same definition.
 
-For example, the `Person` type defined above can be generated in kotlin code :
+For example, the `Person` type defined above can be generated in kotlin code:
 
 ```kotlin
 data class Person(

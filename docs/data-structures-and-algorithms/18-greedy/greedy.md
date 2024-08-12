@@ -5,9 +5,9 @@ title: Greedy
 description: Greedy
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Greedy algorithm - Wikipedia](https://en.wikipedia.org/wiki/Greedy_algorithm)**
+- **[Greedy algorithm — Wikipedia](https://en.wikipedia.org/wiki/Greedy_algorithm)**
 
 **Greedy algorithm** is a problem-solving approach that involve selecting the currently optimal solution at each step. It is a simple and intuitive algorithm that "greedily" selects the best available option without considering the complete solution or future consequences.
 
@@ -21,7 +21,7 @@ One of a simple problem that can be solved using a greedy approach is the coin c
 
 For example, if we have a set of coin of: 1 cent, 5 cents, 10 cents, 25 cents, and the target is 79, we may use 3 x 25 cents and 4 x 1 cents, resulting in 7 coins.
 
-Here is the pseudocode for it :
+Here is the pseudocode for it:
 
 ```
 function coinChange(coins, amount):

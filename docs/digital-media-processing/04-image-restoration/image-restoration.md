@@ -13,7 +13,7 @@ description: Image Restoration
 **Image restoration** is the process of improving the quality or appearance of a digital image that has been degraded or corrupted. By degradation or corrupted, this means image may have noise, blurring, compression artifacts, or other forms of distortion.
 
 ![An image noise is removed and colored from grayscale image](./image-restoration-example.jpg)  
-Source : https://en.wikipedia.org/wiki/Image_restoration_by_artificial_intelligence
+Source: https://en.wikipedia.org/wiki/Image_restoration_by_artificial_intelligence
 
 ### Unblur
 
@@ -28,4 +28,4 @@ To really recover the original image, we will need the appropriate sharpness fil
 Image can also be restored using AI technology. The AI model will be trained with a large dataset of images that have been labeled with their ground truth (original) state. This allows the algorithms to learn the patterns that are present in natural images and to use this knowledge to restore degraded images.
 
 ![Removing noise from a human eyes](./image-restoration-ai.png)  
-Source : https://developer.nvidia.com/blog/ai-can-now-fix-your-grainy-photos-by-only-looking-at-grainy-photos/
+Source: https://developer.nvidia.com/blog/ai-can-now-fix-your-grainy-photos-by-only-looking-at-grainy-photos/

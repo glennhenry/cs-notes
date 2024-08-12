@@ -5,11 +5,11 @@ title: Containerization
 description: Containerization
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Containers - Explained in 4 Minutes - Accelerate Rediscover In 4 Minutes](https://youtu.be/pR-cGS6IGvI?si=LOqZkrsmbzDJE7l9)**
-- **[What Is Containerization? - AWS](https://aws.amazon.com/what-is/containerization/)**
-- **[OS-level virtualization - Wikipedia](https://en.wikipedia.org/wiki/OS-level_virtualization)**
+- **[Containers - Explained in 4 Minutes — Accelerate Rediscover In 4 Minutes](https://youtu.be/pR-cGS6IGvI?si=LOqZkrsmbzDJE7l9)**
+- **[What Is Containerization? — AWS](https://aws.amazon.com/what-is/containerization/)**
+- **[OS-level virtualization — Wikipedia](https://en.wikipedia.org/wiki/OS-level_virtualization)**
 
 During application development, developers often use various libraries and modules, each with its own dependencies, this can create a complex [dependency management](/software-engineering/build-and-package-management#dependency) as the app gets larger. The server running the app will need all the required dependencies, including libraries, frameworks, runtime environments, packages, and operating system requirements in order to run the application.
 
@@ -20,7 +20,7 @@ During application development, developers often use various libraries and modul
 Containers are already fully-functional and can be executed directly in isolated instances using a **container engine** (e.g., [Docker](/cloud-computing-and-distributed-systems/docker-and-kubernetes#docker)). The container engine is responsible for managing and running containers on a system. It achieves this by leveraging [virtualization](/cloud-computing-and-distributed-systems/virtualization) techniques, where the container engine sits on top of the operating system (OS) and provides [OS-level virtualization](/cloud-computing-and-distributed-systems/virtualization#level-implementation). The container engine will then interact with the OS to execute the libraries and application in the container.
 
 ![Containerization 1](./container.png)  
-Source : https://bito.ai/blog/containerization-a-beginners-guide-to-its-impact-on-software-development/
+Source: https://bito.ai/blog/containerization-a-beginners-guide-to-its-impact-on-software-development/
 
 Because containerization is OS-level virtualization, it can run directly on the operating system without the need for additional virtualization. Although virtualization is commonly associated with containerization, as containers are frequently used in hosting services such as cloud services.
 

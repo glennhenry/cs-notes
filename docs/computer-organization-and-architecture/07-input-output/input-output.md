@@ -5,7 +5,7 @@ title: Input/Output
 description: Input/Output
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **[UNIKOM powerpoint](https://repository.unikom.ac.id/50439/1/pertemuan6.pptx)**
 
@@ -24,29 +24,29 @@ An I/O modules typically consist of **interface** and **controller**.
 **Interfaces** are the electrical or physical connectors, such as USB ports for variety of I/O devices, Ethernet ports for networking, or audio jacks for I/O related to audio. The component in CPU talks to each other using **system buses**, specifically I/O bus for I/O interaction. It serves as a shared link that allows data to be exchanged between the CPU, memory, and I/O devices. I/O interfaces makes it possible for I/O devices to connect with the buses.
 
 ![I/O interface](./io-interface.png)  
-Source : https://edurev.in/t/97679/Input-Output-interface-Computer-Organization-and-A
+Source: https://edurev.in/t/97679/Input-Output-interface-Computer-Organization-and-A
 
 ![Ethernet connection interface](./ethernet-connection.png)  
-Source : https://study.com/learn/lesson/nic-network-interface-card-types-function.html
+Source: https://study.com/learn/lesson/nic-network-interface-card-types-function.html
 
 #### I/O Controller
 
 I/O controller is the hardware component which will handle the necessary protocols and logic for data transfer. It acts as an intermediary between the CPU, memory, and the I/O devices, that handles data transfer and communication.
 
-Function of I/O controller :
+Function of I/O controller:
 
-- **Data Buffering** : I/O controller may use data buffers or temporary storage areas to handle the flow of data between the CPU/memory and the I/O devices systematically.
-- **Error Detection & Interrupt Handling** : Notify the CPU about interrupt events, data availability, or any error that happens in the I/O devices.
+- **Data Buffering**: I/O controller may use data buffers or temporary storage areas to handle the flow of data between the CPU/memory and the I/O devices systematically.
+- **Error Detection & Interrupt Handling**: Notify the CPU about interrupt events, data availability, or any error that happens in the I/O devices.
 
 ![I/O controller](./io-controller.png)  
-Source : https://witscad.com/course/computer-architecture/chapter/io-communication-io-controller
+Source: https://witscad.com/course/computer-architecture/chapter/io-communication-io-controller
 
 While I/O controller is the hardware level for handling communication, **device driver**, specifically **I/O driver**, is the component which enables communication in the software level between the operating system (OS) with the I/O controller.
 
 Device driver provides a standardized interface to the operating system, allowing it to send commands, requests, status, or data to the I/O controller or device.
 
 ![I/O device drivers](./io-driver.png)  
-Source : https://repository.unikom.ac.id/50439/1/pertemuan6.pptx
+Source: https://repository.unikom.ac.id/50439/1/pertemuan6.pptx
 
 ### I/O Technique
 
@@ -67,7 +67,7 @@ In this technique, the CPU directly controls the data transfer between the I/O d
 DMA is a technique that allows data transfer between an I/O device and memory without direct CPU involvement. CPU will not be involved during the data transfer, the I/O device, which is managed by a DMA controller will transfer the data directly from the I/O device to the memory. This techinque can significantly reduces CPU overhead and improves I/O performance, especially for large data transfers.
 
 ![DMA](./dma.png)  
-Source : https://www.boardinfinity.com/blog/direct-memory-access/
+Source: https://www.boardinfinity.com/blog/direct-memory-access/
 
 #### Memory-mapped I/O
 
@@ -76,4 +76,4 @@ Source : https://www.boardinfinity.com/blog/direct-memory-access/
 When the CPU issues a read/write operation to a memory address, there will be an address decoder, which will routes the request to the appropriate I/O device instead of main memory.
 
 ![Memory mapped I/O](./memory-mapped-io.png)  
-Source : https://embeddedsystemvn.wordpress.com/2021/08/07/memory-mapped-i-o/
+Source: https://embeddedsystemvn.wordpress.com/2021/08/07/memory-mapped-i-o/

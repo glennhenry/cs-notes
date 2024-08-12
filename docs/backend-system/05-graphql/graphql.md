@@ -5,10 +5,10 @@ title: GraphQL
 description: GraphQL
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[GraphQL Explained in 100 Seconds - Fireship](https://youtu.be/eIQh02xuVw4?si=NZATScKXA3s8jYv9)**
-- **[What is GraphQL? GraphQL introduction - Apollo Blog](https://www.apollographql.com/blog/graphql/basics/what-is-graphql-introduction/)**
+- **[GraphQL Explained in 100 Seconds — Fireship](https://youtu.be/eIQh02xuVw4?si=NZATScKXA3s8jYv9)**
+- **[What is GraphQL? GraphQL introduction — Apollo Blog](https://www.apollographql.com/blog/graphql/basics/what-is-graphql-introduction/)**
 
 **GraphQL** is a query language specifically designed for querying APIs data, GraphQL accesses resource on server in a similar way we query a database. Compared to [REST API](/backend-system/rest-api) that accesses resource in a fixed way (e.g., GET /books endpoint), GraphQL allows clients to request specific data from the server in a flexible way by defining the structure of the response they need.
 
@@ -18,7 +18,7 @@ GraphQL typically uses [HTTP](/computer-networking/http-https#http) as the trans
 
 We need to define schema, it serves as contract for the client and the server for querying and manipulating data.
 
-Here is an example of schema in GraphQL :
+Here is an example of schema in GraphQL:
 
 ```graphql
 type User {
@@ -56,24 +56,24 @@ The type name and its field has no actual meaning, they are just random word. Th
 
 ### GraphQL Request
 
-GraphQL consist of the following structure :
+GraphQL consist of the following structure:
 
-1. **Operation Type** : GraphQL has 2 type of operation :
+1. **Operation Type**: GraphQL has 2 type of operation:
 
-   - **Query** : Request data from a server (read operation)
-   - **Mutation** : Modify data on the server such as create, update, or delete (write operation)
+   - **Query**: Request data from a server (read operation)
+   - **Mutation**: Modify data on the server such as create, update, or delete (write operation)
 
-2. **Operation Name (optional)** : Text specified to describe the action.
+2. **Operation Name (optional)**: Text specified to describe the action.
 
-3. **Variables (optional)** : We can include our variable and it will be defined with `$`
+3. **Variables (optional)**: We can include our variable and it will be defined with `$`
 
-4. **Query Fields** : The main part of a GraphQL request, these fields represent the data that the client wants to retrieve from the server. The client can specify the fields it needs, including nested fields and relationships which mean the data are related.
+4. **Query Fields**: The main part of a GraphQL request, these fields represent the data that the client wants to retrieve from the server. The client can specify the fields it needs, including nested fields and relationships which mean the data are related.
 
-5. **Arguments (optional)** : Arguments are used to filter or provide additional information to the server to customize the response. Arguments are passed using the variable we defined before.
+5. **Arguments (optional)**: Arguments are used to filter or provide additional information to the server to customize the response. Arguments are passed using the variable we defined before.
 
-6. **Directive (optional)** : Directives enable clients to modify the execution behavior of a GraphQL query. They provide additional instructions to the server about how to handle certain parts of the query. Directive can only modify functionality of an operation compared to argument that capable of modifying the data received.
+6. **Directive (optional)**: Directives enable clients to modify the execution behavior of a GraphQL query. They provide additional instructions to the server about how to handle certain parts of the query. Directive can only modify functionality of an operation compared to argument that capable of modifying the data received.
 
-Here is an example of a GraphQL query (different from the schema above) :
+Here is an example of a GraphQL query (different from the schema above):
 
 ```graphql
 query ($userId: ID!, $withPosts: Boolean!) {

@@ -5,14 +5,14 @@ title: Client-Server
 description: Client-Server
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Client–server model - Wikipedia](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)**
+- **[Client–server model — Wikipedia](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)**
 
 **Client-Server model** is a type of architecture, typically used in distributed computing, where there exist two entity, namely **client** and **server**. A client can request a service or resource, and the server will be the one that response to the request, such as processing or computing the request, or retrieving the requested data.
 
 ![Client requests a webpage](./client-server.png)  
-Source : https://www.scaler.com/topics/nodejs/client-server-architecture/
+Source: https://www.scaler.com/topics/nodejs/client-server-architecture/
 
 One of the biggest application that uses client-server model is the **World Wide Web (WWW or the web)**. For example, when we open a website from our browser, we are essentially sending a request to a server. The browser act as the client that requests to that server. In the case of opening a website, we are requesting webpage resources ([HTML, CSS, JavaScript code](/internet-and-web/javascript#html--css--javascript)), which the browser will use to show us the website. The server is run by the organization or individual responsible for hosting the website or providing the service.
 
@@ -20,25 +20,25 @@ One of the biggest application that uses client-server model is the **World Wide
 
 The interaction between client and server is done in a specific protocol. They are specific rules and format that controls how the two should exchange data. Typically, we are only concerned with the application-level protocol.
 
-The examples are :
+The examples are:
 
-- **[HTTP/HTTPS](/computer-networking/http-https)** : HTTP is a protocol used for communication between web browsers (clients) and web servers. HTTPS is the secure version of HTTP that adds encryption and authentication using [SSL/TLS protocols](/computer-networking/network-encryption#ssltls).
-- **[FTP](/computer-networking/ftp)** : FTP is a protocol used for transferring files between a client and a server. The protocol will specify commands, which are used for file operations such as uploading, downloading, renaming, and deleting files on a remote server.
-- **[SMTP](/computer-networking/email-protocol#smtp)** : SMTP is a protocol for sending email messages between clients and servers. It provides a set of commands and responses for the transfer of email across networks.
+- **[HTTP/HTTPS](/computer-networking/http-https)**: HTTP is a protocol used for communication between web browsers (clients) and web servers. HTTPS is the secure version of HTTP that adds encryption and authentication using [SSL/TLS protocols](/computer-networking/network-encryption#ssltls).
+- **[FTP](/computer-networking/ftp)**: FTP is a protocol used for transferring files between a client and a server. The protocol will specify commands, which are used for file operations such as uploading, downloading, renaming, and deleting files on a remote server.
+- **[SMTP](/computer-networking/email-protocol#smtp)**: SMTP is a protocol for sending email messages between clients and servers. It provides a set of commands and responses for the transfer of email across networks.
 
-For example, the HTTP protocol specify that the client (web browser) must send a request consisting :
+For example, the HTTP protocol specify that the client (web browser) must send a request consisting:
 
-- **Request Line** : Specify the HTTP method, which specifies our desired action of requesting, target URL or resource, and HTTP version.
-- **Headers** : Provide additional information about the request, such as content type, authentication credentials, or cookies.
-- **Body (optional)** : If we are sending data to the server (e.g., submitting a form), they are sent along with the request.
+- **Request Line**: Specify the HTTP method, which specifies our desired action of requesting, target URL or resource, and HTTP version.
+- **Headers**: Provide additional information about the request, such as content type, authentication credentials, or cookies.
+- **Body (optional)**: If we are sending data to the server (e.g., submitting a form), they are sent along with the request.
 
-The server that responses to the request must also follow the format rules :
+The server that responses to the request must also follow the format rules:
 
-- **Status Line** : Includes the HTTP version, a three-digit status code indicating the result of the request (e.g., 200 for OK, 404 for Not Found), and a brief status message.
-- **Headers** : Additional information about the response, such as content type (specify what type of data is returned), caching directives, or authentication challenges.
-- **Body (optional)** : Contains the requested resource or additional data sent as part of the response.
+- **Status Line**: Includes the HTTP version, a three-digit status code indicating the result of the request (e.g., 200 for OK, 404 for Not Found), and a brief status message.
+- **Headers**: Additional information about the response, such as content type (specify what type of data is returned), caching directives, or authentication challenges.
+- **Body (optional)**: Contains the requested resource or additional data sent as part of the response.
 
-Here are a simple HTTP request and its response :
+Here are a simple HTTP request and its response:
 
 ```http
 GET /example-page HTTP/1.1

@@ -5,20 +5,20 @@ title: Semantic Analysis
 description: Semantic Analysis
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 1 chapter 6, 7**
 - **Book 2 chapter 4**
-- **[Compilation - Part Three: Syntax Analysis - Computer Science](https://youtu.be/8nBoVjEOCMI?si=wnzyRj8DnkWHiebu)**
-- **[Symbol table - Wikipedia](https://en.wikipedia.org/wiki/Symbol_table)**
-- **[What is the purpose of a symbol table in a compiler? - Linkedin](https://www.linkedin.com/advice/1/what-purpose-symbol-table-compiler-skills-computer-science-8csde)**
+- **[Compilation - Part Three: Syntax Analysis — Computer Science](https://youtu.be/8nBoVjEOCMI?si=wnzyRj8DnkWHiebu)**
+- **[Symbol table — Wikipedia](https://en.wikipedia.org/wiki/Symbol_table)**
+- **[What is the purpose of a symbol table in a compiler? — Linkedin](https://www.linkedin.com/advice/1/what-purpose-symbol-table-compiler-skills-computer-science-8csde)**
 
 ### Abstract Syntax Tree
 
 **Abstract syntax tree (AST)** or **syntax tree** represent syntactic structure of the input language. It is the simpler and more abstract version of parse tree (also known as concrete syntax tree), both are typically produced after [syntax analysis (parsing)](/compilers-and-programming-languages/parsing) process. Compiler may choose to directly create AST instead of parse tree.
 
 ![AST vs parse tree](./parse-tree-vs-ast.png)  
-Source : https://ruslanspivak.com/lsbasi-part7/
+Source: https://ruslanspivak.com/lsbasi-part7/
 
 The AST contains only the necessary information for code generation. It doesn't include explicit grammatical information or unnecessary tokens like parentheses. The tree structure is arranged in such a way that it preserves the same without these.
 
@@ -51,13 +51,13 @@ struct decl {
 It has the variable name, type, value (if an expression), code (if a function), and a pointer to the next declaration in the program. All of them holds reference to another structs. If specific record doesn't hold anything, it should be null.
 
 ![Declaration linked list](./decl-list.png)  
-Source : Book 1 page 87
+Source: Book 1 page 87
 
 Using this, we effectively created a [linked list](/data-structures-and-algorithms/linked-list) with hierarchical and linked structure of declarations.
 
 ##### Statements
 
-Statements can be represented with :
+Statements can be represented with:
 
 ```c
 struct stmt {
@@ -85,7 +85,7 @@ typedef enum {
 We also associate statement with type, such as declaration, expression, if-else, for-loop, etc. A statement also has various field, such as its initialize expression, statement body, and an else body for if-else statement. They also hold reference to the next statements and expressions.
 
 ![Statement structure](./statement-structure.png)  
-Source : Book 1 page 89 (added with custom text)
+Source: Book 1 page 89 (added with custom text)
 
 ##### Expressions
 
@@ -116,7 +116,7 @@ typedef enum {
 An expression have `kind`,
 
 ![Expression structure](./expression-structure.png)  
-Source : Book 1 page 91, 92
+Source: Book 1 page 91, 92
 
 These expressions have arguments, which are the operands. The type of function/operator is described in `kind`, such as add operation, subtract, multiplication, etc. An `EXPR_NOT` describe a unary NOT operation, its argument is typically placed on the left. We can also use the left and right argument as a way to put function arguments. They are described by chaining several `EXPR_ARG` nodes.
 
@@ -151,7 +151,7 @@ struct param_list {
 A data type should have a field to describe what kind of type it is, a subtype which may be needed for compound types (types that contain another type), like arrays, and is used to describe the function's return type; and a list of parameters which is used by the function.
 
 ![Types structure](./types-structure.png)  
-Source : Book 1 page 93, 94
+Source: Book 1 page 93, 94
 
 - Primitive types are simply described from the `kind` field.
 - An array should have its subtype as the data type of the elements it contains. A nested array would contain another `TYPE_ARRAY` as its subtype, which ultimately has the element data type.
@@ -159,7 +159,7 @@ Source : Book 1 page 93, 94
 
 ##### Example Program
 
-With the code :
+With the code:
 
 ```
 compute: function integer ( x: integer ) = {
@@ -176,7 +176,7 @@ compute: function integer ( x: integer ) = {
 The AST would look like below.
 
 ![Example program AST](./example-program-ast.png)  
-Source : Book 1 page 95
+Source: Book 1 page 95
 
 This AST would be constructed during parsing. For example, when a bottom-up parser reduces, it should append a node to the appropriate parent. The node would be a struct it has created beforehand. If it encounters if-else syntax, the struct would be a statement struct with the `kind` being `STMT_IF_ELSE`, and other fields would be specified depending on the circumstances.
 
@@ -197,7 +197,7 @@ Although, some tools may do semantic analysis during the time programmer write c
 Semantic analysis may also involve looking up or adding information to the symbol table. The **symbol table** is a data structure used to store global information about identifiers (e.g., variables, functions, classes, etc.) encountered in the program.
 
 ![Symbol table](./symbol-table.png)  
-Source : https://www.slideshare.net/DrKuppusamyP/symbol-table-in-compiler-design
+Source: https://www.slideshare.net/DrKuppusamyP/symbol-table-in-compiler-design
 
 The symbol table is frequently accessed throughout many compilation steps. It is created during scanning and parsing. One common implementation for storing symbols is in a [hash table](/data-structures-and-algorithms/hash-table). Each entry could be contained within a struct that has several properties commonly associated with an identifier, such as name, type, scope, memory location, etc.
 
@@ -212,22 +212,22 @@ The production rule of context-free grammar are "decorated" with **attributes**,
 Below is an example of a grammar of arithmetic expressions in [LR](/compilers-and-programming-languages/parsing#bottom-up-parsing).
 
 ![Grammar example](./grammar-example.png)  
-Source : Book 2 page 166
+Source: Book 2 page 166
 
 :::tip
-`E` : expression  
-`T` : term  
-`F` : factor
+`E`: expression  
+`T`: term  
+`F`: factor
 :::
 
 And the attribute grammar for the given grammars.
 
 ![Attribute grammar example](./attribute-grammar-example.png)  
-Source : Book 2 page 167
+Source: Book 2 page 167
 
 - Each symbol is numbered to be distinguished.
 - Attribute grammar is written with equations that describe how can we describe the computation of attribute values. There are two types of attribute rules, **copy rules** and **semantic function**.
-- Copy rules are attribute rule where one attribute is just a copy of another (e.g., `E → T ▷ E.val := T.val`).
+- Copy rules are attribute rule where one attribute is just a copy of another (e.g., `E → T ▷ E.val:= T.val`).
 - Semantic function is a function that describe an attribute value is computed with input of another attribute values. It can be any arbitrarily function the language designer want, and we can associate each non-terminal with a value. For example the $E_1.\text{val}$ describe the value of $E_1$. The function $\text{sum}(x, y)$ may describe the sum of $x$ and $y$.
 - The value $.\text{val}$ or function $\text{sum}(x, y)$ doesn't actually have meaning, they are not fixed or standardized, but rather a convention that language designer adopt for clarity.
 
@@ -238,7 +238,7 @@ The grammar is now associated with attributes, it is time to evaluate them. Attr
 ##### Synthesize Attributes
 
 ![Attribute evaluation](./attribute-evaluation.png)  
-Source : Book 2 page 169
+Source: Book 2 page 169
 
 For this particular example, the flow of evaluation is bottom-to-up. We call attribute that are computed and passed up the parse tree from child nodes to parent nodes as **synthesizes attributes**.
 
@@ -249,7 +249,7 @@ When all attributes are synthesizes, such as [our example above](#attribute-gram
 The opposite, where information is allowed to pass from parent nodes or side nodes are called **inherited attributes**. Below is an example where bottom-up evaluation is not possible due to subtraction, in which its mathematical property is left-associative (i.e., have to be evaluated from left).
 
 ![Inherited attribute](./inherited-attribute.png)  
-Source : Book 2 page 169-171
+Source: Book 2 page 169-171
 
 From the left child of `expr` it is passed to its sibling node, namely `expr_tail` and so on until the bottom most node. Then, the result (2) goes back to the root.
 
@@ -268,7 +268,7 @@ We call algorithm that transform a language into an equivalent representation in
 **Attribute evaluators** are responsible for computing the values of the attributes associated with the grammar symbols. The associated computation rule of an attribute grammar is called an **action routine**. It is included in the parser, which means the parser will execute the specific action routine during parsing when encountering the associated production rule.
 
 ![Grammar with action routine](./attribute-evaluator.png)  
-Source : Book 2 page 176, 180
+Source: Book 2 page 176, 180
 
 The left is a top-down attribute grammar to construct syntax tree. Now, it is modified so that each attribute on the grammar is associated with piece of code to compute that attribute (they are embedded within the attribute, delimited with curly braces).
 
@@ -279,15 +279,15 @@ The parser will generate syntax tree while parsing. For instance, when it encoun
 We modified the [calculator language example](/compilers-and-programming-languages/parsing#recursive-descent-parser) to include types and declaration semantics. A sample program and its syntax tree as well as the production rule used to derive it can be seen below.
 
 ![Decorate syntax tree part 1](./decorate-syntax-tree-1.png)  
-Source : Book 2 page 182, 183
+Source: Book 2 page 182, 183
 
 The syntax tree follows a formalism called **tree grammar**. It is used to specify the structure and behavior of tree-like structures, such as parse trees or syntax tree. Unlike context-free grammars, which operate on linear sequences of symbols, tree grammars operate on hierarchical structures represented by trees.
 
-Tree grammar is a form like `A : B → C B`. The `A : B` means that `A` is considered the part (or category) of `B`, and that `B` can be placed around `C`. For example, in `read : item → id item`, `read` is considered as an `item` and an `item` can be placed around `id`.
+Tree grammar is a form like `A: B → C B`. The `A: B` means that `A` is considered the part (or category) of `B`, and that `B` can be placed around `C`. For example, in `read: item → id item`, `read` is considered as an `item` and an `item` can be placed around `id`.
 
 This tree grammar can also be included with attribute grammar like below.
 
 ![Decorate syntax tree part 2](./decorate-syntax-tree-2.png)  
-Source : Book 2 page 185-187
+Source: Book 2 page 185-187
 
 Each attribute is associated with fragment of code to evaluate them. Some even contains control flow, checking symbol table (`symtab`), and error reporting. One thing to note is, it catches error by making a dummy type called `error`. This error type is associated with an error message in the symbol table.

@@ -5,10 +5,10 @@ title: Router
 description: Router
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Wikipedia Router (computing)](<https://en.wikipedia.org/wiki/Router_(computing)>)**
-- **[Hub, Switch, & Router Explained | PowerCert](https://youtu.be/1z0ULvg_pW8?si=6F-oF8maBovN6VnN)**
+- **[Router (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Router_(computing)>)**
+- **[Hub, Switch, & Router Explained — PowerCert](https://youtu.be/1z0ULvg_pW8?si=6F-oF8maBovN6VnN)**
 
 **Router** is a networking device that connects multiple computer networks together, and directs network traffic between them. It uses [IP addresses](/computer-networking/ip-address) to make decisions on how to forward data packets across networks.
 
@@ -21,7 +21,7 @@ Routers are commonly used in homes, offices, and other environments to enable co
 In addition to forwarding data packets, routers can perform other functions such as [network address translation (NAT)](/computer-networking/nat), which allows multiple devices on a local network to share a single [public IP address](/computer-networking/ip-address#public-ip-address) by using [private IP address](/computer-networking/ip-address#private-ip-address). Also, [fire walling](/computer-security/network-security#firewall), which provides security by filtering and controlling network traffic.
 
 ![Example of router connecting network together](./router-example.png)  
-Source : https://www.mytechlogy.com/IT-blogs/22654/essential-settings-for-home-network-routers/
+Source: https://www.mytechlogy.com/IT-blogs/22654/essential-settings-for-home-network-routers/
 
 :::tip
 Find out more about how routers forward or send data to another routers [here](/computer-networking/routing)
@@ -36,4 +36,4 @@ A network may have hub or switch to connect the local device and have a router t
 Hubs and switches can be thought as the device you use to make network, while routers are used to connect them.
 
 ![Several local networks connected with switch and externally connected with router](./hub-switch-vs-router.png)  
-Source : https://youtu.be/1z0ULvg_pW8?si=GkDgO98d3d0uKt43&t=401
+Source: https://youtu.be/1z0ULvg_pW8?si=GkDgO98d3d0uKt43&t=401

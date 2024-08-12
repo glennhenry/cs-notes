@@ -5,10 +5,10 @@ title: Names, Scopes, Bindings
 description: Names, Scopes, Bindings
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 2 chapter 3**
-- **[What are the differences between shallow binding deep binding and ad hoc binding - Quora](https://www.quora.com/What-are-the-differences-between-shallow-binding-deep-binding-and-ad-hoc-binding)**
+- **[What are the differences between shallow binding deep binding and ad hoc binding — Quora](https://www.quora.com/What-are-the-differences-between-shallow-binding-deep-binding-and-ad-hoc-binding)**
 
 Emphasized again, programming languages are made to enable programmer to create program for computer easily. One benefits of programming language is abstraction. It is the concept of hiding unnecessary details and focusing on essential concept.
 
@@ -18,9 +18,9 @@ Variable in programming language are identifier that are associated with names. 
 
 This topic discusses how names are identified, managed, and referenced in programming languages.
 
-- **Names** : Refer to identifiers used to represent variables, functions, classes, modules, or other entities in a program.
-- **Bindings** : Binding is the association of a name and the actual object it represents. Binding needs to be established so that names can be used interchangeably with the actual object. For example, a function may be associated with a memory address where it exists, so that the program could invoke or execute the function when needed.
-- **Scopes** : Scope define the regions or portions of a program where names are valid and can be accessed. For example, in many programming languages, defining a variable inside a function would make it inaccessible outside it (the variable is local to the function).
+- **Names**: Refer to identifiers used to represent variables, functions, classes, modules, or other entities in a program.
+- **Bindings**: Binding is the association of a name and the actual object it represents. Binding needs to be established so that names can be used interchangeably with the actual object. For example, a function may be associated with a memory address where it exists, so that the program could invoke or execute the function when needed.
+- **Scopes**: Scope define the regions or portions of a program where names are valid and can be accessed. For example, in many programming languages, defining a variable inside a function would make it inaccessible outside it (the variable is local to the function).
 
 :::tip
 Although "object" have different meaning in OOP, they are typically used when referring to something that has a name.
@@ -32,19 +32,19 @@ Binding time refers to the time binding decisions are made. Binding decisions is
 
 Allocating resources is considered as a binding, because this involves binding particular memory, file handles, or network connections to a program that needs it.
 
-Types of binding time :
+Types of binding time:
 
-- **Language design time** : This may include the decision from the language developer about variable scoping rules, type systems, etc.
-- **Language implementation time** : Such as the development of compiler (e.g., how should it manages memory)
-- **Program writing time** : The programmers creating variables or choosing certain algorithm or data structures.
-- **Compile time** : Occur during compilation time, such as syntax analysis or type checking.
-- **Link time** : Linking is the process of connecting external files or libraries to create an executable program. Binding decision in here may involve resolving references to external symbols or functions.
-- **Load time** : Occur when the program is loaded into memory for execution. The operating system may handle activities such as dynamic memory allocation.
-- **Runtime** : When the program is running, it may make dynamic memory allocations through mechanisms like `malloc()` or `new`.
+- **Language design time**: This may include the decision from the language developer about variable scoping rules, type systems, etc.
+- **Language implementation time**: Such as the development of compiler (e.g., how should it manages memory)
+- **Program writing time**: The programmers creating variables or choosing certain algorithm or data structures.
+- **Compile time**: Occur during compilation time, such as syntax analysis or type checking.
+- **Link time**: Linking is the process of connecting external files or libraries to create an executable program. Binding decision in here may involve resolving references to external symbols or functions.
+- **Load time**: Occur when the program is loaded into memory for execution. The operating system may handle activities such as dynamic memory allocation.
+- **Runtime**: When the program is running, it may make dynamic memory allocations through mechanisms like `malloc()` or `new`.
 
 ### Object Lifetime & Storage Management
 
-The lifecycle of object :
+The lifecycle of object:
 
 1. **Creation of objects**, involves allocating memory to store its data and initializing its state.
 2. **Creation of bindings**, where names or identifiers are associated with the actual data.
@@ -57,9 +57,9 @@ We call the duration or existence of an object or a variable accessible within a
 
 During its lifetime, there are three mechanisms to allocate storage for an object.
 
-- **[Stack allocation](/operating-system/memory-management#stack-allocation)** : Memory is allocated in a [stack data structure](/data-structures-and-algorithms/stack). It is used for storing subroutines call as well as local variables within them. They are fast, efficient, and handled automatically (in a sense) by the compiler.
-- **[Heap allocation](/operating-system/memory-management#dynamic-allocation)** : Also known as dynamic allocation, in which objects are allocated and deallocated at runtime. It is typically managed manually by programmers, although mechanism like [garbage collection](/operating-system/memory-management#automatic-memory-management) allows it to be automatic.
-- **Static allocation** : Static allocation is used for objects with a fixed size and a lifetime that spans the entire program's execution. It could be variable placed in global scope (typically any region outside block or function) or initializing variable with `static` keyword in some programming languages. Object allocated statically has a fixed and reserved place in the program memory, making it accessible anywhere and anytime in the program.
+- **[Stack allocation](/operating-system/memory-management#stack-allocation)**: Memory is allocated in a [stack data structure](/data-structures-and-algorithms/stack). It is used for storing subroutines call as well as local variables within them. They are fast, efficient, and handled automatically (in a sense) by the compiler.
+- **[Heap allocation](/operating-system/memory-management#dynamic-allocation)**: Also known as dynamic allocation, in which objects are allocated and deallocated at runtime. It is typically managed manually by programmers, although mechanism like [garbage collection](/operating-system/memory-management#automatic-memory-management) allows it to be automatic.
+- **Static allocation**: Static allocation is used for objects with a fixed size and a lifetime that spans the entire program's execution. It could be variable placed in global scope (typically any region outside block or function) or initializing variable with `static` keyword in some programming languages. Object allocated statically has a fixed and reserved place in the program memory, making it accessible anywhere and anytime in the program.
 
 ### Scope Rules
 
@@ -96,7 +96,7 @@ end.
 When a variable is declared within a block or subroutine, its scope is limited to that block or subroutine and any nested blocks or subroutines within it. When a variable is referenced within a nested subroutine, the compiler or interpreter first searches for its declaration within the nested subroutine's scope. If the variable is not found, it continues the search in the enclosing (parent) scope and proceeds up the lexical chain until the declaration is found or until the global scope is reached. The process of resolving variable binding (finding out which variable does a name belong to) in nested scopes is called **static chains**.
 
 ![Static chains](./static-chains.png)  
-Source : Book 2 page 120
+Source: Book 2 page 120
 
 When multiple declaration are found, the nearest declaration are typically bound, this is called the **nearest declaration rule**. We call a situation in which a variable declaration in an inner scope has the same name as a variable declared in an outer scope, temporarily hiding the outer binding as **shadowing**. When there is shadowing, we also say the scope has a **hole** in it.
 
@@ -133,7 +133,7 @@ The nature of binding resolution during runtime introduces challenges for compil
 
 For example, each recursive calls in a recursive function may introduce new bindings for variables. A compiler obviously cannot predict the number of recursive calls or the specific bindings that will be active at runtime. This is why interpreter is more suitable for dynamically scoped language as they execute program directly.
 
-Dynamic scoping can make code harder to understand. This is especially for programmer used to static scoping language. When defining a variable like this :
+Dynamic scoping can make code harder to understand. This is especially for programmer used to static scoping language. When defining a variable like this:
 
 ```
 x: Int
@@ -214,7 +214,7 @@ The ability for function to access variables that are defined outside its own sc
 
 Sometimes there can be multiple names (but different objects) in a single scope. Concepts that cause this includes aliases, overloading, and polymorphism.
 
-- **Aliases** : Aliases is a situation where two or more names are used to access or refer to the same object or value in memory. Any modifications made to the object through one alias will be reflected when accessing the object through the other alias. This can happen through the use of reference. The resolution of aliases occurs at runtime and is handled by the underlying memory management and variable referencing mechanisms of the programming language.
-- **Overloading** : The ability to define multiple functions or methods (or even operators) with the same name but different parameter lists or types. It is possible for user to add their definition of adding a string with an integer, although there are some languages that provide this as feature.
+- **Aliases**: Aliases is a situation where two or more names are used to access or refer to the same object or value in memory. Any modifications made to the object through one alias will be reflected when accessing the object through the other alias. This can happen through the use of reference. The resolution of aliases occurs at runtime and is handled by the underlying memory management and variable referencing mechanisms of the programming language.
+- **Overloading**: The ability to define multiple functions or methods (or even operators) with the same name but different parameter lists or types. It is possible for user to add their definition of adding a string with an integer, although there are some languages that provide this as feature.
   The resolution of overloading functions depends on the arguments provided during function calls. Some languages determine this during compile-time, they are referred as **static overloading**, while deferring it until runtime when the actual function call is made is referred as **dynamic overloading**.
-- **[Polymorphism](/computer-and-programming-fundamentals/object-oriented-programming#polymorphism)** : The ability of treating an object or function as multiple forms or types. There are several resolutions, some language resolve this by implicitly converting argument type to the parameter type (referred as **coercion** or implicit type convertion), some implement the object or function during runtime based on the actual type encountered ([dynamic polymorphism](/computer-and-programming-fundamentals/object-oriented-programming#polymorphism)), and others explicitly create a copy of the function during compile-time for each type and its implementation after performing type checking (referred as **generics**).
+- **[Polymorphism](/computer-and-programming-fundamentals/object-oriented-programming#polymorphism)**: The ability of treating an object or function as multiple forms or types. There are several resolutions, some language resolve this by implicitly converting argument type to the parameter type (referred as **coercion** or implicit type convertion), some implement the object or function during runtime based on the actual type encountered ([dynamic polymorphism](/computer-and-programming-fundamentals/object-oriented-programming#polymorphism)), and others explicitly create a copy of the function during compile-time for each type and its implementation after performing type checking (referred as **generics**).

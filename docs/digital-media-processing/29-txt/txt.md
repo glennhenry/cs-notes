@@ -5,9 +5,9 @@ title: TXT
 description: TXT
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Text file - Wikipedia](https://en.wikipedia.org/wiki/Text_file)**
+- **[Text file — Wikipedia](https://en.wikipedia.org/wiki/Text_file)**
 
 **txt** file format or a text file, is a very simple format used to store plain text data. It contains human-readable text without any specific formatting or metadata. The characters used can be encoded in [ASCII](/computer-and-programming-fundamentals/data-representation#ascii) or [UTF-8](/computer-and-programming-fundamentals/data-representation#unicode).
 
@@ -22,4 +22,4 @@ For example, consider a text file that uses [ASCII](/computer-and-programming-fu
 While decoding it, we will reverse the process, for example if we encounter binary data of "01000001", this means it is "A". We will keep going until the last piece of binary.
 
 ![TXT file in binary form](./txt-file-binary.gif)  
-Source : https://www.thecrazyprogrammer.com/2018/05/difference-between-text-file-and-binary-file.html
+Source: https://www.thecrazyprogrammer.com/2018/05/difference-between-text-file-and-binary-file.html

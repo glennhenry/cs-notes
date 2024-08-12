@@ -5,13 +5,13 @@ title: Creational Patterns
 description: Creational Patterns
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Creational Design Patterns - Refactoring Guru](https://refactoring.guru/design-patterns/creational-patterns)**
+- **[Creational Design Patterns — Refactoring Guru](https://refactoring.guru/design-patterns/creational-patterns)**
 
 **Design Patterns** are general and reusable solution to common software design problems. They provide guidelines and best practices for solving specific design issues and to improve software quality.
 
-Design patterns are categorized into three main groups :
+Design patterns are categorized into three main groups:
 
 - [Creational](#creational-patterns)
 - [Structural](/software-engineering/structural-patterns)
@@ -23,7 +23,7 @@ Creational patterns focus on object creation mechanisms, providing ways to creat
 
 #### Builder
 
-Builder design pattern aims to simplify the creation of complex objects. If we are constructing a class with many properties, we typically provide it via the constructor. An example of constructing a `Pizza` class would be :
+Builder design pattern aims to simplify the creation of complex objects. If we are constructing a class with many properties, we typically provide it via the constructor. An example of constructing a `Pizza` class would be:
 
 ```kotlin
 class Pizza(
@@ -82,7 +82,7 @@ class PizzaBuilder {
 }
 ```
 
-These are the methods that will be used by the user to set the temporary stored in the class, which will be used to construct the final `Pizza` object using the `build()` method. An example constructing `Pizza` :
+These are the methods that will be used by the user to set the temporary stored in the class, which will be used to construct the final `Pizza` object using the `build()` method. An example constructing `Pizza`:
 
 ```kotlin
 val pizza: Pizza = PizzaBuilder()
@@ -110,7 +110,7 @@ Although the code sample is in Kotlin, it is not commonly used in practice. This
 
 In OOP, if we have a class, we can create as many instance as we want. **Singleton** design pattern ensures that a class has only one instance. If we insist creating multiple instance, we will be prevented and redirected to that single instance. It is commonly used when we want to restrict the instantiation of a class to a single object throughout our application, such as a single instance of database.
 
-It is very simple to implement in Kotlin :
+It is very simple to implement in Kotlin:
 
 ```kotlin
 class Database private constructor() {
@@ -144,7 +144,7 @@ Its worth noting that the above implementation is not thread-safe, meaning it ma
 
 Prototype pattern allows us to create new objects by cloning or copying existing objects, rather than creating them from scratch.
 
-The traditional way of copying an object is creating an object from scratch and copying and pasting the properties of the class we intend to copy from. There are three reason why this is not preferred :
+The traditional way of copying an object is creating an object from scratch and copying and pasting the properties of the class we intend to copy from. There are three reason why this is not preferred:
 
 - Copying and pasting properties from large class can be exhausting.
 - Some properties of the class may be private, which means the user that wants to copy it can't access it.
@@ -197,7 +197,7 @@ class SeaLogistics: Logistics {
 
 This example demonstrates the use of the factory pattern in the context of logistics. The logistics can be transported differently based on the specific type of transportation method chosen.
 
-A traditional way to instantiate logistics would be :
+A traditional way to instantiate logistics would be:
 
 ```kotlin
 fun main() {
@@ -245,7 +245,7 @@ Abstract factory pattern allows us to construct object with a combination of oth
 class Furniture(val chair: Chair, val table: Table) {}
 ```
 
-Let's say we are creating a furniture that consist of `Chair` and `Table`. There are different type of chair and table :
+Let's say we are creating a furniture that consist of `Chair` and `Table`. There are different type of chair and table:
 
 ```kotlin
 interface Chair {}
@@ -257,7 +257,7 @@ class VictorianTable: Table {}
 class ModernTable: Table {}
 ```
 
-Suppose that we are going to create furniture with `VictorianChair` and `ModernTable`. The traditional way would look like this :
+Suppose that we are going to create furniture with `VictorianChair` and `ModernTable`. The traditional way would look like this:
 
 ```kotlin
 fun main() {
@@ -300,7 +300,7 @@ class ModernFurnitureFactory: FurnitureFactory {
 }
 ```
 
-We do this by creating a `FurnitureFactory` interface, which will be implemented by `VictorianFurnitureFactory` and `ModernFurnitureFactory` for victorian and modern furniture, respectively. To actually use it :
+We do this by creating a `FurnitureFactory` interface, which will be implemented by `VictorianFurnitureFactory` and `ModernFurnitureFactory` for victorian and modern furniture, respectively. To actually use it:
 
 ```kotlin
 class Furniture(val chair: Chair, val table: Table) {}

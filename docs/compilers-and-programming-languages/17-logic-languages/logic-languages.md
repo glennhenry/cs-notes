@@ -5,14 +5,14 @@ title: Logic Languages
 description: Logic Languages
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 2 chapter 11**
-- **[Logic programming - Wikipedia](https://en.wikipedia.org/wiki/Logic_programming)**
+- **[Logic programming — Wikipedia](https://en.wikipedia.org/wiki/Logic_programming)**
 
 Logic programming is programming based on formal logic, providing a declarative way to solve problem. Logic languages are [declarative](/computer-and-programming-fundamentals/declarative-functional-programming#declarative-programming), meaning that we specify what we want to achieve rather than how to achieve it. This is achieved by specifying logical relationship, then the language inference engine derive a solution. One major logic language is Prolog, most of them are used for AI and database.
 
-The basic idea is :
+The basic idea is:
 
 1. Basic building blocks are logical statements. These statements are expressed in terms of **facts** and **rules**. Facts represent simple assertions about the world, while rules define relationships and dependencies between facts.
 2. The logic language store all the facts and rules in a knowledge base.
@@ -23,7 +23,7 @@ The basic idea is :
 
 #### Basic Concepts
 
-- **Facts** : Written using predicates, which consist of a predicate name followed by a list of arguments enclosed in parentheses.
+- **Facts**: Written using predicates, which consist of a predicate name followed by a list of arguments enclosed in parentheses.
 
   ```
   A(B1, B2, B3, ..., Bn)
@@ -35,23 +35,23 @@ The basic idea is :
 
   This means John likes pizza. For a computer, which doesn't understand human language, it simply interprets that `john` has the predicate of `likes` associated with `pizza`. We call things like `john` or `pizza` as **constants**, they are typically written in lowercase.
 
-- **Rules** : Written in form of clauses, in the form of head and body, separated by `:-`.
+- **Rules**: Written in form of clauses, in the form of head and body, separated by `:-`.
 
   ```
-  A :- B1, B2, B3, ..., Bn
+  A:- B1, B2, B3, ..., Bn
   ```
 
   Bi are called literals or conditions. It is read as "A if B1 and B2 and B3 and ... and Bn".
 
   ```
-  loves(john, X) :- likes(john, X), vegetarian(X).
+  loves(john, X):- likes(john, X), vegetarian(X).
   ```
 
   For example, means that `john` has the predicate `loves` for `X` if `john` has the predicate `likes` for `X` and `X` is the predicate `vegetarian`. In human language, "john loves X if he likes X and X is a vegetarian." We consider `X` here as a **variable** (typically written in uppercase), which can hold a value (in this case as a placeholder for an unknown value).
 
   Rules with one or more head and zero or more body is also called **Horn clauses**. Sometimes it is written as `H ← B1, B2, B3, ..., Bn`, which means if all the `B`'s are all true, then we can deduce `H` is true as well.
 
-  Example of deduction is :
+  Example of deduction is:
 
   ```
   B ← A
@@ -60,7 +60,7 @@ The basic idea is :
 
   Remember that we assume statements are true. By the given statement, if `A` is true, we can deduce `C` is true. This is because we know that `A` implies `B`, which in turns also implies `C`.
 
-- **Queries** : Queries or goals is the body of rules with the `?-` symbol.
+- **Queries**: Queries or goals is the body of rules with the `?-` symbol.
 
   ```
   ?- B1, B2, B3, ..., Bn
@@ -79,7 +79,7 @@ The basic idea is :
 
 We can check for equality with query, such as `?- A = B`, which return yes or no.
 
-The rules of unification :
+The rules of unification:
 
 - A constant unifies only with itself (i.e., `?- a = a` returns yes).
 - Two terms can be unified if and only if they have the same functor (e.g., predicate) and the number of arguments are same, as well as their argument unify recursively.
@@ -87,11 +87,11 @@ The rules of unification :
 
 #### Lists
 
-List can be constructed by using a sequence of elements followed by `.` (dot), comma, and enclosing it within parentheses. For example, a list of `a`, `b`, and `c` : `.(a, .(b, .(c, [])))`, where `[]` is the tail of the list.
+List can be constructed by using a sequence of elements followed by `.` (dot), comma, and enclosing it within parentheses. For example, a list of `a`, `b`, and `c`: `.(a, .(b, .(c, [])))`, where `[]` is the tail of the list.
 
 Prolog adds a syntactic sugar to construct a list, the same list can be constructed with just `[a, b, c]`. Furthermore, Prolog allows us to add a vertical bar `|` in the middle of the list to decompose a list into its head and tail parts. It will be useful in the case of the tail is a variable.
 
-A list with elements `a`, `b`, `c` : `[a | [b, c]]`.
+A list with elements `a`, `b`, `c`: `[a | [b, c]]`.
 
 Some operation we can do with list are `append`, `reverse`, `sorted`, etc.
 
@@ -107,17 +107,17 @@ In Prolog, arithmetic is done with predicate as well. For example, the result of
 
 #### Execution Order
 
-We know that the inference engine search for possible solution over the knowledge base. There are two general strategies for this :
+We know that the inference engine search for possible solution over the knowledge base. There are two general strategies for this:
 
-- **Forward Chaining** : The bottom-up approach, starting with the available facts and iteratively apply rules to derive new conclusions or facts.
-- **Backward Chaining** : The top-down approach, starting from the goal or query to find a sequence of rules and facts that support or satisfy the goal.
+- **Forward Chaining**: The bottom-up approach, starting with the available facts and iteratively apply rules to derive new conclusions or facts.
+- **Backward Chaining**: The top-down approach, starting from the goal or query to find a sequence of rules and facts that support or satisfy the goal.
 
 When there are many rules, but the less number of facts, forward chaining can be faster than backward chaining. Prolog uses backward chaining.
 
 Starting from the goal, the interpreter searches through the available clauses in the program to find a clause whose head unifies with the current goal. When a clause match, that clause is expanded. The expansion of clause forms a search tree. Basically, this search tree will be traversed in [DFS](/data-structures-and-algorithms/traversal#depth-first-search-dfs) left-to-right manner. When traversing certain node then the clause fails to match, then the interpreter will [backtrack](/data-structures-and-algorithms/backtracking) and reconsider alternative choices.
 
 ![Backtracking search](./backtracking.png)  
-Source : Book 2 page 567
+Source: Book 2 page 567
 
 In the example, the query is `snowy(C)`, trying to find which entity is `snowy`. Based on the knowledge base, something is `snowy` if it's `rainy` and `cold`.
 
@@ -132,13 +132,13 @@ In the example, the query is `snowy(C)`, trying to find which entity is `snowy`.
 It is possible that during the search, an infinite recursion occurs. It can be caused by rules that has cyclic dependency. For example, consider the rules below.
 
 ```
-parent(X, Y) :- child(Y, X).
-child(X, Y) :- parent(Y, X).
+parent(X, Y):- child(Y, X).
+child(X, Y):- parent(Y, X).
 ```
 
 The first rule states that `X` is a parent of `Y` if `Y` is a child of `X`. The second rule states that `X` is a child of `Y` if `Y` is a parent of `X`.
 
-If we query with :
+If we query with:
 
 ```
 ?- parent(john, mary).
@@ -159,12 +159,12 @@ animal(cat).
 animal(dog).
 animal(elephant).
 
-mammal(X) :- animal(X), !.
-mammal(X) :- fail.
+mammal(X):- animal(X), !.
+mammal(X):- fail.
 
-query1 :- mammal(cat).  % Succeeds, cut prevents backtracking and finding other solutions.
-query2 :- mammal(dog).  % Succeeds, cut prevents backtracking and finding other solutions.
-query3 :- mammal(elephant).  % Succeeds, cut prevents backtracking and finding other solutions.
+query1:- mammal(cat).  % Succeeds, cut prevents backtracking and finding other solutions.
+query2:- mammal(dog).  % Succeeds, cut prevents backtracking and finding other solutions.
+query3:- mammal(elephant).  % Succeeds, cut prevents backtracking and finding other solutions.
 ```
 
 `fail` is a built-in predicate in Prolog that always fails. It is often used to intentionally force a failure in a specific branch of execution.
@@ -177,7 +177,7 @@ When `animal(X)` fails, the cut will not be evaluated because the rule already f
 - If preceding term succeed, cut is not skipped, the program stop backtrack since it encounter cut.
 
 ![If statement using cut](./if-statement.png)  
-Source : Book 2 page 573
+Source: Book 2 page 573
 
 The cut operator can be used to achieve if-else statement.
 
@@ -191,15 +191,15 @@ parent(john, peter).
 parent(mary, anna).
 parent(mary, david).
 
-sibling(X, Y) :- parent(Z, X), parent(Z, Y), not(X = Y).
+sibling(X, Y):- parent(Z, X), parent(Z, Y), not(X = Y).
 ```
 
 With `not` being present, the rule `sibling` between `X` and `Y` is true when `Z` is parent of `X` and `Z` is also the parent of `Y`, but this is not true when `X = Y` (i.e., doesn't make sense a child is sibling of itself).
 
-Under the hood, the `not` predicate is implemented using `call`, cut operator, and `fail`. It is defined as :
+Under the hood, the `not` predicate is implemented using `call`, cut operator, and `fail`. It is defined as:
 
 ```
-not(Goal) :- call(Goal), !, fail.
+not(Goal):- call(Goal), !, fail.
 not(Goal).
 ```
 
@@ -215,7 +215,7 @@ The `fail` predicate can also be used to create a loop control flow. This is don
 
 ```
 loop(0).
-loop(N) :- N > 0, writeln(N), N1 is N - 1, fail.
+loop(N):- N > 0, writeln(N), N1 is N - 1, fail.
 loop(_).
 ```
 

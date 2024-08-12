@@ -5,11 +5,11 @@ title: Relational Data
 description: Relational Data
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Relational database - Wikipedia](https://en.wikipedia.org/wiki/Relational_database)**
-- **[Relational model - Wikipedia](https://en.wikipedia.org/wiki/Relational_model)**
-- **[Understand and Evaluate Table Relationships - Adobe](https://experienceleague.adobe.com/docs/commerce-business-intelligence/mbi/analyze/warehouse-manager/table-relationships.html)**
+- **[Relational database — Wikipedia](https://en.wikipedia.org/wiki/Relational_database)**
+- **[Relational model — Wikipedia](https://en.wikipedia.org/wiki/Relational_model)**
+- **[Understand and Evaluate Table Relationships — Adobe](https://experienceleague.adobe.com/docs/commerce-business-intelligence/mbi/analyze/warehouse-manager/table-relationships.html)**
 
 Relational data organizes data according to the principles of the relational model in a relational database management system (RDBMS).
 
@@ -23,7 +23,7 @@ A row entry represent individual instances of data within the table. Each row co
 
 ![Customer table](./customer-table.png)  
 _A customer table containing column `CustomerId`, `FirstName`, `LastName`, and `DateCreated`._  
-Source : https://database.guide/what-is-a-table/
+Source: https://database.guide/what-is-a-table/
 
 :::info
 Table is also called **relations**, which consist of rows or formally a set of **tuples**.
@@ -31,15 +31,15 @@ Table is also called **relations**, which consist of rows or formally a set of *
 
 ### Data Types
 
-There are many types of data that can be assigned to specific column, some common data types are :
+There are many types of data that can be assigned to specific column, some common data types are:
 
-- **Integer** : Used to store whole numbers without decimal places, such as 1, 10, -5, etc.
-- **Floating-point** : Used to store numbers with decimal places, such as 3.14, 10.5, -0.75, etc. The precision and scale of decimal numbers can often be specified.
-- **Character/String** : Used to store alphanumeric text, such as names, addresses, or descriptions. The length of the string may be limited or unlimited, typically known as VARCHAR or TEXT data types, respectively.
-- **Date/Time** : Used to store dates, times, or both. This includes data types like DATE, TIME, DATETIME, TIMESTAMP, etc., which can represent specific points in time or intervals.
-- **Boolean** : Used to store true/false or binary values, representing logical conditions. Some RDBMS doesn't offer boolean data types, we may use Integer (1) to represent true value and Integer (2) to represent false value.
-- **Binary** : Used to store binary data, such as images, files, or serialized objects.
-- **Enumerated Types** : Some systems offer the ability to define custom data types with a limited set of predefined values.
+- **Integer**: Used to store whole numbers without decimal places, such as 1, 10, -5, etc.
+- **Floating-point**: Used to store numbers with decimal places, such as 3.14, 10.5, -0.75, etc. The precision and scale of decimal numbers can often be specified.
+- **Character/String**: Used to store alphanumeric text, such as names, addresses, or descriptions. The length of the string may be limited or unlimited, typically known as VARCHAR or TEXT data types, respectively.
+- **Date/Time**: Used to store dates, times, or both. This includes data types like DATE, TIME, DATETIME, TIMESTAMP, etc., which can represent specific points in time or intervals.
+- **Boolean**: Used to store true/false or binary values, representing logical conditions. Some RDBMS doesn't offer boolean data types, we may use Integer (1) to represent true value and Integer (2) to represent false value.
+- **Binary**: Used to store binary data, such as images, files, or serialized objects.
+- **Enumerated Types**: Some systems offer the ability to define custom data types with a limited set of predefined values.
 
 ### Primary & Foreign Key
 
@@ -55,7 +55,7 @@ The most common way to connect tables is by using primary key and **foreign key*
 
 #### Example
 
-For example, let's consider two tables : `Customers` and `Orders`.
+For example, let's consider two tables: `Customers` and `Orders`.
 
 - The `Customers` table maintains a collection of customers, it has a primary key column called `CustomerID` and another column containing the customer's name.
 - The `Orders` table contains order data, it has primary key column called `OrderID` and another column `Item ordered`, which specify particular item that was ordered.
@@ -80,41 +80,41 @@ Furthermore, as the row and column of a table increase, the use of foreign key b
 
 ![Another example of table with foreign key](./another-example.png)  
 _Another example of table with foreign key_  
-Source : https://www.thecrazyprogrammer.com/2019/04/difference-between-primary-key-and-foreign-key.html
+Source: https://www.thecrazyprogrammer.com/2019/04/difference-between-primary-key-and-foreign-key.html
 
 #### Relationship
 
-Through the use of primary and foreign keys, there are different types of relationship that may be achieved :
+Through the use of primary and foreign keys, there are different types of relationship that may be achieved:
 
-- **One-to-One (1:1)** : Each record in one table is associated with exactly one record in another table, and vice versa.
+- **One-to-One (1:1)**: Each record in one table is associated with exactly one record in another table, and vice versa.
 
   A person can have only one driver’s license number, and a driver’s license number belongs to only person.
 
-- **One-to-Many (1:N)** : Each record in one table can be associated with multiple records in another table, while each record in the other table is associated with only one record in the first table.
+- **One-to-Many (1:N)**: Each record in one table can be associated with multiple records in another table, while each record in the other table is associated with only one record in the first table.
 
   An order can contain many items, but an item belongs to a single order. In this case, the orders table is the one side and the items table is the many sides.
 
-- **Many-to-Many (N:M)** : Multiple records in one table can be associated with multiple records in another table. This type of relationship is typically implemented using an intermediary table that holds the associations between the two tables.
+- **Many-to-Many (N:M)**: Multiple records in one table can be associated with multiple records in another table. This type of relationship is typically implemented using an intermediary table that holds the associations between the two tables.
 
   A product can belong to many categories, and a category can contain many products.
 
 ![Table relationship](./table-relationship.png)  
-Source : https://experienceleague.adobe.com/docs/commerce-business-intelligence/mbi/analyze/warehouse-manager/table-relationships.html
+Source: https://experienceleague.adobe.com/docs/commerce-business-intelligence/mbi/analyze/warehouse-manager/table-relationships.html
 
 #### Other Keys
 
-There are other keys in relational model :
+There are other keys in relational model:
 
-- **Composite Key** : A composite key is a key that consists of two or more columns in a table. It is used when there are no single attributes that can uniquely identify a record, but the combination of multiple attributes can.
-- **Compound Key** : A composite key, where one of the column is a foreign key.
-- **Candidate Key** : A candidate key represent a column that can be used as primary key.
+- **Composite Key**: A composite key is a key that consists of two or more columns in a table. It is used when there are no single attributes that can uniquely identify a record, but the combination of multiple attributes can.
+- **Compound Key**: A composite key, where one of the column is a foreign key.
+- **Candidate Key**: A candidate key represent a column that can be used as primary key.
 
 ### Schema
 
 A database schema is a logical blueprint or structure that defines the organization, relationships of the database in an RDBMS. It specifies the tables, columns, data types, and relationships between tables.
 
 ![Customers, employees, products, and orders schema](./schema.png)  
-Source : https://planetscale.com/blog/schema-design-101-relational-databases
+Source: https://planetscale.com/blog/schema-design-101-relational-databases
 
 For example, if we were to make a `Customers` table, it should consist of column `customerID` with `Int` data types, `firstName` with `String` data types, and so on. The `customerID` should be the foreign key of the `Orders` table, creating a one-to-one relationship.
 
@@ -125,7 +125,7 @@ For example, if we were to make a `Customers` table, it should consist of column
 While querying, we can retrieve data based on specific criteria. For example, a query can be used to retrieve all customers who have made a purchase in the last month.
 
 ![Example of query](./query-example.png)  
-Source : https://manifold.net/doc/mfd9/queries.htm
+Source: https://manifold.net/doc/mfd9/queries.htm
 
 In the image above, we are trying to retrieve data from the `Employees` table. The command used is `SELECT * FROM [Employees]`. In short, the `SELECT` statement indicates we are going to retrieve data, the `*` is a shorthand that represent all the available row in the table, and the `FROM [Employees]` means we are retrieving the data from the `Employees` table. Combining them all together, using that command is the equivalent of saying "Retrieve all the row from Employees table". The database engine will then return the requested data, which includes all the rows and columns present in the `Employees` table.
 
@@ -134,18 +134,18 @@ In the image above, we are trying to retrieve data from the `Employees` table. T
 **View** is a virtual table that is derived from querying one or more existing tables or other views. It does not store any data itself but instead provides a way to present data from underlying tables in a customized or simplified manner. A view can be seen as a saved query that can be used like a table in subsequent queries, but it does not contain its own data. Database view can be thought as the summary of a series of table in a database, providing a way for us to see the overall data.
 
 ![Database view](./database-view.png)  
-Source : https://aristeksystems.com/blog/database-views-what-you-need-to-know/
+Source: https://aristeksystems.com/blog/database-views-what-you-need-to-know/
 
 #### Operation
 
-We can perform various operation on our query, some examples are :
+We can perform various operation on our query, some examples are:
 
-- **Projection** : Specifies the columns to be included in the query result.
-- **Selection** : Specifies the conditions or criteria to filter the rows to be included in the query result.
-- **Sorting** : Specifies the order in which the query results should be arranged. It can be ascending (smallest to largest) or descending (largest to smallest) based on one or more columns.
-- **Aggregation** : Performs calculations on a set of values, such as calculating the sum, average, count, minimum, or maximum values from a column or group of rows.
-- **Union** : Combines the results of two or more queries into a single result set, removing duplicate rows.
-- **Intersection** : Retrieves only the common rows between two or more queries, keeping only the rows that appear in all result sets.
+- **Projection**: Specifies the columns to be included in the query result.
+- **Selection**: Specifies the conditions or criteria to filter the rows to be included in the query result.
+- **Sorting**: Specifies the order in which the query results should be arranged. It can be ascending (smallest to largest) or descending (largest to smallest) based on one or more columns.
+- **Aggregation**: Performs calculations on a set of values, such as calculating the sum, average, count, minimum, or maximum values from a column or group of rows.
+- **Union**: Combines the results of two or more queries into a single result set, removing duplicate rows.
+- **Intersection**: Retrieves only the common rows between two or more queries, keeping only the rows that appear in all result sets.
 
 :::info
 More about [operation](/database-system/query-language#other-operations).

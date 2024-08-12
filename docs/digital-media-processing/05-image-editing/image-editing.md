@@ -14,7 +14,7 @@ description: Image Editing
 Image editing is typically done using software like Photoshop, GIMP, Paint, Canva, and others. Image editors provide an easy way to modify images and offer various tools such as erasing, cloning, recovering specific parts of the image, cropping and resizing, brushes and text, filters, and adjusting properties like brightness and contrast.
 
 ![Image editor user interface](./image-editing-example.png)  
-Source : https://zapier.com/blog/best-ai-photo-editor/
+Source: https://zapier.com/blog/best-ai-photo-editor/
 
 ### Adobe Photoshop
 
@@ -27,7 +27,7 @@ Photoshop editing revolve around the concept of **layer**. Layer can be thought 
 Layer can also be used as non-destructive editing, this mean we don't modify the original image at all, instead we just add layer on top of it. In other word, editing is typically done on each new layer. Together, multiple layers form the edited image. This way we can undo a change that has been made on their individual layer.
 
 ![A layer of image stacked with additional text from editing software](./photoshop-layer.png)  
-Source : https://www.desainku.info/2020/01/mengenal-layer-pada-adobe-photoshop.html
+Source: https://www.desainku.info/2020/01/mengenal-layer-pada-adobe-photoshop.html
 
 #### Changing Background
 
@@ -36,4 +36,4 @@ Consider a person photo with sky background behind. We need to modify the backgr
 Photoshop has a tool called **selection tool**, which is used to isolate specific areas or objects within an image. Under the hood, the process may include detecting abrupt change of pixel color to determine which region belong to which. We can isolate the person and move it to another layer. The new layer will be the desired background layer.
 
 ![A person standing in white background is changed to blue background](./photoshop-change-background.jpeg)  
-Source : https://www.bwillcreative.com/how-to-change-background-color-in-photoshop/
+Source: https://www.bwillcreative.com/how-to-change-background-color-in-photoshop/

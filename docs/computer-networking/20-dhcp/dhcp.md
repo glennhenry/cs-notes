@@ -5,17 +5,17 @@ title: DHCP
 description: DHCP
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[DHCP Explained - Dynamic Host Configuration Protocol | PowerCert](https://youtu.be/e6-TaH5bkjo?si=rdy-8mWmonsaucyb)**
-- **[ APIPA Explained - Automatic Private IP Addressing | PowerCert](https://youtu.be/0tEjUR6tjBU?si=QJqOaTbiLSZTWg6o)**
+- **[DHCP Explained - Dynamic Host Configuration Protocol — PowerCert](https://youtu.be/e6-TaH5bkjo?si=rdy-8mWmonsaucyb)**
+- **[ APIPA Explained - Automatic Private IP Addressing — PowerCert](https://youtu.be/0tEjUR6tjBU?si=QJqOaTbiLSZTWg6o)**
 
 In a network, all devices are identified by [IP address](/computer-networking/ip-address), **Dynamic Host Configuration Protocol (DHCP)** is the protocol used to automatically assign IP addresses and other network configuration parameters to devices on a network.
 
 DHCP simplifies the process of network administration by dynamically allocating IP addresses to devices as they connect to the network, rather than requiring manual configuration of each device.
 
 ![Example of DHCP returning dynamic IP address](./dhcp-example.png)  
-Source : https://youtu.be/e6-TaH5bkjo?si=3Kpy1MftxbzUlcfY&t=164
+Source: https://youtu.be/e6-TaH5bkjo?si=3Kpy1MftxbzUlcfY&t=164
 
 #### Static vs Dynamic IP Address
 
@@ -32,4 +32,4 @@ When a device are unable to obtain an IP address from a DHCP server for whatever
 The private IP address obtained will range from `169.254.0.1` to `169.254.255.254` with a 16-bit subnet mask.
 
 ![APIPA](./apipa.jpg)  
-Source : https://tipsmake.com/learn-about-apipa
+Source: https://tipsmake.com/learn-about-apipa

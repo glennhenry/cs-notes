@@ -5,11 +5,11 @@ title: Shortest Path
 description: Shortest Path
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Shortest path problem - Wikipedia](https://en.wikipedia.org/wiki/Shortest_path_problem)**
-- **[Dijkstra's algorithm - Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)**
-- **[A\* search algorithm - Wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm)**
+- **[Shortest path problem — Wikipedia](https://en.wikipedia.org/wiki/Shortest_path_problem)**
+- **[Dijkstra's algorithm — Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)**
+- **[A\* search algorithm — Wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm)**
 
 **Shortest Path** is the path between two vertices or nodes in a graph which has minimum total weight or cost among other possible path. A weight refers to a numerical value associated with a edge in a graph. It represents the effort required to traverse that path.
 
@@ -19,9 +19,9 @@ Shortest path is a common problem in graph theory and optimization. It is a comm
 
 Here is an illustration, in the image above, we are supposed to start from node A and traverse to node F. There are total of three ways to get to node F, which are:
 
-- A → C → F : (10 + 7 = 17)
-- A → B → D → F : (2 + 3 + 5 = 10)
-- A → B → E → F : (2 + 4 + 1 = 7)
+- A → C → F: (10 + 7 = 17)
+- A → B → D → F: (2 + 3 + 5 = 10)
+- A → B → E → F: (2 + 4 + 1 = 7)
 
 While the first path visits the minimal nodes, it results in the highest cost. The problem become harder when we have a lot of paths, and each of the cost vary within the path. For example, one path may have larger cost at the start, but it may have a lower cost latter, leading to lower total cost overall.
 
@@ -33,7 +33,7 @@ Dijkstra's algorithm explores the path systematically. When there are many possi
 
 The systematic behavior of Dijkstra's algorithm is similar to [BFS traversal](/data-structures-and-algorithms/traversal#breadth-first-search-bfs), it uses a [queue data structure](/data-structures-and-algorithms/queue), specifically the [priority queue](/data-structures-and-algorithms/queue#priority-queue), which is often implemented using [min-heap](/data-structures-and-algorithms/heap) to keep track of the path with the currently minimum cost. It is also considered as [greedy algorithm](/data-structures-and-algorithms/greedy), because it traverses the optimal path first.
 
-Here is the pseudocode :
+Here is the pseudocode:
 
 ```
 function Dijkstra(graph, source):
@@ -71,7 +71,7 @@ function Dijkstra(graph, source):
 ```
 
 ![Dijkstra's algorithm GIF](./dijkstra-algorithm.gif)  
-Source : https://blog.aos.sh/2018/02/24/understanding-dijkstras-algorithm/
+Source: https://blog.aos.sh/2018/02/24/understanding-dijkstras-algorithm/
 
 1. The `distance` is an array to store the shortest distance from the source vertex to each vertex. The `previous` is another array used to store the previous vertex that leads to the currently known shortest path from the source vertex to each vertex.
 2. We initially make all the distance from the source to each vertex in the graph to infinity, indicating they are yet to be determined. Except for the source vertex, we will make it 0, because that is where we are going to start.
@@ -99,15 +99,15 @@ Dijkstra's algorithm can be used for pathfinding, it works for non-negative edge
 
 **A\* search algorithm** is a popular pathfinding algorithm, which is an extension of Dijkstra's algorithm. While Dijkstra solely considers the weight of edges, a\* search algorithm adds another consideration and prioritize that seem more likely to lead to the goal.
 
-The priority value is calculated by :
+The priority value is calculated by:
 
 $f(v) = g(v) + h(v)$
 
-Where :
+Where:
 
-- $f(v)$ : referred as f-score or function score
-- $g(v)$ : the cost accumulated so far
-- $h(v)$ : heuristic estimate of the remaining cost from the current vertex to the target vertex.
+- $f(v)$: referred as f-score or function score
+- $g(v)$: the cost accumulated so far
+- $h(v)$: heuristic estimate of the remaining cost from the current vertex to the target vertex.
 
 The key point of a\* is the $h(v)$, Dijkstra's algorithm is the case where the $h(v)$ is 0, or it doesn't consider the heuristic estimate and solely depends on the weights.
 
@@ -115,7 +115,7 @@ The heuristic estimate is an approximation of the distance or cost from some ver
 
 The heuristic estimate helps us to only focus on the path that might lead to the target. A\* search algorithm doesn't visit every node, it stops when it reached the goal. This is a reason of why a\* is more suited for goal-directed search problems, where we don't need to know the distance to all the vertex, unlike Dijkstra's algorithm.
 
-Here is the pseudocode :
+Here is the pseudocode:
 
 ```
 function AStarSearch(start, goal):
@@ -157,7 +157,7 @@ function reconstructPath(cameFrom, current):
 ```
 
 ![A-star algorithm animation](./a-star-algorithm.gif)  
-Source : https://github.com/vittin/A-Star
+Source: https://github.com/vittin/A-Star
 
 We can see that the path frequently approach the wall that closely covers the target due to the heuristic function. The algorithm may perceive those paths as potentially shorter or more promising.
 

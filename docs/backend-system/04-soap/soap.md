@@ -5,13 +5,15 @@ title: SOAP
 description: SOAP
 ---
 
-**Main Source : [Wikipedia SOAP](https://en.wikipedia.org/wiki/SOAP)**
+**Main Source:**
+
+- **[SOAP — Wikipedia](https://en.wikipedia.org/wiki/SOAP)**
 
 **Simple Object Access Protocol (SOAP)** is a protocol to exchange information or message using [XML](/digital-media-processing/xml). It follows XML standard such as schema to define message in a structured way. Specifically, XML uses the WSDL (Web Services Description Language), a standard used for XML-based services on the web.
 
 It still uses [HTTP](/computer-networking/http-https#http) as the transport protocol over the network. When SOAP messages are transmitted over HTTP, they are typically encapsulated within the payload of an HTTP request (POST) or response. The HTTP headers and body are used to transport the SOAP message between the client and the server.
 
-Here is an example of SOAP request encapsulated in HTTP POST method :
+Here is an example of SOAP request encapsulated in HTTP POST method:
 
 ```xml
 POST /exampleWebService HTTP/1.1

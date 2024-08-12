@@ -5,9 +5,9 @@ title: Networking
 description: Networking
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Previous notes on computer networking](/computer-networking)**
+- **[Computer Networking](/computer-networking)**
 - **[Chapter 17 Distributed Systems - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 
 OS bridges hardware and software applications by providing APIs, including networking APIs. When software application want to make a network request, the OS will handle the low-level networking capabilities. This includes tasks such as establishing network connections, managing network sockets, packet transmission, and handling network protocols.
@@ -19,7 +19,7 @@ A networking stack is a layered implementation of network protocols that handles
 The OS manages these tasks on behalf of the application, abstracting away the complexities of the underlying network infrastructure.
 
 ![Network stack](./network-stack.png)  
-Source : https://www.cyberciti.biz/tips/linux-network-stack-tutorial.html
+Source: https://www.cyberciti.biz/tips/linux-network-stack-tutorial.html
 
 The OS interacts with network drivers and hardware devices to send and receive network packets. It manages the network interfaces, such as [Ethernet](/computer-networking/ethernet) adapters or wireless cards.
 
@@ -40,30 +40,30 @@ For simple processing, computer uses number as an identifier instead of human-re
 To address this, a solution is to implement a service that can translate a human-readable host name into its corresponding raw IP address. The service that provide this is called [domain name system (DNS)](/computer-networking/dns). When we intend to connect to some host, such as browsing with specific URL in browser, the browser application delegate the task and ask the OS to resolve the IP for corresponding URL.
 
 ![DNS resolving URL](./dns.png)  
-Source : https://devopedia.org/domain-name-system
+Source: https://devopedia.org/domain-name-system
 
 #### Routing Strategies
 
 Given that we know the location of the receiver, how should we transmit our data? Network are connected in various ways, it can be wired connection of computer (e.g., [LAN and WAN](/computer-networking/lan-wan)), or it could be wireless (e.g., [Wi-Fi](/computer-networking/wi-fi), [cellular connection](/computer-networking/cellular-networking)), the connection can be complex when the network become larger. [Routing](/computer-networking/routing) is the act of deciding on the paths or routes that messages should follow to reach their intended destinations efficiently.
 
 ![Complex network connection](./complex-network-connection.png)  
-Source : https://www.researchgate.net/figure/Contemporary-wireless-complex-communication-network-architecture-presenting-cumulatively_fig1_258401293
+Source: https://www.researchgate.net/figure/Contemporary-wireless-complex-communication-network-architecture-presenting-cumulatively_fig1_258401293
 
 Routing process will be handled by a [router](/computer-networking/router). The router will determine the route using routing algorithms and protocol. One of the simple protocol is the [Routing Information Protocol (RIP)](/computer-networking/routing#routing-information-protocol-rip). This algorithm minimizes the distance of routing by having a _hop count_, which is a metric that represent the number of routers or network segments that a packet must traverse to reach its destination.
 
 ![Routing and hop count](./routing.png)  
-Source : https://www.researchgate.net/figure/Distinguishing-safe-routes-from-hop-count-values_fig4_221979955
+Source: https://www.researchgate.net/figure/Distinguishing-safe-routes-from-hop-count-values_fig4_221979955
 
 #### Packet Strategies
 
-When transmitting data, the messages are divided into smaller, fixed-size unit called **packets**. A packet consists of several components that enable it to be successfully transmitted and delivered to its destination :
+When transmitting data, the messages are divided into smaller, fixed-size unit called **packets**. A packet consists of several components that enable it to be successfully transmitted and delivered to its destination:
 
-- **Header** : Header section contains control information necessary for routing and handling the packet, such as the source and destination addresses.
-- **Payload** : The payload is the actual data being transmitted. It can include any type of information, such as text, images, audio, or video.
-- **Trailer** : The packet concludes with a trailer section, which contains additional information for error detection and correction. This may include [checksums](/computer-security/hash-function#checksums) or cyclic redundancy checks (CRC) to ensure data integrity during transmission.
+- **Header**: Header section contains control information necessary for routing and handling the packet, such as the source and destination addresses.
+- **Payload**: The payload is the actual data being transmitted. It can include any type of information, such as text, images, audio, or video.
+- **Trailer**: The packet concludes with a trailer section, which contains additional information for error detection and correction. This may include [checksums](/computer-security/hash-function#checksums) or cyclic redundancy checks (CRC) to ensure data integrity during transmission.
 
 ![Packet](./packet.png)  
-Source : https://tournasdimitrios1.wordpress.com/2011/01/19/the-basics-of-network-packets/
+Source: https://tournasdimitrios1.wordpress.com/2011/01/19/the-basics-of-network-packets/
 
 #### Connection Strategies
 

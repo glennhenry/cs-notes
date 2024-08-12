@@ -5,9 +5,9 @@ title: Search
 description: Search
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Data Structures & Algorithms - Computer & Programming Fundamentals (with some rephrasing)](/computer-and-programming-fundamentals/data-structures-and-algorithms#basic-type-of-algorithm)**
+- **[Data Structures & Algorithms — Computer & Programming Fundamentals (with some rephrasing)](/computer-and-programming-fundamentals/data-structures-and-algorithms#basic-type-of-algorithm)**
 
 **Search algorithms** are algorithm that is used to locate a specific item or element within a collection of data. The collection of data can take various forms, such as an [array](/data-structures-and-algorithms/array), [list](/data-structures-and-algorithms/linked-list), [tree](/data-structures-and-algorithms/tree), [graph](/data-structures-and-algorithms/graph), or any other data structure.
 
@@ -41,17 +41,17 @@ Binary search assumes that the collection is in sorted order, the idea is that, 
 
 ```
 function binarySearch(array, target):
-    low := 0
-    high := length(array) - 1
+    low:= 0
+    high:= length(array) - 1
 
     while low <= high do:
-        mid := (low + high) / 2
+        mid:= (low + high) / 2
         if array[mid] equals target then:
             return mid  // Return the index where the target is found
         else if array[mid] < target then:
-            low := mid + 1
+            low:= mid + 1
         else:
-            high := mid - 1
+            high:= mid - 1
 
     return -1  // Return -1 if the target is not found
 end function
@@ -64,4 +64,4 @@ Binary search efficiently reduces the search space by half in each iteration, re
 Similar to linear search, binary search require constant memory space. No matter how large the collection is, the low, mid, and high pointer will always store an integer index.
 
 ![Comparison of linear or sequential and binary search](./search-algorithm-comparison.gif)  
-Source : https://tenor.com/view/binary-search-sequence-search-gif-20595028
+Source: https://tenor.com/view/binary-search-sequence-search-gif-20595028

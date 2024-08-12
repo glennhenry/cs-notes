@@ -7,9 +7,9 @@ description: Union Find
 
 import find_operation from "./find.mp4";
 
-**Main Source :**
+**Main Source:**
 
-- **[Disjoint-set data structure - Wikipedia](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)**
+- **[Disjoint-set data structure — Wikipedia](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)**
 - **[Union Find in 5 minutes — Data Structures & Algorithms - Potato Coders](https://youtu.be/ayW5B2W9hfo?si=pf1XvhDNEkhI2Nm8)**
 
 **Union Find**, also called **disjoint-set**, is a data structure that help solving connectivity problem. It maintains a collection of disjoint sets, which is a collection of [sets](/data-structures-and-algorithms/set) where no two sets have any elements in common. In other word, it stores a collection of elements, where each collection doesn't contain an element that other collection has.
@@ -22,11 +22,11 @@ Union find organizes its sets in a [tree-like structure](/data-structures-and-al
 
 ![Union find](./union-find.png)
 
-Terminology :
+Terminology:
 
-- **Parent** : The root node, which is the representative element of the set.
-- **Size** : The number of elements or nodes in the set represented by a particular node.
-- **Rank** : The height of a node or the longest path from the node to a leaf.
+- **Parent**: The root node, which is the representative element of the set.
+- **Size**: The number of elements or nodes in the set represented by a particular node.
+- **Rank**: The height of a node or the longest path from the node to a leaf.
 
 The size and rank is used to which one should be the representative, as the representative should be the one which has the most information.
 
@@ -76,6 +76,6 @@ If they are in different set, we will need to decide how should we attach the tr
 If they have equal rank, one root is chosen arbitrarily, and its rank is increased by one. We don't increase rank if we attach x to y or y to x, because by attaching it, the tree depth won't be increased (remember the definition of rank and the rules of attached tree should be smaller).
 
 ![Union](./union.png)  
-Source : https://youtu.be/ayW5B2W9hfo?si=76W-GO9H-hEy-Xk1&t=205
+Source: https://youtu.be/ayW5B2W9hfo?si=76W-GO9H-hEy-Xk1&t=205
 
 The union doesn't do much apart from assigning parent, its complexity come from the `Find` function. The `Find` function itself has the time complexity of $O(\log n)$, where $n$ is the number of element exist in the tree. The union find data structure doesn't use extra memory for its operation, its space complexity is simply $O(n)$ for storing all the $n$ elements.

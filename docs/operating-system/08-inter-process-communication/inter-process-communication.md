@@ -5,13 +5,13 @@ title: Inter-process Communication
 description: Inter-process Communication
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Inter-process communication - Wikipedia](https://en.wikipedia.org/wiki/Inter-process_communication)**
-- **[Interprocess communication(IPC) using shared memory by Pratik Parvati - Linkedin blog](https://www.linkedin.com/pulse/interprocess-communicationipc-using-shared-memory-pratik-parvati)**
-- **[Remote procedure call - Wikipedia](https://en.wikipedia.org/wiki/Remote_procedure_call)**
-- **Chapter 12, Programming Language Pragmatics - Michael L. Scott**
-- **[How can you choose between message passing and shared memory for interprocess communication? - Linkedin](https://www.linkedin.com/advice/0/how-can-you-choose-between-message-passing-shared)**
+- **[Inter-process communication — Wikipedia](https://en.wikipedia.org/wiki/Inter-process_communication)**
+- **[Interprocess communication(IPC) using shared memory by Pratik Parvati — Linkedin blog](https://www.linkedin.com/pulse/interprocess-communicationipc-using-shared-memory-pratik-parvati)**
+- **[Remote procedure call — Wikipedia](https://en.wikipedia.org/wiki/Remote_procedure_call)**
+- **Chapter 12, Programming Language Pragmatics — Michael L. Scott**
+- **[How can you choose between message passing and shared memory for interprocess communication? — Linkedin](https://www.linkedin.com/advice/0/how-can-you-choose-between-message-passing-shared)**
 
 **Inter-process Communication (IPC)** is the mechanism used to communicate between processes.
 
@@ -36,12 +36,12 @@ Sharing memory is possible through [virtual memory mapping](/operating-system/me
 For example, when a process want to access some data in the address "0x05", the actual data located on the physical memory may not be in that address. It could exist on address "0x08", or "0xFF", or any other address. This is why the memory address is called virtual, because the process treat the memory as if it's their own memory, but it is not.
 
 ![Virtual memory](./virtual-memory.png)  
-Source : https://en.wikipedia.org/wiki/Virtual_memory
+Source: https://en.wikipedia.org/wiki/Virtual_memory
 
 The same concept applies to shared memory, where multiple processes each have their own isolated virtual memory. When a process wants to share memory, the operating system allocates some shared memory. Then, the process attaches the shared memory to each process. This means that every process is given a range of addresses on their virtual address space that they can use to access the shared data.
 
 ![Shared memory](./shared-memory.png)  
-Source : https://www.linkedin.com/pulse/interprocess-communicationipc-using-shared-memory-pratik-parvati
+Source: https://www.linkedin.com/pulse/interprocess-communicationipc-using-shared-memory-pratik-parvati
 
 The shared memory is located in a single place somewhere in the physical memory, but each process access it as if it's located on their memory space. For example, process A may own its shared memory in the address "0x60000" to "0x80000", while the process B own its shared memory in address "0x70000" to "0x90000".
 
@@ -51,27 +51,27 @@ After all the mapping, the process can now read/write to the shared memory as us
 
 Message passing is an act of communication between processes or thread without using shared memory, it is inherently associated with sending a message. It is typically used in scenario where communication is done across different machine or platform (such as across different process in distributed systems). When a communication happens on the same machine or high speed is required, shared memory can be used.
 
-Some example of message passing :
+Some example of message passing:
 
-- **Pipes** : Pipes are a form of IPC that allows the output of one process to be used as the input of another process. In a pipe, data flows in a unidirectional manner from the writer process to the reader process. Pipes can be either named or unnamed, with the latter typically used for communication between related processes (e.g., parent-child processes).
+- **Pipes**: Pipes are a form of IPC that allows the output of one process to be used as the input of another process. In a pipe, data flows in a unidirectional manner from the writer process to the reader process. Pipes can be either named or unnamed, with the latter typically used for communication between related processes (e.g., parent-child processes).
 
   ![Pipe](./pipe.png)  
-   Source : https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/Pipes.html
+   Source: https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/Pipes.html
 
-- **[Sockets](/computer-networking/socket)** : Sockets are a communication endpoint that enables bidirectional communication between processes over a network. They can be used for IPC within the same machine (domain sockets) or across different machines (network sockets). Socket is responsible for commonly heard transport protocol like [TCP](/computer-networking/tcp-protocol) and [UDP](/computer-networking/udp).
-- **[Message Queues](/backend-system/message-broker)** : Message queues is where processes exchange messages through a shared [queue](/data-structures-and-algorithms/queue) in the operating system. Each message has a specific format and is placed into the queue by the sending process. The receiving process can then retrieve messages from the queue in a first-in-first-out (FIFO) order.
-- **Channels** : Channels is a higher-level concept for message passing. Channels typically provide a set of operations, such as sending and receiving messages, and may incorporate synchronization mechanisms like blocking or non-blocking operations. Channels can be implemented using various underlying mechanisms, including shared memory, pipes, or sockets.
+- **[Sockets](/computer-networking/socket)**: Sockets are a communication endpoint that enables bidirectional communication between processes over a network. They can be used for IPC within the same machine (domain sockets) or across different machines (network sockets). Socket is responsible for commonly heard transport protocol like [TCP](/computer-networking/tcp-protocol) and [UDP](/computer-networking/udp).
+- **[Message Queues](/backend-system/message-broker)**: Message queues is where processes exchange messages through a shared [queue](/data-structures-and-algorithms/queue) in the operating system. Each message has a specific format and is placed into the queue by the sending process. The receiving process can then retrieve messages from the queue in a first-in-first-out (FIFO) order.
+- **Channels**: Channels is a higher-level concept for message passing. Channels typically provide a set of operations, such as sending and receiving messages, and may incorporate synchronization mechanisms like blocking or non-blocking operations. Channels can be implemented using various underlying mechanisms, including shared memory, pipes, or sockets.
 
   ![Message passing](./message-passing.png)  
-   Source : https://beingintelligent.com/difference-between-shared-memory-and-message-passing-process-communication.html
+   Source: https://beingintelligent.com/difference-between-shared-memory-and-message-passing-process-communication.html
 
 Message passing can be synchronous or asynchronous. In the synchronous model, the sender process blocks until the message is received by the recipient process. In the asynchronous model, the sender process continues execution immediately after sending the message, without waiting for a response from the recipient. The recipient process can receive the message at a later time.
 
 It is common for message to be placed in temporary storage while being received or processed. It is known as [buffering](/computer-and-programming-fundamentals/memory#buffer). There are two types of buffering.
 
-- **Zero Buffering (without buffer)** : Without using buffer, the sender waits until the receiver retrieves the message. The sender and receiver synchronize their actions, and the message is directly transferred from the sender to the receiver without being stored in a buffer.
-- **Bounded Buffering** : Bounded buffering uses a fixed-size buffer to store messages. The sender can deposit a message in the buffer even if the receiver is not ready to receive it. If the buffer is full, the sender may need to wait until there is space available. The receiver can retrieve messages from the buffer at its own pace.
-- **Unbounded Buffering** : The buffer has an unlimited capacity to store messages. This approach decouples between the sender and receiver, allowing for asynchronous communication. However, it may lead to memory consumption issues if messages accumulate faster than they are consumed.
+- **Zero Buffering (without buffer)**: Without using buffer, the sender waits until the receiver retrieves the message. The sender and receiver synchronize their actions, and the message is directly transferred from the sender to the receiver without being stored in a buffer.
+- **Bounded Buffering**: Bounded buffering uses a fixed-size buffer to store messages. The sender can deposit a message in the buffer even if the receiver is not ready to receive it. If the buffer is full, the sender may need to wait until there is space available. The receiver can retrieve messages from the buffer at its own pace.
+- **Unbounded Buffering**: The buffer has an unlimited capacity to store messages. This approach decouples between the sender and receiver, allowing for asynchronous communication. However, it may lead to memory consumption issues if messages accumulate faster than they are consumed.
 
 ### RPC
 

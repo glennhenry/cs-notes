@@ -5,10 +5,10 @@ title: ResNet
 description: ResNet
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[ResNet (actually) explained in under 10 minutes - rupert ai](https://youtu.be/o_3mboe1jYI?si=3i-uFFu0MD8UJoQu)**
-- **[What is ResNet? (with 3D Visualizations) - Prof. Ryan Ahmed](https://youtu.be/nc7FzLiB_AY?si=4g1qmNPChEPZ4rj5)**
+- **[ResNet (actually) explained in under 10 minutes — rupert ai](https://youtu.be/o_3mboe1jYI?si=3i-uFFu0MD8UJoQu)**
+- **[What is ResNet? (with 3D Visualizations) — Prof. Ryan Ahmed](https://youtu.be/nc7FzLiB_AY?si=4g1qmNPChEPZ4rj5)**
 
 **Residual Network (ResNet)** is a type of [neural network](/deep-learning/neural-network) developed to address the problem of training a very deep neural network (consist many hidden layers). It is to address the [vanishing gradient problem](/deep-learning/neural-network#vanishing-gradient-problem), which occurs in the learning process of neural network, specifically in the backpropagation process.
 
@@ -19,7 +19,7 @@ The how wrong our model's predictions is calculated using a loss function. As us
 Once the gradient is calculated, the network adjusts all of its parameters, including the preceding layers. The gradient of the preceding layer is calculated based on the subsequent layer using the chain rule aspect of backpropagation. In very deep networks, the gradient becomes smaller and smaller as we go into the first layer. When the gradient becomes small, it can slow down the learning process by only updating the parameters by a small amount.
 
 ![Vanishing gradient problem](./vanishing-gradient-problem.png)  
-Source : https://botpenguin.com/glossary/vanishing-gradient-problem
+Source: https://botpenguin.com/glossary/vanishing-gradient-problem
 
 ### Residual Connection
 
@@ -32,7 +32,7 @@ When we skipped a layer, for example, the output from layer 1 is sent directly t
 Identity function is used to capture and bring that lost information from layer 2 to the output of layer 1. It can be thought as a bridge that connect the previous layer to the next layer by combining the information lost from the skipped connections.
 
 ![Identity function illustration](./identity-function.png)  
-Source : https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec
+Source: https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec
 
 In the image above, the output of previous layer is considered as $x$, it then bypass the next layer and goes into the `+` symbol directly. If we consider the skipped layer as a function $f(x)$, which means it transform the previous layer's output $x$ to a new output. The input of the next layer (`+` symbol) is produced from adding the first layer with the skipped layer. Basically it combine the output from the bypassing route (**identity path**) with the route without bypassing (**residual path**).
 
@@ -49,4 +49,4 @@ Residual block is the building block of ResNet, it combines each individual laye
 This image below compare the normal network architecture with the ResNet-34 architecture, which is the variant of ResNet that consist of 34 layers.
 
 ![ResNet architecture compared with plain network pass](./resnet_architecture.png)  
-Source : https://towardsdatascience.com/understanding-and-visualizing-resnets-442284831be8
+Source: https://towardsdatascience.com/understanding-and-visualizing-resnets-442284831be8

@@ -5,11 +5,11 @@ title: RSA
 description: RSA
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[RSA (cryptosystem) - Wikipedia](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>)**
-- **[Carmichael function - Wikipedia](https://en.wikipedia.org/wiki/Carmichael_function)**
-- **[What's the difference between RSA and Diffie-Hellman? [duplicate] - cryptography stackexchange](https://crypto.stackexchange.com/questions/42180/whats-the-difference-between-rsa-and-diffie-hellman)**
+- **[RSA (cryptosystem) — Wikipedia](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>)**
+- **[Carmichael function — Wikipedia](https://en.wikipedia.org/wiki/Carmichael_function)**
+- **[What's the difference between RSA and Diffie-Hellman? [duplicate] — cryptography stackexchange](https://crypto.stackexchange.com/questions/42180/whats-the-difference-between-rsa-and-diffie-hellman)**
 
 **Rivest–Shamir–Adleman (RSA)** is a widely used [asymmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption) algorithm. It was based on similar mathematical properties with the [Diffie-Hellman key exchange](/computer-security/diffie-hellman), that is large prime numbers and [modular arithmetic](/computer-security/math-concepts#modular-arithmetic).
 
@@ -19,9 +19,9 @@ RSA uses public and private key, the [public key](/computer-security/encryption#
 
 The RSA is an actual asymmetric encryption algorithm (e.g., used for exchanging data), it is not used solely for exchanging key like the [Diffie-Hellman key exchange](/computer-security/diffie-hellman).
 
-It consists of four steps :
+It consists of four steps:
 
-1. **Key Generation** :
+1. **Key Generation**:
 
    - Randomly select two large prime numbers which has large different, $p$ and $q$. These prime numbers should be kept secret.
    - Compute $n = pq$, where $n$ is the modulus used for both the public and private keys. $n$ is also publicly available as part of the public key.
@@ -36,31 +36,31 @@ It consists of four steps :
 
    In conclusion, modulus $n$ and exponent $e$ is the public key. While exponent $d$ is obtained from $p$, $q$, and $\lambda(n)$, these must be kept secret.
 
-   :::note
+  :::note
    In the original RSA paper, the [Euler's totient function](/computer-security/math-concepts#eulers-totient-function), $\phi(n) = (p - 1) \times (q - 1)$ is used instead of $\lambda(n)$.
-   :::
+  :::
 
-2. **Key Distribution** :
+2. **Key Distribution**:
 
    - The public key is shared with anyone who wants to send an encrypted message to the owner of the private key.
    - The private key must be kept secret by the owner and should not be shared.
 
    Sender must know recipient's public key to encrypt message, and the recipient must use its own private key to decrypt the message. Similar when the scenario is reversed, if the recipient want to send message to the sender instead, then the recipient needs sender's public key and sender will use their private key to decrypt the message.
 
-3. **Encryption** :
+3. **Encryption**:
 
    - The sender must convert the plaintext message into a numerical representation, the plaintext will also be added with random padding, becoming $m$.
    - The sender retrieves the recipient's public key $e$ and the modulus $n$.
    - The ciphertext is computed as $c \equiv m^e \text{ mod } n$.
 
-4. **Decryption** :
+4. **Decryption**:
 
    - The recipient uses their private key $d$ to decrypt the encrypted message.
    - The numerical representation of plaintext $m$ is calculated by $c^d \equiv (\text{m}^e)^d \equiv m \text{ mod } n$.
    - The original message $M$ is recovered by reversing the random padding scheme in the beginning of encryption scheme.
 
    ![Illustration of asymmetric encryption](./asymmetric-encryption.gif)  
-    Source : https://www.practicalnetworking.net/series/cryptography/using-asymmetric-keys/
+    Source: https://www.practicalnetworking.net/series/cryptography/using-asymmetric-keys/
 
 ### Security
 
@@ -74,14 +74,14 @@ The difficulty of breaking RSA comes when factoring large composite numbers into
 See [factorization](/computer-security/math-concepts#factorization) as reference about factoring number.
 :::
 
-The level of RSA security can be chosen by how many bits used for prime numbers $p$ and $q$ :
+The level of RSA security can be chosen by how many bits used for prime numbers $p$ and $q$:
 
-- **1024-bit RSA** : The modulus $n$ is 1024 bits, each prime factor $p$ and $q$ would be roughly 512 bits.
-- **2048-bit RSA** : $n$ is 2048 bits, $p$ and $q$ is 1024 bits.
-- **3072-bit RSA** : $n$ is 3072 bits, $p$ and $q$ is 1536 bits.
-- **4096-bit RSA** : $n$ is 4096 bits, $p$ and $q$ is 2048 bits.
+- **1024-bit RSA**: The modulus $n$ is 1024 bits, each prime factor $p$ and $q$ would be roughly 512 bits.
+- **2048-bit RSA**: $n$ is 2048 bits, $p$ and $q$ is 1024 bits.
+- **3072-bit RSA**: $n$ is 3072 bits, $p$ and $q$ is 1536 bits.
+- **4096-bit RSA**: $n$ is 4096 bits, $p$ and $q$ is 2048 bits.
 
 By having 2048 bits for $p$, it means $p$ can vary from $0$ to $2^{2048} - 1$, which is approximately equal to $1.1 \times 10^{77}$. Consider the table below, the time grows exponentially. For reference, $2577907 \times 35324489 = 91063247464523$ is approximately 47 bits.
 
 ![RSA bruteforcing](./rsa-brute-forcing.png)  
-Source : https://www.semanticscholar.org/paper/Using-Random-Search-and-Brute-Force-Algorithm-in-Budiman-Rachmawati/c54d03d38e7b1e34efb712fb6ec6f23e8673d559
+Source: https://www.semanticscholar.org/paper/Using-Random-Search-and-Brute-Force-Algorithm-in-Budiman-Rachmawati/c54d03d38e7b1e34efb712fb6ec6f23e8673d559

@@ -5,9 +5,9 @@ title: Number System
 description: Number System
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Number System - BYJU'S](https://byjus.com/maths/number-system/)**
+- **[Number System — BYJU'S](https://byjus.com/maths/number-system/)**
 
 **Number System** is a system used to represent and express number, it consist a set of symbol or digit and rules to combine those symbols to represent different quantities. A number system has something called **base**, which is the number of symbol used to count and represent different number.
 
@@ -28,7 +28,7 @@ The decimal number system is the most widely used number system in everyday life
 From the positional number system explanation, we can conclude that each digit represent the product of its value and the base raised to the power of its position.
 
 ![Decimal number example](./decimal-number.png)  
-Source : https://www.unm.edu/~tbeach/terms/binary.html
+Source: https://www.unm.edu/~tbeach/terms/binary.html
 
 - The digit 8 is in the rightmost position, representing the ones place. Its value is $8$, which is equal to $8 × 10^0$.
 - The digit 7 is in the tens place. Its value is $70$, which is equal to $7 × 10^1$.
@@ -43,14 +43,14 @@ The binary number system is a number system widely used in computer systems and 
 
 Similar to decimal, it is a positional number system, where each binary digit represent the power of its base which is the power of two. It starts from $2^0$ from the rightmost digit and the power increase by 1 as we go to the left.
 
-For example :
+For example:
 
 - The binary number `1010` represents ($1 × 2^3$) + ($0 × 2^2$) + ($1 × 2^1$) + ($0 × 2^0$), which simplifies to 8 + 0 + 2 + 0, resulting in the decimal value 10.
 
 - The binary number `11100` represents ($1 × 2^4$) + ($1 × 2^3$) + ($1 × 2^2$) + ($0 × 2^1$) + ($0 × 2^0$), which simplifies to 16 + 8 + 4 + 0 + 0, resulting in the decimal value 28.
 
 ![Binary number system](./binary-number.png)  
-Source : https://www.unm.edu/~tbeach/terms/binary.html
+Source: https://www.unm.edu/~tbeach/terms/binary.html
 
 ### Hexadecimal
 
@@ -58,14 +58,14 @@ Hexadecimal is a number system in **base-16**, it is also commonly used number s
 
 Similar to the decimal and binary systems. The positions are counted from right to left, starting with the ones place, then moving to the 16s place, the 256s place, and so on. Each position represents a power of 16.
 
-For example, the hexadecimal number `2F8` can be expanded as follows :
+For example, the hexadecimal number `2F8` can be expanded as follows:
 
 - The rightmost digit, 8, is in the ones or $16^0$ place and its value is 8.
 - The middle digit, F, is in the sixteens or $16^1$ place. In decimal, F represents the value 15, so its value in the sixteens place is 15 multiplied by $16^1$, which is 240.
 - The leftmost digit, 2, is in the 256s or $16^2$ place. Its value is 2 multiplied by $16^2$, which is 512.
 
 ![Hexadecimal number system](./hexadecimal-number.png)  
-Source : https://drstienecker.com/tech-332/1-numbering-systems-and-conversions/
+Source: https://drstienecker.com/tech-332/1-numbering-systems-and-conversions/
 
 ![The three number system comparison](./number-system-comparison.png)  
-Source : https://kenanhancer.com/2020/08/25/binary-hexadecimal-and-decimal-number-systems/
+Source: https://kenanhancer.com/2020/08/25/binary-hexadecimal-and-decimal-number-systems/

@@ -5,7 +5,7 @@ title: Functional Languages
 description: Functional Languages
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 2 chapter 10**
 
@@ -17,9 +17,9 @@ See also [functional programming](/computer-and-programming-fundamentals/declara
 
 Scheme is an interpreted, functional programming language in the Lisp family.
 
-- **REPL** : In Scheme, users runs program by interacting with the interpreter directly by manually typing expressions into the standard input. The interpreter continuously reads these expressions, evaluates them, and prints the results back to the user in a loop known as the **read-eval-print loop (REPL)**. We can also run a program through input file using the `load` function (e.g., `load "program_name"`).
-- **Prefix Notation** : Expression is written in [prefix notation](/compilers-and-programming-languages/control-flow#expression-evaluation), with input `(+ 3 4)`, the interpreter prints `7`.
-- **Assignment** : We can assign variable like below.
+- **REPL**: In Scheme, users runs program by interacting with the interpreter directly by manually typing expressions into the standard input. The interpreter continuously reads these expressions, evaluates them, and prints the results back to the user in a loop known as the **read-eval-print loop (REPL)**. We can also run a program through input file using the `load` function (e.g., `load "program_name"`).
+- **Prefix Notation**: Expression is written in [prefix notation](/compilers-and-programming-languages/control-flow#expression-evaluation), with input `(+ 3 4)`, the interpreter prints `7`.
+- **Assignment**: We can assign variable like below.
 
   ```scheme
   (define x 42)
@@ -27,13 +27,13 @@ Scheme is an interpreted, functional programming language in the Lisp family.
   (define z '(1 2 3))
   ```
 
-- **Dynamic Typing** : Scheme checks type in runtime, incompatible operation between types will result an error in runtime instead of compile-time. `(if (> a 0) (+ 2 3) (+ 2 "foo"))` if `a` is less than or equal to 0, this expression evaluates to adding number with a string (`2 + "foo"` in infix notation), which is incompatible.
-- **Type Predicates** : Type predicates are functions to check the type of a value, returning `#t` (true) or `#f` (false). For example, `(number? x)` and `(boolean?) x` check if `x` is `number` or `boolean` type, respectively.
-- **Symbol** : Symbol is a data type for identifier in Scheme. We can define symbol using syntactic sugar `'` followed by the symbol literal, such as `(define my-symbol 'foo)`. Then, we can use `my-symbol` variable or the actual symbol `foo` as something that represent identifiers.
+- **Dynamic Typing**: Scheme checks type in runtime, incompatible operation between types will result an error in runtime instead of compile-time. `(if (> a 0) (+ 2 3) (+ 2 "foo"))` if `a` is less than or equal to 0, this expression evaluates to adding number with a string (`2 + "foo"` in infix notation), which is incompatible.
+- **Type Predicates**: Type predicates are functions to check the type of a value, returning `#t` (true) or `#f` (false). For example, `(number? x)` and `(boolean?) x` check if `x` is `number` or `boolean` type, respectively.
+- **Symbol**: Symbol is a data type for identifier in Scheme. We can define symbol using syntactic sugar `'` followed by the symbol literal, such as `(define my-symbol 'foo)`. Then, we can use `my-symbol` variable or the actual symbol `foo` as something that represent identifiers.
 
   The point of having symbol type is their efficiency on certain operation. They are _interned_, meaning the same name are represented by the same object in a symbol table. This allows for comparing equality of two variable with `eq?` operator to be more efficient than using pointer, because it simply checks whether the symbols are the same object.
 
-- **Function** : Function is defined using `define` keyword.
+- **Function**: Function is defined using `define` keyword.
 
   ```scheme
   (define (add a b)
@@ -64,7 +64,7 @@ We can declare a list like `(define my-list '(1 2 3 4))`. Scheme provides severa
 
 #### Control Flow & Assignment
 
-Selection control flow such as if-else statement :
+Selection control flow such as if-else statement:
 
 ```scheme
 (if (< x 10)

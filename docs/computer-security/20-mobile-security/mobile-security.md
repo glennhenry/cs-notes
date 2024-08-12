@@ -5,7 +5,7 @@ title: Mobile Security
 description: Mobile Security
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Many Google searches**
 
@@ -20,7 +20,7 @@ In mobile operating system like Android, malicious apps can tricks user into gra
 **Clickjacking** is the technique where attacker hide elements on a mobile app's user interface to deceive users into clicking on unintended buttons or links. This can lead to unintended actions, such as granting permissions, making unwanted purchases, or revealing sensitive information.
 
 ![Clickjacking](./clickjacking.png)  
-Source : https://9to5google.com/2017/05/26/cloak-dagger-android-vulnerability/
+Source: https://9to5google.com/2017/05/26/cloak-dagger-android-vulnerability/
 
 In the image above, the malicious app cover up the system window that ask for permission.
 

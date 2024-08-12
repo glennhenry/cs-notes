@@ -5,11 +5,11 @@ title: APIs & Server Logic
 description: APIs & Server Logic
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[APIs for Beginners 2023 - How to use an API (Full Course / Tutorial) - freeCodeCamp](https://youtu.be/WXsD0ZgxjRw?si=IJAjV5WMFpiaT8n0)**
-- **[What Is Middleware? - AWS](https://aws.amazon.com/what-is/middleware/)**
-- **[What is API Gateway? - ByteByteGo](https://youtu.be/6ULyxuHKxg8?si=NejEaVJLUUz8jH0x)**
+- **[APIs for Beginners 2023 - How to use an API (Full Course / Tutorial) — freeCodeCamp](https://youtu.be/WXsD0ZgxjRw?si=IJAjV5WMFpiaT8n0)**
+- **[What Is Middleware? — AWS](https://aws.amazon.com/what-is/middleware/)**
+- **[What is API Gateway? — ByteByteGo](https://youtu.be/6ULyxuHKxg8?si=NejEaVJLUUz8jH0x)**
 
 ### What is API
 
@@ -19,15 +19,15 @@ While making a program, we often interact with other software component (functio
 
 #### APIs Types
 
-Some types of APIs are :
+Some types of APIs are:
 
-- **Library API** : Library is a collection of pre-written ready-to-use code, this includes function, classes, methods, constants, and other code components. Libraries are used to make programmers develop their application without needing to build everything from scratch. An example of library include graphics API like OpenGL that lets you render 2D or 3D computer graphics.
+- **Library API**: Library is a collection of pre-written ready-to-use code, this includes function, classes, methods, constants, and other code components. Libraries are used to make programmers develop their application without needing to build everything from scratch. An example of library include graphics API like OpenGL that lets you render 2D or 3D computer graphics.
 
-- **OS API** : Operating system APIs is considered as low-level API, this includes accessing necessary function or classes that interact directly with OS component such as file system, memory management, task manager, process management, and etc. Example of OS level API can be a class that access internal storage in Android OS.
+- **OS API**: Operating system APIs is considered as low-level API, this includes accessing necessary function or classes that interact directly with OS component such as file system, memory management, task manager, process management, and etc. Example of OS level API can be a class that access internal storage in Android OS.
 
-- **Web API** : Web API is an API accessed over the internet using protocols like [HTTP](/computer-networking/http-https#http). Web APIs can be used if the code we are interacting to is stored on the internet. Common Web APIs include Google Maps API that let you know about geolocation information, Spotify API that allows developers to search for songs, albums, and artists, retrieve user playlists.
+- **Web API**: Web API is an API accessed over the internet using protocols like [HTTP](/computer-networking/http-https#http). Web APIs can be used if the code we are interacting to is stored on the internet. Common Web APIs include Google Maps API that let you know about geolocation information, Spotify API that allows developers to search for songs, albums, and artists, retrieve user playlists.
 
-Here is an example of API in Kotlin :
+Here is an example of API in Kotlin:
 
 ```kotlin
 logOutput("Calling an API")
@@ -43,7 +43,7 @@ val logs = mutableListOf<String>()
 fun logOutput(out: String) {
     val currentTime = LocalTime.now()
     logs.add(out)
-    println("Log : $out - at $currentTime")
+    println("Log: $out - at $currentTime")
 }
 ```
 
@@ -66,7 +66,7 @@ The website provides some endpoint including `/posts`, `/comments`, `/albums`, a
 Overall, routing and endpoint determines how the server should respond to different requests by mapping them to specific endpoints or routes. The behavior of accessing specific endpoints will depend on the web API.
 
 ![Endpoint example](./endpoint.png)  
-Source : https://apipheny.io/api-endpoint/
+Source: https://apipheny.io/api-endpoint/
 
 ### Middleware
 
@@ -75,29 +75,29 @@ In backend, **Middleware** is a software that bridges between application and se
 The purpose of middleware is to pre-process incoming request before passing it into server to make the server can focus only on the actual logic. For example, middleware in the context of backend can be used check if user has logged in or not, checking for cookies (file that stores basic user information), add additional data or configuration, and handling request error.
 
 ![Middleware that acts as a bridge between application and server](./middleware.png)  
-Source : https://medium.com/@seymarslan/what-ismiddleware-fdb2ad163388
+Source: https://medium.com/@seymarslan/what-ismiddleware-fdb2ad163388
 
 ### API Gateway
 
 Middleware general definition is a software that bridges between one system to another, an **API gateway** is a type of middleware focused to bridges between the client and the backend system. It is a centralized entry point to access the server, a unified interface for APIs consumer.
 
-An API gateway may provide some functionality including :
+An API gateway may provide some functionality including:
 
-- **Routing & Endpoint Management** : API gateway handles the routing of requests to the appropriate backend services based on predefined rules. It manages the endpoints and exposes a unified interface for API consumers.
+- **Routing & Endpoint Management**: API gateway handles the routing of requests to the appropriate backend services based on predefined rules. It manages the endpoints and exposes a unified interface for API consumers.
 
-- **Protocol Translation** : API Gateways can translate between different protocols. For example, it can handle requests in [RESTful](/backend-system/rest-api) format from clients and convert it into another format such as [GraphQL](/backend-system/graphql), [WebSockets](/backend-system/websocket), or another API protocol.
+- **Protocol Translation**: API Gateways can translate between different protocols. For example, it can handle requests in [RESTful](/backend-system/rest-api) format from clients and convert it into another format such as [GraphQL](/backend-system/graphql), [WebSockets](/backend-system/websocket), or another API protocol.
 
-- **Security & Authentication** : API Gateways provide security mechanisms to protect APIs, they can handle [authentication](/backend-system/authentication) and [authorization](/backend-system/authorization).
+- **Security & Authentication**: API Gateways provide security mechanisms to protect APIs, they can handle [authentication](/backend-system/authentication) and [authorization](/backend-system/authorization).
 
-- **Request & Response Modifier** : API Gateways can modify, validate, or transform requests and responses as they pass through, this can include validating or filtering requests.
+- **Request & Response Modifier**: API Gateways can modify, validate, or transform requests and responses as they pass through, this can include validating or filtering requests.
 
-- **Rate Limiting** : API Gateways can limit the number of requests made by a client in a period of time.
+- **Rate Limiting**: API Gateways can limit the number of requests made by a client in a period of time.
 
-- **Caching** : API Gateways may store its previous response from previous API request, this is called **caching**. If the further request requested the same data, the API gateway doesn't need to forward it to the server, instead it responds with the data stored in the cache.
+- **Caching**: API Gateways may store its previous response from previous API request, this is called **caching**. If the further request requested the same data, the API gateway doesn't need to forward it to the server, instead it responds with the data stored in the cache.
 
-- **Monitoring & Analytics** : API Gateways may log or monitor incoming request, API usage and performance. This allows administrators to gain insights into the traffic patterns, identify potential issues, and make optimal decision for optimization problem.
+- **Monitoring & Analytics**: API Gateways may log or monitor incoming request, API usage and performance. This allows administrators to gain insights into the traffic patterns, identify potential issues, and make optimal decision for optimization problem.
 
-- **Load Balancing** : Load balancing is the technique to distribute incoming request across multiple backend server to balance the load.
+- **Load Balancing**: Load balancing is the technique to distribute incoming request across multiple backend server to balance the load.
 
 ![API Gateway illustration](./api-gateway.png)  
-Source : https://stackoverflow.com/questions/53477140/asp-net-core-api-gateway-middleware
+Source: https://stackoverflow.com/questions/53477140/asp-net-core-api-gateway-middleware

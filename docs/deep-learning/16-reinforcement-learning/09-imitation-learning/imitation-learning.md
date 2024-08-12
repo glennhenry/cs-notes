@@ -5,14 +5,14 @@ title: Imitation Learning
 description: Imitation Learning
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[A brief overview of Imitation Learning by SmartLab AI - Medium](https://smartlabai.medium.com/a-brief-overview-of-imitation-learning-8a8a75c44a9c)**
+- **[A brief overview of Imitation Learning by SmartLab AI — Medium](https://smartlabai.medium.com/a-brief-overview-of-imitation-learning-8a8a75c44a9c)**
 
 **Imitation Learning** is technique where an agent learns a policy by imitating the behavior of an expert. An expert refers to a knowledgeable or skilled agent that already knows how to perform a task. An expert can be another reinforcement learning agent, or a human that provides demonstrations for the learning agent. Instead of doing trial and error exploration, the agent can leverages the knowledge of the expert to accelerate the learning process, this is useful when it is hard to define the desired behavior or reward function.
 
 ![Imitation learning](./imitation-learning.png)  
-Source : https://www.researchgate.net/figure/The-framework-of-Reinforcement-Learning-Imitation-Learning-and-their-integration-The_fig4_322094035
+Source: https://www.researchgate.net/figure/The-framework-of-Reinforcement-Learning-Imitation-Learning-and-their-integration-The_fig4_322094035
 
 ### Behavioral Cloning
 

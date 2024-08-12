@@ -5,9 +5,9 @@ title: Recursion
 description: Recursion
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Recursion (computer science) - Wikipedia](https://en.wikipedia.org/wiki/Recursion_(computer_science))**
+- **[Recursion (computer science) — Wikipedia](https://en.wikipedia.org/wiki/Recursion_(computer_science))**
 
 **Recursion** is a programming concept where a function calls itself, either directly or indirectly. Recursion is often used when a problem can be broken down into smaller subproblem. In some cases, breaking down a big problem into a smaller problem make it easier to solve. By solving each smaller subproblem, we will combine the results to solve the overall problem.
 
@@ -54,7 +54,7 @@ While recursion seems like an elegant way to solve big problem by breaking it do
 Call stack size is typically fixed, when we keep doing recursive call and the call stack exceed its allocated size, then an error called **stack overflow** will occur. This error indicates that there is insufficient space on the call stack to accommodate additional function calls and their associated stack frames. Stack overflow error can also occur in a recursive function where we do not have base case or a valid one. In such a situation, the recursive calls continue indefinitely, similar to an infinite while loop.
 
 ![Recursion call stack](./call-stack.png)  
-Source : https://dev.to/muirujackson/call-stack-recursion-40eh
+Source: https://dev.to/muirujackson/call-stack-recursion-40eh
 
 ### Linked List Traversal
 

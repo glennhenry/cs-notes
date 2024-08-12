@@ -5,7 +5,7 @@ title: Data Types
 description: Data Types
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 2 chapter 7**
 
@@ -13,7 +13,7 @@ Data type is a classification or categorization of data that determines the type
 
 ### Type Systems
 
-Type system is a set of rules, constraints, and mechanisms in programming languages that define and enforce the types of values and expressions used in a program. It consists of :
+Type system is a set of rules, constraints, and mechanisms in programming languages that define and enforce the types of values and expressions used in a program. It consists of:
 
 - **Built-in types** (also called primitive or predefined types), common types include boolean, integer, char, float, double, etc. These are typically supported in hardware.
 - **Mechanism to declare and define new types**.
@@ -24,10 +24,10 @@ Type system is a set of rules, constraints, and mechanisms in programming langua
 
 With a type system, compilers determine the appropriate operation to perform on operands. For example, if `a` and `b` are integers, then `a + b` will result in an integer addition. If `b` is a floating-point number, the compiler checks whether addition between an integer and a floating-point number is allowed or defined by the user. If both answers are negative, the compiler may choose to throw an error or implicitly convert one type to another.
 
-Some term about type system :
+Some term about type system:
 
-- **Strong typing vs weak typing** : A strongly typed language will never convert one type to another when the operation between them are not supported. Weak typed language may perform this if needed, which can potentially lead to unexpected errors.
-- **Static typing vs dynamic typing** : A statically typed language does type checking at compile-time, which results in variable must be annotated by its type (expect if it has type inference) when declared. Dynamic typed is the opposite, it does type checking at runtime, and variable doesn't require explicit type annotation. By checking the type at runtime, a variable can hold different type of values during the execution of the program.
+- **Strong typing vs weak typing**: A strongly typed language will never convert one type to another when the operation between them are not supported. Weak typed language may perform this if needed, which can potentially lead to unexpected errors.
+- **Static typing vs dynamic typing**: A statically typed language does type checking at compile-time, which results in variable must be annotated by its type (expect if it has type inference) when declared. Dynamic typed is the opposite, it does type checking at runtime, and variable doesn't require explicit type annotation. By checking the type at runtime, a variable can hold different type of values during the execution of the program.
 
 #### Polymorphism
 
@@ -41,10 +41,10 @@ While polymorphism depends on type it operates on, it doesn't always imply type 
 
 #### Classification of Types
 
-- **Numeric Types** : Represent numerical values. They include integer types (such as int, long, short) for representing whole numbers, floating-point types (such as float, double) for representing decimal numbers, and sometimes additional types like byte, decimal, complex numbers.
-- **Enumeration Types** : Enumeration types define a set of named values. They represent a finite set of distinct options or choices. Each value in an enumeration type is typically assigned an integer (called ordinal value) as an underlying representation. Enums provide a way to express a set of related constants and make the code more readable and expressive.
+- **Numeric Types**: Represent numerical values. They include integer types (such as int, long, short) for representing whole numbers, floating-point types (such as float, double) for representing decimal numbers, and sometimes additional types like byte, decimal, complex numbers.
+- **Enumeration Types**: Enumeration types define a set of named values. They represent a finite set of distinct options or choices. Each value in an enumeration type is typically assigned an integer (called ordinal value) as an underlying representation. Enums provide a way to express a set of related constants and make the code more readable and expressive.
 
-  For example, enum in C++ :
+  For example, enum in C++:
 
   ```cpp
   enum class Color { RED, GREEN, BLUE };
@@ -57,8 +57,8 @@ While polymorphism depends on type it operates on, it doesn't always imply type 
 
   Under the hood, integer comparison are going on.
 
-- **Subranges Types** : Subrange types allow to define a subset of values within a range of values. For example, a subrange type `Age` may restrict values to be within a specific range, like 0 to 120. Pascal language is first to implement subrange type, for example, we can define : `type test_score = 0..100;`, restricting it to only be defined under the range of 0 to 100.
-- **Composite Types** : Composite types are types that are composed of multiple values or subtypes. They are created with type constructor and used to represent structured or compound data. Examples of composite are arrays, lists, tuples, records, structs, classes, and objects. Composite types allow grouping related data together, making it easier to organize.
+- **Subranges Types**: Subrange types allow to define a subset of values within a range of values. For example, a subrange type `Age` may restrict values to be within a specific range, like 0 to 120. Pascal language is first to implement subrange type, for example, we can define: `type test_score = 0..100;`, restricting it to only be defined under the range of 0 to 100.
+- **Composite Types**: Composite types are types that are composed of multiple values or subtypes. They are created with type constructor and used to represent structured or compound data. Examples of composite are arrays, lists, tuples, records, structs, classes, and objects. Composite types allow grouping related data together, making it easier to organize.
 
 #### Orthogonality
 
@@ -83,7 +83,7 @@ Type checking involves verifying that the types of operands in an operation or e
 
 Two types are considered equivalent according to structural equivalence and name equivalence.
 
-- **Structural Equivalence** : Structural equivalence compares the structure of two types to determine if they have the same composition of fields, methods, and properties. It looks at the internal structure of types, disregarding their names or declarations.
+- **Structural Equivalence**: Structural equivalence compares the structure of two types to determine if they have the same composition of fields, methods, and properties. It looks at the internal structure of types, disregarding their names or declarations.
 
   The compiler compares their order of declaration, formatting, and evaluate any expression.
 
@@ -102,21 +102,21 @@ Two types are considered equivalent according to structural equivalence and name
   struct Person { int age; string name; };
   ```
 
-  Another example is the subrange type : `type test_score = 0..100;` should be same as `type test_score = 0..10*10;` (10 times 10), but different with `type test_score = 0..99;`.
+  Another example is the subrange type: `type test_score = 0..100;` should be same as `type test_score = 0..10*10;` (10 times 10), but different with `type test_score = 0..99;`.
 
-- **Name Equivalence** : Name equivalence compares types based on their names or declarations. It assumes that programmer that writes two types definition treat these types differently. If two types have the same name, they are considered equivalent regardless of their internal structure.
+- **Name Equivalence**: Name equivalence compares types based on their names or declarations. It assumes that programmer that writes two types definition treat these types differently. If two types have the same name, they are considered equivalent regardless of their internal structure.
 
   A language is said to have **strict name equivalence** if aliased types are considered distinct from each other, otherwise, if they are considered equivalent, it is said to have **loose name equivalence**.
 
-  :::tip
+ :::tip
   Aliased types or type aliases allow programmer to create alternative names or aliases for existing types. We can define type alias like `using age = int` in C++. This defines a new type `age` that can be used just like a normal type, but it is actually just an `int`.
-  :::
+ :::
 
 #### Type Conversion
 
 Type conversion involves changing the type of a value from one data type to another, it can be done explicitly by the programmer (also called type cast), or implicitly by the compiler (also called type coercion).
 
-There are three case in conversion :
+There are three case in conversion:
 
 1. In languages that use name equivalence, two types are considered the same if they have the same name, regardless of their structural differences. This means that if two types have different names but are structurally equivalent, they are considered interchangeable in terms of type conversions, because they have the same representation under the hood.
 2. A potentially unsafe type checking that occurs during runtime, that is when two types are different, but they can be represented as other depending on the actual value in runtime. For example, two subrange types are different, but one subrange is just subrange of another.
@@ -140,19 +140,19 @@ Some coercion can be helpful or even lead to an unexpected behavior. For example
 In type coercion, the compiler typically prioritizes one conversion over another. For example, in an addition between an integer and a double, the compiler would convert the integer to a double instead of the opposite, in order to avoid information loss.
 :::
 
-Other coercion are :
+Other coercion are:
 
-- Integer to boolean : 0 is false, anything not 0 is true (C language)
-- Truthy and falsy values : In Python, values such as non-zero numeric values, non-empty sequences (e.g., strings, lists, tuples), non-empty containers (e.g., dictionaries, sets) are considered as True.
+- Integer to boolean: 0 is false, anything not 0 is true (C language)
+- Truthy and falsy values: In Python, values such as non-zero numeric values, non-empty sequences (e.g., strings, lists, tuples), non-empty containers (e.g., dictionaries, sets) are considered as True.
 
-We can define our own coercion by overloading operators or overloading the conversion itself. In C++ :
+We can define our own coercion by overloading operators or overloading the conversion itself. In C++:
 
 ```cpp
 class MyInt {
 private:
     int value;
 public:
-    MyInt(int val) : value(val) {}
+    MyInt(int val): value(val) {}
 
     operator int() const {
         return value;
@@ -182,7 +182,7 @@ Some expressions are straightforward to deduce the resulting type. Arithmetic op
 
 Structs (also known as records) are used to define custom data types that encapsulate related data fields or members. A union is a special data type that allows different data types to be stored in the same memory location. This mean, union allocate memory that is shared among all its members. As a result, only one member of the union can be stored and accessed at a time. The union will accommodate size for the largest member within the union.
 
-As seen before, the syntax of declaring a named struct (or union with `union` keyword instead of `struct`) in C++ is like :
+As seen before, the syntax of declaring a named struct (or union with `union` keyword instead of `struct`) in C++ is like:
 
 ```c
 struct StructName {
@@ -196,14 +196,14 @@ struct StructName {
 In memory, struct will be stored in memory layout like below.
 
 ![Struct in memory](./struct-in-memory.png)  
-Source : https://nerdyelectronics.com/memory-layout-of-a-structure/
+Source: https://nerdyelectronics.com/memory-layout-of-a-structure/
 
 This is an array of `room` structs, each containing 2 ints and 2 floats, with each element having a size of 4 bytes. The fields of struct are stored next to each other in memory. Some structs may have larger size than they should be, due to [data alignment](/computer-organization-and-architecture/coa-fundamentals#padding) with padding.
 
-Memory allocation of struct and union :
+Memory allocation of struct and union:
 
 ![Struct vs union memory allocation](./struct-vs-union-in-memory.png)  
-Source : https://fastbitlab.com/microcontroller-embedded-c-programming-lecture-157-unions/ (with modification)
+Source: https://fastbitlab.com/microcontroller-embedded-c-programming-lecture-157-unions/ (with modification)
 
 ### Arrays
 
@@ -221,13 +221,13 @@ In C++, `[]` is treated as an operator. Calling `arr[3]` is a shorthand for `arr
 
 If array size is known at compile-time, then it is easy to allocate memory for it. Sometimes, people specify size of array based on something only known at runtime. For example, declaring an array with the same size of some input integer. Size is indeed specified, but it is based on some runtime input.
 
-There are five cases of allocating an array :
+There are five cases of allocating an array:
 
-1. **Global Lifetime, Static Shape** : When array is created in the global scope, it will exist throughout the entire program's execution. The dimension or the shape of the array (i.e., the size), is known (specified in declaration) and fixed at compile time. Memory for the array is allocated in the static memory.
-2. **Local Lifetime, Static Shape** : The size of array is specified in the declaration, but it is declared within a function or a block and has a local scope. Memory for the array is allocated on the [stack frame](/computer-and-programming-fundamentals/memory#stack) during runtime.
-3. **Local Lifetime, Shape Bound at Runtime** : The array is declared within a function or a block, but the size is not known until runtime. Memory is allocated within the stack frame, but the allocation is hybrid. Stack frame is divided into fixed-size part, to place object whose size is known, and the variable-size part contains object whose size depends on runtime. An example in Python would be: `def my_function(): my_array = [0] * n`.
-4. **Arbitrary Lifetime, Shape Bound at Runtime** : The array's lifetime is not strictly tied to a specific scope or function. This is the case when creating an array is just making some reference. We can choose to bound the reference at any time. Languages like Java and C#, which use reference types, rely on this. Declaring an array like `int[] A` creates a reference; only if we assign it, like `A = new int[5];`, will the array then be allocated.
-5. **Arbitrary Lifetime, Dynamic Shape** : In this case, the array's shape can change dynamically during its lifetime. Memory for the array is allocated on the [heap](/computer-and-programming-fundamentals/memory#heap), and the size can be adjusted as needed by resizing or reallocating the memory.
+1. **Global Lifetime, Static Shape**: When array is created in the global scope, it will exist throughout the entire program's execution. The dimension or the shape of the array (i.e., the size), is known (specified in declaration) and fixed at compile time. Memory for the array is allocated in the static memory.
+2. **Local Lifetime, Static Shape**: The size of array is specified in the declaration, but it is declared within a function or a block and has a local scope. Memory for the array is allocated on the [stack frame](/computer-and-programming-fundamentals/memory#stack) during runtime.
+3. **Local Lifetime, Shape Bound at Runtime**: The array is declared within a function or a block, but the size is not known until runtime. Memory is allocated within the stack frame, but the allocation is hybrid. Stack frame is divided into fixed-size part, to place object whose size is known, and the variable-size part contains object whose size depends on runtime. An example in Python would be: `def my_function(): my_array = [0] * n`.
+4. **Arbitrary Lifetime, Shape Bound at Runtime**: The array's lifetime is not strictly tied to a specific scope or function. This is the case when creating an array is just making some reference. We can choose to bound the reference at any time. Languages like Java and C#, which use reference types, rely on this. Declaring an array like `int[] A` creates a reference; only if we assign it, like `A = new int[5];`, will the array then be allocated.
+5. **Arbitrary Lifetime, Dynamic Shape**: In this case, the array's shape can change dynamically during its lifetime. Memory for the array is allocated on the [heap](/computer-and-programming-fundamentals/memory#heap), and the size can be adjusted as needed by resizing or reallocating the memory.
 
    An example in Java would be using an `ArrayList`.
 
@@ -245,7 +245,7 @@ In a multidimensional array, the placement can either be **row-major** or **colu
 - In a row-major order, the elements of each row are stored consecutively in memory, and the rows themselves are stored one after another. This means that the elements of the second dimension are stored after the first, and so on.
 - In a column-major order, the elements of each column are stored consecutively in memory, and the columns themselves are stored one after another.
 
-With this array :
+With this array:
 
 ```json
 arr = [[1, 2, 3, 4],

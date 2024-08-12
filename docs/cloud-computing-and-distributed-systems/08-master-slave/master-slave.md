@@ -5,9 +5,9 @@ title: Master-Slave
 description: Master-Slave
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Master–slave (technology) - Wikipedia](<https://en.wikipedia.org/wiki/Master%E2%80%93slave_(technology)>)**
+- **[Master–slave (technology) — Wikipedia](<https://en.wikipedia.org/wiki/Master%E2%80%93slave_(technology)>)**
 
 **Master-Slave** architecture is a system architecture in which one component, called the **master**, controls one or more other components, called **slaves**.
 
@@ -16,7 +16,7 @@ The master component acts as a central authority and is responsible for making d
 The master-slave architecture is often used in systems where the workload needs to be distributed and parallelized to improve performance, scalability, or fault tolerance. The master component handles the high-level coordination and management tasks, while the slave components handle the lower-level processing or computation tasks.
 
 ![Master-slave](./master-slave.png)  
-Source : https://www.researchgate.net/figure/Master-slave-architecture_fig1_317299391
+Source: https://www.researchgate.net/figure/Master-slave-architecture_fig1_317299391
 
 ### Example
 

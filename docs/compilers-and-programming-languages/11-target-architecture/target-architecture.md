@@ -5,7 +5,7 @@ title: Target Architecture
 description: Target Architecture
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 2 chapter 5**
 
@@ -19,7 +19,7 @@ The two popular architecture are [CISC (e.g., x86)](/computer-organization-and-a
 
 ### Memory
 
-There are three types of memory : registers, main memory or RAM, and external device like hard drives. These three are ordered based on their hierarchy, with the higher being faster to access but lower capacity.
+There are three types of memory: registers, main memory or RAM, and external device like hard drives. These three are ordered based on their hierarchy, with the higher being faster to access but lower capacity.
 
 - Registers hold the smallest amount of data including intermediate result of the execution of an instruction. Some registers are also used to keep track important information about instruction, such as memory address, stack pointer, bit as flags for ALU operation.
 - Main memory hold the program data and codes.
@@ -41,11 +41,11 @@ Due to architectural and requirements differences, some computers may store data
 
 [Instruction set architecture (ISA)](/computer-organization-and-architecture/isa) is the set of instruction offered by the machine that the running program must follow in order to control the CPU.
 
-- **Available instructions** : To generate correct code and possibly optimize it, compilers need to know the complete set of instructions supported by the target architecture. This includes arithmetic instructions, logical instructions, data transfer instructions, control flow instructions, etc.
-- **Instruction formats** : Compilers need to know how the target architecture specify its instruction.
-- **Register set** : ISA specifies the available registers and their purposes. Compilers need to know this to determine the appropriate machine code instructions and register usage during code generation.
-- **Operand types and sizes** : ISA defines the types and sizes of operands that can be used with each instruction. The compiler needs to know these operand types and sizes to ensure proper type checking, generate correct instructions, and handle implicit type conversions, if necessary.
-- **Addressing modes** : This describes how memory operands are specified. It determines whether the CPU requires a memory address, register, immediate value, or any other form of data to perform computations.
+- **Available instructions**: To generate correct code and possibly optimize it, compilers need to know the complete set of instructions supported by the target architecture. This includes arithmetic instructions, logical instructions, data transfer instructions, control flow instructions, etc.
+- **Instruction formats**: Compilers need to know how the target architecture specify its instruction.
+- **Register set**: ISA specifies the available registers and their purposes. Compilers need to know this to determine the appropriate machine code instructions and register usage during code generation.
+- **Operand types and sizes**: ISA defines the types and sizes of operands that can be used with each instruction. The compiler needs to know these operand types and sizes to ensure proper type checking, generate correct instructions, and handle implicit type conversions, if necessary.
+- **Addressing modes**: This describes how memory operands are specified. It determines whether the CPU requires a memory address, register, immediate value, or any other form of data to perform computations.
 
 ### Optimization
 
@@ -70,22 +70,22 @@ Depending on the architecture, they have the different number of physical regist
 For example, given an expression `(a + b) × (c − (d / e))`. One way to calculate this is using 9 separate register.
 
 ```
-R1 := a
-R2 := b
-R3 := c
-R4 := d
-R5 := e
+R1:= a
+R2:= b
+R3:= c
+R4:= d
+R5:= e
 
-R6 := R1 + R2   // (a + b)
-R7 := R4 / R5   // (d / e)
-R8 := R3 - R7   // (c - (d / e))
-R9 := R6 * R8   // ((a + b) * (c - (d / e)))
+R6:= R1 + R2   // (a + b)
+R7:= R4 / R5   // (d / e)
+R8:= R3 - R7   // (c - (d / e))
+R9:= R6 * R8   // ((a + b) * (c - (d / e)))
 ```
 
 The end result is stored at R9. However, registers are limited, and we can't just use all the available registers.
 
 ![Better register allocation](./better-register-allocation.png)  
-Source : Book page 772
+Source: Book page 772
 
 This evaluation uses 4 register, reusing the previous register for the new intermediate value. There are many factors in optimizing this, such as reducing the number of registers used, the number of memory accesses, the number of spills (moving values between registers and memory), and the overall performance of the generated code.
 

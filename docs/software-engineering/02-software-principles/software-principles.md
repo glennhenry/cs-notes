@@ -5,18 +5,18 @@ title: Software Principles
 description: Software Principles
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Various Google searches**
-- **[Don't repeat yourself - Wikipedia](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)**
-- **[KISS principle - Wikipedia](https://en.wikipedia.org/wiki/KISS_principle)**
-- **[You aren't gonna need it - Wikipedia](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)**
-- **[Law of Demeter - Wikipedia](https://en.wikipedia.org/wiki/Law_of_Demeter)**
-- **[Separation of concerns - Wikipedia](https://en.wikipedia.org/wiki/Separation_of_concerns)**
-- **[Prefer composition over inheritance? - stackoverflow](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance)**
-- **[Summary of 'Clean code' by Robert C. Martin - wojteklu GitHub Gist](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)**
-- **[SOLID - Wikipedia](https://en.wikipedia.org/wiki/SOLID) and the 5 articles**
-- **[Difference Between Cohesion and Coupling - stackoverflow](https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling)**
+- **[Don't repeat yourself — Wikipedia](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)**
+- **[KISS principle — Wikipedia](https://en.wikipedia.org/wiki/KISS_principle)**
+- **[You aren't gonna need it — Wikipedia](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)**
+- **[Law of Demeter — Wikipedia](https://en.wikipedia.org/wiki/Law_of_Demeter)**
+- **[Separation of concerns — Wikipedia](https://en.wikipedia.org/wiki/Separation_of_concerns)**
+- **[Prefer composition over inheritance? — stackoverflow](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance)**
+- **[Summary of 'Clean code' by Robert C. Martin — wojteklu GitHub Gist](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)**
+- **[SOLID — Wikipedia](https://en.wikipedia.org/wiki/SOLID) and the 5 articles**
+- **[Difference Between Cohesion and Coupling — stackoverflow](https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling)**
 
 **Software Principles** are collection of guidelines, styles, tips, good practices, by various software and engineers to help to guide the process of developing a good software. By good software, it means they are reliable, maintainable, scalable, and many more listed in [software characteristics](/software-engineering#software-characteristics).
 
@@ -26,7 +26,7 @@ description: Software Principles
 
 We will see an example that demonstrate the benefits OOP about code reusing (in [Kotlin programming language](https://kotlinlang.org)).
 
-Non-OOP approach :
+Non-OOP approach:
 
 ```kotlin
 val employee1Name = "John Doe"
@@ -45,7 +45,7 @@ introduceEmployee(employee1Name, employee1Age, employee1Department)
 introduceEmployee(employee2Name, employee2Age, employee2Department)
 ```
 
-OOP approach :
+OOP approach:
 
 ```kotlin
 class Employee(val name: String, val age: Int, val department: String) {
@@ -69,7 +69,7 @@ The code is about storing employee's data and have a function that can introduce
 
 When code is repeated in multiple places, it becomes harder to update or modify because changes need to be made in multiple locations, increasing the chances of introducing bugs and inconsistencies. When a change is required, it only needs to be made in one place, making maintenance and updates more efficient and less error-prone.
 
-Non-DRY approach :
+Non-DRY approach:
 
 ```kotlin
 fun main() {
@@ -79,7 +79,7 @@ fun main() {
 }
 ```
 
-DRY approach :
+DRY approach:
 
 ```kotlin
 fun greet(name: String) {
@@ -102,7 +102,7 @@ The previous OOP example also follows this DRY principle.
 
 **KISS (Keep It Simple, Stupid)** is a software development principle that promotes emphasizes the importance of simplicity. The principle suggests that systems and code should be kept as simple as possible, avoiding unnecessary complexity.
 
-An example of unnecessary abstracted code :
+An example of unnecessary abstracted code:
 
 ```kotlin
 class Parity(val num: Int) {
@@ -154,10 +154,10 @@ We don't need to make function for every single expression we are executing. Mak
 
 Its main idea is to focus on delivering the minimum viable product (MVP) or the necessary features to meet the immediate requirements, rather than adding functionality that may or may not be needed in the future.
 
-There are some factors to consider when developing functionality :
+There are some factors to consider when developing functionality:
 
-- **Development Costs** : Resources required to build the software, such as developers' salaries, project management expenses, software licenses, development tools, and infrastructure costs.
-- **Maintenance and Repair Costs** : There is a potential that the functionality may need bug fixes, updates, security patches, or technical support.
+- **Development Costs**: Resources required to build the software, such as developers' salaries, project management expenses, software licenses, development tools, and infrastructure costs.
+- **Maintenance and Repair Costs**: There is a potential that the functionality may need bug fixes, updates, security patches, or technical support.
 
 Unnecessary development sacrifice time and effort for future development and maintenance, possibly introducing **technical debt**. Technical debt is a consequence of software development bad decisions that keep accumulating costs and challenges as the software evolves, similar to financial debt that accumulates interest over time.
 
@@ -167,21 +167,21 @@ Both describe the relationship and dependency between software components. **Cou
 
 Cohesion is the degree to which elements within a component or module are related to accomplish a single, well-defined purpose.
 
-- **High Cohesion** : A high cohesion component indicates that the elements within it are closely related and focused on a specific functionality or responsibility. A highly cohesive component performs a single task or represents a set of related tasks, forming a logically atomic unit. It is a preferred property to understand codebase easier.
-- **Low Cohesion** : Low cohesion is the opposite, which is when a component has multiple unrelated functionalities and responsibilities. This can lead to a component that is difficult to understand. Low cohesion may also result in code duplication and reduced reusability.
+- **High Cohesion**: A high cohesion component indicates that the elements within it are closely related and focused on a specific functionality or responsibility. A highly cohesive component performs a single task or represents a set of related tasks, forming a logically atomic unit. It is a preferred property to understand codebase easier.
+- **Low Cohesion**: Low cohesion is the opposite, which is when a component has multiple unrelated functionalities and responsibilities. This can lead to a component that is difficult to understand. Low cohesion may also result in code duplication and reduced reusability.
 
 On the other hand, coupling describe the interaction between modules.
 
-- **Loose Coupling** : In a loosely coupled system, components are independent and they interact through well-defined interfaces. Loose coupling principle encourages components to have minimal dependencies on each other. Changes to one component have minimal impact on other components, making the system more flexible, modular, and easier to maintain.
-- **Tight Coupling** : Tight coupling occurs when components have strong dependencies and rely heavily on each other's internal details or implementation. In a tightly coupled system, changes in one component may require corresponding changes in multiple other components. This can lead to code that is harder to modify, test, and maintain.
+- **Loose Coupling**: In a loosely coupled system, components are independent and they interact through well-defined interfaces. Loose coupling principle encourages components to have minimal dependencies on each other. Changes to one component have minimal impact on other components, making the system more flexible, modular, and easier to maintain.
+- **Tight Coupling**: Tight coupling occurs when components have strong dependencies and rely heavily on each other's internal details or implementation. In a tightly coupled system, changes in one component may require corresponding changes in multiple other components. This can lead to code that is harder to modify, test, and maintain.
 
 ![Cohesion and coupling](./cohesion-coupling.png)  
 _with and without high cohesion and low coupling_  
-Source : [top](https://www.boardinfinity.com/blog/cohesion/), [down](https://www.engati.com/glossary/cohesion-and-coupling)
+Source: [top](https://www.boardinfinity.com/blog/cohesion/), [down](https://www.engati.com/glossary/cohesion-and-coupling)
 
 Below are code that demonstrate cohesion and coupling.
 
-Low Cohesion :
+Low Cohesion:
 
 ```kotlin
 class Customer {
@@ -199,7 +199,7 @@ class Customer {
 }
 ```
 
-High Cohesion :
+High Cohesion:
 
 ```kotlin
 class OrderProcessor {
@@ -224,7 +224,7 @@ The high cohesion code makes the caller easier to interact with the class. The c
 We typically call component that invokes or calls a function or method **caller**, while the one that is being invoked or called is called **callee**.
 :::
 
-Tight Coupling :
+Tight Coupling:
 
 ```kotlin
 class UserService {
@@ -245,7 +245,7 @@ class UserRepository {
 }
 ```
 
-Loose Coupling :**
+Loose Coupling:**
 
 ```kotlin
 interface UserRepository {
@@ -278,7 +278,7 @@ The ideal properties are high cohesion and low coupling.
 
 **LoD (Law of Demeter)** is a design principle that promotes loose coupling and encapsulation in [object-oriented programming](/computer-and-programming-fundamentals/object-oriented-programming). The principle states that an object should have limited knowledge about other objects and should only interact with its immediate neighbors.
 
-There are three principles of LoD, based on [Wikipedia](https://en.wikipedia.org/wiki/Law_of_Demeter) :
+There are three principles of LoD, based on [Wikipedia](https://en.wikipedia.org/wiki/Law_of_Demeter):
 
 - Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.
 - Each unit should only talk to its friends; don't talk to strangers.
@@ -289,7 +289,7 @@ An object could have dependency to other object, meaning it relies on another ob
 The principle states that an object should have limited knowledge about its friend. One of the benefits of an object with limited knowledge about its companion can be seen in the case of designing a public API. A random person using your API shouldn't need to understand the inner working of your API too much, because that is the point of API, to provide a high level of abstraction.
 
 ![LoD principle](./lod.png)  
-Source : https://blog.knoldus.com/the-law-of-demeter/
+Source: https://blog.knoldus.com/the-law-of-demeter/
 
 Let's say we are making an API that lets user (developer) to store book name data.
 
@@ -338,7 +338,7 @@ SoC allows for code to be modular. If `DataManager` were to communicate directly
 
 Dependency injection is typically done through interface and provided via constructor. To demonstrate, consider this example.
 
-Without DI :
+Without DI:
 
 ```kotlin
 // Service interface
@@ -348,7 +348,7 @@ interface MessageService {
 }
 
 // Implementation of MessageService
-class EmailService : MessageService {
+class EmailService: MessageService {
     override fun getMessage(): String {
         return "Email message"
     }
@@ -383,7 +383,7 @@ A message broadcaster is supposed to broadcast the latest message from the servi
 
 The problem without DI arise when we wanted to have different instance of service, maybe `EmailService` and `UserService`. We can either make an entirely new broadcaster class or just instantiate an instance of `UserService` inside `MessageBroadcaster`. However, the latter is probably not an ideal solution. It introduces tight coupling and makes it difficult to replace or switch to a different implementation without modifying the class itself.
 
-With DI :
+With DI:
 
 ```kotlin
 // Service interface
@@ -393,7 +393,7 @@ interface MessageService {
 }
 
 // Implementation of MessageService
-class EmailService : MessageService {
+class EmailService: MessageService {
     override fun getMessage(): String {
         return "Email message"
     }
@@ -446,14 +446,14 @@ Inheritance is often associated with an **"is-a" relationship**. When a class in
 
 **Composition**, on the other hand, involves building complex objects by combining simpler objects or components. Instead of inheriting behavior from a parent class, an object is composed of other objects that provide the desired functionality. We often refer composition as a **"has-a" relationship**, signifying that one class has another class as part of its structure. This approach promotes loose coupling and flexibility in the design.
 
-An example of code with inheritance :
+An example of code with inheritance:
 
 ```kotlin
 open class Manufacturer(open val name: String)
 
 class Car(
     override val name: String, val model: String, val color: String
-) : Manufacturer(name)
+): Manufacturer(name)
 ```
 
 Inheritance is not suitable for this code. While a car is associated with a manufacturer, but a car doesn't have an "is-a" relationship. A car is not a manufacturer, but rather associated with particular manufacturer.
@@ -466,7 +466,7 @@ A scenario that would fit with inheritance is the relationship of `Person` and `
 If `Person` were to change, then it is okay for `Employee` to change as well, since it is also a person.
 :::
 
-Here's how `Manufacturer` and `Car` class would look like with composition :
+Here's how `Manufacturer` and `Car` class would look like with composition:
 
 ```kotlin
 class Manufacturer(open val name: String)
@@ -488,7 +488,7 @@ This principle says that inheritance is not the only thing to solve a relationsh
 
 The definition of clean code typically refers to well-structured, readable, and maintainable code that follows best practices and conventions to make it is easy to understand and modify. Of course, it is not needed to follow every best practices or conventions, since some exist to solve certain problem, and not everyone has that problem.
 
-Some principles of clean code :
+Some principles of clean code:
 
 - Following standard conventions (e.g., language or team standard).
 - Following code principles such as KISS, DRY, etc.
@@ -530,7 +530,7 @@ open class Rectangle(val width: Int, val height: Int) {
     }
 }
 
-class Square(val sideLength: Int) : Rectangle(sideLength, sideLength) {
+class Square(val sideLength: Int): Rectangle(sideLength, sideLength) {
     override fun setWidth(width: Int) {
         sideLength = width
     }
@@ -575,14 +575,14 @@ class NotificationService {
 
 In this example, the `NotificationService` is the higher level module that we use that depends on `EmailSender`. The behavior or `NotificationService` is dictated by `EmailSender`, such as the requirement of passing `message` and calling the `sendEmail` method. Think of `EmailSender` as a public API, if we change its behavior (e.g., changing parameters), all the user using the `NotificationService` would need to change its behavior as well, which is not favorable. Furthermore, the cost of this become larger as we have a long chain of dependency within the system.
 
-A code following dependency inversion would look like this :
+A code following dependency inversion would look like this:
 
 ```kotlin
 interface MessageSender {
     fun sendMessage(message: String)
 }
 
-class EmailSender : MessageSender {
+class EmailSender: MessageSender {
     override fun sendMessage(message: String) {
         println("Sending email: $message")
     }
@@ -598,4 +598,4 @@ class NotificationService(private val sender: MessageSender) {
 The `NotificationService` now depend on the `MessageSender` interface, which can be implemented by various type of sender, including `EmailSender`. If somehow `EmailSender` need to change, all it needs is to follow the interface contract. It becomes decoupled from the specific implementation details of the message sending logic, allowing for greater flexibility and modularity.
 
 ![Dependency inversion](./dependency-inversion.png)  
- Source : https://levelup.gitconnected.com/solid-programming-for-arduino-the-dependency-inversion-principle-4ce3bdb787d1
+ Source: https://levelup.gitconnected.com/solid-programming-for-arduino-the-dependency-inversion-principle-4ce3bdb787d1

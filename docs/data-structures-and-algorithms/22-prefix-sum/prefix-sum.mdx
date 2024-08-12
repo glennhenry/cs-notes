@@ -8,15 +8,15 @@ description: Prefix Sum
 import prefix_sum_illustration from "./prefix-sum-illustration.mp4";
 import prefix_sum_solution from "./prefix-sum-solution.mp4";
 
-**Main Source :**
+**Main Source:**
 
-- **[Prefix sum - Wikipedia](https://en.wikipedia.org/wiki/Prefix_sum)**
+- **[Prefix sum — Wikipedia](https://en.wikipedia.org/wiki/Prefix_sum)**
 
 **Prefix Sum**, also known as **cumulative sum**, is the a sequence where each element is the sum of all the element before it, including itself.
 
-A prefix is something placed before another. For instance, a prefix of an array of given element is all the element that comes before it. When we have array : [1, 4, 5, 7], the prefix of element 5 is 1 and 4. The prefix sum of this array would be another array with the same size, where each element is the sum up to each of the element itself in the original array.
+A prefix is something placed before another. For instance, a prefix of an array of given element is all the element that comes before it. When we have array: [1, 4, 5, 7], the prefix of element 5 is 1 and 4. The prefix sum of this array would be another array with the same size, where each element is the sum up to each of the element itself in the original array.
 
-Here is an illustration :
+Here is an illustration:
 
 <video width="695" height="392" controls>
   <source src={prefix_sum_illustration} />
@@ -30,11 +30,11 @@ The objective of this problem is to calculate the sum of the first K elements in
 
 The complexity of this problem increases when we introduce multiple values of K. In addition to the original array, we are now given an array of K that contains varying numbers.
 
-Input :  
+Input:  
 arr = [1, 4, 5, 7]  
 k = [0, 2, 3, 1]
 
-Output :  
+Output:  
 result = [0, 5, 10, 1]
 
 Explanation:
@@ -46,7 +46,7 @@ Explanation:
 
 #### Naive Solution
 
-The pseudocode for this :
+The pseudocode for this:
 
 ```
 function sumKElements(arrayOfNumber, arrayOfK)
@@ -86,7 +86,7 @@ function sumKElements(arrayOfNumber, arrayOfK)
     return result
 ```
 
-Here is the illustration :
+Here is the illustration:
 
 <video width="695" height="392" controls>
   <source src={prefix_sum_solution} />

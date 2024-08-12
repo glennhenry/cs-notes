@@ -11,28 +11,28 @@ description: Computer Images (Part 2)
 
 An image contains content which is the pixel data, also file header which is contains metadata and information about the image file, such as its format, size, resolution, color space, and compression.
 
-Image pixel data can be stored using 2 types of storage :
+Image pixel data can be stored using 2 types of storage:
 
 ![Interleaved and separate storage comparison for storing color](./pixel-storage.png)  
-Source : [https://youtu.be/zllIPDaiOyk?t=1357](https://youtu.be/zllIPDaiOyk?t=1357)
+Source: [https://youtu.be/zllIPDaiOyk?t=1357](https://youtu.be/zllIPDaiOyk?t=1357)
 
-- **Interleaved Storage** : Each pixel are stored in single block of memory.
-- **Separate Channel** : Each color channel is stored in a separate block of memory.
+- **Interleaved Storage**: Each pixel are stored in single block of memory.
+- **Separate Channel**: Each color channel is stored in a separate block of memory.
 
 ### Image Format
 
 **Image format** is file format for digital images. Different image format has their own advantages and disadvantages in terms of quality, file size, compatibility.
 
-Some commonly used format are :
+Some commonly used format are:
 
-**Raster Image Format :**
+**Raster Image Format:**
 
 - **PNG (Portable Network Graphics)**, a lossless compression also supports transparency.
 - **JPEG (Joint Photographic Experts Group)**, lossy compression and doesn’t supports transparency.
 - **GIF (Graphics Interchange Format)**, a compressed image format that supports animation.
 
 ![Common raster and vector image common format](./image-format-example.png)  
-Source : [https://99designs.com/blog/tips/image-file-types/](https://99designs.com/blog/tips/image-file-types/)
+Source: [https://99designs.com/blog/tips/image-file-types/](https://99designs.com/blog/tips/image-file-types/)
 
 ### Gamma
 
@@ -44,7 +44,7 @@ Human eye does not perceive brightness in a linear way. Instead, our eyes percei
 ensure that images are displayed correctly on a wide range of display devices. One of a common gamma correction is 2.2 and 2.4.
 
 ![Before and after gamma correction comparison](./gamma-comparison.png)  
-Source : [https://doc.stride3d.net/4.0/en/manual/graphics/post-effects/color-transforms/gamma-correction.html](https://doc.stride3d.net/4.0/en/manual/graphics/post-effects/color-transforms/gamma-correction.html)
+Source: [https://doc.stride3d.net/4.0/en/manual/graphics/post-effects/color-transforms/gamma-correction.html](https://doc.stride3d.net/4.0/en/manual/graphics/post-effects/color-transforms/gamma-correction.html)
 
 ### Alpha
 
@@ -57,7 +57,7 @@ A transparent image is able to be combined with the background color. Combining 
 Alpha blending works by interpolating color between both foreground and background color and alpha value.
 
 ![Example of alpha blending between a circle and square](./alpha-blending.png)  
-Source : [https://en.wikipedia.org/wiki/Alpha_compositing](https://en.wikipedia.org/wiki/Alpha_compositing)
+Source: [https://en.wikipedia.org/wiki/Alpha_compositing](https://en.wikipedia.org/wiki/Alpha_compositing)
 
 ### Blending
 
@@ -66,7 +66,7 @@ Source : [https://en.wikipedia.org/wiki/Alpha_compositing](https://en.wikipedia.
 There are many blending technique that calculate combined image such as adding image color, subtracting, multiplying, etc.
 
 ![Example of common blending such as normal, dissolve, darken, multiply](./blending-example.png)  
-Source : [https://www.pinterest.com/pin/7740630584610634/](https://www.pinterest.com/pin/7740630584610634/)
+Source: [https://www.pinterest.com/pin/7740630584610634/](https://www.pinterest.com/pin/7740630584610634/)
 
 :::tip
 Find out more about image properties in [here](/digital-media-processing/image-properties)

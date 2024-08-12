@@ -7,7 +7,7 @@ description: Computer Networking Notes
 
 **Computer Networking** is the study about connecting between two or more computer or device to share resource and communicate with each other. Computer networking can be a small connection in a house such as connecting your phone to your desktop or as big as the internet where billions of device connects together.
 
-**Main Source :**
+**Main Source:**
 
 - **[PowerCert Networking Playlist](https://www.youtube.com/playlist?list=PL7zRJGi6nMRzg0LdsR7F3olyLGoBcIvvg)**
 - **[Wikipedia](https://www.wikipedia.org/)**

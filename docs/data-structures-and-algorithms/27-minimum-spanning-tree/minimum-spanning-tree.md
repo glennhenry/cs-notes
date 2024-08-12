@@ -5,15 +5,15 @@ title: Minimum Spanning Tree
 description: Minimum Spanning Tree
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Prim's algorithm - Wikipedia](https://en.wikipedia.org/wiki/Prim%27s_algorithm)**
-- **[Prim's algorithm in 2 minutes - Michael Sambol](https://youtu.be/cplfcGZmX7I?si=cd3rQ5d0UnaGxECM)**
+- **[Prim's algorithm — Wikipedia](https://en.wikipedia.org/wiki/Prim%27s_algorithm)**
+- **[Prim's algorithm in 2 minutes — Michael Sambol](https://youtu.be/cplfcGZmX7I?si=cd3rQ5d0UnaGxECM)**
 
 **Minimum Spanning Tree (MST)** is a concept in [graph](/data-structures-and-algorithms/graph), specifically in a [weighted graph](/data-structures-and-algorithms/graph#weighted), where we need to find the minimum possible total weight for connecting all the vertices. The real world application of this is to make the most effective connection between a set of locations.
 
 ![Minimum spanning tree](./minimum-spanning-tree.jpg)  
-Source : https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/tutorial/
+Source: https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/tutorial/
 
 Notice that we don't need to explore the entire graph's edges, we are only needed to connect the vertices. The difficulty of this problem arise when there are a lot of vertices and edges, making us need to choose path carefully, so it can lead to the minimum cost.
 
@@ -51,6 +51,6 @@ Similar to [Dijkstra's algorithm](/data-structures-and-algorithms/shortest-path#
 4. Iterate over each neighbor of the current vertex, make sure that only neighbors that have not been visited yet are added.
 
 ![Prim's algorithm](./prim-algorithm.gif)  
-Source : https://en.wikipedia.org/wiki/Prim%27s_algorithm
+Source: https://en.wikipedia.org/wiki/Prim%27s_algorithm
 
 The complexity depends on the graph representation (e.g., adjacency list or adjacency matrix) and the priority queue implementation (e.g, binary heap or Fibonacci heap). Using adjacency list and binary heap, we can obtain $O(E \log V)$ time complexity. Updating a key in the heap takes $O(\log V)$, updating it for each edge takes $O(E \log V)$. The space complexity would be $O(V)$, which comes from the visited set storing the visited vertices and the heap itself.

@@ -5,7 +5,7 @@ title: Theory of Computation & Automata
 description: Theory of Computation & Automata Notes
 ---
 
-**Main Source** :
+**Main Source**:
 
 - **THEORY OF AUTOMATA, FORMAL LANGUAGES, AND COMPUTATION - S.P. Eugene Xavier**
 - **[Theory of Computation & Automata Theory - Neso Academy](https://youtube.com/playlist?list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev&si=tOZVFW_dX6A8gjui)**

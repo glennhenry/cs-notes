@@ -5,13 +5,13 @@ title: Cloud Database
 description: Cloud Database
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Cloud database - Wikipedia](https://en.wikipedia.org/wiki/Cloud_database)**
+- **[Cloud database — Wikipedia](https://en.wikipedia.org/wiki/Cloud_database)**
 
 Cloud Database is a database that runs on cloud computing platform and access is provided as-a-service.
 
-Benefits :
+Benefits:
 
 - Similar to reasons of using other cloud services, cloud database help developer to reduce the cost and effort to develop and manage database.
 - Cloud databases can easily scale up or down based on demand. Cloud service providers offer the ability to dynamically allocate resources, such as allocating more resources during high traffic time without the need for manual intervention.
@@ -19,7 +19,7 @@ Benefits :
 
 ### Deployment Models
 
-The two methods to run database on the cloud :
+The two methods to run database on the cloud:
 
 - Cloud provider could provide cloud database by providing a service. The service that provide database as a service is called Database-as-a-service (DBaaS), and is a type of [SaaS](/cloud-computing-and-distributed-systems/cloud-models#common-models).
 - Run database by using [virtual machine](/cloud-computing-and-distributed-systems/virtualization) image. The idea is, a pre-configured template that contains an operating system and any required software, including the database system is packaged into format called image. The format will be uploaded to the cloud service provider, where they will execute the image on a virtual machine.
@@ -37,7 +37,7 @@ To actually use the database, we will use APIs provided by the cloud providers t
 For example, below is how we can connect our application to a MongoDB database in Kotlin.
 
 ```kotlin
-// Source : https://www.mongodb.com/docs/drivers/kotlin-sync/
+// Source: https://www.mongodb.com/docs/drivers/kotlin-sync/
 
 import com.mongodb.ConnectionString
 import com.mongodb.kotlin.client.sync.MongoClient
@@ -57,7 +57,7 @@ val mongoClient = MongoClient.create(settings)
 val database = mongoClient.getDatabase("test")
 ```
 
-And then for the actual query, we can use code like this :
+And then for the actual query, we can use code like this:
 
 ```kotlin
 val collection = database.getCollection("myCollection")

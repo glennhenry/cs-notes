@@ -5,10 +5,10 @@ title: Von Neumann
 description: Von Neumann
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **[System bus](https://en.wikipedia.org/wiki/System_bus)**
-- **[Von Neumann architecture - Wikipedia](https://en.wikipedia.org/wiki/Von_Neumann_architecture)**
+- **[Von Neumann architecture — Wikipedia](https://en.wikipedia.org/wiki/Von_Neumann_architecture)**
 
 **Von Neumann architecture** is a fundamental computer architecture design, which consists of CPU including control unit and ALU, memory unit, and input/output devices.
 
@@ -16,32 +16,32 @@ description: Von Neumann
 
 **System buses** is an important component in computer system. Its primary function is to provide a communication pathway used to transfer data, instructions, and control signals between the components of a computer system. It serves as a physical connection that allows different hardware components to interact and exchange information.
 
-The system bus combines several other buses :
+The system bus combines several other buses:
 
-- **Data Bus** : The data bus carries the actual data being transferred between components. It is bidirectional, meaning it can transmit data in both directions. The width of the data bus determines the amount of data that can be transferred simultaneously.
-- **Address Bus** : The address bus is responsible for transmitting memory addresses. It carries the location information of data or instructions in the system's memory. The width of the address bus determines the maximum addressable memory capacity.
-- **Control Bus** : The control bus carries control signals that coordinate and synchronize the activities of various components in the system. It includes signals such as read/write signals, interrupt signals, clock signals, and bus control signals.
+- **Data Bus**: The data bus carries the actual data being transferred between components. It is bidirectional, meaning it can transmit data in both directions. The width of the data bus determines the amount of data that can be transferred simultaneously.
+- **Address Bus**: The address bus is responsible for transmitting memory addresses. It carries the location information of data or instructions in the system's memory. The width of the address bus determines the maximum addressable memory capacity.
+- **Control Bus**: The control bus carries control signals that coordinate and synchronize the activities of various components in the system. It includes signals such as read/write signals, interrupt signals, clock signals, and bus control signals.
 
 ![System Bus](./system-bus.png)  
-Source : https://www.learncomputerscienceonline.com/computer-bus/
+Source: https://www.learncomputerscienceonline.com/computer-bus/
 
 ![System Bus in hardware](./system-bus-img.png)  
-Source : https://winstartechnologies.com/introduction-to-computer-bus/
+Source: https://winstartechnologies.com/introduction-to-computer-bus/
 
 ### Architecture
 
-The von Neumann architecture is a theoretical framework for designing and constructing digital computers. The architecture proposes a digital computer consists of :
+The von Neumann architecture is a theoretical framework for designing and constructing digital computers. The architecture proposes a digital computer consists of:
 
-1. **Central Processing Unit (CPU)** : The main processing unit, which includes the [ALU](/computer-organization-and-architecture/alu) for mathematical and logical operations and [control unit](/computer-organization-and-architecture/control-unit) that interprets and coordinates instructions.
+1. **Central Processing Unit (CPU)**: The main processing unit, which includes the [ALU](/computer-organization-and-architecture/alu) for mathematical and logical operations and [control unit](/computer-organization-and-architecture/control-unit) that interprets and coordinates instructions.
 
    The CPU will also contain some [registers](/computer-organization-and-architecture/registers-and-ram#registers) such as [instruction register and program counter register](/computer-organization-and-architecture/registers-and-ram#type-of-registers) that will store necessary processing information.
 
-2. **Memory** : Main memory such as [RAM](/computer-organization-and-architecture/registers-and-ram#ram) that will store the data and instructions from the program.
-3. **Larger Memory** : Larger memory such as hard disk to store larger volume of data.
-4. **[Input/Output](/computer-organization-and-architecture/input-output)** : Component that will handle the necessary input and output process between computer with I/O devices including keyboards, mice, displays, printers, disk drives, and network interfaces.
+2. **Memory**: Main memory such as [RAM](/computer-organization-and-architecture/registers-and-ram#ram) that will store the data and instructions from the program.
+3. **Larger Memory**: Larger memory such as hard disk to store larger volume of data.
+4. **[Input/Output](/computer-organization-and-architecture/input-output)**: Component that will handle the necessary input and output process between computer with I/O devices including keyboards, mice, displays, printers, disk drives, and network interfaces.
 
 ![Von Neumann architecture diagram](./von-neumann-architecture.png)  
-Source : https://en.wikipedia.org/wiki/Von_Neumann_architecture
+Source: https://en.wikipedia.org/wiki/Von_Neumann_architecture
 
 The von Neumann architecture is based on the **stored-program concept**, which states that both instructions and data are stored in the same memory and treated the same way, allowing programs to be modified easily.
 

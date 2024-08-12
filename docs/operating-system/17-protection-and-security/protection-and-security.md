@@ -5,12 +5,12 @@ title: Protection & Security
 description: Protection & Security
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **[Chapter 14 Protection - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 - **[Chapter 15 Security - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
-- **[Protection ring - Wikipedia](https://en.wikipedia.org/wiki/Protection_ring)**
-- **[Stoned - The Virus Encyclopedia](http://virus.wikidot.com/stoned)**
+- **[Protection ring — Wikipedia](https://en.wikipedia.org/wiki/Protection_ring)**
+- **[Stoned — The Virus Encyclopedia](http://virus.wikidot.com/stoned)**
 
 OS offers many protections and security mechanism, they are implemented at various levels throughout the entire structure. For example, at the kernel level, process are isolated from one another, memory access between process are restricted, kernel and application's memory is also separated. In the user level, access to files or directories are associated with specific permission. In the APIs level such as networking APIs, the OS implement protection mechanism such as [firewall](/computer-security/network-security#firewall) and secure protocols like [TLS](/computer-networking/network-encryption#ssltls), which is included with cryptographic algorithms.
 
@@ -19,7 +19,7 @@ OS offers many protections and security mechanism, they are implemented at vario
 The protection ring is a concept where the components of computer system, including the operating system, is represented as numbered rings or levels. The rings are numbered, with higher numbers indicating higher privilege levels. The most common implementation includes four rings, often referred to as Ring 0 (most privileged) to Ring 3 (least privileged), although other ring configurations are possible.
 
 ![Protection ring](./protection-ring.png)  
-Source : https://en.wikipedia.org/wiki/Protection_ring
+Source: https://en.wikipedia.org/wiki/Protection_ring
 
 In the ring 0, often called kernel mode, this is where [kernel](/operating-system/kernel) exist. Kernel is the core of an operating system that has full access to all the computer resources, such as CPU and memory.
 
@@ -36,7 +36,7 @@ The list of who has access and what they can do is defined in an **access contro
 On the other hand, access control list can be rearranged in a matrix structure, this is called **access control matrix**. It is a security model that represents the access rights and permissions between subjects (users, processes) and objects (resources, files).
 
 ![Access control matrix](./access-control-matrix.png)  
-Source : https://cybersecurityglossary.com/access-control-matrix/
+Source: https://cybersecurityglossary.com/access-control-matrix/
 
 In the matrix, each row represents a subject, each column represents an object, and the entries in the matrix indicate the access rights or permissions that subjects have on objects. The access rights can include read, write, execute, delete, create, or other specific operations.
 
@@ -48,11 +48,11 @@ In [Unix](/operating-system/unix), [files have protection code associated with i
 
 ### Common Threats
 
-Some common security threats : Malicious software, such as viruses, worms, Trojans, ransomware, and spyware. Unauthorized access which happen through brute-force attacks, password cracking, or exploiting weak authentication mechanisms. Social engineering technique such as phishing, pretexting, or impersonation.
+Some common security threats: Malicious software, such as viruses, worms, Trojans, ransomware, and spyware. Unauthorized access which happen through brute-force attacks, password cracking, or exploiting weak authentication mechanisms. Social engineering technique such as phishing, pretexting, or impersonation.
 
 See [computer security](/computer-security) and [other attack & exploit](/computer-security/other-attack-and-exploit) for more.
 
-#### Example : Stoned
+#### Example: Stoned
 
 One example of a virus is **stoned**, it's a dangerous virus that attacks the [boot sector](/operating-system/disk-management#boot-sector) and infects the [Master Boot Record (MBR)](/operating-system/booting#master-boot-record-mbr) of floppy disks and hard drives.
 

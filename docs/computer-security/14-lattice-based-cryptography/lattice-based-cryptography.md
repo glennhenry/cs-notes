@@ -5,10 +5,10 @@ title: Lattice-Based Cryptography
 description: Lattice-Based Cryptography
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[What is Lattice-Based Cryptography & Why You Should Care by Wickr - Medium](https://medium.com/cryptoblog/what-is-lattice-based-cryptography-why-should-you-care-dbf9957ab717)**
-- **[How Quantum Computers Break The Internet... Starting Now - Veritasium](https://youtu.be/-UrdExQW0cs?si=J_BSoCsNY3a4g45s)**
+- **[What is Lattice-Based Cryptography & Why You Should Care by Wickr — Medium](https://medium.com/cryptoblog/what-is-lattice-based-cryptography-why-should-you-care-dbf9957ab717)**
+- **[How Quantum Computers Break The Internet... Starting Now — Veritasium](https://youtu.be/-UrdExQW0cs?si=J_BSoCsNY3a4g45s)**
 
 **Lattice-Based Cryptography** is a cryptography based on mathematical concept called **lattice**.
 
@@ -17,7 +17,7 @@ description: Lattice-Based Cryptography
 In math, lattice is an infinitely many points that extends infinitely in all directions. Each point in the lattice, called lattice point, is associated with a set of coordinates that specify its position in space.
 
 ![Lattice](./lattice.png)  
-Source : https://en.wikipedia.org/wiki/Lattice_(group)
+Source: https://en.wikipedia.org/wiki/Lattice_(group)
 
 A lattice can be represented as vector, vector can be thought as an arrow that points to some direction and has a magnitude or the length of the vector.
 
@@ -30,7 +30,7 @@ The basis vector serves as the building block for making vector, which will dete
 Basis vector can even be more complex, for example, the basis vector $i$ may point to the x-axis as well as the y-axis. In other word, it is not necessary to only point to one direction, it can point diagonally.
 
 ![More complex basis vector](./more-complex-basis.png)  
-Source : https://medium.com/cryptoblog/what-is-lattice-based-cryptography-why-should-you-care-dbf9957ab717
+Source: https://medium.com/cryptoblog/what-is-lattice-based-cryptography-why-should-you-care-dbf9957ab717
 
 ### Cryptography Applications
 

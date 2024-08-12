@@ -13,10 +13,10 @@ Recommend taking a look at [theory of computation and automata](/theory-of-compu
 Originally, compilers and programming language (formerly called programming language theory) were separated. However, because the two are really related, I decided to merge them.
 :::
 
-**Main Source** :
+**Main Source**:
 
-- **Introduction to Compilers and Language Design - Douglas Thain** (book 1)
-- **Programming Language Pragmatics - Michael L. Scott** (book 2)
+- **Introduction to Compilers and Language Design — Douglas Thain** (book 1)
+- **Programming Language Pragmatics — Michael L. Scott** (book 2)
 
 ### All pages
 

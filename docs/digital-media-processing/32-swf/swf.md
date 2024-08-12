@@ -5,17 +5,17 @@ title: SWF
 description: SWF
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Adobe Flash Player - Wikipedia](https://en.wikipedia.org/wiki/Adobe_Flash_Player)**
-- **[SWF - Wikipedia](https://en.wikipedia.org/wiki/SWF)**
+- **[Adobe Flash Player — Wikipedia](https://en.wikipedia.org/wiki/Adobe_Flash_Player)**
+- **[SWF — Wikipedia](https://en.wikipedia.org/wiki/SWF)**
 
 SWF is a file format for flash player.
 
 **Flash player** is a multimedia software for playback of multimedia content, such as animations, videos, and interactive applications, on web browsers. Flash player use a variety of assets such as vector graphics, 3d graphics, video, audio, and raster image. In addition to assets, we can also add interactivity to the element using a scripting language called **ActionScript**.
 
 ![Example of flash player animation](./flash-player-example.png)  
-Source : https://addons.mozilla.org/id/firefox/addon/flashplayer-swf-to-html/
+Source: https://addons.mozilla.org/id/firefox/addon/flashplayer-swf-to-html/
 
 ### How flash player works
 

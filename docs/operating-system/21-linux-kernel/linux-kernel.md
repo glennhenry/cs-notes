@@ -5,10 +5,10 @@ title: Linux Kernel
 description: Linux Kernel
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **[Chapter 18 The Linux System - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
-- **[Linux kernel - Wikipedia](https://en.wikipedia.org/wiki/Linux_kernel)**
+- **[Linux kernel — Wikipedia](https://en.wikipedia.org/wiki/Linux_kernel)**
 
 **Linux** is a free and open-source, multitasking, Unix-like [operating system kernel](/operating-system/kernel). It was created by Linus Torvalds in 1991, Linux was developed as a free and open alternative to proprietary operating systems.
 
@@ -19,7 +19,7 @@ Linux is a kernel rather than a complete operating system. The complete operatin
 Linux is a modular [monolithic kernel](/operating-system/kernel#monolithic-kernels), each kernel component is called **kernel modules**. Linux supports loadable kernel modules, which are dynamically loaded and unloaded at runtime. Modules allow for the addition or removal of kernel functionalities without the need to rebuild or reboot the entire kernel.
 
 ![Linux kernel architecture](./linux-kernel-architecture.png)  
-Source : https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html
+Source: https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html
 
 Linux is built upon the GNU project, which is a compilation of freely available and open-source software. Linux kernel is developed using the C programming language, along with its standard library known as the libc or GNU C library. The C programming language is compiled using one of the compilers provided by the GNU Compiler Collection (GCC), which encompasses a collection of compilers offered by the GNU project.
 
@@ -37,9 +37,9 @@ The Linux kernel is based on [Unix](/operating-system/unix), they have similar f
 
 - Linux manages physical memory by classifying memory into several zones, where their boundaries depend on the system architecture.
 
-  - **Normal Zone** : This zone is the largest regions that contains regular application memory, which is typically used for user-space processes.
-  - **DMA Zone** : This zone is dedicated to [direct memory access (DMA)](/computer-organization-and-architecture/input-output#dma) operations, where devices can access memory directly without CPU intervention.
-  - **High Memory Zone** : This is a memory zone that contains pages with high-memory addresses. This zone is used to allocate and manage physical memory that is not permanently mapped into the kernel address space. The purpose of this zone is to address the limitations of older hardware that cannot fully map all physical memory into the kernel's virtual address space.
+  - **Normal Zone**: This zone is the largest regions that contains regular application memory, which is typically used for user-space processes.
+  - **DMA Zone**: This zone is dedicated to [direct memory access (DMA)](/computer-organization-and-architecture/input-output#dma) operations, where devices can access memory directly without CPU intervention.
+  - **High Memory Zone**: This is a memory zone that contains pages with high-memory addresses. This zone is used to allocate and manage physical memory that is not permanently mapped into the kernel address space. The purpose of this zone is to address the limitations of older hardware that cannot fully map all physical memory into the kernel's virtual address space.
 
 - Linux kernel manages physical memory in the form of pages. When a process requests memory, the kernel allocates pages from the available pool.
 - Linux implements a [virtual memory](/operating-system/memory-management#virtual-memory) system that allows processes to have their own virtual address spaces. It provides memory protection, demand paging, and memory sharing mechanisms.
@@ -52,7 +52,7 @@ The Linux kernel is based on [Unix](/operating-system/unix), they have similar f
 
 #### Device Management
 
-- Devices are categorized into three classes, depending on their access method : **block devices**, **character devices**, and **network devices**.
+- Devices are categorized into three classes, depending on their access method: **block devices**, **character devices**, and **network devices**.
 
   - Block devices include devices that allow random access to independent, fixed-sized blocks of data, such as hard disks, floppy disks, CD-ROMs, Blu-ray discs, and flash memory.
   - Character devices include devices like mice and keyboards that are accessed serially, meaning data is read or written sequentially, one character at a time.
@@ -68,7 +68,7 @@ The Linux kernel is based on [Unix](/operating-system/unix), they have similar f
 
 #### Networking
 
-- Networking is implemented through three layers of software : the **socket interface**, **protocol drivers**, and **network-device drivers**.
+- Networking is implemented through three layers of software: the **socket interface**, **protocol drivers**, and **network-device drivers**.
 
   - The socket interface is the entry point for user applications to perform networking requests. It is designed to resemble the 4.3 BSD socket layer, this make it compatible with programs that utilize Berkeley sockets.
   - The protocol drivers process packet, such as modifying, splitting, or reassembling. When data arrives at this layer, either from an application's socket or a network-device driver, it is expected to be tagged with an identifier specifying the network protocol it contains.

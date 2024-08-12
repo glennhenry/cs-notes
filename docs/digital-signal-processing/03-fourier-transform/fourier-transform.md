@@ -22,7 +22,7 @@ Source: [top](https://kinder-chen.medium.com/denoising-data-with-fast-fourier-tr
 
 - Time-domain: Provides information about the signal's amplitude and how it changes over time.
 - Frequency-domain: Provides information about the signal's frequency content and how the energy is distributed across different frequencies.
-  :::
+ :::
 
 ### How does it work
 

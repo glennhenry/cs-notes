@@ -5,11 +5,11 @@ title: Blockchain
 description: Blockchain
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Structure of a Block in Blockchain - Shiksha Online](https://www.shiksha.com/online-courses/articles/structure-of-a-block-in-blockchain/)**
-- **[UNIT-2.2: Hash Puzzle by SSLP - Medium](https://medium.com/@slpbphdvit/unit-2-2-hash-puzzle-9eeb9d25196e)**
-- **[How does a blockchain work - Simply Explained](https://youtu.be/SSo_EIwHSd4?si=PHEwccOano4XOC2G)**
+- **[Structure of a Block in Blockchain — Shiksha Online](https://www.shiksha.com/online-courses/articles/structure-of-a-block-in-blockchain/)**
+- **[UNIT-2.2: Hash Puzzle by SSLP — Medium](https://medium.com/@slpbphdvit/unit-2-2-hash-puzzle-9eeb9d25196e)**
+- **[How does a blockchain work — Simply Explained](https://youtu.be/SSo_EIwHSd4?si=PHEwccOano4XOC2G)**
 
 **Blockchain** is a technology of decentralizing transactions record using the concept of cryptography.
 
@@ -25,23 +25,23 @@ In linked list, each element is considered as a node, each node has memory refer
 
 A block consists of header and body. Header contains important information about the block, and the body, contains the transaction data.
 
-Header :
+Header:
 
-- **Hash of Previous Block** : The hash value of the previous block in the blockchain, creating the chain.
-- **Timestamp** : The time when the block was created or mined.
-- **Version** : This field indicates the version of the blockchain protocol being used.
-- **Merkle Root** : Merkle root is a hash value that represents a summary of all the transactions in the block. Merkle's tree, also known as hash tree, is a data structure used to verify the integrity and consistency large sets of data. A Merkle tree is constructed by recursively hashing pairs of data until a single root hash, known as the **Merkle root**, is obtained. This mean the hashes of data will be hashed again to create the parent, up to the root node.
+- **Hash of Previous Block**: The hash value of the previous block in the blockchain, creating the chain.
+- **Timestamp**: The time when the block was created or mined.
+- **Version**: This field indicates the version of the blockchain protocol being used.
+- **Merkle Root**: Merkle root is a hash value that represents a summary of all the transactions in the block. Merkle's tree, also known as hash tree, is a data structure used to verify the integrity and consistency large sets of data. A Merkle tree is constructed by recursively hashing pairs of data until a single root hash, known as the **Merkle root**, is obtained. This mean the hashes of data will be hashed again to create the parent, up to the root node.
 
 When a block is hashed, the entire block is converted into specific format that can be processed by hash function. The resulting hash serve as a unique identifier for a block in the chain.
 
 The chaining mechanism in blockchain ensure the immutability of the data stored in a blockchain. If any data in a block is modified, it will result in a change in the block's hash value (due to [avalanche effect](/computer-security/hash-function#properties--example)). As a result, the subsequent blocks in the chain will have invalid references to the altered block, indicating that the blockchain has been tampered with. Another thing to note is blockchain is a decentralized platform, the ledger is distributed among multiple participants who maintain their own copies of the blockchain. This distributed nature ensures that any changes made to a particular block or transaction would need to be replicated across the entire network to maintain consensus and consistency.
 
-Body :
+Body:
 
-- **Transactions** : The block body contains a list of transactions that are being added to the blockchain.
+- **Transactions**: The block body contains a list of transactions that are being added to the blockchain.
 
 ![Blockchain structure](./blockchain-structure.png)  
-Source : [Chain of blocks](https://money.com/what-is-blockchain/), [Block structure](https://www.shiksha.com/online-courses/articles/structure-of-a-block-in-blockchain/), [Merkle tree](https://www.investopedia.com/terms/m/merkle-tree.asp)
+Source: [Chain of blocks](https://money.com/what-is-blockchain/), [Block structure](https://www.shiksha.com/online-courses/articles/structure-of-a-block-in-blockchain/), [Merkle tree](https://www.investopedia.com/terms/m/merkle-tree.asp)
 
 #### Mining
 
@@ -60,4 +60,4 @@ For example, the puzzle may require miners to find a nonce value that, when comb
 This also applies when you modify certain block, when you modify the block, you will also change the hash of the block. Let's say you are changing certain block, the previous block that refer to it will need to be changed as well. When you want to change that other block, you will need to complete the PoW again to satisfy the block's difficulty criteria.
 
 ![PoW](./pow.png)  
-Source : https://www.ledger.com/academy/blockchain/what-is-proof-of-work
+Source: https://www.ledger.com/academy/blockchain/what-is-proof-of-work

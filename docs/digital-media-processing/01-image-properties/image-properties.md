@@ -16,7 +16,7 @@ More detail about images representation in:
 
 - [Computer Images (Part 1)](/computer-graphics/computer-images-part-1)
 - [Computer Images (Part 2)](/computer-graphics/computer-images-part-2)
-  :::
+ :::
 
 A digital image file stores more than just raw image data. It may include image characteristics and attributes. Some of them are: compression methods, image format, and metadata, which refers to data about the image, such as the image dimensions, resolution, color depth, file format, creation date, and more.
 

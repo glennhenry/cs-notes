@@ -8,7 +8,7 @@ import os
 path_to_topic_folder = os.path.join("docs", "digital-media-processing")
 all_pages = os.listdir(path_to_topic_folder)
 
-for num, folder_name in enumerate(all_pages) :
+for num, folder_name in enumerate(all_pages):
     folder_title = folder_name.split("-", 1)[1]
     path = os.path.join(path_to_topic_folder, folder_name)
 

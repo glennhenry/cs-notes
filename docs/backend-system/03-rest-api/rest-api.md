@@ -5,25 +5,25 @@ title: REST API
 description: REST API
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[What Is A RESTful API? - AWS](https://aws.amazon.com/what-is/restful-api/)**
-- **[RESTful APIs in 100 Seconds - Fireship](https://youtu.be/-MTSQjw5DrM?si=mGOKWYNFT7H6yl_m)**
+- **[What Is A RESTful API? — AWS](https://aws.amazon.com/what-is/restful-api/)**
+- **[RESTful APIs in 100 Seconds — Fireship](https://youtu.be/-MTSQjw5DrM?si=mGOKWYNFT7H6yl_m)**
 
 **Representational State Transfer API (REST API)** is an architectural style for designing an API.
 Web services that implement REST architecture are called RESTful web services.
 
 REST works by leveraging or extending HTTP concepts. The underlying architecture of REST API follows the [HTTP protocol](/computer-networking/http-https#http) to perform specific types of operation such as accessing resource.
 
-Every resource in the server are uniquely identified by Uniform Resource Identifiers (URI), basically a unique address. An example of URI : `file:///C:/Users/username/Documents/file.txt`, `https://www.example.com/index.html`. In the case of REST API, the URI used typically uses the concept of [routing and endpoint](/backend-system/apis-server-logic#routing--endpoint).
+Every resource in the server are uniquely identified by Uniform Resource Identifiers (URI), basically a unique address. An example of URI: `file:///C:/Users/username/Documents/file.txt`, `https://www.example.com/index.html`. In the case of REST API, the URI used typically uses the concept of [routing and endpoint](/backend-system/apis-server-logic#routing--endpoint).
 
-REST includes another HTTP concepts like :
+REST includes another HTTP concepts like:
 
-- **[HTTP methods](/computer-networking/http-https#http-request--method)** : Such as GET, POST, DELETE, PUT followed with the endpoint (e.g. GET /books).
-- **[HTTP format and syntax](/computer-networking/http-https#http-format--syntax)** : Including header, request line, request body, response format, and version.
-- **[HTTP Responses](/computer-networking/http-https#http-response)** : Codes to indicate the result of the response, for example, 200 OK signifies a successful response, 404 Not Found denotes that the requested resource does not exist.
+- **[HTTP methods](/computer-networking/http-https#http-request--method)**: Such as GET, POST, DELETE, PUT followed with the endpoint (e.g. GET /books).
+- **[HTTP format and syntax](/computer-networking/http-https#http-format--syntax)**: Including header, request line, request body, response format, and version.
+- **[HTTP Responses](/computer-networking/http-https#http-response)**: Codes to indicate the result of the response, for example, 200 OK signifies a successful response, 404 Not Found denotes that the requested resource does not exist.
 
-Example of REST API GET request :
+Example of REST API GET request:
 
 ```
 GET /books HTTP/1.1

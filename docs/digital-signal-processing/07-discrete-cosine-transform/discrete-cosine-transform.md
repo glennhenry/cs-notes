@@ -53,7 +53,7 @@ The DCT process outputs 64 DCT coefficients (from a single 8×8 pixels) that rep
 
 ![DCT coefficients](./dct-coefficients.png)  
 _DCT of 8×8 grayscale image of capital letter A_  
-Source : https://en.wikipedia.org/wiki/Discrete_cosine_transform#Example_of_IDCT
+Source: https://en.wikipedia.org/wiki/Discrete_cosine_transform#Example_of_IDCT
 
 As mentioned before, frequent changing color, such as the bottom-most right-most, means a high frequency of cosine wave. On the other hand, as we go to top-left, the color rarely changes, suggesting that it is a lower frequency cosine wave. Seeing the overall image, high frequency wave typically correspond to area where the color of image frequently change, such as an image fine details.
 

@@ -5,16 +5,16 @@ title: Concurrency
 description: Concurrency
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Process (computing) - Wikipedia](<https://en.wikipedia.org/wiki/Process_(computing)>)**
-- **[Thread (computing) - Wikipedia](<https://en.wikipedia.org/wiki/Thread_(computing)>)**
-- **[Multiprocessing - Wikipedia](https://en.wikipedia.org/wiki/Multiprocessing)**
-- **[Blocking threads, suspending coroutines by Roman Elizarov - Medium](https://elizarov.medium.com/blocking-threads-suspending-coroutines-d33e11bf4761)**
-- **[Asynchronous programming techniques - Kotlin Docs](https://kotlinlang.org/docs/async-programming.html)**
-- **[What is a race condition? - stackoverflow](https://stackoverflow.com/questions/34510/what-is-a-race-condition)**
+- **[Process (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Process_(computing)>)**
+- **[Thread (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Thread_(computing)>)**
+- **[Multiprocessing — Wikipedia](https://en.wikipedia.org/wiki/Multiprocessing)**
+- **[Blocking threads, suspending coroutines by Roman Elizarov — Medium](https://elizarov.medium.com/blocking-threads-suspending-coroutines-d33e11bf4761)**
+- **[Asynchronous programming techniques — Kotlin Docs](https://kotlinlang.org/docs/async-programming.html)**
+- **[What is a race condition? — stackoverflow](https://stackoverflow.com/questions/34510/what-is-a-race-condition)**
 - **[Some simple Google search](https://www.google.com)**
-- **Chapter 12, Programming Language Pragmatics - Michael L. Scott**
+- **Chapter 12, Programming Language Pragmatics — Michael L. Scott**
 
 ### Concurrency
 
@@ -38,16 +38,16 @@ A **process** is an instance of a running program. A process encapsulates the ru
 
 Process has its own memory space and system resource, they are not directly accessible or affected by another process. In order to communicate with other processes, a mechanism called **[Inter-Process Communication (IPC)](/operating-system/inter-process-communication)** is employed.
 
-Operating system will keep track the state of each process, a process will run through several states :
+Operating system will keep track the state of each process, a process will run through several states:
 
-- **Created** : When a process is created or initialized, the process is being set up by the operating system, allocating resources such as memory and initializing data structures.
-- **Waiting** : A process in the waiting state is prepared but is waiting to be executed by the operating system scheduler.
-- **Running** : When a process is selected by the scheduler and is executing on the CPU, it is in the running state. In this state, the process is actively using the CPU to execute its instructions. Only one process can be in the running state at a given time on a single CPU core.
-- **Blocked** : If a process is unable to proceed further and must wait for an event or resource, it enters the blocked state. For example, if a process is waiting for user input such as selecting file, it will be blocked and temporarily suspended until the required event occurs.
-- **Terminated** : When a process finishes its execution or is explicitly terminated by the operating system or a user, it enters the terminated state. In this state, the process is no longer active, and its resources are released by the operating system.
+- **Created**: When a process is created or initialized, the process is being set up by the operating system, allocating resources such as memory and initializing data structures.
+- **Waiting**: A process in the waiting state is prepared but is waiting to be executed by the operating system scheduler.
+- **Running**: When a process is selected by the scheduler and is executing on the CPU, it is in the running state. In this state, the process is actively using the CPU to execute its instructions. Only one process can be in the running state at a given time on a single CPU core.
+- **Blocked**: If a process is unable to proceed further and must wait for an event or resource, it enters the blocked state. For example, if a process is waiting for user input such as selecting file, it will be blocked and temporarily suspended until the required event occurs.
+- **Terminated**: When a process finishes its execution or is explicitly terminated by the operating system or a user, it enters the terminated state. In this state, the process is no longer active, and its resources are released by the operating system.
 
 ![Computer workflow of executing a program](./process.png)  
-Source : https://en.wikipedia.org/wiki/Process_%28computing%29#/media/File:Concepts-_Program_vs._Process_vs._Thread.jpg
+Source: https://en.wikipedia.org/wiki/Process_%28computing%29#/media/File:Concepts-_Program_vs._Process_vs._Thread.jpg
 
 #### Thread
 
@@ -60,7 +60,7 @@ A single process can have multiple thread to execute multiple task, the techniqu
 The obvious difference between them is that a process is the running program, while a thread is the one that executes tasks within that program. The process owns memory and system resource, while thread do not have their own and access the one owned by the process. Each process has at least one thread, called the **main thread**, which starts executing the program from its entry point.
 
 ![Process vs Thread](./process-vs-thread.png)  
-Source myself, inspired by : https://www.java67.com/2012/12/what-is-difference-between-thread-vs-process-java.html
+Source myself, inspired by: https://www.java67.com/2012/12/what-is-difference-between-thread-vs-process-java.html
 
 ### Concurrent Programming
 
@@ -77,7 +77,7 @@ Threads within the same process share the same memory space. This means they can
 Threads are used in the case where multiple tasks need to be performed, such as the mobile application scenario earlier. One thread may request data to a server, another thread processes the data on the fly, and another thread updates the screen to display animation.
 
 ![Multithreading](./multithreading.png)  
-Source : https://www3.ntu.edu.sg/home/ehchua/programming/java/j5e_multithreading.html
+Source: https://www3.ntu.edu.sg/home/ehchua/programming/java/j5e_multithreading.html
 
 #### Multiprocessing
 
@@ -88,7 +88,7 @@ In multiprocessing, each process will have different memory and system resource.
 Multiprocessing can be beneficial for computer that has multiple cores, as it can significantly improve performance. However, it can be heavier and tend to consume more power. On the other hand, creating and managing threads in multithreading is generally faster and more lightweight compared to creating separate processes. Thread can also coordinate and communicate with each other easily because they share the same memory.
 
 ![Multiprocessing](./multiprocessing.png)  
-Source : https://www.shiksha.com/online-courses/articles/difference-between-multiprocessing-and-multiprogramming/
+Source: https://www.shiksha.com/online-courses/articles/difference-between-multiprocessing-and-multiprogramming/
 
 #### Multitasking
 
@@ -97,18 +97,18 @@ Source : https://www.shiksha.com/online-courses/articles/difference-between-mult
 For example, in our desktop, we can run multiple application at the same time. This is actually an illusion, the operating system rapidly switches between these processes, giving each one a small portion of CPU time to make it appear simultaneously.
 
 ![Multitasking](./multitasking.png)  
-Source : https://en.wikipedia.org/wiki/Computer_multitasking#/media/File:Desktop-Linux-Mint.png
+Source: https://en.wikipedia.org/wiki/Computer_multitasking#/media/File:Desktop-Linux-Mint.png
 
 ##### Summary
 
-- **Multithreading** : The use of multiple thread to achieve parallelism within a single process (thread-level parallelism).
-- **Multiprocessing** : Execution of multiple independent process in parallel, typically to utilize multicore processor (process-level parallelism).
-- **Multitasking** : The concurrent execution of multiple process.
+- **Multithreading**: The use of multiple thread to achieve parallelism within a single process (thread-level parallelism).
+- **Multiprocessing**: Execution of multiple independent process in parallel, typically to utilize multicore processor (process-level parallelism).
+- **Multitasking**: The concurrent execution of multiple process.
 
 All of them are technique to concurrently execute task.
 
 ![Comparison of multithreading, multiprocessing, and multitasking](./multithreading-multiprocessing-multitasking.png)  
-Source : [Single vs Multi-threaded](https://www.javatpoint.com/process-vs-thread), [Multiprocessing vs Multithreading](https://www.linkedin.com/pulse/demystifying-multithreading-multiprocessing-python-somasundaram), [Multiprocessing vs Multitasking vs Multithreading](https://subscription.packtpub.com/book/programming/9781787121706/2/ch02lvl1sec13/defining-multithreading)
+Source: [Single vs Multi-threaded](https://www.javatpoint.com/process-vs-thread), [Multiprocessing vs Multithreading](https://www.linkedin.com/pulse/demystifying-multithreading-multiprocessing-python-somasundaram), [Multiprocessing vs Multitasking vs Multithreading](https://subscription.packtpub.com/book/programming/9781787121706/2/ch02lvl1sec13/defining-multithreading)
 
 #### Coroutine
 
@@ -127,7 +127,7 @@ One way to mitigate this thread blocking is **coroutine**. **Coroutine** is a un
 When a piece of code can be suspended, it means that it can yield control to other tasks without blocking the thread it is running on. The idea is, instead of the thread waiting for specific task to complete, coroutine allows it to perform another task without waiting. When the task is complete, the thread will continue its previous task.
 
 ![Coroutine illustration](./coroutine.png)  
-Source : https://blog.adacore.com/coroutines-in-ada-a-clean-but-heavy-implementation
+Source: https://blog.adacore.com/coroutines-in-ada-a-clean-but-heavy-implementation
 
 Coroutine differs with multithreading. In multithreading, multiple thread can work together in parallel (i.e., they can execute code simultaneously). Having multiple thread can be resource intensive, since each of them require memory to keep track execution context (e.g., call stack, registers, counter) and the frequent switches between them can be expensive.
 
@@ -170,7 +170,7 @@ load_data(on_data_loaded = process_data)
 
 The implementation of future or promise typically have some set of methods to handle the result, it may include method that indicates when the operation is finished, a method that is responsible to handle success operation, where we can use the result for our use case, or method to handle error operation.
 
-Here is an example in Kotlin programming language (not a real code) :
+Here is an example in Kotlin programming language (not a real code):
 
 ```kotlin
 // load data must complete at one point, represent by Future object
@@ -236,7 +236,7 @@ Thread safe refers to the property of a program or data structure that can be sa
 [Deadlock](/operating-system/process-synchronization#deadlock) is a situation where two or more threads are unable to proceed because each is waiting for the other to take a specific action. Deadlock can occur when attempting to prevent race conditions through synchronization mechanisms, but those mechanisms are implemented incorrectly.
 
 ![Deadlock GIF](./deadlock.gif)  
-Source : https://en.wikipedia.org/wiki/Deadlock
+Source: https://en.wikipedia.org/wiki/Deadlock
 
 #### Thread Pool
 

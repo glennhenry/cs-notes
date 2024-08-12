@@ -5,16 +5,16 @@ title: Markov Decision Process
 description: Markov Decision Process
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Wikipedia Markov decision process](https://en.wikipedia.org/wiki/Markov_decision_process)**
+- **[Markov decision process — Wikipedia](https://en.wikipedia.org/wiki/Markov_decision_process)**
 
 **Markov Decision Process (MDP)** is a mathematical framework used to model sequential stochastic decision-making problems. MDP extends [Markov chain](/deep-learning/reinforcement-learning/markov-models#markov-chain) to include decision-making, actions, and rewards. Similar to Markov chains, the decision-making process in MDP is operated in a discrete time step.
 
 The environment in a reinforcement learning problem can be modeled in MDP, it will be a stochastic environment where the transition is influenced by probabilistic transitions. The agent that operates in the environment will observe the current state and select which action to take. The environment then transitions to a new state based on the chosen action, and the agent receives a reward or penalty associated with the state transition.
 
 ![Example of Markov decision process](./markov-decision-process.png)  
-Source : https://en.wikipedia.org/wiki/Markov_decision_process
+Source: https://en.wikipedia.org/wiki/Markov_decision_process
 
 The image above shows an example of an MDP, the green circles are the states, orange circles are the actions, the number in black arrows are the probability of transitioning from one state to another when a specific action is taken, and the orange arrows are the reward and penalty.
 
@@ -28,10 +28,10 @@ MDP is a [model-based](/deep-learning/reinforcement-learning/reinforcement-learn
 
 An MDP contains four key component, they are represented in 4-tuple ($S, A, P_a, R_a$):
 
-- **[State space ($S$)](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#state)** : Represent all the possible state in the MDP
-- **[Action space ($A$)](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#action)** : Represent all the possible action the agent can take. Alternatively, $A_s$ represent all the possible action from state $s$.
-- **Transition Probabilities ($P_a$)** : A function that defines the probability of transitioning from one state to another when a particular action a is taken. The function is defined as: ${\displaystyle P_{a}(s,s')=\Pr(s_{t+1}=s'\mid s_{t}=s,a_{t}=a)}$, probability transitioning from state $s$ to state $s'$ is equal to the probability of being in state $s'$ at the next time step $t + 1$ given that at current time step $t$, the state is $s$ and action taken is $a$.
-- **[Reward Function](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#reward-return--horizon)** : Which is a function defined as ${\displaystyle R_{a}(s,s')}$, it tells the reward or penalty received for transitioning from state $s$ to $s'$ when action $a$ is chosen.
+- **[State space ($S$)](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#state)**: Represent all the possible state in the MDP
+- **[Action space ($A$)](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#action)**: Represent all the possible action the agent can take. Alternatively, $A_s$ represent all the possible action from state $s$.
+- **Transition Probabilities ($P_a$)**: A function that defines the probability of transitioning from one state to another when a particular action a is taken. The function is defined as: ${\displaystyle P_{a}(s,s')=\Pr(s_{t+1}=s'\mid s_{t}=s,a_{t}=a)}$, probability transitioning from state $s$ to state $s'$ is equal to the probability of being in state $s'$ at the next time step $t + 1$ given that at current time step $t$, the state is $s$ and action taken is $a$.
+- **[Reward Function](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#reward-return--horizon)**: Which is a function defined as ${\displaystyle R_{a}(s,s')}$, it tells the reward or penalty received for transitioning from state $s$ to $s'$ when action $a$ is chosen.
 
 Last but not least, the [policy function](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#policy) ($\pi$) (potentially probabilistic) which is a rule that tells the agent what action to take at some specific state.
 
@@ -39,12 +39,12 @@ Last but not least, the [policy function](/deep-learning/reinforcement-learning/
 
 [Similar to the main objective of RL](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#rl-main-objective), the optimization objective of MDP is to find an optimal policy that maximizes the expected cumulative rewards ([return](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#reward-return--horizon)) over time. The return can be represented in [value function](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#value-function) which is a function that tells us the expected return an agent can obtain from a state under a given policy.
 
-The formula are formulated in [Bellman equation](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#bellman-equation) :
+The formula are formulated in [Bellman equation](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#bellman-equation):
 
-- $V(s) := \sum\limits_{s'} P_{\pi(s)} (s,s') \left( R_{\pi(s)} (s,s') + \gamma V(s') \right)$  
+- $V(s):= \sum\limits_{s'} P_{\pi(s)} (s,s') \left( R_{\pi(s)} (s,s') + \gamma V(s') \right)$  
   The first formula represent the **value function update**. According to the formula, when calculating the expected return from state $s$, we consider the immediate reward $R_{\pi(s)}(s, s')$ received while transitioning to state $s'$ from state $s$, as well as the discounted future reward from $\gamma V(s')$.
 
-- $\pi ( s ) := \operatorname{argmax}_a \left\{ \sum\limits_{s'} P_a (s , s') \left( R_a (s , s') + \gamma V(s') \right) \right\}$  
+- $\pi ( s ):= \operatorname{argmax}_a \left\{ \sum\limits_{s'} P_a (s , s') \left( R_a (s , s') + \gamma V(s') \right) \right\}$  
   The second formula represent the **policy function update**. It will select the action $a$ that yields the highest return from the value function.
 
 The goal is to find the best value and policy function. In order to achieve this goal, we employ these two formulas to iteratively estimates the value function and policy. The technique to approximate value function is also called **value function approximation**.

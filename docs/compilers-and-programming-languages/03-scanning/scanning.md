@@ -5,7 +5,7 @@ title: Scanning
 description: Scanning
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 1 chapter 3**
 - **Book 2 chapter 2**
@@ -21,16 +21,16 @@ Scanning is the first step in [compilation process](/compilers-and-programming-l
 The purpose of scanning is to reduce the input complexity by removing meaningless comments for the parser and eliminating whitespace (e.g., spaces, tabs, carriage returns, newlines), while only preserving the important tokens for the parser.
 
 ![Scanning algorithm for Pascal](./scanning.png)  
-Source : Book 2 page 48
+Source: Book 2 page 48
 
 Above is the outline of scanner algorithm in Pascal programming language. Although it is from a specific language, the similar approach can be used for others. In general, the algorithm should ignore any white spaces. If it encounters unique symbols, it checks the symbol table if it is meaningful for the language. If some keywords are not from the language, it could be user-defined identifier, the compiler will also keep track of this.
 
 The deterministic behavior of scanner can be described with a [finite automaton](/theory-of-computation-and-automata/finite-automata) like [DFA](/theory-of-computation-and-automata/finite-automata#dfa). Deterministic means the system will always know what to do when it encounters any input. The automaton starts with an initial state, then it transitions to other state depending on the symbol encountered. If it reaches a final state, it means it has recognized some token.
 
 ![Finite automaton of Pascal scanner](./finite-automaton.png)  
-Source : Book 2 page 49
+Source: Book 2 page 49
 
-A typical behavior of scanner is :
+A typical behavior of scanner is:
 
 1. If it is unnecessary characters like comments and white lines, ignore them.
 2. If it is single character token, such as operator like `=`, `+`, `-`; literals, punctuations, save it as token.
@@ -49,7 +49,7 @@ See [regular expression to finite automata](/theory-of-computation-and-automata/
 One way to make a scanner is through **scanner generator** (e.g., with a program called Lex). We specify our own regular expression, then the program take it and generate the scanner code in specific language. A scanner generator will generate the logic to tokenize the input source code based on the defined lexical rules. The generator may generate switch statement and nested loop to simulate an automaton behavior.
 
 ![Usage of Flex](./scanner-in-flex.png)  
-Source : Book 1 page 29-30
+Source: Book 1 page 29-30
 
 This is an example of using Flex to generate scanner. Flex takes a specification in `.flex` file to generate `yylex()` function, which acts as the scanner. We will need to create our own `main` function which actually call the `yylex`, and it will save encountered tokens in `yytext` file. The `token.h` header file specify available token that we can use in the scanner. During the build process, the scanner exist in distinct `.c` file and will be linked to create final executable.
 

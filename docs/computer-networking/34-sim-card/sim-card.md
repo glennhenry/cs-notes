@@ -5,7 +5,9 @@ title: SIM Card
 description: SIM Card
 ---
 
-**Main Source : [How do SIM Cards Work? - Techquickie](https://youtu.be/GTCAbmjyEvE?si=_oGqSglZ253CuESu)**
+**Main Source:**
+
+- **[How do SIM Cards Work? — Techquickie](https://youtu.be/GTCAbmjyEvE?si=_oGqSglZ253CuESu)**
 
 **Subscriber Identity Module (SIM Card)** is a small, portable memory card used in mobile devices such as smartphones, tablets, and certain other devices like smartwatches. It provides necessary information to identify and authenticate the user on a [cellular network](/computer-networking/cellular-networking).
 
@@ -14,13 +16,13 @@ The SIM card contains a unique identification number called the **International 
 A SIM card come in different sizes, the size doesn't matter as the main information is stored in the gold plated area. The gold plated area consist of small metallic contact points, these points will come into direct contact with the device's SIM card reader, allowing for the transfer of data and communication between the device and the SIM card.
 
 ![Different SIM card size and how it fit in a phone](./sim-card-size-and-phone.png)  
-Source : https://www.lifewire.com/insert-sim-card-into-smartphone-4777486, https://electronics.howstuffworks.com/how-to-tech/how-to-unlock-cell-phone1.htm
+Source: https://www.lifewire.com/insert-sim-card-into-smartphone-4777486, https://electronics.howstuffworks.com/how-to-tech/how-to-unlock-cell-phone1.htm
 
-Other than identification purposes, SIM card also contains other data including :
+Other than identification purposes, SIM card also contains other data including:
 
-- **Phone Number** : SIM cards store the phone number associated with the subscriber's account. This information allows the network to identify and route calls and messages to the correct device.
+- **Phone Number**: SIM cards store the phone number associated with the subscriber's account. This information allows the network to identify and route calls and messages to the correct device.
 
-- **Contacts and SMS** : SIM cards have limited storage space to store contacts and SMS messages. Users can save phone numbers and text messages directly on the SIM card, which can be useful for transferring contacts between devices or as a backup.
+- **Contacts and SMS**: SIM cards have limited storage space to store contacts and SMS messages. Users can save phone numbers and text messages directly on the SIM card, which can be useful for transferring contacts between devices or as a backup.
 
 ### How does it works
 
@@ -39,4 +41,4 @@ The secret key is actually the IMSI and authentication key (also stored in SIM c
 This authentication process is called **Challenge-Response Authentication (CRA)**. Different cellular networking technology (such as GSM, UMTS, LTE, or 5G) may have different process and the security protocols implemented by the network operator.
 
 ![SIM card connection](./sim-card-connection.jpg)  
-Source : https://www.wharftt.com/identifying-and-fixing-a-damaged-sim-card-know-the-signs-and-solutions/
+Source: https://www.wharftt.com/identifying-and-fixing-a-damaged-sim-card-know-the-signs-and-solutions/

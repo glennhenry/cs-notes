@@ -5,17 +5,17 @@ title: Interrupt Handling
 description: Interrupt Handling
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Interrupt - Wikipedia](https://en.wikipedia.org/wiki/Interrupt)**
-- **[Interrupt handler - Wikipedia](https://en.wikipedia.org/wiki/Interrupt_handler)**
+- **[Interrupt — Wikipedia](https://en.wikipedia.org/wiki/Interrupt)**
+- **[Interrupt handler — Wikipedia](https://en.wikipedia.org/wiki/Interrupt_handler)**
 
 Interrupt is a signal or event that interrupts the normal execution flow of a program or the operation of a computer system. When an interrupt occurs, the processor stops its current task and call the **interrupt handler** to resolve the interrupt event.
 
 Interrupt make it possible for an event that is time-sensitive or critical to be handled as soon as possible. They allow the computer system to respond quickly to external events and perform necessary actions without wasting time polling (the act of actively checking something) or waiting for events to occur.
 
 ![Polling vs interrupt](./polling-vs-interrupt.png)  
-Source : https://www.theengineeringprojects.com/2021/12/esp32-interrupts.html
+Source: https://www.theengineeringprojects.com/2021/12/esp32-interrupts.html
 
 ### Type of Interrupt
 
@@ -56,7 +56,7 @@ An interrupt controller is a hardware component responsible for managing and pri
 The interrupt signal is typically connected to a dedicated interrupt line, known as an **Interrupt Request (IRQ) line**. Each hardware device that can generate interrupts is connected to a specific IRQ line. The IRQ lines are part of the system's physical wiring and are connected to the interrupt controller or processor.
 
 ![Interrupt controller](./interrupt-controller.png)  
-Source : https://www.javatpoint.com/what-is-interrupt-in-os
+Source: https://www.javatpoint.com/what-is-interrupt-in-os
 
 The primary functions of an interrupt controller include receiving interrupt signals, assign priority levels to interrupts based on their significance, [masking](#masking), route the interrupt to their corresponding handler.
 
@@ -71,4 +71,4 @@ The specific handling depends on hardware architecture and specific devices that
 After the interrupt handler completes its execution, control is returned to the interrupted program or task. The hardware restores the saved context and resume the program execution from the point where it was interrupted.
 
 ![Interrupt handling](./interrupt-handling.png)  
-Source : https://www.scaler.com/topics/operating-system/interrupt-handling/
+Source: https://www.scaler.com/topics/operating-system/interrupt-handling/

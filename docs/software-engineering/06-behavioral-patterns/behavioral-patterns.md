@@ -5,7 +5,7 @@ title: Behavioral Patterns
 description: Behavioral Patterns
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **[Behavioral Design Patterns - Refatoring Guru](https://refactoring.guru/design-patterns/behavioral-patterns)**
 
@@ -15,7 +15,7 @@ Behavioral patterns are design patterns that focus on the interaction and commun
 
 Command pattern encapsulates a request as an object that contains information about the request. It is basically modeling action in terms of object-oriented. Each command object encapsulates a specific request along with any necessary parameters. We can provide useful information in the object, such as what it executes briefly, which allows us to support undo-redo operations.
 
-Consider a simplified text editor :
+Consider a simplified text editor:
 
 ```kotlin
 class TextEditor {
@@ -51,7 +51,7 @@ If we were to implement undo functionality, one way to do that is storing a list
 
 Following command pattern, we would make another object that encapsulate the writing or deleting operation along with extra information, and another class that handles undo operation. With the given information, we will reverse the text operation.
 
-The text commands :
+The text commands:
 
 ```kotlin
 sealed interface TextCommand {
@@ -64,14 +64,14 @@ sealed interface TextCommand {
         override val content: String,
         override val start: Int,
         override val end: Int = content.length
-    ) : TextCommand
+    ): TextCommand
 
     // move content to last, so by default we don't have to specify it
     data class Delete(
         override val start: Int,
         override val end: Int,
         override val content: String = "" // only used for undoing
-    ) : TextCommand
+    ): TextCommand
 }
 ```
 
@@ -113,7 +113,7 @@ class TextCommandInvoker(private val textEditor: TextEditor) {
 
 We move all the code to `TextCommandInvoker`, a class responsible for executing the text command. It will execute command based on the type of command it received. Any text command will be identified by `TextCommand` sealed interface. It will also keep track the text edit history by adding the command to a list for undoing operation. This will reduce much more space than if we were to store the copy of string each time we edit it.
 
-Sample usage :
+Sample usage:
 
 ```kotlin
 fun main() {
@@ -135,7 +135,7 @@ We will now do any text edit from `TextCommandInvoker`.
 
 Iterator patterns provide a way to access elements of a collection (array, list, stack, tree, etc.) sequentially without exposing the underlying implementation details.
 
-A traditional way of accessing a list would be :
+A traditional way of accessing a list would be:
 
 ```kotlin
 fun main() {
@@ -166,7 +166,7 @@ class SimpleIterator(private val collection: List<Int>) {
 }
 ```
 
-We created a simple iterator class, for simplicity, it can only take a list of integers. It still stores index under the hood, but it always checks if the index is out of bound using the `hasNext` method. User would use this iterator like :
+We created a simple iterator class, for simplicity, it can only take a list of integers. It still stores index under the hood, but it always checks if the index is out of bound using the `hasNext` method. User would use this iterator like:
 
 ```kotlin
 fun main() {
@@ -256,7 +256,7 @@ class Youtuber(val name: String) {
 }
 ```
 
-We also modified the `Subscriber` class for `notify` method. To use it :
+We also modified the `Subscriber` class for `notify` method. To use it:
 
 ```kotlin
 fun main() {
@@ -288,12 +288,12 @@ One way to do this is by defining a state with an interface, and then each diffe
 
 An example would be a vending machine that operates differently based on its current condition, such as if an item is selected or not.
 
-The vending machine operates as follows :
+The vending machine operates as follows:
 
-- When a user selects an item :
+- When a user selects an item:
   - If the item has not been selected yet, it is selected.
   - If the item has already been selected, no action is taken.
-- When a user dispenses an item :
+- When a user dispenses an item:
   - If no item has been selected yet, no action is taken.
   - If an item has already been selected, it is dispensed.
 
@@ -305,7 +305,7 @@ interface VendingMachineState {
     fun handleDispense(): VendingMachineState
 }
 
-class NoSelectionState : VendingMachineState {
+class NoSelectionState: VendingMachineState {
     override fun handleSelection(item: String): VendingMachineState {
         println("Selected item: $item")
         return ItemSelectedState()
@@ -317,7 +317,7 @@ class NoSelectionState : VendingMachineState {
     }
 }
 
-class ItemSelectedState : VendingMachineState {
+class ItemSelectedState: VendingMachineState {
     override fun handleSelection(item: String): VendingMachineState {
         println("Item $item is already selected.")
         return this
@@ -330,7 +330,7 @@ class ItemSelectedState : VendingMachineState {
 }
 ```
 
-The vending machine simply takes action by "asking" its current state :
+The vending machine simply takes action by "asking" its current state:
 
 ```kotlin
 class VendingMachine {
@@ -361,7 +361,7 @@ fun main() {
     vm.dispenseItem()
 
     /*
-    Output :
+    Output:
         Selected item: Coke
         Dispensing item...
         Please select an item first.
@@ -382,7 +382,7 @@ The advantage of the state pattern is that it simplifies the modeling of state m
 
 Chain of responsibility pattern allows an object to pass a request in a chain of potential handlers. Each handler in the chain has the ability to handle the request or pass it to the next handler in the chain. A request can be handled by multiple handlers.
 
-Consider a chain of mathematical arithmetic handler that we can choose which operation to do. Obviously it is unnecessary to use this pattern for it, but this is for the sake of example. Here's a simplified implementation of this :
+Consider a chain of mathematical arithmetic handler that we can choose which operation to do. Obviously it is unnecessary to use this pattern for it, but this is for the sake of example. Here's a simplified implementation of this:
 
 ```kotlin
 abstract class MathHandler {
@@ -401,10 +401,10 @@ If it's not their responsibility, they simply pass the request to the next handl
 `lateinit` keyword mark a property as being "late initialized". We will not define the chain of handler here, it is done in another portion of code. The use of this keyword help us to avoid temporarily assigning `nextHandler` to default value like null, which could cause issues.
 :::
 
-And here's all the operator implemented :
+And here's all the operator implemented:
 
 ```kotlin
-class AdditionHandler : MathHandler() {
+class AdditionHandler: MathHandler() {
     override fun handle(request: MathRequest): Int {
         if (request.operator == '+') {
             return request.operand1 + request.operand2
@@ -414,7 +414,7 @@ class AdditionHandler : MathHandler() {
     }
 }
 
-class SubtractionHandler : MathHandler() {
+class SubtractionHandler: MathHandler() {
     override fun handle(request: MathRequest): Int {
         if (request.operator == '-') {
             return request.operand1 - request.operand2
@@ -424,7 +424,7 @@ class SubtractionHandler : MathHandler() {
     }
 }
 
-class MultiplicationHandler : MathHandler() {
+class MultiplicationHandler: MathHandler() {
     override fun handle(request: MathRequest): Int {
         if (request.operator == '*') {
             return request.operand1 * request.operand2
@@ -434,7 +434,7 @@ class MultiplicationHandler : MathHandler() {
     }
 }
 
-class DivisionHandler : MathHandler() {
+class DivisionHandler: MathHandler() {
     override fun handle(request: MathRequest): Int {
         if (request.operator == '/') {
             return request.operand1 / request.operand2
@@ -444,7 +444,7 @@ class DivisionHandler : MathHandler() {
     }
 }
 
-class UnknownHandler : MathHandler() {
+class UnknownHandler: MathHandler() {
     override fun handle(request: MathRequest): Int {
         return 0
     }

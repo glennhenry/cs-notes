@@ -5,17 +5,17 @@ title: Software Testing
 description: Software Testing
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Software testing - Wikipedia](https://en.wikipedia.org/wiki/Software_testing)**
-- **[Test double](https://en.wikipedia.org/wiki/Test_double)**
+- **[Software testing — Wikipedia](https://en.wikipedia.org/wiki/Software_testing)**
+- **[Test double — Wikipedia](https://en.wikipedia.org/wiki/Test_double)**
 
 **Software Testing** is a process of evaluating a software application to determine whether it meets the specified requirements and performs as expected.
 
-The main objectives of testing are :
+The main objectives of testing are:
 
-- **Finding defects** : Before software is released, it is important to test their behavior. Testing helps in identifying bugs or defects in the software.
-- **Verifying functionality & validating requirements** : When developing software, we have initial target and intended functionality. The process of testing the software involves verifying and validating it against our specified requirements.
+- **Finding defects**: Before software is released, it is important to test their behavior. Testing helps in identifying bugs or defects in the software.
+- **Verifying functionality & validating requirements**: When developing software, we have initial target and intended functionality. The process of testing the software involves verifying and validating it against our specified requirements.
 
 ### Testing Approach
 
@@ -23,18 +23,18 @@ There are many approaches of testing that can be categorized based on different 
 
 #### Based on the execution time
 
-- **Static** : We do not execute the code in static testing. Typically, static testing revolve around code reviews or inspections. We do static testing by relying on compiler to check syntax or using specific static analysis tool.
-- **Dynamic** : In contrast to static, dynamic testing runs the program. Dynamic testing focuses on evaluating the behavior and performance of the software under various conditions and inputs.
-- **Passive** : We also run the program in passive testing, but we do not interact with it directly. In passive testing, we gather information about the programs' behavior, usage patterns, or performance characteristics. Passive testing may involve techniques such as logging, tracing, profiling, or analyzing system logs and metrics.
+- **Static**: We do not execute the code in static testing. Typically, static testing revolve around code reviews or inspections. We do static testing by relying on compiler to check syntax or using specific static analysis tool.
+- **Dynamic**: In contrast to static, dynamic testing runs the program. Dynamic testing focuses on evaluating the behavior and performance of the software under various conditions and inputs.
+- **Passive**: We also run the program in passive testing, but we do not interact with it directly. In passive testing, we gather information about the programs' behavior, usage patterns, or performance characteristics. Passive testing may involve techniques such as logging, tracing, profiling, or analyzing system logs and metrics.
 
 #### Manual
 
-Manual testing involve human intervention in the testing process. Software testers will verify the software behavior against different conditions and inputs. There are many ways manual testing can be performed :
+Manual testing involve human intervention in the testing process. Software testers will verify the software behavior against different conditions and inputs. There are many ways manual testing can be performed:
 
-- **Entering inputs by hand** : The tester run the program, through the user interface (e.g., terminal or GUI), the tester will test different scenario by inputting both valid and invalid data to the software. The tester then see the result and verify its correctness. An example of this would be checking if clicking the back button in the GUI actually navigate us back.
-- **Entering inputs by code (semi-automated)** : Having to interact with the software to test its behavior can slow us down. It can be time-consuming to test the behavior against a bunch of different inputs and cases. Software tester may make a script or code snippets dedicated to test the programs' behavior.
+- **Entering inputs by hand**: The tester run the program, through the user interface (e.g., terminal or GUI), the tester will test different scenario by inputting both valid and invalid data to the software. The tester then see the result and verify its correctness. An example of this would be checking if clicking the back button in the GUI actually navigate us back.
+- **Entering inputs by code (semi-automated)**: Having to interact with the software to test its behavior can slow us down. It can be time-consuming to test the behavior against a bunch of different inputs and cases. Software tester may make a script or code snippets dedicated to test the programs' behavior.
 
-  Consider a calculator app, there is a function that adds two number :
+  Consider a calculator app, there is a function that adds two number:
 
   ```kotlin
   fun addTwoNumber(num1: Int, num2: Int): Int {
@@ -50,7 +50,7 @@ Manual testing involve human intervention in the testing process. Software teste
   }
   ```
 
-  Here, we are testing its behavior against negative number input. `addTwoNumber(-2, -3)` is expected to return -5. By calling the `addTwoNumber_negative` function, we can print its result to the console. It is so much faster than interacting with the UI. We can make a bunch more function to test :
+  Here, we are testing its behavior against negative number input. `addTwoNumber(-2, -3)` is expected to return -5. By calling the `addTwoNumber_negative` function, we can print its result to the console. It is so much faster than interacting with the UI. We can make a bunch more function to test:
 
   ```kotlin
   fun addTwoNumber_positive() {
@@ -70,7 +70,7 @@ Manual testing involve human intervention in the testing process. Software teste
   }
   ```
 
-  And then effortlessly test all this behavior by :
+  And then effortlessly test all this behavior by:
 
   ```kotlin
   fun main() {
@@ -83,7 +83,7 @@ Manual testing involve human intervention in the testing process. Software teste
 
   By just running it, we already see the result of 4 different inputs. However, the **tester still need to see manually** the result of this function in the console. This approach can be improved by making it fully automated, which will be explained next.
 
-- **Exploratory** : In exploratory, the tester doesn't have specific plan to follow. The test is focused on exploring the behavior of the application, they make on-the-spot decisions about what to test, how to test, and what areas of the software need more attention. One potential downside of exploratory testing is the possibility of missing certain test cases or areas that were not covered during the exploration.
+- **Exploratory**: In exploratory, the tester doesn't have specific plan to follow. The test is focused on exploring the behavior of the application, they make on-the-spot decisions about what to test, how to test, and what areas of the software need more attention. One potential downside of exploratory testing is the possibility of missing certain test cases or areas that were not covered during the exploration.
 
 #### Automated
 
@@ -95,7 +95,7 @@ An automated testing tool involves execution engine, which will call the tests f
 
 An example of automated testing tool in Kotlin is the JUnit framework. Basically, JUnit require us to identify which function it should execute when we run the test. It also let us define our expectation of the function by using **assertions**.
 
-Assertions are statements that check whether a given condition is true during the execution of a test case. Let's get to an example :
+Assertions are statements that check whether a given condition is true during the execution of a test case. Let's get to an example:
 
 ```kotlin
 import org.junit.jupiter.api.Test
@@ -164,38 +164,38 @@ All the report produced by JUnit, such as the logs and call stack, are called [t
 
 Box approaches describe the point of view that the testers are taking.
 
-- **White-box** : Tester focuses on testing the internal structure, logic, and implementation details of a system. Testers have access to the internal code, data structures, and algorithms of the system and design test cases based on this knowledge. In white-box testing, we can about how the system does the logic.
-- **Black-box** : Black box testing focuses on testing the functionality of a system without considering its internal structure or implementation details. Testers treat the system as a "black box" and only interact with it through its inputs and outputs. They are unaware of how the system processes the inputs or produces the outputs. In contrast to white-box testing, we do not care how a system does the logic, we are concerned with the expected behavior of the system.
-- **Grey-box** : The grey-box is the hybrid approach of white-box and black-box testing. The testers test the system's behavior, but they also have the implementation details.
+- **White-box**: Tester focuses on testing the internal structure, logic, and implementation details of a system. Testers have access to the internal code, data structures, and algorithms of the system and design test cases based on this knowledge. In white-box testing, we can about how the system does the logic.
+- **Black-box**: Black box testing focuses on testing the functionality of a system without considering its internal structure or implementation details. Testers treat the system as a "black box" and only interact with it through its inputs and outputs. They are unaware of how the system processes the inputs or produces the outputs. In contrast to white-box testing, we do not care how a system does the logic, we are concerned with the expected behavior of the system.
+- **Grey-box**: The grey-box is the hybrid approach of white-box and black-box testing. The testers test the system's behavior, but they also have the implementation details.
 
 ### Levels of Testing
 
-- **Unit Testing** : Unit testing focuses on testing individual units or components of the software, such as functions, methods, or classes, in isolation. It aims to verify that each unit behaves as expected. The one with did in [automated testing](#automated) was a unit test. It is common in unit testing to have several functions that responsible for testing specific lines of code or behavior.
-- **Integration Testing** : Integration testing verifies the interaction and integration between different components or modules of the software. It ensures that these components work together correctly. Integration tests are designed to identify issues that arise when different units are combined.
-- **System Testing** : System testing focuses on testing the entire system as a whole. System tests cover various aspects, including functional requirements, performance, security, usability, and compatibility.
-- **Acceptance Testing** : Acceptance testing is conducted to ensure that the software meets the customer's requirements or predetermined criteria and is ready for deployment.
+- **Unit Testing**: Unit testing focuses on testing individual units or components of the software, such as functions, methods, or classes, in isolation. It aims to verify that each unit behaves as expected. The one with did in [automated testing](#automated) was a unit test. It is common in unit testing to have several functions that responsible for testing specific lines of code or behavior.
+- **Integration Testing**: Integration testing verifies the interaction and integration between different components or modules of the software. It ensures that these components work together correctly. Integration tests are designed to identify issues that arise when different units are combined.
+- **System Testing**: System testing focuses on testing the entire system as a whole. System tests cover various aspects, including functional requirements, performance, security, usability, and compatibility.
+- **Acceptance Testing**: Acceptance testing is conducted to ensure that the software meets the customer's requirements or predetermined criteria and is ready for deployment.
 
 ### Test Artifacts
 
 Test artifacts refer to the documentation or deliverables produced during the testing process. These artifacts provide a record of the testing activities, test design, test execution, and test results.
 
-- **Test Plan** : A test plan outlines the overall testing strategy, objectives, scope, and approach for a specific testing effort.
-- **Test Cases** : Test cases are detailed instructions or steps that testers follow to execute a specific test scenario. They include inputs, expected outputs, and any preconditions or postconditions.
-- **Test Suite** : A collection of test cases that are intended to test a set of behaviors.
-- **Test Scripts** : Test scripts are automated scripts or programs written to execute test cases automatically.
-- **Test Data** : Test data is the input data used for executing test cases. It includes both valid and invalid data to cover different scenarios.
-- **Test Logs** : Test logs capture the details of the testing activities, including test execution results, defects found, and any issues or observations during testing.
+- **Test Plan**: A test plan outlines the overall testing strategy, objectives, scope, and approach for a specific testing effort.
+- **Test Cases**: Test cases are detailed instructions or steps that testers follow to execute a specific test scenario. They include inputs, expected outputs, and any preconditions or postconditions.
+- **Test Suite**: A collection of test cases that are intended to test a set of behaviors.
+- **Test Scripts**: Test scripts are automated scripts or programs written to execute test cases automatically.
+- **Test Data**: Test data is the input data used for executing test cases. It includes both valid and invalid data to cover different scenarios.
+- **Test Logs**: Test logs capture the details of the testing activities, including test execution results, defects found, and any issues or observations during testing.
 
 ### Types, Techniques, and Tactics of Testing
 
-- **Smoke Testing** : A testing done in early development to test primary or basic functionality of software.
-- **Stress Testing** : Stress testing subject the software to high loads or unfavorable conditions beyond its normal operating capacity. It helps identify performance bottlenecks, stability issues, and failure points under stress.
-- **Regression Testing** : Testing performed after a major change to the code. It ensures that changes or updates to the software do not introduce new defects or adversely impact existing functionality.
-- **Alpha & Beta Testing** : These tests occur before releasing the software to external users. They are typically done by a software development team or group of chosen testers.
-- **Functional & Non-functional Testing** : Functional testing verify the software functionality, while non-functional testing focuses on evaluating the software's non-functional aspects, such as performance, security, usability, reliability, and compatibility.
-- **Accessibility Testing** : Accessibility testing ensures that the software can be used by people with disabilities. It focuses on verifying whether the software is accessible to individuals with visual, auditory, motor, or cognitive impairments.
-- **Internationalization & Localization** : Internationalization (i18n) ensures that software is adaptable and customizable for different languages, regions, and cultures. Localization (l10n) adapt software to specific locale or target market, such as adapting date and time formats.
-- **A/B Testing** : A/B testing compares two or more versions of software feature to determine which one performs better. It involves dividing the user base into different groups and exposing each group to a different version. The results and user behavior are analyzed to determine the version that yields better outcomes, such as higher conversion rates, user engagement, or usability.
+- **Smoke Testing**: A testing done in early development to test primary or basic functionality of software.
+- **Stress Testing**: Stress testing subject the software to high loads or unfavorable conditions beyond its normal operating capacity. It helps identify performance bottlenecks, stability issues, and failure points under stress.
+- **Regression Testing**: Testing performed after a major change to the code. It ensures that changes or updates to the software do not introduce new defects or adversely impact existing functionality.
+- **Alpha & Beta Testing**: These tests occur before releasing the software to external users. They are typically done by a software development team or group of chosen testers.
+- **Functional & Non-functional Testing**: Functional testing verify the software functionality, while non-functional testing focuses on evaluating the software's non-functional aspects, such as performance, security, usability, reliability, and compatibility.
+- **Accessibility Testing**: Accessibility testing ensures that the software can be used by people with disabilities. It focuses on verifying whether the software is accessible to individuals with visual, auditory, motor, or cognitive impairments.
+- **Internationalization & Localization**: Internationalization (i18n) ensures that software is adaptable and customizable for different languages, regions, and cultures. Localization (l10n) adapt software to specific locale or target market, such as adapting date and time formats.
+- **A/B Testing**: A/B testing compares two or more versions of software feature to determine which one performs better. It involves dividing the user base into different groups and exposing each group to a different version. The results and user behavior are analyzed to determine the version that yields better outcomes, such as higher conversion rates, user engagement, or usability.
 
 ### Terminologies
 
@@ -205,7 +205,7 @@ In unit testing, we can make several functions, with each testing a specific beh
 
 Code coverage is a metric that measures the extent to which the source code of a software application is exercised during testing. It determines the percentage of code lines, branches, or paths covered by the executed tests.
 
-Consider this function :
+Consider this function:
 
 ```kotlin
 fun isGreaterThanN(x: Int, n: Int): Boolean {
@@ -217,7 +217,7 @@ fun isGreaterThanN(x: Int, n: Int): Boolean {
 }
 ```
 
-If we only run this test :
+If we only run this test:
 
 ```kotlin
 fun test_isGreaterThanN_greater() {
@@ -312,8 +312,8 @@ The developers write test case that obviously will fail. The test case should co
 
 TDD treats test as specification of the program, they are assumed to be what define the program's target. Whenever a test fails, then only the code can change. Therefore, it's very important to make a test that truly reflect the desired behavior of the program. However, it is worth noting that as software requirements evolve or tests become obsolete, it is permissible and necessary to update or remove tests accordingly.
 
-Benefits of TDD :
+Benefits of TDD:
 
-- **Reliable code** : As long as the tests are correct, then code should behave as expected and reduces the likelihood of introducing bugs or regressions.
-- **Faster feedback loop** : With TDD, developers receive immediate feedback on their code. Failing tests highlight issues in the code, enabling developers to quickly identify and fix problems.
-- **Incremental Development** : The lifecycle of TDD promotes incremental development. Developers write tests for a specific functionality, implement the code to make the tests pass, and then refactor if necessary. The process reduces the risk of building unnecessary complex feature.
+- **Reliable code**: As long as the tests are correct, then code should behave as expected and reduces the likelihood of introducing bugs or regressions.
+- **Faster feedback loop**: With TDD, developers receive immediate feedback on their code. Failing tests highlight issues in the code, enabling developers to quickly identify and fix problems.
+- **Incremental Development**: The lifecycle of TDD promotes incremental development. Developers write tests for a specific functionality, implement the code to make the tests pass, and then refactor if necessary. The process reduces the risk of building unnecessary complex feature.

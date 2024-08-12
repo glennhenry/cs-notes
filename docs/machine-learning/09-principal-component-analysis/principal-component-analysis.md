@@ -5,10 +5,10 @@ title: Principal Component Analysis
 description: Principal Component Analysis
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Principal Component Analysis (PCA) - Visually Explained](https://youtu.be/FD4DeN81ODY?si=3nPG5l8ELjKh1ek5)**
-- **[Wikipedia Principal component analysis](https://en.wikipedia.org/wiki/Principal_component_analysis)**
+- **[Principal Component Analysis (PCA) — Visually Explained](https://youtu.be/FD4DeN81ODY?si=3nPG5l8ELjKh1ek5)**
+- **[Principal component analysis — Wikipedia](https://en.wikipedia.org/wiki/Principal_component_analysis)**
 
 **Principal Component Analysis (PCA)** is a technique to simplify complex data, it works by reducing dimensionality of data. By reducing dimension, it means that if a data has many features or a data with many variable, PCA allows us to transform this data into a new representation that captures the most important patterns or variations in the data. It is a method that transforms a dataset into a new coordinate system, called the principal components.
 
@@ -17,7 +17,7 @@ For example, this image below shows a 3-dimensional data. For any reason, we wan
 The key idea of using PCA in here is to project the 3-dimensional data into 2-dimension without losing information, the feature of reduced dimension will still taken by account.
 
 ![3-d data reduced to 2-d](./pca-example.png)  
-Source : https://towardsdatascience.com/pca-clearly-explained-how-when-why-to-use-it-and-feature-importance-a-guide-in-python-7c274582c37e
+Source: https://towardsdatascience.com/pca-clearly-explained-how-when-why-to-use-it-and-feature-importance-a-guide-in-python-7c274582c37e
 
 ### Principal Component
 
@@ -46,7 +46,7 @@ Solving a constrained optimization problem involve using the lagrange multiplier
 Solving the problem further, it produced an eigenvectors and eigenvalues equation, where the matrix in the equation is the covariance matrix. The eigenvalues represent the amount of variance captured by each corresponding eigenvector (principal component) in the dataset.
 
 ![Eigenvector equation](./eigenvector.png)  
-Source : https://youtu.be/FD4DeN81ODY?si=wwoMIXF5Wwy6-0x4&t=192
+Source: https://youtu.be/FD4DeN81ODY?si=wwoMIXF5Wwy6-0x4&t=192
 
 After obtaining the eigenvalue equation with the covariance matrix in PCA, the next step is to solve this equation to find the eigenvalues. The solution is the highest variation or the highest previously projection result in the covariance matrix.
 
@@ -59,4 +59,4 @@ After projecting the data for the first time, called as first principal componen
 PCA takes account all feature in high dimension and transform it into 2D where the axes of PCA (the component) shows how high a data is compared to other. Each data point is typically mapped onto the line and also sorted. Overall, PCA provides way to visualize high dimensional data by also considering all the feature.
 
 ![First and second component of PCA](./first-second-component.gif)  
-Source : https://medium.com/@raghavan99o/principal-component-analysis-pca-explained-and-implemented-eeab7cb73b72
+Source: https://medium.com/@raghavan99o/principal-component-analysis-pca-explained-and-implemented-eeab7cb73b72

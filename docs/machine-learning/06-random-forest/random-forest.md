@@ -5,17 +5,17 @@ title: Random Forest
 description: Random Forest
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Visual Guide to Random Forests - Econoscent](https://youtu.be/cIbj0WuK41w?si=Ck0xYB7UXpLJqE0F)**
-- **[Random Forest Algorithm Clearly Explained! - Normalized Nerd](https://youtu.be/v6VJ2RO66Ag?si=blojC7xpDh1oSw4V)**
+- **[Visual Guide to Random Forests — Econoscent](https://youtu.be/cIbj0WuK41w?si=Ck0xYB7UXpLJqE0F)**
+- **[Random Forest Algorithm Clearly Explained! — Normalized Nerd](https://youtu.be/v6VJ2RO66Ag?si=blojC7xpDh1oSw4V)**
 
 **Random Forest** is another machine learning technique used for classification and regression tasks. Random forest uses the previous technique, which is [decision trees](/machine-learning/decision-trees), it combines multiple individual of tree to produce a single result of prediction.
 
 Random forest is a form of ensemble learning, which is a concept where we combine multiple machine learning model to create a more powerful and accurate predictive model.
 
 ![Decision trees combined](./random-forest.png)  
-Source : https://serokell.io/blog/random-forest-classification
+Source: https://serokell.io/blog/random-forest-classification
 
 The goal of a [decision tree](/machine-learning/decision-trees#entropy), as discussed in the topic of decision tree entropy and information gain, is to iteratively split the dataset until we can successfully differentiate between different labels or category.
 
@@ -36,14 +36,14 @@ Aggregating also introduces randomness, the trees become more independent and wi
 After assigning feature to each tree, the tree will be trained on some sample data. Each tree will be trained on the same data size as the original training data. It may contain duplicate instances and lack some instances from the original data. This process is called **bootstraping** and the samples are called **bootstrap samples**.
 
 ![Decision tree handle specific features](./decision-tree-division.png)  
-Source : https://youtu.be/v6VJ2RO66Ag?si=JQ9By3pUHDSXJGq6&t=293
+Source: https://youtu.be/v6VJ2RO66Ag?si=JQ9By3pUHDSXJGq6&t=293
 
 #### Majority Voting
 
 To use random forest to predict a new unknown data, random forest uses the voting concept. This mean the new data with some features will be processed to corresponding tree that handles it. Each tree will decide what label or category does the new data belongs to. All the result will be combined and the most label will be the result of the prediction.
 
 ![Majority voting in random forest](./majority-voting.png)  
-Source : https://youtu.be/v6VJ2RO66Ag?si=SeQePcebnrmx20fW&t=346
+Source: https://youtu.be/v6VJ2RO66Ag?si=SeQePcebnrmx20fW&t=346
 
 ### Random Forest Regression
 

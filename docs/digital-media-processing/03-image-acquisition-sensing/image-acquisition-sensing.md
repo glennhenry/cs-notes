@@ -8,9 +8,9 @@ description: Image Acquisition & Sensing
 **Main Source:**
 
 - **[Digital Imaging — Wikipedia](https://en.wikipedia.org/wiki/Digital_imaging)**
-- **[Sensor — Wikipedia ](https://en.wikipedia.org/wiki/Sensor)**
-- **[Face detection — Wikipedia ](https://en.wikipedia.org/wiki/Face_detection)**
-- **[Image Segmentation — Wikipedia ](https://en.wikipedia.org/wiki/Image_segmentation)**
+- **[Sensor — — Wikipedia](https://en.wikipedia.org/wiki/Sensor)**
+- **[Face detection — — Wikipedia](https://en.wikipedia.org/wiki/Face_detection)**
+- **[Image Segmentation — — Wikipedia](https://en.wikipedia.org/wiki/Image_segmentation)**
 
 **Sensing** refers to the detection and measurement of physical phenomena. The device to detect or responds to a specific physical stimulus or environmental condition is called **sensor**.
 

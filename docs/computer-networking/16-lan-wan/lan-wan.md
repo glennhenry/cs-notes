@@ -5,11 +5,11 @@ title: LAN & WAN
 description: LAN & WAN
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Wikipedia Local area network](https://en.wikipedia.org/wiki/Local_area_network)**
-- **[LAN, WAN, SUBNET - EXPLAINED | PowerCert](https://youtu.be/NyZWSvSj8ek?si=cWLETY4kctAN1tBz)**
-- **[VLAN Explained | PowerCert](https://youtu.be/jC6MJTh9fRE?si=CHBC4RogtqYM7v5c)**
+- **[Local area netweork — Wikipedia](https://en.wikipedia.org/wiki/Local_area_network)**
+- **[LAN, WAN, SUBNET - EXPLAINED — PowerCert](https://youtu.be/NyZWSvSj8ek?si=cWLETY4kctAN1tBz)**
+- **[VLAN Explained — PowerCert](https://youtu.be/jC6MJTh9fRE?si=CHBC4RogtqYM7v5c)**
 
 ### LAN
 
@@ -20,7 +20,7 @@ LANs connect multiple devices within the network, such as computers, printers, s
 LANs also supports the sharing of resources among connected devices. This includes sharing files, printers, internet access, and other network-connected devices or services.
 
 ![LAN that consists of connected local devices to hub](./lan.png)  
-Source : https://www.arduinoindonesia.id/2023/05/penjelasan-tentang-jaringan-lan-local-area-network.html
+Source: https://www.arduinoindonesia.id/2023/05/penjelasan-tentang-jaringan-lan-local-area-network.html
 
 ### WAN
 
@@ -31,7 +31,7 @@ WANs often rely on the services of telecommunication companies or internet servi
 WANs also support a wide range of applications and services, including file sharing, email, video conferencing, remote access, cloud computing, and centralized data storage.
 
 ![WAN connects LAN together](./wan.png)  
-Source : https://www.sangfor.com/glossary/cloud-and-infrastructure/what-is-wide-area-network-wan
+Source: https://www.sangfor.com/glossary/cloud-and-infrastructure/what-is-wide-area-network-wan
 
 ### Virtual Local Area Network (VLAN)
 
@@ -42,4 +42,4 @@ By dividing network traffic, VLAN offers simpler network, traffic reduction, and
 Network division works by assigning VLAN ID or VLAN tag to each VLAN. These IDs are used to uniquely identify which VLAN a network packet or frame belongs to. Network devices such as [switch](/computer-networking/switch) may be configured to associate specific ports with particular VLANs. This association determines which VLAN a device belongs to. Devices connected to the same VLAN-configured ports are considered members of the same VLAN.
 
 ![VLAN divided four computers into two by assigning ID 10 and 20](./vlan.png)  
-Source : https://bardimin.com/network/mengenal-vlan-dalam-jaringan/
+Source: https://bardimin.com/network/mengenal-vlan-dalam-jaringan/

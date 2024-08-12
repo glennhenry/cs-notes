@@ -5,21 +5,21 @@ title: IP Address
 description: IP Address
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[IP Address - IPv4 vs IPv6 | PowerCert](https://youtu.be/ThdO9beHhpA)**
-- **[Public vs Private IP Address | PowerCert](https://youtu.be/po8ZFG0Xc4Q)**
+- **[IP Address - IPv4 vs IPv6 — PowerCert](https://youtu.be/ThdO9beHhpA)**
+- **[Public vs Private IP Address — PowerCert](https://youtu.be/po8ZFG0Xc4Q)**
 
 In a network, there are many computer or device connecting together. There should be a way to distinguish between these device. **Internet Protocol address (IP address)** is an identifier assigned to each device that is connected to a computer network. It serves two main purposes: identifying the host or network interface and providing the location of the device in the network.
 
 IP address is divided by 2 part, the first part identify the network and the second part identify the host. This is useful when there is multiple device on a single network, like the following image.
 
 ![IP address assigned to each computer in network](./ip-address-in-network.png)  
-Source : https://techhub.hpe.com/eginfolib/networking/docs/switches/5130ei/5200-3942_l3-ip-svcs_cg/content/483572281.htm
+Source: https://techhub.hpe.com/eginfolib/networking/docs/switches/5130ei/5200-3942_l3-ip-svcs_cg/content/483572281.htm
 
 The above network and the below differs in the third segment of the number, the computer inside the network differs in the fourth segment.
 
-### Type of IP Address : IPv4 vs IPv6
+### Type of IP Address: IPv4 vs IPv6
 
 There are two types of IP address, IPv4 and IPv6. The difference between them is how many possible IP address can be made.
 
@@ -32,7 +32,7 @@ Computer will then convert the IP address to binary format that only uses 0 and 
 An IPv4 IP Address is 32 bits, this mean if we try all possible combination between each set of number, there is $256^4$ or approximately 4.3 billion unique combination possible.
 
 ![An example of IPv4](./ipv4.png)  
-Source : https://id.wikipedia.org/wiki/Alamat_IP_versi_4
+Source: https://id.wikipedia.org/wiki/Alamat_IP_versi_4
 
 #### IPv6
 
@@ -45,7 +45,7 @@ The full address results in $16\text{-bit} \times 8 = 128\text{-bit}$. With 128 
 IPv6 is designed to be compatible with existing IPv4 networks. This mean, it can still communicate with devices and networks running IPv4. The common way to do this is through the technique called dual stack. In dual stack, the device will be able to read both IPv4 and IPv6 address and choose based on the appropriate address.
 
 ![An example of IPv6](./ipv6.png)  
-Source : https://en.wikipedia.org/wiki/IPv6_address
+Source: https://en.wikipedia.org/wiki/IPv6_address
 
 ### Public & Private IP Address
 
@@ -64,4 +64,4 @@ A private IP address is used within a private network such as home network. Thes
 The purpose of private IP address is to uniquely identify device while also reducing the exhaustion of IP address. So a particular device on a network may have a same IP address with other device in other network, but this is okay because all the device on that network will have a public IP address to connect to the internet or to connect to the other network.
 
 ![Several device with private IP address connects to router that has public IP address](./public-private-ip-address.png)  
-Source : https://www.avg.com/en/signal/public-vs-private-ip-address
+Source: https://www.avg.com/en/signal/public-vs-private-ip-address

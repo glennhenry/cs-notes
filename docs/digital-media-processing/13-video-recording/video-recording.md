@@ -29,7 +29,7 @@ Screenshot works by capturing the current state of screen's pixels data. At low 
 
 The operating system reads the raw pixel data from the framebuffer and copies it to a temporary storage area in memory. The pixel data is then encoded to an image format such as [PNG](/digital-media-processing/png) and saved locally in user's storage.
 
-![A screenshot of wikipedia screenshot article](./screenshot.png)
+![A screenshot of Wikipedia article](./screenshot.png)
 
 ### Screencast
 

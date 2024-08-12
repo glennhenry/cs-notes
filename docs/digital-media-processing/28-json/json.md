@@ -5,9 +5,9 @@ title: JSON
 description: JSON
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[JSON - Wikipedia](https://en.wikipedia.org/wiki/JSON)**
+- **[JSON — Wikipedia](https://en.wikipedia.org/wiki/JSON)**
 
 **JSON (JavaScript Object Notation)** is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. JSON is often used to transmit data between a server and a web application, as an alternative to XML. It is also used as a data storage and communication format in many programming languages and web services.
 
@@ -44,4 +44,4 @@ JSON is defined as text format that consists of key-value pairs, where keys are 
 }
 ```
 
-Source : [Wikipedia JSON example](https://en.wikipedia.org/wiki/JSON#Syntax)
+Source: [Wikipedia JSON example](https://en.wikipedia.org/wiki/JSON#Syntax)

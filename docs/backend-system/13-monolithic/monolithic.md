@@ -5,10 +5,10 @@ title: Monolithic
 description: Monolithic
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Introduction to Monolithic Architecture and MicroServices Architecture by Siraj ul Haq - Medium](https://medium.com/koderlabs/introduction-to-monolithic-architecture-and-microservices-architecture-b211a5955c63)**
-- **[Monolithic Architecture. Advantages and Disadvantages - Oleksii Dushenin](https://datamify.medium.com/monolithic-architecture-advantages-and-disadvantages-e71a603eec89)**
+- **[Introduction to Monolithic Architecture and MicroServices Architecture by Siraj ul Haq — Medium](https://medium.com/koderlabs/introduction-to-monolithic-architecture-and-microservices-architecture-b211a5955c63)**
+- **[Monolithic Architecture. Advantages and Disadvantages — Oleksii Dushenin](https://datamify.medium.com/monolithic-architecture-advantages-and-disadvantages-e71a603eec89)**
 
 ### Backend Architecture
 
@@ -19,7 +19,7 @@ In backend, architecture refers to the design and organization of the server-sid
 There are many backend architecture, the example are [monolithic](/backend-system/monolithic#monolithic), [microservices](/backend-system/microservice), [SOA](/backend-system/soa), and [serverless](/backend-system/serverless).
 
 ![Example of a microservices architecture](./microservice.png)
-Source : https://stackoverflow.com/questions/76415176/explain-microservice-architecture
+Source: https://stackoverflow.com/questions/76415176/explain-microservice-architecture
 
 ### Monolithic
 
@@ -33,19 +33,19 @@ For example, monolithic architecture may be used for an e-commerce platform that
 
 ### Advantages & Disadvantages
 
-Advantages :
+Advantages:
 
-- **Simplicity** : Straightforward to develop, debug, test, deploy, and manage since all the components are bundled together within a single codebase.
-- **Ease of Development** : Developers can work on the entire application without worrying about complex inter-component communication or integration.
+- **Simplicity**: Straightforward to develop, debug, test, deploy, and manage since all the components are bundled together within a single codebase.
+- **Ease of Development**: Developers can work on the entire application without worrying about complex inter-component communication or integration.
 
-Disadvantages :
+Disadvantages:
 
-- **Inflexibility** : When a small changes or updates in one component often require redeploying the entire application, causing longer release cycles and limiting the ability to adopt new technologies. This will also make the application hard to test considering
-- **Reliability** : A failure in one component of a monolithic application can potentially bring down the entire system, as there is no isolation between components.
-- **Technology Limitations** : Monolithic architectures often require using a single technology stack or programming language throughout the application, limiting the ability to leverage the best tools and frameworks for specific components. Migrating them would mean to migrate the entire codebase.
-- **Scalability** : Considering the application is tightly coupled, having more server means we need to distribute the entire monolithic app to each of the server. This will make these servers interdependent, as they will rely on shared resources and data, which in turns, making synchronization of the shared resources becomes complex.
+- **Inflexibility**: When a small changes or updates in one component often require redeploying the entire application, causing longer release cycles and limiting the ability to adopt new technologies. This will also make the application hard to test considering
+- **Reliability**: A failure in one component of a monolithic application can potentially bring down the entire system, as there is no isolation between components.
+- **Technology Limitations**: Monolithic architectures often require using a single technology stack or programming language throughout the application, limiting the ability to leverage the best tools and frameworks for specific components. Migrating them would mean to migrate the entire codebase.
+- **Scalability**: Considering the application is tightly coupled, having more server means we need to distribute the entire monolithic app to each of the server. This will make these servers interdependent, as they will rely on shared resources and data, which in turns, making synchronization of the shared resources becomes complex.
 
 Overall, monolithic architecture is typically suited for smaller applications with simpler requirements, limited scalability needs, and smaller development team which are familiar with the codebase.
 
 ![Monolithic architecture](./monolithic.png)  
-Source : https://techaffinity.com/blog/microservices-architecture-vs-monolithic-architecture/
+Source: https://techaffinity.com/blog/microservices-architecture-vs-monolithic-architecture/

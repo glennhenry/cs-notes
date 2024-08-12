@@ -5,11 +5,11 @@ title: Neural Network
 description: Neural Network
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Deep Learning Crash Course for Beginners - freeCodeCamp](https://youtu.be/VyWAvY2CF9c?si=qNn4Le63wJgabACo)**
-- **[Backpropagation calculus | Chapter 4, Deep learning - 3Blue1Brown](https://youtu.be/tIeHLnjs5U8?si=SZTyeJz7utdJLjV8)**
-- **[Softmax Activation Function - Developers Hutt](https://youtu.be/8ah-qhvaQqU?si=StzzMQMVFceQQghK)**
+- **[Deep Learning Crash Course for Beginners — freeCodeCamp](https://youtu.be/VyWAvY2CF9c?si=qNn4Le63wJgabACo)**
+- **[Backpropagation calculus | Chapter 4, Deep learning — 3Blue1Brown](https://youtu.be/tIeHLnjs5U8?si=SZTyeJz7utdJLjV8)**
+- **[Softmax Activation Function — Developers Hutt](https://youtu.be/8ah-qhvaQqU?si=StzzMQMVFceQQghK)**
 
 ### Neural Network Idea
 
@@ -32,7 +32,7 @@ To capture complex relationships and patterns in the data, the network utilizes 
 The simplest model of neural network is called **perceptron**, it consists of several input data and weights. The input will be calculated with their corresponding weight, summed up, and applied to an activation function to produce an output.
 
 ![Perceptron](./perceptron.png)  
-Source : https://www.javatpoint.com/perceptron-in-machine-learning
+Source: https://www.javatpoint.com/perceptron-in-machine-learning
 
 #### Multilayer Perceptron
 
@@ -40,14 +40,14 @@ Perceptron consists only a single layer, it only processes the input once. **Mul
 
 The overall architecture consists of several layers of neuron, including input layer, hidden layer, and output layer. In MLP, information only flows in one direction, from the input layer to the hidden layer and finally to the output layer, without any loops.
 
-- **Input Layer** : The input layer receives the raw input data and passes it to next layer for further processing. The number of neuron in input layer represent the dimensionality of the input data.
+- **Input Layer**: The input layer receives the raw input data and passes it to next layer for further processing. The number of neuron in input layer represent the dimensionality of the input data.
 
-- **Hidden Layers** : Hidden layers are intermediate layer between input and output layer. The hidden layer is the actual process in neural network, it involves recognizing patterns of the data and using mathematical function as explained before. It also applies activation function to decide if a specific result of a particular neuron matters to the prediction or not. Number of hidden layers and neuron in each layer can vary depending on the complexity of the problem. For example,
+- **Hidden Layers**: Hidden layers are intermediate layer between input and output layer. The hidden layer is the actual process in neural network, it involves recognizing patterns of the data and using mathematical function as explained before. It also applies activation function to decide if a specific result of a particular neuron matters to the prediction or not. Number of hidden layers and neuron in each layer can vary depending on the complexity of the problem. For example,
 
-- **Output Layer** : The output layer produces the predictions based on the computations performed in the preceding layers. The number of neurons in the output layer depends on the nature of the task. For example, a binary classification task may have a single neuron in the output layer, representing yes or no.
+- **Output Layer**: The output layer produces the predictions based on the computations performed in the preceding layers. The number of neurons in the output layer depends on the nature of the task. For example, a binary classification task may have a single neuron in the output layer, representing yes or no.
 
   ![Neural network architecture](./neural-network-architecture.png)  
-   Source : https://towardsdatascience.com/everything-you-need-to-know-about-neural-networks-and-backpropagation-machine-learning-made-easy-e5285bc2be3a
+   Source: https://towardsdatascience.com/everything-you-need-to-know-about-neural-networks-and-backpropagation-machine-learning-made-easy-e5285bc2be3a
 
 :::tip
 Neural network is a concept in both machine learning and deep learning, however, in deep learning the network is more advanced. There are multiple hidden layer in deep learning while machine learning uses simpler network architecture.
@@ -61,13 +61,13 @@ Forward Propagation is where the input data is processed and forwarded into hidd
 
 Basically the neuron in the front will receive input from all the neuron in the previous layer, it will use the above formula, multiply each input with weight and sum up all the result with additional value from bias.
 
-The result is represented as $z$ :  
+The result is represented as $z$:  
 $z = (w_1 \cdot x_1) + (w_2 \cdot x_2) + ... + (w_n \cdot x_n) + b$
 
-After that, the $z$ (called weighted sum) will be applied to activation function resulting in another variable called $a$ : $a = f(z)$. The activation function can vary depending on the use case, for example, if we use sigmoid function : $a = \sigma(z)$.
+After that, the $z$ (called weighted sum) will be applied to activation function resulting in another variable called $a$: $a = f(z)$. The activation function can vary depending on the use case, for example, if we use sigmoid function: $a = \sigma(z)$.
 
 ![Forward propagation](./forward-propagation.png)  
-Source : https://www.researchgate.net/figure/The-forward-propagation-of-a-neural-network-a-the-operating-process-of-neural-networks_fig1_355876971
+Source: https://www.researchgate.net/figure/The-forward-propagation-of-a-neural-network-a-the-operating-process-of-neural-networks_fig1_355876971
 
 The weight is the coefficient of corresponding input data, it can be interpreted as how important is the neuron. The bias term is used to shift the activation function (similar to how we shift function in algebra), it controls how the function behave filtering a specific neuron.
 
@@ -92,7 +92,7 @@ For example, after predicting, the loss function calculated results in a large v
 This learning process will be repeated for many times based on the hyperparameter (e.g. batch, epoch, iteration).
 
 ![Backpropagation](./backpropagation.png)  
-Source : https://www.analyticsvidhya.com/blog/2023/01/gradient-descent-vs-backpropagation-whats-the-difference/
+Source: https://www.analyticsvidhya.com/blog/2023/01/gradient-descent-vs-backpropagation-whats-the-difference/
 
 #### Vanishing Gradient Problem
 
@@ -110,16 +110,16 @@ Softmax is an activation function typically used in multi-class classification p
 A class is a distinct categories we are classifying the input to. For example, we might want to classify if an image is dog or cat. This mean, the image is either dog or cat, therefore dog and cat are the class.
 :::
 
-The formula for softmax is :
+The formula for softmax is:
 
 ![Softmax formula](./softmax.png)  
-Source : https://towardsdatascience.com/softmax-activation-function-explained-a7e1bc3ad60
+Source: https://towardsdatascience.com/softmax-activation-function-explained-a7e1bc3ad60
 
-Where :
+Where:
 
-$z_i$ : output for i-th class  
-$K$ : the number of class  
-$z_j$ : output from j-th class, will be summed up with all the output
+$z_i$: output for i-th class  
+$K$: the number of class  
+$z_j$: output from j-th class, will be summed up with all the output
 
 Softmax is typically used as the activation function for the output layer of neural network. Output will be produced after processing the input from all the preceding layer. The result will be calculated using the above formula.
 
@@ -128,13 +128,13 @@ The formula will produce probability for a particular class by dividing the resu
 For example, consider a scenario where we have 4 class classification task.
 
 ![Each class output in output layer](./class-output.png)  
-Source : https://youtu.be/8ah-qhvaQqU?si=llIp3EluG-zh3gjX&t=80
+Source: https://youtu.be/8ah-qhvaQqU?si=llIp3EluG-zh3gjX&t=80
 
 After processing through all the layers, each output layer produces an output. The denominator is the sum of constants $e$ raised to each output value. Therefore, it will be $e^{-1} + e^{0} + e^{3} + e^{5}$ = $169.87$.
 
 To assign probability to each class, we will use that particular class output as the numerator.
 
 ![Numerator of each output](./numerator.png)  
-Source : https://youtu.be/8ah-qhvaQqU?si=3ogI3IgJnZZXLkZC&t=103
+Source: https://youtu.be/8ah-qhvaQqU?si=3ogI3IgJnZZXLkZC&t=103
 
 And the highest probability is the one that the model believes to be the most likely prediction for the given input.

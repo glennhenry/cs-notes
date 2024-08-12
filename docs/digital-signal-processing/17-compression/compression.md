@@ -9,7 +9,7 @@ description: Compression
 
 - **[Compression: Crash Course Computer Science #21 — CrashCourse](https://youtu.be/OtDxDvCpPL4)**
 
-**Compression** is the process of reducing the size or _bit rate_ required to represent a signal while preserving as much of the original information as possible. Removing data redundancies can lead to reduced storage requirements, physical infrastructure cost, faster transmission, and improved resource utilization.
+**Compression** is the process of reducing the size or _bit rate_ required to represent a signal or data while preserving as much of the original information as possible. Removing data redundancies can lead to reduced storage requirements, physical infrastructure cost, faster transmission, and improved resource utilization.
 
 :::info
 The amount of data transferred in a unit of time is called **bandwidth** or **bit rate**.

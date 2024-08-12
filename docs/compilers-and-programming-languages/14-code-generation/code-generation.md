@@ -5,7 +5,7 @@ title: Code Generation
 description: Code Generation
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 1 chapter 11**
 
@@ -22,7 +22,7 @@ const char * scratch_name( int r );
 These are helper functions related to registers. We will store register in a table and access them with number.
 
 ![Register table](./register-table.png)  
-Source : Book 1 page 182
+Source: Book 1 page 182
 
 - `scratch_alloc` is used to allocate for free register, mark it as used, and return the register number.
 - `scratch_free` marks the register `r` as free for use.
@@ -54,7 +54,7 @@ The AST represents the expression's operands in the left and right child nodes, 
 The strategy is to store left and right node's value temporarily in registers. To let the parent node know which register we used, we store an information about it in each node. On each visit to node, we should generate corresponding assembly code.
 
 ![Expression generation](./expression-example.png)  
-Source : Book 1 page 184
+Source: Book 1 page 184
 
 :::note
 It's generated in [x86 assembly](/computer-organization-and-architecture/assembly-language#x86-assembly-language).
@@ -81,14 +81,14 @@ SUBQ %rbx, %r10
 MOVQ %r10, c
 ```
 
-Here is one example of how the traversal can be implemented in code :
+Here is one example of how the traversal can be implemented in code:
 
 ![Example of expressions generation in code](./expr-codegen.png)  
-Source : Book 1 page 186
+Source: Book 1 page 186
 
 Consider the case when variables `a`, `b`, and `c` were not so simple, such as a literal in function argument, or an argument that needs to be evaluated.
 
-For example, if `a` is first argument of a function, this would be generated instead : `MOVQ -8(%rbp), %rbx`. The minus 8 indicates that we are moving the base pointer on the stack because a function first argument is located at an offset of 8 bytes below the `%rbp` register (in x86_64 machine).
+For example, if `a` is first argument of a function, this would be generated instead: `MOVQ -8(%rbp), %rbx`. The minus 8 indicates that we are moving the base pointer on the stack because a function first argument is located at an offset of 8 bytes below the `%rbp` register (in x86_64 machine).
 
 When multiplication happens, result is always stored in `%rax` and its potential overflow in `%rdx`.
 
@@ -106,7 +106,7 @@ This mean that we can't use `%rax` and `%rdx` during multiplication. We better n
 
 ![Function call generation](./function-call.png)  
 `a = f(10, b + c)`  
-Source : Book 1 page 187
+Source: Book 1 page 187
 
 When calling a function, the `ARG` node corresponds to a function argument. Depending on the case, function arguments may be passed by placing them on the stack or by placing them in registers. With the former (also called **stack calling convention**), we will use the `PUSH` instruction. With the latter (also called **register calling convention**), we should copy each of them to the argument registers. The `%rdi` and `%rsi` are typically used for first and second arguments of a function.
 
@@ -119,7 +119,7 @@ The function returns value should be stored in `%rax`, and it will be moved to n
 Various statements can be encountered, this includes control flow statements. We should create a function that generates code for any kind of statements. One could look like below.
 
 ![Statements generator code](./statement-generator.png)  
-Source : Book 1 page 188
+Source: Book 1 page 188
 
 [Recall the AST representation of statements](/compilers-and-programming-languages/semantic-analysis#statements), all information about a statement is encapsulated in the `stmt` struct. The struct includes several optional fields, such as body expression, else expression (if an if statement), declaration (if a declaration).
 
@@ -131,7 +131,7 @@ Each statement may call another specific generator.
 
 #### Control Flow
 
-A control flow like if-else statement should look like :
+A control flow like if-else statement should look like:
 
 ```
 if (expr) {
@@ -162,9 +162,9 @@ done-label:
 It evaluates expression, compares whether it is 0 (false). If it's a yes, jump to `false-label`, which contains the false statement. Else, the true statement will be evaluated, and once it is done, skip the `false-label` by jumping directly to the next code (`done-label`).
 
 ![If statement generator](./if-statement.png)  
-Source : Book 1 page 190
+Source: Book 1 page 190
 
-A for loop is :
+A for loop is:
 
 ```
 for (init-expr; expr; next-expr) {
@@ -172,7 +172,7 @@ for (init-expr; expr; next-expr) {
 }
 ```
 
-In assembly :
+In assembly:
 
 ```
             init-expr
@@ -187,7 +187,7 @@ done-label:
             ...next code
 ```
 
-The initialization expression should be evaluated first. A typical loop is constructed by :
+The initialization expression should be evaluated first. A typical loop is constructed by:
 
 1. Compare result of an expression.
 2. Depending on the result, either execute the body statement, execute next expression (e.g., increment counter), then jump back to the start of the loop, or jump to the next code.
@@ -234,10 +234,10 @@ A local variable declaration is contained within a function. This mean that it i
 
 To declare a function, we will need to generate label for the function name to start executing the function, and another label for the return statement. Inside the function, we will need to do necessary steps, this includes the function prologue and epilogue.
 
-- Prologue : Setting up function's stack frame, including allocating space for parameters and local variables.
-- Epilogue : Cleaning up the function's stack frame before returning, such as restoring the stack pointer, restoring the previous base pointer.
+- Prologue: Setting up function's stack frame, including allocating space for parameters and local variables.
+- Epilogue: Cleaning up the function's stack frame before returning, such as restoring the stack pointer, restoring the previous base pointer.
 
 Overall, the relationship of the code generator functions can be summarized as follows.
 
 ![Relationship between code generation functions](./code-generation-functions.png)  
-Source : Book 1 page 182
+Source: Book 1 page 182

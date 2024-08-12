@@ -5,10 +5,10 @@ title: Data Structures & Algorithms
 description: Data Structures & Algorithms
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Data structure - Wikipedia](https://en.wikipedia.org/wiki/Data_structure)**
-- **[Analysis of algorithms - Wikipedia](https://en.wikipedia.org/wiki/Analysis_of_algorithms)**
+- **[Data structure — Wikipedia](https://en.wikipedia.org/wiki/Data_structure)**
+- **[Analysis of algorithms — Wikipedia](https://en.wikipedia.org/wiki/Analysis_of_algorithms)**
 
 ### Algorithm
 
@@ -20,21 +20,21 @@ Algorithm is really just an instruction to solve a problem, it is also not speci
 
 There are many types of algorithm that are frequently used in computer programming to solve a certain task. The two basic type of algorithm are **sort** and **search**, they are the most intuitive algorithm and commonly used real-life.
 
-- **Sorting** : Sorting algorithms are used to arrange a collection of elements in a specific order. Element can be sorted in ascending (increasing) or descending (decreasing) order. For instance, your computer may sort file on a folder by its name in ascending order. A file name contains alphabet character, the smallest alphabet character is "a" and the largest alphabet character is "z". Sorting in ascending order involve comparing each alphabet in the file name, the file name with smaller alphabet should be placed first before the larger alphabet.
+- **Sorting**: Sorting algorithms are used to arrange a collection of elements in a specific order. Element can be sorted in ascending (increasing) or descending (decreasing) order. For instance, your computer may sort file on a folder by its name in ascending order. A file name contains alphabet character, the smallest alphabet character is "a" and the largest alphabet character is "z". Sorting in ascending order involve comparing each alphabet in the file name, the file name with smaller alphabet should be placed first before the larger alphabet.
 
   There are many kinds of sorting algorithm, each with its own characteristics and efficiency. Example of sorting algorithm includes bubble sort, insertion sort, and selection sort.
 
   ![Bubble sort algorithm](./bubble-sort.gif)  
-   Source : https://emre.me/algorithms/sorting-algorithms/
+   Source: https://emre.me/algorithms/sorting-algorithms/
 
-- **Searching** : Searching algorithms are used to find the presence or location of a specific element within a collection of elements. For example, in real-life, we may try to find a document within a filling cabinet. We will take the document and check if it's the one we are looking for, if yes, we will take it and if not, we will put it back and take another document.
+- **Searching**: Searching algorithms are used to find the presence or location of a specific element within a collection of elements. For example, in real-life, we may try to find a document within a filling cabinet. We will take the document and check if it's the one we are looking for, if yes, we will take it and if not, we will put it back and take another document.
 
   The common searching algorithm are the **linear search** and the **binary search**, they are used to find the location of specific element in some collection. The linear search is a very intuitive algorithm that sequentially checks each element in a collection until a match is found or the end of the collection is reached. The binary search instead is a more efficient algorithm, however, it is only appliable for sorted collection.
 
   Below is the comparison for linear and binary search.
 
   ![Comparison of linear or sequential and binary search](./search-algorithm-comparison.gif)  
-   Source : https://tenor.com/view/binary-search-sequence-search-gif-20595028
+   Source: https://tenor.com/view/binary-search-sequence-search-gif-20595028
 
   In the GIF above, we are looking to find the location of specific element, which is 37, in a group of numbers. The steps indicate the number of time we access or check a number.
 
@@ -52,16 +52,16 @@ We can decide which algorithm is better than which by comparing the efficiency. 
 
 The time and space complexity is typically measured by the dimension of the input, they are denoted by the **Big-O notation**. The big-O notation describe the efficiency of algorithms in terms of their growth rates as the input size increases.
 
-Some example of big-O notation :
+Some example of big-O notation:
 
-- **O(1) - Constant Complexity** : A constant time complexity indicates that the algorithm will always run in the same time regardless of how many inputs are given. Similarly, a constant space complexity indicates the algorithm will always use the same amount of memory for any input.
+- **O(1) — Constant Complexity**: A constant time complexity indicates that the algorithm will always run in the same time regardless of how many inputs are given. Similarly, a constant space complexity indicates the algorithm will always use the same amount of memory for any input.
 
-- **O(log n) - Logarithmic Complexity** : A logarithmic complexity indicates the time or space complexity grows logarithmically with the input size.
+- **O(log n) — Logarithmic Complexity**: A logarithmic complexity indicates the time or space complexity grows logarithmically with the input size.
 
-- **O(n) - Linear Time Complexity** : A logarithmic complexity indicates the time or space complexity grows linearly with the input size, there is a proportional relationship between the algorithm's resource usage and the input size.
+- **O(n) — Linear Time Complexity**: A logarithmic complexity indicates the time or space complexity grows linearly with the input size, there is a proportional relationship between the algorithm's resource usage and the input size.
 
 ![Big-O graph](./big-o.png)  
-Source : https://www.freecodecamp.org/news/all-you-need-to-know-about-big-o-notation-to-crack-your-next-coding-interview-9d575e7eec4/
+Source: https://www.freecodecamp.org/news/all-you-need-to-know-about-big-o-notation-to-crack-your-next-coding-interview-9d575e7eec4/
 
 #### Example
 
@@ -73,13 +73,13 @@ On the other hand, the linear search algorithm require no extra memory, making t
 
 **Data Structures** are specialized formats of storage used to store data efficiently. Each data structure has different characteristics that are suited for different kinds of tasks, and these characteristics correspond to the algorithm's time and space complexity.
 
-Here are commonly used data structures :
+Here are commonly used data structures:
 
-- **Array** : Array is a data structure where a collection of elements is grouped together within a contiguous block of memory, where each element is next to each other. Each element in the array has its own position, called **index** and it starts from 0. To access specific element in the array, we need to know its index. The time complexity to access a single element will be in O(1) time, this is because no matter the size of the array size is, we will always access it the same way.
+- **Array**: Array is a data structure where a collection of elements is grouped together within a contiguous block of memory, where each element is next to each other. Each element in the array has its own position, called **index** and it starts from 0. To access specific element in the array, we need to know its index. The time complexity to access a single element will be in O(1) time, this is because no matter the size of the array size is, we will always access it the same way.
 
-- **Stack** : Stack is a data structure where the elements are stacked on top of each other. It follows the Last-In-First-Out (LIFO) principle, where element can be added or removed only from the top of the stack. The operation of adding element is often called "push" and the operation of removing element is called "pop". The time complexity to add or remove element is also O(1), no matter the size, the operation will always be the same.
+- **Stack**: Stack is a data structure where the elements are stacked on top of each other. It follows the Last-In-First-Out (LIFO) principle, where element can be added or removed only from the top of the stack. The operation of adding element is often called "push" and the operation of removing element is called "pop". The time complexity to add or remove element is also O(1), no matter the size, the operation will always be the same.
 
-- **Hash Table** : Hash table is a data structure where we access element based on a unique identifier called **key**. An element is a set of key-value pair, the key is the identifier and the value is the actual value associated with it.
+- **Hash Table**: Hash table is a data structure where we access element based on a unique identifier called **key**. An element is a set of key-value pair, the key is the identifier and the value is the actual value associated with it.
 
   Under the hood, hash table uses an array to store the element. An array has a constant time complexity to access an element, however, in some cases the index of the element we are looking for is not known. Sometimes, the index of the element also changes overtime when we remove an element from the array.
 
@@ -90,7 +90,7 @@ Here are commonly used data structures :
   However, in some cases, the hash function may return the same hash code for different key, this is called **[collision](/data-structures-and-algorithms/hash-table#collision)** and it's a common problem in hash table. Technique such as **chaining** is employed to mitigate this problem.
 
   ![Array, stack, and hash table data structures](./data-structure.png)  
-  Source : [array](https://www.geeksforgeeks.org/when-to-use-array-over-a-list/), [stack](https://www.trivusi.web.id/2022/07/struktur-data-stack.html), [hash table](https://khalilstemmler.com/blogs/data-structures-algorithms/hash-tables/)
+  Source: [array](https://www.geeksforgeeks.org/when-to-use-array-over-a-list/), [stack](https://www.trivusi.web.id/2022/07/struktur-data-stack.html), [hash table](https://khalilstemmler.com/blogs/data-structures-algorithms/hash-tables/)
 
 :::tip
 Refer to [data structures and algorithm](/data-structures-and-algorithms) for more detailed explanation

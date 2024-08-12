@@ -5,14 +5,14 @@ title: Memory
 description: Memory
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[What and where are the stack and heap? - stackoverflow](https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap)**
-- **[Data buffer - Wikipedia](https://en.wikipedia.org/wiki/Data_buffer)**
-- **[What is the Difference Between a Pointer and a Reference C++ - Paul Programming](https://youtu.be/sxHng1iufQE?si=A-qOSCg_Z0oHO6bh)**
-- **[A quick and thorough guide to ‘null’: what it is, and how you should use it by Christian Neumanns - freeCodeCamp](https://www.freecodecamp.org/news/a-quick-and-thorough-guide-to-null-what-it-is-and-how-you-should-use-it-d170cea62840/)**
-- **[Memory management - Wikipedia](https://en.wikipedia.org/wiki/Memory_management)**
-- **[What is Virtual Memory? What Does it Do? - Eye on Tech](https://youtu.be/qeOBEOBJREs?si=Ql-qaggCrzP7T8Rt)**
+- **[What and where are the stack and heap? — stackoverflow](https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap)**
+- **[Data buffer — Wikipedia](https://en.wikipedia.org/wiki/Data_buffer)**
+- **[What is the Difference Between a Pointer and a Reference C++ — Paul Programming](https://youtu.be/sxHng1iufQE?si=A-qOSCg_Z0oHO6bh)**
+- **[A quick and thorough guide to ‘null’: what it is, and how you should use it by Christian Neumanns — freeCodeCamp](https://www.freecodecamp.org/news/a-quick-and-thorough-guide-to-null-what-it-is-and-how-you-should-use-it-d170cea62840/)**
+- **[Memory management — Wikipedia](https://en.wikipedia.org/wiki/Memory_management)**
+- **[What is Virtual Memory? What Does it Do? — Eye on Tech](https://youtu.be/qeOBEOBJREs?si=Ql-qaggCrzP7T8Rt)**
 
 **Memory** is the component in computer that used to store and retrieve data. Computer memory can be categorized into two types: **primary memory** (also known as main memory or RAM) and **secondary memory** (such as hard drives or solid-state drives).
 
@@ -29,7 +29,7 @@ As functions complete their execution, their stack frames are popped off the sta
 The stack size is typically fixed and limited, determined by the compiler or the operating system. However, the stack space is generally small and can be quickly exhausted if the program uses deep recursion or has large local variables.
 
 ![Stack illustration](./stack-memory.png)  
-Source : https://stackoverflow.com/questions/32418750/stack-and-heap-locations-in-ram
+Source: https://stackoverflow.com/questions/32418750/stack-and-heap-locations-in-ram
 
 #### Heap
 
@@ -37,7 +37,7 @@ A heap (not heap data structure) is a free store or a pool of memory used to sto
 
 Unlike the stack, where the memory is limited and cannot be dynamically expanded at runtime, the fixed size make it not suitable to store data whose size is not known in advance or can vary significantly such us user's input.
 
-The stack is faster than heap for some reasons :
+The stack is faster than heap for some reasons:
 
 - Stack is a LIFO structure, most recently allocated memory is at the top of the stack and can be accessed quickly.
 - The fixed size of stack makes it easy to allocate memory, we can easily move up or down the size by a fixed amount.
@@ -45,7 +45,7 @@ The stack is faster than heap for some reasons :
 Heap requires additional bookkeeping, or it requires maintaining additional information to keep track of allocated and deallocated memory blocks. When a memory block is allocated, the heap manager needs to find a suitable free block of the requested size and update the bookkeeping information accordingly.
 
 ![Heap memory vs stack](./heap-memory.png)  
-Source : https://www.javatpoint.com/stack-vs-heap-java
+Source: https://www.javatpoint.com/stack-vs-heap-java
 
 #### Buffer
 
@@ -56,7 +56,7 @@ For example, in video playback, we often hear the term "buffering" when there ar
 Another usage for buffer is to improve retrieval efficiency in I/O (input-output) operation. Accessing data stored in the storage (e.g., hard drive) can be slower than accessing to computer's main memory (e.g., RAM). When reading a file, the computer can load a chunk of data from hard drive into the buffer, then the application will load the data from the buffer rather than directly accessing the storage device.
 
 ![Buffering](./buffering.png)  
-Source : http://www.planetoftunes.com/computer/caching-and-streaming.php
+Source: http://www.planetoftunes.com/computer/caching-and-streaming.php
 
 #### Mutability
 
@@ -66,7 +66,7 @@ In memory, when a mutable object is created, a block if memory is allocated to s
 
 On the other hand, when someone tries to change an immutable object, the particular address that holds the value won't be changed, instead, a new object with the modified values is created, and a new memory location is allocated to store the new object.
 
-Here is an example in code :
+Here is an example in code:
 
 ```
 a = 5
@@ -90,11 +90,11 @@ A **pointer** is a variable that stores the memory address of another variable. 
 A **reference** is a variable that "refer" to other variable. Reference provides an alternative name or alias for an existing object.
 
 ![Pointer and references](./pointer-references.png)  
-Source : https://youtu.be/sxHng1iufQE?si=qfog89ZUE5UIXQsB&t=463 (cropped and edited)
+Source: https://youtu.be/sxHng1iufQE?si=qfog89ZUE5UIXQsB&t=463 (cropped and edited)
 
 ##### Example
 
-Here's an example taken from a YouTube video :
+Here's an example taken from a YouTube video:
 
 1. In the line 1, we are declaring a variable named `ptr` which is a pointer (marked by `*` symbol), that pointer will "point" to a memory address of an `int`. Currently, it doesn't point to anything yet.
 2. In the line 2 and 3, we are declaring two variable that holds an `int`, named `var` and `foo`, respectively. Memory will be allocated to store these values, and both variables will hold their respective values.
@@ -104,7 +104,7 @@ Here's an example taken from a YouTube video :
 
 ##### Purpose of Pointer
 
-Consider the following code :
+Consider the following code:
 
 ```c
 int x = 5;
@@ -120,7 +120,7 @@ Pointer which stores memory address allows us to have direct memory access. This
 
 ##### Purpose of Reference
 
-Consider the following code :
+Consider the following code:
 
 ```c
 int a = 5;
@@ -136,17 +136,17 @@ int& b = a;
 
 However, in this code we added `&` symbol, which mean we are creating a reference instead of just copying the value. When we make change, either to variable `a` or `b`, both variable will be changed. This is because a reference refer to the same memory location.
 
-Some purpose of using reference :
+Some purpose of using reference:
 
 1. We can create another name for a variable to make code more readable and expressive.
 2. In situations where multiple instances of a value are required, there is no need to create separate copies explicitly. Instead, we can utilize a single value by creating references, each instance will point to the same value stored in a single location. This approach simplifies the process of synchronizing all instances since modifying the referenced value will automatically update all the instances, reducing the processing resources required.
 
 ##### Type of References
 
-The two important type of reference :
+The two important type of reference:
 
-- **Strong Reference** : A strong reference is the default type of reference in many programming languages. It keeps an object in memory as long as there is at least one strong reference pointing to it. As long as there are active strong references, the object will not be [garbage-collected](/computer-and-programming-fundamentals/memory#garbage-collection).
-- **Weak Reference** : A weak reference is a type of reference that does not prevent the object from being garbage-collected. In other word, when a variable have weak reference to an object, we can't guarantee that the variable will always contain that object, as the object may be garbage-collected or cleaned from the memory. If the object is garbage-collected and we are accessing the variable, we may get [null](/computer-and-programming-fundamentals/memory#null) value.
+- **Strong Reference**: A strong reference is the default type of reference in many programming languages. It keeps an object in memory as long as there is at least one strong reference pointing to it. As long as there are active strong references, the object will not be [garbage-collected](/computer-and-programming-fundamentals/memory#garbage-collection).
+- **Weak Reference**: A weak reference is a type of reference that does not prevent the object from being garbage-collected. In other word, when a variable have weak reference to an object, we can't guarantee that the variable will always contain that object, as the object may be garbage-collected or cleaned from the memory. If the object is garbage-collected and we are accessing the variable, we may get [null](/computer-and-programming-fundamentals/memory#null) value.
 
 There are also soft, phantom, and unreachable reference.
 
@@ -208,7 +208,7 @@ Garbage collection is an automatic memory management technique to automatically 
 The garbage collector knows a data or an object is no longer needed by the program using a technique called **reference counting**. It is a technique where each object stores a count and keeps track of the number of references or pointers pointing to that particular object. When the reference count of an object reaches zero, it means that no references exist to that object, indicating that it is no longer reachable and can be safely deallocated.
 
 ![Garbage collection](./garbage-collection.png)  
-Source : https://book.huihoo.com/data-structures-and-algorithms-with-object-oriented-design-patterns-in-java/html/page421.html (with modification)
+Source: https://book.huihoo.com/data-structures-and-algorithms-with-object-oriented-design-patterns-in-java/html/page421.html (with modification)
 
 #### Virtual Memory
 
@@ -221,7 +221,7 @@ Virtual memory logically combines primary and secondary memory to provide large 
 When a program accesses a memory location using a virtual address and that particular page is not currently present in physical memory (RAM), a **page fault** occurs. It could be possible that the required page is stored on secondary memory. To resolve this, the operating system needs to retrieve the required page and load it into physical memory to allows the program to access it.
 
 ![Virtual memory](./virtual-memory.png)  
-Source : https://iboysoft.com/wiki/virtual-memory.html
+Source: https://iboysoft.com/wiki/virtual-memory.html
 
 #### Cache
 
@@ -230,4 +230,4 @@ Cache is a small, high-speed memory that is located closer to the CPU (central p
 When the CPU needs to read data from or write data to the main memory, it first checks the cache to see if the required data is already present. If the data is found in the cache (called **cache hit**), it can be quickly accessed by the CPU without the need to access the slower main memory.
 
 ![Caching in memory](./cache.png)  
-Source : https://witscad.com/course/computer-architecture/chapter/cache-memory
+Source: https://witscad.com/course/computer-architecture/chapter/cache-memory

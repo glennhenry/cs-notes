@@ -5,7 +5,7 @@ title: System Design Examples
 description: System Design Examples
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **[How zoom works - architecture explained](https://youtu.be/CgriozF_U20?si=31OZtSTKSTXm6EcO)**
 - I made the design myself, of course with some help from chatbot and the reference.
@@ -16,7 +16,7 @@ A video conferencing and collaboration platform similar to application like Goog
 
 #### Requirements
 
-Functional :
+Functional:
 
 - Users register/login through the client.
 - Users configure settings from the client, such as their profile photo and background.
@@ -26,7 +26,7 @@ Functional :
 - Participant can send chat, reaction, share screen, etc.
 - The meeting will end whenever a select participant, acting as host end the meeting. Unless if individual participant chooses to leave themselves, then the client will disconnect them.
 
-Non-functional :
+Non-functional:
 
 - High availability, it would be an AP system in the context of [CAP theorem](/software-engineering/system-design#cap-theorem).
 - Scalable horizontally, because meetings are typically participated by people around the worlds. To suit with business constraints, we can limit the meeting size or duration.
@@ -54,7 +54,7 @@ Non-functional :
 
 Use as many libraries as possible to reduce development time and cost.
 
-- **Client** : The client that will either connect to meeting or web server.
+- **Client**: The client that will either connect to meeting or web server.
 
   - Basically we can use any programming languages, let's say we are using Kotlin Compose Multiplatform.
   - We can use this [JCodec library](https://github.com/jcodec/jcodec) for codec. The codec should be adaptive depending on network condition.
@@ -63,7 +63,7 @@ Use as many libraries as possible to reduce development time and cost.
   - We can use [Ktor](https://ktor.io/) as HTTP client.
   - Client record and upload to the meeting server on-demand.
 
-- **Meeting Server** : A server dedicated to handle meeting.
+- **Meeting Server**: A server dedicated to handle meeting.
 
   - One choice of backend library is [Ktor](https://ktor.io/).
   - Client connect to the meeting server through some endpoint with `meetingId` and `passcode` as the parameters, initially using HTTP.
@@ -71,12 +71,12 @@ Use as many libraries as possible to reduce development time and cost.
   - The server listens to participants that broadcast their video, and also shares the data with other meeting server. Received broadcast is gathered and sent to all nearby participants.
   - Could use [message broker](/backend-system/message-broker) technology like RabbitMQ to handle the distribution of messages and events among meeting server instances.
 
-- **Web Server** : We will have another server for serving web-based client. This server will also be used for serving request that aren't meeting related, such as authentication.
+- **Web Server**: We will have another server for serving web-based client. This server will also be used for serving request that aren't meeting related, such as authentication.
 
   - Provide [REST API](/backend-system/rest-api) services. Similarly, we can use [Ktor](https://ktor.io/) for this. Ktor provide a simple way to create authentication, serialization, and other server stuff.
   - Also, deploy the Compose Multiplatform app for the web.
 
-- **Cloud Server** : Used for database. There are many options, such as Amazon S3 for video, Amazon DynamoDB for user's data, and Amazon CloudFront for static data.
+- **Cloud Server**: Used for database. There are many options, such as Amazon S3 for video, Amazon DynamoDB for user's data, and Amazon CloudFront for static data.
 
   - API keys or any configuration to connect to the cloud can be saved on meeting and web server.
   - As users upload their profile photos, they will be stored on the CDN server, and the user information will include the specific URL for the photo.
@@ -95,6 +95,6 @@ That's all I currently have in mind. Additional properties, methods, and endpoin
 
 #### Scale & Other Measures
 
-- **Horizontal Scaling** : We can indeed scale the system horizontally by adding more meeting server. By default, we should connect user to the nearest meeting server. In some cases, we may sacrifice proximity by using a load balancer to balance the workload.
-- **Availability** : The important thing is the meeting server, they should have high availability. We can implement failover mechanism to redirect traffic to healthy instances in case of server failures. Use service like AWS backup to back up important data such as meeting recording.
-- **Caching** : Cacheable data such as web page static assets, meeting information, and profile photo can be cached to CDN server.
+- **Horizontal Scaling**: We can indeed scale the system horizontally by adding more meeting server. By default, we should connect user to the nearest meeting server. In some cases, we may sacrifice proximity by using a load balancer to balance the workload.
+- **Availability**: The important thing is the meeting server, they should have high availability. We can implement failover mechanism to redirect traffic to healthy instances in case of server failures. Use service like AWS backup to back up important data such as meeting recording.
+- **Caching**: Cacheable data such as web page static assets, meeting information, and profile photo can be cached to CDN server.

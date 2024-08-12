@@ -5,9 +5,9 @@ title: Event-Driven
 description: Event-Driven
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Event-driven architecture - Wikipedia](https://en.wikipedia.org/wiki/Event-driven_architecture)**
+- **[Event-driven architecture — Wikipedia](https://en.wikipedia.org/wiki/Event-driven_architecture)**
 - **[Previous notes on reactive programming](/computer-and-programming-fundamentals/concurrency#reactive-programming)**
 
 **Event-Driven** is an architecture that structures an application or system around the production, detection, and consumption of events.
@@ -27,10 +27,10 @@ The entity responsible for generating an event is referred to as a **producer** 
 Broadcast of events are sent to **channel**, which is a medium for publishing and subscribing to events. It serves as a central hub where events are published by event producers and then delivered to the interested event consumers. Channel can be implemented in many ways, such as event bus or [message broker](/backend-system/message-broker).
 
 ![An event bus](./event-bus.png)  
-Source : https://medium.com/elixirlabs/event-bus-implementation-s-d2854a9fafd5
+Source: https://medium.com/elixirlabs/event-bus-implementation-s-d2854a9fafd5
 
 ![Message broker](./message-broker.png)  
-Source : https://www.vmware.com/topics/glossary/content/message-brokers.html
+Source: https://www.vmware.com/topics/glossary/content/message-brokers.html
 
 The characteristics of event-driven architecture that decouple producer and consumer make it scalable. Event producers generate events without needing to know if there is someone interested in them. Consumers do not need to periodically check for the occurrence of events; instead, they can be notified about events they are interested in simply by subscribing to the producer.
 
@@ -40,7 +40,7 @@ See also [reactive programming](/computer-and-programming-fundamentals/concurren
 
 ### Example
 
-Event-driven architecture is typically used in GUI systems. A user interface has buttons which you can click to trigger some event. A theoretical GUI system that follows event-driven architecture would look like :
+Event-driven architecture is typically used in GUI systems. A user interface has buttons which you can click to trigger some event. A theoretical GUI system that follows event-driven architecture would look like:
 
 ```kotlin
 class ClickDetector {
@@ -84,7 +84,7 @@ class Button {
 
 The button class consist of `listener`, which is a lambda expression or function that is initially null. This mean initially button won't do anything if clicked. To actually set an action to do when a button is clicked, we provide the lambda and set it from the `setOnClickListener` method. The `click` method invoke the listener that we have set, which will be called from the `ClickDetector`.
 
-Sample usage :
+Sample usage:
 
 ```kotlin
 fun main() {

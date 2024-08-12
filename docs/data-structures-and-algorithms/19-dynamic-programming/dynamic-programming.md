@@ -5,9 +5,9 @@ title: Dynamic Programming
 description: Dynamic Programming
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Dynamic programming - Wikipedia](https://en.wikipedia.org/wiki/Dynamic_programming)**
+- **[Dynamic programming — Wikipedia](https://en.wikipedia.org/wiki/Dynamic_programming)**
 
 **Dynamic Programming (DP)** is a problem-solving technique in computer science and mathematics that solves complex problems by breaking them down into simpler subproblems. The overall problem depends on the smaller piece subproblem, we would solve the simpler one first and use the solution to solve the overall problem.
 
@@ -33,7 +33,7 @@ The Fibonacci sequence typically starts with 0 and 1, and the subsequent numbers
 
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
-Mathematically, it can be defined as :
+Mathematically, it can be defined as:
 
 $F(0) = 0$,  
 $F(1) = 1$,  
@@ -41,7 +41,7 @@ $F(n) = F(n-1) + F(n-2) \text{ for n } \ge 2$.
 
 #### Naive Fibonacci's Sequence Solution
 
-Here is the pseudocode to compute the Fibonacci's sequence :
+Here is the pseudocode to compute the Fibonacci's sequence:
 
 ```
 function fibonacci(n):
@@ -56,7 +56,7 @@ The Fibonacci sequence exhibits overlapping subproblems because each number in t
 Here is an image to visualize the dependency, we can see that calculating F5 involve the dependency of F2 up to 3 times.
 
 ![Visualization of Fibonacci in tree](./fibonacci-tree.png)  
-Source : https://avikdas.com/2019/04/15/a-graphical-introduction-to-dynamic-programming.html
+Source: https://avikdas.com/2019/04/15/a-graphical-introduction-to-dynamic-programming.html
 
 #### Memoization
 
@@ -69,11 +69,11 @@ Memoization is a technique used in dynamic programming, specifically in the top-
 We know that when we input `n = 2`, we will always obtain 1. If we store the result of F(2), we can eliminate some repeated work, therefore improving the overall efficiency.
 
 ![Memoization](./memoization.png)  
-Source : https://avikdas.com/2019/04/15/a-graphical-introduction-to-dynamic-programming.html (with modification)
+Source: https://avikdas.com/2019/04/15/a-graphical-introduction-to-dynamic-programming.html (with modification)
 
 The memoization technique stores all the result of every Fibonacci's sequence in some data structure that can be random accessed efficiently like [array](/data-structures-and-algorithms/array) or [hash map](/data-structures-and-algorithms/hash-table).
 
-Here is the improved version of the previous pseudocode :
+Here is the improved version of the previous pseudocode:
 
 ```
 memo = array of size n
@@ -95,7 +95,7 @@ We will first check if the `n` or the current Fibonacci's sequence is present in
 Here is the visualization, we only need to compute each Fibonacci sequence once. This results in $O(n)$ time complexity, where $n$ is the Fibonacci sequence we want to calculate.
 
 ![Memoization 2](./memoization-2.png)  
-Source : Source : https://avikdas.com/2019/04/15/a-graphical-introduction-to-dynamic-programming.html (with modification)
+Source: Source: https://avikdas.com/2019/04/15/a-graphical-introduction-to-dynamic-programming.html (with modification)
 
 ### Bottom-Up
 
@@ -105,7 +105,7 @@ In top-down approach, we start with the original problem, breaking it down into 
 
 In some case, bottom-up approach has no difference in terms of space complexity, because we still need some place to store the previously computed result. However, there is scenario where solving it bottom-up can improve the solution, which is in the case of Fibonacci's sequence.
 
-Here is the pseudocode for calculating Fibonacci's sequence in bottom-up approach :
+Here is the pseudocode for calculating Fibonacci's sequence in bottom-up approach:
 
 ```
 function fibonacci(n):
@@ -127,7 +127,7 @@ Similar to top-down approach, we used an array to store the previous solution. T
 
 #### Improved Bottom-Up
 
-This code can be further improved so we don't need additional space to store the previous solution :
+This code can be further improved so we don't need additional space to store the previous solution:
 
 ```
 function fibonacci(n):

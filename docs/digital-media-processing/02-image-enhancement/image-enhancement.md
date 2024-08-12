@@ -43,9 +43,9 @@ Examples of enhancement:
    ![A low saturated image is improved to a brighter image](./color-correction.png)  
    Source: https://www.studiobinder.com/blog/color-grading-vs-color-correction-process/
 
-   :::info
+  :::info
    Color correction differs with color grading. The goal of color correction is to fix color related issues, while color grading enhance the color to achieve desired mood.
-   :::
+  :::
 
 4. **Image Filtering**: Applies a set of filters to the pixel values of the image. These filters change the color of each pixel by some amount of value. See also [image filters](/computer-graphics/signal-processing#image-filters).
 

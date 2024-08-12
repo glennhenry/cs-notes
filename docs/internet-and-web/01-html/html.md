@@ -5,11 +5,11 @@ title: HTML
 description: HTML
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[HTML - Wikipedia](https://en.wikipedia.org/wiki/HTML)**
-- **[What is the DOM? The Document Object Model Explained in Plain English - freeCodeCamp](https://www.freecodecamp.org/news/what-is-the-dom-explained-in-plain-english/)**
-- **[Document Object Model - Wikipedia](https://en.wikipedia.org/wiki/Document_Object_Model)**
+- **[HTML — Wikipedia](https://en.wikipedia.org/wiki/HTML)**
+- **[What is the DOM? The Document Object Model Explained in Plain English — freeCodeCamp](https://www.freecodecamp.org/news/what-is-the-dom-explained-in-plain-english/)**
+- **[Document Object Model — Wikipedia](https://en.wikipedia.org/wiki/Document_Object_Model)**
 
 **HTML (HyperText Markup Language)** is a markup language used to create the structure and content of web pages. It is the basic building block of a webpage, consisting a series of tags or elements, which are used to define the structure and content of a web page.
 
@@ -17,23 +17,23 @@ HTML documents are text files that can be created using any text editor, and hav
 
 HTML provides a wide range of tags that can be used to create various elements on a web page, such as headings, paragraphs, lists, links, images, tables, forms, and more. To use a tag, it must be enclosed in angle brackets `<>` to indicate the beginning of the tag, and also include a closing tag enclosed in angle brackets with a slash `</>` to indicate the end of the tag.
 
-For example creating heading looks like below :
+For example creating heading looks like below:
 
 ```html
 <h1>Heading text here</h1>
 ```
 
-This is the basic HTML structure that is essential for defining the structure and content of an HTML document :
+This is the basic HTML structure that is essential for defining the structure and content of an HTML document:
 
 ![Example of HTML basic page structure](./html-example.png)  
-Source : https://www.geeksforgeeks.org/html/
+Source: https://www.geeksforgeeks.org/html/
 
-HTML may also contain :
+HTML may also contain:
 
-- `<meta>` : This tag is used to provide additional metadata about the document, such as the character encoding, keywords, and description.
-- `<link>` : This tag is used to link to external resources, such as stylesheets and scripts.
-- `<style>` : This tag is used to define styles for the document, either within the document itself or in an external stylesheet.
-- `<script>` : This tag is used to insert scripts into the document, either within the document itself or in an external file.
+- `<meta>`: This tag is used to provide additional metadata about the document, such as the character encoding, keywords, and description.
+- `<link>`: This tag is used to link to external resources, such as stylesheets and scripts.
+- `<style>`: This tag is used to define styles for the document, either within the document itself or in an external stylesheet.
+- `<script>`: This tag is used to insert scripts into the document, either within the document itself or in an external file.
 
 :::tip
 Find out more about [how HTML works](/internet-and-web/web-browser#page-rendering).
@@ -62,28 +62,28 @@ See how [JavaScript manipulates the DOM](/internet-and-web/javascript#dom-manipu
 :::
 
 ![HTML represented in tree structure with HTML tags as the root and has head and body as children which also contains another children elements such as p, ul, li](./dom-tree.png)  
-Source : https://www.tutorialstonight.com/js/js-dom-introduction
+Source: https://www.tutorialstonight.com/js/js-dom-introduction
 
 #### Nodes Type
 
-There are several types of nodes in the Document Object Model (DOM), with each type of node representing a different kind of object in an HTML or XML document. Here are the most common types of nodes in the DOM :
+There are several types of nodes in the Document Object Model (DOM), with each type of node representing a different kind of object in an HTML or XML document. Here are the most common types of nodes in the DOM:
 
-- **Element Nodes** : Element nodes represent the actual elements in an HTML or XML document, such as `<div>`, `<p>`, and `<img>`.
-- **Text Nodes** : Text nodes represent the text content of an element, such as the text between two HTML tags.
-- **Attribute Nodes** : Attribute nodes represent the attributes of an element, such as the src attribute of an `<img>` element.
-- **Comment Nodes** : Comment nodes represent comments in an HTML or XML document, such as `<!-- This is a comment -->`.
-- **Document Nodes** : Document nodes represent the entire HTML or XML document and are the root node of the DOM tree.
-- **Document Type Nodes** : Document type nodes represent the document type declaration in an HTML or XML document, such as `<!DOCTYPE html>`.
-- **Processing Instruction Nodes** : Processing instruction nodes represent processing instructions in an XML document, such as `<?xml version="1.0" encoding="UTF-8"?>`.
+- **Element Nodes**: Element nodes represent the actual elements in an HTML or XML document, such as `<div>`, `<p>`, and `<img>`.
+- **Text Nodes**: Text nodes represent the text content of an element, such as the text between two HTML tags.
+- **Attribute Nodes**: Attribute nodes represent the attributes of an element, such as the src attribute of an `<img>` element.
+- **Comment Nodes**: Comment nodes represent comments in an HTML or XML document, such as `<!-- This is a comment -->`.
+- **Document Nodes**: Document nodes represent the entire HTML or XML document and are the root node of the DOM tree.
+- **Document Type Nodes**: Document type nodes represent the document type declaration in an HTML or XML document, such as `<!DOCTYPE html>`.
+- **Processing Instruction Nodes**: Processing instruction nodes represent processing instructions in an XML document, such as `<?xml version="1.0" encoding="UTF-8"?>`.
 
 #### DOM Level
 
-The Document Object Model (DOM) has evolved over time, with different versions or levels of the DOM being developed to support new features and capabilities. Here are some of the key levels of the DOM :
+The Document Object Model (DOM) has evolved over time, with different versions or levels of the DOM being developed to support new features and capabilities. Here are some of the key levels of the DOM:
 
-- **DOM Level 1** : The first level of the DOM was released in 1998 introducing the basic concepts of the DOM, such as nodes, elements, and attributes, and provided a set of core methods and properties for working with these objects.
-- **DOM Level 2** : The second level of the DOM was released in 2000 and added support for new features such as CSS, event handling, and user interface controls. It introduced new interfaces and methods for working with stylesheets, events, and user interface elements, and improved support for XML namespaces and namespaces.
-- **DOM Level 3** : The third level of the DOM was released in 2004 and included support for additional features such as XPath, keyboard navigation, and validation. It introduced new interfaces and methods for working with XPath expressions, keyboard events, and XML Schema validation, among other things.
-- **DOM Level 4** : The fourth level of the DOM was released in 2015 and has since become the standard. DOM Level 4 offers notable enhancements in areas such as performance, security, internationalization, and accessibility. Additionally, it introduces new elements and attributes to the model.
+- **DOM Level 1**: The first level of the DOM was released in 1998 introducing the basic concepts of the DOM, such as nodes, elements, and attributes, and provided a set of core methods and properties for working with these objects.
+- **DOM Level 2**: The second level of the DOM was released in 2000 and added support for new features such as CSS, event handling, and user interface controls. It introduced new interfaces and methods for working with stylesheets, events, and user interface elements, and improved support for XML namespaces and namespaces.
+- **DOM Level 3**: The third level of the DOM was released in 2004 and included support for additional features such as XPath, keyboard navigation, and validation. It introduced new interfaces and methods for working with XPath expressions, keyboard events, and XML Schema validation, among other things.
+- **DOM Level 4**: The fourth level of the DOM was released in 2015 and has since become the standard. DOM Level 4 offers notable enhancements in areas such as performance, security, internationalization, and accessibility. Additionally, it introduces new elements and attributes to the model.
 
 ### Semantic HTML
 
@@ -92,7 +92,7 @@ Semantic HTML is the practice of using HTML markup to convey the meaning and str
 Using just traditional `div` container would work fine, but using semantic HTML provide a clear and meaningful structure to web pages, which can improve accessibility, search engine optimization (SEO) (making it easier for search engine to index our website), etc.
 
 ![Showing how semantic elements use varying tags while non-semantic mostly just use div tags](./semantic-html.png)  
-Source : https://www.semrush.com/blog/semantic-html5-guide/
+Source: https://www.semrush.com/blog/semantic-html5-guide/
 
 ### XHTML
 

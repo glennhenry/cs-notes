@@ -5,7 +5,7 @@ title: Software Engineering
 description: Software Engineering Notes
 ---
 
-**Main Source :**
+**Main Source:**
 
 - This note, **Software-Engineering-9th-Edition-by-Ian-Sommerville**
 
@@ -23,17 +23,17 @@ Not only making collaboration possible, following a specific standard helps to i
 
 ### Software Characteristics
 
-A good software is associated with several characteristics :
+A good software is associated with several characteristics:
 
-- **Functionality** : A software is designed to solve problem, whether a general problem, example of them are databases, word processors, drawing apps, or notes app. It can also be a custom software, such as the one that operates on an embedded device like fridge.
-- **Reliability** : A reliable software operates consistently and predictably under various conditions. It should be stable, robust, and resistant to failures. Users should be able to depend on the software to perform as expected without unexpected crashes, errors, or data loss.
-- **Usability** : This refers to how easily and efficiently users can interact with the software. Good software is user-friendly, intuitive, easy-to-learn, and well-designed, taking into account the needs and expectations of its target users.
-- **Performance** : Good software is efficient, responsive, fast, and utilize system resources optimally. Users should not experience excessive delays or slowdowns while using the software.
-- **Maintainability** : Often times a software is updated to introduce new features or bug fixes. Maintainable software is easy to modify and maintain. It should be well-organized, have a comprehensive documentation, and follow good coding practices.
-- **Scalability** : Scalable software can handle increasing workloads, user demands, and data volumes without significant degradation in performance or functionality. It should be designed to accommodate future growth and potential changes in requirements.
-- **Security** : Good software prioritizes security and protects against security vulnerabilities to ensure the confidentiality, integrity, and availability of user data.
-- **Compatibility** : Good software is compatible with diverse computing environments, operating systems, and devices.
-- **Testability** : Software creation goes through many tests to ensure its functionality. A good software should be easy to test and thoroughly tested.
+- **Functionality**: A software is designed to solve problem, whether a general problem, example of them are databases, word processors, drawing apps, or notes app. It can also be a custom software, such as the one that operates on an embedded device like fridge.
+- **Reliability**: A reliable software operates consistently and predictably under various conditions. It should be stable, robust, and resistant to failures. Users should be able to depend on the software to perform as expected without unexpected crashes, errors, or data loss.
+- **Usability**: This refers to how easily and efficiently users can interact with the software. Good software is user-friendly, intuitive, easy-to-learn, and well-designed, taking into account the needs and expectations of its target users.
+- **Performance**: Good software is efficient, responsive, fast, and utilize system resources optimally. Users should not experience excessive delays or slowdowns while using the software.
+- **Maintainability**: Often times a software is updated to introduce new features or bug fixes. Maintainable software is easy to modify and maintain. It should be well-organized, have a comprehensive documentation, and follow good coding practices.
+- **Scalability**: Scalable software can handle increasing workloads, user demands, and data volumes without significant degradation in performance or functionality. It should be designed to accommodate future growth and potential changes in requirements.
+- **Security**: Good software prioritizes security and protects against security vulnerabilities to ensure the confidentiality, integrity, and availability of user data.
+- **Compatibility**: Good software is compatible with diverse computing environments, operating systems, and devices.
+- **Testability**: Software creation goes through many tests to ensure its functionality. A good software should be easy to test and thoroughly tested.
 
 ### All pages
 

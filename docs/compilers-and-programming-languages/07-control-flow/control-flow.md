@@ -5,24 +5,24 @@ title: Control Flow
 description: Control Flow
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 2 chapter 6**
-- **[What is a jump table? - stackoverflow](https://stackoverflow.com/questions/48017/what-is-a-jump-table)**
+- **[What is a jump table? — stackoverflow](https://stackoverflow.com/questions/48017/what-is-a-jump-table)**
 
 In programming languages, control flow specifies how statements or instructions are ordered, executed, and evaluated. Some statement can be executed first before the other, perhaps through the use of conditional if-statements. Some statement can be evaluated following certain order defined by user, through the use of parentheses.
 
-There are 7 categories of control flow : sequencing, selection, iteration, procedural abstraction, recursion, concurrency, and nondeterminacy.
+There are 7 categories of control flow: sequencing, selection, iteration, procedural abstraction, recursion, concurrency, and nondeterminacy.
 
 ### Expression Evaluation
 
 Expression consists of object (e.g., literal constant, variables) and operators, which can be a function. Operators take operand similar to how function take argument to perform computation. Some language like C++ use operator as a shorthand for calling a function. For example, `a + b` is same as `a.operator+(b)`, indicating `a` is added with `b`.
 
-There are three notations to specify operator and operands order (operator invocation) :
+There are three notations to specify operator and operands order (operator invocation):
 
-- **Prefix** : Also known as **Polish notation**, the operator is placed before its operands. For example, `+ a b` (with operator `+`, operands are `a` and `b`), it's the same thing as `a + b`. With nested expression `(+ 2 (* 3 (- 4 1)))`, the innermost expression is evaluated first, and the results are used as operands for the outer expressions.
-- **Postfix** : Also known as **Reverse Polish notation**, place operator after its operands. For example, `a b +` or `5 3 >`.
-- **Infix** : It is the most common way of writing operators, where the operator is placed between its operands. For example, `a + b`, `5 * 3`, or `x > y`. A more complex expression is found in programming language like C++ for ternary operator. The syntax of ternary is `condition ? expression1 : expression2`, it is a category of three-operand infix operator.
+- **Prefix**: Also known as **Polish notation**, the operator is placed before its operands. For example, `+ a b` (with operator `+`, operands are `a` and `b`), it's the same thing as `a + b`. With nested expression `(+ 2 (* 3 (- 4 1)))`, the innermost expression is evaluated first, and the results are used as operands for the outer expressions.
+- **Postfix**: Also known as **Reverse Polish notation**, place operator after its operands. For example, `a b +` or `5 3 >`.
+- **Infix**: It is the most common way of writing operators, where the operator is placed between its operands. For example, `a + b`, `5 * 3`, or `x > y`. A more complex expression is found in programming language like C++ for ternary operator. The syntax of ternary is `condition ? expression1: expression2`, it is a category of three-operand infix operator.
 
 #### Precedence & Associativity
 
@@ -33,7 +33,7 @@ Precedence is specified by the language grammar, and is different across languag
 Subtraction are example of left-associative operator, `(10 - 5) - 2 = 5 - 2 = 3` is different with `10 - (5 - 2) = 10 - 3 = 7`. On the other hand, operator like exponentiation is right-associative, `2 ^ 3 ^ 2` is evaluated as `2 ^ (3 ^ 2) = 2 ^ 9 = 512`.
 
 ![Operator precedence in C](./operator-precedence.png)  
-Source : Book page 237
+Source: Book page 237
 
 #### Assignments
 
@@ -50,11 +50,11 @@ This will make expression like `2 + 3 = a` not possible, considering `2 + 3` is 
 
 Overall there are two ways to handle variables.
 
-- **Value model** : In the value model, variables directly store values. When we assign a value to a variable or pass it as an argument to a function, a copy of the value is made. Any modifications to the variable or the value do not affect other variables holding the same value.
-- **Reference model** : In the reference model, variables hold references to memory locations where the actual data is stored. When we assign a variable to another variable or pass it as an argument to a function, a reference to the same underlying data is used. Modifications to one variable will be reflected in other variables holding the same reference.
+- **Value model**: In the value model, variables directly store values. When we assign a value to a variable or pass it as an argument to a function, a copy of the value is made. Any modifications to the variable or the value do not affect other variables holding the same value.
+- **Reference model**: In the reference model, variables hold references to memory locations where the actual data is stored. When we assign a variable to another variable or pass it as an argument to a function, a reference to the same underlying data is used. Modifications to one variable will be reflected in other variables holding the same reference.
 
 ![Reference and value model](./reference-value-model.png)  
-Source : Book page 240 (with my own code example)
+Source: Book page 240 (with my own code example)
 
 :::info
 In equality testing, the process of comparing two values to determine if they are equal or not, equality can be determined through reference or value. If we consider two objects equal when their reference is the same, this is called **shallow comparison**. We only check if two objects are referring to the same object. On the other hand, when we consider the internal structure of objects to determine their equality, this is called **deep comparison**. Deep comparison may be complicated to determine in a complex structure like [graph](/data-structures-and-algorithms/graph).
@@ -105,16 +105,16 @@ name, age, city = person
 
 Initialization is the process of assigning an initial value to a variable or data structure when it is first created. It can be beneficial for data structure that can be allocated during compile-time (i.e., global variables) or preventing potential error like uninitialized variables.
 
-- **Constructors** : Used in OOP to initialize objects of a class. We can specify initial values or attributes of an object and use keyword like `new` to initialize the object.
-- **Definite Assignment** : Some languages allows declaring variable without giving a value like `int a;`. Definite assignment is a rule to enforce programmer to always assign a value to variable, even if they are not using it.
-- **Dynamic Checks** : Dynamic checks are runtime checks performed by programming languages to catch error during runtime. Some languages assign default values to data types (e.g., `NaN` for floating-point number). While these values are invalid and can't be used, they can prevent errors that are unlikely to occur.
+- **Constructors**: Used in OOP to initialize objects of a class. We can specify initial values or attributes of an object and use keyword like `new` to initialize the object.
+- **Definite Assignment**: Some languages allows declaring variable without giving a value like `int a;`. Definite assignment is a rule to enforce programmer to always assign a value to variable, even if they are not using it.
+- **Dynamic Checks**: Dynamic checks are runtime checks performed by programming languages to catch error during runtime. Some languages assign default values to data types (e.g., `NaN` for floating-point number). While these values are invalid and can't be used, they can prevent errors that are unlikely to occur.
 
 #### Ordering Within Expressions
 
 When evaluating expressions, sometimes the ordering within them can affect overall results.
 
-- **Side effect** : Consider the expression `a - f(b) - c * d`. Calculating `c * d` first then use the result as operand from the subtraction is a valid way to evaluate this. It is also valid to calculate `a - f(b)` first then subtract it with the result of `c * d`. However, it is possible that calling function `f(b)` causes a side effect that affects final result. It may change the value of `d`, which mean computing `c * d` will be different before and after calling it.
-- **Code improvement** : The order of instructions can impact execution speed. Sometimes, it's more efficient to load data into memory before it's actually needed rather than waiting until it's required. This is because the CPU can perform computations faster than memory can be fetched. In such cases, [prefetching](/computer-organization-and-architecture/cpu-design#out-of-order-execution) the data by rearranging instructions or expressions to ensure that memory loading occurs first can be beneficial.
+- **Side effect**: Consider the expression `a - f(b) - c * d`. Calculating `c * d` first then use the result as operand from the subtraction is a valid way to evaluate this. It is also valid to calculate `a - f(b)` first then subtract it with the result of `c * d`. However, it is possible that calling function `f(b)` causes a side effect that affects final result. It may change the value of `d`, which mean computing `c * d` will be different before and after calling it.
+- **Code improvement**: The order of instructions can impact execution speed. Sometimes, it's more efficient to load data into memory before it's actually needed rather than waiting until it's required. This is because the CPU can perform computations faster than memory can be fetched. In such cases, [prefetching](/computer-organization-and-architecture/cpu-design#out-of-order-execution) the data by rearranging instructions or expressions to ensure that memory loading occurs first can be beneficial.
 
 One improvement the compiler can make is applying mathematical identities.
 
@@ -253,17 +253,17 @@ With a for-loop like `for (int i = 0; i < 5; i++)`, under the hood, the compiler
 
 Let's say a for-loop syntax is like `for (i = start; i < end; i += step)`
 
-For-loop can introduce some unusual usage :
+For-loop can introduce some unusual usage:
 
-- **Loop variable modified inside loop** : Some languages don't allow the modification of loop variables, including the `start`, `end`, and `step`. Modification involves assigning a value to them directly or through reference, or using an external source for their value (e.g., reading from a file and the value inside the file is changed by other program). Modifying loop variables in languages that allow it could potentially cause unexpected behavior, such as loop terminating too early.
-- **Empty bounds** : A situation where the first iteration already terminates the loop. A compiler may translate loop code into lower-level instruction like :
+- **Loop variable modified inside loop**: Some languages don't allow the modification of loop variables, including the `start`, `end`, and `step`. Modification involves assigning a value to them directly or through reference, or using an external source for their value (e.g., reading from a file and the value inside the file is changed by other program). Modifying loop variables in languages that allow it could potentially cause unexpected behavior, such as loop terminating too early.
+- **Empty bounds**: A situation where the first iteration already terminates the loop. A compiler may translate loop code into lower-level instruction like:
 
   ![For-loop low-level instructions](./for-loop.png)  
-   Source : Book page 274
+   Source: Book page 274
 
   It uses `r1`, `r2`, and `r3` to store loop variables, with `L1` acting as the loop body and `L2` acting as the code outside the loop. Before executing the loop body, including the first iteration, the condition is always checked first. This will prevent the loop body to be executed even in the first iteration.
 
-- **Loop variable used outside loop** : Languages prevent this by making the loop variables as local variable, with the loop body being the scope.
+- **Loop variable used outside loop**: Languages prevent this by making the loop variables as local variable, with the loop body being the scope.
 
 :::tip
 A problem can arise when incrementing the loop variable, be aware of data type overflow. For instance, a common mistake is using small data types with a large loop condition, such as `for (short i = 0; i < 100000; i++)`. This code will result in an infinite loop because a `short`, or a 16-bit integer, has a range value of -32.768 to 32.767. Before it reaches 100.000, it will wrap around to the minimum value, -32.768, making it impossible to terminate the loop.
@@ -295,7 +295,7 @@ Recursion doesn't involve changing variable, because essentially variables are c
 
 Often argued that iteration is more efficient and easier to implement in some cases, recursion can be optimized. A recursive function can be optimized by moving the recursive call to the last operation in the function, this is called **tail recursion**.
 
-Non-tail recursive :
+Non-tail recursive:
 
 ```python
 def fact(n):
@@ -309,7 +309,7 @@ This is not tail recursive because there is `n *` before the recursive call.
 
 A function to calculate factorial of `n`. If starting from `fact(6)`, recursive call will happen until `fact(0)`. Once the recursive call `fact(0)` is reached and the base case is satisfied, the recursive calls start returning to `fact(6)`.
 
-Tail recursive :
+Tail recursive:
 
 ```python
 def fact(n, accumulation):
@@ -322,7 +322,7 @@ def fact(n, accumulation):
 We remove the `n *` and modify the function's structure to make it work in tail recursion. Instead of `fact(n)` depending on the result of `fact(n - 1)` and so on until `fact(0)`, we introduce an `accumulation`. This `accumulation` is calculated not after, but before the recursive call. This way, we don't need to return the value all the way to `fact(n)` from `fact(0)`, as they are calculated along the way (i.e., the expression `accumulation * n` depends on the current recursive call argument, which is available at any time).
 
 ![Tail recursion](./tail-recursion.png)  
-Source : https://maxglassie.github.io/2017/08/24/tail-recursion.html
+Source: https://maxglassie.github.io/2017/08/24/tail-recursion.html
 
 This optimization reduce the amount of memory used in runtime for call stack, which make it possible to store data in the registers (for faster access).
 

@@ -5,9 +5,9 @@ title: Database System
 description: Database System Notes
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Database - Wikipedia](https://en.wikipedia.org/wiki/Database)**
+- **[Database — Wikipedia](https://en.wikipedia.org/wiki/Database)**
 - Some sources are from the book **Database Systems - The Complete Book (2nd Edition)**
 
 ### Introduction to Database
@@ -27,7 +27,7 @@ A format in which database is structured and organized is called **[database mod
 The purpose of having specific model is to suit with the application's requirement. For example, in a social network, we may use database that is modeled in a [graph](/data-structures-and-algorithms/graph) structure. This way, we can easily represent complex relationship between users, such as their common preferences or friendship connection, which we can use to make recommendation system.
 
 ![Database model](./database-model.png)  
-Source : https://medium.com/@saad.jameel1992/graph-vs-relational-databases-62ecc5902eb2
+Source: https://medium.com/@saad.jameel1992/graph-vs-relational-databases-62ecc5902eb2
 
 ### All pages
 

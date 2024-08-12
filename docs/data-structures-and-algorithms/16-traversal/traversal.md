@@ -5,10 +5,10 @@ title: Traversal
 description: Traversal
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Graph traversal - Wikipedia](https://en.wikipedia.org/wiki/Graph_traversal)**
-- **[Tree traversal - Wikipedia](https://en.wikipedia.org/wiki/Tree_traversal)**
+- **[Graph traversal — Wikipedia](https://en.wikipedia.org/wiki/Graph_traversal)**
+- **[Tree traversal — Wikipedia](https://en.wikipedia.org/wiki/Tree_traversal)**
 
 **Traversal** refers to the process of visiting and accessing each element or node in a data structure, such as linked list, tree, or graph. The purpose of traversal is to perform some operation on each element or node, such as reading its value, modifying it, or performing other specific task.
 
@@ -22,7 +22,7 @@ Graph traversal refers to the process of exploring nodes or vertices in a [graph
 
 DFS is a graph traversal algorithm that explores vertices as deeply as possible. It starts at a given vertex, visits one of its neighbors, and continues to explore that neighbor's neighbors until it reaches a dead end. After reaching dead end, it will come back to the previous vertex and continue to visit that vertex neighbor until it reaches a dead end again.
 
-Here is the pseudocode :
+Here is the pseudocode:
 
 ```
 DFS(graph, vertex, visited):
@@ -39,7 +39,7 @@ In DFS, we will visit a vertex as deep as possible, each vertex have a neighbor,
 It is possible that the graph we are traversing consists of a loop ([cyclic graph](/data-structures-and-algorithms/graph#cyclic)). If we keep traversing it mindlessly, we may never finish our recursion function, which will result in stack overflow error. To mitigate this, we will have another data structure called `visited`, which will keep track the visited vertex. We will only traverse to unvisited vertex. The data structure of `visited` can be a [set](/data-structures-and-algorithms/set) data structure, to ensure fast retrieval of element and to store only unique element.
 
 ![DFS GIF](./dfs.gif)  
-Source : https://en.m.wikipedia.org/wiki/File:Depth-First-Search.gif
+Source: https://en.m.wikipedia.org/wiki/File:Depth-First-Search.gif
 
 #### Breadth-First Search (BFS)
 
@@ -73,7 +73,7 @@ The queue act like a "to-do list" to keep track all the node for us to visit lat
 :::
 
 ![BFS GIF](./bfs.gif)  
-Source : https://commons.wikimedia.org/wiki/File:Breadth-First-Search-Algorithm.gif
+Source: https://commons.wikimedia.org/wiki/File:Breadth-First-Search-Algorithm.gif
 
 ### Tree Traversal
 
@@ -96,7 +96,7 @@ function DFS(node):
 ```
 
 ![Inorder traversal](./inorder.gif)  
-Source : https://commons.wikimedia.org/wiki/File:Inorder-traversal.gif (red means all the child has been visited)
+Source: https://commons.wikimedia.org/wiki/File:Inorder-traversal.gif (red means all the child has been visited)
 
 #### Preorder Traversal
 
@@ -111,7 +111,7 @@ function DFS(node):
 ```
 
 ![Preorder traversal](./preorder.gif)  
-Source : https://commons.wikimedia.org/wiki/File:Preorder-traversal.gif
+Source: https://commons.wikimedia.org/wiki/File:Preorder-traversal.gif
 
 #### Postorder Traversal
 
@@ -126,6 +126,6 @@ function DFS(node):
 ```
 
 ![Postorder traversal](./postorder.gif)  
-Source : https://commons.wikimedia.org/wiki/File:Postorder-traversal.gif
+Source: https://commons.wikimedia.org/wiki/File:Postorder-traversal.gif
 
 Depending on the task, the order of visiting nodes matters. For example, inorder traversal can be used to visits the nodes in ascending order in the case of a binary search tree.

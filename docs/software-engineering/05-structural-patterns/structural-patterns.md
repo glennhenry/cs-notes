@@ -5,9 +5,9 @@ title: Structural Patterns
 description: Structural Patterns
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Structural Design Patterns - Refatoring Guru](https://refactoring.guru/design-patterns/structural-patterns)**
+- **[Structural Design Patterns — Refatoring Guru](https://refactoring.guru/design-patterns/structural-patterns)**
 
 **Structural patterns** focus on structuring objects and classes to form larger structure. These patterns help to define and manage relationships between different components, ensuring that they work together effectively.
 
@@ -15,7 +15,7 @@ description: Structural Patterns
 
 Facade pattern advises simplifying a complex system by providing a unified and straightforward interface to the client. The system should feature an interface functioning as a "facade" or entry point to hide complexity underneath.
 
-The point is to simplify complex interaction within the system. Complex interaction can occur in single or multiple class. For example, a computer consist of CPU, memory, and hard drive. A non-facade way of doing this would be :
+The point is to simplify complex interaction within the system. Complex interaction can occur in single or multiple class. For example, a computer consist of CPU, memory, and hard drive. A non-facade way of doing this would be:
 
 ```kotlin
 class CPU {
@@ -103,7 +103,7 @@ This code illustrates phone that we can charge using one of the two chargers, `E
 To make phone compatible with any type of charger, we will introduce two adapter class for `AmericanCharger` and `EuropeanCharger`.
 
 ```kotlin
-class EuropeanChargerAdapter(private val charger: EuropeanCharger) : Charger {
+class EuropeanChargerAdapter(private val charger: EuropeanCharger): Charger {
     override fun charge() {
         // do complex convertion here...
         charger.plugIn()
@@ -111,7 +111,7 @@ class EuropeanChargerAdapter(private val charger: EuropeanCharger) : Charger {
     }
 }
 
-class AmericanChargerAdapter(private val charger: AmericanCharger) : Charger {
+class AmericanChargerAdapter(private val charger: AmericanCharger): Charger {
     override fun charge() {
         // do complex convertion here...
         charger.plugIn()
@@ -184,43 +184,43 @@ As many shape and type of rendering available, the class hierarchy becomes expon
 
 Bridge pattern solve the problem by [switching inheritance to composition](/software-engineering/software-principles#composition-over-inheritance). Instead of making different renderer class for each type of shape, we associate a shape with a type of renderer. This effectively split the class hierarchy, which we can develop independently.
 
-The `Renderer` hierarchy :
+The `Renderer` hierarchy:
 
 ```kotlin
 interface Renderer {
     fun render()
 }
 
-class VectorRenderer : Renderer {
+class VectorRenderer: Renderer {
     override fun render() {}
 }
 
-class RasterRenderer : Renderer {
+class RasterRenderer: Renderer {
     override fun render() {}
 }
 ```
 
-The `Shape` hierarchy :
+The `Shape` hierarchy:
 
 ```kotlin
 abstract class Shape(val renderer: Renderer) {
     abstract fun draw()
 }
 
-class Circle(val renderer: Renderer) : Shape(renderer) {
+class Circle(val renderer: Renderer): Shape(renderer) {
     override fun draw() {
         renderer.renderShape()
     }
 }
 
-class Square(private val renderer: Renderer) : Shape(renderer) {
+class Square(private val renderer: Renderer): Shape(renderer) {
     override fun draw() {
         renderer.renderShape()
     }
 }
 ```
 
-Usage example :
+Usage example:
 
 ```kotlin
 fun main() {
@@ -270,23 +270,23 @@ interface Pizza {
     fun getDescription(): String
 }
 
-class PlainPizza : Pizza {
+class PlainPizza: Pizza {
     override fun getDescription(): String {
         return "Plain Pizza"
     }
 }
 ```
 
-The topping will become the decorator for `Pizza` :
+The topping will become the decorator for `Pizza`:
 
 ```kotlin
-class PepperoniDecorator(val pizza: Pizza) : Pizza {
+class PepperoniDecorator(val pizza: Pizza): Pizza {
     override fun getDescription(): String {
         return pizza.getDescription() + ", Pepperoni"
     }
 }
 
-class CheeseDecorator(val pizza: Pizza) : Pizza {
+class CheeseDecorator(val pizza: Pizza): Pizza {
     override fun getDescription(): String {
         return pizza.getDescription() + ", Cheese"
     }

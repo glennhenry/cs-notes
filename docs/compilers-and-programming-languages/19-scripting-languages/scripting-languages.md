@@ -5,10 +5,10 @@ title: Scripting Languages
 description: Scripting Languages
 ---
 
-**Main Source :**
+**Main Source:**
 
 - **Book 2 chapter 13**
-- **[Scripting language - Wikipedia](https://en.wikipedia.org/wiki/Scripting_language)**
+- **[Scripting language — Wikipedia](https://en.wikipedia.org/wiki/Scripting_language)**
 
 Scripting languages are programming language designed to manipulate, customize, or automate an existing system, typically within a specific domain.
 
@@ -57,24 +57,24 @@ Scripting language that extends the capabilities of an application is known as a
 
 Programming language can be categorized based on their purposes, **general purpose language (GPL)** and **domain-specific language (DSL)**. The former is designed to be versatile for wide range of domains and use cases, while the latter specifically made to address the needs of a particular domain or problem space. Example of GPL are Java, C++, Python, C#, and examples for DSL are SQL (for database), HTML/CSS (for web markup and styling), MATLAB (for numerical computing).
 
-Scripting languages can be any of the two, examples are :
+Scripting languages can be any of the two, examples are:
 
-- **Python** : While it is a general purpose language, it is known for its simplicity and readability. It is widely used for scripting tasks, such as automation, web scraping, manipulating files, sending email, etc.
-- **JavaScript** : JavaScript was once a highly specific DSL intended to manipulate applications ([web browsers](/internet-and-web/web-browser)) through a specific API called the [DOM](/internet-and-web/html#html-dom) to add interactivity and dynamic behavior to webpages. With [Node JS](/internet-and-web/javascript#node-js), it evolved from a browser scripting language into general purpose language capable to be run on server-side application.
-- **PowerShell** : It is a scripting language developed by Microsoft for Windows systems. It provides [command-line shell](/computer-and-programming-fundamentals/computer-and-programming-terminology#command-line-command-prompt-shell-bash-terminal-console) environment to allows system administrators to automate tasks, manage system configurations, and interact with various Windows services and components.
+- **Python**: While it is a general purpose language, it is known for its simplicity and readability. It is widely used for scripting tasks, such as automation, web scraping, manipulating files, sending email, etc.
+- **JavaScript**: JavaScript was once a highly specific DSL intended to manipulate applications ([web browsers](/internet-and-web/web-browser)) through a specific API called the [DOM](/internet-and-web/html#html-dom) to add interactivity and dynamic behavior to webpages. With [Node JS](/internet-and-web/javascript#node-js), it evolved from a browser scripting language into general purpose language capable to be run on server-side application.
+- **PowerShell**: It is a scripting language developed by Microsoft for Windows systems. It provides [command-line shell](/computer-and-programming-fundamentals/computer-and-programming-terminology#command-line-command-prompt-shell-bash-terminal-console) environment to allows system administrators to automate tasks, manage system configurations, and interact with various Windows services and components.
 
 #### Shell
 
 Shell languages are specifically designed to interact with and control operating system shells. It includes language like Bash, PowerShell, and sh.
 
-Some features of shell languages (Bash) :
+Some features of shell languages (Bash):
 
-- **Wildcard** : Also known as **globbing**, they are related to string manipulation and pattern matching. It is commonly used for matching or expanding patterns in file or directory names. Commonly used wildcards include `*` (matches any sequence of characters), `?` (matches any single character), and `[ ]` (matches a range of characters). For example, `ls *.txt` lists all files with the ".txt" extension in the current directory.
-- **Variables** : Variables are assigned values using the `=` operator and accessed using the `$` symbol. For example, `name="John"` assigns the value "John" to the variable name, and `echo $name` prints the value of the name variable.
-- **Simple Loop** : We can put an entire loop within just a single line of code by separating each line with a semicolon. The code `for i in {1..5}; do echo $i; done` prints number 1 to 5 in each line.
-- **Pipes** : Pipes with the symbol (|) connect the output of one command to the input of another, allowing for the chaining of commands together. For example, `ls -l | grep ".txt"` lists all files in long format (long format includes file's detailed information) and then filters the output to show only files with the ".txt" extension.
-- **Output Redirection** : We can direct the output of a command to a file or another location. The `>` symbol redirects standard output to a file, overwriting its contents, while `>>` appends the output to the file. For example, `ls > file.txt` redirects the output of the `ls` command to the file "file.txt".
-- **Function** : User can also define function.
+- **Wildcard**: Also known as **globbing**, they are related to string manipulation and pattern matching. It is commonly used for matching or expanding patterns in file or directory names. Commonly used wildcards include `*` (matches any sequence of characters), `?` (matches any single character), and `[ ]` (matches a range of characters). For example, `ls *.txt` lists all files with the ".txt" extension in the current directory.
+- **Variables**: Variables are assigned values using the `=` operator and accessed using the `$` symbol. For example, `name="John"` assigns the value "John" to the variable name, and `echo $name` prints the value of the name variable.
+- **Simple Loop**: We can put an entire loop within just a single line of code by separating each line with a semicolon. The code `for i in {1..5}; do echo $i; done` prints number 1 to 5 in each line.
+- **Pipes**: Pipes with the symbol (|) connect the output of one command to the input of another, allowing for the chaining of commands together. For example, `ls -l | grep ".txt"` lists all files in long format (long format includes file's detailed information) and then filters the output to show only files with the ".txt" extension.
+- **Output Redirection**: We can direct the output of a command to a file or another location. The `>` symbol redirects standard output to a file, overwriting its contents, while `>>` appends the output to the file. For example, `ls > file.txt` redirects the output of the `ls` command to the file "file.txt".
+- **Function**: User can also define function.
 
   ```bash
   greet() {
@@ -86,12 +86,12 @@ Some features of shell languages (Bash) :
 
   Where the `$1` represent the first parameter, `$2` represent the second, and so on.
 
-Unix-based system also provide command-line utilities :
+Unix-based system also provide command-line utilities:
 
-- **wget** : wget is a command-line utility used for retrieving files from the web. It allows us to download files from HTTP, HTTPS, and FTP servers. It supports various protocols, advanced options, and features like recursive downloading, resuming interrupted downloads, and handling proxies. It is commonly used in shell scripts for automated file retrieval.
-- **curl** : curl is a command-line tool for making HTTP requests. It can retrieve files, send data, perform authentication, handle cookies, and more. It is frequently used for tasks like downloading files, testing APIs, performing data transfers, and automation.
-- **sed** : sed (stream editor) is a command-line utility for text manipulation. It reads input line by line, applies specified operations (commands), and outputs the result.
-- **awk** : awk is a more powerful text-processing tool, typically used for manipulating and analyzing structured text data. Similarly, it operates on a per-line basis, reads input records, apply patterns, and execute actions based on those patterns. It is included with programming constructs such as array, control flow like `if`, `else`, `while`, etc.
+- **wget**: wget is a command-line utility used for retrieving files from the web. It allows us to download files from HTTP, HTTPS, and FTP servers. It supports various protocols, advanced options, and features like recursive downloading, resuming interrupted downloads, and handling proxies. It is commonly used in shell scripts for automated file retrieval.
+- **curl**: curl is a command-line tool for making HTTP requests. It can retrieve files, send data, perform authentication, handle cookies, and more. It is frequently used for tasks like downloading files, testing APIs, performing data transfers, and automation.
+- **sed**: sed (stream editor) is a command-line utility for text manipulation. It reads input line by line, applies specified operations (commands), and outputs the result.
+- **awk**: awk is a more powerful text-processing tool, typically used for manipulating and analyzing structured text data. Similarly, it operates on a per-line basis, reads input records, apply patterns, and execute actions based on those patterns. It is included with programming constructs such as array, control flow like `if`, `else`, `while`, etc.
 
 #### Web
 

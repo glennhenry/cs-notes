@@ -5,15 +5,15 @@ title: Array
 description: Array
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[Array (data structure) - Wikipedia](<https://en.wikipedia.org/wiki/Array_(data_structure)>)**
-- **[Dynamic array - Wikipedia](https://en.wikipedia.org/wiki/Dynamic_array)**
+- **[Array (data structure) — Wikipedia](<https://en.wikipedia.org/wiki/Array_(data_structure)>)**
+- **[Dynamic array — Wikipedia](https://en.wikipedia.org/wiki/Dynamic_array)**
 
 **Array** is a data structure that stores a **fixed-size** of element of the **same type**. In memory, array is located within a contiguous block of memory locations. It is a fundamental and elementary data structure that serves as a building block for constructing more complex data structures.
 
 ![Array data structure](./array.jpg)  
-Source : https://beginnersbook.com/2018/10/data-structure-array/
+Source: https://beginnersbook.com/2018/10/data-structure-array/
 
 Each element in the array has its own position, it is called **index**. Index in most programming languages starts from 0 (called 0-indexed array) and is incremented by 1 for each subsequent element.
 
@@ -39,14 +39,14 @@ The declaration of array involves assigning a [pointer](/computer-and-programmin
 Subsequent access of this array is done using [pointer arithmetic](/computer-and-programming-fundamentals/memory#pointer-arithmetic) under the hood.
 
 ![Array in memory](./array-memory.png)  
-Source : https://www2.hawaii.edu/~walbritt/ics212/materials/array-diagrams.htm
+Source: https://www2.hawaii.edu/~walbritt/ics212/materials/array-diagrams.htm
 
 #### Array Operation
 
-There are some operation we can do in an array :
+There are some operation we can do in an array:
 
-- **Mutating elements** : To mutate or change an element in an array, we can do it easily and we just need its index and the new value. For example, changing element at index 4 to 9 can be done by : `arr[4] = 9`. Under the hood, this process involves directly accessing the element's memory location and change the value directly in-place.
-- **Removing elements** : Removing an element from a normal array involves shifting the elements after the removed element to fill the gap. If you want to remove an element at index 2, you would need to shift all elements from index 3 to the end of the array one position to the left. This ensures that there are no gaps in the array. In the worst case scenario, the shifting operation may require $O(n)$ time.
+- **Mutating elements**: To mutate or change an element in an array, we can do it easily and we just need its index and the new value. For example, changing element at index 4 to 9 can be done by: `arr[4] = 9`. Under the hood, this process involves directly accessing the element's memory location and change the value directly in-place.
+- **Removing elements**: Removing an element from a normal array involves shifting the elements after the removed element to fill the gap. If you want to remove an element at index 2, you would need to shift all elements from index 3 to the end of the array one position to the left. This ensures that there are no gaps in the array. In the worst case scenario, the shifting operation may require $O(n)$ time.
 
 ### Dynamic Array
 
@@ -58,13 +58,13 @@ Dynamic array starts with an initial size, it will automatically resize itself a
 
 An array contains a collection of elements with the same type, an array can also contain another array, which is called **multidimensional array**. An array is called one-dimensional if it only contains a linear sequence of elements, without additional array inside it. A two-dimensional array is where an array has another array inside it, making the array has matrix-like structure.
 
-For instance, here are comparison between the dimension of an array :
+For instance, here are comparison between the dimension of an array:
 
 ```
-[1, 2, 3, 4, 5] : one-dimensional array, contain only linear sequence of element
-[[1, 2], [3, 4], [5, 6]] : two-dimensional array, each element in the array contains another array
+[1, 2, 3, 4, 5]: one-dimensional array, contain only linear sequence of element
+[[1, 2], [3, 4], [5, 6]]: two-dimensional array, each element in the array contains another array
 
-The same two-dimensional array can be organized like :
+The same two-dimensional array can be organized like:
 
 [
     [1, 2],

@@ -110,7 +110,7 @@ def generate_folder_file():
             md_file.write(f"---\n\n")
 
             # Write default template
-            md_file.write(f"**Main Source :**\n\n")
+            md_file.write(f"**Main Source:**\n\n")
             md_file.write(f"- [] \n\n")
             md_file.write(f"{title} page\n")
 

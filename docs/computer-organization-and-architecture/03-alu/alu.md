@@ -5,9 +5,9 @@ title: ALU
 description: ALU
 ---
 
-**Main Source :**
+**Main Source:**
 
-- **[How Computers Calculate - the ALU: - Crash Course Computer Science #5](https://youtu.be/1I5ZMmrOfnA?si=jFZSZjsoJQI8VMHc)**
+- **[How Computers Calculate - the ALU: Crash Course Computer Science #5 — CrashCourse](https://youtu.be/1I5ZMmrOfnA?si=jFZSZjsoJQI8VMHc)**
 
 **Arithmetic Logic Unit (ALU)** is the component of CPU that handles basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
@@ -33,27 +33,27 @@ All of this process takes place in the ALU. The ALU takes input from the registe
 The V-shape of ALU is just for illustration purposes.
 :::
 
-Input of ALU :
+Input of ALU:
 
-- **Operand** : ALU takes two input called [operand](/computer-organization-and-architecture/coa-fundamentals#opcode--operand), which represent the input binaries for operation to be performed.
-- **[Opcode](/computer-organization-and-architecture/coa-fundamentals#opcode--operand)** : It is the instruction on what should ALU do based on the two operand.
-- **Status** : Status provide information about the current status of ALU or the contextual information from the previous operations. The status is called a **flag**, it is obtained from a special registers called [status registers](/computer-organization-and-architecture/registers-and-ram#type-of-registers).
+- **Operand**: ALU takes two input called [operand](/computer-organization-and-architecture/coa-fundamentals#opcode--operand), which represent the input binaries for operation to be performed.
+- **[Opcode](/computer-organization-and-architecture/coa-fundamentals#opcode--operand)**: It is the instruction on what should ALU do based on the two operand.
+- **Status**: Status provide information about the current status of ALU or the contextual information from the previous operations. The status is called a **flag**, it is obtained from a special registers called [status registers](/computer-organization-and-architecture/registers-and-ram#type-of-registers).
 
-  Some common flags are :
+  Some common flags are:
 
-  - **Zero Flag (Z)** : This flag is set when the result of an operation is zero. It is cleared when the result is nonzero.
-  - **Carry Flag (C)** : This flag is set when there is a carry or borrow in arithmetic operations such as addition or subtraction.
+  - **Zero Flag (Z)**: This flag is set when the result of an operation is zero. It is cleared when the result is nonzero.
+  - **Carry Flag (C)**: This flag is set when there is a carry or borrow in arithmetic operations such as addition or subtraction.
 
     ![Carry in addition](./carry-in-addition.png)  
-    Source : https://knowthecode.io/labs/basics-of-digitizing-data/episode-8
+    Source: https://knowthecode.io/labs/basics-of-digitizing-data/episode-8
 
-  - **Overflow Flag (V)** : This flag is set when there is a signed overflow in arithmetic operations, meaning the result is too large or too small to be accurately represented with the available number of bits.
-  - **Sign Flag (S)** : This flag reflects the sign of the result. It is set when the result is negative and cleared when the result is positive or zero.
+  - **Overflow Flag (V)**: This flag is set when there is a signed overflow in arithmetic operations, meaning the result is too large or too small to be accurately represented with the available number of bits.
+  - **Sign Flag (S)**: This flag reflects the sign of the result. It is set when the result is negative and cleared when the result is positive or zero.
 
-Output of ALU :
+Output of ALU:
 
-- **Result** : Represents the result of the arithmetic or logical operation performed based on the input.
-- **Status** : The status flag that may be generated from the current operation.
+- **Result**: Represents the result of the arithmetic or logical operation performed based on the input.
+- **Status**: The status flag that may be generated from the current operation.
 
 #### Arithmetic
 
@@ -63,7 +63,7 @@ The example we have done earlier, which is adding two binary using an OR logic g
 
 We will need to modify the behavior of the addition system. We will also consider the carry by using the carry status flag. So, performing addition on "1" with "1" should produce "0". The logic gate that will produce result of "0" when given input "1" and "1", is the [XOR gate](/computer-organization-and-architecture/boolean-logic#logic-gates).
 
-Here is the table of XOR gate possible input and output :
+Here is the table of XOR gate possible input and output:
 
 ```
 A   B   S   C-out
@@ -79,7 +79,7 @@ Where A and B is the input, S is the result, C-out is the carry output. Now, how
 So, we will combine the XOR gate with AND gate, this is called **half adder**.
 
 ![Half adder](./half-adder.png)  
-Source : https://id.m.wikipedia.org/wiki/Berkas:Half-adder.svg (with modification)
+Source: https://id.m.wikipedia.org/wiki/Berkas:Half-adder.svg (with modification)
 
 ##### Full Adder
 
@@ -88,9 +88,9 @@ Notice that half adder doesn't consider the carry from the previous operation. T
 The first half adder produces the sum S and carry C. The sum S will be inputted again to the next half adder, which takes a carry input C-in. It will produce another sum S, which is the actual sum produced. The C from first half adder will be combined with the C from the second half adder with an OR gate, producing the actual carry C-out.
 
 ![Full adder](./full-adder.png)  
-Source : [top](https://id.m.wikipedia.org/wiki/Berkas:Full-adder.svg), [bottom](https://youtu.be/1I5ZMmrOfnA?si=1Y2BGY9L7TvSwRFL&t=265)
+Source: [top](https://id.m.wikipedia.org/wiki/Berkas:Full-adder.svg), [bottom](https://youtu.be/1I5ZMmrOfnA?si=1Y2BGY9L7TvSwRFL&t=265)
 
-Summarizing the full adder, it will take 3 input, which is A, B, C-in, and produces output S and C-out :
+Summarizing the full adder, it will take 3 input, which is A, B, C-in, and produces output S and C-out:
 
 ```
 A   B   C-in    S   C-out
@@ -112,7 +112,7 @@ That full adder operates on a single bit binary numbers. To extend the concept t
 For example, to create an 8-bit adder, we would need to combine eight full adders together.
 
 ![8-bit adder](./8-bit-adder.png)  
-Source : https://www.engineersgarage.com/vhdl-tutorial-21-designing-an-8-bit-full-adder-circuit-using-vhdl/
+Source: https://www.engineersgarage.com/vhdl-tutorial-21-designing-an-8-bit-full-adder-circuit-using-vhdl/
 
 Each full adder still takes three input, which are A, B, and C-in, which can be the carry from the previous adder. The sum S from sum0 up to sum7 will be concatenated together at the end, producing the 8-bit binary number. The sum0 output represents the [least significant bit (LSB)](/computer-and-programming-fundamentals/binary-representation#least--most-significant-bit) of the sum, while the sum7 output represents the [most significant bit (MSB)](/computer-and-programming-fundamentals/binary-representation#least--most-significant-bit) of the sum.
 
@@ -122,9 +122,9 @@ This 8-bit adder is called **ripple carry adder**. The problem for this adder is
 
 In fact, other operation such as subtraction, multiplication, and division can be performed with only addition operation.
 
-- **Subtraction** : Subtraction, for example, (2 - 5), can be rewritten as (2 + (-5)), which is an addition operation. To represent the number (-5) in binary, we can use the [two complement representation](/computer-and-programming-fundamentals/binary-representation#two-complement).
-- **Multiplication** : Multiplication can be performed using iterative addition, 2 × 3 is essentially just 2 + 2 + 2.
-- **Division** : Division can also be implemented using iterative subtraction, 4 / 2 is 4 - 2. We will repeatedly subtract the divisor from the dividend until the remainder is less than the divisor.
+- **Subtraction**: Subtraction, for example, (2 - 5), can be rewritten as (2 + (-5)), which is an addition operation. To represent the number (-5) in binary, we can use the [two complement representation](/computer-and-programming-fundamentals/binary-representation#two-complement).
+- **Multiplication**: Multiplication can be performed using iterative addition, 2 × 3 is essentially just 2 + 2 + 2.
+- **Division**: Division can also be implemented using iterative subtraction, 4 / 2 is 4 - 2. We will repeatedly subtract the divisor from the dividend until the remainder is less than the divisor.
 
 #### Logic Unit
 
