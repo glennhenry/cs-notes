@@ -18,7 +18,7 @@ MIME type syntax looks like the following: `type "/" [tree "."] subtype ["+" suf
 - `type` is the general category of the data, such as text, image, audio, or video.
 - `tree` is an optional prefix that can be used to further categorize the data. For example, the type application can have the tree `x-` to indicate that it is an experimental format.
 - `subtype` is the specific format of the data, such as [plain text](/digital-media-processing/txt), [HTML](/internet-and-web/html), [PDF](/digital-media-processing/pdf), MS Word document.
-- `suffix` is an optional suffix that can be used to represent specific structure of the format. For example, the suffix `xml` can be used to classify [XML data](/digital-media-processing/xml), and the suffix `json` can be used to classify [JSON](/internet-and-web/json) data.
+- `suffix` is an optional suffix that can be used to represent specific structure of the format. For example, the suffix `xml` can be used to classify [XML data](/digital-media-processing/xml), and the suffix `json` can be used to classify [JSON](/digital-media-processing/json) data.
 - `parameter` is an optional parameter that can be used to provide additional information or metadata about the data. For example, the parameter charset can be used to specify the character encoding of the text data.
 
 For example, a MIME type for [JPEG](/digital-media-processing/jpg-jpeg) file is `image/jpeg; charset=utf-8`
