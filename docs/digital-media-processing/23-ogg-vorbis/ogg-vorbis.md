@@ -17,7 +17,7 @@ A media container is a file that encapsulates multiple types of media data, such
 A media container format supports multiple **codecs** for encoding or decoding the corresponding format.
 
 :::note
-A codec is a software, device, or program responsible for [encoding and decoding](/digital-media-processing/encoding-and-decoding) a data stream or signal.
+A codec is a software, device, or program responsible for [encoding and decoding](/digital-signal-processing/encoding-and-decoding) a data stream or signal.
 :::
 
 ### OGG

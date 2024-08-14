@@ -210,7 +210,7 @@ Two common approaches are using a [linear list](/data-structures-and-algorithms/
 
 - **Hash Table**: In this approach, a linear list is still used to store the directory entries, but a hash data structure is employed as well. The hash table takes a value computed from the file name and returns a pointer to the corresponding entry in the linear list. This allows for faster directory search by greatly reducing the search time.
 
-  When a file name needs to be looked up, it is hashed to generate a value within a given range. This value is then used to directly access the corresponding entry in the linear list, avoiding the need for sequential searching. However, [collisions](/data-structures-and-algorithms/hash-table#collision) may occur when two file names hash to the same location, requiring collision resolution techniques, such as using a linked list within each hash entry.
+  When a file name needs to be looked up, it is hashed to generate a value within a given range. This value is then used to directly access the corresponding entry in the linear list, avoiding the need for sequential searching. However, [collisions](/data-structures-and-algorithms/hash-function#collision) may occur when two file names hash to the same location, requiring collision resolution techniques, such as using a linked list within each hash entry.
 
   ![Hash table directory](./hash-table-directory.png)  
   Source: https://www.javatpoint.com/os-directory-implementation

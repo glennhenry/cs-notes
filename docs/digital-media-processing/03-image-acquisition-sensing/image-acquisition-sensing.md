@@ -45,8 +45,8 @@ Face detection is a computer vision technology that involves identifying and loc
 - Mouth: The mouth is also a distinctive feature of a face. It is typically located below the nose, and it is usually open or closed.
 - Facial Landmarks: Facial landmarks are specific points on the face, such as the corners of the eyes, the tip of the nose, and the corners of the mouth. Facial landmarks are often used to help with face detection, as they can provide more accurate information about the location of the face in an image.
 
-  ![A human face is detected and marked in green square](./face-detection.jpg)  
-  Source: https://en.wikipedia.org/wiki/Face_detection
+![A human face is detected and marked in green square](./face-detection.jpg)  
+Source: https://en.wikipedia.org/wiki/Face_detection
 
 ### Self-driving Cars
 
