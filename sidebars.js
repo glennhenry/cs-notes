@@ -218,8 +218,8 @@ const sidebars = {
               items: [
                 "digital-media-processing/xml/xml",
                 "digital-media-processing/json/json",
-                "digital-media-processing/md/md",
                 "digital-media-processing/txt/txt",
+                "digital-media-processing/md/md",
                 "digital-media-processing/pdf/pdf",
               ],
             },

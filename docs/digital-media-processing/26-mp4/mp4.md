@@ -9,7 +9,7 @@ description: MP4
 
 - **[MP4 file format — Wikipedia](https://en.wikipedia.org/wiki/MP4_file_format)**
 
-**MP4 (MPEG-4 Part 14)** is a digital [multimedia container](<(/digital-media-processing/ogg-vorbis#media-container)>) format, commonly used to store audio and video data.
+**MP4 (MPEG-4 Part 14)** is a digital [multimedia container](/digital-media-processing/ogg-vorbis#media-container) format, commonly used to store audio and video data.
 
 ![MP4 as a multimedia container](./mp4-container.png)  
 Source: https://www.filefix.org/format/mp4.html, https://en.wikipedia.org/wiki/MP4_file_format
