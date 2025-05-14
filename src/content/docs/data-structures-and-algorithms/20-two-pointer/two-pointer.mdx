@@ -1,0 +1,81 @@
+---
+title: Two Pointer
+slug: data-structures-and-algorithms/two-pointer
+description: Two Pointer
+---
+
+import two_pointer_illustration from "./two-pointer-illustration.mp4";
+import naive_solution from "./naive-solution.mp4";
+import two_pointer_solution from "./two-pointer-solution.mp4";
+
+**Main Source:**
+
+- **[The Two Pointer Technique - AlgoDaily](https://algodaily.com/lessons/using-the-two-pointer-technique)**
+
+**Two Pointer** is a technique to solve problems that involve traversing a sequence or data structure using two pointers or references. For instance, when we iterate through an array, if we use single pointer, we only have a single variable that refer to the element of the array. If we use two pointer technique, we can have two variable that refer to the array.
+
+Here is an illustration:
+
+<video width="695" height="392" controls>
+  <source src={two_pointer_illustration} />
+</video>
+
+In this case, we used two pointer to traverse the array faster. The pointer will store the index it is accessing and we will increase the index of both pointer in each iteration. Using this technique, we are able to achieve 2x faster speed than just using one pointer.
+
+### Palindrome Checking
+
+Palindrome is a word, number, sequence, or phrase that reads the same as forwards and backwards. Example of a palindrome word is "racecar", reading it forward from left to right or backward from right to left will be the same.
+
+#### Naive Solution
+
+How would we design an algorithm that checks if a given string is palindrome or not?  
+The naive solution would be reading it forward first, then reading it backward after, and then compare it if they are the same or not.
+
+Here is the pseudocode for it:
+
+```
+function(word: String): Boolean
+    readForward = ""
+    readBackward = ""
+
+    for each character in word:
+        append character to last position of readForward
+        append character to first position of readBackward
+
+    return readForward == readBackward
+```
+
+Here's how will it look like:
+
+<video width="695" height="392" controls>
+  <source src={naive_solution} />
+</video>
+
+In this code, we created two empty string. We will iterate the string and append each character to last and first position of `readForward` and `readBackward`, respectively. We will need to iterate the whole string, therefore this algorithm results in $O(n)$ time complexity, where $n$ is the length of the string. The space complexity is $O(2n)$ = $O(n)$, because we used two string to store the read.
+
+#### Two Pointer Approach
+
+Notice that we did a repeated work in the naive solution, we can optimize this using two pointer approach. If a string is palindrome, it will be read the same from forward and backward. The idea is, instead of storing the read somewhere, why don't we compare it on the fly while iterating? Now the question is, how would we compare it on the fly?
+
+The solution is to have two pointer, with one pointing to the first character of the string or index 0, and the other pointer points to the last character. The first pointer (or we call left pointer because it starts from left) will be incremented while the second pointer (right pointer) will be decremented in each iteration. We will check if the character at the index of left pointer is the same as the character at index of right pointer. If they are not the same, we will return false, indicating they are not palindrome.
+
+```
+function(word: String): Boolean
+    leftPointer = 0
+    rightPointer = last index of word
+
+    while leftPointer < rightPointer:
+        if word[leftPointer] != word[rightPointer]:
+            return false
+
+        leftPointer = leftPointer + 1
+        rightPointer = rightPointer + 1
+
+    return true
+```
+
+<video width="695" height="392" controls>
+  <source src={two_pointer_solution} />
+</video>
+
+Using this two pointer approach, we managed to achieve a constant $O(1)$ space complexity, we don't need to store the string read anywhere. This algorithm also have better time complexity, the worst-time complexity would be the same as the naive solution, however, the best and average may differ in some scenario. In the case of "abcde", we can immediately return false in the first iteration, because "a" is indeed not equal to "e", it immediately break the palindrome definition.

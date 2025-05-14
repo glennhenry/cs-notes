@@ -1,0 +1,14 @@
+@import "katex/dist/katex.min.css";
+/* https://fevol.github.io/starlight-site-graph/configuration/css/variables/ */
+
+:root[data-theme="light"] {
+  --sl-color-text-accent: #c169a3;
+}
+
+:root[data-theme="dark"] {
+  --sl-color-text-accent: #c169a3;
+}
+
+img {
+  border: 1px solid black;
+}
