@@ -1,23 +1,32 @@
 <div id="giscus-container" class="giscus"></div>
 
-<script
-  src="https://giscus.app/client.js"
-  data-repo="glennhenry/cs-notes"
-  data-repo-id="R_kgDOJ88kJw"
-  data-category="Notes"
-  data-category-id="DIC_kwDOJ88kJ84CrkEH"
-  data-mapping="pathname"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="bottom"
-  data-theme="preferred_color_scheme"
-  data-lang="en"
-  crossorigin="anonymous"
-  async></script>
-
 <script>
-  function changeGiscusTheme(theme: string) {
+  function getCurrentTheme() {
+    const htmlTheme = document.documentElement.getAttribute("data-theme");
+    return htmlTheme === "dark" ? "catppuccin_mocha" : "catppuccin_latte";
+  }
+
+  function loadGiscus(theme) {
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.setAttribute("data-repo", "glennhenry/cs-notes");
+    script.setAttribute("data-repo-id", "R_kgDOJ88kJw");
+    script.setAttribute("data-category", "Notes");
+    script.setAttribute("data-category-id", "DIC_kwDOJ88kJ84CrkEH");
+    script.setAttribute("data-mapping", "pathname");
+    script.setAttribute("data-strict", "0");
+    script.setAttribute("data-reactions-enabled", "1");
+    script.setAttribute("data-emit-metadata", "0");
+    script.setAttribute("data-input-position", "bottom");
+    script.setAttribute("data-theme", theme);
+    script.setAttribute("data-lang", "en");
+    script.crossOrigin = "anonymous";
+    script.async = true;
+
+    document.getElementById("giscus-container").appendChild(script);
+  }
+
+  function changeGiscusTheme(theme) {
     const iframe = document.querySelector("iframe.giscus-frame");
     if (!iframe) return;
 
@@ -31,10 +40,10 @@
     );
   }
 
-  function getCurrentTheme() {
-    const htmlTheme = document.documentElement.getAttribute("data-theme");
-    return htmlTheme === "dark" ? "catppuccin_mocha" : "catppuccin_latte";
-  }
+  window.addEventListener("DOMContentLoaded", () => {
+    const theme = getCurrentTheme();
+    loadGiscus(theme);
+  });
 
   const observer = new MutationObserver(() => {
     changeGiscusTheme(getCurrentTheme());
@@ -43,10 +52,5 @@
   observer.observe(document.documentElement, {
     attributes: true,
     attributeFilter: ["data-theme"],
-  });
-
-  // Optional: Apply correct theme on initial load in case it's late
-  window.addEventListener("DOMContentLoaded", () => {
-    changeGiscusTheme(getCurrentTheme());
   });
 </script>

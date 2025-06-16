@@ -70,11 +70,6 @@
   border: 1px solid black;
 }
 
-.sidebar-top {
-  padding-bottom: 0.9rem;
-  border-bottom: 1px solid var(--sl-color-panel-divider);
-}
-
 .sidebar-content {
   border-right: 1px solid var(--sl-color-panel-divider);
 }
