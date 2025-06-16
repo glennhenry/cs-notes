@@ -62,6 +62,10 @@
   }
 }
 
+.site-title {
+  height: 50px;
+}
+
 .content-panel img {
   border: 1px solid black;
 }

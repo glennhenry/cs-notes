@@ -1,0 +1,52 @@
+<div id="giscus-container" class="giscus"></div>
+
+<script
+  src="https://giscus.app/client.js"
+  data-repo="glennhenry/cs-notes"
+  data-repo-id="R_kgDOJ88kJw"
+  data-category="Notes"
+  data-category-id="DIC_kwDOJ88kJ84CrkEH"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme={"preferred_color_scheme"}
+  data-lang="en"
+  crossorigin="anonymous"
+  async></script>
+
+<script>
+  function changeGiscusTheme(theme: string) {
+    const iframe = document.querySelector("iframe.giscus-frame");
+    if (!iframe) return;
+
+    iframe.contentWindow.postMessage(
+      {
+        giscus: {
+          setConfig: { theme },
+        },
+      },
+      "https://giscus.app"
+    );
+  }
+
+  function getCurrentTheme() {
+    const htmlTheme = document.documentElement.getAttribute("data-theme");
+    return htmlTheme === "dark" ? "catppuccin_mocha" : "catppuccin_latte";
+  }
+
+  const observer = new MutationObserver(() => {
+    changeGiscusTheme(getCurrentTheme());
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
+
+  // Optional: Apply correct theme on initial load in case it's late
+  window.addEventListener("DOMContentLoaded", () => {
+    changeGiscusTheme(getCurrentTheme());
+  });
+</script>

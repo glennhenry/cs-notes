@@ -1,0 +1,55 @@
+<style>
+  .scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--sl-color-accent);
+    color: white;
+    border: none;
+    border-radius: 20%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .scroll-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+
+<button class="scroll-to-top">↑</button>
+
+<script is:inline>
+  const button = document.querySelector(".scroll-to-top");
+  const container = document.querySelector(".main-frame");
+
+  button.addEventListener("click", () => {
+    container.scrollTo({ top: 0 });
+  });
+
+  const updateVisibility = () => {
+    if (!button || !container) return;
+    if (container.scrollTop > 400) {
+      button.classList.add("visible");
+    } else {
+      button.classList.remove("visible");
+    }
+  };
+
+  if (button && container) {
+    container.addEventListener("scroll", updateVisibility);
+    updateVisibility();
+  } else {
+    window.addEventListener("load", () => {
+      const btn = document.querySelector(".scroll-to-top");
+      const cont = document.querySelector(".main-frame");
+      if (!btn || !cont) return;
+      cont.addEventListener("scroll", updateVisibility);
+      updateVisibility();
+    });
+  }
+</script>

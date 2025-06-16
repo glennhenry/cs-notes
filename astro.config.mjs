@@ -4,14 +4,26 @@ import starlight from "@astrojs/starlight";
 import starlightThemeObsidian from "starlight-theme-obsidian";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://glennhenry.github.io",
   base: "cs-notes",
+  outDir: "dist/cs-notes",
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [
+      rehypeKatex,
+      [
+        rehypeExternalLinks,
+        {
+          content: { type: "text", value: " ↗" },
+          target: "_blank",
+          rel: ["noopener", "noreferrer"],
+        },
+      ],
+    ],
   },
   integrations: [
     starlight({
@@ -27,6 +39,11 @@ export default defineConfig({
       credits: true,
 
       title: "CS Notes",
+      components: {
+        Pagination: "./src/components/Pagination.astro",
+        PageFrame: "./src/components/PageFrame.astro",
+      },
+
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 6 },
       social: [
         {
@@ -35,6 +52,7 @@ export default defineConfig({
           href: "https://github.com/glennhenry/cs-notes",
         },
       ],
+
       sidebar: [
         { label: "Intro", slug: "index" },
         { label: "All Pages", slug: "all-pages" },

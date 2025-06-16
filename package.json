@@ -1,7 +1,7 @@
 {
   "name": "cs-notes-starlight",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,12 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.34.3",
-    "astro": "^5.6.1",
+    "@astrojs/starlight": "^0.34.4",
+    "astro": "^5.9.3",
     "katex": "^0.16.22",
+    "rehype-external-links": "^3.0.0",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
-    "sharp": "^0.32.5",
-    "starlight-theme-obsidian": "^0.3.1"
+    "sharp": "^0.34.2",
+    "starlight-theme-obsidian": "^0.3.2"
   }
 }
