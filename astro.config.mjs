@@ -10,7 +10,6 @@ import rehypeExternalLinks from "rehype-external-links";
 export default defineConfig({
   site: "https://glennhenry.github.io",
   base: "cs-notes",
-  outDir: "dist/cs-notes",
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [
