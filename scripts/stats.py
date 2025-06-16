@@ -5,8 +5,10 @@ import os
 
 
 def stats(directory):
-    total_sum = 0
-    alls = []
+    total_char = 0
+    total_word = 0
+    alls1 = []
+    alls2 = []
     count = 0
 
     for root, dirs, files in os.walk(directory):
@@ -17,18 +19,32 @@ def stats(directory):
 
                 with open(file_path, "r", encoding="utf-8") as file:
                     content = file.read()
-                    char_sum = len(content)
-                    total_sum += char_sum
-                    alls.append((-char_sum, filename))
-                    print(f"Note: {file_path}, Characters: {char_sum}")
 
-    print(f"\nTotal Characters in All Notes: {total_sum}")
+                    total_char_file = len(content)
+                    total_word_file = len(content.split(" "))
+
+                    total_char += total_char_file
+                    total_word += total_word_file
+
+                    alls1.append((-total_char_file, filename))
+                    alls2.append((-total_word_file, filename))
+                    print(f"Note: {file_path}, Characters: {total_char_file}")
+                    print(f"Note: {file_path}, Characters: {total_word_file}")
+
+    print(f"\nTotal Characters in All Notes: {total_char}")
+    print(f"\nTotal Characters in All Notes: {total_word}")
     print(f"Total notes: {count}")
     print(f"\nLongest notes:")
-    heapq.heapify(alls)
+
+    heapq.heapify(alls1)
     for _ in range(5):
-        c, n = heapq.heappop(alls)
+        c, n = heapq.heappop(alls1)
         print(f"  Character: {-c} | {n}")
+
+    heapq.heapify(alls2)
+    for _ in range(5):
+        c, n = heapq.heappop(alls2)
+        print(f"  Word: {-c} | {n}")
 
 
 stats("docs")
