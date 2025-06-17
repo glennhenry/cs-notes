@@ -21,7 +21,7 @@ Bugs can be produced by:
 - **Logic errors**: Logic error are caused by programmer's fault. They occur when there is a mistake in the program's logic or algorithm, leading to incorrect results or unexpected behavior. These bugs can be subtle and may not always cause the program to crash or produce error messages.
 
 :::tip
-See also [Type of errors](/computer-and-programming-fundamentals/programming-concepts#type-of-error).
+See also [Type of errors](/cs-notes/computer-and-programming-fundamentals/programming-concepts#type-of-error).
 :::
 
 #### Types of Bugs
@@ -30,19 +30,19 @@ Different programming languages may produce different type of bugs. The design a
 
 Some types of bugs:
 
-- **Resource bugs**: Resource bugs are related to the incorrect management or usage of system resources, such as memory, file handles, network connections, or database connections. These bugs can include issues like [memory leaks](/computer-security/other-attack-and-exploit#memory-leak), file handle, or connection leaks.
+- **Resource bugs**: Resource bugs are related to the incorrect management or usage of system resources, such as memory, file handles, network connections, or database connections. These bugs can include issues like [memory leaks](/cs-notes/computer-security/other-attack-and-exploit#memory-leak), file handle, or connection leaks.
 
-  In language where the programmer manages the memory manually, such as C or C++, bugs like memory leaks, [buffer overflow](/computer-security/other-attack-and-exploit#buffer-overflow), use-after-free, dangling pointer, double free, etc., becomes more frequent.
+  In language where the programmer manages the memory manually, such as C or C++, bugs like memory leaks, [buffer overflow](/cs-notes/computer-security/other-attack-and-exploit#buffer-overflow), use-after-free, dangling pointer, double free, etc., becomes more frequent.
 
 - **Type bugs**: Errors or mismatches in the handling of data types. These bugs can arise from using incorrect or incompatible data types, performing operations on variables of the wrong type, or misinterpreting the expected behavior of a particular type.
 
-  In [statically-typed language](/computer-and-programming-fundamentals/computer-and-programming-terminology#typing-strength), such as Java or C++, type bugs can be caught at compile-time, while dynamically-typed languages such as Python or Ruby, these bugs may be encountered during runtime.
+  In [statically-typed language](/cs-notes/computer-and-programming-fundamentals/computer-and-programming-terminology#typing-strength), such as Java or C++, type bugs can be caught at compile-time, while dynamically-typed languages such as Python or Ruby, these bugs may be encountered during runtime.
 
-- **Concurrency bugs**: Concurrency bugs occur in programs that have multiple threads or processes running concurrently. These bugs are related to the incorrect synchronization, coordination, or sharing of resources among different threads or processes. See [multithreading problems](/operating-system/multithreading#multithreading-problems).
+- **Concurrency bugs**: Concurrency bugs occur in programs that have multiple threads or processes running concurrently. These bugs are related to the incorrect synchronization, coordination, or sharing of resources among different threads or processes. See [multithreading problems](/cs-notes/operating-system/multithreading#multithreading-problems).
 
 #### Bugs Management
 
-The number of bugs increases as the software gets larger. Bugs are typically documented and tracked in special [issue tracking software](/software-engineering/open-sourcing#issues). These software helps to manage bugs that arise a software.
+The number of bugs increases as the software gets larger. Bugs are typically documented and tracked in special [issue tracking software](/cs-notes/software-engineering/open-sourcing#issues). These software helps to manage bugs that arise a software.
 
 A bug issue is associated with relevant information, such as bug summary, description, steps to reproduce the bug, severity, and priority.
 
@@ -72,7 +72,7 @@ We can check the details of the function and see if we can identify it directly.
 
 #### Debug Tools
 
-The difficulty of debugging can vary depending on the complexity of the software and bugs. Advanced debugging is done with specialized tools that allows you to step into the program and stops it. The tool will also tell you the state of the program at the time, such as the value of variables and the [call stack](/data-structures-and-algorithms/recursion#call-stack).
+The difficulty of debugging can vary depending on the complexity of the software and bugs. Advanced debugging is done with specialized tools that allows you to step into the program and stops it. The tool will also tell you the state of the program at the time, such as the value of variables and the [call stack](/cs-notes/data-structures-and-algorithms/recursion#call-stack).
 
 These tools work by attaching additional instructions that allow them to monitor the program's execution to gather information for us.
 

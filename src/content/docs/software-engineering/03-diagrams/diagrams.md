@@ -134,7 +134,7 @@ Source: https://en.wikipedia.org/wiki/Activity_diagram#/media/File:Activity_cond
 
 System has **states**, which represent the different conditions or modes that an object or system can be in during its lifecycle. Each state is depicted as a rounded rectangle with the name of the state inside.
 
-An **event** represent occurrences or stimuli that trigger state transitions. **Transitions** represent the movement of an object or system from one state to another in response to an event or condition. Transitions are depicted with arrow, forming a [directed graph](/data-structures-and-algorithms/graph#directed) in the overall state diagram. When state transition takes place, **actions**, which describe operations or tasks will be performed.
+An **event** represent occurrences or stimuli that trigger state transitions. **Transitions** represent the movement of an object or system from one state to another in response to an event or condition. Transitions are depicted with arrow, forming a [directed graph](/cs-notes/data-structures-and-algorithms/graph#directed) in the overall state diagram. When state transition takes place, **actions**, which describe operations or tasks will be performed.
 
 ![State diagram](./state-diagram.png)  
 Source: https://nulab.com/learn/software-development/a-simple-guide-to-drawing-your-first-state-diagram-with-examples/
@@ -145,4 +145,4 @@ Similar to activity diagram, the start and end of the diagram is represented as 
 
 **Entity Relationship (ER) Diagram** is a flowchart that illustrates entities (or objects), relationships, attributes, and constraints within a database.
 
-See [E/R model](/database-system/database-model#er-model).
+See [E/R model](/cs-notes/database-system/database-model#er-model).

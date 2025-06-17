@@ -123,13 +123,13 @@ For example, in the image below, a `Dog` class may have similar method with the 
 ![Inheritance of an animal and a dog](./inheritance.png)  
 Source: https://www.programiz.com/cpp-programming/inheritance
 
-With the addition of inheritance and interface concept, we can introduce another [visibility modifier](/computer-and-programming-fundamentals/object-oriented-programming#visibility-modifier):
+With the addition of inheritance and interface concept, we can introduce another [visibility modifier](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming#visibility-modifier):
 
 - **Protected**: A protected keyword is used to make class members accessible within the class where it is declared, as well as in its subclasses (derived classes). In other word, it is a public modifier which is exclusive to a class hierarchy.
 
 #### Polymorphism
 
-**Polymorphism** is a concept that allows us to treat a single object in different ways. It allows us to have interface with many implementations. Polymorphism is related to the [interface](/computer-and-programming-fundamentals/object-oriented-programming#interface) and [inheritance](/computer-and-programming-fundamentals/object-oriented-programming#inheritance) concept.
+**Polymorphism** is a concept that allows us to treat a single object in different ways. It allows us to have interface with many implementations. Polymorphism is related to the [interface](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming#interface) and [inheritance](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming#inheritance) concept.
 
 We can define a method that will be implemented by its subclasses. For example, a base class called `Shape` and two derived classes called `Circle` and `Rectangle`. Each derived class has its own implementation of a method called `calculateArea()`. Polymorphism concepts enable us to write a single piece of code that can invoke a function responsible for calculating the area of a shape, regardless of whether the shape is a circle or a rectangle. The specific implementation of `calculateArea()` that will be used for our calculation will be determined dynamically at runtime based on the type of the object being used.
 

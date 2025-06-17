@@ -8,7 +8,7 @@ description: Support Vector Machine
 - **[What is kernel trick? — Grace Zhang medium blog](https://medium.com/@zxr.nju/what-is-the-kernel-trick-why-is-it-important-98a98db0961d)**
 - **[Support Vector Machines: All you need to know! — Intuitive Machine Learning](https://youtu.be/ny1iZ5A8ilA?si=4BtBGRCTUSJ_d3og)**
 
-**Support Vector Machine (SVM)** is a machine learning algorithm used for classification and regression. SVM is similar to [k-NN algorithm](/machine-learning/k-nearest-neighbors), but instead of assigning which groups does a data belongs to, SVM instead assign a boundary (called hyperplane) that separates the data points of different categories as best as possible.
+**Support Vector Machine (SVM)** is a machine learning algorithm used for classification and regression. SVM is similar to [k-NN algorithm](/cs-notes/machine-learning/k-nearest-neighbors), but instead of assigning which groups does a data belongs to, SVM instead assign a boundary (called hyperplane) that separates the data points of different categories as best as possible.
 
 ![k-NN vs SVM](./knn-vs-svm.png)  
 Source: https://www.researchgate.net/figure/Examples-of-classification-of-a-test-vector-using-k-nearest-neighbor-KNN-support_fig1_290525297

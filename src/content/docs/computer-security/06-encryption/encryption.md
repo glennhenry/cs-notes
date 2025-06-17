@@ -43,11 +43,11 @@ They are commonly used interchangeable, but they have different context.
 
 - Decipher: Converting back ciphertext to plaintext.
 - Decrypt: Converting encrypted data to original form, it is used in the context of various encryption schemes such as [symmetric and asymmetric encryption](#symmetric--asymmetric-encryption).
-- Decode: Converting back encoded data into readable format, it doesn't have to be encrypted data. For example, it can include converting [ASCII](/computer-and-programming-fundamentals/data-representation#ascii) encoded text (in binary) to plaintext.
+- Decode: Converting back encoded data into readable format, it doesn't have to be encrypted data. For example, it can include converting [ASCII](/cs-notes/computer-and-programming-fundamentals/data-representation#ascii) encoded text (in binary) to plaintext.
 
 ### Cryptographic Encryption
 
-This types of algorithms are more advanced as it involves [cryptographic algorithms](/computer-security/computer-security-fundamentals#cryptography) and keys. Key is a very crucial component, it is a piece of information or a parameter that is inputted into the encryption algorithm to control the transformation of plaintext into ciphertext and vice versa. In Caesar cipher, the shifting value can be thought as the key.
+This types of algorithms are more advanced as it involves [cryptographic algorithms](/cs-notes/computer-security/computer-security-fundamentals#cryptography) and keys. Key is a very crucial component, it is a piece of information or a parameter that is inputted into the encryption algorithm to control the transformation of plaintext into ciphertext and vice versa. In Caesar cipher, the shifting value can be thought as the key.
 
 The key is literally the "key" of decrypting an encrypted data, other than knowing how the algorithm encrypt the data. The encryption algorithm alone is not sufficient for decryption because there are typically multiple possible keys that could have been used with a given algorithm.
 
@@ -87,7 +87,7 @@ Source: https://medium.com/networks-security/private-key-public-key-encryption-9
 
 #### Key Exchange
 
-**Key exchange** is the process of exchanging secret key between parties securely. It involves cryptographic protocols and techniques to exchange keys without revealing them to potential [eavesdroppers](/computer-security/network-security#eavesdropping).
+**Key exchange** is the process of exchanging secret key between parties securely. It involves cryptographic protocols and techniques to exchange keys without revealing them to potential [eavesdroppers](/cs-notes/computer-security/network-security#eavesdropping).
 
 - Symmetric encryption: It can be used in symmetric encryption to securely share the shared private key.
 - Asymmetric encryption: It can be used to share the public key of both parties. While the public key is intended to be public, securely exchanging it would ensure both parties receive the legitimate key.

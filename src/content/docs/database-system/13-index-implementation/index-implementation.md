@@ -14,7 +14,7 @@ description: Index Implementation
 
 #### Structure
 
-[B-tree](/data-structures-and-algorithms/tree#b-tree) is a common data structure used to implement database index and the specific variant used is the **b+ tree**.
+[B-tree](/cs-notes/data-structures-and-algorithms/tree#b-tree) is a common data structure used to implement database index and the specific variant used is the **b+ tree**.
 
 ![B+-tree](./b+tree.png)  
 Source: https://stackoverflow.com/questions/870218/what-are-the-differences-between-b-trees-and-b-trees
@@ -66,7 +66,7 @@ The difference between dense and sparse b-tree lies upon the pointer at the leaf
 
 ### Hash Table
 
-[Hash table](/data-structures-and-algorithms/hash-table) is another option for creating index.
+[Hash table](/cs-notes/data-structures-and-algorithms/hash-table) is another option for creating index.
 
 In the case of main memory index, hash table is very straightforward. We will create an array (called **bucket array**) and each would hold a pointer to linked list, which contains the actual records. A request with specific search key will be hashed, and it will fall to some bucket within the array. We will search the corresponding key in the list of the bucket and find the value.
 

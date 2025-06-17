@@ -42,7 +42,7 @@ Spurious interrupts can be challenging to diagnose and resolve since they do not
 
 #### Software Interrupt
 
-Software interrupt originate from software, typically through [system call](/operating-system/system-call). System calls are triggered by executing special software instructions or by raising specific flags or conditions. For example, a program may make a system call to request a file operation, network communication, or access to hardware resources.
+Software interrupt originate from software, typically through [system call](/cs-notes/operating-system/system-call). System calls are triggered by executing special software instructions or by raising specific flags or conditions. For example, a program may make a system call to request a file operation, network communication, or access to hardware resources.
 
 Other source of software interrupt is from **exception** that occurs during the execution of program. Exceptions are anomalous condition that require special handling from the exception handler, this may be caused by error such as division by zero, invalid memory access, page faults, or illegal instruction execution.
 
@@ -63,7 +63,7 @@ The primary functions of an interrupt controller include receiving interrupt sig
 
 Also known as **Interrupt Service Routine (ISR)**, it is a specific block of code that is executed in response to an interrupt. The interrupt handler is typically written in low-level programming languages or assembly language to ensure efficient and precise execution to minimize the impact on the interrupted program.
 
-Before executing the interrupt handler, the hardware typically perform [context switch](/operating-system/process-management#context-switch) to save the current execution context, including the values of registers, program counters, and other relevant processor state information to be resumed on later.
+Before executing the interrupt handler, the hardware typically perform [context switch](/cs-notes/operating-system/process-management#context-switch) to save the current execution context, including the values of registers, program counters, and other relevant processor state information to be resumed on later.
 
 The specific handling depends on hardware architecture and specific devices that triggers the interrupt. For example, an interrupt handler for a network interface card may read incoming network packets, or an interrupt handler for a storage device may write data to disk.
 

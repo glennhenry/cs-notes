@@ -13,16 +13,16 @@ description: Cycle Detection
 ![Cycle in graph](./cycle.png)  
 Source: https://workat.tech/problem-solving/practice/detect-cycle-in-directed-graph
 
-The data structures include [directed or undirected graph](/data-structures-and-algorithms/graph), [linked list](/data-structures-and-algorithms/linked-list), and [array](/data-structures-and-algorithms/array) with cyclic sequence.
+The data structures include [directed or undirected graph](/cs-notes/data-structures-and-algorithms/graph), [linked list](/cs-notes/data-structures-and-algorithms/linked-list), and [array](/cs-notes/data-structures-and-algorithms/array) with cyclic sequence.
 
-An example of cycle detection in graph would be a simple [DFS traversal](/data-structures-and-algorithms/traversal#depth-first-search-dfs) included with a [set data structure](/data-structures-and-algorithms/set) that stores the visited vertex. DFS traverse the graph as far as possible before going to another branch. Along the traversal, we will check if the vertex is already present in the set, if yes, then there is a cycle in the graph.
+An example of cycle detection in graph would be a simple [DFS traversal](/cs-notes/data-structures-and-algorithms/traversal#depth-first-search-dfs) included with a [set data structure](/cs-notes/data-structures-and-algorithms/set) that stores the visited vertex. DFS traverse the graph as far as possible before going to another branch. Along the traversal, we will check if the vertex is already present in the set, if yes, then there is a cycle in the graph.
 
 ![Cycle detect using DFS](./cycle-detect-dfs.webp)  
 Source: https://takeuforward.org/data-structure/detect-cycle-in-a-directed-graph-using-dfs-g-19/
 
 ### Floyd's Tortoise & Hare Algorithm
 
-**Floyd's Tortoise and Hare Algorithm** is a popular algorithm to detect cycle, it can be applied to sequences and linked structures such as linked list and graph. This algorithm make us the [two pointer technique](/data-structures-and-algorithms/two-pointer) to traverse the data structure and detect the cycle.
+**Floyd's Tortoise and Hare Algorithm** is a popular algorithm to detect cycle, it can be applied to sequences and linked structures such as linked list and graph. This algorithm make us the [two pointer technique](/cs-notes/data-structures-and-algorithms/two-pointer) to traverse the data structure and detect the cycle.
 
 We will use two pointers, one pointer is referred as "slow" (or tortoise) pointer, which is used for traversing the data structure gradually, visiting each element one by one, and the "fast" (or hare) pointer for traversing the data structure at a faster pace, advancing two elements at a time.
 

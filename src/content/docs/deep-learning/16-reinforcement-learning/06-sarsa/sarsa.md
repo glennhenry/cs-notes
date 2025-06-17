@@ -8,11 +8,11 @@ description: SARSA
 
 - **[State–action–reward–state–action — Wikipedia](https://en.wikipedia.org/wiki/State%E2%80%93action%E2%80%93reward%E2%80%93state%E2%80%93action)**
 
-**SARSA**, stands for **State-Action-Reward-State-Action**. SARSA belongs to the family of [**temporal difference (TD)**](/deep-learning/reinforcement-learning/temporal-difference) learning algorithm, which mean value function is updated based on direct interaction with the environment. SARSA is also called an **on-policy method**, meaning it will improve its policy while interacting with the environment using current policy (after updating value function).
+**SARSA**, stands for **State-Action-Reward-State-Action**. SARSA belongs to the family of [**temporal difference (TD)**](/cs-notes/deep-learning/reinforcement-learning/temporal-difference) learning algorithm, which mean value function is updated based on direct interaction with the environment. SARSA is also called an **on-policy method**, meaning it will improve its policy while interacting with the environment using current policy (after updating value function).
 
 ### Algorithm
 
-TD is a general framework to estimate value based on the observed rewards and the estimated values of future states. **SARSA is the specific algorithm used to update Q-value**, therefore the algorithm is very similar to [TD](/deep-learning/reinforcement-learning/temporal-difference).
+TD is a general framework to estimate value based on the observed rewards and the estimated values of future states. **SARSA is the specific algorithm used to update Q-value**, therefore the algorithm is very similar to [TD](/cs-notes/deep-learning/reinforcement-learning/temporal-difference).
 
 1.  **Initialization**: Initialize the Q-values for all state-action pairs arbitrarily or to some default values.
 

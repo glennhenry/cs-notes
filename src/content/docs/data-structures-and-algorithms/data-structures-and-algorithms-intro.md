@@ -4,7 +4,7 @@ slug: data-structures-and-algorithms
 description: Data Structures & Algorithms Notes
 ---
 
-See the [introduction to data structures and algorithms](/computer-and-programming-fundamentals/data-structures-and-algorithms) first.
+See the [introduction to data structures and algorithms](/cs-notes/computer-and-programming-fundamentals/data-structures-and-algorithms) first.
 
 ### All pages
 

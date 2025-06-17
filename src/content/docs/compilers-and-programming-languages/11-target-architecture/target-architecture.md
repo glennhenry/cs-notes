@@ -13,7 +13,7 @@ Compiler translate source code into machine code. In order to translate, it will
 The compiler needs to be aware of the target architecture for which it intends to generate code. It needs to know the available instructions, the way memory is organized, and other details of the architecture. This knowledge enables compiler to perform tasks like register allocation, instruction selection, and optimization.
 
 :::tip
-The two popular architecture are [CISC (e.g., x86)](/computer-organization-and-architecture/isa#cisc) and [RISC (e.g., ARM)](/computer-organization-and-architecture/isa#risc), see also [ISA](/computer-organization-and-architecture/isa).
+The two popular architecture are [CISC (e.g., x86)](/cs-notes/computer-organization-and-architecture/isa#cisc) and [RISC (e.g., ARM)](/cs-notes/computer-organization-and-architecture/isa#risc), see also [ISA](/cs-notes/computer-organization-and-architecture/isa).
 :::
 
 ### Memory
@@ -25,12 +25,12 @@ There are three types of memory: registers, main memory or RAM, and external dev
 - External devices like hard drive typically used for storing large amounts of data, such as system or files, databases, or multimedia content.
 
 :::tip
-See also [registers & ram](/computer-organization-and-architecture/registers-and-ram).
+See also [registers & ram](/cs-notes/computer-organization-and-architecture/registers-and-ram).
 :::
 
 There is another type of memory faster than main memory, though slower than registers, known as **cache memory**. However, compilers do not directly manage cache memory as it is handled by the CPU itself. Nevertheless, compilers can optimize code generation to indirectly improve cache performance. Cache memory relies on frequent data access, so one improvement the compiler can make is rearranging the code to access data stored close together in memory.
 
-Compiler needs to know the characteristics of memory, such as the [minimum memory to address](/computer-organization-and-architecture/coa-fundamentals#word-size), [padding](/computer-organization-and-architecture/coa-fundamentals#padding), [endianness](/computer-organization-and-architecture/coa-fundamentals#endianness), [floating-point representation](/computer-and-programming-fundamentals/floating-number#floating-number-representation), [binary representation](/computer-and-programming-fundamentals/binary-representation#binary-representation) or the size of data types.
+Compiler needs to know the characteristics of memory, such as the [minimum memory to address](/cs-notes/computer-organization-and-architecture/coa-fundamentals#word-size), [padding](/cs-notes/computer-organization-and-architecture/coa-fundamentals#padding), [endianness](/cs-notes/computer-organization-and-architecture/coa-fundamentals#endianness), [floating-point representation](/cs-notes/computer-and-programming-fundamentals/floating-number#floating-number-representation), [binary representation](/cs-notes/computer-and-programming-fundamentals/binary-representation#binary-representation) or the size of data types.
 
 :::info
 Due to architectural and requirements differences, some computers may store data types, such as integers differently. While the usual integer size is 4 bytes, others may use 2 bytes or even 8 bytes. The compiler needs to be aware of these variations to generate machine code capable of handling different size representations correctly, ensuring the appropriate number of bytes are read or written.
@@ -38,7 +38,7 @@ Due to architectural and requirements differences, some computers may store data
 
 ### Instruction Set Architecture
 
-[Instruction set architecture (ISA)](/computer-organization-and-architecture/isa) is the set of instruction offered by the machine that the running program must follow in order to control the CPU.
+[Instruction set architecture (ISA)](/cs-notes/computer-organization-and-architecture/isa) is the set of instruction offered by the machine that the running program must follow in order to control the CPU.
 
 - **Available instructions**: To generate correct code and possibly optimize it, compilers need to know the complete set of instructions supported by the target architecture. This includes arithmetic instructions, logical instructions, data transfer instructions, control flow instructions, etc.
 - **Instruction formats**: Compilers need to know how the target architecture specify its instruction.
@@ -50,13 +50,13 @@ Due to architectural and requirements differences, some computers may store data
 
 #### Pipeline
 
-CPU uses technique like [pipelining](/computer-organization-and-architecture/cpu-design#pipelining), in which instruction are executed in parallel. Sometimes, pipeline doesn't always work and may not work optimally, these problems are often called as hazards.
+CPU uses technique like [pipelining](/cs-notes/computer-organization-and-architecture/cpu-design#pipelining), in which instruction are executed in parallel. Sometimes, pipeline doesn't always work and may not work optimally, these problems are often called as hazards.
 
 It is possible that parallel instruction access same register, this is called **structural (or resource) hazard**. When an instruction depends on the result that is not available yet, this is called **data hazard**. The CPU also make a prediction of conditional branch to execute instruction more efficiently. A **control hazard** happens when the branch prediction is wrong, making the specific pipeline process unnecessary.
 
 One optimization that could be made by compiler to reduce hazard is, making optimization to loops. Loop optimizations like loop unrolling and loop fusion increase the number of instructions available. While it increases the number of instructions, these can potentially be better for parallel execution. As iterations get more independent, pipeline throughput can be improved.
 
-Another thing is, the compiler itself can rearrange the instruction. Compiler analyzes the dependencies between instructions and rearrange them to maximize parallelism as well as avoiding data hazard. We don't need to strictly follow the sequential order of the program, instead, we can execute instructions based on the availability of operands, this technique is called [out-of-order execution](/computer-organization-and-architecture/cpu-design#out-of-order-execution).
+Another thing is, the compiler itself can rearrange the instruction. Compiler analyzes the dependencies between instructions and rearrange them to maximize parallelism as well as avoiding data hazard. We don't need to strictly follow the sequential order of the program, instead, we can execute instructions based on the availability of operands, this technique is called [out-of-order execution](/cs-notes/computer-organization-and-architecture/cpu-design#out-of-order-execution).
 
 #### Register Allocation
 
@@ -89,9 +89,9 @@ Source: Book page 772
 This evaluation uses 4 register, reusing the previous register for the new intermediate value. There are many factors in optimizing this, such as reducing the number of registers used, the number of memory accesses, the number of spills (moving values between registers and memory), and the overall performance of the generated code.
 
 :::info
-This example uses an intermediate representation called [three-address code (TAC)](/compilers-and-programming-languages/intermediate-representation#linear-ir).
+This example uses an intermediate representation called [three-address code (TAC)](/cs-notes/compilers-and-programming-languages/intermediate-representation#linear-ir).
 :::
 
 :::tip
-More about [register allocation](/compilers-and-programming-languages/compiler-optimization#register-allocation).
+More about [register allocation](/cs-notes/compilers-and-programming-languages/compiler-optimization#register-allocation).
 :::

@@ -8,7 +8,7 @@ description: Compiler Optimization
 
 - **Book 1 chapter 12.**
 
-Many optimization techniques can be applied to assembly code or intermediate representation (e.g., [AST](/compilers-and-programming-languages/semantic-analysis#abstract-syntax-tree)). Some optimizations occur within local blocks, globally, or even across the entire program. It's worth noting that not all optimizations work in every scenario. Therefore, the compiler should analyze the program to determine whether to apply certain optimizations. This means that optimization can increase compilation time due to additional analysis.
+Many optimization techniques can be applied to assembly code or intermediate representation (e.g., [AST](/cs-notes/compilers-and-programming-languages/semantic-analysis#abstract-syntax-tree)). Some optimizations occur within local blocks, globally, or even across the entire program. It's worth noting that not all optimizations work in every scenario. Therefore, the compiler should analyze the program to determine whether to apply certain optimizations. This means that optimization can increase compilation time due to additional analysis.
 
 :::note
 The point of optimization is to improve the code while also ensuring that the overall program result remains the same. One thing that can prevent optimization is the presence of side effects. For example, a compiler may choose to evaluate one expression before another. However, it turns out that the second expression modifies the result of the first expression, which may change the overall result.
@@ -19,12 +19,12 @@ As much as optimization benefits us, it can make debugging and decompilation cha
 Some type of optimization:
 
 - **Simplification**: This includes removing redundancy and removing unnecessary computations.
-- **Control flow**: Targets control flow structure (e.g., loops and conditionals), such as reducing the number of branching to reduce [pipelining stall](/computer-organization-and-architecture/cpu-design#pipelining).
+- **Control flow**: Targets control flow structure (e.g., loops and conditionals), such as reducing the number of branching to reduce [pipelining stall](/cs-notes/computer-organization-and-architecture/cpu-design#pipelining).
 - **Memory and registers**: Efficient and correct allocation of registers and memory to reduce their usage and improve speed. For example, we can store frequently used variables in registers instead of the memory to increase access speed.
 
 ### Constant Folding
 
-Constant folding simplify expressions (or part of them) that involve constants, which is known during compile-time. For example, the [second calculation in a day](/compilers-and-programming-languages/intermediate-representation#optimization) effectively demonstrate this concept.
+Constant folding simplify expressions (or part of them) that involve constants, which is known during compile-time. For example, the [second calculation in a day](/cs-notes/compilers-and-programming-languages/intermediate-representation#optimization) effectively demonstrate this concept.
 
 During compilation, expressions are checked to determine whether they contain constants or not. Only if all the operands of the expression are known are they calculated. For example, arithmetic operation typically takes two operands.
 
@@ -46,16 +46,16 @@ int result = 100 + x
 
 Strength reduction replaces an expression to equivalent but less expensive operation.
 
-- `x * 8` is optimized to `x << 3`, as [bit shifting](/computer-and-programming-fundamentals/bitwise-operation#bit-shifting) can be faster than multiplication. This is similar to division.
+- `x * 8` is optimized to `x << 3`, as [bit shifting](/cs-notes/computer-and-programming-fundamentals/bitwise-operation#bit-shifting) can be faster than multiplication. This is similar to division.
 - `x ^ 2` (exponentiation) is optimized to `x * x`, as exponentiation may use techniques like Taylor series, which may be more expensive than simple multiplication.
 
 ### Loop Unrolling
 
-In branching, CPU can try to make an educated guess about the outcome of a branch instruction before it is actually executed. This will avoid [pipeline stalls](/computer-organization-and-architecture/cpu-design#pipelining), which further improves performance.
+In branching, CPU can try to make an educated guess about the outcome of a branch instruction before it is actually executed. This will avoid [pipeline stalls](/cs-notes/computer-organization-and-architecture/cpu-design#pipelining), which further improves performance.
 
 Loop typically involve branch and jump instruction. These instructions introduce control flow changes, which may result in branch mispredictions. This happens when the CPU fails to make a correct guess. It would need to discard the speculatively executed instructions and fetch the correct instructions at the cost of extra time.
 
-Loop unrolling modifies the structure of a loop by replicating loop iterations and combining them into a larger loop. This will make the loop repeat less, but does more work on each iteration. This will reduce the number of branching, which can increase [instruction-level parallelism](/computer-organization-and-architecture/cpu-design#superscalar), the ability to execute multiple instruction simultaneously.
+Loop unrolling modifies the structure of a loop by replicating loop iterations and combining them into a larger loop. This will make the loop repeat less, but does more work on each iteration. This will reduce the number of branching, which can increase [instruction-level parallelism](/cs-notes/computer-organization-and-architecture/cpu-design#superscalar), the ability to execute multiple instruction simultaneously.
 
 ```
 // Original loop
@@ -139,7 +139,7 @@ Dead code refers code that will never be executed or code that has no impact on 
 - Conditional that rely on constant which is known at compile-time, this mean we can calculate the result of the branch beforehand, further removing the conditional code.
 - Unused functions or variables.
 
-The detection of dead code is typically performed on [control flow graph](/compilers-and-programming-languages/intermediate-representation#control-flow-graph).
+The detection of dead code is typically performed on [control flow graph](/cs-notes/compilers-and-programming-languages/intermediate-representation#control-flow-graph).
 
 ![Dead code in control flow graph](./deadcode.png)  
 Source: Book 1 page 203
@@ -190,7 +190,7 @@ It uses a technique called **tree coverage**, where we keep track the patterns o
 ![X86 tree templates](./x86-instruction-patterns.png)  
 Source: Book 1 page 206
 
-The above is an image of tree templates of some instructions in [x86](/computer-organization-and-architecture/isa#x86).
+The above is an image of tree templates of some instructions in [x86](/cs-notes/computer-organization-and-architecture/isa#x86).
 
 Then we can perform **tree rewriting**:
 
@@ -220,7 +220,7 @@ We can draw a **conflict graph** to describe this.
 ![Conflict graph](./conflict-graph.png)  
 Source: Book 1 page 210
 
-This conflict graph describes a [graph coloring problem](/data-structures-and-algorithms/graph), where the nodes represent variables and the edges represent interference between variables. The goal is to assign each node a different color (registers), such that no two adjacent nodes has the same color (avoiding interference).
+This conflict graph describes a [graph coloring problem](/cs-notes/data-structures-and-algorithms/graph), where the nodes represent variables and the edges represent interference between variables. The goal is to assign each node a different color (registers), such that no two adjacent nodes has the same color (avoiding interference).
 
 :::note
 If register allocation were to be performed in global or multiple local block, then we just need to take account more piece of code. We can follow the control flow and construct the conflict graph based on it.

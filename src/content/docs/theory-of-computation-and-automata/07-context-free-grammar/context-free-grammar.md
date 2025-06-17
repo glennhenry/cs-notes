@@ -12,11 +12,11 @@ description: Context-Free Grammar
 - **Neso Academy playlist 78-81**
 - **Neso Academy playlist 82-83**
 
-Context-free grammar is the grammar that generates context-free language, which is recognized by [pushdown automata](/theory-of-computation-and-automata/pushdown-automata). The production rule is:
+Context-free grammar is the grammar that generates context-free language, which is recognized by [pushdown automata](/cs-notes/theory-of-computation-and-automata/pushdown-automata). The production rule is:
 
 $A \rightarrow \alpha$, where $\alpha = \{V \cup \Sigma^*\}$ and $A \in V$.
 
-Similar to the [general](/theory-of-computation-and-automata/formal-grammar#grammar) and [regular grammar](/theory-of-computation-and-automata/formal-grammar#regular-grammar), a non-terminal symbol can produce $\alpha$ which can be any symbol from the set of all possible strings of symbols that can be generated using both the non-terminal symbols and the terminal symbols of the grammar, including the empty string.
+Similar to the [general](/cs-notes/theory-of-computation-and-automata/formal-grammar#grammar) and [regular grammar](/cs-notes/theory-of-computation-and-automata/formal-grammar#regular-grammar), a non-terminal symbol can produce $\alpha$ which can be any symbol from the set of all possible strings of symbols that can be generated using both the non-terminal symbols and the terminal symbols of the grammar, including the empty string.
 
 :::info
 From different sources, $T$ is sometimes used as $\Sigma$. This implies that ($\{V \cup \Sigma^*\}$ is equivalent with $\{V \cup T\}$).
@@ -53,7 +53,7 @@ We see in the example that starting from $S$, it produces terminal $0$ and non-t
 We also call any step of the derivation as a **sentential form**. A derivation tree in which the leaves contain a label from $V \cup T \cup \{\lambda\}$, or in other words, if any of the leaf still contains a non-terminal symbol, then the tree is said to be a **partial derivation tree**.
 
 :::info
-See also [tree data structure](/data-structures-and-algorithms/tree).  
+See also [tree data structure](/cs-notes/data-structures-and-algorithms/tree).  
 $\epsilon$ is same as $\lambda$.
 :::
 
@@ -243,7 +243,7 @@ Source: https://youtu.be/rauqqM0nfuI?si=cSCk3rJx4KJAg9KT&t=633
 
 ### Pumping Lemma for Context-Free Languages
 
-Pumping lemma for context-free languages is to **prove that a language is not context-free**. In contrast, [pumping lemma for regular language](/theory-of-computation-and-automata/regular-languages-part-2#pumping-lemma-for-regular-languages) proves that a language is not regular.
+Pumping lemma for context-free languages is to **prove that a language is not context-free**. In contrast, [pumping lemma for regular language](/cs-notes/theory-of-computation-and-automata/regular-languages-part-2#pumping-lemma-for-regular-languages) proves that a language is not regular.
 
 The lemma states:
 

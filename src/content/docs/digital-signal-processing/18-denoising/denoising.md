@@ -24,8 +24,8 @@ For example, in an audio signal, while a relaxing music plays in the background,
 
 Method of denoising depends on the noise characteristics, some common denoising method includes:
 
-- **[Filtering](/digital-signal-processing/filtering)**: Applying filter like low-pass would filter out the high frequency noise.
-- **Transform Function**: Transform function such as [DFT](/digital-signal-processing/discrete-fourier-transform), [DCT](/digital-signal-processing/discrete-cosine-transform), or [wavelet](/digital-signal-processing/wavelets) transform the signal on their time-domain into frequency domain, which we can identify the noise by analyzing signal that is separated by their frequency.
+- **[Filtering](/cs-notes/digital-signal-processing/filtering)**: Applying filter like low-pass would filter out the high frequency noise.
+- **Transform Function**: Transform function such as [DFT](/cs-notes/digital-signal-processing/discrete-fourier-transform), [DCT](/cs-notes/digital-signal-processing/discrete-cosine-transform), or [wavelet](/cs-notes/digital-signal-processing/wavelets) transform the signal on their time-domain into frequency domain, which we can identify the noise by analyzing signal that is separated by their frequency.
 - **Statistical Methods**: Statistical methods involve exploiting statistical properties of the signal and noise to estimate and remove the noise. Example of statistical methods are mean filter, median filter, Bayesian filter. For example, mean filter works by replacing each signal value by the average of that signal's neighbor value. This will introduce blur or smooth out edges in the signal.
 
 ### Machine Learning Denoising
@@ -36,8 +36,8 @@ The idea of this is the same as general machine learning technique. A model is t
 
 Some techniques are:
 
-- **[Autoencoders](/deep-learning/autoencoder)**: Autoencoders are neural networks that are trained to reconstruct a signal from its noisy version. The autoencoder learns to identify the noise in the signal and remove it, leaving the signal intact.
-- **[Generative Adversarial Networks (GANs)](/deep-learning/gan)**: GANs are a type of neural network that can be used to generate realistic images. GANs can also be used to remove noise from images by training them to generate images that are similar to the noisy image, but without the noise.
+- **[Autoencoders](/cs-notes/deep-learning/autoencoder)**: Autoencoders are neural networks that are trained to reconstruct a signal from its noisy version. The autoencoder learns to identify the noise in the signal and remove it, leaving the signal intact.
+- **[Generative Adversarial Networks (GANs)](/cs-notes/deep-learning/gan)**: GANs are a type of neural network that can be used to generate realistic images. GANs can also be used to remove noise from images by training them to generate images that are similar to the noisy image, but without the noise.
 
 ![Autoencoders network](./autoencoder.png)  
 Source: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798

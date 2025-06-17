@@ -60,7 +60,7 @@ Overall, there are four segments, code segment, data segment, stack segment, and
 The stack and the heap are the segment that will grow overtime, where the former grows down, and the latter grows up.
 :::
 
-- **Stack**: The stack is a region of memory used for the execution of programs. It is a data structure that follows the [LIFO principle](/data-structures-and-algorithms/stack). The stack is used for storing function call information, local variables, and other data associated with function execution. Each time a function is called, a stack frame is created, which contains the function's parameters, return address (the address of the next instruction after the function call), and local variables. This includes the main function, which is typically the program entry point. When the function completes, its stack frame is removed, and control returns to the calling function.
+- **Stack**: The stack is a region of memory used for the execution of programs. It is a data structure that follows the [LIFO principle](/cs-notes/data-structures-and-algorithms/stack). The stack is used for storing function call information, local variables, and other data associated with function execution. Each time a function is called, a stack frame is created, which contains the function's parameters, return address (the address of the next instruction after the function call), and local variables. This includes the main function, which is typically the program entry point. When the function completes, its stack frame is removed, and control returns to the calling function.
 - **Heap**: Heap is a region of memory that is a larger and more flexible area of memory compared to the stack. The heap is used for allocating memory dynamically at runtime when the size or lifetime of data is unknown or needs to be managed explicitly. In [manual memory management](#dynamic-allocation), memory allocated on the heap must be explicitly requested and released by the program.
 - **Static**: Static memory is a region of memory that stores global variables, static variables, and constants. It is allocated and initialized before the program execution begins and remains throughout the entire lifespan of the program. Variables declared outside any function (global variables) and variables declared with the static keyword have static storage duration and are stored in the static memory.
 
@@ -87,7 +87,7 @@ To clarify, the stack is not managed automatically by the compiler; rather, the 
 
 **Stack allocation** is the allocation and deallocation of memory on the stack during the execution of a program. The stack is a region of memory used for managing function call information and local variables.
 
-Stack allocation is simple and efficient because it operates on LIFO principle. This mean that the most recently allocated memory block is the first one to be deallocated. The stack data structure is managed with a **stack pointer**. The stack pointer is a [pointer](/computer-and-programming-fundamentals/memory#pointer--reference) that points to the memory address where the next value will be pushed or popped from the stack.
+Stack allocation is simple and efficient because it operates on LIFO principle. This mean that the most recently allocated memory block is the first one to be deallocated. The stack data structure is managed with a **stack pointer**. The stack pointer is a [pointer](/cs-notes/computer-and-programming-fundamentals/memory#pointer--reference) that points to the memory address where the next value will be pushed or popped from the stack.
 
 Stack allocation is commonly used for storing temporary variables and function call information. It is suitable for variables with a limited lifetime within a specific scope, as they are automatically deallocated when the scope is exited.
 
@@ -96,7 +96,7 @@ When a function is called, the stack pointer is adjusted to create a new stack f
 ![Stack allocation](./stack-allocation.png)  
 Source: https://en.wikipedia.org/wiki/Stack-based_memory_allocation
 
-However, the stack has a finite size, and exceeding its capacity can lead to an error called **stack overflow**, which is when the available space in the stack is exceeded due to excessive [recursion](/data-structures-and-algorithms/recursion) or the allocation of a large amount of local variables.
+However, the stack has a finite size, and exceeding its capacity can lead to an error called **stack overflow**, which is when the available space in the stack is exceeded due to excessive [recursion](/cs-notes/data-structures-and-algorithms/recursion) or the allocation of a large amount of local variables.
 
 ![Stack overflow](./stack-overflow.webp)  
 Source: https://www.simplilearn.com/tutorials/data-structure-tutorial/stacks-vs-heap
@@ -139,7 +139,7 @@ _Garbage collection in Java language_
 Source: https://www.startertutorials.com/corejava/garbage-collection.html
 
 :::info
-Garbage collection is typically found in [interpreted](/computer-and-programming-fundamentals/interpreter) languages rather than [compiled](/computer-and-programming-fundamentals/compilation) languages. The behavior of garbage collection, which periodically scans and reclaims memory, is more suitable in languages whose instructions are generated at runtime rather than ahead of time. A compiled language turns source code into machine code. Typically, garbage collection reclaims memory due to factors like memory availability, which is not the case in compiled languages because it is not possible to know the memory requirements at compile time. Compiled languages with garbage collection would need to insert garbage collection code into the generated machine code.
+Garbage collection is typically found in [interpreted](/cs-notes/computer-and-programming-fundamentals/interpreter) languages rather than [compiled](/cs-notes/computer-and-programming-fundamentals/compilation) languages. The behavior of garbage collection, which periodically scans and reclaims memory, is more suitable in languages whose instructions are generated at runtime rather than ahead of time. A compiled language turns source code into machine code. Typically, garbage collection reclaims memory due to factors like memory availability, which is not the case in compiled languages because it is not possible to know the memory requirements at compile time. Compiled languages with garbage collection would need to insert garbage collection code into the generated machine code.
 :::
 
 #### Contiguous Memory Allocation
@@ -258,7 +258,7 @@ A virtual address contains consists of multiple components or fields:
 ![Address translation](./address-translation.png)  
 Source: https://blogs.vmware.com/vsphere/2020/03/how-is-virtual-memory-translated-to-physical-memory.html
 
-When a program references a memory page that is not currently present in main memory, an exception called **page fault** occurs. When a requested page is not available in main memory, it needs to be fetched from secondary storage. The program generates a memory access request for the page, this will trigger a page fault [interrupt](/operating-system/interrupt-handling), causing the control to transfer to the operating system.
+When a program references a memory page that is not currently present in main memory, an exception called **page fault** occurs. When a requested page is not available in main memory, it needs to be fetched from secondary storage. The program generates a memory access request for the page, this will trigger a page fault [interrupt](/cs-notes/operating-system/interrupt-handling), causing the control to transfer to the operating system.
 
 This entire process is called **demand paging**, which is a technique to load data into memory only when it is needed, rather than loading the entire program or data set into memory at once. Virtual memory make it possible to implement demand paging, it allows the system to allocate and manage memory resources dynamically, as needed, by utilizing secondary storage as an extension of the physical memory.
 

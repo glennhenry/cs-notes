@@ -11,7 +11,7 @@ description: Protection & Security
 - **[Protection ring — Wikipedia](https://en.wikipedia.org/wiki/Protection_ring)**
 - **[Stoned — The Virus Encyclopedia](http://virus.wikidot.com/stoned)**
 
-OS offers many protections and security mechanism, they are implemented at various levels throughout the entire structure. For example, at the kernel level, process are isolated from one another, memory access between process are restricted, kernel and application's memory is also separated. In the user level, access to files or directories are associated with specific permission. In the APIs level such as networking APIs, the OS implement protection mechanism such as [firewall](/computer-security/network-security#firewall) and secure protocols like [TLS](/computer-networking/network-encryption#ssltls), which is included with cryptographic algorithms.
+OS offers many protections and security mechanism, they are implemented at various levels throughout the entire structure. For example, at the kernel level, process are isolated from one another, memory access between process are restricted, kernel and application's memory is also separated. In the user level, access to files or directories are associated with specific permission. In the APIs level such as networking APIs, the OS implement protection mechanism such as [firewall](/cs-notes/computer-security/network-security#firewall) and secure protocols like [TLS](/cs-notes/computer-networking/network-encryption#ssltls), which is included with cryptographic algorithms.
 
 ### Protection Ring
 
@@ -20,7 +20,7 @@ The protection ring is a concept where the components of computer system, includ
 ![Protection ring](./protection-ring.png)  
 Source: https://en.wikipedia.org/wiki/Protection_ring
 
-In the ring 0, often called kernel mode, this is where [kernel](/operating-system/kernel) exist. Kernel is the core of an operating system that has full access to all the computer resources, such as CPU and memory.
+In the ring 0, often called kernel mode, this is where [kernel](/cs-notes/operating-system/kernel) exist. Kernel is the core of an operating system that has full access to all the computer resources, such as CPU and memory.
 
 Some device drivers may operate at ring 1 or ring 2 to handle I/O operations or provide low-level access to specific hardware devices.
 
@@ -42,18 +42,18 @@ In the matrix, each row represents a subject, each column represents an object, 
 One way to implement the access control matrix is to maintain a global table. The operating system maintains a data structure that represents the entire matrix, with subjects as rows and objects as columns. However, the table's size can increase substantially, thus can't be stored in main memory. Additionally, access times may be slower because the table is stored on disk rather than in main memory.
 
 :::note
-In [Unix](/operating-system/unix), [files have protection code associated with it](/operating-system/file-system#file-security), this includes permission of what operations can be done on it.
+In [Unix](/cs-notes/operating-system/unix), [files have protection code associated with it](/cs-notes/operating-system/file-system#file-security), this includes permission of what operations can be done on it.
 :::
 
 ### Common Threats
 
 Some common security threats: Malicious software, such as viruses, worms, Trojans, ransomware, and spyware. Unauthorized access which happen through brute-force attacks, password cracking, or exploiting weak authentication mechanisms. Social engineering technique such as phishing, pretexting, or impersonation.
 
-See [computer security](/computer-security) and [other attack & exploit](/computer-security/other-attack-and-exploit) for more.
+See [computer security](/cs-notes/computer-security) and [other attack & exploit](/cs-notes/computer-security/other-attack-and-exploit) for more.
 
 #### Example: Stoned
 
-One example of a virus is **stoned**, it's a dangerous virus that attacks the [boot sector](/operating-system/disk-management#boot-sector) and infects the [Master Boot Record (MBR)](/operating-system/booting#master-boot-record-mbr) of floppy disks and hard drives.
+One example of a virus is **stoned**, it's a dangerous virus that attacks the [boot sector](/cs-notes/operating-system/disk-management#boot-sector) and infects the [Master Boot Record (MBR)](/cs-notes/operating-system/booting#master-boot-record-mbr) of floppy disks and hard drives.
 
 - The virus starts from a disk, when a user inserts their disk to an infected one, the virus will spread. When the user boots from an infected disk, the virus code in the boot sector will be executed during the boot process.
 - The virus can move the location of MBR, it is typically located in the first sector of the disk. The files that exist in the location that become the new location for MBR can be lost.

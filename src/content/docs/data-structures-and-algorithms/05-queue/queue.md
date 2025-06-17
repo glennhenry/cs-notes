@@ -6,7 +6,7 @@ description: Queue
 
 **Main Source:**
 
-- **Queue** is a data structure where the elements behave like a literal queue. Queue follows the **First-In-First-Out (FIFO)** principle, which mean the **first element to be removed is the first one added**. In contrast, [stack data structure](/data-structures-and-algorithms/stack) supports the **Last-In-First-Out (LIFO)** principle, which mean the **first element to be removed is the last element added**.
+- **Queue** is a data structure where the elements behave like a literal queue. Queue follows the **First-In-First-Out (FIFO)** principle, which mean the **first element to be removed is the first one added**. In contrast, [stack data structure](/cs-notes/data-structures-and-algorithms/stack) supports the **Last-In-First-Out (LIFO)** principle, which mean the **first element to be removed is the last element added**.
 
 Just like a literal queue, the elements are organized in a sequence, and the oldest element is always at the front, while the newest element is at the rear.
 
@@ -25,7 +25,7 @@ There are two main operation in queue data structure:
 ![Queue data structure operation](./queue-data-structure.png)  
 Source: https://www.geeksforgeeks.org/queue-data-structure/
 
-A queue data structure can be implemented efficiently using [doubly linked list](/data-structures-and-algorithms/linked-list#doubly-linked-list), this is because doubly linked list behavior aligns with queue operation. Doubly linked list has a head and a tail, enqueuing an element, or adding element to the rear of the queue is just inserting element in the tail. Dequeuing an element, or removing an element from the front of the queue is just a linked list deletion in the head. Inserting or deleting element in the head or tail of a linked list can be done in constant time.
+A queue data structure can be implemented efficiently using [doubly linked list](/cs-notes/data-structures-and-algorithms/linked-list#doubly-linked-list), this is because doubly linked list behavior aligns with queue operation. Doubly linked list has a head and a tail, enqueuing an element, or adding element to the rear of the queue is just inserting element in the tail. Dequeuing an element, or removing an element from the front of the queue is just a linked list deletion in the head. Inserting or deleting element in the head or tail of a linked list can be done in constant time.
 
 Using doubly linked list, we can even create **double ended queue**, which is a queue data structure that supports enqueue and dequeue in the front or the rear of the queue.
 
@@ -49,5 +49,5 @@ The circular nature of circular queue enables continuous enqueue and dequeue ope
 Source: https://www.javatpoint.com/ds-priority-queue
 
 :::note
-Priority queue is conceptually different with [heap](/data-structures-and-algorithms/heap), a priority queue is just a concept where each element has some priority. Heap is often used to implement a priority queue, it is a specific implementation of priority queue using [binary tree](/data-structures-and-algorithms/tree#binary-tree).
+Priority queue is conceptually different with [heap](/cs-notes/data-structures-and-algorithms/heap), a priority queue is just a concept where each element has some priority. Heap is often used to implement a priority queue, it is a specific implementation of priority queue using [binary tree](/cs-notes/data-structures-and-algorithms/tree#binary-tree).
 :::

@@ -56,7 +56,7 @@ Overall there are two ways to handle variables.
 Source: Book page 240 (with my own code example)
 
 :::info
-In equality testing, the process of comparing two values to determine if they are equal or not, equality can be determined through reference or value. If we consider two objects equal when their reference is the same, this is called **shallow comparison**. We only check if two objects are referring to the same object. On the other hand, when we consider the internal structure of objects to determine their equality, this is called **deep comparison**. Deep comparison may be complicated to determine in a complex structure like [graph](/data-structures-and-algorithms/graph).
+In equality testing, the process of comparing two values to determine if they are equal or not, equality can be determined through reference or value. If we consider two objects equal when their reference is the same, this is called **shallow comparison**. We only check if two objects are referring to the same object. On the other hand, when we consider the internal structure of objects to determine their equality, this is called **deep comparison**. Deep comparison may be complicated to determine in a complex structure like [graph](/cs-notes/data-structures-and-algorithms/graph).
 :::
 
 When r-value is expected, yet l-value is received, the l-value needs to be **dereferenced**. L-value holds location of a variable, in a language that supports pointer or reference, l-value can be pointer (variable that holds memory address).
@@ -70,7 +70,7 @@ int value = *ptr;
 C++ supports pointer and reference, dereferencing a pointer is achieved through putting `*` symbol before the pointer.
 
 :::tip
-See also [pointer & reference](/computer-and-programming-fundamentals/memory#pointer--reference).
+See also [pointer & reference](/cs-notes/computer-and-programming-fundamentals/memory#pointer--reference).
 :::
 
 :::info
@@ -113,7 +113,7 @@ Initialization is the process of assigning an initial value to a variable or dat
 When evaluating expressions, sometimes the ordering within them can affect overall results.
 
 - **Side effect**: Consider the expression `a - f(b) - c * d`. Calculating `c * d` first then use the result as operand from the subtraction is a valid way to evaluate this. It is also valid to calculate `a - f(b)` first then subtract it with the result of `c * d`. However, it is possible that calling function `f(b)` causes a side effect that affects final result. It may change the value of `d`, which mean computing `c * d` will be different before and after calling it.
-- **Code improvement**: The order of instructions can impact execution speed. Sometimes, it's more efficient to load data into memory before it's actually needed rather than waiting until it's required. This is because the CPU can perform computations faster than memory can be fetched. In such cases, [prefetching](/computer-organization-and-architecture/cpu-design#out-of-order-execution) the data by rearranging instructions or expressions to ensure that memory loading occurs first can be beneficial.
+- **Code improvement**: The order of instructions can impact execution speed. Sometimes, it's more efficient to load data into memory before it's actually needed rather than waiting until it's required. This is because the CPU can perform computations faster than memory can be fetched. In such cases, [prefetching](/cs-notes/computer-organization-and-architecture/cpu-design#out-of-order-execution) the data by rearranging instructions or expressions to ensure that memory loading occurs first can be beneficial.
 
 One improvement the compiler can make is applying mathematical identities.
 
@@ -274,17 +274,17 @@ Another subtle problem that can arise in compilers (and for programmers as well)
 
 #### Iterators
 
-An alternative method of iteration is through the use of iterator objects. These can be considered as abstractions of loops, capable of traversing and manipulating the elements of a collection (such as an array, list, or other container) in a controlled manner. Such iterator objects become even more useful when implemented in complex data structures like [trees](/data-structures-and-algorithms/tree) or [graphs](/data-structures-and-algorithms/graph). Iterator for tree data structure may be implemented to traverse in pre-order, in-order, or post-order.
+An alternative method of iteration is through the use of iterator objects. These can be considered as abstractions of loops, capable of traversing and manipulating the elements of a collection (such as an array, list, or other container) in a controlled manner. Such iterator objects become even more useful when implemented in complex data structures like [trees](/cs-notes/data-structures-and-algorithms/tree) or [graphs](/cs-notes/data-structures-and-algorithms/graph). Iterator for tree data structure may be implemented to traverse in pre-order, in-order, or post-order.
 
-See [iterator](/software-engineering/behavioral-patterns#iterator) for example.
+See [iterator](/cs-notes/software-engineering/behavioral-patterns#iterator) for example.
 
 ### Procedural Abstraction
 
-The use of functions or procedures (subroutines) to encapsulate a block of code. See [subroutines](/compilers-and-programming-languages/subroutines).
+The use of functions or procedures (subroutines) to encapsulate a block of code. See [subroutines](/cs-notes/compilers-and-programming-languages/subroutines).
 
 ### Recursion
 
-[Recursion](/data-structures-and-algorithms/recursion) itself doesn't have special syntax or convention, because it is a concept of a function that calls itself. It is useful to "automatically" create an iteration, especially in recursive data structure like [tree](/data-structures-and-algorithms/tree) or [linked list](/data-structures-and-algorithms/linked-list).
+[Recursion](/cs-notes/data-structures-and-algorithms/recursion) itself doesn't have special syntax or convention, because it is a concept of a function that calls itself. It is useful to "automatically" create an iteration, especially in recursive data structure like [tree](/cs-notes/data-structures-and-algorithms/tree) or [linked list](/cs-notes/data-structures-and-algorithms/linked-list).
 
 Recursion is commonly found on functional language, while iteration is found on imperative language, although modern languages combines them both.
 
@@ -333,7 +333,7 @@ Normal-order evaluation is safe to use if the expression doesn't cause side effe
 
 ### Concurrency
 
-The execution of multiple tasks or instructions simultaneously. See [concurrency](/compilers-and-programming-languages/concurrency).
+The execution of multiple tasks or instructions simultaneously. See [concurrency](/cs-notes/compilers-and-programming-languages/concurrency).
 
 ### Nondeterminacy
 

@@ -9,14 +9,14 @@ description: WebP
 - **[WebP — Wikipedia](https://en.wikipedia.org/wiki/WebP)**
 - **Various sources from Google**
 
-**WebP** is an image format developed by Google that provides both [lossy](/digital-signal-processing/compression#lossless-compression/digital-signal-processing/compression#lossy-compression) and [lossless compression](/digital-signal-processing/compression#lossless-compression) for digital images. WebP is better suited for webpages than [JPG](/digital-media-processing/jpg-jpeg) due to its better compression efficiency, which reduces file size and improve performance. WebP is supported by browser natively, support image transparency, and animation through the WebP Animation format (WebPANIM).
+**WebP** is an image format developed by Google that provides both [lossy](/cs-notes/digital-signal-processing/compression#lossless-compression/digital-signal-processing/compression#lossy-compression) and [lossless compression](/cs-notes/digital-signal-processing/compression#lossless-compression) for digital images. WebP is better suited for webpages than [JPG](/cs-notes/digital-media-processing/jpg-jpeg) due to its better compression efficiency, which reduces file size and improve performance. WebP is supported by browser natively, support image transparency, and animation through the WebP Animation format (WebPANIM).
 
 ![Comparison between JPG and WebP compression. WebP does better than JPG](./compression-comparison.png)  
 Source: https://theinformaticists.com/2019/08/29/human-based-image-compression-using-a-deterministic-computer-algorithm-to-reconstruct-pre-segmented-images/
 
 ### WebP Compression
 
-WebP uses similar technique as [JPG compression](/digital-media-processing/jpg-jpeg#jpg-compression) with small difference.
+WebP uses similar technique as [JPG compression](/cs-notes/digital-media-processing/jpg-jpeg#jpg-compression) with small difference.
 
 - **Predictive Coding**: WebP replaces pixel value within an image with prediction of pixel values. WebP uses a prediction algorithm to predict the pixel value based on the surrounding pixels. It uses the idea that near pixel have similar or correlated value. The difference between the predicted and the original pixel value is called residual data. It generally carries less information, and will be used to reconstruct the original data.
 - **YUV Color Space Conversion**: WebP uses a color space similar to YCbCr in JPG, called YUV (luminance, chroma blue, and chroma red, respectively). The difference is that YUV values are centered around 0, ranging from -127 to 128, while YCbCr values are centered around 128, ranging from 0 to 256.

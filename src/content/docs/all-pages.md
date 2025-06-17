@@ -6,7 +6,7 @@ description: All Pages
 
 A total of **20** topics, and a total of **367** notes.
 
-1. [Computer & Programming Fundamentals](/computer-and-programming-fundamentals) (**20** subtopics)
+1. [Computer & Programming Fundamentals](/cs-notes/computer-and-programming-fundamentals) (**20** subtopics)
     - Computer Representation
       - [Number System](computer-and-programming-fundamentals/number-system)
       - [Binary Representation](computer-and-programming-fundamentals/binary-representation)
@@ -35,7 +35,7 @@ A total of **20** topics, and a total of **367** notes.
       - [Interpreter](computer-and-programming-fundamentals/interpreter)
       - [Runtime Environment](computer-and-programming-fundamentals/runtime-environment)
     - [Computer & Programming Terminology](computer-and-programming-fundamentals/computer-and-programming-terminology)
-2. [Digital Signal Processing](/digital-signal-processing) (**18** subtopics)
+2. [Digital Signal Processing](/cs-notes/digital-signal-processing) (**18** subtopics)
     - [Signal](digital-signal-processing/signal)
     - Fourier Analysis
       - [Fourier Series](digital-signal-processing/fourier-series)
@@ -57,7 +57,7 @@ A total of **20** topics, and a total of **367** notes.
       - [Filtering](digital-signal-processing/filtering)
       - [Compression](digital-signal-processing/compression)
       - [Denoising](digital-signal-processing/denoising)
-3. [Digital Media Processing](/digital-media-processing) (**32** subtopics)
+3. [Digital Media Processing](/cs-notes/digital-media-processing) (**32** subtopics)
     - Image Processing
       - [Image Properties](digital-media-processing/image-properties)
       - [Image Enhancement](digital-media-processing/image-enhancement)
@@ -98,7 +98,7 @@ A total of **20** topics, and a total of **367** notes.
         - [MD](digital-media-processing/md)
         - [TXT](digital-media-processing/txt)
         - [PDF](digital-media-processing/pdf)
-4. [Computer Networking](/computer-networking) (**37** subtopics)
+4. [Computer Networking](/cs-notes/computer-networking) (**37** subtopics)
     - Network Standard
       - [OSI Model](computer-networking/osi-model)
       - [TCP/IP Model](computer-networking/tcp-ip-model)
@@ -144,7 +144,7 @@ A total of **20** topics, and a total of **367** notes.
     - [Network Security](computer-networking/network-security)
     - [Network Encryption](computer-networking/network-encryption)
     - [Networking Command](computer-networking/networking-command)
-5. [Data Structures & Algorithms](/data-structures-and-algorithms) (**27** subtopics)
+5. [Data Structures & Algorithms](/cs-notes/data-structures-and-algorithms) (**27** subtopics)
     - [Analysis of Algorithms](data-structures-and-algorithms/analysis-of-algorithms)
     - Data Structures
       - [Array](data-structures-and-algorithms/array)
@@ -177,7 +177,7 @@ A total of **20** topics, and a total of **367** notes.
           - [Union Find](data-structures-and-algorithms/union-find)
           - [Topological Sort](data-structures-and-algorithms/topological-sort)
           - [Minimum Spanning Tree](data-structures-and-algorithms/minimum-spanning-tree)
-6. [Computer Organization & Architecture](/computer-organization-and-architecture) (**12** subtopics)
+6. [Computer Organization & Architecture](/cs-notes/computer-organization-and-architecture) (**12** subtopics)
     - [COA Fundamentals](computer-organization-and-architecture/coa-fundamentals)
     - [Boolean Logic](computer-organization-and-architecture/boolean-logic)
     - CPU
@@ -192,7 +192,7 @@ A total of **20** topics, and a total of **367** notes.
       - [Harvard](computer-organization-and-architecture/harvard)
       - [ISA](computer-organization-and-architecture/isa)
     - [Other Processing Units](computer-organization-and-architecture/other-processing-units)
-7. [Operating System](/operating-system) (**24** subtopics)
+7. [Operating System](/cs-notes/operating-system) (**24** subtopics)
     - [OS Fundamentals](operating-system/os-fundamentals)
     - [Kernel](operating-system/kernel)
     - [Process Management](operating-system/process-management)
@@ -218,7 +218,7 @@ A total of **20** topics, and a total of **367** notes.
       - [Windows](operating-system/windows)
       - [Android](operating-system/android)
       - [macOS & iOS](operating-system/macos-and-ios)
-8. [Theory of Computation & Automata](/theory-of-computation-and-automata) (**11** subtopics)
+8. [Theory of Computation & Automata](/cs-notes/theory-of-computation-and-automata) (**11** subtopics)
     - [TOC Fundamentals](theory-of-computation-and-automata/toc-fundamentals)
     - [Finite Automata](theory-of-computation-and-automata/finite-automata)
     - [Regular Languages (Part 1)](theory-of-computation-and-automata/regular-languages-part-1)
@@ -230,7 +230,7 @@ A total of **20** topics, and a total of **367** notes.
     - [Turing Machine](theory-of-computation-and-automata/turing-machine)
     - [Undecidability](theory-of-computation-and-automata/undecidability)
     - [Complexity Theory](theory-of-computation-and-automata/complexity-theory)
-9. [Compilers & Programming Languages](/compilers-and-programming-languages) (**19** subtopics)
+9. [Compilers & Programming Languages](/cs-notes/compilers-and-programming-languages) (**19** subtopics)
     - [CPL Fundamentals](compilers-and-programming-languages/cpl-fundamentals)
     - Compiler Frontend
       - [Syntax](compilers-and-programming-languages/syntax)
@@ -254,7 +254,7 @@ A total of **20** topics, and a total of **367** notes.
       - [Logic Languages](compilers-and-programming-languages/logic-languages)
       - [Concurrency](compilers-and-programming-languages/concurrency)
       - [Scripting Languages](compilers-and-programming-languages/scripting-languages)
-10. [Database System](/database-system) (**15** subtopics)
+10. [Database System](/cs-notes/database-system) (**15** subtopics)
     - [Relational Data](database-system/relational-data)
     - [Query Language](database-system/query-language)
     - Database Management
@@ -273,7 +273,7 @@ A total of **20** topics, and a total of **367** notes.
       - [Index Implementation](database-system/index-implementation)
       - [Query Processing](database-system/query-processing)
       - [Query Compiler](database-system/query-compiler)
-11. [Computer Graphics](/computer-graphics) (**23** subtopics)
+11. [Computer Graphics](/cs-notes/computer-graphics) (**23** subtopics)
     - [Computer Images (Part 1)](computer-graphics/computer-images-part-1)
     - [Computer Images (Part 2)](computer-graphics/computer-images-part-2)
     - [2D Transformation](computer-graphics/2d-transformation)
@@ -297,7 +297,7 @@ A total of **20** topics, and a total of **367** notes.
     - [Computer Animation](computer-graphics/computer-animation)
     - [Physics-Based Animation](computer-graphics/physics-based-animation)
     - [Simulation](computer-graphics/simulation)
-12. [Internet & Web](/internet-and-web) (**7** subtopics)
+12. [Internet & Web](/cs-notes/internet-and-web) (**7** subtopics)
     - [HTML](internet-and-web/html)
     - [CSS](internet-and-web/css)
     - [JavaScript](internet-and-web/javascript)
@@ -305,7 +305,7 @@ A total of **20** topics, and a total of **367** notes.
     - [Web Browser](internet-and-web/web-browser)
     - [Search Engine](internet-and-web/search-engine)
     - [Web Hosting](internet-and-web/web-hosting)
-13. [Backend System](/backend-system) (**18** subtopics)
+13. [Backend System](/cs-notes/backend-system) (**18** subtopics)
     - [Web Server](backend-system/web-server)
     - APIs
       - [APIs & Server Logic](backend-system/apis-server-logic)
@@ -326,7 +326,7 @@ A total of **20** topics, and a total of **367** notes.
       - [Serverless](backend-system/serverless)
     - [Backend & Server Security](backend-system/backend-server-security)
     - [Backend Optimization](backend-system/backend-optimization)
-14. [Computer Security](/computer-security) (**22** subtopics)
+14. [Computer Security](/cs-notes/computer-security) (**22** subtopics)
     - [Computer Security Fundamentals](computer-security/computer-security-fundamentals)
     - Cryptography
       - [Math Concepts](computer-security/math-concepts)
@@ -353,7 +353,7 @@ A total of **20** topics, and a total of **367** notes.
     - [Mobile Security](computer-security/mobile-security)
     - [Backend & Server Security](computer-security/backend-server-security)
     - [Other Attack & Exploit](computer-security/other-attack-and-exploit)
-15. [Machine Learning](/machine-learning) (**11** subtopics)
+15. [Machine Learning](/cs-notes/machine-learning) (**11** subtopics)
     - [Linear Regression](machine-learning/linear-regression)
     - [Logistic Regression](machine-learning/logistic-regression)
     - [Naive Bayes](machine-learning/naive-bayes)
@@ -365,7 +365,7 @@ A total of **20** topics, and a total of **367** notes.
     - [Principal Component Analysis](machine-learning/principal-component-analysis)
     - [k-Means Clustering](machine-learning/k-means-clustering)
     - [Collaborative Filtering](machine-learning/collaborative-filtering)
-16. [Deep Learning](/deep-learning) (**31** subtopics)
+16. [Deep Learning](/cs-notes/deep-learning) (**31** subtopics)
     - [Deep Learning Foundation](deep-learning/deep-learning-foundation)
     - [Deep Learning Tasks](deep-learning/deep-learning-tasks)
     - [Neural Network](deep-learning/neural-network)
@@ -401,7 +401,7 @@ A total of **20** topics, and a total of **367** notes.
         - [Policy Gradient](deep-learning/reinforcement-learning/policy-gradient)
         - [Imitation Learning](deep-learning/reinforcement-learning/imitation-learning)
       - [Multi-Agent](deep-learning/reinforcement-learning/multi-agent)
-17. [Software Engineering](/software-engineering) (**21** subtopics)
+17. [Software Engineering](/cs-notes/software-engineering) (**21** subtopics)
     - [Software Process](software-engineering/software-process)
     - Software Design
       - [Software Principles](software-engineering/software-principles)
@@ -450,11 +450,11 @@ A total of **20** topics, and a total of **367** notes.
     - [Cloud Database](cloud-computing-and-distributed-systems/cloud-database)
     - [Cloud Security](cloud-computing-and-distributed-systems/cloud-security)
     - [Cloud Services](cloud-computing-and-distributed-systems/cloud-services)
-19. [Android OS](/android-os) (**0** subtopics)
+19. [Android OS](/cs-notes/android-os) (**0** subtopics)
     - TBA
     - TBA
     - TBA
-20. [Android Development](/android-development) (**0** subtopics)
+20. [Android Development](/cs-notes/android-development) (**0** subtopics)
     - TBA
     - TBA
     - TBA

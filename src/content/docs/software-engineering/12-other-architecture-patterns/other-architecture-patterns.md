@@ -9,7 +9,7 @@ description: Other Architecture Patterns
 - **[What is the difference between MVI compared to MVC and MVVM — stackoverflow](https://stackoverflow.com/questions/59205614/what-is-the-difference-between-mvi-compared-to-mvc-and-mvvm/59336002)**
 - **[VIPER-Architecture for iOS project with simple demo example by Bipin Pandey — Medium](https://medium.com/cr8resume/viper-architecture-for-ios-project-with-simple-demo-example-7a07321dbd29)**
 
-This note discusses other architectural patterns, such as MVC, MVP, MVVM, MVI, and VIPER. The five are guidelines on we can organize code and separate concerns in software applications. They are somewhat similar to [layered architecture](/software-engineering/layered) in terms of separating concerns.
+This note discusses other architectural patterns, such as MVC, MVP, MVVM, MVI, and VIPER. The five are guidelines on we can organize code and separate concerns in software applications. They are somewhat similar to [layered architecture](/cs-notes/software-engineering/layered) in terms of separating concerns.
 
 ### MVC
 
@@ -50,7 +50,7 @@ Source: https://stackoverflow.com/a/59336002/18335183
 
 **MVVM (Model-View-ViewModel)** separates the application into model, view, and view model.
 
-MVVM is very similar to MVP, view and model is still the same, and the role of presenter is replaced with view model. The view model still acts as an intermediary between the model and the view. The difference is, more [reactive programming](/computer-and-programming-fundamentals/concurrency#reactive-programming) is involved, as they now observe each other.
+MVVM is very similar to MVP, view and model is still the same, and the role of presenter is replaced with view model. The view model still acts as an intermediary between the model and the view. The difference is, more [reactive programming](/cs-notes/computer-and-programming-fundamentals/concurrency#reactive-programming) is involved, as they now observe each other.
 
 Typically, a binding mechanism is done between these three components. The view model holds the state of the model, and it is connected or bound to a view. Through this binding, the model's state becomes exposed, and the view should observe any changes in it.
 
@@ -67,7 +67,7 @@ Source: https://stackoverflow.com/a/59336002/18335183
 
 ### MVI
 
-**MVI (Model-View-Intent)** is an architectural pattern based on a [state machine](/theory-of-computation-and-automata/finite-automata#finite-state-machine), because a user interface can be thought as a predictable machine that has particular states. The state of UI can be updated through user interaction, which is modeled as **intent**.
+**MVI (Model-View-Intent)** is an architectural pattern based on a [state machine](/cs-notes/theory-of-computation-and-automata/finite-automata#finite-state-machine), because a user interface can be thought as a predictable machine that has particular states. The state of UI can be updated through user interaction, which is modeled as **intent**.
 
 In the actual implementation, we can still use a presenter or view model, as intent is just a form of coordination between the view and model.
 

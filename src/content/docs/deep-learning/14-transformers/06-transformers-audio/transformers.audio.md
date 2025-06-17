@@ -8,7 +8,7 @@ description: Transformers Audio
 
 - **[Hugging Face Audio course part 3](https://huggingface.co/learn/audio-course/chapter3/introduction)**
 
-[Transformers architecture](/deep-learning/transformers/transformers-architecture) can also be used for audio task, the application are speech recognition, music generation, audio classification, text-to-speech, and many more.
+[Transformers architecture](/cs-notes/deep-learning/transformers/transformers-architecture) can also be used for audio task, the application are speech recognition, music generation, audio classification, text-to-speech, and many more.
 
 By audio task, it means transformers architecture will be modified to take input or produce output of text or audio. As long as the input can be turned into number, then we can use machine learning model for that task.
 
@@ -16,7 +16,7 @@ If the input is text then it will be easy, same as the original transformers arc
 
 ### Spectogram
 
-Spectogram is a visual representation of the frequency of a signal over time. The audio signal is divided into short segment, each segment will be transformed into frequency domain using technique like [fourier transform](/digital-signal-processing/fourier-transform). Representing it in frequency domain helps us know which different frequency contribute to the overall signal, therefore it's a good way to capture information lies on the audio data for processing it in the transformers architecture.
+Spectogram is a visual representation of the frequency of a signal over time. The audio signal is divided into short segment, each segment will be transformed into frequency domain using technique like [fourier transform](/cs-notes/digital-signal-processing/fourier-transform). Representing it in frequency domain helps us know which different frequency contribute to the overall signal, therefore it's a good way to capture information lies on the audio data for processing it in the transformers architecture.
 
 Another variation of spectogram is the **Mel-spectogram**, it is a form of spectogram specifically made to focus on human perception of sound. Basically, we scale the audio signal so that lower frequency is more emphasized than higher frequency, this is because human perception is more sensitive to lower frequency range.
 
@@ -26,12 +26,12 @@ Another way to represent audio is using **waveform**, the representation shows h
 Source: https://www.researchgate.net/figure/Waveform-spectrogram-and-mel-spectrogram-of-a-10-s-speech-segment-obtained-from-Google_fig1_333834541
 
 :::tip
-Find more about [signal processing](/digital-signal-processing) or about [audio](/digital-media-processing/sound-audio-properties).
+Find more about [signal processing](/cs-notes/digital-signal-processing) or about [audio](/cs-notes/digital-media-processing/sound-audio-properties).
 :::
 
 #### Input & Output
 
-To input waveform or spectogram into transformers encoder, they are typically divided into small segment first. The smaller segment will be fed into a **[convolutional neural network (CNN)](/deep-learning/cnn)**, which act as the feature extractor. CNN can be a good feature extractor as it capable of capturing local patterns (e.g. frequency shape variation) from input data through the convolution operation.
+To input waveform or spectogram into transformers encoder, they are typically divided into small segment first. The smaller segment will be fed into a **[convolutional neural network (CNN)](/cs-notes/deep-learning/cnn)**, which act as the feature extractor. CNN can be a good feature extractor as it capable of capturing local patterns (e.g. frequency shape variation) from input data through the convolution operation.
 
 If the output is a text, it will be similar to the original transformers architecture, we uses linear layer and softmax function on top of the decoder's output. To produce audio output, we will need some layer that produces audio sequence. The layer can be additional neural network such as linear layer or CNN. The layer can also refine the audio output for better quality.
 

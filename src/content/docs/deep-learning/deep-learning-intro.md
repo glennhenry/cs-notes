@@ -4,7 +4,7 @@ slug: deep-learning
 description: Deep Learning Notes
 ---
 
-**Deep Learning** is a subfield of [machine learning](/machine-learning) that focuses on [neural network](deep-learning/neural-network), a more advanced way to learn from data. Traditional machine learning relies on feature a data has, the feature are typically extracted manual by machine learning practicioner. Neural network, in high level, can learn hierarchical representations of the data, automatically extracting useful features or detecting pattern from raw input without needing for manual feature engineering.
+**Deep Learning** is a subfield of [machine learning](/cs-notes/machine-learning) that focuses on [neural network](deep-learning/neural-network), a more advanced way to learn from data. Traditional machine learning relies on feature a data has, the feature are typically extracted manual by machine learning practicioner. Neural network, in high level, can learn hierarchical representations of the data, automatically extracting useful features or detecting pattern from raw input without needing for manual feature engineering.
 
 Deep learning is suited for task which uses complex data that is hard to describe by humans such as images. As long as we can turn it into numbers, the model will learn the pattern of the number and make prediction.
 

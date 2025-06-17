@@ -19,13 +19,13 @@ Some characteristics of imperative programming:
 
 Key characteristics of imperative programming include:
 
-- **[Assignment & Variables](/computer-and-programming-fundamentals/programming-concepts#variables--data-types)**: Making variables by assigning data to it involve storing data in the memory. It acts as the state of the program, the variable can be modified during the program execution, which will change the program's behavior.
+- **[Assignment & Variables](/cs-notes/computer-and-programming-fundamentals/programming-concepts#variables--data-types)**: Making variables by assigning data to it involve storing data in the memory. It acts as the state of the program, the variable can be modified during the program execution, which will change the program's behavior.
 
-- **[Control flow](/computer-and-programming-fundamentals/programming-concepts#control-flow)**: Control flow such as loops and conditional statements which controls the flow of execution based on conditions. These structures determine which statements are executed and in what order.
+- **[Control flow](/cs-notes/computer-and-programming-fundamentals/programming-concepts#control-flow)**: Control flow such as loops and conditional statements which controls the flow of execution based on conditions. These structures determine which statements are executed and in what order.
 
-- **[Expressions and operators](/computer-and-programming-fundamentals/programming-concepts#operators)**: Expressions perform computations or combine values, operators, such as arithmetic, logical, and comparison operators, are used to manipulate and evaluate expressions.
+- **[Expressions and operators](/cs-notes/computer-and-programming-fundamentals/programming-concepts#operators)**: Expressions perform computations or combine values, operators, such as arithmetic, logical, and comparison operators, are used to manipulate and evaluate expressions.
 
-- **[Modularity & Functions](/computer-and-programming-fundamentals/programming-concepts#functions)**: Imperative programming breaks down its code into reusable functions that encapsulate specific tasks or computations. These functions can be called from various parts of the program.
+- **[Modularity & Functions](/cs-notes/computer-and-programming-fundamentals/programming-concepts#functions)**: Imperative programming breaks down its code into reusable functions that encapsulate specific tasks or computations. These functions can be called from various parts of the program.
 
 ### Procedural Programming
 

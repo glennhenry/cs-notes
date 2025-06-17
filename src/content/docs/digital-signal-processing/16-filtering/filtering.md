@@ -8,7 +8,7 @@ description: Filtering
 
 - **Various source from Google and YouTube**
 
-In digital signal processing, **filtering** refers to the process of modifying or manipulating a digital signal to remove unwanted components or extract specific information. For example, unwanted components can be removed by applying techniques like the [Fourier Transform](/digital-signal-processing/fourier-transform), which separates signals based on their frequency components, allowing the removal of a particular frequency.
+In digital signal processing, **filtering** refers to the process of modifying or manipulating a digital signal to remove unwanted components or extract specific information. For example, unwanted components can be removed by applying techniques like the [Fourier Transform](/cs-notes/digital-signal-processing/fourier-transform), which separates signals based on their frequency components, allowing the removal of a particular frequency.
 
 ![Fourier transform filtering the highest magnitude signal to reduce noise in sound wave](./ft-filtering.png)  
 Source: https://towardsdatascience.com/the-fourier-transform-4-putting-the-fft-to-work-38dd84dc814

@@ -12,7 +12,7 @@ description: Regular Languages (Part 1)
 
 ### Regular Language
 
-Regular language is a language that can be recognized by some [finite state machine](/theory-of-computation-and-automata/finite-automata). It is constructed by three set operations, union, concatenation, and Kleene star.
+Regular language is a language that can be recognized by some [finite state machine](/cs-notes/theory-of-computation-and-automata/finite-automata). It is constructed by three set operations, union, concatenation, and Kleene star.
 
 With alphabet $\Sigma$, the class of regular languages over $\Sigma$ is defined as:
 
@@ -38,7 +38,7 @@ Regular expression is the formal notation of describing regular languages. It co
 Character and operators:
 
 - **Terminal symbols**: Terminal symbol including symbols that are contained within the $\Sigma$, including $\epsilon$ (empty string) and $\varnothing$ (empty set) are regular expression.
-- **Union ($+$)**: Union operation is like a [logical OR](/computer-and-programming-fundamentals/bitwise-operation#or), if we have two regular expression, $R_1, R_2$, union between them would be represented as $R_1 + R_2$. This mean we are making a pattern that match either $R_1$ or $R_2$.
+- **Union ($+$)**: Union operation is like a [logical OR](/cs-notes/computer-and-programming-fundamentals/bitwise-operation#or), if we have two regular expression, $R_1, R_2$, union between them would be represented as $R_1 + R_2$. This mean we are making a pattern that match either $R_1$ or $R_2$.
 - **Concatenation ($\cdot$)**: With $R_1, R_2$, concatenation is $R_1 \cdot R_2$, and it indicates that the two expressions must occur consecutively in the input string.
 - **Kleene star ($*$)**: It acts like an iteration that specifies that the preceding expression can occur zero or more times. It matches any number of occurrences of the preceding expression, including no occurrence at all. For example, the regular expression $a^*$ matches strings like $\epsilon$ or "", "a", "aa", "aaa", and so on.
 

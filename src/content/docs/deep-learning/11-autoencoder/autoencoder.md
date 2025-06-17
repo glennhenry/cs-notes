@@ -9,7 +9,7 @@ description: Autoencoder
 - **[Encoder Decoder Network — Computerphile](https://youtu.be/1icvxbAoPWc?si=h_INIqnLio0jnUw6)**
 - **[What is an Autoencoder? | Two Minute Papers #86 — Two Minute Papers](https://youtu.be/Rdpbnd0pCiI?si=CxZ0egCEEmxiIAIo)**
 
-**Autoencoder** is a type of [neural network](/deep-learning/neural-network) used for unsupervised learning, where the data doesn't have correct label or output, this makes the model learns the pattern in the data without explicit guidance.
+**Autoencoder** is a type of [neural network](/cs-notes/deep-learning/neural-network) used for unsupervised learning, where the data doesn't have correct label or output, this makes the model learns the pattern in the data without explicit guidance.
 
 Autoencoder is used to reconstruct input data, given a data, it will be reconstructed for specific purpose such as:
 
@@ -28,7 +28,7 @@ Autoencoder network consist of two components:
 
 Encoder is responsible for taking the input data and transforming it into a lower-dimensional representation, this process is also called **encoding** or **latent space representation**.
 
-The encoder consists of several layers of neural network such as [convolutional neural network](/deep-learning/cnn) that gradually reduce the dimensionality of the input data and capture the essential charateristics. The networks has model's parameters such as weight and bias which will be adjusted later in the learning process. [Activation function](/deep-learning/deep-learning-foundation#activation-function) will also be included inside to introduce non-linearity.
+The encoder consists of several layers of neural network such as [convolutional neural network](/cs-notes/deep-learning/cnn) that gradually reduce the dimensionality of the input data and capture the essential charateristics. The networks has model's parameters such as weight and bias which will be adjusted later in the learning process. [Activation function](/cs-notes/deep-learning/deep-learning-foundation#activation-function) will also be included inside to introduce non-linearity.
 
 The result of the layers will be flattened and fed into a fully-connected layer, similar to traditional CNN. The output of fully-connected layer is connected to another layer called **bottleneck**, this is where data is represented in latent space.
 

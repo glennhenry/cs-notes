@@ -39,7 +39,7 @@ The overall process of denoising diffusion model consist of two steps, the forwa
 
 #### Forward Process
 
-In DDPM, the noising process is modeled using a [**Markov chain**](/deep-learning/reinforcement-learning/markov-models#markov-chain). Markov chain is a mathematical model that assumes the future state of a system only depends on current step. In other word, the current state of a system depends only on the previous state. The key idea behind using a Markov chain in diffusion models is to describe the evolution of the system's state as an iterative stochastic process.
+In DDPM, the noising process is modeled using a [**Markov chain**](/cs-notes/deep-learning/reinforcement-learning/markov-models#markov-chain). Markov chain is a mathematical model that assumes the future state of a system only depends on current step. In other word, the current state of a system depends only on the previous state. The key idea behind using a Markov chain in diffusion models is to describe the evolution of the system's state as an iterative stochastic process.
 
 The forward process begins with adding noise to the image in gradual manner, the process will be divided into discrete time steps. The noise, we are adding is modeled using a **Gaussian (normal) distribution**. A Gaussian distribution is characterized by its mean ($\mu$) and variance ($\sigma^2$), which determine the central tendency and spread of the distribution, respectively.
 
@@ -84,7 +84,7 @@ The inference process is where the process is made learnable or adjustable. In t
 Source: https://youtu.be/fbLgFrlTnGU?si=o0xlAFVkGm6B4nHr&t=651
 
 :::tip
-The implementation of the reverse or denoising process typically uses the [U-Net architecture](/deep-learning/u-net) for image data or a [transformers](/deep-learning/transformers/transformers-architecture) for non-image data.
+The implementation of the reverse or denoising process typically uses the [U-Net architecture](/cs-notes/deep-learning/u-net) for image data or a [transformers](/cs-notes/deep-learning/transformers/transformers-architecture) for non-image data.
 :::
 
 #### Training Objective
@@ -94,7 +94,7 @@ The forward and reverse process can be understood as process that transform data
 ![The objective of diffusion model](./objective.png)  
 Source: https://youtu.be/fbLgFrlTnGU?si=lOk5eb9Au4EJumjW&t=376 (with modification)
 
-The process and objective of diffusion model is similar to [**variational autoencoder (VAE)**](/deep-learning/variational-autoencoder). In VAE, the encoder takes the input data and maps it to a lower-dimensional representation called the **latent variables**. This latent variables serves as a compressed representation that captures the essential information and underlying structure present in the input data. Latent variables will then be modeled in a probability distribution with some mean and variance, this is now called a **latent space**. The decoder sample from the latent space distribution, to generate new data samples. The objective is to approximate the true data distribution from the sampled distribution.
+The process and objective of diffusion model is similar to [**variational autoencoder (VAE)**](/cs-notes/deep-learning/variational-autoencoder). In VAE, the encoder takes the input data and maps it to a lower-dimensional representation called the **latent variables**. This latent variables serves as a compressed representation that captures the essential information and underlying structure present in the input data. Latent variables will then be modeled in a probability distribution with some mean and variance, this is now called a **latent space**. The decoder sample from the latent space distribution, to generate new data samples. The objective is to approximate the true data distribution from the sampled distribution.
 
 The similar objective can be applied to diffusion model, "Given transformed data, how to untransform it?". The primary aim of a diffusion model is to enhance the inference process, particularly by focusing on the reverse process that involves computing the preceding state of the Markov chain.
 
@@ -204,28 +204,28 @@ https://stable-diffusion-art.com/samplers/
 
 In diffusion model, we are approximating what an unnoised image will look like from a random noised image. In other word, we are approximating the probability distribution of a target image from a simple base distribution. This makes diffusion model is often called a general method to model a probability distribution.
 
-An encoder-decoder pair is a type of network that consist of two component. The encoder, serve as the one that takes input and transform it into **latent variables** or lower-dimensional representation of the input data. The other component, decoder, will take the output of encoder and do the reverse process. An example of encoder-decoder pair are [autoencoder](/deep-learning/autoencoder) and [Variational autoencoder (VAE)](/deep-learning/variational-autoencoder), which model the latent variables in probability distribution, called **latent space**.
+An encoder-decoder pair is a type of network that consist of two component. The encoder, serve as the one that takes input and transform it into **latent variables** or lower-dimensional representation of the input data. The other component, decoder, will take the output of encoder and do the reverse process. An example of encoder-decoder pair are [autoencoder](/cs-notes/deep-learning/autoencoder) and [Variational autoencoder (VAE)](/cs-notes/deep-learning/variational-autoencoder), which model the latent variables in probability distribution, called **latent space**.
 
 **Latent diffusion model** or **LDM** is a type of diffusion model combined with an encoder-decoder pair (typically a VAE). The idea of using diffusion model with an encoder-decoder pair is because the encoder outputs a probability distribution which we can use as the input for diffusion model.
 
 Instead of forward diffusing a raw image and then do the reverse process, LDM instead takes the input from encoder and model the probability distribution. To actually generate image, we can sample from the output of the diffusion model and use the decoder to decode it back to image. By using latent space as the input, we can reduce the dimensionality of the input for diffusion process, which will save alot of computation resources.
 
-LDM can also be integrated with additional condition such as text, image, or any other meaningful representation. This integration can leverage technique like [cross-attention](/deep-learning/transformers/transformers-architecture), which is also used in the transformers architecture. First, the encoder encodes the data into the latent space, followed by the forward diffusion process. The conditional input, typically the encoded representation of the original input, is concatenated together with the output of forward diffusion process. Subsequently, the cross-attention mechanism is incorporated to guide the reverse diffusion or denoising process. Once the reverse diffusion is completed, we can sample the output and fed it into the decoder.
+LDM can also be integrated with additional condition such as text, image, or any other meaningful representation. This integration can leverage technique like [cross-attention](/cs-notes/deep-learning/transformers/transformers-architecture), which is also used in the transformers architecture. First, the encoder encodes the data into the latent space, followed by the forward diffusion process. The conditional input, typically the encoded representation of the original input, is concatenated together with the output of forward diffusion process. Subsequently, the cross-attention mechanism is incorporated to guide the reverse diffusion or denoising process. Once the reverse diffusion is completed, we can sample the output and fed it into the decoder.
 
 ### Stable Diffusion
 
-**Stable Diffusion** is a deep learning model based on [diffusion model](/deep-learning/diffusion-model), specifically, it's an open source implementation of [**latent diffusion model (LDM)**](/deep-learning/diffusion-model#latent-diffusion-model-ldm). It is typically used to generate image conditioned on text or image, inpainting, outpainting, super-resolution, and etc.
+**Stable Diffusion** is a deep learning model based on [diffusion model](/cs-notes/deep-learning/diffusion-model), specifically, it's an open source implementation of [**latent diffusion model (LDM)**](/cs-notes/deep-learning/diffusion-model#latent-diffusion-model-ldm). It is typically used to generate image conditioned on text or image, inpainting, outpainting, super-resolution, and etc.
 
 #### Architecture
 
-Stable diffusion is based on Latent Diffusion Model (LDM), which uses [variational autoencoder (VAE)](/deep-learning/variational-autoencoder) as both the encoder and decoder. The diffusion process takes place within the latent space generated by the encoder.
+Stable diffusion is based on Latent Diffusion Model (LDM), which uses [variational autoencoder (VAE)](/cs-notes/deep-learning/variational-autoencoder) as both the encoder and decoder. The diffusion process takes place within the latent space generated by the encoder.
 
 ![LDM or stable diffusion architecture](./stable-diffusion-architecture.png)  
 Source: https://towardsdatascience.com/stable-diffusion-best-open-source-version-of-dall-e-2-ebcdf1cb64bc (stable diffusion or LDM architecture)
 
 1. **Image Encoding**: An image is provided as the input, which is passed through the encoder to transform it into a representation in the latent space. Transforming it into latent space allows for smaller dimension which can significantly reduce the computational resources.
 
-2. **Diffusion Process**: Diffusion process which consist of forward diffusion that adds noise gradually and the reverse diffusion process which removes noise gradually. The reverse diffusion process is implemented using a neural network, specifically a denoising [U-Net](/deep-learning/u-net).
+2. **Diffusion Process**: Diffusion process which consist of forward diffusion that adds noise gradually and the reverse diffusion process which removes noise gradually. The reverse diffusion process is implemented using a neural network, specifically a denoising [U-Net](/cs-notes/deep-learning/u-net).
 
    The U-Net predicts what is the denoised image in the previous time step, given a noised image in the current time step. However, rather than directly predicting the denoised image, the U-Net predicts the noise present in the input image. Subsequently, this predicted noise is subtracted from the noisy input image to obtain the actual denoised image.
 
@@ -234,7 +234,7 @@ Source: https://towardsdatascience.com/stable-diffusion-best-open-source-version
    ![Forward diffusion and reverse diffusion using U-Net](./diffusion-process.png)  
     Source: https://medium.com/@steinsfu/diffusion-model-clearly-explained-cd331bd41166, https://youtu.be/J87hffSMB60?si=_iCGv-rnh_sXt_dL&t=352 (with modification)
 
-3. **Conditioning**: The model also takes a conditional input such as text, it will be encoded or converted into lower-dimensional representation, this can be done using [transformers encoders](/deep-learning/transformers/transformers-architecture#encoder) or [CLIP text encoder](#contrastive-language-image-pre-training-clip).
+3. **Conditioning**: The model also takes a conditional input such as text, it will be encoded or converted into lower-dimensional representation, this can be done using [transformers encoders](/cs-notes/deep-learning/transformers/transformers-architecture#encoder) or [CLIP text encoder](#contrastive-language-image-pre-training-clip).
 
    The integration with conditional input is incorporated in two ways:
 
@@ -262,7 +262,7 @@ The loss function in CLIP consists of two main components: the **image-text simi
 ![Joint embedding space](./joint-embedding-space.png)  
 Source: https://blog.dataiku.com/leveraging-joint-text-image-models-to-search-and-classify-images
 
-The encoding process, involves the use of image and text encoder. We can choose variety of model for text and image encoding, for example, we can use [transformers encoder](/deep-learning/transformers/transformers-architecture#encoder) for text encoding and [CNN](/deep-learning/cnn) (without its classifier) for image encoding.
+The encoding process, involves the use of image and text encoder. We can choose variety of model for text and image encoding, for example, we can use [transformers encoder](/cs-notes/deep-learning/transformers/transformers-architecture#encoder) for text encoding and [CNN](/cs-notes/deep-learning/cnn) (without its classifier) for image encoding.
 
 ![CLIP](./clip.png)  
 Source: https://towardsdatascience.com/simple-implementation-of-openai-clip-model-a-tutorial-ace6ff01d9f2?gi=de7f9822c57a

@@ -8,14 +8,14 @@ description: MP4
 
 - **[MP4 file format — Wikipedia](https://en.wikipedia.org/wiki/MP4_file_format)**
 
-**MP4 (MPEG-4 Part 14)** is a digital [multimedia container](/digital-media-processing/ogg-vorbis#media-container) format, commonly used to store audio and video data.
+**MP4 (MPEG-4 Part 14)** is a digital [multimedia container](/cs-notes/digital-media-processing/ogg-vorbis#media-container) format, commonly used to store audio and video data.
 
 ![MP4 as a multimedia container](./mp4-container.png)  
 Source: https://www.filefix.org/format/mp4.html, https://en.wikipedia.org/wiki/MP4_file_format
 
 ### MP4 Compression (H.264)
 
-H.264, also known as AVC (Advanced Video Coding), is the most commonly used [lossy video compression](/digital-signal-processing/compression#lossy-compression) standard.
+H.264, also known as AVC (Advanced Video Coding), is the most commonly used [lossy video compression](/cs-notes/digital-signal-processing/compression#lossy-compression) standard.
 
 H.264 process each frame as "block," which is a fixed-size rectangular region within a frame of video. The block size can vary, such as 4×4, 16×16, or 32×32 pixels.
 
@@ -26,7 +26,7 @@ In H.264, there two main compression techniques.
 
 Other techniques used in H.264:
 
-- **Transform Coding**: H.264 uses transform coding, specifically the [discrete cosine transform (DCT)](/digital-signal-processing/discrete-cosine-transform), which converts image data from the spatial domain to the frequency domain. This conversion allows for analysis of the signals in the frequency domain, which can result in additional compression by representing the video content with fewer frequency components.
+- **Transform Coding**: H.264 uses transform coding, specifically the [discrete cosine transform (DCT)](/cs-notes/digital-signal-processing/discrete-cosine-transform), which converts image data from the spatial domain to the frequency domain. This conversion allows for analysis of the signals in the frequency domain, which can result in additional compression by representing the video content with fewer frequency components.
 - **Rate Control**: H.264 can adjust bit rate dynamically. For example, we can use higher bit rate to complex or high-motion scenes and a lower bit rate to less complex or static scenes.
 
 ![MP4 block](./mp4-block.webp)  

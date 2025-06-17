@@ -19,7 +19,7 @@ The above is representation of dependency of each module, the `:data:books` modu
 ### Benefits
 
 - **Reusability**: Modules are made independent and self-contained as much as possible, so it can be utilized in multiple parts of an application or even across different projects.
-- **Scalability**: Modularization follows the [separation of concerns](/software-engineering/software-principles#separation-of-concerns-soc) principle, making it [loosely coupled](/software-engineering/software-principles#coupling--cohesion) and flexible to be extended or modified.
+- **Scalability**: Modularization follows the [separation of concerns](/cs-notes/software-engineering/software-principles#separation-of-concerns-soc) principle, making it [loosely coupled](/cs-notes/software-engineering/software-principles#coupling--cohesion) and flexible to be extended or modified.
 - **Testability**: Modules can be tested individually, ensuring that each component works correctly in isolation. Additionally, when issues arise, it is easier to isolate and debug problems within a specific module rather than the entire system.
 - **Encapsulation**: Modules encapsulate their internal implementation details, exposing only the necessary interfaces or APIs to interact with other modules, making it easier to use.
 
@@ -58,4 +58,4 @@ Source: https://developer.android.com/topic/modularization/patterns#communicatio
 
 Modules should communicate with interfaces and depend on abstraction, following the dependency inversion that states "High-level modules should not depend on low-level modules."
 
-See [Dependency inversion principle (DIP)](/software-engineering/software-principles#dependency-inversion-principle-dip).
+See [Dependency inversion principle (DIP)](/cs-notes/software-engineering/software-principles#dependency-inversion-principle-dip).

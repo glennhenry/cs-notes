@@ -12,19 +12,19 @@ description: Storage Management
 In computer system, storage can be organized in hierarchy, from the lowest level registers and cache, up to secondary storage (such as hard disks) or even tertiary storage.
 
 :::tip
-Find more about [memory hierarchy](/computer-organization-and-architecture/registers-and-ram#memory-hierarchy).
+Find more about [memory hierarchy](/cs-notes/computer-organization-and-architecture/registers-and-ram#memory-hierarchy).
 :::
 
 ### Disks
 
-Database operates in main memory and secondary storage. The main memory is typically abstracted by [file system](/operating-system/file-system) and [virtual memory](/operating-system/memory-management#virtual-memory).
+Database operates in main memory and secondary storage. The main memory is typically abstracted by [file system](/cs-notes/operating-system/file-system) and [virtual memory](/cs-notes/operating-system/memory-management#virtual-memory).
 
 When referring to disk, we typically refer to magnetic disk. Disk consist of platter stacked on top each other, the plate has special coating that hold magnetic field. The magnetic field become the place where data is stored. In the hardware level, disk access will be handled by **disk controller**. Disk controller controls the write/read head component on the platter to write or read data.
 
 A concentric circular path on the platter is called a **track**. Within a section of track, the smallest addressable unit of storage and is fixed in size is a **sector**. When operating system or DBMS accesses disk, it will be abstracted by the file system, disk access will be in another fixed-size unit called **block**.
 
 :::tip
-Find more about [disk management](/operating-system/disk-management).
+Find more about [disk management](/cs-notes/operating-system/disk-management).
 :::
 
 ### Data Arrangement

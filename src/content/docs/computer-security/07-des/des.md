@@ -8,7 +8,7 @@ description: DES
 
 - **[Data Encryption Standard — Wikipedia](https://en.wikipedia.org/wiki/Data_Encryption_Standard)**
 
-**Data Encryption Standard (DES)** is a [symmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption) algorithm, meaning it uses the same [private key](/computer-security/encryption#public--private-key) to encrypt and decrypt the data.
+**Data Encryption Standard (DES)** is a [symmetric encryption](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption) algorithm, meaning it uses the same [private key](/cs-notes/computer-security/encryption#public--private-key) to encrypt and decrypt the data.
 
 ### Algorithm
 

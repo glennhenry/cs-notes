@@ -16,14 +16,14 @@ description: Deep Learning Foundation
 
 ### Loss Function
 
-**Loss function** is a function that measure how well does a machine learning model performs. Loss function is typically calculated from mathematical function that takes actual or true output and the predicted output from the model. For example, a simple loss function in machine learning is the Mean Squared Error (MSE) function, commonly used in [linear regression](/machine-learning/linear-regression).
+**Loss function** is a function that measure how well does a machine learning model performs. Loss function is typically calculated from mathematical function that takes actual or true output and the predicted output from the model. For example, a simple loss function in machine learning is the Mean Squared Error (MSE) function, commonly used in [linear regression](/cs-notes/machine-learning/linear-regression).
 
 ![MSE formula](./mse.png)  
 Source: https://suboptimal.wiki/explanation/mse/
 
 The model predict what may be the y value for specific x value. It sums all the error or the difference between actual and predicted value and then square it and get the average. In the case of MSE, the larger means the worse performance and the lower means the better.
 
-The point of machine learning is we keep measuring the performance of our model and adjust our model to make it performs better. The less result we get from the loss function (or more depending on the loss function itself) reflect of how our model performs. We need to optimize the loss function, there are many way to optimize it, such as the [gradient descent algorithm](/machine-learning/linear-regression#gradient-descent)
+The point of machine learning is we keep measuring the performance of our model and adjust our model to make it performs better. The less result we get from the loss function (or more depending on the loss function itself) reflect of how our model performs. We need to optimize the loss function, there are many way to optimize it, such as the [gradient descent algorithm](/cs-notes/machine-learning/linear-regression#gradient-descent)
 
 ![Machine learning flow](./machine-learning-flow.png)
 
@@ -72,7 +72,7 @@ $L(y, \hat{y}) = - (y \log(\hat{y}) + (1 - y) \log(1 - \hat{y}))$
 
 In traditional gradient descent, model's parameter (e.g. the slope and y-intercept in linear regression) are updated every iteration, this can be slow for large datasets. Traditional gradient descent "walks" slowly, it may reach a bad local minima or even stuck at saddle point.
 
-**Stochastic Gradient Descent (SGD)** is a variant of [gradient descent](/machine-learning/linear-regression#gradient-descent) which is suited for larger datasets. The idea of SGD is, instead of considering all dataset to calculate the gradient and update the parameters, SGD randomly selects a single data point (or a small batch of data points) at each iteration and calculate that particular gradient and use it to update the model's parameters.
+**Stochastic Gradient Descent (SGD)** is a variant of [gradient descent](/cs-notes/machine-learning/linear-regression#gradient-descent) which is suited for larger datasets. The idea of SGD is, instead of considering all dataset to calculate the gradient and update the parameters, SGD randomly selects a single data point (or a small batch of data points) at each iteration and calculate that particular gradient and use it to update the model's parameters.
 
 By not considering all the data, SGD may not be stable. However, with the faster computation, we can update more and eventually catch up with traditional gradient descent.
 
@@ -141,7 +141,7 @@ Source: https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep-
   ![Overfit and underfit](./underfit-overfit.png)  
    Source: https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-how-to-deal-with-it-6803a989c76
 
-- **Optimizer**: An optimizer is an algorithm or method used to optimize the loss function. Example of optimizer are [gradient descent](/machine-learning/linear-regression#gradient-descent), [stochastic gradient descent](/deep-learning/deep-learning-foundation#stochastic-gradient-descent), [Adam](/deep-learning/deep-learning-foundation#adam), and etc.
+- **Optimizer**: An optimizer is an algorithm or method used to optimize the loss function. Example of optimizer are [gradient descent](/cs-notes/machine-learning/linear-regression#gradient-descent), [stochastic gradient descent](/cs-notes/deep-learning/deep-learning-foundation#stochastic-gradient-descent), [Adam](/cs-notes/deep-learning/deep-learning-foundation#adam), and etc.
 
 - **Gradient Accumulation**: While training model using optimizer like gradient descent, model's parameters are updated after computing gradient for each batch. Gradient accumulation is a technique that defer parameters update, the gradient for each batch is accumulated and updated once with the accumulated gradient. Using this technique can helps reduce memory as it reduce the training process.
 

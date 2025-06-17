@@ -8,17 +8,17 @@ description: Data Abstraction
 
 - **Book 2 chapter 9**
 
-**Data abstraction** is the concept of abstracting data types. For example, a data type could be made to store unique set of values. The idea is to make that data type abstract, defined through an interface, which will be concretely implemented. Concrete implementation could have various way to implement that data type with its own advantages and trade-offs. From a simple array that perform [linear search](/data-structures-and-algorithms/search#linear-search), using a [binary search tree](/data-structures-and-algorithms/tree#binary-search-tree), or a hash set, which is implemented using [hash function](/data-structures-and-algorithms/hash-table#hash-function) to produce unique code for each element.
+**Data abstraction** is the concept of abstracting data types. For example, a data type could be made to store unique set of values. The idea is to make that data type abstract, defined through an interface, which will be concretely implemented. Concrete implementation could have various way to implement that data type with its own advantages and trade-offs. From a simple array that perform [linear search](/cs-notes/data-structures-and-algorithms/search#linear-search), using a [binary search tree](/cs-notes/data-structures-and-algorithms/tree#binary-search-tree), or a hash set, which is implemented using [hash function](/cs-notes/data-structures-and-algorithms/hash-table#hash-function) to produce unique code for each element.
 
 In programming, module is a unit of code organization that groups related code together. It is typically used to abstract away the functionality of piece of code. In some languages, module is treated as a type and as a manager.
 
 - Module-as-a-type, modules themselves can have defined attributes or fields, methods, and behavior.
 - Module-as-a-manager, they act as a manager or controller for a set of related components or functionalities.
 
-The idea of modules evolves into class and object in [OOP](/computer-and-programming-fundamentals/object-oriented-programming), which are added with more functionality such as inheritance and polymorphism.
+The idea of modules evolves into class and object in [OOP](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming), which are added with more functionality such as inheritance and polymorphism.
 
 :::tip
-See [object-oriented programming](/computer-and-programming-fundamentals/object-oriented-programming#concepts) for OOP concepts.
+See [object-oriented programming](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming#concepts) for OOP concepts.
 :::
 
 ### Encapsulation & Inheritance
@@ -115,7 +115,7 @@ So, a `foo a(b)` is same as `foo::foo(foo&)`. This applies not only when the arg
 
 ### Dynamic Method Binding
 
-Inheritance allow for [subtype polymorphism](/compilers-and-programming-languages/data-types#polymorphism), in which we are able to use any method, either from superclass or subclass based on the type of object we are operating on.
+Inheritance allow for [subtype polymorphism](/cs-notes/compilers-and-programming-languages/data-types#polymorphism), in which we are able to use any method, either from superclass or subclass based on the type of object we are operating on.
 
 ```cpp
 class Base {

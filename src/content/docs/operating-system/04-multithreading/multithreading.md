@@ -12,11 +12,11 @@ description: Multithreading
 - **[Thread (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Thread_(computing)>)**
 - - **Chapter 12, Programming Language Pragmatics - Michael L. Scott**
 
-**Multithreading** is a concept that enable us to use multiple thread to execute tasks. See [concurrency](/computer-and-programming-fundamentals/concurrency) for an introduction to concurrency.
+**Multithreading** is a concept that enable us to use multiple thread to execute tasks. See [concurrency](/cs-notes/computer-and-programming-fundamentals/concurrency) for an introduction to concurrency.
 
 ### Thread
 
-Thread is a unit of execution in CPU, it can execute a set of instruction. Basically, it is a "worker" in a CPU. Thread exist within a [process](/operating-system/process-management#process--thread) and has its own data including thread ID, program counter, a register set, and a stack.
+Thread is a unit of execution in CPU, it can execute a set of instruction. Basically, it is a "worker" in a CPU. Thread exist within a [process](/cs-notes/operating-system/process-management#process--thread) and has its own data including thread ID, program counter, a register set, and a stack.
 
 In multithreading, instead of just one thread or one worker in a process, multiple thread is utilized. The benefit is we are not limited to complete a single task at a time. For example, a mobile app can fetch data from remote server while also loading data from local storage. If possible, we can also divide a computationally intensive task into smaller, parallelizable subtasks, and use multiple threads to speeds up the overall execution time (achieving parallelism).
 
@@ -27,7 +27,7 @@ Source: https://towardsdatascience.com/multithreading-and-multiprocessing-in-10-
 
 The image above shows the illustration of multithreading. Each thread holds different data, but they share the same memory space and resources of the parent process. In contrast, multiprocessing is when we utilize a processor that has several cores. Each core would have their own data and thread that will execute simultaneously.
 
-Utilizing multiple threads is typically more efficient than making multiple process that execute the same tasks ([multiprocessing](/computer-and-programming-fundamentals/concurrency#multiprocessing)). Threads have a smaller memory footprint, require less time for [context switching](/operating-system/process-management#context-switch), and have lower scheduling overhead. Also, separate process means [IPC](/operating-system/inter-process-communication) is required to communicate between processes, whereas thread shares the same memory within a process, thus communication will be easier.
+Utilizing multiple threads is typically more efficient than making multiple process that execute the same tasks ([multiprocessing](/cs-notes/computer-and-programming-fundamentals/concurrency#multiprocessing)). Threads have a smaller memory footprint, require less time for [context switching](/cs-notes/operating-system/process-management#context-switch), and have lower scheduling overhead. Also, separate process means [IPC](/cs-notes/operating-system/inter-process-communication) is required to communicate between processes, whereas thread shares the same memory within a process, thus communication will be easier.
 
 ### Multithreading Model
 
@@ -69,7 +69,7 @@ Source: http://java-latte.blogspot.com/2015/07/create-thread-using-method-refere
 
 Thread can be stopped explicitly using function like `stop()` in Java. Sometimes, the thread may not stop immediately due to specific logic or condition that is required to execute before it can safely terminate. Thread can also terminate naturally when it finishes its execution, where it automatically exits, and its resources are released by the system (or saved to [thread pool](#thread-pool)).
 
-It is important to note that thread termination should be handled carefully. For example, a thread may have used some data structure, but when it is not freed before the termination, this can cause [memory leak](/computer-security/other-attack-and-exploit#memory-leak).
+It is important to note that thread termination should be handled carefully. For example, a thread may have used some data structure, but when it is not freed before the termination, this can cause [memory leak](/cs-notes/computer-security/other-attack-and-exploit#memory-leak).
 
 ##### Example
 
@@ -147,7 +147,7 @@ For each client connection, we create a new thread through the `ClientHandlerThr
 
 In Java, we can start the execution of a thread, by calling the `start()` method on the `Thread` object. The `start()` method internally calls the thread's `run()` method, which contains the code that will be executed by the thread. The JVM manages the execution of threads and ensures that the `run()` method is executed concurrently with other threads.
 
-Thread scheduling in Java is handled by the JVM and the operating system. The JVM uses a [preemptive scheduling algorithm](/operating-system/process-management#multitasking), where the operating system decides when to switch between threads. Similar to process scheduling, this involves [context switch](/operating-system/process-management#context-switch) to save the thread state, determining based on some [scheduling algorithm](/operating-system/process-management#scheduling-algorithms).
+Thread scheduling in Java is handled by the JVM and the operating system. The JVM uses a [preemptive scheduling algorithm](/cs-notes/operating-system/process-management#multitasking), where the operating system decides when to switch between threads. Similar to process scheduling, this involves [context switch](/cs-notes/operating-system/process-management#context-switch) to save the thread state, determining based on some [scheduling algorithm](/cs-notes/operating-system/process-management#scheduling-algorithms).
 
 Java provides methods like `yield()` and `sleep()` to influence thread scheduling. The `yield()` method allows a thread to voluntarily give up its remaining time slice, allowing other threads to run. The `sleep()` method pauses the execution of a thread for a specified period of time.
 
@@ -163,7 +163,7 @@ Source: Programming Language Pragmatics - Michael L. Scott page 614
 
 #### Thread Communication
 
-Multiple threads exist within the same process, external threads can communicate using the [IPC mechanism](/operating-system/inter-process-communication). There are two method, the first method is [shared memory](/operating-system/inter-process-communication#shared-memory), where each thread read and write data in the same region of memory. The other method is [message passing](/operating-system/inter-process-communication#message-passing), where they send messages or signals to each other. One thread can send a message to another thread, which then receives and processes the message.
+Multiple threads exist within the same process, external threads can communicate using the [IPC mechanism](/cs-notes/operating-system/inter-process-communication). There are two method, the first method is [shared memory](/cs-notes/operating-system/inter-process-communication#shared-memory), where each thread read and write data in the same region of memory. The other method is [message passing](/cs-notes/operating-system/inter-process-communication#message-passing), where they send messages or signals to each other. One thread can send a message to another thread, which then receives and processes the message.
 
 :::note
 Although they are for process communication, it may be used to communicate between thread if they are running in separate processes. If threads were to communicate between the same process, typically they would directly access and communicate with each other through shared variables or data structures.
@@ -173,7 +173,7 @@ Although they are for process communication, it may be used to communicate betwe
 
 Synchronizing threads is crucial to ensure proper coordination and consistency when multiple threads access shared resources and communicate. This helps prevent [concurrency issues](#multithreading-problems).
 
-When a code or data structure can be safely accessed and modified by multiple threads concurrently without causing unexpected or incorrect behavior, this is called **[thread safe](/computer-and-programming-fundamentals/concurrency#thread-safe)**.
+When a code or data structure can be safely accessed and modified by multiple threads concurrently without causing unexpected or incorrect behavior, this is called **[thread safe](/cs-notes/computer-and-programming-fundamentals/concurrency#thread-safe)**.
 
 ##### Synchronization Primitives
 
@@ -200,7 +200,7 @@ Source: https://www.javatpoint.com/mutex-vs-semaphore
 
 **Monitors** is a higher-level synchronization construct that combines mutex and condition variables. The mutex is used to ensure only one thread is accessing the resource, while the condition variables is used for additional coordination between the threads.
 
-In a sense, condition variable is actually a [queue](/data-structures-and-algorithms/queue). Threads will be kept in the queue until a condition is met. The condition variable has three operations:
+In a sense, condition variable is actually a [queue](/cs-notes/data-structures-and-algorithms/queue). Threads will be kept in the queue until a condition is met. The condition variable has three operations:
 
 - **Wait**: The "wait" operation temporarily release the associated mutex and enter a wait state on a condition variable, effectively blocking its execution. It is typically called when the thread or process encounters a condition that prevents it from proceeding.
 - **Signal**: The "signal" operation is used to awaken one waiting thread or process that is blocked on a particular condition variable, such as wait state. It notifies a single waiting thread or process that the condition it was waiting for may have changed. The awakened thread or process can then reacquire the associated lock or mutex and continue its execution.
@@ -248,7 +248,7 @@ Source: https://www.quora.com/What-are-the-advantages-and-disadvantages-of-using
 
 Locks, monitors, and semaphores are considered **scheduler-based synchronization** mechanisms. With these mechanisms, threads are required to yield CPU time to a scheduler and depend on it to schedule their execution. Barriers and spinlocks are considered **busy-waiting synchronization** mechanisms, in which threads repeatedly check for synchronization conditions to be satisfied in a loop.
 
-Scheduler-based synchronization introduces potential delays due to [context switches](/operating-system/process-management#context-switch) that occur when a thread is switched during scheduling. When a thread encounters a synchronization point and needs to wait for a condition to be satisfied (e.g., acquiring a lock or waiting for a signal), it enters a blocked or waiting state. The thread is then removed from the set of active threads that can execute, and the scheduler performs a context switch to switch to another eligible thread that can make progress.
+Scheduler-based synchronization introduces potential delays due to [context switches](/cs-notes/operating-system/process-management#context-switch) that occur when a thread is switched during scheduling. When a thread encounters a synchronization point and needs to wait for a condition to be satisfied (e.g., acquiring a lock or waiting for a signal), it enters a blocked or waiting state. The thread is then removed from the set of active threads that can execute, and the scheduler performs a context switch to switch to another eligible thread that can make progress.
 
 In contrast, without relying on the scheduler, the busy-waiting mechanism can achieve lower latency, but it may consume more CPU resources as the thread continuously loops.
 
@@ -284,5 +284,5 @@ Source: https://dip-mazumder.medium.com/how-to-determine-java-thread-pool-size-a
   Source: http://15418.courses.cs.cmu.edu/spring2014/lecture/snoopimpl1/slide_021
 
 :::tip
-In relation to concurrency, see also [concurrency](/computer-and-programming-fundamentals/concurrency).
+In relation to concurrency, see also [concurrency](/cs-notes/computer-and-programming-fundamentals/concurrency).
 :::

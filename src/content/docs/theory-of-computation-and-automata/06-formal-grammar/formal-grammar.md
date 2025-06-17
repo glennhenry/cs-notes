@@ -13,7 +13,7 @@ description: Formal Grammar
 
 ### Chomsky Hierarchy
 
-There are many types of formal grammar, the types of grammar based on [Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky) are [regular grammar](#regular-grammar), [context-free grammar](/theory-of-computation-and-automata/context-free-grammar), context-sensitive grammar, and unrestricted grammar.
+There are many types of formal grammar, the types of grammar based on [Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky) are [regular grammar](#regular-grammar), [context-free grammar](/cs-notes/theory-of-computation-and-automata/context-free-grammar), context-sensitive grammar, and unrestricted grammar.
 
 ![Type of grammar](./type-of-grammar.png)  
 Source: https://youtu.be/WgEsPTAL55Q?si=4LOZ1qtkL1hunWmf&t=70
@@ -22,7 +22,7 @@ Every grammar generates its own language, which is recognized by a specific auto
 
 ### Grammar
 
-As explained in [grammar](/theory-of-computation-and-automata/toc-fundamentals#grammar), in general, a grammar is defined as quadruple: $G = (V, T, S, P)$.
+As explained in [grammar](/cs-notes/theory-of-computation-and-automata/toc-fundamentals#grammar), in general, a grammar is defined as quadruple: $G = (V, T, S, P)$.
 
 With grammar $G_1 = (\{S, A, B\}, \{a, b\}, S, \{S \rightarrow AB, A \rightarrow a, B \rightarrow b\})$, we have three categories of symbol, $S$ (also known as the start symbol), $A$, and $B$. The category itself doesn't mean anything in language, the actual character that appears in the language are $a$ and $b$. The production rules describe that the start symbol $S$ can be replaced with $AB$. The $A$ and $B$ itself can be replaced by $a$ and $b$, respectively.
 
@@ -52,7 +52,7 @@ This grammar has a recursive production rule. We can replace $A$ with $aA$, whic
 
 ### Regular Grammar
 
-Regular grammar is the grammar that describes [regular language](/theory-of-computation-and-automata/regular-languages-part-1), which is the languages recognized by finite automaton like [DFAs](/theory-of-computation-and-automata/finite-automata#dfa) and [NFAs](/theory-of-computation-and-automata/finite-automata#nfa).
+Regular grammar is the grammar that describes [regular language](/cs-notes/theory-of-computation-and-automata/regular-languages-part-1), which is the languages recognized by finite automaton like [DFAs](/cs-notes/theory-of-computation-and-automata/finite-automata#dfa) and [NFAs](/cs-notes/theory-of-computation-and-automata/finite-automata#nfa).
 
 #### Left & Right Grammar
 
@@ -71,4 +71,4 @@ The "|" in the notation $S \rightarrow A|a$ is a shorthand to describe two $S \r
 
 ### Context-Free Grammar
 
-See the [next topic](/theory-of-computation-and-automata/context-free-grammar).
+See the [next topic](/cs-notes/theory-of-computation-and-automata/context-free-grammar).

@@ -47,12 +47,12 @@ Source: https://www.vecteezy.com/vector-art/7207013-decibel-scale-sound-levels
 Audio is the electronically reproduced or recorded sound. It involves the capture, processing, storage, and reproduction of sound using electronic devices and systems. Audio in digital is represented using binary data.
 
 :::tip
-See also [sound representation in computers](/computer-and-programming-fundamentals/data-representation#sound).
+See also [sound representation in computers](/cs-notes/computer-and-programming-fundamentals/data-representation#sound).
 :::
 
 The process of audio goes through analog-to-digital or digital-to-analog conversion.
 
-During the analog-to-digital conversion, the signal goes through [sampling process](/digital-signal-processing/sampling) and [quantization](/digital-signal-processing/quantization) process. The result is then encoded in binary and can be processed or stored digitally.
+During the analog-to-digital conversion, the signal goes through [sampling process](/cs-notes/digital-signal-processing/sampling) and [quantization](/cs-notes/digital-signal-processing/quantization) process. The result is then encoded in binary and can be processed or stored digitally.
 
 During the digital-to-analog conversion, the audio file goes through the reverse process. The result is the original sound in analog form, which can be played through device like speaker for human to hear.
 
@@ -77,10 +77,10 @@ Digital audio can undergo additional processing or modified with special effects
   - **Surround Sound**: Contains more than two channels of audio. This allows for a more immersive audio experience, with sound coming from all around the listener.
   
 - **Dynamic Range Compression**: Dynamic range of an audio signal is the range between the quietest and loudest parts. A wide range of sound means that it can either have a very loud sound or a very quiet sound. This operation can reduce the volume of loud sounds or amplifies quiet sounds, it helps to create more consistent level throughout the audio.
-- **Noise Reduction**: Audio processed in digital can also be [denoised](/digital-signal-processing/denoising). This can help improve the quality of sound compared to a live sound.
+- **Noise Reduction**: Audio processed in digital can also be [denoised](/cs-notes/digital-signal-processing/denoising). This can help improve the quality of sound compared to a live sound.
 
   ![An audio player that provides audio editing](./audio-properties.png)
 
 :::tip
-See also [digital signal processing](/digital-signal-processing), [audio effects](/digital-media-processing/audio-effects), and [audio equalization](/digital-media-processing/audio-equalization).
+See also [digital signal processing](/cs-notes/digital-signal-processing), [audio effects](/cs-notes/digital-media-processing/audio-effects), and [audio equalization](/cs-notes/digital-media-processing/audio-equalization).
 :::

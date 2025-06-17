@@ -15,7 +15,7 @@ For example, when deciding whether to go outside, we might consider the conditio
 Boolean logic allows us to represent and analyze these kinds of logical relationships systematically. We can analyze their behavior and properties abstractly, without relying on examples.
 
 :::tip
-[Bitwise operation](/computer-and-programming-fundamentals/bitwise-operation) is the operation that operates on individual bits of binary data, which uses boolean logic as the rules and principles.
+[Bitwise operation](/cs-notes/computer-and-programming-fundamentals/bitwise-operation) is the operation that operates on individual bits of binary data, which uses boolean logic as the rules and principles.
 :::
 
 ### Transistor

@@ -30,12 +30,12 @@ Some term about type system:
 
 #### Polymorphism
 
-[Polymorphism](/computer-and-programming-fundamentals/object-oriented-programming#polymorphism) allows for entities (variables, functions, etc.) to have multiple types or behave differently depending on the types of their arguments.
+[Polymorphism](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming#polymorphism) allows for entities (variables, functions, etc.) to have multiple types or behave differently depending on the types of their arguments.
 
 While polymorphism depends on type it operates on, it doesn't always imply type checking is done at runtime.
 
 - A straightforward **ad-hoc polymorphism** like function/method overloading, in which multiple functions have the same name, but has different argument(s) or type of the argument(s). Compiler can distinguish between them by comparing the number of parameters or type of the parameters.
-- **Subtype polymorphism** allows a subtype to be used where a supertype is expected. This may be encountered in [OOP](/computer-and-programming-fundamentals/object-oriented-programming) languages, where exists concept like inheritance that allows objects of different classes or types to be treated uniformly through common interfaces or base classes.
+- **Subtype polymorphism** allows a subtype to be used where a supertype is expected. This may be encountered in [OOP](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming) languages, where exists concept like inheritance that allows objects of different classes or types to be treated uniformly through common interfaces or base classes.
 - A situation where single function or data structure can operate on values of different types, this is called **parametric polymorphism**. It may be explicit (often known as generics), where programmer specifies the function that can work on some types and another; or implicit (often known as type inference), where the compiler infer the type parameters it works on.
 
 #### Classification of Types
@@ -121,7 +121,7 @@ There are three case in conversion:
 2. A potentially unsafe type checking that occurs during runtime, that is when two types are different, but they can be represented as other depending on the actual value in runtime. For example, two subrange types are different, but one subrange is just subrange of another.
 3. Types have different low-level representation, but we can define conversion between them.
 
-For example, integer (typically 4 bytes) is a whole number, while double type (typically 8 bytes) is an [IEEE floating-point representation](/computer-and-programming-fundamentals/floating-number#floating-number-representation) with 15 decimal points of precision.
+For example, integer (typically 4 bytes) is a whole number, while double type (typically 8 bytes) is an [IEEE floating-point representation](/cs-notes/computer-and-programming-fundamentals/floating-number#floating-number-representation) with 15 decimal points of precision.
 
 If that integer were to be converted into double, then this would be no problem because double is essentially more precise than an integer. It would be only converting it into larger data types by adding more bit. This is also called **type promotion** or **widening conversion**. Type promotion is typically performed implicitly by the programming language without requiring explicit syntax or cast operators.
 
@@ -197,7 +197,7 @@ In memory, struct will be stored in memory layout like below.
 ![Struct in memory](./struct-in-memory.png)  
 Source: https://nerdyelectronics.com/memory-layout-of-a-structure/
 
-This is an array of `room` structs, each containing 2 ints and 2 floats, with each element having a size of 4 bytes. The fields of struct are stored next to each other in memory. Some structs may have larger size than they should be, due to [data alignment](/computer-organization-and-architecture/coa-fundamentals#padding) with padding.
+This is an array of `room` structs, each containing 2 ints and 2 floats, with each element having a size of 4 bytes. The fields of struct are stored next to each other in memory. Some structs may have larger size than they should be, due to [data alignment](/cs-notes/computer-organization-and-architecture/coa-fundamentals#padding) with padding.
 
 Memory allocation of struct and union:
 
@@ -207,7 +207,7 @@ Source: https://fastbitlab.com/microcontroller-embedded-c-programming-lecture-15
 ### Arrays
 
 :::tip
-Array as a data structure is explained [here](/data-structures-and-algorithms/array).
+Array as a data structure is explained [here](/cs-notes/data-structures-and-algorithms/array).
 :::
 
 The syntax of arrays varies between languages. Some languages may require an explicit number for the size of the array, use parentheses instead of square brackets to access elements, and start indexing from 1 instead of 0.
@@ -223,10 +223,10 @@ If array size is known at compile-time, then it is easy to allocate memory for i
 There are five cases of allocating an array:
 
 1. **Global Lifetime, Static Shape**: When array is created in the global scope, it will exist throughout the entire program's execution. The dimension or the shape of the array (i.e., the size), is known (specified in declaration) and fixed at compile time. Memory for the array is allocated in the static memory.
-2. **Local Lifetime, Static Shape**: The size of array is specified in the declaration, but it is declared within a function or a block and has a local scope. Memory for the array is allocated on the [stack frame](/computer-and-programming-fundamentals/memory#stack) during runtime.
+2. **Local Lifetime, Static Shape**: The size of array is specified in the declaration, but it is declared within a function or a block and has a local scope. Memory for the array is allocated on the [stack frame](/cs-notes/computer-and-programming-fundamentals/memory#stack) during runtime.
 3. **Local Lifetime, Shape Bound at Runtime**: The array is declared within a function or a block, but the size is not known until runtime. Memory is allocated within the stack frame, but the allocation is hybrid. Stack frame is divided into fixed-size part, to place object whose size is known, and the variable-size part contains object whose size depends on runtime. An example in Python would be: `def my_function(): my_array = [0] * n`.
 4. **Arbitrary Lifetime, Shape Bound at Runtime**: The array's lifetime is not strictly tied to a specific scope or function. This is the case when creating an array is just making some reference. We can choose to bound the reference at any time. Languages like Java and C#, which use reference types, rely on this. Declaring an array like `int[] A` creates a reference; only if we assign it, like `A = new int[5];`, will the array then be allocated.
-5. **Arbitrary Lifetime, Dynamic Shape**: In this case, the array's shape can change dynamically during its lifetime. Memory for the array is allocated on the [heap](/computer-and-programming-fundamentals/memory#heap), and the size can be adjusted as needed by resizing or reallocating the memory.
+5. **Arbitrary Lifetime, Dynamic Shape**: In this case, the array's shape can change dynamically during its lifetime. Memory for the array is allocated on the [heap](/cs-notes/computer-and-programming-fundamentals/memory#heap), and the size can be adjusted as needed by resizing or reallocating the memory.
 
    An example in Java would be using an `ArrayList`.
 
@@ -237,7 +237,7 @@ There are five cases of allocating an array:
 
 #### Memory Layout
 
-Elements of array are placed contiguously in memory (see also [array in memory](/data-structures-and-algorithms/array#array-in-memory)). The name we use for array is essentially just a pointer that points to the address of first element of the array in memory.
+Elements of array are placed contiguously in memory (see also [array in memory](/cs-notes/data-structures-and-algorithms/array#array-in-memory)). The name we use for array is essentially just a pointer that points to the address of first element of the array in memory.
 
 In a multidimensional array, the placement can either be **row-major** or **column-major**.
 
@@ -257,21 +257,21 @@ Column-major is `[1, 5, 9, 2, 6, 10, 3, 7, 11, 4, 8, 12]`.
 
 ### Strings
 
-String is implemented as an array of character. See [string as an array](/data-structures-and-algorithms/array#string-as-an-array).
+String is implemented as an array of character. See [string as an array](/cs-notes/data-structures-and-algorithms/array#string-as-an-array).
 
 ### Sets
 
-See [set data structure](/data-structures-and-algorithms/set).
+See [set data structure](/cs-notes/data-structures-and-algorithms/set).
 
 ### Pointers & Recursive Types
 
-Pointers hold memory addresses. It allows for indirect access of an element through its address by dereferencing it. Pointers are commonly used to dynamically allocate memory on the [heap](/computer-and-programming-fundamentals/memory#heap). Programming languages that offer manual memory management (e.g., C++) provide the power of pointer, but often introduce [memory issues](/computer-and-programming-fundamentals/memory#pointer--reference-problems) like dangling pointers and memory leaks. Some languages provide tools like [garbage collection](/computer-and-programming-fundamentals/memory#garbage-collection) to automatically manage dynamic allocated memory.
+Pointers hold memory addresses. It allows for indirect access of an element through its address by dereferencing it. Pointers are commonly used to dynamically allocate memory on the [heap](/cs-notes/computer-and-programming-fundamentals/memory#heap). Programming languages that offer manual memory management (e.g., C++) provide the power of pointer, but often introduce [memory issues](/cs-notes/computer-and-programming-fundamentals/memory#pointer--reference-problems) like dangling pointers and memory leaks. Some languages provide tools like [garbage collection](/cs-notes/computer-and-programming-fundamentals/memory#garbage-collection) to automatically manage dynamic allocated memory.
 
 :::tip
-See also [pointer & reference](/computer-and-programming-fundamentals/memory#pointer--reference).
+See also [pointer & reference](/cs-notes/computer-and-programming-fundamentals/memory#pointer--reference).
 :::
 
-Recursive types like [struct](#structs--unions) may consist of fields whose type is itself. This is common in data structures like [linked list](/data-structures-and-algorithms/linked-list). These types have an unknown size since they may consist of another type, which in turn consists of another type, and so on. For this purpose, we will need to allocate them in memory whose size can change dynamically.
+Recursive types like [struct](#structs--unions) may consist of fields whose type is itself. This is common in data structures like [linked list](/cs-notes/data-structures-and-algorithms/linked-list). These types have an unknown size since they may consist of another type, which in turn consists of another type, and so on. For this purpose, we will need to allocate them in memory whose size can change dynamically.
 
 For example, we can create a linked list in C++ like below.
 
@@ -311,12 +311,12 @@ When creating linked list, we can use dynamic allocation using the `new` keyword
 
 We created three linked list nodes, and link them together by assigning the appropriate next pointers. `head`, `second`, `third` are all pointer, so we will need to dereference them to actually access the element it contains. It is done by using asterisk in front of the pointer. After dereferencing it, we can access the `next` field and assign it to appropriate next node. C and C++ provide a way to shorthand the dereferencing and field access. The `ptr->field` is a shorthand for `(*ptr).field`.
 
-Lastly, use `delete` keyword after we have finished using it to deallocate the previously allocated memory. After deleting it, we shouldn't use the pointer anymore. Otherwise, it will cause a [dangling reference problem](/computer-and-programming-fundamentals/memory#pointer--reference-problems).
+Lastly, use `delete` keyword after we have finished using it to deallocate the previously allocated memory. After deleting it, we shouldn't use the pointer anymore. Otherwise, it will cause a [dangling reference problem](/cs-notes/computer-and-programming-fundamentals/memory#pointer--reference-problems).
 
 :::tip
-Pointer and array are closely linked in C/C++. See these [two](/data-structures-and-algorithms/array#array-in-memory) [notes](/computer-and-programming-fundamentals/memory#pointer-arithmetic).
+Pointer and array are closely linked in C/C++. See these [two](/cs-notes/data-structures-and-algorithms/array#array-in-memory) [notes](/cs-notes/computer-and-programming-fundamentals/memory#pointer-arithmetic).
 :::
 
 ### Lists
 
-List is by concept, a data structure that stores a collection of elements in a specific order. List in programming language can be implemented in many ways. One typical implementation is through [linked list](/data-structures-and-algorithms/linked-list), [array](/data-structures-and-algorithms/array), or [dynamic array](/data-structures-and-algorithms/array#dynamic-array).
+List is by concept, a data structure that stores a collection of elements in a specific order. List in programming language can be implemented in many ways. One typical implementation is through [linked list](/cs-notes/data-structures-and-algorithms/linked-list), [array](/cs-notes/data-structures-and-algorithms/array), or [dynamic array](/cs-notes/data-structures-and-algorithms/array#dynamic-array).

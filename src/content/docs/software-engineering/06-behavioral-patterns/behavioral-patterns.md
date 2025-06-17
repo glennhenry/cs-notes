@@ -371,7 +371,7 @@ fun main() {
 }
 ```
 
-State pattern is related to [finite state machine](/theory-of-computation-and-automata/finite-automata#finite-state-machine). It can be thought as the object-oriented style of a state machine. This particular vending machine is quite simple, a pictorial representation looks like below.
+State pattern is related to [finite state machine](/cs-notes/theory-of-computation-and-automata/finite-automata#finite-state-machine). It can be thought as the object-oriented style of a state machine. This particular vending machine is quite simple, a pictorial representation looks like below.
 
 ![Vending machine state transition](./vending-machine-state.png)
 

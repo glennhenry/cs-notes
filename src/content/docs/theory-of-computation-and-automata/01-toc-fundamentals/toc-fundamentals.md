@@ -111,7 +111,7 @@ Formally, a graph $G$ is defined as a triple of $(V, E, \gamma)$, where $V$ is a
 ![Graph example](./graph-example.png)  
 Source: Book page 15
 
-See [graph](/data-structures-and-algorithms/graph) for terminologies and types of graph. In addition, we can say a graph is a [tree](/data-structures-and-algorithms/tree) if it is connected and has no simple cycles.
+See [graph](/cs-notes/data-structures-and-algorithms/graph) for terminologies and types of graph. In addition, we can say a graph is a [tree](/cs-notes/data-structures-and-algorithms/tree) if it is connected and has no simple cycles.
 
 #### Strings & Languages
 
@@ -154,7 +154,7 @@ A string is a finite sequence of symbols chosen from a given alphabet. An alphab
 
 #### Boolean Logic
 
-See [boolean logic](/computer-organization-and-architecture/boolean-logic).
+See [boolean logic](/cs-notes/computer-organization-and-architecture/boolean-logic).
 
 #### Grammar
 
@@ -181,5 +181,5 @@ If a string $W$ belong to the grammar, or $W \in L(G)$, then there exists a sequ
 During the derivation process, we call intermediate strings produced a **sentential form**. Therefore, with the string $S$, we call $w_1, w_2, ..., w_n$ a sentential form of the derivation.
 
 :::tip
-See also [Formal grammar](/theory-of-computation-and-automata/formal-grammar).
+See also [Formal grammar](/cs-notes/theory-of-computation-and-automata/formal-grammar).
 :::

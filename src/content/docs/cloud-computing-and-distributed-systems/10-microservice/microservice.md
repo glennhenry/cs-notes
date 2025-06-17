@@ -4,4 +4,4 @@ slug: cloud-computing-and-distributed-systems/microservice
 description: Microservice
 ---
 
-See **[Backend System > Microservice](/backend-system/microservice)**
+See **[Backend System > Microservice](/cs-notes/backend-system/microservice)**

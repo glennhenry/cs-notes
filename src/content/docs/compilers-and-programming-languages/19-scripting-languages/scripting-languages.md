@@ -13,7 +13,7 @@ Scripting languages are programming language designed to manipulate, customize, 
 
 ### Characteristics
 
-The characteristics of scripting language is, they are often [interpreted](/computer-and-programming-fundamentals/interpreter) rather than [compiled](/computer-and-programming-fundamentals/compilation). They usually take input, evaluate it, then print the output. This interaction is known as **read-eval-loop (REPL)**. Most of them has simple syntax (minimum boilerplate) as well as easy to write and learn, because they are intended to modify a system through high-level scripts.
+The characteristics of scripting language is, they are often [interpreted](/cs-notes/computer-and-programming-fundamentals/interpreter) rather than [compiled](/cs-notes/computer-and-programming-fundamentals/compilation). They usually take input, evaluate it, then print the output. This interaction is known as **read-eval-loop (REPL)**. Most of them has simple syntax (minimum boilerplate) as well as easy to write and learn, because they are intended to modify a system through high-level scripts.
 
 For example, a "Hello, World!" program written in Java requires a class and a main function to run, while Python accomplishes it in a single line of code.
 
@@ -29,7 +29,7 @@ public class Main {
 print("Hello World!")
 ```
 
-Furthermore, they provide high-level data types such as lists, sets, and dictionaries, as well as high-level functions through built-in functionality for common tasks like file manipulation and string manipulation. They are often [dynamically typed](/compilers-and-programming-languages/data-types#type-systems), providing flexibility in declaring and operating with variables (e.g., allows [implicit type conversion](/compilers-and-programming-languages/data-types#type-conversion)), allowing programmers to write code quickly.
+Furthermore, they provide high-level data types such as lists, sets, and dictionaries, as well as high-level functions through built-in functionality for common tasks like file manipulation and string manipulation. They are often [dynamically typed](/cs-notes/compilers-and-programming-languages/data-types#type-systems), providing flexibility in declaring and operating with variables (e.g., allows [implicit type conversion](/cs-notes/compilers-and-programming-languages/data-types#type-conversion)), allowing programmers to write code quickly.
 
 They do not even require variable to be declared, undeclared variable may be automatically associated to the global scope.
 
@@ -59,8 +59,8 @@ Programming language can be categorized based on their purposes, **general purpo
 Scripting languages can be any of the two, examples are:
 
 - **Python**: While it is a general purpose language, it is known for its simplicity and readability. It is widely used for scripting tasks, such as automation, web scraping, manipulating files, sending email, etc.
-- **JavaScript**: JavaScript was once a highly specific DSL intended to manipulate applications ([web browsers](/internet-and-web/web-browser)) through a specific API called the [DOM](/internet-and-web/html#html-dom) to add interactivity and dynamic behavior to webpages. With [Node JS](/internet-and-web/javascript#node-js), it evolved from a browser scripting language into general purpose language capable to be run on server-side application.
-- **PowerShell**: It is a scripting language developed by Microsoft for Windows systems. It provides [command-line shell](/computer-and-programming-fundamentals/computer-and-programming-terminology#command-line-command-prompt-shell-bash-terminal-console) environment to allows system administrators to automate tasks, manage system configurations, and interact with various Windows services and components.
+- **JavaScript**: JavaScript was once a highly specific DSL intended to manipulate applications ([web browsers](/cs-notes/internet-and-web/web-browser)) through a specific API called the [DOM](/cs-notes/internet-and-web/html#html-dom) to add interactivity and dynamic behavior to webpages. With [Node JS](/cs-notes/internet-and-web/javascript#node-js), it evolved from a browser scripting language into general purpose language capable to be run on server-side application.
+- **PowerShell**: It is a scripting language developed by Microsoft for Windows systems. It provides [command-line shell](/cs-notes/computer-and-programming-fundamentals/computer-and-programming-terminology#command-line-command-prompt-shell-bash-terminal-console) environment to allows system administrators to automate tasks, manage system configurations, and interact with various Windows services and components.
 
 #### Shell
 

@@ -12,7 +12,7 @@ description: Elliptic Curve Cryptography
 - **[Elliptic Curves — Computerphile](https://youtu.be/NF1pwjL9-DE?si=XfPlzAbOj1Qe7EGq)**
 - **[ECDH — A security site](https://asecuritysite.com/ecdh)**
 
-**Elliptic Curve Cryptography** is a form of [public key cryptography](/computer-security/encryption#public--private-key) that is based on the properties of elliptic curve when they are defined over finite fields.
+**Elliptic Curve Cryptography** is a form of [public key cryptography](/cs-notes/computer-security/encryption#public--private-key) that is based on the properties of elliptic curve when they are defined over finite fields.
 
 ### Elliptic Curve
 
@@ -51,7 +51,7 @@ Relating the ECDLP problem to cryptography, the $n$ is the key size of the encry
 
 ### Elliptic Curve Diffie-Hellman
 
-The [Diffie-Hellman key exchange](/computer-security/diffie-hellman) is a traditional [key exchange](/computer-security/encryption#key-exchange) method. **Elliptic Curve Diffie-Hellman (ECDH)** is a key exchange algorithm based on the Diffie-Hellman (DH) protocol that utilizes elliptic curve cryptography (ECC).
+The [Diffie-Hellman key exchange](/cs-notes/computer-security/diffie-hellman) is a traditional [key exchange](/cs-notes/computer-security/encryption#key-exchange) method. **Elliptic Curve Diffie-Hellman (ECDH)** is a key exchange algorithm based on the Diffie-Hellman (DH) protocol that utilizes elliptic curve cryptography (ECC).
 
 #### Explanation
 

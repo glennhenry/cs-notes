@@ -12,7 +12,7 @@ description: Trigger & Constraints
 
 ### Constraints
 
-**Constraints** are rules or conditions that are enforced on the data in a database table. In [SQL](/database-system/query-language#sql), there are several types of constraints that can be applied to database tables:
+**Constraints** are rules or conditions that are enforced on the data in a database table. In [SQL](/cs-notes/database-system/query-language#sql), there are several types of constraints that can be applied to database tables:
 
 - `PRIMARY KEY`: Used to uniquely identify each row in a table. It enforces specified column(s) have unique values and cannot contain null values. Typically, a primary key is created on columns that uniquely identify the rows, such as an ID column.
 - `FOREIGN KEY`: A FOREIGN KEY constraint enforces a relationship between two tables. It ensures that the values in a column(s) of one table match the values in the primary key column(s) of another table. This constraint maintains referential integrity and enforces the relationship between the tables.
@@ -20,7 +20,7 @@ description: Trigger & Constraints
 - `UNIQUE`: Ensures that the non-null values in a column(s) are unique across all rows in a table.
 - `NOT NULL`: Ensures that a column cannot have null values. It requires that the column must have a value for every row and disallows the insertion of null values.
 - `CHECK`: Specifies a condition that must be satisfied for the values in a column(s). For example, we can use the `CHECK` constraint to specify that a numeric column must be positive or that a character column must have a certain length.
-- `CREATE INDEX`: Creates [index](/database-system/database-index) in table for performance optimization.
+- `CREATE INDEX`: Creates [index](/cs-notes/database-system/database-index) in table for performance optimization.
 
 ### Trigger
 

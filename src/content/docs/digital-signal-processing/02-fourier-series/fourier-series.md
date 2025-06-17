@@ -59,7 +59,7 @@ Now that our function looks square-ish, we encounter a problem in our series of 
 ![Approximation "jumps" in discontinuity](./gibbs-phenomenon.png)  
 Source: https://youtu.be/wmCIrpLBFds?t=384
 
-This is a fundamental limitation in representing discontinuous functions using Fourier series. Some method, such as [filtering](/digital-signal-processing/filtering) can dampen the oscillations near the discontinuities.
+This is a fundamental limitation in representing discontinuous functions using Fourier series. Some method, such as [filtering](/cs-notes/digital-signal-processing/filtering) can dampen the oscillations near the discontinuities.
 
 ### Fourier Series Formula
 

@@ -15,13 +15,13 @@ description: NoSQL
 - **[What are BASE Properties? — dremio](https://www.dremio.com/wiki/base-properties/)**
 - **Various Google searches**
 
-**NoSQL (or non-relational database)** is a type of databases that doesn't follow the relational model principles. Unlike [relational databases](/database-system/relational-data), which store data in tables with predefined schemas, NoSQL databases is more flexible in approach to data storage and management. NoSQL typically relies on a specific data structure to handle large volumes of data, including unstructured and semi-structured data.
+**NoSQL (or non-relational database)** is a type of databases that doesn't follow the relational model principles. Unlike [relational databases](/cs-notes/database-system/relational-data), which store data in tables with predefined schemas, NoSQL databases is more flexible in approach to data storage and management. NoSQL typically relies on a specific data structure to handle large volumes of data, including unstructured and semi-structured data.
 
 ### Key-Value
 
 A key-value NoSQL database stores data in a key-value pair. A key is a unique identifier for the data item, and the value is the data item itself.
 
-One way to implement key-value database is to use [hash table](/data-structures-and-algorithms/hash-table). Hash table is a data structure that stores data in an [array](/data-structures-and-algorithms/array), using a [hash function](/computer-security/hash-function) to map keys to array indices. This allows for very fast lookups and insertions, which is suitable for storing random or unstructured data.
+One way to implement key-value database is to use [hash table](/cs-notes/data-structures-and-algorithms/hash-table). Hash table is a data structure that stores data in an [array](/cs-notes/data-structures-and-algorithms/array), using a [hash function](/cs-notes/computer-security/hash-function) to map keys to array indices. This allows for very fast lookups and insertions, which is suitable for storing random or unstructured data.
 
 ![Key-value database](./key-value.png)  
 Source: https://www.michalbialecki.com/2018/03/18/azure-cosmos-db-key-value-database-cloud/
@@ -46,7 +46,7 @@ Document database may organize or groups document by:
 - **Non-visible metadata**: Non-visible metadata include information such as timestamps, versioning, access control, or any additional attributes related to the documents that doesn't impact the visual content.
 - **Directory hierarchies**: Document database such as XML organizes its data into a hierarchical, directory-like structure through the use of nested tags.
 
-Document database includes [JSON](/digital-media-processing/json), [XML](/digital-media-processing/xml), and YAML.
+Document database includes [JSON](/cs-notes/digital-media-processing/json), [XML](/cs-notes/digital-media-processing/xml), and YAML.
 
 ![Document database](./document.png)  
 Source: https://thedeveloperstory.com/2021/10/03/everything-you-need-to-know-about-yaml-files/
@@ -55,11 +55,11 @@ Advantages & Disadvantages:
 
 - Same as key-value database, they are flexible. They allow documents of varying structures and fields to be stored within the same collection.
 - A more advanced way to store data, we can provide additional metadata or label which helps us for complex queries.
-- Unlike relational databases, document databases have limited support for [transactions](/database-system/transactions). This can make it challenging to maintain data consistency and integrity in certain scenarios.
+- Unlike relational databases, document databases have limited support for [transactions](/cs-notes/database-system/transactions). This can make it challenging to maintain data consistency and integrity in certain scenarios.
 
 ### Graph
 
-A graph NoSQL database uses a [graph](/data-structures-and-algorithms/graph) structures to represent and store data.
+A graph NoSQL database uses a [graph](/cs-notes/data-structures-and-algorithms/graph) structures to represent and store data.
 
 Graph structure consist of:
 
@@ -77,7 +77,7 @@ Source: https://neo4j.com/product/cypher-graph-query-language/
 
 A two node of `Person`, named `Dan` and `Ann`, respectively is matched together in a `LOVES` relationship.
 
-Under the hood, node is represented as a fixed-size record or object on the disk. An edge relationship is represented as [doubly linked list](/data-structures-and-algorithms/linked-list#doubly-linked-list), it has pointer to the start and end nodes. Node's properties are organized in a linked-list, with each node being a key-value pair.
+Under the hood, node is represented as a fixed-size record or object on the disk. An edge relationship is represented as [doubly linked list](/cs-notes/data-structures-and-algorithms/linked-list#doubly-linked-list), it has pointer to the start and end nodes. Node's properties are organized in a linked-list, with each node being a key-value pair.
 
 The query engine traverse the graph, following the graph relationship. It decides whether to continue the traversal or include the node and properties in the result set based on the given query.
 
@@ -92,7 +92,7 @@ Advantages & Disadvantages:
 
 Vector database stores data in a mathematical object called **vectors**. Vectors are mathematical representations of objects or data points in a multidimensional space. Each dimension of the vector corresponds to a specific attribute of the object (called **features**). The location of vector in the multidimensional space represent their characteristics.
 
-The process of turning data, such as words, phrases, documents, images, audio, or any other data, is called **embedding**. Each data is transformed into a numerical representation. Embedding involves mapping all numerical representation of the data into a common representation in the single multidimensional space. The embedding process typically uses [machine or deep learning techniques](/machine-learning).
+The process of turning data, such as words, phrases, documents, images, audio, or any other data, is called **embedding**. Each data is transformed into a numerical representation. Embedding involves mapping all numerical representation of the data into a common representation in the single multidimensional space. The embedding process typically uses [machine or deep learning techniques](/cs-notes/machine-learning).
 
 ![Vector database](./vector.png)  
 Source: https://www.elastic.co/what-is/vector-database
@@ -123,7 +123,7 @@ Let's say we have the word "kitten" as the query, and the embedding is [0.25, 0.
 
 ### BASE Properties
 
-NoSQL typically lacks strong consistency and true transactions compared to relational databases. BASE properties are in contrast to [ACID properties](/database-system/transactions#acid) in relational database.
+NoSQL typically lacks strong consistency and true transactions compared to relational databases. BASE properties are in contrast to [ACID properties](/cs-notes/database-system/transactions#acid) in relational database.
 
 - **Basically Available (BA)**: The importance of providing high availability for read and write operations, even in the presence of failures or network partitions. A system should strive to remain operational and responsive, even under challenging conditions.
 - **Soft State (S)**: NoSQL tolerate temporary inconsistencies, but the state across system should eventually be consistent.

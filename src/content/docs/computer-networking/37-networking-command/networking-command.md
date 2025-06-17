@@ -20,9 +20,9 @@ Here are some commonly used networking commands:
 
 ### ipconfig
 
-ipconfig displays network configuration within a TCP/IP network providing information such as [IP addresses](/computer-networking/ip-address), [subnet masks](/computer-networking/subnet-mask), and [default gateways](/computer-networking/gateway). The specific command depends on the operating system. On Windows, it's ipconfig, while on Unix-like systems (Linux, macOS), it's ifconfig.
+ipconfig displays network configuration within a TCP/IP network providing information such as [IP addresses](/cs-notes/computer-networking/ip-address), [subnet masks](/cs-notes/computer-networking/subnet-mask), and [default gateways](/cs-notes/computer-networking/gateway). The specific command depends on the operating system. On Windows, it's ipconfig, while on Unix-like systems (Linux, macOS), it's ifconfig.
 
-The ipconfig /all displays the full TCP/IP configuration of your network adapters. There is also a is commonly used command, ipconfig /flushdns. It is used to clear the locally stored [Domain Name System (DNS)](/computer-networking/dns) information on a device. These cache are stored to speed up future request to the same domain.
+The ipconfig /all displays the full TCP/IP configuration of your network adapters. There is also a is commonly used command, ipconfig /flushdns. It is used to clear the locally stored [Domain Name System (DNS)](/cs-notes/computer-networking/dns) information on a device. These cache are stored to speed up future request to the same domain.
 
 ![ipconfig command on Windows](./ipconfig.png)  
 Source: https://en.wikipedia.org/wiki/Ipconfig

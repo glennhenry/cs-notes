@@ -53,8 +53,8 @@ Cross-Site Request Forgery (CSRF) is a type of attack where an attacker tricks a
 
 There are many ways to tricks user such as:
 
-- [**Social Engineering**](/computer-security/other-attack-and-exploit#social-engineering): An attacker can use social engineering techniques to trick the user into performing an action on the target website, such as clicking on a link or submitting a form.
-- **Phishing Emails**: An attacker can send a [phishing](/computer-security/other-attack-and-exploit#phishing) email that includes a link to a malicious website or a fake login page. When the user enters their login credentials, the attacker can use their session to perform CSRF attacks.
+- [**Social Engineering**](/cs-notes/computer-security/other-attack-and-exploit#social-engineering): An attacker can use social engineering techniques to trick the user into performing an action on the target website, such as clicking on a link or submitting a form.
+- **Phishing Emails**: An attacker can send a [phishing](/cs-notes/computer-security/other-attack-and-exploit#phishing) email that includes a link to a malicious website or a fake login page. When the user enters their login credentials, the attacker can use their session to perform CSRF attacks.
 - **Malicious Websites**: An attacker can create a malicious website that includes a hidden form or link that submits a request to the target website. If the user is logged into the target website and visits the malicious website, the request will be executed using the user's existing session.
 
 ![A user is tricked by hackers from hyperlink embedded with malicious request](./csrf.png)  
@@ -74,6 +74,6 @@ Source: https://www.geeksforgeeks.org/what-is-cookie-hijacking/
 
 ### URL Hijacking
 
-**URL Hijacking** or **domain hijacking** is the act of taking control of a website's domain or URL in order to redirect visitors to a different website or to gain unauthorized access to sensitive information. Many techniques such as [MitM](/computer-security/network-security#man-in-the-middle-attack), [other spoofing techniques](/computer-security/network-security#spoofing), and [social engineering](/computer-security/other-attack-and-exploit#typosquatting) can be employed to achieves this.
+**URL Hijacking** or **domain hijacking** is the act of taking control of a website's domain or URL in order to redirect visitors to a different website or to gain unauthorized access to sensitive information. Many techniques such as [MitM](/cs-notes/computer-security/network-security#man-in-the-middle-attack), [other spoofing techniques](/cs-notes/computer-security/network-security#spoofing), and [social engineering](/cs-notes/computer-security/other-attack-and-exploit#typosquatting) can be employed to achieves this.
 
 Attackers may exploit vulnerabilites in some website in domain registrar systems to gain control over a legitimate domain. Once they have control, they can modify DNS settings or transfer the domain to a different registrar, effectively hijacking the URL.

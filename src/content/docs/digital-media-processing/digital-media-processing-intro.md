@@ -7,7 +7,7 @@ description: Digital Media Processing Notes
 **Digital media processing** is the manipulation of digital data that represents multimedia content, such as images, video, and audio. This topic will cover media processing and some common file format, including a high-level explanation to how they work.
 
 :::tip
-See also [digital signal processing](/digital-signal-processing).
+See also [digital signal processing](/cs-notes/digital-signal-processing).
 :::
 
 ### All pages

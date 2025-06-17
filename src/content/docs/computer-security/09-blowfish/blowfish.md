@@ -9,11 +9,11 @@ description: Blowfish
 - **[Blowfish (cipher) — Wikipedia](<https://en.wikipedia.org/wiki/Blowfish_(cipher)>)**
 - **[bcrypt — Wikipedia](https://en.wikipedia.org/wiki/Bcrypt)**
 
-**Blowfish** is another [symmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption) algorithm. While [AES](/computer-security/aes) is more secure, blowfish is considered faster, it also supports key size with variable length.
+**Blowfish** is another [symmetric encryption](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption) algorithm. While [AES](/cs-notes/computer-security/aes) is more secure, blowfish is considered faster, it also supports key size with variable length.
 
 ### Algorithm
 
-Blowfish was designed to be an alternative of [DES](/computer-security/des). They share some similarities in terms of the rounds of encryption and decryption, that is to use **Feistel structure**. Another similarity is the fixed block size of 64 bits. The difference between them is the choice of key size, blowfish variable key sizes between 32 and 448 bits.
+Blowfish was designed to be an alternative of [DES](/cs-notes/computer-security/des). They share some similarities in terms of the rounds of encryption and decryption, that is to use **Feistel structure**. Another similarity is the fixed block size of 64 bits. The difference between them is the choice of key size, blowfish variable key sizes between 32 and 448 bits.
 
 Consist of 16 rounds of encryption or decryption
 
@@ -34,8 +34,8 @@ The decryption process is similar to encryption but with the subkeys used in rev
 
 ### Bcrypt
 
-**Bcrypt** is a [password-hashing function](/computer-security/hash-function), based on the Blowfish cipher.
+**Bcrypt** is a [password-hashing function](/cs-notes/computer-security/hash-function), based on the Blowfish cipher.
 
-1. **Initialization**: Bcrypt is used to hash a password, a random [salt](/computer-security/hash-function#salting) of 128 bits (16 bytes) is generated. Bcrypt generates key based on the Blowfish key cipher, we will need to initialize P-array and S-boxes.
+1. **Initialization**: Bcrypt is used to hash a password, a random [salt](/cs-notes/computer-security/hash-function#salting) of 128 bits (16 bytes) is generated. Bcrypt generates key based on the Blowfish key cipher, we will need to initialize P-array and S-boxes.
 2. **Key Expansion**: Password and salt are combined and goes through the key expansion algorithm based on the Blowfish cipher. The password and salt will be shuffled based on the P-array (for subkey generation) and S-boxes (for substitution). The number of iteration is derived from number called **cost**, it can be from 4 to 31 (in total $2^{\text{cost}}$ iteration).
 3. **Hashing**: The hashing process doesn't involve converting the password directly. Password and salt are used to modify the state of P-array and S-boxes. The modified state will be used to encrypt the fixed string "OrpheanBeholderScryDoubt". The encryption is run for 64 times using the standard Blowfish algorithm. The output of that is the resulting password hash, which will be concatenated with the selected cost and salt.

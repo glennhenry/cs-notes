@@ -7,9 +7,9 @@ description: GPT
 **Main Source:**
 
 - **[GPT - Explained — CodeEmporium](https://youtu.be/3IweGfgytgY?si=Fed0FkK55LAH5SAL)**
-- **[Transformers Architecture](/deep-learning/transformers/transformers-architecture)**
+- **[Transformers Architecture](/cs-notes/deep-learning/transformers/transformers-architecture)**
 
-**Generative Pre-trained Transformer (GPT)** is language model (computational model trained to understand and generate human language) based on the [transformers architecture](/deep-learning/transformers/transformers-architecture). GPT is a decoder-only model, meaning it can only generates sequence based on the previous sequence. In other word, GPT predict next word in a sequence given the context provided by the preceding words. So, GPT require an initial word or prompt as input to provide the context to generate text.
+**Generative Pre-trained Transformer (GPT)** is language model (computational model trained to understand and generate human language) based on the [transformers architecture](/cs-notes/deep-learning/transformers/transformers-architecture). GPT is a decoder-only model, meaning it can only generates sequence based on the previous sequence. In other word, GPT predict next word in a sequence given the context provided by the preceding words. So, GPT require an initial word or prompt as input to provide the context to generate text.
 
 The key features of GPT are:
 

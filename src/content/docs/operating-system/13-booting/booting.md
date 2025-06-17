@@ -22,7 +22,7 @@ When computer is turned off, it may be switched on via button. After that, serie
    ![POST](./post.png)  
    Source: https://en.wikipedia.org/wiki/Power-on_self-test#/media/File:POST_P5KPL.jpg
 
-2. **Bootstrap Program**: A small piece of code stored in a [read-only memory (ROM)](/computer-organization-and-architecture/coa-fundamentals#rom), known as the **bootstrap program**, **bootstrap loader**, or **bootloader** is executed. This program is responsible for locating the operating system's kernel and loading it into main memory. In a larger OS, the bootstrap loader retrieves a more complex boot program from the disk. This boot program is stored in a reserved block sector known as the [boot sector](/operating-system/disk-management#boot-sector).
+2. **Bootstrap Program**: A small piece of code stored in a [read-only memory (ROM)](/cs-notes/computer-organization-and-architecture/coa-fundamentals#rom), known as the **bootstrap program**, **bootstrap loader**, or **bootloader** is executed. This program is responsible for locating the operating system's kernel and loading it into main memory. In a larger OS, the bootstrap loader retrieves a more complex boot program from the disk. This boot program is stored in a reserved block sector known as the [boot sector](/cs-notes/operating-system/disk-management#boot-sector).
 3. **First-stage Boot Loader (Hardware Initialization)**: This stage is responsible for initializing essential hardware components and preparing the system for the operating system to take control. The first-stage bootloader often resides in firmware, such as the system **BIOS (Basic Input/Output System)** or **UEFI (Unified Extensible Firmware Interface)**. They are computer software stored in a non-volatile memory embedded within the hardware. They have low-level control with the system's hardware components.
 
    ![BIOS and UEFI](./bios-uefi.png)  
@@ -38,7 +38,7 @@ After the operating system is loaded, the boot is considered done, as the operat
 
 ### Master Boot Record (MBR)
 
-MBR is a data structure located in the first sector (or [boot sector](/operating-system/disk-management#boot-sector)) of a storage device. The MBR contains essential information for the system to start up.
+MBR is a data structure located in the first sector (or [boot sector](/cs-notes/operating-system/disk-management#boot-sector)) of a storage device. The MBR contains essential information for the system to start up.
 
 - **Bootloader Code**: The bootloader's code is stored in the MBR.
 - **Partition Table**: The MBR stores a **partition table**, which is a data structure that describes the layout of partitions on the storage device. The partition table defines the starting and ending sectors of each partition, as well as the partition type.

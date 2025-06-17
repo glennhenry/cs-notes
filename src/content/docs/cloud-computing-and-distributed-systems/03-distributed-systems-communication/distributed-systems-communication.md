@@ -22,7 +22,7 @@ There are numerous coordination concerns in a distributed system. These include 
 
 This includes:
 
-- To avoid [concurrency issues, such as race condition](/operating-system/multithreading#multithreading-problems), we can utilize [locking mechanism](/cloud-computing-and-distributed-systems/distributed-database#locking) to treat resource access as exclusive. With exclusive access, we restrict a resource to be accessed by only a single node.
+- To avoid [concurrency issues, such as race condition](/cs-notes/operating-system/multithreading#multithreading-problems), we can utilize [locking mechanism](/cloud-computing-and-distributed-systems/distributed-database#locking) to treat resource access as exclusive. With exclusive access, we restrict a resource to be accessed by only a single node.
 - When a node generates a value, maybe from executing business logic or processing data, all other nodes need to be aware of it. In other words, all nodes should maintain a synchronized view of the shared data to achieve consistency. Such techniques can be employed with techniques like [consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus), with one implementation being the [Paxos protocol](/cloud-computing-and-distributed-systems/distributed-systems-model#paxos).
 
 #### Task Assignment
@@ -37,16 +37,16 @@ Based on "who" will assign the task:
 
 - **Decentralized**: In decentralized approach, each node makes its own decisions regarding task assignment and scheduling. Nodes can communicate with each other to exchange information about their capabilities, workload, and availability. This approach provides more fault tolerance and scalability but may require communication overhead within nodes. One algorithm for decentralized approach is the [distributed hash table](#distributed-hash-tables).
 
-- **[Load Balancer](/software-engineering/system-design#load-balancer)**: We can own a dedicated component that handles task distribution among nodes. Load balancing algorithm consider factors like the current workload, processing capabilities, and network conditions to make task assignment decisions. Task assignment strategies includes round-robin, which assign task in circular manner, or least-loaded, where task is assigned to node with the least workload.
+- **[Load Balancer](/cs-notes/software-engineering/system-design#load-balancer)**: We can own a dedicated component that handles task distribution among nodes. Load balancing algorithm consider factors like the current workload, processing capabilities, and network conditions to make task assignment decisions. Task assignment strategies includes round-robin, which assign task in circular manner, or least-loaded, where task is assigned to node with the least workload.
 
-  Additionally, to make sure message or request received and processed in the correct order, we can employ a message queue, which can included within the load balancer. The message queue holds the submitted tasks in a [queue](/data-structures-and-algorithms/queue), ensuring that they are stored in the order of arrival.
+  Additionally, to make sure message or request received and processed in the correct order, we can employ a message queue, which can included within the load balancer. The message queue holds the submitted tasks in a [queue](/cs-notes/data-structures-and-algorithms/queue), ensuring that they are stored in the order of arrival.
 
 ![Task assignment](./task-assignment.png)  
 Source: [Colored server icon](https://www.iconfinder.com/icons/4706235/data_server_database_datacenter_main_server_server_icon)
 
 ### Distributed Hash Tables
 
-A distributed hash table (DHT) is a [hash table](/data-structures-and-algorithms/hash-table) that is decentralized across a network of nodes. Just like a traditional hash table, a key, which is the unique identifier is associated with a value, the actual thing that we store.
+A distributed hash table (DHT) is a [hash table](/cs-notes/data-structures-and-algorithms/hash-table) that is decentralized across a network of nodes. Just like a traditional hash table, a key, which is the unique identifier is associated with a value, the actual thing that we store.
 
 There are two reasons why traditional hash table can't be used in distributed systems:
 
@@ -67,7 +67,7 @@ The general DHT process:
 
 #### Consistent Hashing
 
-Consistent hashing uses a ring or circle to represent the key space. Nodes are mapped to positions on the ring using a [hash function](/computer-security/hash-function) applied to their identifiers. Keys are also hashed and assigned to the closest node encountered on the ring.
+Consistent hashing uses a ring or circle to represent the key space. Nodes are mapped to positions on the ring using a [hash function](/cs-notes/computer-security/hash-function) applied to their identifiers. Keys are also hashed and assigned to the closest node encountered on the ring.
 
 For retrieval, the key will be hashed, and an algorithm to find the closest node on the ring to the hash value will be used. When a node joins or leaves the system, only a fraction of the keys needs to be remapped. The initialization that occurs when a node joins is determining its position on the ring. Whenever a node leaves, the other node closest to the position will take responsibility for its associated key.
 
@@ -84,6 +84,6 @@ For retrieval with rendezvous hashing, we would keep track all the node identifi
 
 There are several mechanisms to exchange message between nodes:
 
-- **[Remote Procedure Calls (RPC)](/backend-system/rpc)**: Involve making a request for other node to execute particular procedure or method as if it were a local procedure call. The caller sends a message containing the procedure name and arguments to the remote process, which executes the procedure and returns the result.
-- **[Message Broker](/backend-system/message-broker)**: Message broker with a message queue can also be used to store and deliver messages.
+- **[Remote Procedure Calls (RPC)](/cs-notes/backend-system/rpc)**: Involve making a request for other node to execute particular procedure or method as if it were a local procedure call. The caller sends a message containing the procedure name and arguments to the remote process, which executes the procedure and returns the result.
+- **[Message Broker](/cs-notes/backend-system/message-broker)**: Message broker with a message queue can also be used to store and deliver messages.
 - **Publish-Subscribe (Pub/Sub)**: Publish-subscribe is actually a model of message broker, in which there exists publishers and subscribers. Subscribers express interest in specific types of messages by subscribing to the corresponding topics. Publishers send messages to the topics, and the pub/sub system delivers the messages to the interested subscribers.

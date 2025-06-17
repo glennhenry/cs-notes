@@ -35,7 +35,7 @@ HTML may also contain:
 - `<script>`: This tag is used to insert scripts into the document, either within the document itself or in an external file.
 
 :::tip
-Find out more about [how HTML works](/internet-and-web/web-browser#page-rendering).
+Find out more about [how HTML works](/cs-notes/internet-and-web/web-browser#page-rendering).
 :::
 
 ### HTML DOM
@@ -45,7 +45,7 @@ Find out more about [how HTML works](/internet-and-web/web-browser#page-renderin
 Web browser is responsible for parsing HTML when you visit a web page, during parsing the browser reads the HTML code and creates a Document Object Model (DOM), which represents the structure of the web page.
 
 :::tip
-DOM is not limited to HTML it is also used in **[Extensible Markup Language (XML)](/digital-media-processing/xml)** which is markup language used to store and transport data in a structured format. XML allows developers to define their own custom tags and elements, making it highly extensible and adaptable to a wide range of applications.
+DOM is not limited to HTML it is also used in **[Extensible Markup Language (XML)](/cs-notes/digital-media-processing/xml)** which is markup language used to store and transport data in a structured format. XML allows developers to define their own custom tags and elements, making it highly extensible and adaptable to a wide range of applications.
 :::
 
 #### DOM Tree
@@ -57,7 +57,7 @@ Objects and properties make each HTML element in the document possible to be acc
 Developers can use JavaScript to access and modify individual elements in the document, change their attributes and styles, add or remove elements from the document, and respond to user interactions.
 
 :::tip
-See how [JavaScript manipulates the DOM](/internet-and-web/javascript#dom-manipulation).
+See how [JavaScript manipulates the DOM](/cs-notes/internet-and-web/javascript#dom-manipulation).
 :::
 
 ![HTML represented in tree structure with HTML tags as the root and has head and body as children which also contains another children elements such as p, ul, li](./dom-tree.png)  
@@ -95,7 +95,7 @@ Source: https://www.semrush.com/blog/semantic-html5-guide/
 
 ### XHTML
 
-**XHTML (Extensible HyperText Markup Language)**, and it is a markup language that is designed to be a stricter, more standardized version of HTML. XHTML is based on [XML](/digital-media-processing/xml), which means that it is syntactically stricter than HTML and conforms to the rules of XML syntax such as element nesting, attribute quoting, and other syntax rules.
+**XHTML (Extensible HyperText Markup Language)**, and it is a markup language that is designed to be a stricter, more standardized version of HTML. XHTML is based on [XML](/cs-notes/digital-media-processing/xml), which means that it is syntactically stricter than HTML and conforms to the rules of XML syntax such as element nesting, attribute quoting, and other syntax rules.
 
 XHTML was developed as a response to the proliferation of non-standard, poorly formed HTML documents on the web, which made it difficult for web browsers to render pages consistently. By adopting XML syntax and enforcing strict rules for document structure and syntax, XHTML aims to create a more consistent and predictable web browsing experience.
 

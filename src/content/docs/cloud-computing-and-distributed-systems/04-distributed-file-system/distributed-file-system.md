@@ -9,7 +9,7 @@ description: Distributed File System
 - **[Clustered file system — Wikipedia](https://en.wikipedia.org/wiki/Clustered_file_system)**
 - **[Apache Hadoop, File systems — Wikipedia](https://en.wikipedia.org/wiki/Apache_Hadoop#File_systems)**
 
-Distributed File System (DFS) is a [file system](/operating-system/file-system) that spans multiple servers or nodes in a network. The point of DFS is, to provide a unified and transparent view of the file system as a whole to users or applications, even if it's stored across multiple servers.
+Distributed File System (DFS) is a [file system](/cs-notes/operating-system/file-system) that spans multiple servers or nodes in a network. The point of DFS is, to provide a unified and transparent view of the file system as a whole to users or applications, even if it's stored across multiple servers.
 
 :::tip
 In contrast, there is also **clustered file system**. Instead of each node managing their portion of file system, a clustered file system shares the same storage and each node have direct access to it.

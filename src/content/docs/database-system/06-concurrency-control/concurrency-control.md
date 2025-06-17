@@ -9,7 +9,7 @@ description: Concurrency Control
 - **Chapter 18 - Database Systems - The Complete Book (2nd Edition)**
 - **[Concurrency control — Wikipedia](https://en.wikipedia.org/wiki/Concurrency_control)**
 
-Database operations are grouped into a transaction unit. The execution of each transaction unit is scheduled by the **scheduler** of DBMS. This is to ensure database operations executed in controller manner, avoiding concurrency issues such as [data races](/computer-and-programming-fundamentals/concurrency#race-condition). The overall process of handling concurrency is called **concurrency control**.
+Database operations are grouped into a transaction unit. The execution of each transaction unit is scheduled by the **scheduler** of DBMS. This is to ensure database operations executed in controller manner, avoiding concurrency issues such as [data races](/cs-notes/computer-and-programming-fundamentals/concurrency#race-condition). The overall process of handling concurrency is called **concurrency control**.
 
 The three property of concurrency control (whether in local database or [distributed database](/cloud-computing-and-distributed-systems/distributed-database)):
 
@@ -79,7 +79,7 @@ The above is example of a schedule that is conflict-serializable. A sequence of 
 
 Some common problem that occurs in concurrent transactions:
 
-- **[Deadlock](/operating-system/process-synchronization#deadlock)**: Deadlock is a situation where two or more transactions are waiting indefinitely for resources that are held by other transactions.
+- **[Deadlock](/cs-notes/operating-system/process-synchronization#deadlock)**: Deadlock is a situation where two or more transactions are waiting indefinitely for resources that are held by other transactions.
 - **Dirty Reads**: Dirty read occurs when one transaction reads data that has been modified by another transaction that has not yet been committed. In other words, a transaction reads uncommitted data that may be rolled back later, leading to a potential data inconsistency.
 - **Dirty Writes**: Occur when a write operation that hasn't been committed is overwriten by another write operation.
 - **Non-repeatable Reads**: Non-repeatable reads occur when a transaction reads the same data multiple times during its execution, but the values of the data change between each read. This inconsistency can happen when another transaction modifies the data that the first transaction is reading.
@@ -111,7 +111,7 @@ Checking serializability through precedence graph is a pessimistic approach.
 Lock is a mechanism to prevent multiple transaction accessing the same database element. A lock can be _acquired_ by a transaction, meaning that particular transaction has the access to the data and the others can't interfere it until the lock is _released_.
 
 :::tip
-See also [mutex](/operating-system/multithreading#locks--mutex).
+See also [mutex](/cs-notes/operating-system/multithreading#locks--mutex).
 :::
 
 The scheduler keep track a lock table, which contains the mapping that associates database elements with locking information specific to each element. Based on the lock table information, a transaction request will be delayed if another transaction is currently holding the lock.

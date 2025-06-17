@@ -36,7 +36,7 @@ Pipeline is the technique used to improve the performance of processors by overl
 
 In pipeline, stage is often divided by 5:
 
-1. **Instruction Fetch (IF)**: First stage is to fetch an instruction from memory, typically from the [program counter (PC)](/computer-organization-and-architecture/registers-and-ram#type-of-registers).
+1. **Instruction Fetch (IF)**: First stage is to fetch an instruction from memory, typically from the [program counter (PC)](/cs-notes/computer-organization-and-architecture/registers-and-ram#type-of-registers).
 2. **Instruction Decode (ID)**: Fetched instruction is decoded, also fetch the operand and register allocation if required.
 3. **Execution (EX)**: Stage that executes the instruction.
 4. **Memory Access (MEM)**: If the instruction requires memory access, this stage will handle the operation.
@@ -115,7 +115,7 @@ Cache typically organize the structure of their memory for more efficient retrie
 Source: https://www.cloudeka.id/id/berita/web-dev/apa-itu-cache-memory/
 
 :::tip
-More about [caching](/computer-and-programming-fundamentals/caching), some may relate to backend development. It includes type of caching, cache invalidation, cache replacement.
+More about [caching](/cs-notes/computer-and-programming-fundamentals/caching), some may relate to backend development. It includes type of caching, cache invalidation, cache replacement.
 :::
 
 ### Performance Evaluation
@@ -142,4 +142,4 @@ Source: https://www.scaler.com/topics/operating-system/difference-between-multic
 
 Overall, the primary difference is about how they share resources.
 
-Multiple unit of processing in hardware-level plays a role for concurrency in the software-level. [Threading](/computer-and-programming-fundamentals/concurrency#process--thread), is implemented in the hardware-level by having specific hardware that capable of processing concurrently, and utilized in the software-level by operating system to schedule their execution.
+Multiple unit of processing in hardware-level plays a role for concurrency in the software-level. [Threading](/cs-notes/computer-and-programming-fundamentals/concurrency#process--thread), is implemented in the hardware-level by having specific hardware that capable of processing concurrently, and utilized in the software-level by operating system to schedule their execution.

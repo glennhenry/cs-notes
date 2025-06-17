@@ -44,7 +44,7 @@ In the code, when we call `factorial(5)`, it will first check if the input or `n
 
 ### Call Stack
 
-When we call a function or methods, the program's [runtime environment](/computer-and-programming-fundamentals/runtime-environment) will keep track the function calls and execution contexts. The data structure used to store the information is a [stack-like data structure](/data-structures-and-algorithms/stack) called **call stack**.
+When we call a function or methods, the program's [runtime environment](/cs-notes/computer-and-programming-fundamentals/runtime-environment) will keep track the function calls and execution contexts. The data structure used to store the information is a [stack-like data structure](/cs-notes/data-structures-and-algorithms/stack) called **call stack**.
 
 The purpose of using stack data structure is to ensure that the most recently called function is the first one to complete its execution and be removed from the stack (LIFO principles). This order is crucial for maintaining the correct flow and sequence of function calls, such as the case when we expect a function to return something.
 
@@ -57,7 +57,7 @@ Source: https://dev.to/muirujackson/call-stack-recursion-40eh
 
 ### Linked List Traversal
 
-Traversing a [linked list](/data-structures-and-algorithms/linked-list) from the head to the tail can be implemented using a recursive function. Linked list, contains a node that has reference to the next node, the next node then have another reference to the next node again. This recursive nature allows us to traverse the linked list by recursively visiting each node until we reach the end of the list.
+Traversing a [linked list](/cs-notes/data-structures-and-algorithms/linked-list) from the head to the tail can be implemented using a recursive function. Linked list, contains a node that has reference to the next node, the next node then have another reference to the next node again. This recursive nature allows us to traverse the linked list by recursively visiting each node until we reach the end of the list.
 
 To make a recursive function, we will need a base case, or the problem where another recursive call is not needed. When it comes to traversing a linked list until the tail, the base case occurs when we reach the tail itself, indicating the conclusion of the problem and eliminating the need for another recursive call.
 

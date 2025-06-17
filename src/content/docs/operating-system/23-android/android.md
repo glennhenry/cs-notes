@@ -22,11 +22,11 @@ Source: https://developer.android.com/guide/platform
 
 Starting from the bottom:
 
-1. **Linux Kernel**: The Android OS is based on the modified version of [Linux kernel](/operating-system/linux-kernel). The kernel is responsible for managing the system's core functions, such as memory management, process management, device drivers, and system security.
+1. **Linux Kernel**: The Android OS is based on the modified version of [Linux kernel](/cs-notes/operating-system/linux-kernel). The kernel is responsible for managing the system's core functions, such as memory management, process management, device drivers, and system security.
 
    Let's discuss some components related to the Android in this layer:
 
-   - **Binder**: Binder is the implementation of [IPC](/operating-system/inter-process-communication) mechanism in Android. The binder driver is part of the Linux kernel and manages the low-level details of the Binder IPC mechanism. The IPC is based on client-server model. Various type of data, including calls, parameters, and results are encapsulated in binder objects. The binder driver handles the creation, registration, and management of Binder objects, as well as the routing of transactions between clients and servers.
+   - **Binder**: Binder is the implementation of [IPC](/cs-notes/operating-system/inter-process-communication) mechanism in Android. The binder driver is part of the Linux kernel and manages the low-level details of the Binder IPC mechanism. The IPC is based on client-server model. Various type of data, including calls, parameters, and results are encapsulated in binder objects. The binder driver handles the creation, registration, and management of Binder objects, as well as the routing of transactions between clients and servers.
 
    - **Power Management**: Power management involves managing and optimizing the power consumption of hardware devices and system components. This layer is different compared to traditional computing, due to Android being a mobile device. Android introduces a feature called wake locks to manage how the system goes to sleep. Wake locks allow the system to maintain the desired power state, either running and ready for user input or deeply asleep, based on the device's activity and user interaction.
 
@@ -36,9 +36,9 @@ Starting from the bottom:
 
 3. **Native Libraries**: Android includes a set of native libraries written in programming languages like C and C++. These libraries provide essential functionality to the Android system, including graphics rendering, multimedia processing, SQLite database support, networking, and more.
 
-4. **Android Runtime (ART)**: Android Runtime is the [runtime environment](/computer-and-programming-fundamentals/runtime-environment) for executing Android applications. The majority of Android apps are developed using the Java programming language, this makes Android follow [object-oriented design](/computer-and-programming-fundamentals/object-oriented-programming). In order to run a Java application, we will need a **Java Virtual Machine (JVM)** for its runtime environment.
+4. **Android Runtime (ART)**: Android Runtime is the [runtime environment](/cs-notes/computer-and-programming-fundamentals/runtime-environment) for executing Android applications. The majority of Android apps are developed using the Java programming language, this makes Android follow [object-oriented design](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming). In order to run a Java application, we will need a **Java Virtual Machine (JVM)** for its runtime environment.
 
-   Android apps do not run directly on a standard JVM. Instead, Android introduced its own runtime environment called the **Dalvik Virtual Machine (DVM)**. The DVM was designed for device with limited resources like smartphones and tablets. The DVM runs Java app using [just-in-time (JIT) compilation](/computer-and-programming-fundamentals/interpreter#jit-compilation), which dynamically translates Java bytecode into machine code at runtime to improve performance.
+   Android apps do not run directly on a standard JVM. Instead, Android introduced its own runtime environment called the **Dalvik Virtual Machine (DVM)**. The DVM was designed for device with limited resources like smartphones and tablets. The DVM runs Java app using [just-in-time (JIT) compilation](/cs-notes/computer-and-programming-fundamentals/interpreter#jit-compilation), which dynamically translates Java bytecode into machine code at runtime to improve performance.
 
    However, since Android 5.0, DVM is replaced with **Android Runtime (ART)**. The primary reason for this is that ART uses an **ahead-of-time (AOT) compilation** approach, where the application bytecode is compiled into native machine code during installation or upon first execution. This optimization improves performance and reduces runtime overhead.
 

@@ -12,11 +12,11 @@ description: Registers & RAM
 
 **Registers & RAM** are important components in CPU, they serve as storage or memory for the CPU. Register is a smaller storage with higher speed that is suitable to hold intermediate result. While RAM is the larger storage with lower speed that is suitable to hold the program's data and instructions actively used by CPU during program's execution. Both memory is a type of volatile memory, it can only store data while the device is running.
 
-Registers are the fastest form of computer memory, and they are directly accessible by the CPU. When doing arithmetic operation using [ALU](/computer-organization-and-architecture/alu), we will need place to store the intermediate result or to store other information such as carry temporarily. Registers is typically the place to store this. The ALU will receive important information such as status and operand from the registers.
+Registers are the fastest form of computer memory, and they are directly accessible by the CPU. When doing arithmetic operation using [ALU](/cs-notes/computer-organization-and-architecture/alu), we will need place to store the intermediate result or to store other information such as carry temporarily. Registers is typically the place to store this. The ALU will receive important information such as status and operand from the registers.
 
 ### Latch
 
-Latch is the simplest form of memory in digital electronics that capable of storing a single bit of information. A latch uses a combination of [logic gates](/computer-organization-and-architecture/boolean-logic#logic-gates) that works by having a **feedback loop**, that is when the output of a gate is connected back to one of its own inputs.
+Latch is the simplest form of memory in digital electronics that capable of storing a single bit of information. A latch uses a combination of [logic gates](/cs-notes/computer-organization-and-architecture/boolean-logic#logic-gates) that works by having a **feedback loop**, that is when the output of a gate is connected back to one of its own inputs.
 
 We can construct a latch using self-looping OR and AND gates. We will have two input, A and B, the A is our input, while B is the input from the output.
 
@@ -134,7 +134,7 @@ When we say "32-bit computer", we are referring to the architecture of the syste
 Source: https://www.eecis.udel.edu/~davis/cpeg222/AssemblyTutorial/Chapter-10/ass10_2.html
 
 :::note
-Sometimes memory address is denoted by [hexadecimal number system](/computer-and-programming-fundamentals/number-system#hexadecimal). The prefix "0x" typically correspond to hexadecimal, while the prefix "0b" correspond to binary.
+Sometimes memory address is denoted by [hexadecimal number system](/cs-notes/computer-and-programming-fundamentals/number-system#hexadecimal). The prefix "0x" typically correspond to hexadecimal, while the prefix "0b" correspond to binary.
 :::
 
 ##### Type of RAM
@@ -147,7 +147,7 @@ There are several types of RAM used in computer systems:
 
 - **SDRAM (Synchronous Dynamic Random Access Memory)**: Typically traditional RAM can't keep up with the CPU's processing speed, this results in a performance bottleneck. SDRAM is a type of DRAM that synchronizes its operations with the CPU's clock, offering the potential for improved performance. SDRAM is used as the main memory in most computer systems. Different variations of SDRAM include DDR (Double Data Rate) SDRAM, DDR2, DDR3, DDR4, and DDR5, with each generation providing increased data transfer rates and improved performance.
 
-- **VRAM (Video Random Access Memory)**: (not to be confused with [virtual memory](/operating-system/memory-management#virtual-memory)) VRAM is a specialized type of RAM that is specifically designed for graphics processing. It is used to store graphical data required by the graphics card. VRAM is optimized for high-speed read and write operations and is capable of simultaneously providing data to the graphics card while refreshing the display.
+- **VRAM (Video Random Access Memory)**: (not to be confused with [virtual memory](/cs-notes/operating-system/memory-management#virtual-memory)) VRAM is a specialized type of RAM that is specifically designed for graphics processing. It is used to store graphical data required by the graphics card. VRAM is optimized for high-speed read and write operations and is capable of simultaneously providing data to the graphics card while refreshing the display.
 
 ![Type of RAM](./type-of-ram.png)  
 Source: https://quicklearncomputer.com/types-of-ram/
@@ -161,8 +161,8 @@ There are many types of registers:
   - **Program Counter (PC)**: Holds the memory address of the next instruction to be fetched and executed.
   - **Instruction Register (IR)**: Holds the current instruction being executed by the CPU. It temporarily stores the fetched instruction until it is decoded and executed.
   - **Address Register (AR)**: Hold memory addresses needed for data transfer between the CPU and memory. They are used to specify the source or destination memory addresses during data movements.
-  - **Stack Pointer**: During program's execution, a [dedicated stack](/computer-and-programming-fundamentals/memory#stack) will be used to store function calls, local variables, intermediate data storage, etc. The stack pointer is the specific [pointer](/computer-and-programming-fundamentals/memory#pointer--reference) that points to the stack. Simply the register contains memory address for the program's stack.
-- **Status Register/Flags Register**: Contains individual bits that represent the status or condition of the CPU after an operation. These bits may provide information about the [arithmetic operations in ALU](/computer-organization-and-architecture/alu), such as carry, overflow, zero, and sign indicators.
+  - **Stack Pointer**: During program's execution, a [dedicated stack](/cs-notes/computer-and-programming-fundamentals/memory#stack) will be used to store function calls, local variables, intermediate data storage, etc. The stack pointer is the specific [pointer](/cs-notes/computer-and-programming-fundamentals/memory#pointer--reference) that points to the stack. Simply the register contains memory address for the program's stack.
+- **Status Register/Flags Register**: Contains individual bits that represent the status or condition of the CPU after an operation. These bits may provide information about the [arithmetic operations in ALU](/cs-notes/computer-organization-and-architecture/alu), such as carry, overflow, zero, and sign indicators.
 
 And many more…
 

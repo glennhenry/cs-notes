@@ -49,7 +49,7 @@ Agile projects are divided into small, time-boxed iterations called **sprints**.
   A **user story** is a way to describe how should a software function in the perspective of user. For example, a user story for an e-commerce website could be: "As a customer, I want to be able to add items to my shopping cart, so that I can easily keep track of the products I want to purchase."  
    This is not an actual feedback from user, but rather a simple and concise way to describe the desired functionality or behavior of the software system.
 
-- **Testing**: [Software testing](/software-engineering/software-testing) is performed in each sprint or iteration, this is called **continuous testing**. User stories in agile are typically accompanied by acceptance criteria. **Acceptance testing** is a type of testing to determine whether a software system meets the specified acceptance criteria.
+- **Testing**: [Software testing](/cs-notes/software-engineering/software-testing) is performed in each sprint or iteration, this is called **continuous testing**. User stories in agile are typically accompanied by acceptance criteria. **Acceptance testing** is a type of testing to determine whether a software system meets the specified acceptance criteria.
 - **Release**: Agile promotes frequent and incremental releases. At the end of each sprint, a potentially shippable product increment is produced.
 - **Feedback**: Feedback is collected from stakeholders, users, and customers during various stages of the process, including sprint reviews and demonstrations. Feedback is used to validate assumptions, refine requirements, and guide future iterations.
 
@@ -97,7 +97,7 @@ A cycle is divided into four phases:
 
 Making a software project can be overwhelming if we don't have the plan. It is easy to be distracted by the amount of work we have to do. Here are some tips to plan and build a program:
 
-1. [System Design](/software-engineering/system-design): System design is the process of designing architecture and all related component to build a software system. It is a very good practice to always sketch the system first, at least get a high-level view on how the system will look like.
+1. [System Design](/cs-notes/software-engineering/system-design): System design is the process of designing architecture and all related component to build a software system. It is a very good practice to always sketch the system first, at least get a high-level view on how the system will look like.
 
    A system design involves:
 
@@ -107,7 +107,7 @@ Making a software project can be overwhelming if we don't have the plan. It is e
 
      In this step we may also choose our tech stack, including what programming languages, library, framework, or cloud services that suit our needs.
 
-   - **High-level Design**: After knowing what is required to build the software, we can start designing the system in high-level. This involves making a design that outlines the architecture and structure of the software. We could make [various diagram](/software-engineering/diagrams) that represent how each component interact or determining how should we store the data.
+   - **High-level Design**: After knowing what is required to build the software, we can start designing the system in high-level. This involves making a design that outlines the architecture and structure of the software. We could make [various diagram](/cs-notes/software-engineering/diagrams) that represent how each component interact or determining how should we store the data.
 
    - **More Detailed Design**: Then, we can create a more detailed design that provides a deeper understanding of the internal components, modules, and implementation details of the software application. We can imagine how would the component works or what algorithm it would use.
 
@@ -128,5 +128,5 @@ Making a software project can be overwhelming if we don't have the plan. It is e
    4. The text message would be upgraded to a real-time video stream, ensure that all clients receive the stream correctly.
    5. Create a video player capable of running the stream.
 
-4. **Testing**: Write [automated tests](/software-engineering/software-testing#automated) to verify the software and to prevent functionality from becoming incorrect when code is modified.
+4. **Testing**: Write [automated tests](/cs-notes/software-engineering/software-testing#automated) to verify the software and to prevent functionality from becoming incorrect when code is modified.
 5. **Keep Going**: After creating the minimum viable product and testing it, we should identify any problems or areas for improvement. We can create a list of TODOs that may include bug fixes, new features, corrections, etc. We can prioritize each task on the To-do list and determine the next steps accordingly. If the bug significantly affect the app, we can fix them. If working on a new feature, we can start again the process from step 1 by creating the high-level design of the new feature, developing it incrementally, and targeting the MVP, and so on going iteratively.

@@ -70,7 +70,7 @@ Two-pass algorithm can be based on sorting and hash. Sorting-based algorithms us
 
 Example of sorting-based algorithms:
 
-- **Two-Phase, Multiway Merge-Sort (TPMMS or 2PMMS)**: Algorithm to sort very large relations in two passes, consisting two phases. This algorithm is a variant of [merge sort](/data-structures-and-algorithms/divide-and-conquer#merge-sort) that is designed to handle large data that cannot fit in the main memory.
+- **Two-Phase, Multiway Merge-Sort (TPMMS or 2PMMS)**: Algorithm to sort very large relations in two passes, consisting two phases. This algorithm is a variant of [merge sort](/cs-notes/data-structures-and-algorithms/divide-and-conquer#merge-sort) that is designed to handle large data that cannot fit in the main memory.
 
   In phase 1, the algorithm sort the tuples from one relation in the main memory. The table is not entirely sorted, instead it repeatedly sorts the sublist of the relation. The sorted sublist is then written to the secondary storage.
 
@@ -101,7 +101,7 @@ In comparison to sorting-based algorithms:
 
 ### Index-Based Algorithms
 
-**Index-based algorithms** is a set of algorithms that leverage [database indexes](/database-system/database-index), such as selection and join. In some cases, clustered indexes may be faster than non-cluster index, because the physical ordering of data in disk is already known.
+**Index-based algorithms** is a set of algorithms that leverage [database indexes](/cs-notes/database-system/database-index), such as selection and join. In some cases, clustered indexes may be faster than non-cluster index, because the physical ordering of data in disk is already known.
 
 - **Selection**: Index stores a pointer to record given an attribute that is used as the search key. An index-based selection would be straightforward retrieval.
 - **Index Join**: Consider two relation R(X, Y) and S(Y, Z), and S has index on attribute Y. To join them together on attributes Y, we compare each tuple in relation R with the tuple(s) of S, which we retrieve using the index on attribute Y.

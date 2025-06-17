@@ -14,14 +14,14 @@ description: Peer-to-Peer
 ![Peer-to-Peer architecture compared to client-server](./peer-to-peer.png)  
 Source: https://www.researchgate.net/figure/Architecture-of-C-S-and-P2P_fig1_238638509
 
-In contrast to [client-server architecture](/software-engineering/client-server), clients can only request to a single entity in the system.
+In contrast to [client-server architecture](/cs-notes/software-engineering/client-server), clients can only request to a single entity in the system.
 
 - **Scalability**: It can be a bottleneck for the server in client-server architecture as the number of clients and the demand for services increase. P2P can more scalable, as the client itself can be the server.
 - **Fault Tolerance**: In client-server architecture, if the server goes down or becomes unavailable, clients cannot access the services. P2P architecture is inherently more fault-tolerant, since there can be multiple peers and the failure of one or more peers does not lead to a complete system failure.
 - **Flexibility in Resource Location**: In client-server architecture, clients are typically aware of and connected to a specific server. They depend on that server for their requests. In P2P architecture, clients have the flexibility to discover and connect with different peers in the network. They can choose the most appropriate peer based on factors like proximity, availability, or the specific resources or services they require.
 
 :::info
-Although client-server architecture can prevent some of these limitations by having multiple servers to handle requests in a balanced manner ([load balancing](/computer-networking/server#server-optimization)) or distribute the server around the world ([CDN](/computer-networking/server#server-optimization)).
+Although client-server architecture can prevent some of these limitations by having multiple servers to handle requests in a balanced manner ([load balancing](/cs-notes/computer-networking/server#server-optimization)) or distribute the server around the world ([CDN](/cs-notes/computer-networking/server#server-optimization)).
 :::
 
 ### Target & Challenge
@@ -52,7 +52,7 @@ The specific architecture of P2P define how peers are connected to each other. T
 
 ### Network Model
 
-In reality, app or services that uses P2P architecture is not always completely peer-to-peer. Some service that offers [file transfer protocol (FTP)](/computer-networking/ftp) may need a central server to store global information about file sharing.
+In reality, app or services that uses P2P architecture is not always completely peer-to-peer. Some service that offers [file transfer protocol (FTP)](/cs-notes/computer-networking/ftp) may need a central server to store global information about file sharing.
 
 Overall, there are three variants of P2P:
 
@@ -66,13 +66,13 @@ Routing determines the paths or routes through which data or messages can be tra
 
 - **Centralized**: With a central server that keeps track global information, it can handle the routing and forwarding of the messages to the intended recipients.
 - **DHT**: The use of DHT as explained in [structured architecture](#architecture).
-- Three other methods in [computer networking routing](/computer-networking/routing#routing-technique).
+- Three other methods in [computer networking routing](/cs-notes/computer-networking/routing#routing-technique).
 
 ### Usage
 
 P2P architectures are used in various applications:
 
 - **File Sharing**: Platforms such as BitTorrent, eMule, and Gnutella utilize P2P architectures to enable users to share files directly with each other, without relying on centralized servers.
-- **[Content Delivery](/computer-networking/server#server-optimization)**: P2P architectures are also used in content delivery networks (CDNs) to distribute and deliver content efficiently. P2P CDNs are particularly useful for distributing large media files, software updates, and streaming video content.
-- **Communication**: [Real-Time Communication (RTC) protocol](/computer-networking/rtc), such as [WebRTC](/computer-networking/rtc#webrtc) uses P2P architecture under the hood. However, they are not a complete P2P connection, as it relies on servers during the initial connection setup phase.
-- **[Blockchain](/computer-security/blockchain)**: Blockchain networks, such as Bitcoin and Ethereum, are built upon P2P architectures. In these decentralized systems, peers (or nodes) maintain a distributed ledger, validate transactions, and reach consensus without relying on a central authority.
+- **[Content Delivery](/cs-notes/computer-networking/server#server-optimization)**: P2P architectures are also used in content delivery networks (CDNs) to distribute and deliver content efficiently. P2P CDNs are particularly useful for distributing large media files, software updates, and streaming video content.
+- **Communication**: [Real-Time Communication (RTC) protocol](/cs-notes/computer-networking/rtc), such as [WebRTC](/cs-notes/computer-networking/rtc#webrtc) uses P2P architecture under the hood. However, they are not a complete P2P connection, as it relies on servers during the initial connection setup phase.
+- **[Blockchain](/cs-notes/computer-security/blockchain)**: Blockchain networks, such as Bitcoin and Ethereum, are built upon P2P architectures. In these decentralized systems, peers (or nodes) maintain a distributed ledger, validate transactions, and reach consensus without relying on a central authority.

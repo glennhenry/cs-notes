@@ -10,17 +10,17 @@ description: ALU
 
 **Arithmetic Logic Unit (ALU)** is the component of CPU that handles basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
-Computers, as we know, only understand binary data, represented by electrical signals in the form of 1s and 0s. When performing calculations, computers rely on [binary operations](/computer-and-programming-fundamentals/binary-representation#binary-operation) to manipulate this binary data. Computer will leverage [various logic gates](/computer-organization-and-architecture/boolean-logic#logic-gates), which is based on [boolean logic](/computer-organization-and-architecture/boolean-logic) in order to carry out binary operations.
+Computers, as we know, only understand binary data, represented by electrical signals in the form of 1s and 0s. When performing calculations, computers rely on [binary operations](/cs-notes/computer-and-programming-fundamentals/binary-representation#binary-operation) to manipulate this binary data. Computer will leverage [various logic gates](/cs-notes/computer-organization-and-architecture/boolean-logic#logic-gates), which is based on [boolean logic](/cs-notes/computer-organization-and-architecture/boolean-logic) in order to carry out binary operations.
 
-For example, consider an input electrical signal 1 followed by 0, and another input is 0 followed by 1. The first input, namely 1 and 0, will go through an [OR logic gate](/computer-organization-and-architecture/boolean-logic#logic-gates), producing 1. The second input, 0 and 1, will go through another OR logic gate, producing 1 as well. The two result, which is 1 followed another 1, or "11", will represent 3 in binary number system.
+For example, consider an input electrical signal 1 followed by 0, and another input is 0 followed by 1. The first input, namely 1 and 0, will go through an [OR logic gate](/cs-notes/computer-organization-and-architecture/boolean-logic#logic-gates), producing 1. The second input, 0 and 1, will go through another OR logic gate, producing 1 as well. The two result, which is 1 followed another 1, or "11", will represent 3 in binary number system.
 
-What we have just done is doing an [addition operation on binary](/computer-and-programming-fundamentals/binary-representation#addition). The first input "10", which represent the number 2 in decimal, and the second input "01", which represent number 1, is added together by using the OR logic gate, producing 3.
+What we have just done is doing an [addition operation on binary](/cs-notes/computer-and-programming-fundamentals/binary-representation#addition). The first input "10", which represent the number 2 in decimal, and the second input "01", which represent number 1, is added together by using the OR logic gate, producing 3.
 
 :::note
-This process essentially illustrate the [bitwise OR operation](/computer-and-programming-fundamentals/bitwise-operation#or)
+This process essentially illustrate the [bitwise OR operation](/cs-notes/computer-and-programming-fundamentals/bitwise-operation#or)
 :::
 
-All of this process takes place in the ALU. The ALU takes input from the registers, which hold data temporarily, and performs operation based on the instruction from the [control unit](/computer-organization-and-architecture/control-unit). The ALU operates on binary data in the form of bits or bytes, it produces output based on the operation performed.
+All of this process takes place in the ALU. The ALU takes input from the registers, which hold data temporarily, and performs operation based on the instruction from the [control unit](/cs-notes/computer-organization-and-architecture/control-unit). The ALU operates on binary data in the form of bits or bytes, it produces output based on the operation performed.
 
 ### ALU
 
@@ -34,9 +34,9 @@ The V-shape of ALU is just for illustration purposes.
 
 Input of ALU:
 
-- **Operand**: ALU takes two input called [operand](/computer-organization-and-architecture/coa-fundamentals#opcode--operand), which represent the input binaries for operation to be performed.
-- **[Opcode](/computer-organization-and-architecture/coa-fundamentals#opcode--operand)**: It is the instruction on what should ALU do based on the two operand.
-- **Status**: Status provide information about the current status of ALU or the contextual information from the previous operations. The status is called a **flag**, it is obtained from a special registers called [status registers](/computer-organization-and-architecture/registers-and-ram#type-of-registers).
+- **Operand**: ALU takes two input called [operand](/cs-notes/computer-organization-and-architecture/coa-fundamentals#opcode--operand), which represent the input binaries for operation to be performed.
+- **[Opcode](/cs-notes/computer-organization-and-architecture/coa-fundamentals#opcode--operand)**: It is the instruction on what should ALU do based on the two operand.
+- **Status**: Status provide information about the current status of ALU or the contextual information from the previous operations. The status is called a **flag**, it is obtained from a special registers called [status registers](/cs-notes/computer-organization-and-architecture/registers-and-ram#type-of-registers).
 
   Some common flags are:
 
@@ -60,7 +60,7 @@ Output of ALU:
 
 The example we have done earlier, which is adding two binary using an OR logic gates will not work for all binary inputs. For example, when we have input of "01" (1 in decimal) and "11" (3 in decimal), if we use OR gates, we will produce "11", which still correspond to 3 in decimal. Notice that we didn't consider the carry that might have produced during the addition.
 
-We will need to modify the behavior of the addition system. We will also consider the carry by using the carry status flag. So, performing addition on "1" with "1" should produce "0". The logic gate that will produce result of "0" when given input "1" and "1", is the [XOR gate](/computer-organization-and-architecture/boolean-logic#logic-gates).
+We will need to modify the behavior of the addition system. We will also consider the carry by using the carry status flag. So, performing addition on "1" with "1" should produce "0". The logic gate that will produce result of "0" when given input "1" and "1", is the [XOR gate](/cs-notes/computer-organization-and-architecture/boolean-logic#logic-gates).
 
 Here is the table of XOR gate possible input and output:
 
@@ -113,7 +113,7 @@ For example, to create an 8-bit adder, we would need to combine eight full adder
 ![8-bit adder](./8-bit-adder.png)  
 Source: https://www.engineersgarage.com/vhdl-tutorial-21-designing-an-8-bit-full-adder-circuit-using-vhdl/
 
-Each full adder still takes three input, which are A, B, and C-in, which can be the carry from the previous adder. The sum S from sum0 up to sum7 will be concatenated together at the end, producing the 8-bit binary number. The sum0 output represents the [least significant bit (LSB)](/computer-and-programming-fundamentals/binary-representation#least--most-significant-bit) of the sum, while the sum7 output represents the [most significant bit (MSB)](/computer-and-programming-fundamentals/binary-representation#least--most-significant-bit) of the sum.
+Each full adder still takes three input, which are A, B, and C-in, which can be the carry from the previous adder. The sum S from sum0 up to sum7 will be concatenated together at the end, producing the 8-bit binary number. The sum0 output represents the [least significant bit (LSB)](/cs-notes/computer-and-programming-fundamentals/binary-representation#least--most-significant-bit) of the sum, while the sum7 output represents the [most significant bit (MSB)](/cs-notes/computer-and-programming-fundamentals/binary-representation#least--most-significant-bit) of the sum.
 
 This 8-bit adder is called **ripple carry adder**. The problem for this adder is, it is possible that the last adder produces a carry, which mean we will need to add that carry to the next column. However, we are using a limited 8-bit adder, we don't have that 9-bit column place. This problem is called **overflow**, which occur when we add or subtract number that are too large within our binary representation.
 
@@ -121,7 +121,7 @@ This 8-bit adder is called **ripple carry adder**. The problem for this adder is
 
 In fact, other operation such as subtraction, multiplication, and division can be performed with only addition operation.
 
-- **Subtraction**: Subtraction, for example, (2 - 5), can be rewritten as (2 + (-5)), which is an addition operation. To represent the number (-5) in binary, we can use the [two complement representation](/computer-and-programming-fundamentals/binary-representation#two-complement).
+- **Subtraction**: Subtraction, for example, (2 - 5), can be rewritten as (2 + (-5)), which is an addition operation. To represent the number (-5) in binary, we can use the [two complement representation](/cs-notes/computer-and-programming-fundamentals/binary-representation#two-complement).
 - **Multiplication**: Multiplication can be performed using iterative addition, 2 × 3 is essentially just 2 + 2 + 2.
 - **Division**: Division can also be implemented using iterative subtraction, 4 / 2 is 4 - 2. We will repeatedly subtract the divisor from the dividend until the remainder is less than the divisor.
 
@@ -129,8 +129,8 @@ In fact, other operation such as subtraction, multiplication, and division can b
 
 The logic unit in ALU performs various logical operations such as AND, OR, XOR, NOT on binary data.
 
-For example, the logic unit is responsible for making logical decisions based on the results of the logical operations. We may use conditional statement (e.g., if input number is negative, then do A, else do B). We can use the logic unit to determine if input number is negative or not. To determine the sign of a number, we can check the [sign bit](/computer-and-programming-fundamentals/binary-representation#signed-magnitude) if it represents 1 or 0, using the AND gate.
+For example, the logic unit is responsible for making logical decisions based on the results of the logical operations. We may use conditional statement (e.g., if input number is negative, then do A, else do B). We can use the logic unit to determine if input number is negative or not. To determine the sign of a number, we can check the [sign bit](/cs-notes/computer-and-programming-fundamentals/binary-representation#signed-magnitude) if it represents 1 or 0, using the AND gate.
 
-We will assume that we are using the [two complement representation](/computer-and-programming-fundamentals/binary-representation#two-complement). The leftmost bit will be the sign bit, we will check the sign by doing the logical AND operation with some arbitrary binary number that has "1" as its leftmost bit, and "0" for the remaining bit. When the input is negative number "1\_\_\_" (the latter bit can be anything), doing the logical AND with binary "1000" will result in "1000", because the result is not 0, we can conclude that the sign bit is 1, indicating a negative number.
+We will assume that we are using the [two complement representation](/cs-notes/computer-and-programming-fundamentals/binary-representation#two-complement). The leftmost bit will be the sign bit, we will check the sign by doing the logical AND operation with some arbitrary binary number that has "1" as its leftmost bit, and "0" for the remaining bit. When the input is negative number "1\_\_\_" (the latter bit can be anything), doing the logical AND with binary "1000" will result in "1000", because the result is not 0, we can conclude that the sign bit is 1, indicating a negative number.
 
 On the other hand, when the input is positive number "0\_\_\_", doing logical AND with binary "1000" will result in 0, which indicates a positive number.

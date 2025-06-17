@@ -16,18 +16,18 @@ MIME type syntax looks like the following: `type "/" [tree "."] subtype ["+" suf
 
 - `type` is the general category of the data, such as text, image, audio, or video.
 - `tree` is an optional prefix that can be used to further categorize the data. For example, the type application can have the tree `x-` to indicate that it is an experimental format.
-- `subtype` is the specific format of the data, such as [plain text](/digital-media-processing/txt), [HTML](/internet-and-web/html), [PDF](/digital-media-processing/pdf), MS Word document.
-- `suffix` is an optional suffix that can be used to represent specific structure of the format. For example, the suffix `xml` can be used to classify [XML data](/digital-media-processing/xml), and the suffix `json` can be used to classify [JSON](/digital-media-processing/json) data.
+- `subtype` is the specific format of the data, such as [plain text](/cs-notes/digital-media-processing/txt), [HTML](/cs-notes/internet-and-web/html), [PDF](/cs-notes/digital-media-processing/pdf), MS Word document.
+- `suffix` is an optional suffix that can be used to represent specific structure of the format. For example, the suffix `xml` can be used to classify [XML data](/cs-notes/digital-media-processing/xml), and the suffix `json` can be used to classify [JSON](/cs-notes/digital-media-processing/json) data.
 - `parameter` is an optional parameter that can be used to provide additional information or metadata about the data. For example, the parameter charset can be used to specify the character encoding of the text data.
 
-For example, a MIME type for [JPEG](/digital-media-processing/jpg-jpeg) file is `image/jpeg; charset=utf-8`
+For example, a MIME type for [JPEG](/cs-notes/digital-media-processing/jpg-jpeg) file is `image/jpeg; charset=utf-8`
 
 Other examples:
 
 - `text/plain`: plain text
 - `image/jpeg`: JPEG images
-- `audio/mp3`: [MP3 audio](/digital-media-processing/mp3)
-- `video/mp4`: [MP4 videos](/digital-media-processing/mp4)
+- `audio/mp3`: [MP3 audio](/cs-notes/digital-media-processing/mp3)
+- `video/mp4`: [MP4 videos](/cs-notes/digital-media-processing/mp4)
 - `application/pdf`: PDF documents
 - `application/msword`: Microsoft Word documents
 - `application/zip`: ZIP archives.

@@ -11,7 +11,7 @@ description: Video Effects & Enhancement
 **Video effects** are visual alterations applied to video to create artistic or stylistic changes, simulate specific environments or conditions, or convey a particular mood or atmosphere.
 
 :::tip
-Video effects are related to [image enhancement](/digital-media-processing/image-enhancement), as it uses similar principle to achieve desired behavior. Video enhancement also includes [denoising](/digital-signal-processing/denoising), upscaling, and [restoration](/digital-media-processing/image-restoration).
+Video effects are related to [image enhancement](/cs-notes/digital-media-processing/image-enhancement), as it uses similar principle to achieve desired behavior. Video enhancement also includes [denoising](/cs-notes/digital-signal-processing/denoising), upscaling, and [restoration](/cs-notes/digital-media-processing/image-restoration).
 :::
 
 Example of video effects:
@@ -26,7 +26,7 @@ Example of video effects:
   ![A GIF of fade transition](./fade.gif)  
    Source: https://www.premiumbeat.com/blog/the-hidden-meaning-behind-popular-video-transitions/
 
-- **[Filters](/computer-graphics/signal-processing#image-filters)**: Filter has various effect, such as adjusting the color balance, brightness, contrast, saturation, and overall color tone of the video, sharpening or blur effect, and other stylized filter.
+- **[Filters](/cs-notes/computer-graphics/signal-processing#image-filters)**: Filter has various effect, such as adjusting the color balance, brightness, contrast, saturation, and overall color tone of the video, sharpening or blur effect, and other stylized filter.
 
   ![Applying filter to a video](./video-filter.png)  
    Source: https://support.microsoft.com/en-au/topic/how-to-add-filters-to-a-video-7105a494-0d10-4bb1-ac41-1770606498d1
@@ -45,5 +45,5 @@ Example of video effects:
 - **Special Effects**: Special effect includes Visual Effects (VFX) and Computer-Generated Imagery (CGI). These are made possible through computer graphics and simulation.
 
 :::tip
-See also [computer animation](/computer-graphics/computer-animation) and [computer simulation](/computer-graphics/simulation).
+See also [computer animation](/cs-notes/computer-graphics/computer-animation) and [computer simulation](/cs-notes/computer-graphics/simulation).
 :::

@@ -12,7 +12,7 @@ description: System Call
 
 Applications primarily run in **user mode**, which is a restricted environment with limited access to system resources. Certain operations, such as interacting with hardware devices or modifying critical system data, are prohibited in user mode to maintain system stability and security.
 
-**System calls** is the way for applications to request privileged operations from the operating system [kernel](/operating-system/kernel), which operates in a higher privileged mode called **kernel mode**.
+**System calls** is the way for applications to request privileged operations from the operating system [kernel](/cs-notes/operating-system/kernel), which operates in a higher privileged mode called **kernel mode**.
 
 ### System Call Interface
 
@@ -25,11 +25,11 @@ The application that calls doesn't need to know the low-level details of how the
 
 The use of interface allows for a simple development, application developers can write portable code that can run on different operating systems without modifications, as long as the system call interface is consistent.
 
-In [Unix-like systems](/operating-system/unix), system calls are included in the C language, specifically the **libc** library. In other OS like [Windows NT](/operating-system/windows), system calls are commonly referred to as "Windows API functions", and it has different interface with the libc.
+In [Unix-like systems](/cs-notes/operating-system/unix), system calls are included in the C language, specifically the **libc** library. In other OS like [Windows NT](/cs-notes/operating-system/windows), system calls are commonly referred to as "Windows API functions", and it has different interface with the libc.
 
 ### Type of System Calls & Example
 
-System calls can be categorized into several types based on the services they provide. In the example, the system calls are associated with [Unix-like](/operating-system/unix) operating systems.
+System calls can be categorized into several types based on the services they provide. In the example, the system calls are associated with [Unix-like](/cs-notes/operating-system/unix) operating systems.
 
 ![System call](./system-call.png)  
 Source: https://www.scaler.com/topics/operating-system/system-calls-in-operating-system/
@@ -74,7 +74,7 @@ System calls in this category are used for inter-process communication (IPC) and
 - **Inter-Process Communication (IPC)**: System calls like `pipe()`, `shmget()`, `semget()`, and `msgget()` are used for various forms of IPC, including shared memory, semaphores, and message queues. These mechanisms facilitate communication and synchronization between different processes running on the same system. Processes can share data through shared memory, coordinate access to shared resources using semaphores, or exchange messages through message queues using these system calls.
 
 :::tip
-See also [message passing](/operating-system/inter-process-communication#message-passing) and [IPC](/operating-system/inter-process-communication).
+See also [message passing](/cs-notes/operating-system/inter-process-communication#message-passing) and [IPC](/cs-notes/operating-system/inter-process-communication).
 :::
 
 #### Protection
@@ -86,7 +86,7 @@ System calls in this category are related to process and system security, includ
 - **Cryptography**: System calls such as `encrypt()`, `decrypt()`, and `hash()` provide cryptographic functionality for data security. These system calls allow processes to perform encryption and decryption operations on data, as well as generate cryptographic hashes for data integrity verification and password storage.
 
 :::tip
-See also [OS security](/operating-system/protection-and-security).
+See also [OS security](/cs-notes/operating-system/protection-and-security).
 :::
 
 ### System Call Implementation
@@ -94,7 +94,7 @@ See also [OS security](/operating-system/protection-and-security).
 Implementation vary of the operating system kernel, the general steps are:
 
 1. **System Call Number & Table**: Each system call is assigned a unique number or identifier by the operating system. The number is used to identify the requested system call, they are maintained in a table that maps the system call numbers to their corresponding kernel functions or handlers.
-2. **User-Space to Kernel-Space Transition**: When a user program invokes a system call, it triggers a transition from user mode to kernel mode. This transition is typically done through a [software interrupt](/operating-system/interrupt-handling) or a special instruction, which transfers control from the user program to the kernel.
+2. **User-Space to Kernel-Space Transition**: When a user program invokes a system call, it triggers a transition from user mode to kernel mode. This transition is typically done through a [software interrupt](/cs-notes/operating-system/interrupt-handling) or a special instruction, which transfers control from the user program to the kernel.
 3. **System Call Handler**: The kernel receives the system call request and identifies the requested system call using the system call number provided by the user program. The system call handler corresponding to the system call number is then invoked.
 4. **Kernel Validation**: The system call handler validate the system call, ensuring that the parameter is valid, the caller has necessary permission, memory address is valid, and checks through other potential security risk.
 5. **Kernel Execution**: If the system call is valid, the handler executes the requested operation on behalf of the user program, depending on the request.

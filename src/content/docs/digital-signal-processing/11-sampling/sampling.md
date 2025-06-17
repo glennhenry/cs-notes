@@ -33,7 +33,7 @@ Source: https://routenote.com/blog/what-is-sample-rate-in-audio/
 
 Sampling signals could introduce several challenges:
 
-- **[Noise](/digital-signal-processing/denoising)**: Noise is an unwanted signal that gets added to the desired signal during the sampling process. This noise can come from various sources, including the sampling device, the environment, or the signal itself. For example, a microphone record the analog sound wave and converts it into a discrete digital signal. While recording, we may unintentionally capture sounds like traffic, people talking, or household appliances.
+- **[Noise](/cs-notes/digital-signal-processing/denoising)**: Noise is an unwanted signal that gets added to the desired signal during the sampling process. This noise can come from various sources, including the sampling device, the environment, or the signal itself. For example, a microphone record the analog sound wave and converts it into a discrete digital signal. While recording, we may unintentionally capture sounds like traffic, people talking, or household appliances.
 
   ![Noise introduce weird pattern to the original signal](./noise.png)  
    Source: https://www.predig.com/whitepaper/reducing-signal-noise-practice
@@ -75,5 +75,5 @@ Upsampling and downsampling are signal processing operations that involve changi
   Source: https://www.divilabs.com/2014/07/upsampling-interpolation-of-discrete.html
 
 :::tip
-See also [sampling in digital image](/computer-graphics/sampling).
+See also [sampling in digital image](/cs-notes/computer-graphics/sampling).
 :::

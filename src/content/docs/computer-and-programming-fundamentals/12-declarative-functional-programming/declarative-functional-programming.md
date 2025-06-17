@@ -11,7 +11,7 @@ description: Declarative & Functional Programming
 
 ### Declarative Programming
 
-**Declarative Programming** is a programming paradigm that focuses on describing what the program should accomplish, rather than specifying how to achieve it. It is the opposite paradigm with the [imperative programming](/computer-and-programming-fundamentals/imperative-procedural-programming#imperative-programming).
+**Declarative Programming** is a programming paradigm that focuses on describing what the program should accomplish, rather than specifying how to achieve it. It is the opposite paradigm with the [imperative programming](/cs-notes/computer-and-programming-fundamentals/imperative-procedural-programming#imperative-programming).
 
 The main characteristic of declarative programming is that it emphasizes the "what" rather than the "how" of a computation. This means that instead of writing step-by-step instructions for the computer to follow, we specify the desired outcome or the relationship between inputs and outputs.
 
@@ -103,7 +103,7 @@ A variable named `add` has a data type of function that takes two `Int` values a
 
 #### Recursion
 
-Functional languages depend on function, many features, such as iteration (e.g., for-loop) is not available. So, they must invent their "hacky" way to achieve such thing with function. Iteration can be achieved through **[recursion](/data-structures-and-algorithms/recursion)**, which is a function that call itself until some condition is achieved. For example, we could make an illusion of loop in a function like:
+Functional languages depend on function, many features, such as iteration (e.g., for-loop) is not available. So, they must invent their "hacky" way to achieve such thing with function. Iteration can be achieved through **[recursion](/cs-notes/data-structures-and-algorithms/recursion)**, which is a function that call itself until some condition is achieved. For example, we could make an illusion of loop in a function like:
 
 ```python
 def loop_for(n):
@@ -144,5 +144,5 @@ Modern programming languages often encompass different programming paradigms, co
 :::
 
 :::tip
-See also [functional languages](/compilers-and-programming-languages/functional-languages).
+See also [functional languages](/cs-notes/compilers-and-programming-languages/functional-languages).
 :::

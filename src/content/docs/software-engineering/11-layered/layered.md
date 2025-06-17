@@ -11,7 +11,7 @@ description: Layered
 
 **Layered architecture**, also known as **multitier** or **n-tier architecture**, is an architecture that organizes the system into distinct layers, each responsible for specific functionality.
 
-Layers are arranged in hierarchical, where layer are stacked on top of other layer, with higher layers depending on the services provided by lower layers. This architecture promotes [separation of concerns](/software-engineering/software-principles#separation-of-concerns-soc) and [modularization](/software-engineering/modularization).
+Layers are arranged in hierarchical, where layer are stacked on top of other layer, with higher layers depending on the services provided by lower layers. This architecture promotes [separation of concerns](/cs-notes/software-engineering/software-principles#separation-of-concerns-soc) and [modularization](/cs-notes/software-engineering/modularization).
 
 ### Architecture
 

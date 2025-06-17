@@ -8,13 +8,13 @@ description: GIF
 
 - **[GIF — Wikipedia](https://en.wikipedia.org/wiki/GIF)**
 
-**GIF (Graphics Interchange Format)** is a digital image format that supports both static and animated images. GIF also supports transparency and uses [lossless compression](/digital-signal-processing/compression#lossless-compression).
+**GIF (Graphics Interchange Format)** is a digital image format that supports both static and animated images. GIF also supports transparency and uses [lossless compression](/cs-notes/digital-signal-processing/compression#lossless-compression).
 
 ### GIF Representation
 
 #### GIF Color Palette
 
-GIF uses an [indexed color palette](/digital-media-processing/bmp#indexed-color), similar to [BMP](/digital-media-processing/bmp).
+GIF uses an [indexed color palette](/cs-notes/digital-media-processing/bmp#indexed-color), similar to [BMP](/cs-notes/digital-media-processing/bmp).
 
 Colors are stored in the color table, and reference with index. Each entry in the color table represents a specific color in RGB (24 bits in size). The number of colors in the color table is typically limited to a maximum of 256 ($2^8$), also called 8-bit color palette.
 

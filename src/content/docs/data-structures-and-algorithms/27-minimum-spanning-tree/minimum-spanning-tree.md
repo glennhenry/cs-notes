@@ -9,7 +9,7 @@ description: Minimum Spanning Tree
 - **[Prim's algorithm — Wikipedia](https://en.wikipedia.org/wiki/Prim%27s_algorithm)**
 - **[Prim's algorithm in 2 minutes — Michael Sambol](https://youtu.be/cplfcGZmX7I?si=cd3rQ5d0UnaGxECM)**
 
-**Minimum Spanning Tree (MST)** is a concept in [graph](/data-structures-and-algorithms/graph), specifically in a [weighted graph](/data-structures-and-algorithms/graph#weighted), where we need to find the minimum possible total weight for connecting all the vertices. The real world application of this is to make the most effective connection between a set of locations.
+**Minimum Spanning Tree (MST)** is a concept in [graph](/cs-notes/data-structures-and-algorithms/graph), specifically in a [weighted graph](/cs-notes/data-structures-and-algorithms/graph#weighted), where we need to find the minimum possible total weight for connecting all the vertices. The real world application of this is to make the most effective connection between a set of locations.
 
 ![Minimum spanning tree](./minimum-spanning-tree.jpg)  
 Source: https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/tutorial/
@@ -18,7 +18,7 @@ Notice that we don't need to explore the entire graph's edges, we are only neede
 
 ### Prim's Algorithm
 
-**Prim's algorithm** is a [greedy algorithm](/data-structures-and-algorithms/greedy) that finds a minimum spanning tree for a [weighted](/data-structures-and-algorithms/graph#weighted) [undirected](/data-structures-and-algorithms/graph#undirected) graph.
+**Prim's algorithm** is a [greedy algorithm](/cs-notes/data-structures-and-algorithms/greedy) that finds a minimum spanning tree for a [weighted](/cs-notes/data-structures-and-algorithms/graph#weighted) [undirected](/cs-notes/data-structures-and-algorithms/graph#undirected) graph.
 
 ```
 function prim(graph, start):
@@ -42,7 +42,7 @@ function prim(graph, start):
     return MST
 ```
 
-Similar to [Dijkstra's algorithm](/data-structures-and-algorithms/shortest-path#dijkstras-algorithm), it uses priority queue to help to prioritize the minimum weight and a visited set to keep track the visited vertex.
+Similar to [Dijkstra's algorithm](/cs-notes/data-structures-and-algorithms/shortest-path#dijkstras-algorithm), it uses priority queue to help to prioritize the minimum weight and a visited set to keep track the visited vertex.
 
 1. It begins from the `start` node, which is initially added to the PQ and extracted immediately.
 2. Ensure that we only visit the node which hasn't been visited.

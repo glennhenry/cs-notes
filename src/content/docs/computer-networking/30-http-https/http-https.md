@@ -16,18 +16,18 @@ description: HTTP & HTTPS
 
 **Hypertext Transfer Protocol (HTTP)** is protocol used for transmitting hypermedia documents, such as HTML files or webpages, over the internet.
 
-HTTP operates on top of the [TCP/IP protocol suite](/computer-networking/tcp-ip-model), using [Transmission Control Protocol (TCP)](/computer-networking/tcp-protocol) as the underlying transport protocol. It typically uses port 80 for communication, although other ports such as 8080 are also commonly used.
+HTTP operates on top of the [TCP/IP protocol suite](/cs-notes/computer-networking/tcp-ip-model), using [Transmission Control Protocol (TCP)](/cs-notes/computer-networking/tcp-protocol) as the underlying transport protocol. It typically uses port 80 for communication, although other ports such as 8080 are also commonly used.
 
 ### HTTP Request & Method
 
 HTTP is a stateless protocol, meaning that each request from the client is independent of previous requests. To maintain state and enable more complex interactions, web applications often use cookies or session tokens to track user sessions.
 
-The protocol follows a client-server model, where the client, typically a [web browser](/internet-and-web/web-browser), sends requests to the server, and the server responds with the requested data.
+The protocol follows a client-server model, where the client, typically a [web browser](/cs-notes/internet-and-web/web-browser), sends requests to the server, and the server responds with the requested data.
 
 ![HTTP client-server mechanism](./client-server-mechanism-http.png)  
 Source: https://www.freecodecamp.org/news/what-is-http/
 
-HTTP requests consist of a method that indicates the type of request, a [Uniform Resource Locator (URL)](/internet-and-web/web-url) that specifies the resource being requested, and optional headers that provide additional information about the request.
+HTTP requests consist of a method that indicates the type of request, a [Uniform Resource Locator (URL)](/cs-notes/internet-and-web/web-url) that specifies the resource being requested, and optional headers that provide additional information about the request.
 
 Some of the common method are:
 
@@ -89,7 +89,7 @@ HTTP request and response follows a specific format and syntax for communication
   - **Status Line**: Specifies the HTTP version, status code, and a brief status message.
   - **Response Headers**: Provide additional information about the response, such as content type, server information, and etc.
   - **Blank Line**: A blank line indicating the end of the headers section.
-  - **Response Body**: Contains the actual content of the response, such as HTML pages, [JSON](/digital-media-processing/json), or binary data.
+  - **Response Body**: Contains the actual content of the response, such as HTML pages, [JSON](/cs-notes/digital-media-processing/json), or binary data.
 
   Example:
 
@@ -144,11 +144,11 @@ Source: https://www.researchgate.net/figure/Comparison-of-HTTP-versions_fig1_312
 
 ## HTTPS
 
-While using HTTP as protocol to retrieve webpage, the information are sent in plain text. This means while information are transmitted, it can be read easily by anyone who has access to the network traffic, this is called [eavesdropping](/computer-security/network-security#eavesdropping). Another bad thing that could happen is someone could manipulate the sensitive information or injecting a malicious code, this is called [Man-in-the-Middle Attack (MITM)](/computer-security/network-security#man-in-the-middle-attack).
+While using HTTP as protocol to retrieve webpage, the information are sent in plain text. This means while information are transmitted, it can be read easily by anyone who has access to the network traffic, this is called [eavesdropping](/cs-notes/computer-security/network-security#eavesdropping). Another bad thing that could happen is someone could manipulate the sensitive information or injecting a malicious code, this is called [Man-in-the-Middle Attack (MITM)](/cs-notes/computer-security/network-security#man-in-the-middle-attack).
 
 The browsing behavior and activities of users can be easily monitored and tracked by various entities, including internet service providers (ISPs), advertisers, and malicious actors. This compromises user privacy and can lead to targeted advertising, profiling, or misuse of personal information.
 
-**Hypertext Transfer Protocol Secure (HTTPS)** is the secure version of HTTP. It employs encryption mechanisms to ensure secure transmission of data over a computer network. HTTPS uses an encryption protocol called [Transport Secure Layer (TLS)](/computer-networking/network-encryption#ssltls).
+**Hypertext Transfer Protocol Secure (HTTPS)** is the secure version of HTTP. It employs encryption mechanisms to ensure secure transmission of data over a computer network. HTTPS uses an encryption protocol called [Transport Secure Layer (TLS)](/cs-notes/computer-networking/network-encryption#ssltls).
 
 ### HTTPS Process
 
@@ -164,9 +164,9 @@ Here is a high-level explanation for HTTPS process:
 
    After the certificate exchange, the server sends a "Server Hello Done" message to indicate that it has completed its part of the handshake. This message serves as a signal to the client that it can proceed with the next step.
 
-3. **Key Exchange**: In the next step, there will be an [asymmetric key exchange](/computer-security/encryption#symmetric--asymmetric-encryption) where the client and server exchange keys. This key exchange process includes sending the necessary information required to encrypt the data. This information typically includes the [key exchange algorithm](/computer-security/encryption#key-exchange), encryption algorithm, and [hash function](/computer-security/hash-function) to be used for the TLS protocol.
+3. **Key Exchange**: In the next step, there will be an [asymmetric key exchange](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption) where the client and server exchange keys. This key exchange process includes sending the necessary information required to encrypt the data. This information typically includes the [key exchange algorithm](/cs-notes/computer-security/encryption#key-exchange), encryption algorithm, and [hash function](/cs-notes/computer-security/hash-function) to be used for the TLS protocol.
 
-4. **Data Transmission**: After the key exchange, a session key is generated. The session key is a [symmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption) key used to encrypt and decrypt the data. The client possesses the public key, while the server has the corresponding private key. In simple terms, the session key can only be used with the public and private keys owned by the client and server. The data is encrypted using the session key, enabling secure transmission between the client and server.
+4. **Data Transmission**: After the key exchange, a session key is generated. The session key is a [symmetric encryption](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption) key used to encrypt and decrypt the data. The client possesses the public key, while the server has the corresponding private key. In simple terms, the session key can only be used with the public and private keys owned by the client and server. The data is encrypted using the session key, enabling secure transmission between the client and server.
 
 HTTPS is the combination of symmetric and asymmetric encryption algorithm. Asymmetric only happens from certificate check to the key exchange process. During data transmission, symmetric algorithm will be used.
 
@@ -174,5 +174,5 @@ HTTPS is the combination of symmetric and asymmetric encryption algorithm. Asymm
 Source: https://blog.bytebytego.com/p/how-does-https-work-episode-6
 
 :::tip
-Find more about general [encryption](/computer-security/encryption) and its terminology including [public and private key](/computer-security/encryption#public--private-key), [key exchange](/computer-security/encryption#key-exchange). Also, about [symmetric and asymmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption).
+Find more about general [encryption](/cs-notes/computer-security/encryption) and its terminology including [public and private key](/cs-notes/computer-security/encryption#public--private-key), [key exchange](/cs-notes/computer-security/encryption#key-exchange). Also, about [symmetric and asymmetric encryption](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption).
 :::

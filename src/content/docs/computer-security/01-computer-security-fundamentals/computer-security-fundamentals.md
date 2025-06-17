@@ -26,16 +26,16 @@ Malicious actors are any individuals, groups, or organizations that intent to ca
 
 In computer security, a common model to understand goals and principles of computer security is the **CIA triad**, which stands for **Confidentiality**, **Integrity**, and **Availability**.
 
-1. **Confidentiality**: Ensures that sensitive data is accessible only to authorized individuals or entities. Access preventation such as [encryption](/computer-security/encryption), access controls, and secure communication protocols are implemented.
+1. **Confidentiality**: Ensures that sensitive data is accessible only to authorized individuals or entities. Access preventation such as [encryption](/cs-notes/computer-security/encryption), access controls, and secure communication protocols are implemented.
 
-2. **Integrity**: Ensures data remains accurate, reliable, and unaltered throughout its lifecycle. It involves protecting data from unauthorized modification, deletion, or [tampering](/computer-security/other-attack-and-exploit#tampering). Techniques such as data validation, [checksums](/computer-security/hash-function#checksums), [digital signatures](/computer-security/computer-security-fundamentals#digital-signature), and secure storage mechanisms are used to maintain data integrity and prevent unauthorized changes.
+2. **Integrity**: Ensures data remains accurate, reliable, and unaltered throughout its lifecycle. It involves protecting data from unauthorized modification, deletion, or [tampering](/cs-notes/computer-security/other-attack-and-exploit#tampering). Techniques such as data validation, [checksums](/cs-notes/computer-security/hash-function#checksums), [digital signatures](/cs-notes/computer-security/computer-security-fundamentals#digital-signature), and secure storage mechanisms are used to maintain data integrity and prevent unauthorized changes.
 
-3. **Availability**: Ensures that computer systems are accessible and operational when needed. It involves preventing disruptions or unauthorized [denial of service (DoS)](/computer-security/network-security#ddos-attack). Various technique such as backup systems, fault tolerance, and distance recovery plans are implemented to maximize system availability and minimize downtime.
+3. **Availability**: Ensures that computer systems are accessible and operational when needed. It involves preventing disruptions or unauthorized [denial of service (DoS)](/cs-notes/computer-security/network-security#ddos-attack). Various technique such as backup systems, fault tolerance, and distance recovery plans are implemented to maximize system availability and minimize downtime.
 
 To ensure computer systems are not disrupted by malicious actors, **authentication** and **authorization** techniques are employed.
 
-- **[Authentication](/backend-system/authentication)**: Authentication is the process of verifying identity of users attempting to access a computer system. A simple authentication mechanism used in our daily life is the password mechanism.
-- **[Authorization](/backend-system/authorization)**: Authorization is the process of giving appropriate level of access to users. We need to ensure authenticated users are only allowed to perform specific actions. For example, in a blog website, a regular user may not have the permission to delete blog posts or delete other user's comments.
+- **[Authentication](/cs-notes/backend-system/authentication)**: Authentication is the process of verifying identity of users attempting to access a computer system. A simple authentication mechanism used in our daily life is the password mechanism.
+- **[Authorization](/cs-notes/backend-system/authorization)**: Authorization is the process of giving appropriate level of access to users. We need to ensure authenticated users are only allowed to perform specific actions. For example, in a blog website, a regular user may not have the permission to delete blog posts or delete other user's comments.
 
 ### Cryptography
 
@@ -91,13 +91,13 @@ It isolates an application or process from the rest of the system or network env
 
 #### Obfuscation
 
-Obfuscation is the process of making code or data difficult to understand or analyze. It prevents an application to be [reverse engineered.](/computer-security/reverse-engineering), or intellectual property theft by making the code or data less comprehensible to human readers or automated analysis tools.
+Obfuscation is the process of making code or data difficult to understand or analyze. It prevents an application to be [reverse engineered.](/cs-notes/computer-security/reverse-engineering), or intellectual property theft by making the code or data less comprehensible to human readers or automated analysis tools.
 
 Technique can include changing variable, function, class name to some arbitrary or non-descriptive name, encrypting a section of code, changing a structure of code without changing its functionality.
 
 #### Digital Signature
 
-A digital signature is basically a signature which is used to provide authentication and integrity for digital documents. It uses the concept of [encryption](/computer-security/encryption), specifically the [private and public key](/computer-security/encryption#public--private-key).
+A digital signature is basically a signature which is used to provide authentication and integrity for digital documents. It uses the concept of [encryption](/cs-notes/computer-security/encryption), specifically the [private and public key](/cs-notes/computer-security/encryption#public--private-key).
 
 A digital signature is unique to the sender. It is created using special mathematical algorithms and a secret code known as a **private key**. This private key is kept secure and known only to the signer. To verify the content, another key called **public key** will be used. The public key will also produce some code, the resulting code will be the same as the resulting code produced by private key.
 
@@ -107,9 +107,9 @@ Certificate is a digital document issued by a trusted third-party organization k
 
 #### Steganography
 
-Steganography is the practice of hiding information in a media such as images or videos. An image contains a sequence of RGB pixels, which is encoded in bits (e.g., 8-bit for each color). Hiding information involve changing one of the bits which has the lowest significance (called the [least significant bits (LSB)](/computer-and-programming-fundamentals/binary-representation#least--most-significant-bit)) to the hidden information. Changing the least significant bits make the embedded information doesn't affect the overall data significantly.
+Steganography is the practice of hiding information in a media such as images or videos. An image contains a sequence of RGB pixels, which is encoded in bits (e.g., 8-bit for each color). Hiding information involve changing one of the bits which has the lowest significance (called the [least significant bits (LSB)](/cs-notes/computer-and-programming-fundamentals/binary-representation#least--most-significant-bit)) to the hidden information. Changing the least significant bits make the embedded information doesn't affect the overall data significantly.
 
-The inserted information will need to be encoded in number as well, the point is, it must fit within the color. For example, we can transform a hidden message in plain text to number using the [ASCII encoding](/computer-and-programming-fundamentals/data-representation#ascii), which is 8-bit, making it suitable for RGB color representation (e.g., in ASCII decimal form, "goodbye" can be encoded to 01100111). We will then insert each binary bit into the image by modifying each LSB of the color. To further ensure no significant change are visible, we can solely use one color channel. To signal the conclusion of the message, we can easily designate the succeeding pixel following the message's end as the ending sequence.
+The inserted information will need to be encoded in number as well, the point is, it must fit within the color. For example, we can transform a hidden message in plain text to number using the [ASCII encoding](/cs-notes/computer-and-programming-fundamentals/data-representation#ascii), which is 8-bit, making it suitable for RGB color representation (e.g., in ASCII decimal form, "goodbye" can be encoded to 01100111). We will then insert each binary bit into the image by modifying each LSB of the color. To further ensure no significant change are visible, we can solely use one color channel. To signal the conclusion of the message, we can easily designate the succeeding pixel following the message's end as the ending sequence.
 
 ![Steganography](./steganography.jpeg)  
 Source: https://www.quora.com/What-is-steganography-and-what-is-it-used-for

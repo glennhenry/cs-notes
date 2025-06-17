@@ -82,5 +82,5 @@ In systems like Git & GitHub, another common terminology are:
 - **Issues**: Issues are task, bug report, or feature request that is tracked and managed within a project. Issues serve as a way to document, discuss, and track work items or problems related to a software project.
 
 :::tip
-See also [open sourcing](/software-engineering/open-sourcing) for more information about collaboration and contributing.
+See also [open sourcing](/cs-notes/software-engineering/open-sourcing) for more information about collaboration and contributing.
 :::

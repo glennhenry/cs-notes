@@ -21,7 +21,7 @@ During the execution of program, the program's instructions or code need to be l
 
 #### Stack
 
-The stack is a region of memory used for the management of function calls and local variables. It operates on the principle of [stack data structure](/data-structures-and-algorithms/stack). Each time a function is called, a new stack frame is created and pushed onto the stack. The stack frame contains information such as function parameters, return address, and local variables.
+The stack is a region of memory used for the management of function calls and local variables. It operates on the principle of [stack data structure](/cs-notes/data-structures-and-algorithms/stack). Each time a function is called, a new stack frame is created and pushed onto the stack. The stack frame contains information such as function parameters, return address, and local variables.
 
 As functions complete their execution, their stack frames are popped off the stack, allowing the program to return to the calling function. This mechanism enables the program to manage the flow of execution and maintain the context of function calls.
 
@@ -72,11 +72,11 @@ a = 5
 a = 3
 ```
 
-When we assign `a = 5`, a memory object representing the value `5` is created and stored. The variable `a` is then associated with this object. Later, when we assign `a = 3`, assuming numbers are immutable, a new memory object representing the value `3` is created. The variable `a` is updated to reference this new object. The original object representing `5` remains in memory until it is cleaned up by the [garbage collector](/computer-and-programming-fundamentals/memory#garbage-collection) or manually released in lower-level programming languages.
+When we assign `a = 5`, a memory object representing the value `5` is created and stored. The variable `a` is then associated with this object. Later, when we assign `a = 3`, assuming numbers are immutable, a new memory object representing the value `3` is created. The variable `a` is updated to reference this new object. The original object representing `5` remains in memory until it is cleaned up by the [garbage collector](/cs-notes/computer-and-programming-fundamentals/memory#garbage-collection) or manually released in lower-level programming languages.
 
 #### Object
 
-Object can refer to object in [OOP](/computer-and-programming-fundamentals/object-oriented-programming), which is a particular instance of a class. In general, when we refer to object, we tend to describe it as anything that has name or identifier, such as a variable.
+Object can refer to object in [OOP](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming), which is a particular instance of a class. In general, when we refer to object, we tend to describe it as anything that has name or identifier, such as a variable.
 
 #### Null
 
@@ -115,7 +115,7 @@ int* ptr = &x;
 
 When we say `*ptr = 10`, we are dereferencing the pointer and assigning a value 10 to that address. What we did is changing the value directly from the memory address that holds it. As a result, any variable associated with that address, such as `x`, will also be modified. Using pointer, we can effectively modify other variables indirectly through their shared memory address.
 
-Pointer which stores memory address allows us to have direct memory access. This is useful for implementing data structures like [tree](/data-structures-and-algorithms/tree) or [linked list](/data-structures-and-algorithms/linked-list), where each node need to connection with other node. We can allow connection between node by having a pointer that points to other node's address.
+Pointer which stores memory address allows us to have direct memory access. This is useful for implementing data structures like [tree](/cs-notes/data-structures-and-algorithms/tree) or [linked list](/cs-notes/data-structures-and-algorithms/linked-list), where each node need to connection with other node. We can allow connection between node by having a pointer that points to other node's address.
 
 ##### Purpose of Reference
 
@@ -144,8 +144,8 @@ Some purpose of using reference:
 
 The two important type of reference:
 
-- **Strong Reference**: A strong reference is the default type of reference in many programming languages. It keeps an object in memory as long as there is at least one strong reference pointing to it. As long as there are active strong references, the object will not be [garbage-collected](/computer-and-programming-fundamentals/memory#garbage-collection).
-- **Weak Reference**: A weak reference is a type of reference that does not prevent the object from being garbage-collected. In other word, when a variable have weak reference to an object, we can't guarantee that the variable will always contain that object, as the object may be garbage-collected or cleaned from the memory. If the object is garbage-collected and we are accessing the variable, we may get [null](/computer-and-programming-fundamentals/memory#null) value.
+- **Strong Reference**: A strong reference is the default type of reference in many programming languages. It keeps an object in memory as long as there is at least one strong reference pointing to it. As long as there are active strong references, the object will not be [garbage-collected](/cs-notes/computer-and-programming-fundamentals/memory#garbage-collection).
+- **Weak Reference**: A weak reference is a type of reference that does not prevent the object from being garbage-collected. In other word, when a variable have weak reference to an object, we can't guarantee that the variable will always contain that object, as the object may be garbage-collected or cleaned from the memory. If the object is garbage-collected and we are accessing the variable, we may get [null](/cs-notes/computer-and-programming-fundamentals/memory#null) value.
 
 There are also soft, phantom, and unreachable reference.
 
@@ -158,7 +158,7 @@ int arr[5] = {1, 2, 3, 4, 5};
 int* p = arr;
 ```
 
-In this C code, an array of integer called `arr` is created. Then, we create a pointer called `p` that points to `arr`. This works, because essentially [array is just a pointer under the hood](/data-structures-and-algorithms/array) that points to the first element of the array. So, `arr` and `p` both points to the address of element 1.
+In this C code, an array of integer called `arr` is created. Then, we create a pointer called `p` that points to `arr`. This works, because essentially [array is just a pointer under the hood](/cs-notes/data-structures-and-algorithms/array) that points to the first element of the array. So, `arr` and `p` both points to the address of element 1.
 
 In programming languages, array access is typically done with square bracket. `arr[3]` is accessing element of index 3 from the `arr`. Under the hood, we are calculating the memory address of element of index 3 and through that memory address, we obtained the actual element. This can be done using pointer arithmetic.
 

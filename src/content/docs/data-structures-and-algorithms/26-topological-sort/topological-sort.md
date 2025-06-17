@@ -9,7 +9,7 @@ description: Topological Sort
 - **[Topological sorting — Wikipedia](https://en.wikipedia.org/wiki/Topological_sorting)**
 - **[Topological Sort Visualized and Explained — Carl the Person](https://youtu.be/7J3GadLzydI?si=KKS4GPSjS7SAd_om)**
 
-**Topological Sort** is an algorithm used to order the vertices of a [directed graph](/data-structures-and-algorithms/graph#directed), so that each vertex appears before any of its successors in the ordering. It provides a linear ordering of the vertices that respects the directed edges of the graph.
+**Topological Sort** is an algorithm used to order the vertices of a [directed graph](/cs-notes/data-structures-and-algorithms/graph#directed), so that each vertex appears before any of its successors in the ordering. It provides a linear ordering of the vertices that respects the directed edges of the graph.
 
 ![Topological sort](./topological-sort.png)
 
@@ -17,7 +17,7 @@ The one that is pointed should be done after the one pointing to it. The main ap
 
 ### Algorithm
 
-The algorithm can be implemented using [DFS](/data-structures-and-algorithms/traversal#depth-first-search-dfs) or [BFS](/data-structures-and-algorithms/traversal#breadth-first-search-bfs) traversal.
+The algorithm can be implemented using [DFS](/cs-notes/data-structures-and-algorithms/traversal#depth-first-search-dfs) or [BFS](/cs-notes/data-structures-and-algorithms/traversal#breadth-first-search-bfs) traversal.
 
 ```
 function topologicalSort(graph):

@@ -25,7 +25,7 @@ There are three different scenarios we can consider in order to evaluate the per
 
 - **Worst-case Scenario**: The worst-case scenario represents the input that leads to the least efficient execution or the highest time and space complexity for an algorithm. It represents the most unfavorable conditions the algorithm may encounter in terms of input data. The worst-case analysis is commonly used to measure the algorithm's performance as it helps identify any potential limitations.
 
-For example, the [linear search algorithm](/data-structures-and-algorithms/search#linear-search) is an algorithm that search for specific element in some collection. The algorithm works by checking each element one by one and decide if it is the element we are looking for. This algorithm typically starts from the left until the rightmost element.
+For example, the [linear search algorithm](/cs-notes/data-structures-and-algorithms/search#linear-search) is an algorithm that search for specific element in some collection. The algorithm works by checking each element one by one and decide if it is the element we are looking for. This algorithm typically starts from the left until the rightmost element.
 
 ![Linear search](./linear-search.gif)  
 Source: https://sushrutkuchik.wordpress.com/2020/05/24/searching-algorithms-visualized/

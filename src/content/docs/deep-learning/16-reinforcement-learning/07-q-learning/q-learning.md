@@ -13,15 +13,15 @@ description: Q-Learning
 - **[Q-Learning Explained - A Reinforcement Learning Technique — deeplizard](https://youtu.be/qhRNvCVVJaA?si=UPvDuOOCuOsDQf9V)**
 - **[Deep Q-Learning Tutorial: minDQN by Mike Wang — Medium](https://towardsdatascience.com/deep-q-learning-tutorial-mindqn-2a4c855abffc)**
 
-**Q-Learning** is a [model-free](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#model-based--model-free) algorithm to estimate the action-value function (Q-values). Q-learning is an **off-policy algorithm** that updates its policy without using its current policy, it differs with on-policy algorithms like [SARSA](/deep-learning/reinforcement-learning/sarsa) that update based on the current policy.
+**Q-Learning** is a [model-free](/cs-notes/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#model-based--model-free) algorithm to estimate the action-value function (Q-values). Q-learning is an **off-policy algorithm** that updates its policy without using its current policy, it differs with on-policy algorithms like [SARSA](/cs-notes/deep-learning/reinforcement-learning/sarsa) that update based on the current policy.
 
 ### Algorithm
 
-Q-Learning is another type of [TD](/deep-learning/reinforcement-learning/temporal-difference), the algorithm is similar to [SARSA](/deep-learning/reinforcement-learning/sarsa), however, it differs in the update rule.
+Q-Learning is another type of [TD](/cs-notes/deep-learning/reinforcement-learning/temporal-difference), the algorithm is similar to [SARSA](/cs-notes/deep-learning/reinforcement-learning/sarsa), however, it differs in the update rule.
 
 1. **Initialization**: First, the Q-values is initialized to some arbitary or some initial values.
 
-2. **Choose action**: The agent selects an action to take in the current state based on the Q-values. It can use the [epsilon-greedy](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#epsilon-greedy) strategy to balance the [exploration and exploitation](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#exploration--exploitation).
+2. **Choose action**: The agent selects an action to take in the current state based on the Q-values. It can use the [epsilon-greedy](/cs-notes/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#epsilon-greedy) strategy to balance the [exploration and exploitation](/cs-notes/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#exploration--exploitation).
 
 3. **Update Rule**: Based on the observed transition (state, action, reward, next state), the agent update the Q-value using the following update rule:
 
@@ -35,22 +35,22 @@ Q-Learning is another type of [TD](/deep-learning/reinforcement-learning/tempora
 
 ### Q-Table
 
-Q-table (also known as the action-value table) is a data structure that stores the estimated Q-values for each state-action pair in Q-learning. Initially, the Q-table is usually initialized with arbitrary values or set to zeros. Then, as the agent interacts with the environment and learns from the observed rewards, we will use [Bellman equation](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#bellman-equation) to update the Q-values in the Q-table.
+Q-table (also known as the action-value table) is a data structure that stores the estimated Q-values for each state-action pair in Q-learning. Initially, the Q-table is usually initialized with arbitrary values or set to zeros. Then, as the agent interacts with the environment and learns from the observed rewards, we will use [Bellman equation](/cs-notes/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#bellman-equation) to update the Q-values in the Q-table.
 
 ![Q-table](./q-table.png)  
 Source: https://www.researchgate.net/figure/The-model-of-Q-learning-and-the-structure-of-Q-table_fig1_339665871
 
 ### Q-Network
 
-A Q-network, also known as a Q-function approximator or Q-value function approximator, is a type of [neural network](/deep-learning/neural-network) used in reinforcement learning to approximate the Q-values for state-action pairs.
+A Q-network, also known as a Q-function approximator or Q-value function approximator, is a type of [neural network](/cs-notes/deep-learning/neural-network) used in reinforcement learning to approximate the Q-values for state-action pairs.
 
 Neural network is pretty good at approximating complex and non-linear function. The Q-values in reinforcement learning problems can be highly complex and depend on intricate relationships between states and actions. Using neural network will also help us generalize on unseen states.
 
-The network can be implemented using a simple fully connected network or a [convolutional neural network (CNN)](/deep-learning/cnn) if related to image problem.
+The network can be implemented using a simple fully connected network or a [convolutional neural network (CNN)](/cs-notes/deep-learning/cnn) if related to image problem.
 
 The network will take a state, it will be passed through the network and will produce a set of Q-values of all possible action over a given state. We will then choose the maximum Q-values and continue the agent exploration.
 
-The parameter of the network will be updated to minimize the loss. The loss is calculated by comparing the predicted Q-values and the target Q-values. The target Q-values are computed using the [Bellman equation](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#bellman-equation), which takes current Q-values and reward the agent received.
+The parameter of the network will be updated to minimize the loss. The loss is calculated by comparing the predicted Q-values and the target Q-values. The target Q-values are computed using the [Bellman equation](/cs-notes/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#bellman-equation), which takes current Q-values and reward the agent received.
 
 ![Q-network](./q-network.png)  
 Source: https://wikidocs.net/174548

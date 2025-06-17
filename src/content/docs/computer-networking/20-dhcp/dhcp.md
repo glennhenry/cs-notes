@@ -9,7 +9,7 @@ description: DHCP
 - **[DHCP Explained - Dynamic Host Configuration Protocol — PowerCert](https://youtu.be/e6-TaH5bkjo?si=rdy-8mWmonsaucyb)**
 - **[ APIPA Explained - Automatic Private IP Addressing — PowerCert](https://youtu.be/0tEjUR6tjBU?si=QJqOaTbiLSZTWg6o)**
 
-In a network, all devices are identified by [IP address](/computer-networking/ip-address), **Dynamic Host Configuration Protocol (DHCP)** is the protocol used to automatically assign IP addresses and other network configuration parameters to devices on a network.
+In a network, all devices are identified by [IP address](/cs-notes/computer-networking/ip-address), **Dynamic Host Configuration Protocol (DHCP)** is the protocol used to automatically assign IP addresses and other network configuration parameters to devices on a network.
 
 DHCP simplifies the process of network administration by dynamically allocating IP addresses to devices as they connect to the network, rather than requiring manual configuration of each device.
 

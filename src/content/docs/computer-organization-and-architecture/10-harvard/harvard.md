@@ -8,7 +8,7 @@ description: Harvard
 
 - **[Harvard architecture — Wikipedia](https://en.wikipedia.org/wiki/Harvard_architecture)**
 
-**Harvard architecture** is another computer architecture design, the characteristics is that it has separate storage for program's instructions and data. In contrast, [von Neumann](/computer-organization-and-architecture/von-neumann#architecture) architecture combines them both.
+**Harvard architecture** is another computer architecture design, the characteristics is that it has separate storage for program's instructions and data. In contrast, [von Neumann](/cs-notes/computer-organization-and-architecture/von-neumann#architecture) architecture combines them both.
 
 ![Harvard architecture](./harvard-architecture.png)  
 Source: https://en.wikipedia.org/wiki/Harvard_architecture

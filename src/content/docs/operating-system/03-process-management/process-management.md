@@ -18,13 +18,13 @@ description: Process Management
 
 **Process** is an instance of a program that is being executed by a computer system. To execute a program, the program's code and data will need to be loaded into the memory. This mean each process will have its own memory space and system resources allocated to it.
 
-Processes are isolated from each other, meaning they cannot directly access each other's memory or resources. However, they can still communicate through an [inter-process communication (IPC)](/operating-system/inter-process-communication) if they need to share data or information.
+Processes are isolated from each other, meaning they cannot directly access each other's memory or resources. However, they can still communicate through an [inter-process communication (IPC)](/cs-notes/operating-system/inter-process-communication) if they need to share data or information.
 
 #### PCB
 
-Process has many information associated with it, individual process is organized in a data structure called **Process Control Block (PCB)**, which contains [process state](#process-state), **process identifier (PID)**, various registers such as [program counter](/computer-organization-and-architecture/registers-and-ram#type-of-registers), etc.
+Process has many information associated with it, individual process is organized in a data structure called **Process Control Block (PCB)**, which contains [process state](#process-state), **process identifier (PID)**, various registers such as [program counter](/cs-notes/computer-organization-and-architecture/registers-and-ram#type-of-registers), etc.
 
-Those individual process are organized together with the [linked list data structure](/data-structures-and-algorithms/linked-list), where each process has a pointer to the next process.
+Those individual process are organized together with the [linked list data structure](/cs-notes/data-structures-and-algorithms/linked-list), where each process has a pointer to the next process.
 
 ![PCB data structure](./pcb.png)  
 Source: https://byjus.com/gate/process-control-block-notes/
@@ -59,7 +59,7 @@ There are two types of multitasking:
 - **Preemptive Multitasking**: This technique allocates CPU time to multiple processes by forcibly interrupting and suspending the execution of one process to give time to another process.
 - **Cooperative Multitasking**: This technique relies on processes voluntarily yielding control to other processes. In this approach, each process is responsible for explicitly relinquishing the CPU when it has completed its task or when it wants to allow other processes to run.
 
-Preemptive multitasking introduces overhead as it relies on the OS to schedule and manage the execution between tasks, while cooperative multitasking manages the execution themselves. Cooperative multitasking can be an up or down, it's important to manage the execution fairly between thread, or an issue called [starvation](/operating-system/multithreading#multithreading-problems) may occur. [**Thread**](#thread) is the construct that allows you to multitask preemptively, the construct that allows you to multitask cooperatively is called [**coroutine**](/computer-and-programming-fundamentals/concurrency#coroutine).
+Preemptive multitasking introduces overhead as it relies on the OS to schedule and manage the execution between tasks, while cooperative multitasking manages the execution themselves. Cooperative multitasking can be an up or down, it's important to manage the execution fairly between thread, or an issue called [starvation](/cs-notes/operating-system/multithreading#multithreading-problems) may occur. [**Thread**](#thread) is the construct that allows you to multitask preemptively, the construct that allows you to multitask cooperatively is called [**coroutine**](/cs-notes/computer-and-programming-fundamentals/concurrency#coroutine).
 
 When trying to switch the execution between process, the current state of process being executed will be saved, so it can be restored and resumed later. This process is called **[context switch](#context-switch)**.
 

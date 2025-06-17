@@ -15,7 +15,7 @@ Source: https://youtu.be/tOj8MSEIbfA?si=YR3ef9cTMsjcD4lp&t=64
 
 ### FTP Process
 
-FTP relies on [TCP protocol](/computer-networking/tcp-protocol) for reliable data transfer. Because it's based on TCP, there will be TCP handshakes before connecting to the server. FTP is based on command-response communication, this means client will send command as the request to the server such as RETR to retrieve a file or STOR to store a file.
+FTP relies on [TCP protocol](/cs-notes/computer-networking/tcp-protocol) for reliable data transfer. Because it's based on TCP, there will be TCP handshakes before connecting to the server. FTP is based on command-response communication, this means client will send command as the request to the server such as RETR to retrieve a file or STOR to store a file.
 
 Here are the high level process of FTP:
 
@@ -48,7 +48,7 @@ FTP is not really secure, it has some security issue such as:
 
 Secure File Transfer Protocol (SFTP) is commonly used as a secure alternative to FTP (File Transfer Protocol) because it adds encryption and authentication mechanisms to protect data during transit.
 
-SFTP uses [Secure Shell (SSH)](/computer-networking/network-encryption#ssh) as its underlying protocol, which provides encryption and data integrity. All data, including file content, commands, and authentication credentials, are encrypted to prevent unauthorized access or eavesdropping. SFTP also uses TCP for reliable data transfer and it operates on port 22 instead.
+SFTP uses [Secure Shell (SSH)](/cs-notes/computer-networking/network-encryption#ssh) as its underlying protocol, which provides encryption and data integrity. All data, including file content, commands, and authentication credentials, are encrypted to prevent unauthorized access or eavesdropping. SFTP also uses TCP for reliable data transfer and it operates on port 22 instead.
 
 ![Security comparison between FTP and SFTP](./ftp-vs-sftp.png)  
 Source: https://www.educba.com/ftp-vs-sftp/

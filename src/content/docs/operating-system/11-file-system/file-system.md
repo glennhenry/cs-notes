@@ -21,9 +21,9 @@ At the lowest level, disk stores data in binary 0s and 1s, grouped together into
 
 ### File
 
-File is a named collection of related data that is stored on a storage medium. File contains information, depending on the file format, it can either be binary data (machine-readable) or plain text data (human-readable), which is encoded in specific encoding format such as [ASCII](/computer-and-programming-fundamentals/data-representation#ascii) or [UTF-8](/computer-and-programming-fundamentals/data-representation#utf).
+File is a named collection of related data that is stored on a storage medium. File contains information, depending on the file format, it can either be binary data (machine-readable) or plain text data (human-readable), which is encoded in specific encoding format such as [ASCII](/cs-notes/computer-and-programming-fundamentals/data-representation#ascii) or [UTF-8](/cs-notes/computer-and-programming-fundamentals/data-representation#utf).
 
-Internally, a file is typically represented as a sequence of bytes or characters. File have specific format that explain how the file is structured. For example, image file format such as [PNG](/digital-media-processing/png) structure it's contents such that, computer know how to interpret it meaningfully. It may contain information about the file or the actual file information; in the case of images, it is the pixel data.
+Internally, a file is typically represented as a sequence of bytes or characters. File have specific format that explain how the file is structured. For example, image file format such as [PNG](/cs-notes/digital-media-processing/png) structure it's contents such that, computer know how to interpret it meaningfully. It may contain information about the file or the actual file information; in the case of images, it is the pixel data.
 
 ![File content](./file-content.png)  
 Source: [PNG file](https://twitter.com/likev/status/1395285523460083714), [TXT file](https://www.techtarget.com/whatis/definition/ASCII-American-Standard-Code-for-Information-Interchange)
@@ -34,7 +34,7 @@ The specific format or type of files is typically associated within the name as 
 Source: https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/11_FileSystemInterface.html
 
 :::tip
-More about the [structure of specific file format](/digital-media-processing)
+More about the [structure of specific file format](/cs-notes/digital-media-processing)
 :::
 
 #### File Attributes
@@ -51,7 +51,7 @@ The file system keep track of the data information, file has many attributes:
 #### File Operation
 
 - **Create**: Create a new file entry along with information associated with the file, this requires allocating space for the file, and a directory to store the file.
-- **Write**: The write operation is used to modify the contents of a file or append new data to it. Through [system call](/operating-system/system-call), we will specify the target file, starting position, and the data to be written. The OS translates the logical file address to a physical disk location and writes the data to the appropriate sectors or blocks on the storage medium.
+- **Write**: The write operation is used to modify the contents of a file or append new data to it. Through [system call](/cs-notes/operating-system/system-call), we will specify the target file, starting position, and the data to be written. The OS translates the logical file address to a physical disk location and writes the data to the appropriate sectors or blocks on the storage medium.
 - **Read**: The read operation retrieves data from a file and transfers it into memory. It involves specifying the file to read, the starting position, and the number of bytes to read. The OS translates the logical file address to a physical disk location, retrieves the requested data, and transfers it to the requesting process or buffer.
 - **Reposition / Seek**: The seek operation is used to reposition the current read/write position within a file. It involves specifying an offset from a reference point (e.g., the beginning, current position, or end of the file) and a direction (forward or backward). The OS updates the file's read/write pointer accordingly, allowing subsequent read or write operations to occur at the desired location.
 - **Delete**: The delete operation removes a file from the file system. It involves locating the file's metadata, freeing the associated disk space, and updating directory entries or file system structures to reflect the deletion.
@@ -74,7 +74,7 @@ To ensure only authorized processes have access to files, the OS provide a mecha
 
 In a multi-user environment where multiple users operate the same computer, meaning they may share access to files, this is where file security becomes even more critical. The operating system provides features to handle file sharing and control how files may be accessed by different users, not just processes.
 
-In [Unix OS](/operating-system/unix), each file is assigned a 9-bit binary protection code, which consists of three 3-bit fields representing the **owner**, the **owner's group**, and everyone else (also called **universe**). These fields determine the level of access granted to different users or groups for a particular file.
+In [Unix OS](/cs-notes/operating-system/unix), each file is assigned a 9-bit binary protection code, which consists of three 3-bit fields representing the **owner**, the **owner's group**, and everyone else (also called **universe**). These fields determine the level of access granted to different users or groups for a particular file.
 
 The three permission bits for each field are:
 
@@ -140,18 +140,18 @@ Multiple parents allow directory to have links, which are references or pointers
 
 The two types of graph for directory representation:
 
-- **[Acyclic Graph](/data-structures-and-algorithms/graph#acyclic)**: This directory structure uses a **directed acyclic graphs (DAGs)** to represent directories and their relationships. Directories can have multiple parents, and symbolic links can be used to create additional directory references. However, it is important to maintain acyclicity, meaning there should be no cyclic dependencies or loops in the graph.
+- **[Acyclic Graph](/cs-notes/data-structures-and-algorithms/graph#acyclic)**: This directory structure uses a **directed acyclic graphs (DAGs)** to represent directories and their relationships. Directories can have multiple parents, and symbolic links can be used to create additional directory references. However, it is important to maintain acyclicity, meaning there should be no cyclic dependencies or loops in the graph.
 
   ![Acyclic graph](./acyclic-graph.png)  
   Source: https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/11_FileSystemInterface.html
 
-- **[General Graph](/data-structures-and-algorithms/graph)**: In a general graph directory structure, directories are represented using a general graph data structure, which may have cycles and arbitrary relationships. Managing and navigating a general graph directory structure may require additional algorithms or mechanisms to handle cycles and resolve conflicts.
+- **[General Graph](/cs-notes/data-structures-and-algorithms/graph)**: In a general graph directory structure, directories are represented using a general graph data structure, which may have cycles and arbitrary relationships. Managing and navigating a general graph directory structure may require additional algorithms or mechanisms to handle cycles and resolve conflicts.
 
   ![General graph](./general-graph.png)  
   Source: https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/11_FileSystemInterface.html
 
 :::note
-[Tree](/data-structures-and-algorithms/tree) is a special case of graph where the properties are undirected and acyclic. It contains no cycles or loops and connected, meaning there is a path between any two vertices.
+[Tree](/cs-notes/data-structures-and-algorithms/tree) is a special case of graph where the properties are undirected and acyclic. It contains no cycles or loops and connected, meaning there is a path between any two vertices.
 :::
 
 ### File System Implementation
@@ -169,7 +169,7 @@ File system is designed with multiple levels, forming a layered structure.
    ![File system structure](./file-system-structure.png)  
    Source: https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/12_FileSystemImplementation.html
 
-More about disk in [disk management](/operating-system/disk-management).
+More about disk in [disk management](/cs-notes/operating-system/disk-management).
 
 #### File Control Block
 
@@ -201,7 +201,7 @@ Source: https://www.minitool.com/partition-disk/volume-vs-partition.html
 
 #### Directory Implementation
 
-Two common approaches are using a [linear list](/data-structures-and-algorithms/linked-list) and a [hash table](/data-structures-and-algorithms/hash-table).
+Two common approaches are using a [linear list](/cs-notes/data-structures-and-algorithms/linked-list) and a [hash table](/cs-notes/data-structures-and-algorithms/hash-table).
 
 - **Linear List**: The directory entries are stored in a sequential list. Each entry contains the file name and a pointer to the corresponding file data. This method is simple to program, but it may result in slower searching, especially for large directories.
 
@@ -209,7 +209,7 @@ Two common approaches are using a [linear list](/data-structures-and-algorithms/
 
 - **Hash Table**: In this approach, a linear list is still used to store the directory entries, but a hash data structure is employed as well. The hash table takes a value computed from the file name and returns a pointer to the corresponding entry in the linear list. This allows for faster directory search by greatly reducing the search time.
 
-  When a file name needs to be looked up, it is hashed to generate a value within a given range. This value is then used to directly access the corresponding entry in the linear list, avoiding the need for sequential searching. However, [collisions](/computer-security/hash-function#collision) may occur when two file names hash to the same location, requiring collision resolution techniques, such as using a linked list within each hash entry.
+  When a file name needs to be looked up, it is hashed to generate a value within a given range. This value is then used to directly access the corresponding entry in the linear list, avoiding the need for sequential searching. However, [collisions](/cs-notes/computer-security/hash-function#collision) may occur when two file names hash to the same location, requiring collision resolution techniques, such as using a linked list within each hash entry.
 
   ![Hash table directory](./hash-table-directory.png)  
   Source: https://www.javatpoint.com/os-directory-implementation
@@ -218,7 +218,7 @@ Two common approaches are using a [linear list](/data-structures-and-algorithms/
 
 **Allocation Methods** are the methods of allocating space on a storage device to store files in a file system. It involves managing the storage resources and organizing the physical locations where files are stored on the storage medium.
 
-See [storage allocation](/operating-system/disk-management#storage-allocation).
+See [storage allocation](/cs-notes/operating-system/disk-management#storage-allocation).
 
 #### Free-Space Management
 
@@ -227,7 +227,7 @@ See [storage allocation](/operating-system/disk-management#storage-allocation).
 - **Allocation**: When a new file needs to be created, the system identifies and allocates a suitable portion of the storage medium to store the file. The system finds contiguous or non-contiguous set of free blocks that can accommodate the file's size.
 - **Deallocation**: When a file is deleted or no longer needed, the system marks the previously allocated blocks as free, making them available for future allocations.
 
-See [free-space management](/operating-system/disk-management#free-space-management).
+See [free-space management](/cs-notes/operating-system/disk-management#free-space-management).
 
 ### File System Example
 
@@ -237,7 +237,7 @@ See [free-space management](/operating-system/disk-management#free-space-managem
 
 - **Structure**:
 
-  - The FAT file system organizes data on a storage device into **[clusters](/operating-system/disk-management#disk-structure)**, which are contiguous fixed-size units of allocation on the disk.
+  - The FAT file system organizes data on a storage device into **[clusters](/cs-notes/operating-system/disk-management#disk-structure)**, which are contiguous fixed-size units of allocation on the disk.
   - The file system consists of four regions: **reserved sectors**, **FAT region**, **root directory region**, and **data region**.
   - Reserved sectors is a portion of the file system that is reserved for the system file, it includes the boot sector, which contains information for booting the system.
   - The FAT is the main component, it is a table that keeps track of the allocation status of each disk block.
@@ -247,7 +247,7 @@ See [free-space management](/operating-system/disk-management#free-space-managem
 - **File Allocation Table**:
 
   - FAT is a table that keeps track of which clusters are allocated to files and directories.
-  - Each entry in the table represents a cluster and contains information about the status of the cluster (such as whether it is free, allocated, or marked as bad). Entries are chained together forming a [linked list](/data-structures-and-algorithms/linked-list).
+  - Each entry in the table represents a cluster and contains information about the status of the cluster (such as whether it is free, allocated, or marked as bad). Entries are chained together forming a [linked list](/cs-notes/data-structures-and-algorithms/linked-list).
   - An entry of FAT depends on the version, FAT12 uses 12 bits, FAT16 uses 16 bits, and so on.
   - For example, an entry in FAT32 can be `0x00000000`, this represents a free cluster, a `0x0FFFFFFF` indicates an end-of-file marker or a special purpose value.
 
@@ -280,7 +280,7 @@ The image above is the access control lists in Windows 7. Permissions can be ass
 
 NTFS consists three important components **partition boot sector (PBS)**, **master file table (MFT)**, and **metafiles**. The fundamental data structure in NTFS is the MFT. MFT keeps track of the file's metadata and the address of file's blocks, eliminating the need for a separate table like in FAT. If a file is extremely large, it may require multiple MFT records to contain the list of its blocks.
 
-- **PBS**: Located at the first sector of a disk partition. It contains essential information for the system to [boot](/operating-system/booting), such as the boot code that initiates the system's startup process, magic number that identifies NTFS file system, and the partition table that identifies the partition structure on the disk. In NTFS, the PBS includes the bootstrap code that loads the operating system's bootloader, which is responsible for starting the operating system.
+- **PBS**: Located at the first sector of a disk partition. It contains essential information for the system to [boot](/cs-notes/operating-system/booting), such as the boot code that initiates the system's startup process, magic number that identifies NTFS file system, and the partition table that identifies the partition structure on the disk. In NTFS, the PBS includes the bootstrap code that loads the operating system's bootloader, which is responsible for starting the operating system.
 
   ![NTFS PBS](./ntfs-pbs.png)  
   Source: https://twitter.com/jaredcatkinson/status/590333209495244801
@@ -300,7 +300,7 @@ NTFS consists three important components **partition boot sector (PBS)**, **mast
 
 #### ext
 
-**Extended file system (ext)** is a file system for [Linux kernel](/operating-system/linux-kernel), it consists of four versions, ext1, ext2, ext3, and the newest ext4. All of them are designed to be backward compatible of each other.
+**Extended file system (ext)** is a file system for [Linux kernel](/cs-notes/operating-system/linux-kernel), it consists of four versions, ext1, ext2, ext3, and the newest ext4. All of them are designed to be backward compatible of each other.
 
 ##### ext2
 

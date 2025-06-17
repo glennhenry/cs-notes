@@ -6,11 +6,11 @@ description: Search
 
 **Main Source:**
 
-- **[Data Structures & Algorithms — Computer & Programming Fundamentals (with some rephrasing)](/computer-and-programming-fundamentals/data-structures-and-algorithms#basic-type-of-algorithm)**
+- **[Data Structures & Algorithms — Computer & Programming Fundamentals (with some rephrasing)](/cs-notes/computer-and-programming-fundamentals/data-structures-and-algorithms#basic-type-of-algorithm)**
 
-**Search algorithms** are algorithm that is used to locate a specific item or element within a collection of data. The collection of data can take various forms, such as an [array](/data-structures-and-algorithms/array), [list](/data-structures-and-algorithms/linked-list), [tree](/data-structures-and-algorithms/tree), [graph](/data-structures-and-algorithms/graph), or any other data structure.
+**Search algorithms** are algorithm that is used to locate a specific item or element within a collection of data. The collection of data can take various forms, such as an [array](/cs-notes/data-structures-and-algorithms/array), [list](/cs-notes/data-structures-and-algorithms/linked-list), [tree](/cs-notes/data-structures-and-algorithms/tree), [graph](/cs-notes/data-structures-and-algorithms/graph), or any other data structure.
 
-This note explains the simple linear and binary search algorithm, other search algorithm for more complex data structure are explained in the other notes. (e.g., [searching in tree with DFS](/data-structures-and-algorithms/traversal#tree-traversal)).
+This note explains the simple linear and binary search algorithm, other search algorithm for more complex data structure are explained in the other notes. (e.g., [searching in tree with DFS](/cs-notes/data-structures-and-algorithms/traversal#tree-traversal)).
 
 ### Linear Search
 

@@ -12,11 +12,11 @@ description: Backtracking
 
 Backtracking explores all possible solution by trying out different choices at each step. When it does a certain step, it checks if the step we took is valid according to the constraints. If it is valid, we will continue with that step, else, we will undo that step and try out different choice. The behavior of backtracking algorithms makes it result in a high time complexity (e.g., polynomial, factorial, or even higher).
 
-Backtracking typically uses [recursion](/data-structures-and-algorithms/recursion) and traverse the possible solution in [depth-first manner](/data-structures-and-algorithms/traversal#depth-first-search-dfs). The space complexity of backtracking algorithms can also be significant, especially when the depth of the search tree is large.
+Backtracking typically uses [recursion](/cs-notes/data-structures-and-algorithms/recursion) and traverse the possible solution in [depth-first manner](/cs-notes/data-structures-and-algorithms/traversal#depth-first-search-dfs). The space complexity of backtracking algorithms can also be significant, especially when the depth of the search tree is large.
 
 ### Backtracking vs Brute Force
 
-Backtracking approach in solving problem differ with the [brute force](/computer-and-programming-fundamentals/computer-and-programming-terminology) approach. In brute force, we mindlessly try all possible combination. In the case of solving Sudoku, we would fill out all the cell with number 1, and then try again with one cell being number 2, and so on.
+Backtracking approach in solving problem differ with the [brute force](/cs-notes/computer-and-programming-fundamentals/computer-and-programming-terminology) approach. In brute force, we mindlessly try all possible combination. In the case of solving Sudoku, we would fill out all the cell with number 1, and then try again with one cell being number 2, and so on.
 
 On the other hand, backtracking takes into account problem constraints and uses them to efficiently explore the solution space. In the case of solving Sudoku, we would add a constraint such as, not using numbers that are already used in the same grid. Backtracking also involve undoing some steps, instead of starting from zero, we would undo the invalid step and continue from there. This additional characteristics make backtracking faster than a typical brute force solution.
 

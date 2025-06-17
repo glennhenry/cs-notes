@@ -62,7 +62,7 @@ A schema is defined with `<xs:schema></xs:schema>` and namespace is specified wi
 </xs:schema>
 ```
 
-The namespace value `http://www.w3.org/2001/XMLSchema` means that the XML file is associated with that mentioned [URI](/internet-and-web/web-url).
+The namespace value `http://www.w3.org/2001/XMLSchema` means that the XML file is associated with that mentioned [URI](/cs-notes/internet-and-web/web-url).
 
 A schema for the employee example.
 
@@ -94,11 +94,11 @@ A schema for the employee example.
 
 ### XML Parsing
 
-XML file follows a hierarchical tree-like structure. It consists of elements, attributes, and text content. The [parsing](/compilers-and-programming-languages/parsing) process includes:
+XML file follows a hierarchical tree-like structure. It consists of elements, attributes, and text content. The [parsing](/cs-notes/compilers-and-programming-languages/parsing) process includes:
 
 1. **Lexical Analysis**: XML parser reads the raw XML data character by character and breaks it down into small piece called tokens.
 2. **Syntax Analysis**: Parser analyzes the tokens to ensure they conform to the XML syntax rules. It checks for correct opening and closing tags, balanced nesting of elements, proper attribute syntax, and other rules defined by the XML specification.
-3. **[Document Object Model (DOM)](/internet-and-web/html#html-dom) Construction**: The parser construct a [tree](/data-structures-and-algorithms/tree) with the token as the node. The tree aligns with XML structure, as it is structured hierarchical like a tree.
+3. **[Document Object Model (DOM)](/cs-notes/internet-and-web/html#html-dom) Construction**: The parser construct a [tree](/cs-notes/data-structures-and-algorithms/tree) with the token as the node. The tree aligns with XML structure, as it is structured hierarchical like a tree.
 
    ![Example of XML tree with the root element bookstore](./xml-tree.gif)  
    Source: https://www.w3schools.com/xml/xml_tree.asp

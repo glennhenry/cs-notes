@@ -23,7 +23,7 @@ It consists of several components:
 
 - **Tape**: Turing machine doesn't have input in an original sense; instead, it uses a tape. A tape consist of infinite number of discrete cells spanning in two directions, left and right. The tape is initially filled with some symbols and then modified afterwards, so we can think the tape as the input. The modified tape after the computation has ended also serve as the output. It's worth noting that not all symbols is required to be read in order to produce an output.
 - **Head**: The head of the Turing machine is positioned over a single cell on the tape and can read or write symbols on the tape, as well as moving in either directions for one cell.
-- **Control Unit**: Similar to [FSM](/theory-of-computation-and-automata/finite-automata) or [PDA](/theory-of-computation-and-automata/pushdown-automata), the control unit specifies how the machine transitions between states based on its current state and the current symbol being read. The transition function determines the next state of the machine, the symbol to be written on the tape, and the direction to move the tape head (left or right).
+- **Control Unit**: Similar to [FSM](/cs-notes/theory-of-computation-and-automata/finite-automata) or [PDA](/cs-notes/theory-of-computation-and-automata/pushdown-automata), the control unit specifies how the machine transitions between states based on its current state and the current symbol being read. The transition function determines the next state of the machine, the symbol to be written on the tape, and the direction to move the tape head (left or right).
 
 ![Turing machine](./turing-machine.png)  
 Source: https://youtu.be/GPSk9tRsK2I?si=_D1CVWF00TLAyk0H&t=92
@@ -45,7 +45,7 @@ We can also define the transition function as $\delta: Q \times \Sigma \rightarr
 :::
 
 :::info
-Linear bounded automaton, the automaton that accepts context-sensitive grammar in the [Chomsky hierarchy](/theory-of-computation-and-automata/formal-grammar#chomsky-hierarchy), is not explained in this note. It is essentially a [Turing machine](/theory-of-computation-and-automata/turing-machine) with finite-length tape. The number of cell in the tape is $\alpha \times n$, where $\alpha$ is some constant associated with the Turing machine, and $n$ is the length of input string.
+Linear bounded automaton, the automaton that accepts context-sensitive grammar in the [Chomsky hierarchy](/cs-notes/theory-of-computation-and-automata/formal-grammar#chomsky-hierarchy), is not explained in this note. It is essentially a [Turing machine](/cs-notes/theory-of-computation-and-automata/turing-machine) with finite-length tape. The number of cell in the tape is $\alpha \times n$, where $\alpha$ is some constant associated with the Turing machine, and $n$ is the length of input string.
 :::
 
 #### Rules
@@ -66,7 +66,7 @@ The operations of a Turing machine are as follows: read the current symbol, upda
 ![Turing machine example 1](./turing-machine-example-1.png)  
 Source: https://youtu.be/D9eF_B8URnw?si=5KTCnrXqU_QCnIhX&t=455
 
-This particular example is quite simple, as the input language is just [regular language](/theory-of-computation-and-automata/regular-languages-part-1) that can even be recognized by a [finite automaton](/theory-of-computation-and-automata/finite-automata). The visual notation of this Turing machine is explained in [rules](#rules).
+This particular example is quite simple, as the input language is just [regular language](/cs-notes/theory-of-computation-and-automata/regular-languages-part-1) that can even be recognized by a [finite automaton](/cs-notes/theory-of-computation-and-automata/finite-automata). The visual notation of this Turing machine is explained in [rules](#rules).
 
 It accepts any string that starts and ends with "0", and one or more "1" in the middle. The input string can be written on the tape, and the machine will overwrite it.
 
@@ -77,7 +77,7 @@ With the first symbol being "0", the machine writes "x" and move to right, as we
 ![Turing machine example 2 part 1](./turing-machine-example-2-part-1.png)  
 Source: https://youtu.be/cR4Re0YfoOo?si=ko6FT4Q0yM-rlW_H&t=303
 
-This example is more complex, as it requires memory to keep track of the number $N$, which finite automata can't. A [pushdown automata](/theory-of-computation-and-automata/pushdown-automata) would work for this, we don't even need to use the full power of Turing machine to recognize this language.
+This example is more complex, as it requires memory to keep track of the number $N$, which finite automata can't. A [pushdown automata](/cs-notes/theory-of-computation-and-automata/pushdown-automata) would work for this, we don't even need to use the full power of Turing machine to recognize this language.
 
 The idea of two symbols being of equal length implies that one must match the other. If there is three "0", then there should be three "1" as well. If all symbols match each other, we can conclude that they occur with equal frequency in the string.
 
@@ -101,7 +101,7 @@ Some techniques:
    ![Technique 1](./technique-1.png)  
    Source: https://youtu.be/BKhQJP4sa_8?si=GGdfkAKHMHk9O-se&t=169
 
-   This is similar to what we do in [pushdown automata](/theory-of-computation-and-automata/pushdown-automata), that is, using a $z_0$ as the last (or first) element of the stack. We can use the $\char"0024$ as an indicator that we have reached the left end, and we may transition to REJECT state if it's invalid according to the problem criteria.
+   This is similar to what we do in [pushdown automata](/cs-notes/theory-of-computation-and-automata/pushdown-automata), that is, using a $z_0$ as the last (or first) element of the stack. We can use the $\char"0024$ as an indicator that we have reached the left end, and we may transition to REJECT state if it's invalid according to the problem criteria.
 
 2. **Subroutines**: A Turing machine can be made modular and reusable for different problems. This means, we encapsulate specific functionality of Turing machine, then call it from other or different parts of programs.
 
@@ -141,14 +141,14 @@ In fact, all the tape in a multitape Turing machine can be combined altogether i
 
 #### Nondeterministic Turing Machine
 
-Nondeterministic Turing machine incorporates nondeterminism to Turing machine, just like how [NFA](/theory-of-computation-and-automata/finite-automata#nfa) to [DFA](/theory-of-computation-and-automata/finite-automata#dfa).
+Nondeterministic Turing machine incorporates nondeterminism to Turing machine, just like how [NFA](/cs-notes/theory-of-computation-and-automata/finite-automata#nfa) to [DFA](/cs-notes/theory-of-computation-and-automata/finite-automata#dfa).
 
 ![Nondeterminism](./nondeterminism.png)  
 Source: https://youtu.be/gQnPM6sydkk?si=bh5dsj6fnTSke-AG&t=208
 
 The transition function for deterministic Turing machine (the one we had been discussing) is $\delta: Q \times \Gamma \rightarrow Q \times \Gamma \times \{L, R\}$. In contrast, the transition function for nondeterministic Turing machine is $\delta: Q \times \Gamma \rightarrow P(Q \times \Gamma \times \{L, R\})$, where $P(x)$ is defined as the power set.
 
-As we did in [NFA](/theory-of-computation-and-automata/finite-automata#nfa) and [pushdown automata](/theory-of-computation-and-automata/pushdown-automata#pda-even-palindrome), we have to create a branch of computation to determine if the machine accepts certain string or not. The nondeterministic Turing machine will only accept it if there's a path that leads to ACCEPT state. If all the branches HALT and REJECT, machine is considered to reject it.
+As we did in [NFA](/cs-notes/theory-of-computation-and-automata/finite-automata#nfa) and [pushdown automata](/cs-notes/theory-of-computation-and-automata/pushdown-automata#pda-even-palindrome), we have to create a branch of computation to determine if the machine accepts certain string or not. The nondeterministic Turing machine will only accept it if there's a path that leads to ACCEPT state. If all the branches HALT and REJECT, machine is considered to reject it.
 
 The video creates a "computation history" to capture the entire state of a Turing machine.
 
@@ -164,7 +164,7 @@ Source: https://youtu.be/gQnPM6sydkk?si=31iIGrTMPfwhyOVo&t=700
 
 Church-Turing Thesis is a fundamental hypothesis about the nature of computation in theoretical computer science. It was formulated by Alonzo Church and Alan Turing, which both independently developed equivalent computation model.
 
-Alonzo Church introduced [lambda calculus](/computer-and-programming-fundamentals/declarative-functional-programming#lambda-calculus), a way to express computation in formal system, while Alan Turing introduced the concept of a Turing machine as a theoretical device for performing computations. More formal system are also introduced at the time.
+Alonzo Church introduced [lambda calculus](/cs-notes/computer-and-programming-fundamentals/declarative-functional-programming#lambda-calculus), a way to express computation in formal system, while Alan Turing introduced the concept of a Turing machine as a theoretical device for performing computations. More formal system are also introduced at the time.
 
 The Church-Turing Thesis states that:
 
@@ -187,8 +187,8 @@ With Turing machine, there are a total of four languages that we have covered so
 ![Classes of languages](./language-classes.png)  
 Source: https://youtu.be/0D7yInuKvKs?si=DmhXS_NOnGgAYbWt&t=774
 
-1. **Regular Language**: These languages are represented by [regular grammar](/theory-of-computation-and-automata/formal-grammar#regular-grammar) and can be recognized by [finite automata](/theory-of-computation-and-automata/finite-automata).
-2. **Context-Free Language**: Recognized by [pushdown automata](/theory-of-computation-and-automata/pushdown-automata), represented by [context-free grammar](/theory-of-computation-and-automata/context-free-grammar).
+1. **Regular Language**: These languages are represented by [regular grammar](/cs-notes/theory-of-computation-and-automata/formal-grammar#regular-grammar) and can be recognized by [finite automata](/cs-notes/theory-of-computation-and-automata/finite-automata).
+2. **Context-Free Language**: Recognized by [pushdown automata](/cs-notes/theory-of-computation-and-automata/pushdown-automata), represented by [context-free grammar](/cs-notes/theory-of-computation-and-automata/context-free-grammar).
 3. **Decidable or Recursive Language**: This language can be recognized by a Turing machine, but the machine will always halt on any input. For example, it is always possible to determine if a string belongs to a recursive language, such as giving a "yes" or "no" answer.
 4. **Partially Decidable or Recursively Enumerable Language**: It is also known as Turing recognizable, but the machine may or may not halt on all inputs. For strings not belonging to the language, the Turing machine may either reject them or run indefinitely without halting.
-5. **Undecidable**: Additionally, anything outside the scope of the previous language is not recognized by the Turing machine, and the machine always halts for any inputs. One example of undecidable language is the [Halting Problem](/theory-of-computation-and-automata/undecidability#halting-problem) (see next notes).
+5. **Undecidable**: Additionally, anything outside the scope of the previous language is not recognized by the Turing machine, and the machine always halts for any inputs. One example of undecidable language is the [Halting Problem](/cs-notes/theory-of-computation-and-automata/undecidability#halting-problem) (see next notes).

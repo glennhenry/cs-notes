@@ -151,7 +151,7 @@ The `section .data` is a section directive to define and initialize data such as
 
 ### x86 Assembly Language
 
-They are assembly language that represent instructions for [x86 architecture](/computer-organization-and-architecture/isa#x86), which originate from the original Intel 8086 processor.
+They are assembly language that represent instructions for [x86 architecture](/cs-notes/computer-organization-and-architecture/isa#x86), which originate from the original Intel 8086 processor.
 
 #### x86 Registers
 
@@ -227,7 +227,7 @@ MOVQ %rax,b
 MOVQ %rax, a
 ```
 
-`AND`, `OR`, `XOR` perform [bitwise operations](/computer-and-programming-fundamentals/bitwise-operation) on two values, while `NOT` performs on one value.
+`AND`, `OR`, `XOR` perform [bitwise operations](/cs-notes/computer-and-programming-fundamentals/bitwise-operation) on two values, while `NOT` performs on one value.
 
 ```
 c = (a & ~b)
@@ -278,18 +278,18 @@ Both operation is frequently used that they have their own instructions, namely 
 
 A function can be called with the `CALL` instruction. Under the hood, it pushes the current instruction pointer (return address) onto the stack, then jump to the code location of the function. Also, we need to place the function arguments (as well as evaluate them) in some specified registers, this is same for the return value.
 
-Registers need to be preserved and restored across function call. Depending on the language, it can either be the caller or the callee that saves the value. See [calling sequences](/compilers-and-programming-languages/subroutines#calling-sequences).
+Registers need to be preserved and restored across function call. Depending on the language, it can either be the caller or the callee that saves the value. See [calling sequences](/cs-notes/compilers-and-programming-languages/subroutines#calling-sequences).
 
 ![Example of function call in C translated into x86 assembly](./x86-function-call.png)  
 Source: Book 1 page 161
 
 :::tip
-See also [call stack](/compilers-and-programming-languages/subroutines#call-stack)
+See also [call stack](/cs-notes/compilers-and-programming-languages/subroutines#call-stack)
 :::
 
 ### ARM Assembly Language
 
-The [ARM](/computer-organization-and-architecture/isa#arm) assembly starts from 32 bits. It is based on [RISC](/computer-organization-and-architecture/isa#risc), rather than [x86](/computer-organization-and-architecture/isa#x86) which is based on [CISC](/computer-organization-and-architecture/isa#cisc).
+The [ARM](/cs-notes/computer-organization-and-architecture/isa#arm) assembly starts from 32 bits. It is based on [RISC](/cs-notes/computer-organization-and-architecture/isa#risc), rather than [x86](/cs-notes/computer-organization-and-architecture/isa#x86) which is based on [CISC](/cs-notes/computer-organization-and-architecture/isa#cisc).
 
 #### ARM Registers
 

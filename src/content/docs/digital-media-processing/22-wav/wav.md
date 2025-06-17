@@ -15,7 +15,7 @@ Common sample rate and bit rate for WAV audio is 44.1 kHz and 16-bit respectivel
 :::
 
 :::tip
-See also [sound representation](/computer-and-programming-fundamentals/data-representation#sound).
+See also [sound representation](/cs-notes/computer-and-programming-fundamentals/data-representation#sound).
 :::
 
 Uncompressed WAV is in linear pulse-code modulation (LPCM) format, which is the same standard for audio CDs. The LPCM format correspond to the technique for encoding and decoding audio data without any loss of information. In LPCM, digital values are proportional to the instantaneous amplitudes of the audio waveform, this means that digital values represent the exact amplitude.

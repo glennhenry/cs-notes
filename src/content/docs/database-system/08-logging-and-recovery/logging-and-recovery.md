@@ -19,11 +19,11 @@ description: Logging & Recovery
 
 #### Transaction Log
 
-Database operations are grouped into a unit of [transaction](/database-system/transactions). Transaction log is the log file that contains all the transactions and changes made to the database over time.
+Database operations are grouped into a unit of [transaction](/cs-notes/database-system/transactions). Transaction log is the log file that contains all the transactions and changes made to the database over time.
 
 Keeping track of database operation can be helpful to maintain data integrity. In the case of system failures, the DBMS can review the log and rolls back the state of database to a consistent state. By replaying the logged transactions, the system can reapply the changes made by committed transactions or undo the changes made by uncommitted or rolled-back transactions.
 
-Database logs are linked together, forming a [linked list](/data-structures-and-algorithms/linked-list). A log record is made up of:
+Database logs are linked together, forming a [linked list](/cs-notes/data-structures-and-algorithms/linked-list). A log record is made up of:
 
 - **Log Sequence Number (LSN)**: LSN is a unique ID of a log record, it is assigned to each transaction record.
 - **Prev LSN**: A reference to the previous log record in the linked list structure of the log.
@@ -65,7 +65,7 @@ Some techniques of replication:
 
 - **Multi-Master Replication**: In this approach, multiple master are present in the system. Each master can handle write operations independently, and changes made on one master are replicated to the other masters.
 
-  While multi-master replication solves certain problems of master-slave replication, another [conflict](/database-system/concurrency-control#conflict-serializability) may occur. It arises when two or more master receive conflicting write operations that affect the same piece of data, therefore asking us which write is accepted. One way to resolve conflicts is to abort the operation and rollback to a specific timestamp when a change in one master was made. The choice of timestamp can be based on the **last-writer-wins (LWW)** principle, where the latest write operation is retained (although result in data loss).
+  While multi-master replication solves certain problems of master-slave replication, another [conflict](/cs-notes/database-system/concurrency-control#conflict-serializability) may occur. It arises when two or more master receive conflicting write operations that affect the same piece of data, therefore asking us which write is accepted. One way to resolve conflicts is to abort the operation and rollback to a specific timestamp when a change in one master was made. The choice of timestamp can be based on the **last-writer-wins (LWW)** principle, where the latest write operation is retained (although result in data loss).
 
 - **Multi-Level Replication**: This approach creates a hierarchy of replicas, where changes are propagated through multiple levels of replication. For example, changes made to a primary database are replicated to secondary replicas, which in turn replicate the data to tertiary replicas.
 
@@ -85,7 +85,7 @@ Then there is also a semi-asynchronous approach where one node is made synchrono
 
 **RAID** is a fault-tolerance technique that involve creating redundancy in computer storage by distributing data across multiple disks.
 
-See [RAID](/operating-system/disk-management#raid).
+See [RAID](/cs-notes/operating-system/disk-management#raid).
 
 ### Migration
 

@@ -22,7 +22,7 @@ Source: https://theaisummer.com/Autoencoder/
 
 ### Encoder
 
-Input data such as image is fed to the encoder. Similar to traditional autoencoder, it consist of several layers such as [convolution layers](/deep-learning/cnn#convolution-1) and [pooling layers](/deep-learning/cnn#pooling-1).
+Input data such as image is fed to the encoder. Similar to traditional autoencoder, it consist of several layers such as [convolution layers](/cs-notes/deep-learning/cnn#convolution-1) and [pooling layers](/cs-notes/deep-learning/cnn#pooling-1).
 
 After going through encoder layers and arrived at the final fully-connected layer, the output kinda different. As explained before, the data samples will be represented in a distribution, and we will sample from the distribution. The output is still gonna be the lower-dimensional representation of the data, often called as **latent variables**. However, these latent variables will be modeled into a probability distribution instead of being flattened, they will be transformed into a probability distribution called **latent space distribution**.
 

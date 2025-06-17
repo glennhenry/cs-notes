@@ -60,9 +60,9 @@ Source: https://en.wikipedia.org/wiki/Integrated_amplifier
 
 #### Digital Signal Processing
 
-After electrical signal is amplified, it will be converted to a digital format using an analog-to-digital converter (ADC). Digital form of sound data or audio can be further processed using various digital signal or media processing techniques. This can include [equalization](/digital-media-processing/audio-equalization), [compression](/digital-signal-processing/compression), [filtering](/digital-signal-processing/filtering), [audio effects](/digital-media-processing/audio-effects), or other audio processing algorithms.
+After electrical signal is amplified, it will be converted to a digital format using an analog-to-digital converter (ADC). Digital form of sound data or audio can be further processed using various digital signal or media processing techniques. This can include [equalization](/cs-notes/digital-media-processing/audio-equalization), [compression](/cs-notes/digital-signal-processing/compression), [filtering](/cs-notes/digital-signal-processing/filtering), [audio effects](/cs-notes/digital-media-processing/audio-effects), or other audio processing algorithms.
 
-After processing, audio data can be encoded into specific digital audio formats, such as [MP3](/digital-media-processing/mp3), AAC, [WAV](/digital-media-processing/), or FLAC, depending on the intended use or distribution requirements.
+After processing, audio data can be encoded into specific digital audio formats, such as [MP3](/cs-notes/digital-media-processing/mp3), AAC, [WAV](/cs-notes/digital-media-processing/), or FLAC, depending on the intended use or distribution requirements.
 
 ![A software to process audio using equalizer](./digital-audio-processing.jpeg)  
 Source: https://www.gearrice.com/update/4-tricks-with-aimp-to-better-listen-to-rock-and-metal-music/

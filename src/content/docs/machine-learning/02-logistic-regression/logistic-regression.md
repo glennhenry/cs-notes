@@ -19,7 +19,7 @@ Logistic regression is commonly used when the dependent variable is binary or ca
 
 For example, logistic regression can be used to predict whether an email is spam or not based on the independent variable such as email's subject, sender, and content. The model would estimate the probability of the email being spam based on the values of the independent variables.
 
-Logistic regression differs with [linear regression](/machine-learning/linear-regression), while linear regression model the linear relationship between dependent and independent variable using a line, logistic regression uses **logistic function** to model the non-linear relationship to obtain the probability of the binary outcome.
+Logistic regression differs with [linear regression](/cs-notes/machine-learning/linear-regression), while linear regression model the linear relationship between dependent and independent variable using a line, logistic regression uses **logistic function** to model the non-linear relationship to obtain the probability of the binary outcome.
 
 Using a best fit line to solve logistic regression problem is not suitable because the underlying relationship between the independent variables and the binary outcome is not linear. Logistic function instead model the relationship using an S shaped curve.
 
@@ -82,7 +82,7 @@ Source: https://youtu.be/BfKanl1aSG0?si=1hHmHRgzLxAGiBgs&t=481
 
 The result of this likelihood value measure how well does the logistic regression with the specific coefficient performs to predict the data.
 
-We then try again several times using different coefficient to construct the line. We can even use optimmization algorithm such as [gradient descent](/machine-learning/linear-regression#gradient-descent) in linear regression.
+We then try again several times using different coefficient to construct the line. We can even use optimmization algorithm such as [gradient descent](/cs-notes/machine-learning/linear-regression#gradient-descent) in linear regression.
 
 ![Trying again several times](./trying-again.png)  
 Source: https://youtu.be/BfKanl1aSG0?si=EsbYzBJ8SSa2bYgC&t=513
@@ -92,4 +92,4 @@ In linear regression, we try constructing a line with particular slope and calcu
 ![Gradient descent to optimize maximum likelihood for specific coefficient](./gradient-descent.png)  
 Source: https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/maximum-likelihood.html (with modification)
 
-Overall the loss function (function used to measure how well a model performs) used for logistic regression is the log likelihood. The log likelihood is also known as the [binary cross entropy loss](/deep-learning/deep-learning-foundation#binary-cross-entropy-loss).
+Overall the loss function (function used to measure how well a model performs) used for logistic regression is the log likelihood. The log likelihood is also known as the [binary cross entropy loss](/cs-notes/deep-learning/deep-learning-foundation#binary-cross-entropy-loss).

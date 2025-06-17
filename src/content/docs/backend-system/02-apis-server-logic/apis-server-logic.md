@@ -24,7 +24,7 @@ Some types of APIs are:
 
 - **OS API**: Operating system APIs is considered as low-level API, this includes accessing necessary function or classes that interact directly with OS component such as file system, memory management, task manager, process management, and etc. Example of OS level API can be a class that access internal storage in Android OS.
 
-- **Web API**: Web API is an API accessed over the internet using protocols like [HTTP](/computer-networking/http-https#http). Web APIs can be used if the code we are interacting to is stored on the internet. Common Web APIs include Google Maps API that let you know about geolocation information, Spotify API that allows developers to search for songs, albums, and artists, retrieve user playlists.
+- **Web API**: Web API is an API accessed over the internet using protocols like [HTTP](/cs-notes/computer-networking/http-https#http). Web APIs can be used if the code we are interacting to is stored on the internet. Common Web APIs include Google Maps API that let you know about geolocation information, Spotify API that allows developers to search for songs, albums, and artists, retrieve user playlists.
 
 Here is an example of API in Kotlin:
 
@@ -52,15 +52,15 @@ API is considered as a contract because the caller and the API needs to agree wh
 
 ### Routing & Endpoint
 
-When the client sends a request to the server, the request must be handled with the appropriate actions. **Routing** is the mechanism of handling specific request specified by request's URL and [HTTP method](/computer-networking/http-https#http-request--method) to the appropriate codes that should handle them.
+When the client sends a request to the server, the request must be handled with the appropriate actions. **Routing** is the mechanism of handling specific request specified by request's URL and [HTTP method](/cs-notes/computer-networking/http-https#http-request--method) to the appropriate codes that should handle them.
 
-The request's URL can vary depending on the request, a URL must contain some component including scheme, domain name, and etc (find more about URL [here](/internet-and-web/web-url)). A web URL typically have a starting point or the root of all URL, it represents the primary address that clients use to communicate with the server. The primary address is called **base URL**.
+The request's URL can vary depending on the request, a URL must contain some component including scheme, domain name, and etc (find more about URL [here](/cs-notes/internet-and-web/web-url)). A web URL typically have a starting point or the root of all URL, it represents the primary address that clients use to communicate with the server. The primary address is called **base URL**.
 
 When making request to the base URL, the server will typically respond by returning the default page of the website. If we want to do certain operations or access specific resources, we need to add additional path, this is called **endpoint**. Endpoint is typically concatenated to the base URL and is separated by `/`.
 
-For example, the `https://jsonplaceholder.typicode.com` is an online web API we can use. The `https://jsonplaceholder.typicode.com/` is the base URL or the root of all page the site has, accessing the base URL directly will give you the [HTML](/internet-and-web/html) file which is then rendered by the browser to display the website's content.
+For example, the `https://jsonplaceholder.typicode.com` is an online web API we can use. The `https://jsonplaceholder.typicode.com/` is the base URL or the root of all page the site has, accessing the base URL directly will give you the [HTML](/cs-notes/internet-and-web/html) file which is then rendered by the browser to display the website's content.
 
-The website provides some endpoint including `/posts`, `/comments`, `/albums`, and some other. Accessing the base URL concatenated with the `/posts` endpoint `https://jsonplaceholder.typicode.com/posts` will give us a [JSON](/digital-media-processing/json) file containing some user posts.
+The website provides some endpoint including `/posts`, `/comments`, `/albums`, and some other. Accessing the base URL concatenated with the `/posts` endpoint `https://jsonplaceholder.typicode.com/posts` will give us a [JSON](/cs-notes/digital-media-processing/json) file containing some user posts.
 
 Overall, routing and endpoint determines how the server should respond to different requests by mapping them to specific endpoints or routes. The behavior of accessing specific endpoints will depend on the web API.
 
@@ -84,9 +84,9 @@ An API gateway may provide some functionality including:
 
 - **Routing & Endpoint Management**: API gateway handles the routing of requests to the appropriate backend services based on predefined rules. It manages the endpoints and exposes a unified interface for API consumers.
 
-- **Protocol Translation**: API Gateways can translate between different protocols. For example, it can handle requests in [RESTful](/backend-system/rest-api) format from clients and convert it into another format such as [GraphQL](/backend-system/graphql), [WebSockets](/backend-system/websocket), or another API protocol.
+- **Protocol Translation**: API Gateways can translate between different protocols. For example, it can handle requests in [RESTful](/cs-notes/backend-system/rest-api) format from clients and convert it into another format such as [GraphQL](/cs-notes/backend-system/graphql), [WebSockets](/cs-notes/backend-system/websocket), or another API protocol.
 
-- **Security & Authentication**: API Gateways provide security mechanisms to protect APIs, they can handle [authentication](/backend-system/authentication) and [authorization](/backend-system/authorization).
+- **Security & Authentication**: API Gateways provide security mechanisms to protect APIs, they can handle [authentication](/cs-notes/backend-system/authentication) and [authorization](/cs-notes/backend-system/authorization).
 
 - **Request & Response Modifier**: API Gateways can modify, validate, or transform requests and responses as they pass through, this can include validating or filtering requests.
 

@@ -26,7 +26,7 @@ The use of message broker here is not just as an interface to the service, more 
 
 ### Message Queue
 
-Message broker may store messages received from the client in something called **message queue**, which is a [queue data structure](/data-structures-and-algorithms/queue) that is used to store messages until they can be processed by the intended service. By using queue, this ensures the messages are processed in appropriate request order.
+Message broker may store messages received from the client in something called **message queue**, which is a [queue data structure](/cs-notes/data-structures-and-algorithms/queue) that is used to store messages until they can be processed by the intended service. By using queue, this ensures the messages are processed in appropriate request order.
 
 Another benefits of message queue:
 
@@ -53,7 +53,7 @@ There are several pattern used to define how messages are processed in message b
 
 Messaging protocol is a set of rules that define how message brokers deliver messages. It involves the structure of a message, message broker model, and the network transport layer used. Two common protocols are **Advanced Message Queuing Protocol (AMQP)** and **Message Queue Telemetry Transport (MQTT)**. AMQP is designed to be flexible that allows any pattern to be implemented on top of it while MQTT only supports the publish-subscribe pattern. MQTT is more lightweight than AMQP, typically used for Internet of Things (IoT).
 
-As explained before, the message brokers can be used as converting one protocol to another, such as converting [REST API](/backend-system/rest-api) from application call to desired messaging protocol like AMQP.
+As explained before, the message brokers can be used as converting one protocol to another, such as converting [REST API](/cs-notes/backend-system/rest-api) from application call to desired messaging protocol like AMQP.
 
 ![Message protocol](./message-protocol.png)  
 Source: https://www.cloudamqp.com/blog/amqp-vs-mqtt.html

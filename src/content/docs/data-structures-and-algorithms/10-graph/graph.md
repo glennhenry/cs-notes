@@ -87,7 +87,7 @@ A complete graph is one in which there is an edge between every pair of distinct
 ![Complete graph](./complete-graph.webp)  
 Source: https://www.tutorialscan.com/datastructure/complete-graph/
 
-Depending on the problem, a graph may have multiple characteristics together. For example, a [tree](/data-structures-and-algorithms/tree) is a special type of graph where it is undirected and acyclic. We can traverse from top to bottom or vice versa and it has no cycle in it. A graph is a more generalized tree, it is more flexible, and it can have arbitrary connections and structures.
+Depending on the problem, a graph may have multiple characteristics together. For example, a [tree](/cs-notes/data-structures-and-algorithms/tree) is a special type of graph where it is undirected and acyclic. We can traverse from top to bottom or vice versa and it has no cycle in it. A graph is a more generalized tree, it is more flexible, and it can have arbitrary connections and structures.
 
 ### Graph Representation
 

@@ -52,7 +52,7 @@ The first process is to identify the unwanted elements. Unwanted elements have s
 
 Overall, the characteristics of unwanted elements are a sudden change in the constant audio or an unrelated patterns or rhythm to the main audio and not synchronized with specific events or sounds.
 
-After identifying them, we can apply the corresponding algorithms or filter. For example, we can smoothen the surrounding audio near unwanted elements, apply frequencies filter, noise reduction in frequency domain using [FFT](/digital-signal-processing/fast-fourier-transform).
+After identifying them, we can apply the corresponding algorithms or filter. For example, we can smoothen the surrounding audio near unwanted elements, apply frequencies filter, noise reduction in frequency domain using [FFT](/cs-notes/digital-signal-processing/fast-fourier-transform).
 
 ![Identifying unwanted elements in digital audio](./audio-restoration.png)  
 Source: https://youtu.be/fWQ86r14Ei0

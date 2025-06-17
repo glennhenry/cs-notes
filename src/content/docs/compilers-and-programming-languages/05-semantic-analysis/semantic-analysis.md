@@ -14,14 +14,14 @@ description: Semantic Analysis
 
 ### Abstract Syntax Tree
 
-**Abstract syntax tree (AST)** or **syntax tree** represent syntactic structure of the input language. It is the simpler and more abstract version of parse tree (also known as concrete syntax tree), both are typically produced after [syntax analysis (parsing)](/compilers-and-programming-languages/parsing) process. Compiler may choose to directly create AST instead of parse tree.
+**Abstract syntax tree (AST)** or **syntax tree** represent syntactic structure of the input language. It is the simpler and more abstract version of parse tree (also known as concrete syntax tree), both are typically produced after [syntax analysis (parsing)](/cs-notes/compilers-and-programming-languages/parsing) process. Compiler may choose to directly create AST instead of parse tree.
 
 ![AST vs parse tree](./parse-tree-vs-ast.png)  
 Source: https://ruslanspivak.com/lsbasi-part7/
 
 The AST contains only the necessary information for code generation. It doesn't include explicit grammatical information or unnecessary tokens like parentheses. The tree structure is arranged in such a way that it preserves the same without these.
 
-In the compilation process, the AST is used to keep track of syntactical information. It is a data structure used by the compiler to generate code later on. Sometimes, it is transformed into an intermediate representation first, then into real machine code. The AST is frequently represented as linked structure, such as [linked list](/data-structures-and-algorithms/linked-list), [tree](/data-structures-and-algorithms/tree), or [graph](/data-structures-and-algorithms/graph) structure.
+In the compilation process, the AST is used to keep track of syntactical information. It is a data structure used by the compiler to generate code later on. Sometimes, it is transformed into an intermediate representation first, then into real machine code. The AST is frequently represented as linked structure, such as [linked list](/cs-notes/data-structures-and-algorithms/linked-list), [tree](/cs-notes/data-structures-and-algorithms/tree), or [graph](/cs-notes/data-structures-and-algorithms/graph) structure.
 
 #### AST Representation in Code
 
@@ -52,7 +52,7 @@ It has the variable name, type, value (if an expression), code (if a function), 
 ![Declaration linked list](./decl-list.png)  
 Source: Book 1 page 87
 
-Using this, we effectively created a [linked list](/data-structures-and-algorithms/linked-list) with hierarchical and linked structure of declarations.
+Using this, we effectively created a [linked list](/cs-notes/data-structures-and-algorithms/linked-list) with hierarchical and linked structure of declarations.
 
 ##### Statements
 
@@ -198,17 +198,17 @@ Semantic analysis may also involve looking up or adding information to the symbo
 ![Symbol table](./symbol-table.png)  
 Source: https://www.slideshare.net/DrKuppusamyP/symbol-table-in-compiler-design
 
-The symbol table is frequently accessed throughout many compilation steps. It is created during scanning and parsing. One common implementation for storing symbols is in a [hash table](/data-structures-and-algorithms/hash-table). Each entry could be contained within a struct that has several properties commonly associated with an identifier, such as name, type, scope, memory location, etc.
+The symbol table is frequently accessed throughout many compilation steps. It is created during scanning and parsing. One common implementation for storing symbols is in a [hash table](/cs-notes/data-structures-and-algorithms/hash-table). Each entry could be contained within a struct that has several properties commonly associated with an identifier, such as name, type, scope, memory location, etc.
 
 With a hash table, a lookup with the variable name as the key could be made easily and quickly. **Name resolution** is the process of determining the correct declaration or definition of an identifier from symbol table based on the current scope and context of the program. One common approach to handle local and global scope is by nesting several symbol tables, where each table corresponds to a scope. This way, name resolution will always look to the nearest scope first.
 
 #### Attribute Grammars
 
-Attribute grammars are formal methods for specifying semantics of programming languages to a formal language like [context-free grammar](/theory-of-computation-and-automata/context-free-grammar).
+Attribute grammars are formal methods for specifying semantics of programming languages to a formal language like [context-free grammar](/cs-notes/theory-of-computation-and-automata/context-free-grammar).
 
 The production rule of context-free grammar are "decorated" with **attributes**, which are properties or values associated with the nodes (nonterminals and terminals) of the parse tree. Attributes can represent various information such as types, values, or intermediate results of computations. Association of semantic within the grammar allows us to perform semantic actions during parsing.
 
-Below is an example of a grammar of arithmetic expressions in [LR](/compilers-and-programming-languages/parsing#bottom-up-parsing).
+Below is an example of a grammar of arithmetic expressions in [LR](/cs-notes/compilers-and-programming-languages/parsing#bottom-up-parsing).
 
 ![Grammar example](./grammar-example.png)  
 Source: Book 2 page 166
@@ -275,7 +275,7 @@ The parser will generate syntax tree while parsing. For instance, when it encoun
 
 ##### Decorating Syntax Tree
 
-We modified the [calculator language example](/compilers-and-programming-languages/parsing#recursive-descent-parser) to include types and declaration semantics. A sample program and its syntax tree as well as the production rule used to derive it can be seen below.
+We modified the [calculator language example](/cs-notes/compilers-and-programming-languages/parsing#recursive-descent-parser) to include types and declaration semantics. A sample program and its syntax tree as well as the production rule used to derive it can be seen below.
 
 ![Decorate syntax tree part 1](./decorate-syntax-tree-1.png)  
 Source: Book 2 page 182, 183

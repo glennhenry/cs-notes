@@ -5,7 +5,7 @@ description: Compilers & Programming Languages
 ---
 
 :::tip
-Recommend taking a look at [theory of computation and automata](/theory-of-computation-and-automata) first.
+Recommend taking a look at [theory of computation and automata](/cs-notes/theory-of-computation-and-automata) first.
 :::
 
 :::info

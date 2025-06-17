@@ -8,7 +8,7 @@ description: U-Net
 
 - **[The U-Net (actually) explained in 10 minutes — rupert ai](https://youtu.be/NhdzGfB1q74?si=BiC8L1cs-YRLn9T4)**
 
-**U-Net** is a U-shaped [convolutional neural network](/deep-learning/cnn) architecture that follows the encoder-decoder network with a [skip connection](/deep-learning/resnet#residual-connection).
+**U-Net** is a U-shaped [convolutional neural network](/cs-notes/deep-learning/cnn) architecture that follows the encoder-decoder network with a [skip connection](/cs-notes/deep-learning/resnet#residual-connection).
 
 An encoder-decoder network consist of an encoder and a decoder. The encoder is a component responsible for processing input data and extracting relevant features. The decoder reconstructs or generates the desired output based on the encoded information produced by encoder.
 

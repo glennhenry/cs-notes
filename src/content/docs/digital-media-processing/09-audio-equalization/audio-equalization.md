@@ -26,7 +26,7 @@ Human audible range is divided into specific frequency range. These categories m
 
 ### Equalizer
 
-EQ works in between human audible frequency which is from 20 Hz to 20 kHz. An EQ also consists of a number of [filters](/digital-signal-processing/filtering), which are used to filter off specific frequency.
+EQ works in between human audible frequency which is from 20 Hz to 20 kHz. An EQ also consists of a number of [filters](/cs-notes/digital-signal-processing/filtering), which are used to filter off specific frequency.
 
 ![Example of EQ Filter](./eq-filters.png)  
 Source: https://www.musicguymixing.com/eq-filters/

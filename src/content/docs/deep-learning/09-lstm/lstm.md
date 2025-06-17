@@ -7,7 +7,7 @@ description: LSTM
 - **[Mengenal LSTM — Anak AI](https://youtu.be/orG90H9E-nI?si=mFRahv2yU1JaEK0M&t=301)**
 - **[Illustrated Guide to LSTM's and GRU's: A step by step explanation — The AI Hacker](https://youtu.be/8HyCNIVRbSU?si=DZYSTyT_VWRdaLnq)**
 
-**Long Short-Term Memory (LSTM)** is a type of [recurrent neural network (RNN)](/deep-learning/rnn) designed to address the limitation of traditional RNN in capturing and remembering long-term dependencies in sequential data.
+**Long Short-Term Memory (LSTM)** is a type of [recurrent neural network (RNN)](/cs-notes/deep-learning/rnn) designed to address the limitation of traditional RNN in capturing and remembering long-term dependencies in sequential data.
 
 In RNN, often times the information from previous time step is not required or doesn't provide meaningful context for the overall processing. Yet, RNN forces the previous output to be combined with current input in the hidden state.
 

@@ -33,9 +33,9 @@ For the purposes of terminology, we will consider concurrent and interleaved exe
 
 #### Process
 
-A **process** is an instance of a running program. A process encapsulates the running program's code, data, and resources required to execute a program. Each process has its own memory space and system resources. Process is managed by the [operating system](/computer-and-programming-fundamentals/operating-system), and is independent with each other process, they are executed in its own isolated memory space.
+A **process** is an instance of a running program. A process encapsulates the running program's code, data, and resources required to execute a program. Each process has its own memory space and system resources. Process is managed by the [operating system](/cs-notes/computer-and-programming-fundamentals/operating-system), and is independent with each other process, they are executed in its own isolated memory space.
 
-Process has its own memory space and system resource, they are not directly accessible or affected by another process. In order to communicate with other processes, a mechanism called **[Inter-Process Communication (IPC)](/operating-system/inter-process-communication)** is employed.
+Process has its own memory space and system resource, they are not directly accessible or affected by another process. In order to communicate with other processes, a mechanism called **[Inter-Process Communication (IPC)](/cs-notes/operating-system/inter-process-communication)** is employed.
 
 Operating system will keep track the state of each process, a process will run through several states:
 
@@ -82,7 +82,7 @@ Source: https://www3.ntu.edu.sg/home/ehchua/programming/java/j5e_multithreading.
 
 **Multiprocessing** is a technique that takes advantages of computer with multiple CPU or processor to execute tasks simultaneously (also often referred as parallel). Unlike multithreading, which involves multiple threads within a single process, multiprocessing utilizes multiple processes that can run independently and concurrently.
 
-In multiprocessing, each process will have different memory and system resource. They are also not able to access each other resource directly, to be able to execute a single task with multiple process, they will need a proper coordination through the [IPC mechanism](/operating-system/inter-process-communication).
+In multiprocessing, each process will have different memory and system resource. They are also not able to access each other resource directly, to be able to execute a single task with multiple process, they will need a proper coordination through the [IPC mechanism](/cs-notes/operating-system/inter-process-communication).
 
 Multiprocessing can be beneficial for computer that has multiple cores, as it can significantly improve performance. However, it can be heavier and tend to consume more power. On the other hand, creating and managing threads in multithreading is generally faster and more lightweight compared to creating separate processes. Thread can also coordinate and communicate with each other easily because they share the same memory.
 
@@ -222,7 +222,7 @@ A race condition happens when multiple threads try to use the same data at the s
 
 #### Thread Lock
 
-Thread lock, often used interchangeably with [mutual exclusion (mutex)](/operating-system/multithreading#locks--mutex), is a synchronization mechanism used prevent race condition. It simply ensures that only one thread can access the resource at a time.
+Thread lock, often used interchangeably with [mutual exclusion (mutex)](/cs-notes/operating-system/multithreading#locks--mutex), is a synchronization mechanism used prevent race condition. It simply ensures that only one thread can access the resource at a time.
 
 ![Thread lock](./thread-lock.png)
 
@@ -232,14 +232,14 @@ Thread safe refers to the property of a program or data structure that can be sa
 
 #### Deadlock
 
-[Deadlock](/operating-system/process-synchronization#deadlock) is a situation where two or more threads are unable to proceed because each is waiting for the other to take a specific action. Deadlock can occur when attempting to prevent race conditions through synchronization mechanisms, but those mechanisms are implemented incorrectly.
+[Deadlock](/cs-notes/operating-system/process-synchronization#deadlock) is a situation where two or more threads are unable to proceed because each is waiting for the other to take a specific action. Deadlock can occur when attempting to prevent race conditions through synchronization mechanisms, but those mechanisms are implemented incorrectly.
 
 ![Deadlock GIF](./deadlock.gif)  
 Source: https://en.wikipedia.org/wiki/Deadlock
 
 #### Thread Pool
 
-[Thread pool](/operating-system/multithreading#thread-pool) is a collection of pre-initialized threads. Instead of creating a new thread for each task and destroying it after it finishes its execution, a thread pool maintains a pool of reusable threads. Unused thread will be stored there to reduce the overhead of creating and destroying threads.
+[Thread pool](/cs-notes/operating-system/multithreading#thread-pool) is a collection of pre-initialized threads. Instead of creating a new thread for each task and destroying it after it finishes its execution, a thread pool maintains a pool of reusable threads. Unused thread will be stored there to reduce the overhead of creating and destroying threads.
 
 ##### Dispatch Loop
 
@@ -265,5 +265,5 @@ Then, upon the thread finishes it execution, it may be added back to the thread 
 For more complex program, threads and tasks could be categorized and separated between distinct thread pool based on the type of work. For example, 5 thread may be assigned for downloading/uploading tasks, 1 thread for rendering user interface, 1 thread for interacting with the I/O system, and so on.
 
 :::tip
-In relation with multitasking and concurrency, see also [multithreading](/operating-system/multithreading).
+In relation with multitasking and concurrency, see also [multithreading](/cs-notes/operating-system/multithreading).
 :::

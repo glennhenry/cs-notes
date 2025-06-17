@@ -11,12 +11,12 @@ description: SOA
 
 **Service-Oriented Architecture (SOA)** is an architecture where software systems are built using loosely coupled, independent, and self-contained service, each with their own business capability. They need to have minimal dependencies as minimal as possible and changes to one service shouldn't require changes in other services.
 
-Services are designed to be reusable making them need to provide a well-defined interface to talk with other service. In SOA, the communication between service are facilitated using an **Enterprise Service Bus (ESB)**. ESB is an architecture where it acts as a [middleware](/backend-system/apis-server-logic#middleware) platform which provide integration in a bus-like infrastructure. ESB is used to handle message routing, transformation, and mediation between different services and applications.
+Services are designed to be reusable making them need to provide a well-defined interface to talk with other service. In SOA, the communication between service are facilitated using an **Enterprise Service Bus (ESB)**. ESB is an architecture where it acts as a [middleware](/cs-notes/backend-system/apis-server-logic#middleware) platform which provide integration in a bus-like infrastructure. ESB is used to handle message routing, transformation, and mediation between different services and applications.
 
 ![ESB in SOA](./esb.png)  
 Source: https://www.mulesoft.com/resources/esb/what-esb
 
-SOA differ with [microservice](/backend-system/microservice) in terms of scope, SOA is more like an enterprise scope architecture rather than an microservice which is an application scope architecture. SOA typically talk to each other using ESB rather than using RPC for inter-service communication like microservice. SOA focuses on organizing component into a set of services, while microservice focuses on breaking down component into a small and specialized component.
+SOA differ with [microservice](/cs-notes/backend-system/microservice) in terms of scope, SOA is more like an enterprise scope architecture rather than an microservice which is an application scope architecture. SOA typically talk to each other using ESB rather than using RPC for inter-service communication like microservice. SOA focuses on organizing component into a set of services, while microservice focuses on breaking down component into a small and specialized component.
 
 SOA architecture can be implemented in a travel booking app. Similar to microservice, each service have their own use case. It could have user management service including authentication process, flight booking service that communicates with smaller use case service including flight search, viewing available flight, retrieving flight data from external API, and many more services.
 

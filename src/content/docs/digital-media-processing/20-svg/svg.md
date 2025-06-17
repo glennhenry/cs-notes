@@ -9,7 +9,7 @@ description: SVG
 - **[SVG — Wikipedia](https://en.wikipedia.org/wiki/SVG)**
 - **[SVG in 100 seconds — Fireship](https://youtu.be/emFMHH2Bfvo)**
 
-**SVG (Scalable Vector Graphics)** is an [XML](/digital-media-processing/xml)-based [vector image format](/computer-graphics/computer-images-part-1) used to display two-dimensional graphics on the web. SVG images are resolution-independent, meaning they can be scaled up or down without losing quality.
+**SVG (Scalable Vector Graphics)** is an [XML](/cs-notes/digital-media-processing/xml)-based [vector image format](/cs-notes/computer-graphics/computer-images-part-1) used to display two-dimensional graphics on the web. SVG images are resolution-independent, meaning they can be scaled up or down without losing quality.
 
 ### SVG Vector
 

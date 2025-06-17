@@ -10,12 +10,12 @@ description: Ethernet
 - **[What is Ethernet? — RealPars](https://youtu.be/HLziLmaYsO0?si=FbFOSbRjsW19jtPl)**
 - **[Ethernet — Wikipedia](https://en.wikipedia.org/wiki/Ethernet)**
 
-**Ethernet** is networking technology which allows computer or devices to communicate by sending data through [physical cable](/digital-signal-processing/signal-transmission-medium#guided-transmission) such as coaxial, twisted pair, or fiber optic. Computer or laptop commonly connect to router, switch, or hub using ethernet. The Ethernet cable is plugged into the Ethernet port on the computer's network interface card (NIC) and into one of the Ethernet ports on the router.
+**Ethernet** is networking technology which allows computer or devices to communicate by sending data through [physical cable](/cs-notes/digital-signal-processing/signal-transmission-medium#guided-transmission) such as coaxial, twisted pair, or fiber optic. Computer or laptop commonly connect to router, switch, or hub using ethernet. The Ethernet cable is plugged into the Ethernet port on the computer's network interface card (NIC) and into one of the Ethernet ports on the router.
 
 ![Twisted pair ethernet connected to laptop port](./ethernet-cable.jpg)  
 Source: https://en.wikipedia.org/wiki/Ethernet
 
-Ethernet operates between the physical layer and the data link layer of the [OSI model](/computer-networking/osi-model). It means that ethernet handle sending data through physical cable to interconnected device in the network.
+Ethernet operates between the physical layer and the data link layer of the [OSI model](/cs-notes/computer-networking/osi-model). It means that ethernet handle sending data through physical cable to interconnected device in the network.
 
 Ethernet has been evolving since the first time it's used. The connection speed may vary depending the specific types of cable used. For example in the image below, "CAT" is the type of twisted pair cable used.
 
@@ -24,7 +24,7 @@ Source: https://www.fiberopticshare.com/guide-choosing-suitable-ethernet-cables.
 
 ### Process of transferring data
 
-1. While transferring data, the data is divided into small pieces called **frames**. Frames consist of header, payload (actual data), and trailer. The header includes source and destination [MAC addresses](/computer-networking/mac-address) and frame type information to check if frame is damaged or corrupted.
+1. While transferring data, the data is divided into small pieces called **frames**. Frames consist of header, payload (actual data), and trailer. The header includes source and destination [MAC addresses](/cs-notes/computer-networking/mac-address) and frame type information to check if frame is damaged or corrupted.
 
 2. Each device on an Ethernet network has a unique MAC address assigned to its network interface card (NIC). These address are used to uniquely identify each devices within the network. Ethernet will only forward the frames to the desired destination, this will improves network efficiency and reduces collisions.
 

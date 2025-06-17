@@ -13,13 +13,13 @@ description: JavaScript
 - **[npm — Wikipedia](https://en.wikipedia.org/wiki/Npm)**
 - **[React (software) — Wikipedia](<https://en.wikipedia.org/wiki/React_(software)>)**
 
-**JavaScript** is a high-level programming language first introduced in 1995, it is mostly used for web development. JavaScript was specifically created to be run in web browsers, which means it can integrate with the browser and access the [DOM](/internet-and-web/html#html-dom) to change or manipulate it such as adding or deleting elements, changing style like color, modify content, etc.
+**JavaScript** is a high-level programming language first introduced in 1995, it is mostly used for web development. JavaScript was specifically created to be run in web browsers, which means it can integrate with the browser and access the [DOM](/cs-notes/internet-and-web/html#html-dom) to change or manipulate it such as adding or deleting elements, changing style like color, modify content, etc.
 
 JavaScript is based on ECMAScript (ES) which is a scripting language specification or the standard that defines JavaScript language. JavaScript is now based on the ES6 (ECMAScript 2015) which was released in 2015.
 
 ### V8 JavaScript Engine
 
-JavaScript is a [just-in-time (JIT) compiled language](/computer-and-programming-fundamentals/interpreter#jit-compilation), meaning that JavaScript source code is compiled into machine code line-by-line when it is going to be executed, rather than a compiled language, which require a compilation of all code before code execution.
+JavaScript is a [just-in-time (JIT) compiled language](/cs-notes/computer-and-programming-fundamentals/interpreter#jit-compilation), meaning that JavaScript source code is compiled into machine code line-by-line when it is going to be executed, rather than a compiled language, which require a compilation of all code before code execution.
 
 JavaScript code is executed by a JavaScript engine, which is typically included in web browsers. One of JavaScript engine is the **V8** (so it's a JIT compiler), which was developed by Google and is used in Google Chrome browser. The engine consists of several components that work together to execute JavaScript code efficiently:
 
@@ -37,14 +37,14 @@ JavaScript code is executed by a JavaScript engine, which is typically included 
 6. **Code Generation**: After everything is parsed and optimized, the code is compiled into machine code by the V8 engine's compiler. The machine code is then executed directly by the CPU, which results in faster execution times compared to interpreting the bytecode.
 
 :::info
-More about [general compilation process](/computer-and-programming-fundamentals/compilation).
+More about [general compilation process](/cs-notes/computer-and-programming-fundamentals/compilation).
 :::
 
 ### JavaScript Run-Time Environment
 
-JavaScript relies on run-time environment for managing the execution of JavaScript code. JavaScript runs on a single-threaded environment which means it can only execute one task at a time. JavaScript uses [call stack](/compilers-and-programming-languages/subroutines#call-stack) which is a data structure that keeps track of the currently executing functions in the JavaScript call hierarchy.
+JavaScript relies on run-time environment for managing the execution of JavaScript code. JavaScript runs on a single-threaded environment which means it can only execute one task at a time. JavaScript uses [call stack](/cs-notes/compilers-and-programming-languages/subroutines#call-stack) which is a data structure that keeps track of the currently executing functions in the JavaScript call hierarchy.
 
-The environment also includes **callback queue** which is a [queue-like data structure](/data-structures-and-algorithms/queue) that holds callback functions that are waiting to be executed such as asynchronous events like waiting for user input or making a network call.
+The environment also includes **callback queue** which is a [queue-like data structure](/cs-notes/data-structures-and-algorithms/queue) that holds callback functions that are waiting to be executed such as asynchronous events like waiting for user input or making a network call.
 
 Another mechanism to manage the execution is the **event loop**. When the call stack is empty, the event loop checks the callback queue for new events. If there is a callback function waiting in the queue, the event loop retrieves the function and adds it to the call stack for execution. This allows JavaScript to handle asynchronous events without blocking the execution of other code.
 
@@ -75,7 +75,7 @@ Source: https://www.freecodecamp.org/news/what-exactly-is-node-guide-for-beginne
 
 ### NPM
 
-**npm (Node Package Manager)** is a [package manager](/software-engineering/build-and-package-management) for the JavaScript programming language and also as the default package manager for [Node JS](#node-js). It is primarily used for managing and sharing packages of reusable code that can be easily integrated into web applications.
+**npm (Node Package Manager)** is a [package manager](/cs-notes/software-engineering/build-and-package-management) for the JavaScript programming language and also as the default package manager for [Node JS](#node-js). It is primarily used for managing and sharing packages of reusable code that can be easily integrated into web applications.
 
 NPM provides a command-line interface (CLI) for working with packages and managing dependencies. When you need specific library or packages for your web app, developers can use the npm command to install packages from the NPM registry, which is a public repository of packages that can be easily searched and browsed.
 
@@ -119,8 +119,8 @@ Source: https://medium.com/helpshift-engineering/package-lock-json-the-complete-
 
 HTML, CSS, and JavaScript are three different technologies that work together to create modern web applications.
 
-- [HTML](/internet-and-web/html) defines the structure and content of a web page. It consists of a series of elements that define the various parts of a web page, such as headings, paragraphs, images, and links.
-- [CSS](/internet-and-web/css) is used to style and layout the content created with HTML. It allows developers to control the visual presentation of a web page, including its colors, fonts, spacing, and layout.
+- [HTML](/cs-notes/internet-and-web/html) defines the structure and content of a web page. It consists of a series of elements that define the various parts of a web page, such as headings, paragraphs, images, and links.
+- [CSS](/cs-notes/internet-and-web/css) is used to style and layout the content created with HTML. It allows developers to control the visual presentation of a web page, including its colors, fonts, spacing, and layout.
 - JavaScript is used to add interactivity and dynamic functionality for the behavior of a web application. It allows developers to create interactive elements such as dropdown menus, sliders, and pop-up windows, and to perform actions in response to user input.
 
   ![Analogy of HTML, CSS and JavaScript as car component includes the structure, style, and functionality](./html-css-javascript-analogy.png)  

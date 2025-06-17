@@ -13,10 +13,10 @@ description: Deep Learning Tasks
 
 ### Computer Vision (CV)
 
-**Computer Vision (CV)** is the study of enabling computer to understand and analyze visual data such as images and videos. Computer vision uses various algorithm from traditional technique like [image filters](/computer-graphics/signal-processing#image-filters) to a more advanced technique that uses deep learning.
+**Computer Vision (CV)** is the study of enabling computer to understand and analyze visual data such as images and videos. Computer vision uses various algorithm from traditional technique like [image filters](/cs-notes/computer-graphics/signal-processing#image-filters) to a more advanced technique that uses deep learning.
 
 :::note
-Common deep learning architecture for CV: [CNN](/deep-learning/cnn), [ResNet](/deep-learning/resnet), and [GAN](/deep-learning/gan).
+Common deep learning architecture for CV: [CNN](/cs-notes/deep-learning/cnn), [ResNet](/cs-notes/deep-learning/resnet), and [GAN](/cs-notes/deep-learning/gan).
 :::
 
 #### Image Detection
@@ -40,7 +40,7 @@ Source: https://www.semanticscholar.org/paper/Object-Detection-using-the-Canny-E
 **Natural Language Processing (NLP)** is a field of AI that focuses on the interaction between computers and human language. Deep learning technique can be applied to NLP, the idea is to turn human language into numbers that can be processed in the neural network.
 
 :::note
-Common deep learning architecture for NLP: [RNN](/deep-learning/rnn), [LSTM](/deep-learning/lstm), [GRU](/deep-learning/gru), and [Transformers](/deep-learning/transformers/transformers-architecture).
+Common deep learning architecture for NLP: [RNN](/cs-notes/deep-learning/rnn), [LSTM](/cs-notes/deep-learning/lstm), [GRU](/cs-notes/deep-learning/gru), and [Transformers](/cs-notes/deep-learning/transformers/transformers-architecture).
 :::
 
 Here are the high-level overview of NLP:

@@ -8,7 +8,7 @@ description: Wavelets
 
 - **[What Are Wavelets | Understanding Wavelets, Part 1 — MATLAB](https://youtu.be/QX1-xGVFqmw)**
 
-[Fourier transform](/digital-signal-processing/fourier-transform) represent signal in sinusoidal function. Sometimes, this is not suitable for signals that has abrupt changes. For example, sine wave is periodic, which means it will repeat at some point. If a signal changes abruptly, like sudden jumps or discontinuities, the Fourier Transform may struggle to accurately represent these features.
+[Fourier transform](/cs-notes/digital-signal-processing/fourier-transform) represent signal in sinusoidal function. Sometimes, this is not suitable for signals that has abrupt changes. For example, sine wave is periodic, which means it will repeat at some point. If a signal changes abruptly, like sudden jumps or discontinuities, the Fourier Transform may struggle to accurately represent these features.
 
 **Wavelet** is a short periodic function, meaning that the function doesn't oscillate forever unlike sinusoidal function. This characteristic make wavelets _localized_, which means that the same function can have various shape to match different regions of a signal. Wavelets can adapt their shape and size, capturing localized information at different scales.
 

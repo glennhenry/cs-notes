@@ -27,9 +27,9 @@ The two methods to run database on the cloud:
 
 Upon deploying the database, user can now configure the service based on their needs. This involves selecting the infrastructure, as well as the location, selecting the desired database type or storage capacity, and selecting the number of database instances.
 
-The database type correspond to how the data are stored within the cloud database. Typically, the data are classified into two model, [SQL database](/database-system/query-language#sql) and [NoSQL database](/database-system/nosql).
+The database type correspond to how the data are stored within the cloud database. Typically, the data are classified into two model, [SQL database](/cs-notes/database-system/query-language#sql) and [NoSQL database](/cs-notes/database-system/nosql).
 
-To actually use the database, we will use APIs provided by the cloud providers to access it. The APIs vary between provider, and it may use protocols like SQL for relational databases or [RESTful APIs](/backend-system/rest-api) for NoSQL databases.
+To actually use the database, we will use APIs provided by the cloud providers to access it. The APIs vary between provider, and it may use protocols like SQL for relational databases or [RESTful APIs](/cs-notes/backend-system/rest-api) for NoSQL databases.
 
 #### Example
 
@@ -67,7 +67,7 @@ for (document in result) {
 }
 ```
 
-Getting the collection using `getCollection` method passing in the collection name. A collection is similar to table, but it is not called so because MongoDB is a [document database](/database-system/nosql#document). In this case, we are trying to find specific document, that is someone with field `name` equal to "John Doe". The `find` method takes a query object (in this case, a Document object) that specifies the criteria for the search. It returns a cursor, which we can iterate over to access the retrieved documents.
+Getting the collection using `getCollection` method passing in the collection name. A collection is similar to table, but it is not called so because MongoDB is a [document database](/cs-notes/database-system/nosql#document). In this case, we are trying to find specific document, that is someone with field `name` equal to "John Doe". The `find` method takes a query object (in this case, a Document object) that specifies the criteria for the search. It returns a cursor, which we can iterate over to access the retrieved documents.
 
 Furthermore, some cloud provider provide a way to inspect and manage databases hosted on their platforms. We can see what collections and documents are available, monitor traffic, setting up access for security purposes, and adding or deleting a document directly from there is also possible.
 

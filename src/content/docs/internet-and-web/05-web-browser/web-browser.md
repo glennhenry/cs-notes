@@ -11,11 +11,11 @@ description: Web Browser
 
 A web browser, is a software application used to access and view websites and other online content on the internet. The main function of a browsers include:
 
-- **Connect to Server**: Browsers connects a server or website first by sending a [web address or URL (Uniform Resource Locator)](/internet-and-web/web-url) entered by user to [DNS](/computer-networking/dns) to find the [IP address](/computer-networking/ip-address) of the web server that hosts the requested web page.
-- **Communicate with Server**: After that browser will sends a request to the web server for the specific web page or resource that the user requested, using the [HTTP or HTTPS](/computer-networking/http-https) protocol. The web server responds by sending the requested web page or resource back to the browser.
-- **Render Pages**: The received page and resource are then rendered to user, meaning browser will interpret the content of a webpage defined by [HTML, CSS, and JavaScript](/internet-and-web/javascript#html--css--javascript) code for the page from the web server and uses a [rendering engine](/internet-and-web/javascript#v8-javascript-engine) to translate that code into a visual representation that can be displayed on the screen.
+- **Connect to Server**: Browsers connects a server or website first by sending a [web address or URL (Uniform Resource Locator)](/cs-notes/internet-and-web/web-url) entered by user to [DNS](/cs-notes/computer-networking/dns) to find the [IP address](/cs-notes/computer-networking/ip-address) of the web server that hosts the requested web page.
+- **Communicate with Server**: After that browser will sends a request to the web server for the specific web page or resource that the user requested, using the [HTTP or HTTPS](/cs-notes/computer-networking/http-https) protocol. The web server responds by sending the requested web page or resource back to the browser.
+- **Render Pages**: The received page and resource are then rendered to user, meaning browser will interpret the content of a webpage defined by [HTML, CSS, and JavaScript](/cs-notes/internet-and-web/javascript#html--css--javascript) code for the page from the web server and uses a [rendering engine](/cs-notes/internet-and-web/javascript#v8-javascript-engine) to translate that code into a visual representation that can be displayed on the screen.
 
-Browser also act as a [JavaScript runtime environment](/internet-and-web/javascript#javascript-run-time-environment) which is where JavaScript will be executed. Browser provides component such as event loop and able to schedule asynchronous operations, such as making an HTTP request.
+Browser also act as a [JavaScript runtime environment](/cs-notes/internet-and-web/javascript#javascript-run-time-environment) which is where JavaScript will be executed. Browser provides component such as event loop and able to schedule asynchronous operations, such as making an HTTP request.
 
 ### Page Rendering
 
@@ -23,7 +23,7 @@ The rendering process involves 2 steps:
 
 #### DOM Creation
 
-HTML code is parsed to create [DOM](/internet-and-web/html#html-dom), this process is broken down into 3 steps:
+HTML code is parsed to create [DOM](/cs-notes/internet-and-web/html#html-dom), this process is broken down into 3 steps:
 
 - **Tokenization**: The browser breaks the HTML code into tokens, which are small units of the code that represent different elements, attributes, and text content.
 - **Lexing**: The browser converts the tokens into a series of nodes, which are the building blocks of the DOM. Each node corresponds to a different element, attribute, or piece of text content in the HTML code.
@@ -36,7 +36,7 @@ HTML code is parsed to create [DOM](/internet-and-web/html#html-dom), this proce
 
 After creating the HTML DOM, each element is applied by the appropriate style on CSS file:
 
-- **Creation of CSSOM**: The browser breaks the CSS code into tokens which are again small units of the code that represent different elements, properties, and values. Tokens are used to create a [CSS Object Model (CSSOM)](/internet-and-web/css#cssom). Each node in the CSSOM corresponds to a different CSS selector, property, or value.
+- **Creation of CSSOM**: The browser breaks the CSS code into tokens which are again small units of the code that represent different elements, properties, and values. Tokens are used to create a [CSS Object Model (CSSOM)](/cs-notes/internet-and-web/css#cssom). Each node in the CSSOM corresponds to a different CSS selector, property, or value.
 - **Computing Styles**: The browser matches the CSS selectors in the CSSOM with the HTML elements in the DOM tree to determine which styles should be applied to which elements. The browser then computes the final style for each element based on the matching rules in the CSSOM.
 - **Layout and Painting**: Once the final styles for each element have been computed, the browser uses them to perform layout and painting, which involves determining the size, position, calculating the padding, border, and margin properties, and visual appearance of each element such as color and background color on the web page and painting the content onto the screen.
 

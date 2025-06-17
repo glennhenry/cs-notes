@@ -8,7 +8,7 @@ description: Database Model
 
 - **Chapter 4 - Database Systems - The Complete Book (2nd Edition)**
 - **[Database model — Wikipedia](https://en.wikipedia.org/wiki/Database_model)**
-- **[XML notes](/digital-media-processing/xml)**
+- **[XML notes](/cs-notes/digital-media-processing/xml)**
 
 **Database Model** is a conceptual representation of how data is organized and structured in a database system. It describes the logical structure, relationships between data elements, and the rules for manipulating and accessing the data. Database models serve as a blueprint for designing and implementing a database system.
 
@@ -55,7 +55,7 @@ We can enforce constraints on a database, they are specific rules or conditions 
 ![ER diagram keys](./er-diagram-key.png)  
 Source: Book page 149
 
-In the diagram, we indicate an attribute as the unique identifier of an entity set by underlining it. In this case, a studio is uniquely identified by its [primary key](/database-system/relational-data#primary--foreign-key), which is the name.
+In the diagram, we indicate an attribute as the unique identifier of an entity set by underlining it. In this case, a studio is uniquely identified by its [primary key](/cs-notes/database-system/relational-data#primary--foreign-key), which is the name.
 
 ![ER diagram other constraints](./er-diagram-other-constraints.png)  
 Source: Book page 150, 151
@@ -75,7 +75,7 @@ Such entity set is indicated by double rectangle box. A crew can't be identified
 
 #### UML
 
-**Unified Modeling Language (UML)** is a standardized visual modeling language used to model, design, and document software systems and other systems with a graphical notation, in an [object-oriented](/computer-and-programming-fundamentals/object-oriented-programming) style. While UML is typically used for software systems, it can also be used to model database.
+**Unified Modeling Language (UML)** is a standardized visual modeling language used to model, design, and document software systems and other systems with a graphical notation, in an [object-oriented](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming) style. While UML is typically used for software systems, it can also be used to model database.
 
 UML diagram is represented in three parts of box. The top part is the name of the class, or the entity set in the case of similarity with E/R model. The middle part consists of the attributes and its data types. The bottom part is the methods of the class.
 
@@ -189,7 +189,7 @@ The example defines a record of `person` entity with an attributes `id` equal to
 - **Parent & Child**: XML is a hierarchical model, the `person` element is the root and also the parent element of its child, `name` and `age`. Child elements represent actual data while attribute is just additional details.
 
 :::info
-More about [XML](/digital-media-processing/xml).
+More about [XML](/cs-notes/digital-media-processing/xml).
 :::
 
 #### Network
@@ -201,20 +201,20 @@ Source: https://en.wikipedia.org/wiki/Database_model#/media/File:Network_Model.s
 
 The graph structure of network model allows for many-to-many relationship, a single parent is not a requirement anymore. There can be more than one path from an ancestor node to a descendant.
 
-Records and relationships are organized into sets. The sets are represented in a circular [linked list](/data-structures-and-algorithms/linked-list), where each circle represents a set and consists of records of a specific record type.
+Records and relationships are organized into sets. The sets are represented in a circular [linked list](/cs-notes/data-structures-and-algorithms/linked-list), where each circle represents a set and consists of records of a specific record type.
 
 ![Circular linked list](./circular-set.png)  
 Source: https://byjus.com/gate/network-model-in-dbms-notes/
 
-The circular set establishes a [directed graph](/data-structures-and-algorithms/graph#directed), where the direction is determined by the ownership relationship. We can access related records by following the links within the circular linked lists.
+The circular set establishes a [directed graph](/cs-notes/data-structures-and-algorithms/graph#directed), where the direction is determined by the ownership relationship. We can access related records by following the links within the circular linked lists.
 
 #### Relational
 
-Relational model is what we have [discussed in the previous topics](/database-system/relational-data).
+Relational model is what we have [discussed in the previous topics](/cs-notes/database-system/relational-data).
 
 #### Object
 
-The object model follows the [object-oriented programming (OOP)](/computer-and-programming-fundamentals/object-oriented-programming) paradigms. In object model, an entity is defined as a class.
+The object model follows the [object-oriented programming (OOP)](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming) paradigms. In object model, an entity is defined as a class.
 
 Objects encapsulate both data (attributes or properties) and behavior (methods or operations) within a single entity. OOP concepts like inheritance are supported in object databases, this allows specific entity to inherit attributes and behavior from their parent classes.
 
@@ -227,7 +227,7 @@ Source: https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping
 
 #### Document
 
-Document model stores and organizes data in a flexible, semi-structured format known as documents. In this database model, data is stored in self-contained documents, typically in formats such as [JSON (JavaScript Object Notation)](/digital-media-processing/json).
+Document model stores and organizes data in a flexible, semi-structured format known as documents. In this database model, data is stored in self-contained documents, typically in formats such as [JSON (JavaScript Object Notation)](/cs-notes/digital-media-processing/json).
 
 :::tip
 [XML](#xml) is considered as a document model as well.

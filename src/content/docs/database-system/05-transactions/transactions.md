@@ -27,7 +27,7 @@ The purpose of transaction is to group these operations together. Grouping them 
 An analogy would be sending several mails together in a box rather than sending each mail on its own. If some mail get lost, you would lose some piece of information, resulting in incomplete message. On the other hand, with a box of mail, you would either send all the information or lose all the information.
 :::
 
-Another purpose of transactions is to control concurrency in the case of multiple database operation. Transaction allows us to isolate a group of operation. Whenever a group of operation is on the fly, other group of operation shouldn't do anything. This will prevent concurrency issues such as [data races](/computer-and-programming-fundamentals/concurrency#race-condition), that is when two or more database operation access the same data, and at least one of them is writing. This makes the other operation that reads the data, accidentally read the data before update or after the update, causing unexpected behavior.
+Another purpose of transactions is to control concurrency in the case of multiple database operation. Transaction allows us to isolate a group of operation. Whenever a group of operation is on the fly, other group of operation shouldn't do anything. This will prevent concurrency issues such as [data races](/cs-notes/computer-and-programming-fundamentals/concurrency#race-condition), that is when two or more database operation access the same data, and at least one of them is writing. This makes the other operation that reads the data, accidentally read the data before update or after the update, causing unexpected behavior.
 
 ### Transactions State
 

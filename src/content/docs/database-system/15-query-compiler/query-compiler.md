@@ -69,7 +69,7 @@ To turn logical query plan into physical query plan, we will need to know what p
 Depending on the physical plan, we may choose different method to process the data.
 
 - The order and grouping for associative-and-commutative operators such as joins, unions, and intersections.
-- Choosing which algorithm should we use to implement the operator, for example, deciding whether a [nested-loop join](/database-system/query-processing#nested-loop-join) or a [hash-join](/database-system/query-processing#hashing-based) should be used.
+- Choosing which algorithm should we use to implement the operator, for example, deciding whether a [nested-loop join](/cs-notes/database-system/query-processing#nested-loop-join) or a [hash-join](/cs-notes/database-system/query-processing#hashing-based) should be used.
 - Operator such as scanning or sorting to support the query.
 - Method to pass data after each operator, for example, storing results in disk, processing one tuple, or one main-memory buffer at a time.
 
@@ -95,8 +95,8 @@ After estimation of operators are determined, the optimizer needs to estimate th
 
 There are several approaches to enumerate or explore all possible physical plans:
 
-- **[Top-down approach](/data-structures-and-algorithms/dynamic-programming#top-down)**: Start from the root of the logical query plan down to bottom of the tree. For each possible implementation, we enumerate the physical plans and evaluate their costs.
-- **[Bottom-up approach](/data-structures-and-algorithms/dynamic-programming#bottom-up)**: Keeps track of the plan of the least cost for each subexpression. By considering the cost of each subexpression, the overall cost of the query plan can be obtained by combining them all.
+- **[Top-down approach](/cs-notes/data-structures-and-algorithms/dynamic-programming#top-down)**: Start from the root of the logical query plan down to bottom of the tree. For each possible implementation, we enumerate the physical plans and evaluate their costs.
+- **[Bottom-up approach](/cs-notes/data-structures-and-algorithms/dynamic-programming#bottom-up)**: Keeps track of the plan of the least cost for each subexpression. By considering the cost of each subexpression, the overall cost of the query plan can be obtained by combining them all.
 - **Heuristic Selection**: Heuristic plans follows rules or guidelines that are likely to produce good results. For example, we can start by joining the pair of relations with the smallest estimated size and then repeating the process for the result of that join and the remaining relations. This heuristic aims to minimize the intermediate result sizes and reduce computational overhead by joining smaller relations first.
 - **Hill climbing approach**: This approach involves searching for a "valley" in the space of physical plans and their costs. It starts with a heuristically selected physical plan and makes small changes to the plan, such as replacing one execution method with another or reordering joins using associative and commutative laws. The goal is to find nearby plans that have lower costs. When no further modifications yield a plan with a lower cost, the current plan is chosen as the physical query plan.
 
@@ -108,4 +108,4 @@ The last step to turn logical query plan into physical query plan are:
 - **Materialization and Pipelining**: Decision of whether to materialize intermediate results or pipeline them depends on factors such as available memory, disk space, and the size of the intermediate results.
   - Materialization involves creating the entire intermediate result and storing it on disk, which can be useful when the result is large or needs to be reused later.
   - Pipelining involves creating the intermediate result only in main memory, without necessarily keeping it in its entirety at any given time.
-- **Physical Plan Implementation**: The specific details regarding access methods for stored relations and algorithms for implementing relational-algebra operators. Access methods refer to the techniques used to retrieve tuples from stored relations, such as [table scans, index scans, or sort scans](/database-system/query-processing#physical-query-plan-operators).
+- **Physical Plan Implementation**: The specific details regarding access methods for stored relations and algorithms for implementing relational-algebra operators. Access methods refer to the techniques used to retrieve tuples from stored relations, such as [table scans, index scans, or sort scans](/cs-notes/database-system/query-processing#physical-query-plan-operators).

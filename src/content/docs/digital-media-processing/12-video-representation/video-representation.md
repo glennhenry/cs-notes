@@ -6,7 +6,7 @@ description: Video Representation
 
 **Main Source:**
 
-- **[Computer Display](/computer-graphics/computer-display)**
+- **[Computer Display](/cs-notes/computer-graphics/computer-display)**
 
 Video is basically a sequence of images. An image is stationary, however, if we keep changing the image with a small change in the detail of image, we will be able to create illusion of animation.
 

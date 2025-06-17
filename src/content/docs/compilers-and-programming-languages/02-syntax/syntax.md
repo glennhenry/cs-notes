@@ -38,12 +38,12 @@ A number greater than 100 must be anything beyond 100, like 101, 102, 103, and s
 After the two digit, there is another digit included with the `*` symbol. This corresponds to **Kleene star operator**, which mean the particular non-terminal can be repeated zero or more times. A single `<digit>` with Kleene star means we can put any digit as many as we want. So, it is possible to create long number like 10000000000 or 123123123 with this syntax.
 
 :::tip
-A note on [languages](/theory-of-computation-and-automata/toc-fundamentals#strings--languages) and [grammar](/theory-of-computation-and-automata/toc-fundamentals#grammar).
+A note on [languages](/cs-notes/theory-of-computation-and-automata/toc-fundamentals#strings--languages) and [grammar](/cs-notes/theory-of-computation-and-automata/toc-fundamentals#grammar).
 :::
 
 ### Regular Expression
 
-A [regular expression](/theory-of-computation-and-automata/regular-languages-part-1#regular-expression) is a pattern or rule that is used to describe valid strings or sequences of characters within a language. If syntax defines the overall structure and grammar of a language, regular expression is the notation for pattern matching and string manipulation.
+A [regular expression](/cs-notes/theory-of-computation-and-automata/regular-languages-part-1#regular-expression) is a pattern or rule that is used to describe valid strings or sequences of characters within a language. If syntax defines the overall structure and grammar of a language, regular expression is the notation for pattern matching and string manipulation.
 
 Syntax are built on **tokens**, which are the smallest individual units or elements in a programming language. They represent predefined categories of lexical elements, such as keywords, identifiers, literals, operators, and punctuation symbols.
 
@@ -80,7 +80,7 @@ This syntax defines that an expression can be expanded to another expression fol
 
 For example, given an `<expr>`, we can transform it into `<expr> 0` (by changing `<expr>` into `<expr> 0`), then transform it again into `<expr> 0 0`, and so on.
 
-The formal methods which can do this is called [context-free grammar](/theory-of-computation-and-automata/context-free-grammar).
+The formal methods which can do this is called [context-free grammar](/cs-notes/theory-of-computation-and-automata/context-free-grammar).
 
 #### BNF
 
@@ -120,5 +120,5 @@ The above is an example of a context-free grammar derivation in a parse tree. Fi
 If there are more than one parse tree generated for the same string, we can say the grammar is **ambiguous**. It turns out that the parse tree on the top derives leftmost `expr` first, while the second is the opposite. The generated string is the same, but the order of derivation is different. The first phase tree precede operator `*` (multiplication) before `+`.
 
 :::tip
-See also [context-free grammar](/theory-of-computation-and-automata/context-free-grammar).
+See also [context-free grammar](/cs-notes/theory-of-computation-and-automata/context-free-grammar).
 :::

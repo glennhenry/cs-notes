@@ -18,7 +18,7 @@ The machine learning model, called **agent** needs to learn the environment by t
 In summary, we do not explicitly teach the model or agent. Instead, we allow the agent to explore and learn on its own. To guide the agent towards specific tasks, we provide rules or guidelines and provide feedback based on its actions.
 
 :::note
-We can also combine RL with deep learning techniques, this is called **Deep Reinforcement Learning (Deep RL)**, techniques like [convolutional neural networks (CNN)](/deep-learning/rnn) or [recurrent neural networks (RNN)](/deep-learning/rnn) are used.
+We can also combine RL with deep learning techniques, this is called **Deep Reinforcement Learning (Deep RL)**, techniques like [convolutional neural networks (CNN)](/cs-notes/deep-learning/rnn) or [recurrent neural networks (RNN)](/cs-notes/deep-learning/rnn) are used.
 :::
 
 A simple example for RL problem is solving a maze. The objective is to find the optimal path from start to the end. A state correspond to the location of agent in the maze. The action is the direction to move (e.g. left, right, down, up). The positive reward is when the agent reaches the goal while the negative reward is when it hits a wall or takes a suboptimal path.
@@ -125,7 +125,7 @@ There are four main value function:
 ![Four of value function](./value-functions.png)  
 Source: https://spinningup.openai.com/en/latest/spinningup/rl_intro.html#value-functions
 
-In practice, the [value function](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#value-function) is usually not known to us. There are several reasons for this:
+In practice, the [value function](/cs-notes/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#value-function) is usually not known to us. There are several reasons for this:
 
 - **Complex or Unknown Environment**: It is often impossible to have complete knowledge of all possible states, actions, rewards, and transition dynamics.
 - **Sparse Rewards**: Sometimes, the reward is not directly given to the agent after doing an action, if the agent doesn't receive any feedback after a long time, it may lead to difficulties in finding the optimal policy. A reward that is too high or too low can also make the learning unstable.
@@ -133,7 +133,7 @@ In practice, the [value function](/deep-learning/reinforcement-learning/reinforc
 
 #### Bellman Equation
 
-Bellman equation is an equation, typically used in [dynamic programming](/data-structures-and-algorithms/dynamic-programming), it is an equation that decompose a problem into smaller subproblems and finding the optimal solution by iteratively updating the value.
+Bellman equation is an equation, typically used in [dynamic programming](/cs-notes/data-structures-and-algorithms/dynamic-programming), it is an equation that decompose a problem into smaller subproblems and finding the optimal solution by iteratively updating the value.
 
 In the context of RL, Bellman equation is applied to describe how the value of a state (or state-action pair) is related to the values of its successor states. It says that the value of a state is the reward for current state plus the discounted value for next state. The value for the next state also depends on the next and next state, making it a recursive equation.
 

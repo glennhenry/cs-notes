@@ -22,7 +22,7 @@ Suppose we are going to find the department for employee Derek. The naive approa
 
 In a small table, the impact on query performance may not be significant. However, as the table size increases and the query becomes more frequent, it can have a noticeable effect on overall performance.
 
-Now obviously we can improve the performance by sorting the table, so we can perform [binary search](/data-structures-and-algorithms/search#binary-search). However, it will be harder in a scenario where we have to search based on multiple values, not just the name.
+Now obviously we can improve the performance by sorting the table, so we can perform [binary search](/cs-notes/data-structures-and-algorithms/search#binary-search). However, it will be harder in a scenario where we have to search based on multiple values, not just the name.
 
 Binary search still requires accessing specific disk blocks/pages where the data resides. In a big sorted table, the data may not be stored contiguously, meaning that multiple disk blocks/pages may need to be read to complete the binary search. This can result in multiple I/O operations, especially if the desired data is distributed across different disk blocks.
 
@@ -30,7 +30,7 @@ Another downside of flat sorted table is the performance of insertion and deleti
 
 #### B-Tree Index Example
 
-There are many ways to implement database indexes. One way is to maintain a column of key and pointer, arranged in a tree structure. The column will be sorted based on the key. This tree structure is called [B-tree](/data-structures-and-algorithms/tree#b-tree).
+There are many ways to implement database indexes. One way is to maintain a column of key and pointer, arranged in a tree structure. The column will be sorted based on the key. This tree structure is called [B-tree](/cs-notes/data-structures-and-algorithms/tree#b-tree).
 
 ![Example of index](./index.png)  
 Source: https://www.linkedin.com/pulse/database-index-selvamani-govindaraj (with modification)
@@ -60,7 +60,7 @@ A b-tree node does not have to be 2, the number of node can be within a certain 
 
 The compact representation of index entries in b-tree indexing enables a significant amount of data (the index keys) to fit within a single page. We can check a large amount of key in just a single I/O operations that retrieves the specific page.
 
-Also, we don't need to reorganize the node and all the disk pages every time insertion or deletion happens, this is because [b-tree by itself is a self-balancing tree](/data-structures-and-algorithms/tree#rules--balancing).
+Also, we don't need to reorganize the node and all the disk pages every time insertion or deletion happens, this is because [b-tree by itself is a self-balancing tree](/cs-notes/data-structures-and-algorithms/tree#rules--balancing).
 
 :::tip
 The terms page and block is sometimes used interchangeably.
@@ -86,17 +86,17 @@ Non-clustered index can be efficient for query of data based on the indexed colu
 
 #### Types of Indexes
 
-- **Bitmap Index**: A bitmap index stores data in a bit array (bitmap) and answer query by performing [bitwise operations](/computer-and-programming-fundamentals/bitwise-operation). Each bit in the bitmap represents the yes or no of a particular value in the indexed column. Bitmap indexes are efficient for low cardinality columns (columns with a few distinct values) and can provide fast lookup and efficient boolean operations.
+- **Bitmap Index**: A bitmap index stores data in a bit array (bitmap) and answer query by performing [bitwise operations](/cs-notes/computer-and-programming-fundamentals/bitwise-operation). Each bit in the bitmap represents the yes or no of a particular value in the indexed column. Bitmap indexes are efficient for low cardinality columns (columns with a few distinct values) and can provide fast lookup and efficient boolean operations.
 - **Dense Index**: Dense index contains an entry for every record in the indexed data structure. In other words, there is an index entry (containing key and pointer) for each data record in the table.
 - **Sparse Index**: Sparse index contains an entry for some subset of record in the indexed data structure. It skips some records in the data structure, resulting in a smaller index size.
 - **Inverted Index**: Inverted index maps a value to the records that contain them. Inverted indexes are commonly used in search engines which uses keyword as the value and the document or website as their records.
 - **Primary Index**: Primary index is an index structure that is based on the primary key of a table. It determines the physical location of records in a data file. Data file is a specific file that is used to store the actual data records of a database, and may contain primary index data.
 - **Secondary Index**: A secondary index is an index structure that is based on a non-primary key attribute of a table. Unlike the primary index, a secondary index does not determine the physical order of the records on disk. Instead, it provides an alternate way to access the data by creating an index on a specific attribute or combination of attributes. Secondary indexes are always dense, meaning they contain entries for all records in the data file. This is in contrast to primary indexes, which can be sparse, representing only a subset of the records.
-- **Hash Index**: Hash index uses a [hash function](/computer-security/hash-function) to map the indexed values to specific locations in the index structure. Hash indexes provide fast equality searches, but they are not well-suited for range queries or partial matches.
+- **Hash Index**: Hash index uses a [hash function](/cs-notes/computer-security/hash-function) to map the indexed values to specific locations in the index structure. Hash indexes provide fast equality searches, but they are not well-suited for range queries or partial matches.
 
 ![Index types](./index-types.png)  
 Source: [Bitmap index](https://www.semanticscholar.org/paper/A-Data-Mining-Approach-for-selecting-Bitmap-Join-Bellatreche-Missaoui/be31419bb65817e457433f4061af2771e9891ac2), [Dense index](http://mlwiki.org/index.php/Dense_Index), [Sparse index](https://prepinsta.com/dbms/indexing-and-its-types/), [Inverted index](https://spotintelligence.com/2023/10/30/inverted-indexing/), [Primary and secondary index](https://byjus.com/gate/indexing-in-dbms-notes/), [Hash index](https://www.sqlpipe.com/blog/b-tree-vs-hash-index-and-when-to-use-them)
 
 :::tip
-See [index implementation](/database-system/index-implementation) for more detail about index and their implementation.
+See [index implementation](/cs-notes/database-system/index-implementation) for more detail about index and their implementation.
 :::

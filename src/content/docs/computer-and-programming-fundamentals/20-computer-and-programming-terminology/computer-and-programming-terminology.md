@@ -21,15 +21,15 @@ Source: https://www.computerscience.gcse.guru/theory/pseudocode
 
 ##### Hash map vs Hash set vs Dictionary
 
-- **Hash map**: [Hash table or Hash map](/computer-and-programming-fundamentals/data-structures-and-algorithms#data-structures) is a data structure where we access element based on a unique identifier called **key**. An element is a set of key-value pair, the key is the identifier and the value is the actual value associated with it.
-- **Hash set**: **[Set](/data-structures-and-algorithms/set)** is a data structure that stores unique element. **Hash set** is one way to implement set data structure using hash code. It uses hash table internally, which mean it uses hashing function similar to hash map. While it uses hash table, it is not a key-value pair data structure unlike hash map.
+- **Hash map**: [Hash table or Hash map](/cs-notes/computer-and-programming-fundamentals/data-structures-and-algorithms#data-structures) is a data structure where we access element based on a unique identifier called **key**. An element is a set of key-value pair, the key is the identifier and the value is the actual value associated with it.
+- **Hash set**: **[Set](/cs-notes/data-structures-and-algorithms/set)** is a data structure that stores unique element. **Hash set** is one way to implement set data structure using hash code. It uses hash table internally, which mean it uses hashing function similar to hash map. While it uses hash table, it is not a key-value pair data structure unlike hash map.
 - **Dictionary**: Just another name for hash map in language like Python.
 
 ##### Array vs List vs ArrayList
 
-- **Array**: [Array](/computer-and-programming-fundamentals/data-structures-and-algorithms#data-structures) is a fixed-sized data structure that stores same type of element in a contiguous block of memory.
-- **List**: List is a variable-sized data structure that can store different type of element. A list can be implemented using a [linked list](/data-structures-and-algorithms/linked-list), which allows for non-contiguous memory allocation, enabling each value to be located at an arbitrary position.
-- **ArrayList**: ArrayList is an implementation of list data structure using a [dynamic array](/data-structures-and-algorithms/array#dynamic-array). Unlike traditional array, a dynamic array can be resized.
+- **Array**: [Array](/cs-notes/computer-and-programming-fundamentals/data-structures-and-algorithms#data-structures) is a fixed-sized data structure that stores same type of element in a contiguous block of memory.
+- **List**: List is a variable-sized data structure that can store different type of element. A list can be implemented using a [linked list](/cs-notes/data-structures-and-algorithms/linked-list), which allows for non-contiguous memory allocation, enabling each value to be located at an arbitrary position.
+- **ArrayList**: ArrayList is an implementation of list data structure using a [dynamic array](/cs-notes/data-structures-and-algorithms/array#dynamic-array). Unlike traditional array, a dynamic array can be resized.
 
 ![Array and list](./array-list.png)
 
@@ -62,7 +62,7 @@ Type safety refers to the degree to which a programming language helps prevent t
 For example, if a type-safe function is declared to return an integer, it guarantees that the function will consistently return an integer whenever it is called.
 
 :::tip
-See also [type systems](/compilers-and-programming-languages/data-types#type-systems).
+See also [type systems](/cs-notes/compilers-and-programming-languages/data-types#type-systems).
 :::
 
 #### Standard Library
@@ -78,7 +78,7 @@ Abstraction is a fundamental concept in computer science and programming that in
 **Application Programming Interface (API)** is an interface for programmer to interact with different software component in a system. An API defines how different components of software systems should interact, specifying the methods, data formats, and conventions that should be used.
 
 :::tip
-See a more detailed explanation about [API](/backend-system/apis-server-logic#what-is-api)
+See a more detailed explanation about [API](/cs-notes/backend-system/apis-server-logic#what-is-api)
 :::
 
 #### Reflection
@@ -87,7 +87,7 @@ Reflection is a feature that enables program to examine internal detail about a 
 
 #### Serialization
 
-Serialization is the process of converting an object or data structure into a format that can be easily stored, transmitted, or reconstructed later. For example, when transferring data in the form of object through the network, we will need to convert it to format that can be transmitted such as [JSON](/digital-media-processing/json) file.
+Serialization is the process of converting an object or data structure into a format that can be easily stored, transmitted, or reconstructed later. For example, when transferring data in the form of object through the network, we will need to convert it to format that can be transmitted such as [JSON](/cs-notes/digital-media-processing/json) file.
 
 For example, here is a simple object in Kotlin:
 
@@ -110,7 +110,7 @@ val user = User(name = "Serial", age = 23)
 }
 ```
 
-In the case of [HTTP request](/computer-networking/http-https), this JSON file will be included in the payload. This will be sent over the network, the JSON data will be received on the other end by the recipient. In order to use this data in the form of Kotlin object, it will need to go through the **deserialization** or the reverse process of serialization that converts it back to object.
+In the case of [HTTP request](/cs-notes/computer-networking/http-https), this JSON file will be included in the payload. This will be sent over the network, the JSON data will be received on the other end by the recipient. In order to use this data in the form of Kotlin object, it will need to go through the **deserialization** or the reverse process of serialization that converts it back to object.
 
 #### Brute Force
 
@@ -132,7 +132,7 @@ Example of brute forcing is when you try to guess a 3-digit PIN code. Each of th
 - **Console**: Historically, it is a terminal which is connected into physical machine (a physical terminal). Nowadays, console is commonly referred as a terminal that displays output.
 
 :::tip
-See also [shell](/compilers-and-programming-languages/scripting-languages#shell)
+See also [shell](/cs-notes/compilers-and-programming-languages/scripting-languages#shell)
 :::
 
 ##### Environment Variables

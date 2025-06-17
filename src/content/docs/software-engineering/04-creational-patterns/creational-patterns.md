@@ -13,8 +13,8 @@ description: Creational Patterns
 Design patterns are categorized into three main groups:
 
 - [Creational](#creational-patterns)
-- [Structural](/software-engineering/structural-patterns)
-- [Behavioral](/software-engineering/behavioral-patterns)
+- [Structural](/cs-notes/software-engineering/structural-patterns)
+- [Behavioral](/cs-notes/software-engineering/behavioral-patterns)
 
 ### Creational Patterns
 

@@ -7,9 +7,9 @@ description: BERT
 **Main Source:**
 
 - **[What is BERT and how does it work? | A Quick Review — AssemblyAI](https://youtu.be/6ahxPTLZxU8?si=5KlmpJLnNZRHyKl_)**
-- **[Transformers Architecture](/deep-learning/transformers/transformers-architecture)**
+- **[Transformers Architecture](/cs-notes/deep-learning/transformers/transformers-architecture)**
 
-**Bidirectional Encoder Representations from Transformers (BERT)** is a [transformers-based architecture](/deep-learning/transformers/transformers-architecture) which consist of encoder that processes input sequence without involving decoder that generates output sequence. BERT is typically used for text classification, identifying identity (NER), question answering, and etc.
+**Bidirectional Encoder Representations from Transformers (BERT)** is a [transformers-based architecture](/cs-notes/deep-learning/transformers/transformers-architecture) which consist of encoder that processes input sequence without involving decoder that generates output sequence. BERT is typically used for text classification, identifying identity (NER), question answering, and etc.
 
 BERT is the encoder part of transformers, which they shares similar properties including:
 

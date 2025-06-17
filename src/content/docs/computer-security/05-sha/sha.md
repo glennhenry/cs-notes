@@ -18,13 +18,13 @@ SHA-0 is the first SHA algorithm, many collisions were found, and it is consider
 
 Here is the high-level overview of the SHA-1 algorithm:
 
-1. **Preprocessing**: The input message is padded to a multiple of the block size. The padding includes adding a 1-bit followed by a series of 0-bits until the desired length is reached (it should be [congruent](/computer-security/math-concepts#congruence) to $−64 ≡ 448 \space (\text{mod } 512)$).
+1. **Preprocessing**: The input message is padded to a multiple of the block size. The padding includes adding a 1-bit followed by a series of 0-bits until the desired length is reached (it should be [congruent](/cs-notes/computer-security/math-concepts#congruence) to $−64 ≡ 448 \space (\text{mod } 512)$).
 
    After that, append the original length of the message (in bits) as a 64-bit integer in big-endian format. This means representing the length using 8 bytes (64 bits) and placing the most significant byte first.
 
 2. **Initialization**: Initialize five 32-bit variables (A, B, C, D, E) with predetermined constants (initial hash values). These variables will be updated during the hashing process.
 
-3. **Chunk Processing**: Message are broken up into 512-bit chunks, each chunk goes through a series of rounds that involve logical functions, [bitwise operations](/computer-and-programming-fundamentals/bitwise-operation), and [modular arithmetic](/computer-security/math-concepts#modular-arithmetic). Each of the operations is divided within different rounds, rounds 0-19, rounds 20-39, rounds 40-59, rounds 60-79. For example, rounds 0-19 involve the bitwise operation and shifting, rounds 40-59 involve calculating the parity (odd or even) of the inputs.
+3. **Chunk Processing**: Message are broken up into 512-bit chunks, each chunk goes through a series of rounds that involve logical functions, [bitwise operations](/cs-notes/computer-and-programming-fundamentals/bitwise-operation), and [modular arithmetic](/cs-notes/computer-security/math-concepts#modular-arithmetic). Each of the operations is divided within different rounds, rounds 0-19, rounds 20-39, rounds 40-59, rounds 60-79. For example, rounds 0-19 involve the bitwise operation and shifting, rounds 40-59 involve calculating the parity (odd or even) of the inputs.
 
 4. **Update Variables**: The internal state, which was initialized with some initial hash values, is updated after each block processing round.
 

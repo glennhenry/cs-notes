@@ -8,7 +8,7 @@ description: Fourier Transform
 
 - **[The Fourier Series and Fourier Transform Demystified — Up and Atom](https://youtu.be/mgXSevZmjPc)**
 
-If [Fourier series](/digital-signal-processing/fourier-series) is used to sum up wave to approximate a function, **Fourier transform** is a method to separate a complex wave based on its frequency.
+If [Fourier series](/cs-notes/digital-signal-processing/fourier-series) is used to sum up wave to approximate a function, **Fourier transform** is a method to separate a complex wave based on its frequency.
 
 Wave functions, such as the Fourier series, is typically associated with time (t). The x-axis represents the time variable, and the function values correspond to the wave's amplitude or other relevant properties at different time instants. We call wave function with time, which represent its behavior over time as **time-domain representation**.
 
@@ -34,7 +34,7 @@ Fourier transform formula for continuous signal is given by below.
 - $f(t)$ is the original function of signal in the time domain
 - $e^{-i\omega t}$ is a complex exponential term.
 
-The complex exponential term is used to represent wave in terms of sine and cosine waves (by [utilizing Euler's identity](/digital-signal-processing/fourier-series#complex-fourier-series)). In this formula, wave is represented as a vector that has certain magnitude, which correspond to the amplitude of the sinusoidal wave.
+The complex exponential term is used to represent wave in terms of sine and cosine waves (by [utilizing Euler's identity](/cs-notes/digital-signal-processing/fourier-series#complex-fourier-series)). In this formula, wave is represented as a vector that has certain magnitude, which correspond to the amplitude of the sinusoidal wave.
 
 ![Wave representation using complex exponential term](./complex-rotation.gif)  
 Source: https://tutorial.math.lamar.edu/Extras/ComplexPrimer/Forms.aspx

@@ -9,7 +9,7 @@ description: Microservice
 - **[What Are Microservices Really All About? (And When Not To Use It) — ByteByteGo](https://youtu.be/lTAcCNbJ7KE?si=9iNSTooup4bKqm5g)**
 - **[Advantages and Disadvantages of Microservices Architecture by Joe Nemer — cloud academy](https://cloudacademy.com/blog/microservices-architecture-challenge-advantage-drawback/)**
 
-While [monolithic](/backend-system/monolithic) architecture combine all the software component together, microservice architecture divide it into small component instead. **Microservice** is an architecture where the structure of application is broken down into small service called microservice, each with their own responsibility. Every component are loosely coupled and independent unlike monolithic architecture.
+While [monolithic](/cs-notes/backend-system/monolithic) architecture combine all the software component together, microservice architecture divide it into small component instead. **Microservice** is an architecture where the structure of application is broken down into small service called microservice, each with their own responsibility. Every component are loosely coupled and independent unlike monolithic architecture.
 
 In a microservice architecture, each service is developed, deployed, and scaled independently of other services. This allows for greater flexibility, scalability, and ease of maintenance compared to traditional monolithic architectures. Each service can also be developed using different technologies and programming languages, as long as they can communicate.
 
@@ -21,7 +21,7 @@ A microservice architecture can be implemented in a social media app. The app is
 - Comment service, manages the comment of a post such as adding comment, deleting comment, editing comment
 - Notification service, the service that sends notification to the user's followers
 
-They can communicate with each other using [messaging systems](/backend-system/message-broker) or using [RPC](/backend-system/rpc). The architecture uses [API gateway](/backend-system/apis-server-logic#api-gateway) as the single entry point to access any microservice, it is responsible to route client request to the appropriate service. Each microservice may have their own database. However, if they will likely share the same data, they can share the database together.
+They can communicate with each other using [messaging systems](/cs-notes/backend-system/message-broker) or using [RPC](/cs-notes/backend-system/rpc). The architecture uses [API gateway](/cs-notes/backend-system/apis-server-logic#api-gateway) as the single entry point to access any microservice, it is responsible to route client request to the appropriate service. Each microservice may have their own database. However, if they will likely share the same data, they can share the database together.
 
 ![Example of microservice architecture](./microservice-example.png)  
 Source: https://medium.com/design-microservices-architecture-with-patterns/microservices-architecture-for-enterprise-large-scaled-application-825436c9a78a (with modification)

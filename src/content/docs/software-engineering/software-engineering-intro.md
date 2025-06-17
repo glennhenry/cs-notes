@@ -18,7 +18,7 @@ As software become more complex, more people coming to develop and more people u
 
 An individual programmer may not need to structure their code in a specific standard. They can even name their program's variable or function in their own language. However, as we are developing the software in a larger scope with more people on it, we may need to follow specific standard or even document our code.
 
-Not only making collaboration possible, following a specific standard helps to improve software development process efficiency. The simplest example of software engineering standard that probably everyone has done before is the [DRY (Don't Repeat Yourself)](/software-engineering/software-principles#dry). In short, the principle encourages us to avoid code duplication. Instead of coding the same instruction multiple times, we can move it to a function that we can reuse it anytime.
+Not only making collaboration possible, following a specific standard helps to improve software development process efficiency. The simplest example of software engineering standard that probably everyone has done before is the [DRY (Don't Repeat Yourself)](/cs-notes/software-engineering/software-principles#dry). In short, the principle encourages us to avoid code duplication. Instead of coding the same instruction multiple times, we can move it to a function that we can reuse it anytime.
 
 ### Software Characteristics
 

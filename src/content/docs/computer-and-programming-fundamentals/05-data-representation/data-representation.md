@@ -7,9 +7,9 @@ description: Data Representation
 **Main Source:**
 
 - **[Units of information — Wikipedia](https://en.wikipedia.org/wiki/Units_of_information)**
-- **[Computer Graphics Images (part 1)](/computer-graphics/computer-images-part-1)**
-- **[Digital Signal Processing](/digital-signal-processing)**
-- **[Digital Media Processing](/digital-media-processing)**
+- **[Computer Graphics Images (part 1)](/cs-notes/computer-graphics/computer-images-part-1)**
+- **[Digital Signal Processing](/cs-notes/digital-signal-processing)**
+- **[Digital Media Processing](/cs-notes/digital-media-processing)**
 - **[What is ASCII — TechTarget](https://www.techtarget.com/whatis/definition/ASCII-American-Standard-Code-for-Information-Interchange)**
 - **[How Unicode Works: What Every Developer Needs to Know About Strings and 🦄 by Peter Tasker](https://deliciousbrains.com/how-unicode-works/)**
 - **[Base64 — Wikipedia](https://en.wikipedia.org/wiki/Base64)**
@@ -43,7 +43,7 @@ In computer, a file is a collection of data or information stored on a storage d
 
 A file format defines how a file is structured and organized. A file format describes how data is stored, encoded, and interpreted in a computer file. For example, a document file may include what font used in the document so that the computer that reads it know what to display.
 
-Various amount of file format can be found in [digital media processing](/digital-media-processing), digital media formats section.
+Various amount of file format can be found in [digital media processing](/cs-notes/digital-media-processing), digital media formats section.
 
 ### Data Representation
 
@@ -79,7 +79,7 @@ In computer, color is represented as number in binary format. Each combination o
   - Light Yellow: HSL(60, 100%, 75%) / HSL(00111100, 10000000, 11001000)
   - Magenta: HSL(300, 100%, 50%) / HSL(10010110, 10000000, 01100100)
 
-- **Hexadecimal Color**: Hexadecimal color is another commonly used representation for colors in computer systems. It uses the [hexadecimal numbering system](/computer-and-programming-fundamentals/number-system#hexadecimal) to represent colors, where each color component is represented by a two-digit hexadecimal value ranging from 00 to FF.
+- **Hexadecimal Color**: Hexadecimal color is another commonly used representation for colors in computer systems. It uses the [hexadecimal numbering system](/cs-notes/computer-and-programming-fundamentals/number-system#hexadecimal) to represent colors, where each color component is represented by a two-digit hexadecimal value ranging from 00 to FF.
 
   - Red: #FF0000
   - Green: #00FF00
@@ -95,13 +95,13 @@ Each sample represents the amplitude of the sound wave at a particular moment. T
 
 After converting it to binary, we can then store it on a file. Storing and accessing the file will involve coding process which includes encoding and decoding. Simply, they are the process of representing a signal or data in a specific format or code that can be processed, transmitted, stored, or interpreted by digital systems.
 
-As explained before, the stored file will be in a specific file format. In the case of sound or audio file, we can store it in [MP3 format](/digital-media-processing/mp3). By using the MP3 format, audio files can be efficiently stored, transferred, and played back on various digital devices.
+As explained before, the stored file will be in a specific file format. In the case of sound or audio file, we can store it in [MP3 format](/cs-notes/digital-media-processing/mp3). By using the MP3 format, audio files can be efficiently stored, transferred, and played back on various digital devices.
 
 ![Sound sample](./sound-sample.png)  
 Source: https://www.teachwithict.com/binary-representation-of-sound.html
 
 :::tip
-Know more about wave in computer in [digital signal processing](/digital-signal-processing), especially the signal transmission part. More about [digital media processing](/digital-media-processing).
+Know more about wave in computer in [digital signal processing](/cs-notes/digital-signal-processing), especially the signal transmission part. More about [digital media processing](/cs-notes/digital-media-processing).
 :::
 
 #### Database
@@ -116,7 +116,7 @@ A database file is typically divided into fixed-size chunk that contains a speci
 Source: https://www.javatpoint.com/what-is-rdbms
 
 :::tip
-See also [database system](/database-system).
+See also [database system](/cs-notes/database-system).
 :::
 
 ### Character Encoding
@@ -142,7 +142,7 @@ While ASCII provides a simple way to represent character, it has very limited ch
 
 Unicode is a widely used universal character encoding standard for text in all writing systems and languages worldwide. It can even represent various kind of emojis. The Unicode version 15.1, which was released in September 2023 is able to produce 149813 different character.
 
-Unicode assigns a unique numerical value, called a **code point**, to each character in its repertoire. The code points are represented using [hexadecimal notation](/computer-and-programming-fundamentals/number-system#hexadecimal), such as U+0041 for the uppercase letter "A" and U+4E2D for the Chinese character "中".
+Unicode assigns a unique numerical value, called a **code point**, to each character in its repertoire. The code points are represented using [hexadecimal notation](/cs-notes/computer-and-programming-fundamentals/number-system#hexadecimal), such as U+0041 for the uppercase letter "A" and U+4E2D for the Chinese character "中".
 
 ##### UTF
 

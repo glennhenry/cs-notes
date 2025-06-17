@@ -28,7 +28,7 @@ Source: https://www.techtarget.com/searchitoperations/definition/virtualization
 
 Emulation is the technique that involve creating a software-based replica of a hardware platform or system. By replica, it is the complete imitation of the hardware architecture, including its CPU, memory, etc. On the other hand, virtualization is just creating an environment that makes it possible for guest platform to operate.
 
-Emulation is used when the guest platform cannot run or is incompatible with the machine hardware. This incompatibility can arise from differences in CPU architecture. For example, a typical desktop with [x86 architecture](/computer-organization-and-architecture/isa#x86) will not be able to run an application designed for [ARM](/computer-organization-and-architecture/isa#arm) architecture, commonly found in mobile platforms or embedded devices. Conversely, an operating system like Linux, with its distribution, can run on x86 architecture. Therefore, a Windows desktop can virtualize Linux without the need for emulation.
+Emulation is used when the guest platform cannot run or is incompatible with the machine hardware. This incompatibility can arise from differences in CPU architecture. For example, a typical desktop with [x86 architecture](/cs-notes/computer-organization-and-architecture/isa#x86) will not be able to run an application designed for [ARM](/cs-notes/computer-organization-and-architecture/isa#arm) architecture, commonly found in mobile platforms or embedded devices. Conversely, an operating system like Linux, with its distribution, can run on x86 architecture. Therefore, a Windows desktop can virtualize Linux without the need for emulation.
 
 It is said to be a virtualization if at least one functionality of the guest can be run natively on the host machine. By running natively, this mean the guest can leverages the underlying hardware capabilities of the host machine. This is not possible in emulation, because the architecture itself is different, so it wouldn't be able to rely on the host. This is one of the reason that makes virtualization faster than an emulation.
 
@@ -59,7 +59,7 @@ Virtualization has several benefits for individuals or data centers.
 
 Virtualization level is the level of how depth is virtualization implemented in an environment.
 
-- **[Instruction Set Architecture Level (ISA)](/computer-organization-and-architecture/isa)**: This is the lowest level implementation that emulates the low-level operations that a processor can perform, such as arithmetic, logic, and memory operations.
+- **[Instruction Set Architecture Level (ISA)](/cs-notes/computer-organization-and-architecture/isa)**: This is the lowest level implementation that emulates the low-level operations that a processor can perform, such as arithmetic, logic, and memory operations.
 
 - **Hardware Abstraction Level (HAL)**: This level implement the abstraction of hardware components to higher-level interface for software. It implements the device drivers and APIs that allow software to interact with hardware.
 
@@ -85,7 +85,7 @@ Virtualization can be implemented in four level:
   The NPT is a technique that translates guest's virtual address to host physical address. When a virtual machine makes a memory access, it first consults the guest page tables to translate the virtual address to a guest physical address. Then, it looks up the guest physical address in the host page tables to obtain the corresponding host physical address.
 
  :::info
-  More about [memory management](/operating-system/memory-management) and [virtual memory](/operating-system/memory-management#virtual-memory).
+  More about [memory management](/cs-notes/operating-system/memory-management) and [virtual memory](/cs-notes/operating-system/memory-management#virtual-memory).
  :::
 
 - **Operating System-level Virtualization/Containerization**: Operating system-level virtualization, also known as containerization, is a lightweight form of virtualization where the virtualization layer runs on a single host operating system. Instead of virtualizing an operating system, it creates multiple virtual machines (VMs) isolated in the OS. Each of the component is called **container**, and they share the host operating system's kernel, libraries, and other resources.
@@ -96,7 +96,7 @@ Virtualization can be implemented using three technique explained below. Most of
 
 vCPU is a virtualized representation of a physical CPU within a virtual machine. A physical CPU is supposed to execute instruction from program. When a virtual machine is assigned CPU resources, it doesn't mean it is given a portion of CPU, like a core.
 
-Instead, the virtualization software manages the distribution of CPU resources among the VMs running on the host machine by creating a virtual CPU. The virtual CPU will be executed by the actual CPU, it will use [scheduling algorithms](/operating-system/process-management#scheduling-algorithms) to allocate CPU time to each VM.
+Instead, the virtualization software manages the distribution of CPU resources among the VMs running on the host machine by creating a virtual CPU. The virtual CPU will be executed by the actual CPU, it will use [scheduling algorithms](/cs-notes/operating-system/process-management#scheduling-algorithms) to allocate CPU time to each VM.
 
 #### Trap-and-Emulate
 

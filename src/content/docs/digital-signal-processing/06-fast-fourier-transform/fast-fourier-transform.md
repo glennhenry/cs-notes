@@ -8,10 +8,10 @@ description: Fast Fourier Transform
 
 - **Various source from Google and YouTube**
 
-**Fast Fourier transform (FFT)** algorithm is a fast and efficient algorithm for computing the [Discrete Fourier transform (DFT)](/digital-signal-processing/discrete-fourier-transform) of a sequence of $N$ complex numbers. FFT improves a quadratic complexity $O(N^2)$ algorithm to a linearithmic $O(N \: log (N))$ speed.
+**Fast Fourier transform (FFT)** algorithm is a fast and efficient algorithm for computing the [Discrete Fourier transform (DFT)](/cs-notes/digital-signal-processing/discrete-fourier-transform) of a sequence of $N$ complex numbers. FFT improves a quadratic complexity $O(N^2)$ algorithm to a linearithmic $O(N \: log (N))$ speed.
 
 :::tip
-More about [algorithm complexity](/data-structures-and-algorithms/analysis-of-algorithms#big-o-notation).
+More about [algorithm complexity](/cs-notes/data-structures-and-algorithms/analysis-of-algorithms#big-o-notation).
 :::
 
 ### How does it work
@@ -39,5 +39,5 @@ For example, if a signal has period of 8 (meaning it repeat every 8 samples), we
 Source: https://towardsdatascience.com/fast-fourier-transform-937926e591cb
 
 :::info
-FFT algorithm use the [divide-and-conquer algorithm strategy](/data-structures-and-algorithms/divide-and-conquer). FFT divides problem into smaller subproblems and solve it recursively, which makes computation more efficient.
+FFT algorithm use the [divide-and-conquer algorithm strategy](/cs-notes/data-structures-and-algorithms/divide-and-conquer). FFT divides problem into smaller subproblems and solve it recursively, which makes computation more efficient.
 :::

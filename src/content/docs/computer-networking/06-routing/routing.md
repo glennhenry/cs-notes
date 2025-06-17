@@ -9,7 +9,7 @@ description: Routing
 - **[Routing — Wikipedia](https://en.wikipedia.org/wiki/Routing)**
 - **[Routing protocol — Wikipedia](https://en.wikipedia.org/wiki/Routing_protocol)**
 
-**Routing** is the process of selecting the optimal path for network traffic to travel from the source device to the destination device across an interconnected network. A device will be connected to another device first called [router](/computer-networking/router). Router is responsible for sending and determining the path.
+**Routing** is the process of selecting the optimal path for network traffic to travel from the source device to the destination device across an interconnected network. A device will be connected to another device first called [router](/cs-notes/computer-networking/router). Router is responsible for sending and determining the path.
 
 When a device wants to send data over a network, it breaks the data into smaller units called packets. Each packet contains the source and destination addresses along with a portion of the actual data being transmitted. The routing process involves making decisions on how to forward these packets based on the destination address.
 

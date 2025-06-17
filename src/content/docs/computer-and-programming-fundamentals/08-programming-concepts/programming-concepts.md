@@ -29,19 +29,19 @@ When we declare a variable, memory is allocated to store its value. The size of 
 
 Some common data types are:
 
-- **Integer (int)**: An integer variable is used to store whole numbers without decimal points. A value of integer is determined by its [binary representation](/computer-and-programming-fundamentals/binary-representation) (e.g., when we store number 5, the binary representation is `00000101`). The number of binary digits determines the unique values we can store or the range of number we can represent. In the case of `00000101`, which is a 8-bit binary, it can store value ranging from 0 to 255 ($2^8 - 1$). Depending on the programming languages, the number of bits used to store an integer can vary. Typically, an integer has fixed size, such as 32-bit (unsigned integer ranges from 0 to approximately 4 billion) or 64-bit (unsigned integer ranges from 0 to approximately 18.4 quintillion).
+- **Integer (int)**: An integer variable is used to store whole numbers without decimal points. A value of integer is determined by its [binary representation](/cs-notes/computer-and-programming-fundamentals/binary-representation) (e.g., when we store number 5, the binary representation is `00000101`). The number of binary digits determines the unique values we can store or the range of number we can represent. In the case of `00000101`, which is a 8-bit binary, it can store value ranging from 0 to 255 ($2^8 - 1$). Depending on the programming languages, the number of bits used to store an integer can vary. Typically, an integer has fixed size, such as 32-bit (unsigned integer ranges from 0 to approximately 4 billion) or 64-bit (unsigned integer ranges from 0 to approximately 18.4 quintillion).
 
   Example of an integer variable: `int x = 5`, a variable named `x` has an integer value of `5`.
 
-- **Float**: A float variable is used to store [floating-point numbers](/computer-and-programming-fundamentals/floating-number#floating-number-representation), which are numbers with a decimal point. The number of bits represents the precision of the floating representation. In most programming languages, float is typically 32-bits or in floating-point representation, it is a [single precision](/computer-and-programming-fundamentals/floating-number#part-of-floating-number--precision).
+- **Float**: A float variable is used to store [floating-point numbers](/cs-notes/computer-and-programming-fundamentals/floating-number#floating-number-representation), which are numbers with a decimal point. The number of bits represents the precision of the floating representation. In most programming languages, float is typically 32-bits or in floating-point representation, it is a [single precision](/cs-notes/computer-and-programming-fundamentals/floating-number#part-of-floating-number--precision).
 
   Example of a float variable: `float x = 5.4`, a variable named `x` has a float value of `5.4`.
 
-- **Double**: A double variable is similar to a float but has a higher precision, it uses 64-bits, and it achieves [double precision](/computer-and-programming-fundamentals/floating-number#part-of-floating-number--precision)
+- **Double**: A double variable is similar to a float but has a higher precision, it uses 64-bits, and it achieves [double precision](/cs-notes/computer-and-programming-fundamentals/floating-number#part-of-floating-number--precision)
 
   Example of a double variable: `double pi = 3.141592653589793238462`, a variable named `pi` has a double value of `3.141592653589793238462` (double is able to store more decimal point than float).
 
-- **Character**: A character variable is used to store a single character. Characters are usually represented using the [ASCII](/computer-and-programming-fundamentals/data-representation#ascii) or [Unicode](/computer-and-programming-fundamentals/data-representation#unicode) encoding schemes. The size of a character variable depends on the character encoding used, for ASCII, it can be represented in 8-bits.
+- **Character**: A character variable is used to store a single character. Characters are usually represented using the [ASCII](/cs-notes/computer-and-programming-fundamentals/data-representation#ascii) or [Unicode](/cs-notes/computer-and-programming-fundamentals/data-representation#unicode) encoding schemes. The size of a character variable depends on the character encoding used, for ASCII, it can be represented in 8-bits.
 
   Example of a character variable: `char alphabet = 'a'`, a variable named `alphabet` has a character value of `a`. A character is typically marked using quotation mark, for a single character, we wrap the character in single quote `''`
 
@@ -58,7 +58,7 @@ Some common data types are:
   ![String as an array of character](./array.png)  
    Source: https://www.geeksforgeeks.org/what-is-array/
 
-- **Boolean**: A boolean variable is used to represent logical values, it only has two possible value which are **true** and **false**. Boolean are used to control flow of a program based on condition, we can also apply [bitwise logical operation](/computer-and-programming-fundamentals/bitwise-operation#logical-operation) such as OR, AND, XOR, etc. While boolean can be represented as a single bit such as 0 (false) or 1 (true), because the CPU can't read a single bit, a boolean is stored as a byte.
+- **Boolean**: A boolean variable is used to represent logical values, it only has two possible value which are **true** and **false**. Boolean are used to control flow of a program based on condition, we can also apply [bitwise logical operation](/cs-notes/computer-and-programming-fundamentals/bitwise-operation#logical-operation) such as OR, AND, XOR, etc. While boolean can be represented as a single bit such as 0 (false) or 1 (true), because the CPU can't read a single bit, a boolean is stored as a byte.
 
   Example of a boolean variable: `bool correct = true`, a variable named `correct` has a boolean value of `true`.
 

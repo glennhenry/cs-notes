@@ -13,7 +13,7 @@ description: Tree
 
 **Tree** is a data structure where the elements are stored in tree-like structure. An element in a tree is called a **node**, the first and the topmost node in the tree is called the **root** node. Each node is connected to each other, it may connect to multiple node, a connection is called an **edge** or a **link**. The node that connect to other node is called the **parent** node, and the connected node is called **child** node.
 
-In essence, tree can be thought as a [linked list](/data-structures-and-algorithms/linked-list) with branches. The connection of each node is similar to linked list, each node stores a value and a reference to the next node. What makes tree different is a tree can connect to multiple node, creating a branch.
+In essence, tree can be thought as a [linked list](/cs-notes/data-structures-and-algorithms/linked-list) with branches. The connection of each node is similar to linked list, each node stores a value and a reference to the next node. What makes tree different is a tree can connect to multiple node, creating a branch.
 
 Tree can be implemented in linked list, so similar to linked list, tree operation such as insertion and deletion can be done in similar way. The has many variants, depending on the type, the time complexity for each operation can vary.
 
@@ -42,7 +42,7 @@ Source: https://en.wikipedia.org/wiki/Binary_tree
 
 **Binary search tree (BST)** is a binary tree in which the values of nodes in the left subtree are less than the value of the node, and the values in the right subtree are greater. BSTs enable efficient searching, insertion, and deletion operations with an average time complexity of O(log n) for balanced trees.
 
-BST can be thought as the representation of the [binary search](/data-structures-and-algorithms/search#binary-search) algorithm in a tree structure.
+BST can be thought as the representation of the [binary search](/cs-notes/data-structures-and-algorithms/search#binary-search) algorithm in a tree structure.
 
 ![Binary search tree](./binary-search-tree.png)  
 Source: https://en.wikipedia.org/wiki/Binary_search_tree
@@ -141,7 +141,7 @@ When performing operations on a red-black tree, such as inserting a new node or 
 
 **B-Tree** is another self-balancing tree, similar to AVL and red-black trees, but it is not a binary tree. It is a normal tree that can have more than two child nodes per parent, designed to address the limitation of self-balancing binary tree which can only store data in the left and right child.
 
-In b-tree, often times we will hear the word **"key"**. This term probably comes from database system, as b-tree is often used for implementing [database index](/database-system/database-index). B-tree node consist multiple keys, these keys are the actual value within a node. For example, the image below is a b-tree where the root node contains 2 keys, which are 20 and 40. The root node then has 3 child node, each node has key(s): 10, 30 and 33, 50 and 60.
+In b-tree, often times we will hear the word **"key"**. This term probably comes from database system, as b-tree is often used for implementing [database index](/cs-notes/database-system/database-index). B-tree node consist multiple keys, these keys are the actual value within a node. For example, the image below is a b-tree where the root node contains 2 keys, which are 20 and 40. The root node then has 3 child node, each node has key(s): 10, 30 and 33, 50 and 60.
 
 ![B-tree](./b-tree.png)  
 Source: https://www.programiz.com/dsa/b-tree

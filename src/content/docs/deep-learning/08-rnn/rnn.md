@@ -10,7 +10,7 @@ description: RNN
 - **[Illustrated Guide to Recurrent Neural Networks: Understanding the Intuition — The AI Hacker](https://youtu.be/LHXXI4-IEns?si=OhEctrxL4P6svPoP)**
 - **[Understanding Encoder-Decoder Sequence to Sequence Model by Simeon Kostadinov — Medium](https://towardsdatascience.com/understanding-encoder-decoder-sequence-to-sequence-model-679e04af4346)**
 
-**Recurrent Neural Network (RNN)** is a type of [neural network](/deep-learning/neural-network) specifically designed for processing sequential data or data that needs to be processed in specific order such as [NLP](/deep-learning/deep-learning-tasks#natural-language-processing-nlp) data.
+**Recurrent Neural Network (RNN)** is a type of [neural network](/cs-notes/deep-learning/neural-network) specifically designed for processing sequential data or data that needs to be processed in specific order such as [NLP](/cs-notes/deep-learning/deep-learning-tasks#natural-language-processing-nlp) data.
 
 The goal of NLP is to understand, interpret, or generate human language. In natural languages, each words, phrase, and sentences depend on each other. Without processing them in order, we would loss important context or information.
 
@@ -25,7 +25,7 @@ Traditional neural network is not capable of processing sequential data:
 
 - **Fixed Input Size**: They expect a fixed-size inputs. Processing sequences of words with various lengths becomes challenging.
 
-- **Inability to Capture Long-Term Dependencies**: This is related to the [vanishing gradient problem](/deep-learning/neural-network#vanishing-gradient-problem), when processing a sequence, each input is treated independently without considering the relationship with previous inputs. As the sequence length increases, the influence of earlier inputs on the current prediction diminishes as the network keep learning new information and forget the older one.
+- **Inability to Capture Long-Term Dependencies**: This is related to the [vanishing gradient problem](/cs-notes/deep-learning/neural-network#vanishing-gradient-problem), when processing a sequence, each input is treated independently without considering the relationship with previous inputs. As the sequence length increases, the influence of earlier inputs on the current prediction diminishes as the network keep learning new information and forget the older one.
 
 - **Parameters**: Indepenent input causes another issue, because they are independent, it means each word will have different parameters. As the network receive many input, the network will also need many parameter, making it computationally expensive.
 
@@ -63,7 +63,7 @@ The concept of memory or output from previous step is stored in something called
 
 This will be repeated together for each input in the sequence, the architecture can also be simplified with a loop. As each time step produces output, which output to use depend on the task. For example, in a text interpretation task, the output used may be the last output considering it contains the most information from all the sequence.
 
-It doesn't have to be the last output, another mechanism called **[attention](/deep-learning/transformers/attention-mechanism)** captures the only important or relevant information, which isn't always the last.
+It doesn't have to be the last output, another mechanism called **[attention](/cs-notes/deep-learning/transformers/attention-mechanism)** captures the only important or relevant information, which isn't always the last.
 
 ![RNN architecture](./rnn-architecture.png)  
 Source: https://youtu.be/2GgGu6kMSqE?si=XuJlH_-vVmjZQeup&t=164
@@ -121,7 +121,7 @@ In high level, this is the process of RNN encoder-decoder architecture:
    ![Decoder output at time step t](./rnn-encoder-decoder-output.png)  
    Source: https://towardsdatascience.com/understanding-encoder-decoder-sequence-to-sequence-model-679e04af4346
 
-   The output multiplies hidden state at time $t$ with some weight and it goes into the [softmax activation function](/deep-learning/neural-network#softmax-activation-function).
+   The output multiplies hidden state at time $t$ with some weight and it goes into the [softmax activation function](/cs-notes/deep-learning/neural-network#softmax-activation-function).
 
 Overall, RNN encoder-decoder is basically just two RNN working together, with one component serve as the one that captures information and the other component serve as the one that keep producing output until the desired sequence is produced.
 
@@ -129,5 +129,5 @@ Overall, RNN encoder-decoder is basically just two RNN working together, with on
 Source: https://towardsdatascience.com/understanding-encoder-decoder-sequence-to-sequence-model-679e04af4346
 
 :::note
-By standard RNN model, it can also be other type of RNN like [LSTM](/deep-learning/lstm) and [GRU](/deep-learning/gru).
+By standard RNN model, it can also be other type of RNN like [LSTM](/cs-notes/deep-learning/lstm) and [GRU](/cs-notes/deep-learning/gru).
 :::

@@ -31,13 +31,13 @@ Source: https://winstartechnologies.com/introduction-to-computer-bus/
 
 The von Neumann architecture is a theoretical framework for designing and constructing digital computers. The architecture proposes a digital computer consists of:
 
-1. **Central Processing Unit (CPU)**: The main processing unit, which includes the [ALU](/computer-organization-and-architecture/alu) for mathematical and logical operations and [control unit](/computer-organization-and-architecture/control-unit) that interprets and coordinates instructions.
+1. **Central Processing Unit (CPU)**: The main processing unit, which includes the [ALU](/cs-notes/computer-organization-and-architecture/alu) for mathematical and logical operations and [control unit](/cs-notes/computer-organization-and-architecture/control-unit) that interprets and coordinates instructions.
 
-   The CPU will also contain some [registers](/computer-organization-and-architecture/registers-and-ram#registers) such as [instruction register and program counter register](/computer-organization-and-architecture/registers-and-ram#type-of-registers) that will store necessary processing information.
+   The CPU will also contain some [registers](/cs-notes/computer-organization-and-architecture/registers-and-ram#registers) such as [instruction register and program counter register](/cs-notes/computer-organization-and-architecture/registers-and-ram#type-of-registers) that will store necessary processing information.
 
-2. **Memory**: Main memory such as [RAM](/computer-organization-and-architecture/registers-and-ram#ram) that will store the data and instructions from the program.
+2. **Memory**: Main memory such as [RAM](/cs-notes/computer-organization-and-architecture/registers-and-ram#ram) that will store the data and instructions from the program.
 3. **Larger Memory**: Larger memory such as hard disk to store larger volume of data.
-4. **[Input/Output](/computer-organization-and-architecture/input-output)**: Component that will handle the necessary input and output process between computer with I/O devices including keyboards, mice, displays, printers, disk drives, and network interfaces.
+4. **[Input/Output](/cs-notes/computer-organization-and-architecture/input-output)**: Component that will handle the necessary input and output process between computer with I/O devices including keyboards, mice, displays, printers, disk drives, and network interfaces.
 
 ![Von Neumann architecture diagram](./von-neumann-architecture.png)  
 Source: https://en.wikipedia.org/wiki/Von_Neumann_architecture
@@ -54,4 +54,4 @@ The data and instructions are stored in the same memory, the retrieval of data i
 
 The problem come from the limitation of the bus, a bus can't be accessed multiple times simultaneously, due to some physical and electrical characteristics. The bottleneck occurs because the bus has limited bandwidth and can only transfer a certain amount of data at a time. This limitation can slow down the overall performance of the system. When the CPU needs to fetch data or instructions from memory, it has to wait for the bus to be available. Similarly, when the CPU wants to write data back to memory, it needs to wait for the bus to be free.
 
-One way to mitigate the performance bottleneck is providing a [cache memory](/computer-organization-and-architecture/cpu-design#cache--memory) between the CPU and the main memory. The cache memory is located closer to the CPU, it stores frequently accessed data and instructions. By having a faster cache memory, the CPU can access data and instructions more quickly, reducing the need to access the main memory via the bus.
+One way to mitigate the performance bottleneck is providing a [cache memory](/cs-notes/computer-organization-and-architecture/cpu-design#cache--memory) between the CPU and the main memory. The cache memory is located closer to the CPU, it stores frequently accessed data and instructions. By having a faster cache memory, the CPU can access data and instructions more quickly, reducing the need to access the main memory via the bus.

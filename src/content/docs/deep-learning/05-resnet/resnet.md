@@ -9,7 +9,7 @@ description: ResNet
 - **[ResNet (actually) explained in under 10 minutes — rupert ai](https://youtu.be/o_3mboe1jYI?si=3i-uFFu0MD8UJoQu)**
 - **[What is ResNet? (with 3D Visualizations) — Prof. Ryan Ahmed](https://youtu.be/nc7FzLiB_AY?si=4g1qmNPChEPZ4rj5)**
 
-**Residual Network (ResNet)** is a type of [neural network](/deep-learning/neural-network) developed to address the problem of training a very deep neural network (consist many hidden layers). It is to address the [vanishing gradient problem](/deep-learning/neural-network#vanishing-gradient-problem), which occurs in the learning process of neural network, specifically in the backpropagation process.
+**Residual Network (ResNet)** is a type of [neural network](/cs-notes/deep-learning/neural-network) developed to address the problem of training a very deep neural network (consist many hidden layers). It is to address the [vanishing gradient problem](/cs-notes/deep-learning/neural-network#vanishing-gradient-problem), which occurs in the learning process of neural network, specifically in the backpropagation process.
 
 ### The Problem
 
@@ -43,7 +43,7 @@ However, after skipping the second layer and sending its input directly to the i
 
 #### Residual Block
 
-Residual block is the building block of ResNet, it combines each individual layer that includes [convolution layer](/deep-learning/cnn#convolution-1), [pooling layer](/deep-learning/cnn#pooling-1), activation function, and any other layer with the skip connection.
+Residual block is the building block of ResNet, it combines each individual layer that includes [convolution layer](/cs-notes/deep-learning/cnn#convolution-1), [pooling layer](/cs-notes/deep-learning/cnn#pooling-1), activation function, and any other layer with the skip connection.
 
 This image below compare the normal network architecture with the ResNet-34 architecture, which is the variant of ResNet that consist of 34 layers.
 

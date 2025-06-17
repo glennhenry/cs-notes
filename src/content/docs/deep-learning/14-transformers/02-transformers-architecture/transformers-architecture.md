@@ -10,7 +10,7 @@ description: Transformers Architecture
 - **[Illustrated Guide to Transformers Neural Network: A step by step explanation — The AI Hacker](https://youtu.be/4Bdc55j80l8?si=hHjopC6GvZl-mZTv)**
 - **[NLP course part 1 — Hugging Face](https://huggingface.co/learn/nlp-course/chapter1/1)**
 
-**Transformers** is a type of deep learning architecture that specifically uses the [attention mechanism](/deep-learning/transformers/attention-mechanism) as the key component. While [RNN with attention](/deep-learning/transformers/attention-mechanism#rnn-with-attention) also use the attention mechanism, transformers is a standalone architecture that doesn't need traditional sequential model like [RNN](/deep-learning/rnn).
+**Transformers** is a type of deep learning architecture that specifically uses the [attention mechanism](/cs-notes/deep-learning/transformers/attention-mechanism) as the key component. While [RNN with attention](/cs-notes/deep-learning/transformers/attention-mechanism#rnn-with-attention) also use the attention mechanism, transformers is a standalone architecture that doesn't need traditional sequential model like [RNN](/cs-notes/deep-learning/rnn).
 
 RNN processes information in sequence, each step has to wait for the previous step to complete, this will makes computation slow. The removal of RNN will indeed allow us to get better performance. The motivation behind transformers is to address the performance issue we are facing in RNN. The question is, how can we remove RNN while preserving the attention mechanism?
 
@@ -40,7 +40,7 @@ The first and second is the input pre-processing, the third and so on is the act
 
    On the other hand, self-attention only need a single sequence. Self-attention weigh the relevance or importance of each element by comparing it with other element in the sequence itself. This will make different element have different relevance in the sequence.
 
-   What makes it superior than the standard attention mechanism, it offers us **parallelization**. Remember that in [RNN with attention](/deep-learning/transformers/attention-mechanism#attention) on each output step, the attention vector is different, they are computed based on current output step. Self-attention that uses single sequence allows us to compute attention scores for all elements simultaneously, leading to better performance.
+   What makes it superior than the standard attention mechanism, it offers us **parallelization**. Remember that in [RNN with attention](/cs-notes/deep-learning/transformers/attention-mechanism#attention) on each output step, the attention vector is different, they are computed based on current output step. Self-attention that uses single sequence allows us to compute attention scores for all elements simultaneously, leading to better performance.
 
    - **Self-attention process**:  
      The self-attention is implemented by matrix multiplication. The token embedding are fed into the first layer in encoder. The self-attention mechanism is applied, it is done by calculating three types of vector called **query, key, and value vectors**. The tokens embedding are combined in a matrix, it will be multiplied by three types of matrices that correspond to each vector mentioned. The matrix are **Wq, Wk, and Wv**, they are basically weights in form of matrix, which mean they are learnable.
@@ -55,7 +55,7 @@ The first and second is the input pre-processing, the third and so on is the act
    ![Self-attention visualization 2](./self-attention-visualization.png)  
    Source: https://www.researchgate.net/figure/A-visualization-of-a-learned-self-attention-head-on-a-sentence-The-visualization-shows_fig5_346522738, https://babich.biz/transformer-architecture/
 
-   The query and key vector (transposed) will be multiplied together, producing something called **attention scores**, it can be interpreted as the similarity between two token. The higher the result is the stronger the relevance. They will be divided by the square root of the dimensionality of the key vectors, to prevent large number. [Softmax activation function](/deep-learning/neural-network#softmax-activation-function) will be applied to the previous result, resulting normalized value (they sum up to 1).
+   The query and key vector (transposed) will be multiplied together, producing something called **attention scores**, it can be interpreted as the similarity between two token. The higher the result is the stronger the relevance. They will be divided by the square root of the dimensionality of the key vectors, to prevent large number. [Softmax activation function](/cs-notes/deep-learning/neural-network#softmax-activation-function) will be applied to the previous result, resulting normalized value (they sum up to 1).
 
    The normalized value will be multiplied with the value vector. The result of it is what we call **attention weights**. The normalized value which represent the similarity of information is multiplied by the actual information of the token in input sequence. This mean we are assigning the similarity of information to each token.
 
@@ -80,7 +80,7 @@ The first and second is the input pre-processing, the third and so on is the act
    ![Multi-head attention](./multi-head-attention.png)  
    Source: https://paperswithcode.com/method/multi-head-attention
 
-5. **Residual Connection and Layer Normalization (Add & Norm)**: We did alot of calculation, during the backpropagation process, we may lose some information including the positional encoding we did in the earlier step. Transformers uses the [residual connection concept](/deep-learning/resnet#residual-connection) to help prevent the vanishing gradient issue. This is implemented by adding the input that bypass the attention layer with the same input that goes to the attention layer. This layer also include a normalization process to normalize the output of attention layer, to prevent large number and stabilize the training process.
+5. **Residual Connection and Layer Normalization (Add & Norm)**: We did alot of calculation, during the backpropagation process, we may lose some information including the positional encoding we did in the earlier step. Transformers uses the [residual connection concept](/cs-notes/deep-learning/resnet#residual-connection) to help prevent the vanishing gradient issue. This is implemented by adding the input that bypass the attention layer with the same input that goes to the attention layer. This layer also include a normalization process to normalize the output of attention layer, to prevent large number and stabilize the training process.
 
 6. **Feed-Forward Networks (FFN)**: The attention output is passed through a feed-forward network within the encoder layer. The FFN that includes activation function like ReLU introduces non-linearity. The output of the FFN is then passed through another residual connection and layer normalization. Similar to residual connection in multi-head attention layer, we will add the input that bypass the feed-forward network with the one that goes through it.
 

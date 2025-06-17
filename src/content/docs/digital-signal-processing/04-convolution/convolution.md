@@ -26,7 +26,7 @@ The formula represents the infinite sum (integration) of the product between two
 
 ### Convolution Theorem
 
-Convolution and [Fourier transform](/digital-signal-processing/fourier-transform) is related, which is described by the following property:
+Convolution and [Fourier transform](/cs-notes/digital-signal-processing/fourier-transform) is related, which is described by the following property:
 
 ![Convolution theorem](./convolution-theorem.png)
 

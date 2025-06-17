@@ -11,11 +11,11 @@ description: Traversal
 
 **Traversal** refers to the process of visiting and accessing each element or node in a data structure, such as linked list, tree, or graph. The purpose of traversal is to perform some operation on each element or node, such as reading its value, modifying it, or performing other specific task.
 
-For a [singly linked list](/data-structures-and-algorithms/linked-list), traversal involves starting at the head node and following the links from one node to the next until the end of the list is reached. This is typically done using a loop or [recursion](/data-structures-and-algorithms/recursion#linked-list-traversal).
+For a [singly linked list](/cs-notes/data-structures-and-algorithms/linked-list), traversal involves starting at the head node and following the links from one node to the next until the end of the list is reached. This is typically done using a loop or [recursion](/cs-notes/data-structures-and-algorithms/recursion#linked-list-traversal).
 
 ### Graph Traversal
 
-Graph traversal refers to the process of exploring nodes or vertices in a [graph data structure](/data-structures-and-algorithms/graph). There are two commonly used methods for graph traversal: **depth-first search (DFS)** and **breadth-first search (BFS)**.
+Graph traversal refers to the process of exploring nodes or vertices in a [graph data structure](/cs-notes/data-structures-and-algorithms/graph). There are two commonly used methods for graph traversal: **depth-first search (DFS)** and **breadth-first search (BFS)**.
 
 #### Depth-First Search (DFS)
 
@@ -33,9 +33,9 @@ DFS(graph, vertex, visited):
             DFS(graph, neighbor, visited)           // recursive call
 ```
 
-In DFS, we will visit a vertex as deep as possible, each vertex have a neighbor, and that neighbor will have another vertex. After reaching dead end, we will continue exploring the neighbors of the previous vertex. This behavior aligns closely with [stack](/data-structures-and-algorithms/stack) and [recursion](/data-structures-and-algorithms/recursion), therefore we can use recursion and take advantage of its [call stack](/data-structures-and-algorithms/recursion#call-stack) to implement DFS.
+In DFS, we will visit a vertex as deep as possible, each vertex have a neighbor, and that neighbor will have another vertex. After reaching dead end, we will continue exploring the neighbors of the previous vertex. This behavior aligns closely with [stack](/cs-notes/data-structures-and-algorithms/stack) and [recursion](/cs-notes/data-structures-and-algorithms/recursion), therefore we can use recursion and take advantage of its [call stack](/cs-notes/data-structures-and-algorithms/recursion#call-stack) to implement DFS.
 
-It is possible that the graph we are traversing consists of a loop ([cyclic graph](/data-structures-and-algorithms/graph#cyclic)). If we keep traversing it mindlessly, we may never finish our recursion function, which will result in stack overflow error. To mitigate this, we will have another data structure called `visited`, which will keep track the visited vertex. We will only traverse to unvisited vertex. The data structure of `visited` can be a [set](/data-structures-and-algorithms/set) data structure, to ensure fast retrieval of element and to store only unique element.
+It is possible that the graph we are traversing consists of a loop ([cyclic graph](/cs-notes/data-structures-and-algorithms/graph#cyclic)). If we keep traversing it mindlessly, we may never finish our recursion function, which will result in stack overflow error. To mitigate this, we will have another data structure called `visited`, which will keep track the visited vertex. We will only traverse to unvisited vertex. The data structure of `visited` can be a [set](/cs-notes/data-structures-and-algorithms/set) data structure, to ensure fast retrieval of element and to store only unique element.
 
 ![DFS GIF](./dfs.gif)  
 Source: https://en.m.wikipedia.org/wiki/File:Depth-First-Search.gif
@@ -63,7 +63,7 @@ BFS(graph, start):
                     queue.enqueue(neighbor)
 ```
 
-BFS doesn't use recursion to traverse, it instead uses a [queue data structure](/data-structures-and-algorithms/queue) to keep track all the neighbors in the current level.
+BFS doesn't use recursion to traverse, it instead uses a [queue data structure](/cs-notes/data-structures-and-algorithms/queue) to keep track all the neighbors in the current level.
 
 The algorithm starts by enqueuing the starting vertex into the queue and marking it as visited. It then enters a loop where it repeatedly dequeues a vertex from the front of the queue, marks it as visited, process it depending on the task, and enqueues its unvisited neighbors. This process continues until the queue becomes empty, indicating that all vertices have been visited.
 
@@ -76,7 +76,7 @@ Source: https://commons.wikimedia.org/wiki/File:Breadth-First-Search-Algorithm.g
 
 ### Tree Traversal
 
-As we know, a [tree](/data-structures-and-algorithms/tree) data structure is a special case of graph where it is undirected and acyclic. We can also use DFS and BFS to traverse a tree (the previous GIF is literally a graph organized tree structure).
+As we know, a [tree](/cs-notes/data-structures-and-algorithms/tree) data structure is a special case of graph where it is undirected and acyclic. We can also use DFS and BFS to traverse a tree (the previous GIF is literally a graph organized tree structure).
 
 Both BFS and DFS are a general graph traversal algorithm that can be applied on arbitrary graph and tree. Depending on the structure, the algorithm should be similar.
 

@@ -11,7 +11,7 @@ description: Caching
 - **[Cache Strategies by Moshe Binieli — Medium](https://medium.com/@mmoshikoo/cache-strategies-996e91c80303)**
 - **[Cache Replacement Algorithms: How To Efficiently Manage The Cache Storage by Amir Keshavarz — DEV.to](https://dev.to/satrobit/cache-replacement-algorithms-how-to-efficiently-manage-the-cache-storage-2ne1)**
 
-**Caching** is the process of storing data or computation results in storage, typically in a high-speed memory, to improve the performance when the same data is accessed again. The storage can be non-persistent, such as [RAM](/computer-organization-and-architecture/coa-fundamentals#ram), persistent storage, such as database, and stored locally or in a remote server.
+**Caching** is the process of storing data or computation results in storage, typically in a high-speed memory, to improve the performance when the same data is accessed again. The storage can be non-persistent, such as [RAM](/cs-notes/computer-organization-and-architecture/coa-fundamentals#ram), persistent storage, such as database, and stored locally or in a remote server.
 
 When receiving a data retrieval request, whether it's a web server serving webpages, or an image viewer displaying images, caching can improve their performance. Instead of doing the same computation or retrieving data over and over again, we can store its result for future access.
 
@@ -38,7 +38,7 @@ Another use case of client-side caching is, as explained in the [social media ca
 
 Caching technique where the server or the developer is the one who handles it, they are typically implemented on the server to store and serve frequently accessed data or resources.
 
-- **[CDN Caching](/software-engineering/system-design#cdn)**: CDN is a geographically distributed network of servers that are strategically placed in different locations worldwide. The primary purpose of a CDN is to improve the delivery speed and performance of web content to end-users.
+- **[CDN Caching](/cs-notes/software-engineering/system-design#cdn)**: CDN is a geographically distributed network of servers that are strategically placed in different locations worldwide. The primary purpose of a CDN is to improve the delivery speed and performance of web content to end-users.
 
   For example, a person connecting from Asia is likely to have a better connection to a server located in Asia compared to a server located in a distant region, such as North America or Europe.
 
@@ -72,7 +72,7 @@ The methods are:
 
 - **Time-Based Invalidation**: Associates a **time-to-live (TTL)** value with each cached item. When the TTL expires, the cached item is considered invalid and is evicted from the cache.
 
-- **Event-Based Invalidation**: Cache is invalidated by observing events or triggers that signify changes in the data source. These events can be [database triggers](/database-system/trigger-and-constraints) or [message queue notifications](/backend-system/message-broker).
+- **Event-Based Invalidation**: Cache is invalidated by observing events or triggers that signify changes in the data source. These events can be [database triggers](/cs-notes/database-system/trigger-and-constraints) or [message queue notifications](/cs-notes/backend-system/message-broker).
 
 ### Cache Replacement
 
@@ -82,7 +82,7 @@ The methods are:
 
 - **Least Frequently Used (LFU)**: This policy assumes that frequently accessed items are more valuable and should be retained in the cache. The data item that has been accessed the least number of times will be evicted.
 
-- **First-In-First-Out (FIFO)**: The data item that was inserted into the cache first is evicted when the cache is full. This follows a [queue-like behavior](/data-structures-and-algorithms/queue), where the oldest data is removed.
+- **First-In-First-Out (FIFO)**: The data item that was inserted into the cache first is evicted when the cache is full. This follows a [queue-like behavior](/cs-notes/data-structures-and-algorithms/queue), where the oldest data is removed.
 
 - **Random Replacement**: This will select a random data item from the cache for eviction. It does not take into account the recency or frequency of access.
 
@@ -91,13 +91,13 @@ The methods are:
 
 ### Redis
 
-**REmote DIctionary Server (Redis)** is a popular use case for a remote, distributed, in-memory data structure store. It is typically used for distributed caching, particularly its [hash map](/data-structures-and-algorithms/hash-table) data structure.
+**REmote DIctionary Server (Redis)** is a popular use case for a remote, distributed, in-memory data structure store. It is typically used for distributed caching, particularly its [hash map](/cs-notes/data-structures-and-algorithms/hash-table) data structure.
 
 The reason a hash map is suitable for caching is that, in a hash map, data is stored as key-value pairs. The keys are unique identifiers, and the corresponding values which is where we store our actual data. Given a key, the data structure will return the value. So, as long as we know the key, then an efficient average constant O(1) for read and write speed can be achieved.
 
 More than a hash-map, Redis can be used to store other data structure, such as lists, sets, sorted sets, strings, bitmaps, etc.
 
-One important thing about Redis is, its distributed nature. Redis supports [sharding](/cloud-computing-and-distributed-systems/distributed-database#database-sharding) and [replication](/database-system/logging-and-recovery#replication), it allows developers to distribute data across multiple Redis instances deployed on multiple servers for improved scalability and fault tolerance. This can be beneficial for applications that need to handle large amounts of data or high traffic loads. In contrast, a traditional hash maps typically operate within a single process or machine.
+One important thing about Redis is, its distributed nature. Redis supports [sharding](/cloud-computing-and-distributed-systems/distributed-database#database-sharding) and [replication](/cs-notes/database-system/logging-and-recovery#replication), it allows developers to distribute data across multiple Redis instances deployed on multiple servers for improved scalability and fault tolerance. This can be beneficial for applications that need to handle large amounts of data or high traffic loads. In contrast, a traditional hash maps typically operate within a single process or machine.
 
 For example, a backend application is deployed across multiple distinct servers. The application is supposed to serve request from anywhere around the world. If the application uses a traditional hash-map for storing data and serving the request, then all the instances would have inconsistent data.
 

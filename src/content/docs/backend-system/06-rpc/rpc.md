@@ -19,9 +19,9 @@ Function invocation can be achieved through a contract called IDL (Interface Def
 
 The RPC framework will generate language-specific code for the client and the server to use to communicate. The function or procedure used may also include argument to pass additional data.
 
-1. **Serialization**: Serialization is the process of transforming data into something that can be transmitted over the network. The RPC framework will generate code following the IDL definition and will serialize the code into format like [JSON](/digital-media-processing/json), [XML](/digital-media-processing/xml), or Protocol Buffers. The generated code is called **client stub**.
+1. **Serialization**: Serialization is the process of transforming data into something that can be transmitted over the network. The RPC framework will generate code following the IDL definition and will serialize the code into format like [JSON](/cs-notes/digital-media-processing/json), [XML](/cs-notes/digital-media-processing/xml), or Protocol Buffers. The generated code is called **client stub**.
 
-   The serialized request will be transmitted over the network using protocol like [TCP](/computer-networking/tcp-protocol) or [UDP](/computer-networking/udp) and the server will receive it.
+   The serialized request will be transmitted over the network using protocol like [TCP](/cs-notes/computer-networking/tcp-protocol) or [UDP](/cs-notes/computer-networking/udp) and the server will receive it.
 
 2. **Deserialization**: The RPC framework in the server will deserialize the data received and transform it into the language the server use, this is called **stub decoding**.
 
@@ -30,11 +30,11 @@ The RPC framework will generate language-specific code for the client and the se
    ![RPC Process](./rpc-process.png)  
    Source: https://www.javatpoint.com/what-is-rpc-in-operating-system
 
-RPC provide a way for client to communicate with the server with code or function call instead of communicating by specifying specific operation like GET or POST request in [REST API](/backend-system/rest-api).
+RPC provide a way for client to communicate with the server with code or function call instead of communicating by specifying specific operation like GET or POST request in [REST API](/cs-notes/backend-system/rest-api).
 
 ### gRPC
 
-**Google Remote Procedure Call (gRPC)** is an implementation of RPC that can run in any environment. gRPC utilize [HTTP/2](/computer-networking/http-https#http2) as the transport protocol, it gained performance advantages of HTTP/2 including multiplexing, single TCP connection, and concurrent request.
+**Google Remote Procedure Call (gRPC)** is an implementation of RPC that can run in any environment. gRPC utilize [HTTP/2](/cs-notes/computer-networking/http-https#http2) as the transport protocol, it gained performance advantages of HTTP/2 including multiplexing, single TCP connection, and concurrent request.
 
 #### Protocol Buffers
 

@@ -11,9 +11,9 @@ description: Runtime Environment
 
 **Runtime Environment** is a place needed by a program in order to run. It is a system that provides necessary functionality, support, and management for the program during its execution. A runtime environment provides several things:
 
-- **Execution Engine**: The runtime environment includes an execution engine that [interprets](/computer-and-programming-fundamentals/interpreter) or [compiles](/computer-and-programming-fundamentals/compilation) the program's code for execution.
+- **Execution Engine**: The runtime environment includes an execution engine that [interprets](/cs-notes/computer-and-programming-fundamentals/interpreter) or [compiles](/cs-notes/computer-and-programming-fundamentals/compilation) the program's code for execution.
 
-- **Memory Management**: The runtime environment handles memory management for the program. It allocates and deallocates memory as needed, tracks memory usage, and provides mechanisms for managing memory resources efficiently (e.g., [garbage collection](/computer-and-programming-fundamentals/memory#garbage-collection)).
+- **Memory Management**: The runtime environment handles memory management for the program. It allocates and deallocates memory as needed, tracks memory usage, and provides mechanisms for managing memory resources efficiently (e.g., [garbage collection](/cs-notes/computer-and-programming-fundamentals/memory#garbage-collection)).
 
 - **Platform Abstraction**: The runtime environment provide a consistent interface for the program to interact with the various hardware and operating system.
 
@@ -24,7 +24,7 @@ description: Runtime Environment
 **Java Runtime Environment (JRE)** is the runtime environment for executing Java programs. It consists of several components:
 
 :::note
-A Java program in source code (with format of `.java`), needs to be compiled into [bytecode](/computer-and-programming-fundamentals/compilation#language-abstraction) (an intermediate representation with format of `.class`).
+A Java program in source code (with format of `.java`), needs to be compiled into [bytecode](/cs-notes/computer-and-programming-fundamentals/compilation#language-abstraction) (an intermediate representation with format of `.class`).
 :::
 
 - **Java Class Library**: The Java class library is a set of pre-compiled Java's APIs that provide a wide range of functionality for Java applications. It includes standard classes for tasks such as I/O operations, networking, database access, GUI development, concurrency, and more.
@@ -42,5 +42,5 @@ JavaScript is a programming language mainly used for client-side web development
 **Node JS** is a JavaScript programming language runtime environment that allows developers to run JavaScript on the server-side. By enabling JavaScript on the server side, JavaScript can be used to build server-side applications, handle incoming requests, process data, interact with databases, and perform various server-side operations.
 
 :::tip
-Another note about [Node JS](/internet-and-web/javascript#node-js)
+Another note about [Node JS](/cs-notes/internet-and-web/javascript#node-js)
 :::

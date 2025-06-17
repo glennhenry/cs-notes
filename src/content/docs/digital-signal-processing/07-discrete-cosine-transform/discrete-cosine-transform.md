@@ -8,9 +8,9 @@ description: Discrete Cosine Transform
 
 - **[JPEG DCT, Discrete Cosine Transform (JPEG Pt2) — Computerphile](https://youtu.be/Q2aEzeMDHMA)**
 
-[DFT](/digital-signal-processing/discrete-fourier-transform) takes signal and waves of sine and cosine on their complex-valued representation, transforming them into another complex-valued representation. On the other hand, **discrete cosine transform (DCT)** takes real-valued input data, transforming them into sequence of real-valued output.
+[DFT](/cs-notes/digital-signal-processing/discrete-fourier-transform) takes signal and waves of sine and cosine on their complex-valued representation, transforming them into another complex-valued representation. On the other hand, **discrete cosine transform (DCT)** takes real-valued input data, transforming them into sequence of real-valued output.
 
-In the complex exponential term of [Fourier transform](/digital-signal-processing/fourier-transform), the sine wave component has imaginary term, which makes the whole representation of wave complex-valued. However, DCT rely only on cosine wave, making it accept and output real-valued data instead.
+In the complex exponential term of [Fourier transform](/cs-notes/digital-signal-processing/fourier-transform), the sine wave component has imaginary term, which makes the whole representation of wave complex-valued. However, DCT rely only on cosine wave, making it accept and output real-valued data instead.
 
 In the digital world, images and audio can be represented as signals. Digital signals are typically real-valued data because they originate from real-world phenomena. This make DCT suitable for digital signal processing, and is used for image compression, audio processing, etc.
 
@@ -20,7 +20,7 @@ DCT tries to represent digital signal as a sum of cosine wave with different fre
 
 ### Type-II DCT
 
-DCT has many versions, each with its own set of properties and applications. The Type-II is commonly used and also the [JPG/JPEG](/digital-media-processing/jpg-jpeg) image compression standard. It is well-suited for image compression applications and also used in other media applications, such as video compression and audio compression.
+DCT has many versions, each with its own set of properties and applications. The Type-II is commonly used and also the [JPG/JPEG](/cs-notes/digital-media-processing/jpg-jpeg) image compression standard. It is well-suited for image compression applications and also used in other media applications, such as video compression and audio compression.
 
 The cosine function's output varies from -1 to 1. We can represent the output as with gray-scale color, and it will alternate from black and white.
 
@@ -60,11 +60,11 @@ In the image, we see that top-most left-most has the highest number of coefficie
 
 Together, these coefficients can be thought as the compressed representation of a single 8×8 pixels. To actually reduce the data, we may filter out unnecessary frequencies. For example, the frequency 0.0226 is small enough that we can discard it without affecting the overall image too much, while also reducing its size. We can also remove coefficient in the higher frequencies, because these fine details might not be noticed.
 
-The last step of DCT is [Huffman encoding](/digital-signal-processing/compression#huffman-encoding), which is a lossless data compression technique that is used to further reduce the number of bits needed to represent the DCT coefficients.
+The last step of DCT is [Huffman encoding](/cs-notes/digital-signal-processing/compression#huffman-encoding), which is a lossless data compression technique that is used to further reduce the number of bits needed to represent the DCT coefficients.
 
 ![The process of DCT compression](./dct-compression.png)  
 Source: https://www.researchgate.net/figure/Algorithm-and-procedure-of-the-JPEG-image-compression-The-original-image-is-compressed_fig1_338524056
 
 :::tip
-Find out more about [JPG compression](/digital-media-processing/jpg-jpeg)
+Find out more about [JPG compression](/cs-notes/digital-media-processing/jpg-jpeg)
 :::

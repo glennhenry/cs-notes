@@ -18,9 +18,9 @@ In traditional machine learning, the features of the data need to be extracted m
 
 A neural network is built upon a mathematical function that takes input data. This function has variables or parameters called weights and biases, which are used with input data to somehow suit with the actual data to make prediction.
 
-In high-level, the network processes the input data by calculating the mathematical function with the given weights and biases. The resulting output is then compared to the actual data. The network measures how wrong the predictions are and aims to minimize this error by adjusting the weights and biases. The adjustment can use algorithm like [stochastic gradient descent](/deep-learning/deep-learning-foundation#stochastic-gradient-descent).
+In high-level, the network processes the input data by calculating the mathematical function with the given weights and biases. The resulting output is then compared to the actual data. The network measures how wrong the predictions are and aims to minimize this error by adjusting the weights and biases. The adjustment can use algorithm like [stochastic gradient descent](/cs-notes/deep-learning/deep-learning-foundation#stochastic-gradient-descent).
 
-To capture complex relationships and patterns in the data, the network utilizes [activation functions](/deep-learning/deep-learning-foundation#activation-function). The process of calculating the mathematical function, utilizing activation functions, and adjusting the weights and biases is repeated multiple times during training. With each iteration, the network learns from its mistakes and updates the parameters to improve its predictions.
+To capture complex relationships and patterns in the data, the network utilizes [activation functions](/cs-notes/deep-learning/deep-learning-foundation#activation-function). The process of calculating the mathematical function, utilizing activation functions, and adjusting the weights and biases is repeated multiple times during training. With each iteration, the network learns from its mistakes and updates the parameters to improve its predictions.
 
 ![Neural network flow](./neural-network-flow.png)
 
@@ -72,9 +72,9 @@ The weight is the coefficient of corresponding input data, it can be interpreted
 
 #### Backpropagation
 
-Backpropagation or backward pass is where all the learning process occurs. After getting result from all the preceding layers, the output layers is used to predict. The prediction will then be compared with actual data, the difference will be calculated in some [loss function](/deep-learning/deep-learning-foundation#loss-function).
+Backpropagation or backward pass is where all the learning process occurs. After getting result from all the preceding layers, the output layers is used to predict. The prediction will then be compared with actual data, the difference will be calculated in some [loss function](/cs-notes/deep-learning/deep-learning-foundation#loss-function).
 
-Same like traditional machine learning, we want to minimize the loss function, we can use the same principle as using [gradient descent to minimize the loss in linear regression](/machine-learning/linear-regression#gradient-descent), where we calculate the gradient of the loss function with respect to slope and y-intercept. Remember that gradient shows us which direction to go to the minima of the loss function.
+Same like traditional machine learning, we want to minimize the loss function, we can use the same principle as using [gradient descent to minimize the loss in linear regression](/cs-notes/machine-learning/linear-regression#gradient-descent), where we calculate the gradient of the loss function with respect to slope and y-intercept. Remember that gradient shows us which direction to go to the minima of the loss function.
 
 Backpropagation process is similar with some difference, it relies on principles of calculus, specifically the chain rule.
 
@@ -84,7 +84,7 @@ This is where the chain rule comes, it allows us to decompose the contribution o
 
 The output layer get its result from the preceding layer, it is affected by the previous layer. The previous layer itself is also based on the previous layer again, this is why its called backward pass, as it will adjust each weight and biases on each neuron of the preceding layers.
 
-After calculating the gradient, now it's time to adjust of weight and bias. The adjustment is similar to the traditional linear regression, but now we adjust for weight and bias instead of slope and y-intercept. We can also use algorithm like [stochastic gradient descent](/deep-learning/deep-learning-foundation#stochastic-gradient-descent).
+After calculating the gradient, now it's time to adjust of weight and bias. The adjustment is similar to the traditional linear regression, but now we adjust for weight and bias instead of slope and y-intercept. We can also use algorithm like [stochastic gradient descent](/cs-notes/deep-learning/deep-learning-foundation#stochastic-gradient-descent).
 
 For example, after predicting, the loss function calculated results in a large value. The loss function is affected by specific neuron on the previous layer, basically that particular neuron "messed up" our prediction. By calculating the gradient of weight and bias and adjusting it based on the optimization algorithm, we can controls the behavior of that particular neuron. We can make the weight smaller to indicate that neuron shouldn't contribute much to our prediction or we can adjust the bias so that the activation function can decide whether to contribute the output of that neuron to the next layers or not.
 

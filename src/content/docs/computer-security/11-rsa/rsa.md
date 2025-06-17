@@ -10,13 +10,13 @@ description: RSA
 - **[Carmichael function — Wikipedia](https://en.wikipedia.org/wiki/Carmichael_function)**
 - **[What's the difference between RSA and Diffie-Hellman? [duplicate] — cryptography stackexchange](https://crypto.stackexchange.com/questions/42180/whats-the-difference-between-rsa-and-diffie-hellman)**
 
-**Rivest–Shamir–Adleman (RSA)** is a widely used [asymmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption) algorithm. It was based on similar mathematical properties with the [Diffie-Hellman key exchange](/computer-security/diffie-hellman), that is large prime numbers and [modular arithmetic](/computer-security/math-concepts#modular-arithmetic).
+**Rivest–Shamir–Adleman (RSA)** is a widely used [asymmetric encryption](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption) algorithm. It was based on similar mathematical properties with the [Diffie-Hellman key exchange](/cs-notes/computer-security/diffie-hellman), that is large prime numbers and [modular arithmetic](/cs-notes/computer-security/math-concepts#modular-arithmetic).
 
-RSA uses public and private key, the [public key](/computer-security/encryption#public--private-key), which is shared publicly is used to encrypt, and the [private key](/computer-security/encryption#public--private-key), which is kept secret, is used to decrypt. The key are related mathematically, however, it is computationally infeasible to derive the private key from the public key.
+RSA uses public and private key, the [public key](/cs-notes/computer-security/encryption#public--private-key), which is shared publicly is used to encrypt, and the [private key](/cs-notes/computer-security/encryption#public--private-key), which is kept secret, is used to decrypt. The key are related mathematically, however, it is computationally infeasible to derive the private key from the public key.
 
 ### Explanation
 
-The RSA is an actual asymmetric encryption algorithm (e.g., used for exchanging data), it is not used solely for exchanging key like the [Diffie-Hellman key exchange](/computer-security/diffie-hellman).
+The RSA is an actual asymmetric encryption algorithm (e.g., used for exchanging data), it is not used solely for exchanging key like the [Diffie-Hellman key exchange](/cs-notes/computer-security/diffie-hellman).
 
 It consists of four steps:
 
@@ -24,19 +24,19 @@ It consists of four steps:
 
    - Randomly select two large prime numbers which has large different, $p$ and $q$. These prime numbers should be kept secret.
    - Compute $n = pq$, where $n$ is the modulus used for both the public and private keys. $n$ is also publicly available as part of the public key.
-   - Calculate $\lambda(n)$, where $\lambda$ is **Carmichael's totient function**, and it is the smallest positive integer $m$ such that $a^{m}\equiv 1{\pmod {n}}$, where $n$ is a positive integer, for all integers $a$ [coprime](/computer-security/math-concepts#relative-prime) to $n$.
+   - Calculate $\lambda(n)$, where $\lambda$ is **Carmichael's totient function**, and it is the smallest positive integer $m$ such that $a^{m}\equiv 1{\pmod {n}}$, where $n$ is a positive integer, for all integers $a$ [coprime](/cs-notes/computer-security/math-concepts#relative-prime) to $n$.
 
-     Since $n = pq$, $\lambda(n) = \text{lcm}(\lambda(p), \lambda(q))$, and since $p$ and $q$ are prime, $\lambda(p) = \phi(p) = p − 1$, and likewise $\lambda(q) = q − 1$. Hence, $\lambda(n) = \text{lcm}(p − 1, q − 1)$, where $\phi$ is the [Euler's totient function](/computer-security/math-concepts#eulers-totient-function).
+     Since $n = pq$, $\lambda(n) = \text{lcm}(\lambda(p), \lambda(q))$, and since $p$ and $q$ are prime, $\lambda(p) = \phi(p) = p − 1$, and likewise $\lambda(q) = q − 1$. Hence, $\lambda(n) = \text{lcm}(p − 1, q − 1)$, where $\phi$ is the [Euler's totient function](/cs-notes/computer-security/math-concepts#eulers-totient-function).
 
-     The LCM itself can be calculated using [Euclidean algorithm](/computer-security/math-concepts#greatest-common-divisor-gcd) through the [LCM formula](/computer-security/math-concepts#least-common-multiply-lcm), also $\lambda(n)$ is kept secret.
+     The LCM itself can be calculated using [Euclidean algorithm](/cs-notes/computer-security/math-concepts#greatest-common-divisor-gcd) through the [LCM formula](/cs-notes/computer-security/math-concepts#least-common-multiply-lcm), also $\lambda(n)$ is kept secret.
 
-   - Choose a public exponent, $e$, such that $2 < e < \lambda(n)$ and $\text{gcd}(e, \lambda(n)) = 1$; that is, $e$ is [coprime](/computer-security/math-concepts#relative-prime) to $\lambda(n)$. $e$ is also publicly available as part of the public key.
-   - Compute $d$ as $d \equiv e^{-1} (\pmod \lambda(n))$ to obtain $d$. $d$ is modular multiplicative inverse of $e$ modulo $\lambda(n)$. $d$ can be obtained by solving $de \equiv 1 (\pmod \lambda(n))$ using the [extended Euclidean algorithm](/computer-security/math-concepts#extended-euclidean-algorithm), using the properties of [Bézout's identity](/computer-security/math-concepts#bézouts-identity). This $d$ is kept secret as the private key exponent.
+   - Choose a public exponent, $e$, such that $2 < e < \lambda(n)$ and $\text{gcd}(e, \lambda(n)) = 1$; that is, $e$ is [coprime](/cs-notes/computer-security/math-concepts#relative-prime) to $\lambda(n)$. $e$ is also publicly available as part of the public key.
+   - Compute $d$ as $d \equiv e^{-1} (\pmod \lambda(n))$ to obtain $d$. $d$ is modular multiplicative inverse of $e$ modulo $\lambda(n)$. $d$ can be obtained by solving $de \equiv 1 (\pmod \lambda(n))$ using the [extended Euclidean algorithm](/cs-notes/computer-security/math-concepts#extended-euclidean-algorithm), using the properties of [Bézout's identity](/cs-notes/computer-security/math-concepts#bézouts-identity). This $d$ is kept secret as the private key exponent.
 
    In conclusion, modulus $n$ and exponent $e$ is the public key. While exponent $d$ is obtained from $p$, $q$, and $\lambda(n)$, these must be kept secret.
 
   :::note
-   In the original RSA paper, the [Euler's totient function](/computer-security/math-concepts#eulers-totient-function), $\phi(n) = (p - 1) \times (q - 1)$ is used instead of $\lambda(n)$.
+   In the original RSA paper, the [Euler's totient function](/cs-notes/computer-security/math-concepts#eulers-totient-function), $\phi(n) = (p - 1) \times (q - 1)$ is used instead of $\lambda(n)$.
   :::
 
 2. **Key Distribution**:
@@ -70,7 +70,7 @@ To obtain the recipient's private key, the modulus $n$, which is available in pu
 The difficulty of breaking RSA comes when factoring large composite numbers into their prime factors. Modulus $n$ is obtained by the product of two prime number (product of two prime number is always a composite number), however, factoring large numbers is computationally challenging. As long as the key sizes used in RSA are sufficiently large, it is considered secure against brute force attacks.
 
 :::tip
-See [factorization](/computer-security/math-concepts#factorization) as reference about factoring number.
+See [factorization](/cs-notes/computer-security/math-concepts#factorization) as reference about factoring number.
 :::
 
 The level of RSA security can be chosen by how many bits used for prime numbers $p$ and $q$:

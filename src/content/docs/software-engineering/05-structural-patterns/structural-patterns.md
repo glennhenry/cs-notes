@@ -181,7 +181,7 @@ class CircleVector(): Circle {
 
 As many shape and type of rendering available, the class hierarchy becomes exponentially large. If we have triangle shape, we would need two additional classes, `TriangleRaster` and `TriangleVector`.
 
-Bridge pattern solve the problem by [switching inheritance to composition](/software-engineering/software-principles#composition-over-inheritance). Instead of making different renderer class for each type of shape, we associate a shape with a type of renderer. This effectively split the class hierarchy, which we can develop independently.
+Bridge pattern solve the problem by [switching inheritance to composition](/cs-notes/software-engineering/software-principles#composition-over-inheritance). Instead of making different renderer class for each type of shape, we associate a shape with a type of renderer. This effectively split the class hierarchy, which we can develop independently.
 
 The `Renderer` hierarchy:
 

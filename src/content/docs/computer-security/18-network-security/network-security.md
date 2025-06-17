@@ -55,7 +55,7 @@ There are several ways to anticipate a DDoS attack:
 
 - **Increase Network Bandwidth**: If possible, increasing the available bandwidth will helps absorb the impact of a DDoS attack by allowing the network to handle a larger volume of traffic.
 
-- **[Load Balancing & Content Delivery Network (CDN)](/computer-networking/server#server-optimization)**: If the DDoS attackers are around the world, using CDN might help. Or we can also distribute the incoming network request using load balancing technique. This technique distribute network request from client evenly across all the server, this will ensure there will be no server that becomes overwhelmed or underwhelmed.
+- **[Load Balancing & Content Delivery Network (CDN)](/cs-notes/computer-networking/server#server-optimization)**: If the DDoS attackers are around the world, using CDN might help. Or we can also distribute the incoming network request using load balancing technique. This technique distribute network request from client evenly across all the server, this will ensure there will be no server that becomes overwhelmed or underwhelmed.
 
 - **Traffic Filtering**: Filtering traffic means we are blocking specific client from making request to the server. There are several technique including blacklisting IP addresses, detect and block suspicious traffic patterns, and by using access control lists (ACLs).
 
@@ -68,15 +68,15 @@ Source: https://www.onelogin.com/learn/ddos-attack
 
 #### IP Spoofing
 
-**IP spoofing** is when an attacker modify the source [IP address](/computer-networking/ip-address) in network packets to make it appear as if they are originating from a different IP address. The attacker might impersonate themselves as an innocent user by modifying the IP in network packets so that it looks like it was sent by legitimate user.
+**IP spoofing** is when an attacker modify the source [IP address](/cs-notes/computer-networking/ip-address) in network packets to make it appear as if they are originating from a different IP address. The attacker might impersonate themselves as an innocent user by modifying the IP in network packets so that it looks like it was sent by legitimate user.
 
 #### MAC Spoofing
 
-**MAC spoofing**, on the other hand, impersonate [MAC address](/computer-networking/mac-address) instead. MAC address is a unique identifier assigned to network interface cards. An attacker can deceive network switches or routers into associating their device with the MAC address of a trusted device.
+**MAC spoofing**, on the other hand, impersonate [MAC address](/cs-notes/computer-networking/mac-address) instead. MAC address is a unique identifier assigned to network interface cards. An attacker can deceive network switches or routers into associating their device with the MAC address of a trusted device.
 
 #### DNS Spoofing
 
-When we enter an address of a website, it will be sent to [DNS server](/computer-networking/dns), the server will give us the IP address of the website for us to load in our browser. **DNS spoofing** is the technique where an attacker manipulates the DNS server, so it returns malicious websites instead of a legitimate websites.
+When we enter an address of a website, it will be sent to [DNS server](/cs-notes/computer-networking/dns), the server will give us the IP address of the website for us to load in our browser. **DNS spoofing** is the technique where an attacker manipulates the DNS server, so it returns malicious websites instead of a legitimate websites.
 
 ![IP spoofing](./ip-spoofing.png)  
 Source: https://socradar.io/what-is-spoofing-attack-and-how-to-prevent-it/
@@ -93,11 +93,11 @@ Firewall examines the packets of data passing through them and make decisions ab
 ![Firewall access control list](./firewall-control.png)  
 Source: https://youtu.be/kDEX1HXybrU?si=iRlxiRyRBPYrG90I&t=137
 
-A firewall can be implemented in both hardware and software forms. A hardware firewall protects the entire network, typically in a standalone form or built-in to the [router](/computer-networking). A software firewall, also known as host-based firewall, is implemented on individual computers or servers. For example, Windows operating system has a built-in firewall called Microsoft Defender Firewall.
+A firewall can be implemented in both hardware and software forms. A hardware firewall protects the entire network, typically in a standalone form or built-in to the [router](/cs-notes/computer-networking). A software firewall, also known as host-based firewall, is implemented on individual computers or servers. For example, Windows operating system has a built-in firewall called Microsoft Defender Firewall.
 
 ![Hardware and software firewall](./hardware-software-firewall.jpeg)  
 Source: https://shop3213.sosoutremer.org/category?name=hardware%20vs%20software%20firewall
 
 ### Network Encryption
 
-See [network encryption](/computer-networking/network-encryption)
+See [network encryption](/cs-notes/computer-networking/network-encryption)

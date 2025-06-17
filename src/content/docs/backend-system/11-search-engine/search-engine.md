@@ -17,7 +17,7 @@ Source: https://elogic.co/blog/how-ecommerce-search-engine-improves-business-and
 
 Search engine is a vital component in an application, it should be fast and accurate to provide a positive user experience. Below are key techniques used in search engine:
 
-- **[Indexing](/database-system/database-index)**: Indexing is a fundamental technique where data is structured to allow for quick retrieval of relevant information. Indexing maps the data to specific search terms or keywords, making it easier and faster to locate. For example, if the search query starts from letter "A", we can just skip anything that doesn't start with letter "A".
+- **[Indexing](/cs-notes/database-system/database-index)**: Indexing is a fundamental technique where data is structured to allow for quick retrieval of relevant information. Indexing maps the data to specific search terms or keywords, making it easier and faster to locate. For example, if the search query starts from letter "A", we can just skip anything that doesn't start with letter "A".
 
 - **Tokenization**: Tokenization is the process of breaking down a content into smaller units, known as tokens. Tokens can be words, phrases, or other meaningful units. For example, the sentence `Delicious Cake Recipes` can be broken down into `["Delicious", "Cake", "Recipes"]`. Tokenization helps indexing process by searching the word one by one, it can also benefits the user to find the relevant information if they make mistakes or typos in their search queries.
 
@@ -27,7 +27,7 @@ Search engine is a vital component in an application, it should be fast and accu
 
 - **Filtering**: Filtering is a techniques used to filter search results based on specific criteria. Filters allow users to narrow down the search results based on attributes such as category, date range, location, or other custom metadata.
 
-- **[Caching](/computer-and-programming-fundamentals/caching)**: Caching is a technique where frequently accessed search results or frequently executed queries are stored in memory for faster retrieval.
+- **[Caching](/cs-notes/computer-and-programming-fundamentals/caching)**: Caching is a technique where frequently accessed search results or frequently executed queries are stored in memory for faster retrieval.
 
   ![Search operation](./search.png)
 
@@ -39,11 +39,11 @@ Three example types of search engine are:
 
 - **Full-Text Search Engine**: These search engines are designed to index and search through the entire content of documents or web pages. They analyze the text and index it based on keywords, allowing users to search for specific terms or phrases within the indexed content.
 
-- **Database Search Engine**: These search engines focus on searching within structured databases. They enable users to query and retrieve specific data from databases using [SQL-like queries](/database-system/query-language) or other query languages.
+- **Database Search Engine**: These search engines focus on searching within structured databases. They enable users to query and retrieve specific data from databases using [SQL-like queries](/cs-notes/database-system/query-language) or other query languages.
 
 ### Elasticsearch
 
-**Elasticsearch** is a search and analytics engine, at its core, it is a [document-oriented database](/database-system/nosql#document) that stores data in [JSON](/digital-media-processing/json)-like format. It allows you to index and search structured and unstructured data, making it suitable for many use cases such as full-text search, log analytics, and real-time analytics.
+**Elasticsearch** is a search and analytics engine, at its core, it is a [document-oriented database](/cs-notes/database-system/nosql#document) that stores data in [JSON](/cs-notes/digital-media-processing/json)-like format. It allows you to index and search structured and unstructured data, making it suitable for many use cases such as full-text search, log analytics, and real-time analytics.
 
 Elasticsearch operates in a distributed architecture. An engine of elasticsearch capable of storing data and performing search operation is considered as a **node**. These nodes work together to form a **cluster**.
 
@@ -56,5 +56,5 @@ Also, as an analytics engine, elasticsearch allows us to perform analytics and s
 Overall, the key features of elasticsearch is combining distributed computing and scalable storage with also various analytics feature.
 
 :::tip
-See also [search engine on internet and web](/internet-and-web/search-engine).
+See also [search engine on internet and web](/cs-notes/internet-and-web/search-engine).
 :::

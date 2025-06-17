@@ -10,7 +10,7 @@ description: Software Deployment
 - **[Deployment environment — Wikipedia](https://en.wikipedia.org/wiki/Deployment_environment)**
 - **[Software Deployment Process: A Complete Guide 2023 — Linkedin](https://www.linkedin.com/pulse/software-deployment-process-complete-guide-2023-newwavevn)**
 
-A software is written in programming languages and goes through the [building process](/software-engineering/build-and-package-management#software-build), which turn the source code into executable program. **Software Deployment** is the process of releasing and installing software applications or updates onto target computer systems or devices.
+A software is written in programming languages and goes through the [building process](/cs-notes/software-engineering/build-and-package-management#software-build), which turn the source code into executable program. **Software Deployment** is the process of releasing and installing software applications or updates onto target computer systems or devices.
 
 Depending on the type of the software, different steps are involved during the installation. Installing a program on desktop with different OSes, web, mobile, or cloud server are all different.
 
@@ -19,7 +19,7 @@ Depending on the type of the software, different steps are involved during the i
 There are several stages of releasing software:
 
 - **Pre-alpha**: Early stage of development and the software is still being designed and built. It usually involves basic prototyping and proof of concept work, and the software may not have all planned features implemented.
-- **Alpha**: The first phase of actual software development. Software is being tested, and it's in early testing phase. Some developers team or selected group of users are involved in the testing process. The testing approach is usually [white-box testing technique](/software-engineering/software-testing#box-approaches).
+- **Alpha**: The first phase of actual software development. Software is being tested, and it's in early testing phase. Some developers team or selected group of users are involved in the testing process. The testing approach is usually [white-box testing technique](/cs-notes/software-engineering/software-testing#box-approaches).
 - **Beta**: A more advanced testing phase, tested by a larger group users. The beta testing process can be closed, where the testers are chosen group, while the open beta is typically open for anyone interested. The software may still have some issues, but it is generally more stable and closer to the final release compared to the alpha stage.
 - **Release Candidate (RC)**: Release candidate is a version that could potentially become the final release. It is keep being tested and refined with user feedback.
 - **Release to Manufacturing (RTM)**: A version of the software that is considered ready for production deployment. The software is being prepared for mass distribution or installation on customer systems.
@@ -60,17 +60,17 @@ Some types of environment:
 
 - **Development**: Environment used by developers during the development phase of the software. It typically mirrors the production environment to allow developers to test and debug the application. Development environments often have additional tools and configurations, such as ability to debug or log.
 - **Testing/QA**: Environment for testing and quality assurance purposes. It is used to perform various types of testing, including functional testing, integration testing, performance testing, and user acceptance testing.
-- **Staging or Model**: Pre-production environment that exactly resembles the production environment. It is used to validate the application's behavior and performance in a real environment, such as using a real remote server than [localhost](/computer-networking/server#localhost).
+- **Staging or Model**: Pre-production environment that exactly resembles the production environment. It is used to validate the application's behavior and performance in a real environment, such as using a real remote server than [localhost](/cs-notes/computer-networking/server#localhost).
 - **Production**: Live environment where the application is made available to end-users or customers. It is the environment in which the application operates on a daily basis and serves actual user traffic.
 
 ### Deployment Process
 
 Several steps involved in the deployment process:
 
-- **[Build](/software-engineering/build-and-package-management#software-build)**: As mentioned before, it is necessary to build the necessary artifact and packaging them into a deployable format.
+- **[Build](/cs-notes/software-engineering/build-and-package-management#software-build)**: As mentioned before, it is necessary to build the necessary artifact and packaging them into a deployable format.
 - **Infrastructure Setup**: Set up the target deployment environment, including servers, networking, databases, etc. This step may involve provisioning virtual machines, configuring containers, or setting up cloud services to create the necessary infrastructure.
 - **Configuration**: Configure the deployment environment with the required settings and parameters. This includes configuring environment-specific variables, connection strings, or API keys.
-- **Deploy**: Perform the deployment by transferring the artifacts to the target environment. This can be done using file transfer protocols (uploading it) or [version control systems](/software-engineering/version-control). Deployment is done in specific strategy explained below.
+- **Deploy**: Perform the deployment by transferring the artifacts to the target environment. This can be done using file transfer protocols (uploading it) or [version control systems](/cs-notes/software-engineering/version-control). Deployment is done in specific strategy explained below.
 
 #### Deployment Strategy
 
@@ -88,5 +88,5 @@ One practice of DevOps involves automating the deployment process, ensuring that
 
 **Continuous improvement and continuous deployment (CI/CD)** is the process of continuously improving and deploying the software. It is the practice that is applied on DevOps to automate and streamline the software delivery pipeline. Many platform, such as GitHub Actions is used for CI/CD process.
 
-- **Continuous Integration (CI)**: CI is a development practice that involves frequently integrating code changes from multiple developers into a shared repository. Developer can use [version control system](/software-engineering/version-control), such as Git to manage and track code changes. Whenever code changes are committed to the repository, an automated build process can be triggered to compile the code, run unit tests, and generate build artifacts.
+- **Continuous Integration (CI)**: CI is a development practice that involves frequently integrating code changes from multiple developers into a shared repository. Developer can use [version control system](/cs-notes/software-engineering/version-control), such as Git to manage and track code changes. Whenever code changes are committed to the repository, an automated build process can be triggered to compile the code, run unit tests, and generate build artifacts.
 - **Continuous Delivery (CD)**: CD focuses on automating the entire software release process up to the point of deployment. For example, GitHub Actions, specifically the GitHub Workflow, allows us to define a deployment pipeline. It is a stages and actions that will be executed whenever a particular event happened. For example, a common pipeline would be defining a task to build, test, package, and deploy the application whenever code is pushed to the main branch.

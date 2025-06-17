@@ -18,7 +18,7 @@ ISA is not just a set of instructions, but also encompasses the overall design a
 
 ### Instructions
 
-Each instruction in an ISA has a specific format that defines how the instruction is encoded in binary. The format typically consist of two, the **opcode**, or operation code, which is the instruction to be performed, and some number **operands**, which are the value to be operated on. The operands can be [registers](/computer-organization-and-architecture/registers-and-ram#registers), immediate value, or memory address if accessing data from memory.
+Each instruction in an ISA has a specific format that defines how the instruction is encoded in binary. The format typically consist of two, the **opcode**, or operation code, which is the instruction to be performed, and some number **operands**, which are the value to be operated on. The operands can be [registers](/cs-notes/computer-organization-and-architecture/registers-and-ram#registers), immediate value, or memory address if accessing data from memory.
 
 ![Instructions format](./instructions-format.png)  
 Source: https://en.wikipedia.org/wiki/Instruction_set_architecture#Instruction_encoding
@@ -43,7 +43,7 @@ Other ISA specification:
   - **Direct Addressing**: Operand of an instruction directly specifies the memory address where the data is located.
   - **Immediate Addressing**: Operand of an instruction is a constant or immediate value.
   - **Register Addressing**: Operand of the instruction is a register or a set of registers.
-  - **Indirect Addressing**: Operand of an instruction contains a memory address that points to the actual memory location where the data is stored. In other word, the operand is not the actual value, the operand is another memory location which contains the memory address of the actual value (similar to concept of [pointers](/computer-and-programming-fundamentals/memory#pointer--reference)).
+  - **Indirect Addressing**: Operand of an instruction contains a memory address that points to the actual memory location where the data is stored. In other word, the operand is not the actual value, the operand is another memory location which contains the memory address of the actual value (similar to concept of [pointers](/cs-notes/computer-and-programming-fundamentals/memory#pointer--reference)).
   - **Indexed Addressing**: Operand of an instruction is a memory address that is calculated by adding an index value to a base address, where the index value can be a constant or stored in a register.
 
 ### Classification

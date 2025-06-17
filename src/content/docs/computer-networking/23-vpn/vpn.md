@@ -12,7 +12,7 @@ A computer that connects to a server can be monitored by ISP, government, or oth
 
 Instead of connecting directly to the server, a VPN service which is operated in a **VPN server**, act as the intermediary of our connection to the server (we make connection to VPN server using a software tool called **VPN client**). So, the VPN server will handle the connection to the actual server we are accessing. It includes requesting, receiving, and sending the response back to us from the server.
 
-VPN is similar with [proxy](/computer-networking/proxy), the difference is a VPN server provides a more secure connection and other benefits.
+VPN is similar with [proxy](/cs-notes/computer-networking/proxy), the difference is a VPN server provides a more secure connection and other benefits.
 
 ![VPN that acts as a middle shield between client and the internet](./vpn-example.png)  
 Source: https://www.hostinger.com/tutorials/what-is-vpn
@@ -28,5 +28,5 @@ Source: https://www.hostinger.com/tutorials/what-is-vpn
 - **Bypass Restrictions**: VPNs can help bypass censorship and geolocation restrictions by allowing you to connect to servers located in different regions. This can be useful for accessing blocked websites or services in your country. This works because we are not actually connecting to the actual server, instead the VPN server is the one who connects. We can choose to connect from a VPN server located in a country where the website is not blocked from there.
 
 :::tip
-Refers to [computer security cryptography](/computer-security) section to know more about security and encryption.
+Refers to [computer security cryptography](/cs-notes/computer-security) section to know more about security and encryption.
 :::

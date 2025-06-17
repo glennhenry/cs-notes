@@ -27,7 +27,7 @@ Functional:
 
 Non-functional:
 
-- High availability, it would be an AP system in the context of [CAP theorem](/software-engineering/system-design#cap-theorem).
+- High availability, it would be an AP system in the context of [CAP theorem](/cs-notes/software-engineering/system-design#cap-theorem).
 - Scalable horizontally, because meetings are typically participated by people around the worlds. To suit with business constraints, we can limit the meeting size or duration.
 - Meeting should be maximum of 100 people with 60 minutes limit. Assuming a 2 Mbps video bit rate and 128 Kbps audio quality, we would need 2,128 Mbps (per second). Bandwidth of share screen is same as normal stream.
 
@@ -39,13 +39,13 @@ Non-functional:
 
 ![High level design](./high-level.png)
 
-- Meeting client act as the codecs for video/audio streamed by participant. The codec can be something like [AVC](/digital-media-processing/mp4#mp4-compression-h264) or SVC.
+- Meeting client act as the codecs for video/audio streamed by participant. The codec can be something like [AVC](/cs-notes/digital-media-processing/mp4#mp4-compression-h264) or SVC.
 - When a meeting is started, a logical meeting room is created on the meeting server which the participant can connect to.
 - Video are sent to meeting server that communicates and synchronizes with each other. The meeting server act as central hub for gathering and combining participant video, which is then sent back to each participant.
 - The meeting server will have a connection to a cloud server (e.g., AWS) that stores data, such as user profiles, user settings, chat logs, and meeting recording.
 - If the participant share their screen, the video stream will be their window instead of the webcam. This mean the client will also handle the recording.
-- Simple data such as chat or reaction can be sent to the server using standard protocol such as [HTTPS](/computer-networking/http-https). The client will also keep track of these.
-- Video stream is sent using [RTP](/computer-networking/rtp), specifically the secure RTP.
+- Simple data such as chat or reaction can be sent to the server using standard protocol such as [HTTPS](/cs-notes/computer-networking/http-https). The client will also keep track of these.
+- Video stream is sent using [RTP](/cs-notes/computer-networking/rtp), specifically the secure RTP.
 
 #### More Detail
 
@@ -68,11 +68,11 @@ Use as many libraries as possible to reduce development time and cost.
   - Client connect to the meeting server through some endpoint with `meetingId` and `passcode` as the parameters, initially using HTTP.
   - If there exist such ID with the correct password, then client and server will start exchanging streams, also upgrading the protocol to RTP.
   - The server listens to participants that broadcast their video, and also shares the data with other meeting server. Received broadcast is gathered and sent to all nearby participants.
-  - Could use [message broker](/backend-system/message-broker) technology like RabbitMQ to handle the distribution of messages and events among meeting server instances.
+  - Could use [message broker](/cs-notes/backend-system/message-broker) technology like RabbitMQ to handle the distribution of messages and events among meeting server instances.
 
 - **Web Server**: We will have another server for serving web-based client. This server will also be used for serving request that aren't meeting related, such as authentication.
 
-  - Provide [REST API](/backend-system/rest-api) services. Similarly, we can use [Ktor](https://ktor.io/) for this. Ktor provide a simple way to create authentication, serialization, and other server stuff.
+  - Provide [REST API](/cs-notes/backend-system/rest-api) services. Similarly, we can use [Ktor](https://ktor.io/) for this. Ktor provide a simple way to create authentication, serialization, and other server stuff.
   - Also, deploy the Compose Multiplatform app for the web.
 
 - **Cloud Server**: Used for database. There are many options, such as Amazon S3 for video, Amazon DynamoDB for user's data, and Amazon CloudFront for static data.

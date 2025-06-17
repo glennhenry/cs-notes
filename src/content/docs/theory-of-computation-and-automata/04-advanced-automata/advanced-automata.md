@@ -39,7 +39,7 @@ Some finite automata are able to produce output, it is defined as:
 $M = (Q, \Sigma, O, \delta, \lambda, q_0)$
 
 - $O$ or $\triangle$: finite output alphabet
-- $\delta: Q \times \Sigma \rightarrow Q$: Similar to [normal DFA](/theory-of-computation-and-automata/finite-automata#dfa), takes a state and alphabet, returns a new state
+- $\delta: Q \times \Sigma \rightarrow Q$: Similar to [normal DFA](/cs-notes/theory-of-computation-and-automata/finite-automata#dfa), takes a state and alphabet, returns a new state
 - $\lambda$: output function
 - $q_0$: initial states
 - The rest is same
@@ -96,7 +96,7 @@ In summary, conversion of Moore to Mealy does not increase the number of state, 
 
 ### Epsilon-NFA
 
-Epsilon-NFA (ε-NFA) is the extension of [NFA](/theory-of-computation-and-automata/finite-automata#nfa) that allows for $\epsilon$ (epsilon) or empty string transition. The rest of definition is same as explained in [NFA](/theory-of-computation-and-automata/finite-automata#nfa). However, the transition function for ε-NFA is now defined as $\delta: Q \times \Sigma \cup \epsilon \rightarrow 2^Q$.
+Epsilon-NFA (ε-NFA) is the extension of [NFA](/cs-notes/theory-of-computation-and-automata/finite-automata#nfa) that allows for $\epsilon$ (epsilon) or empty string transition. The rest of definition is same as explained in [NFA](/cs-notes/theory-of-computation-and-automata/finite-automata#nfa). However, the transition function for ε-NFA is now defined as $\delta: Q \times \Sigma \cup \epsilon \rightarrow 2^Q$.
 
 ![Epsilon NFA](./epsilon-nfa.png)  
 Source: https://youtu.be/84oNUttWlN4?si=B2LxuA_aOE-XCKu8&t=321

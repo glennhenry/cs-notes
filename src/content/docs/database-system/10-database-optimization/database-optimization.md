@@ -10,7 +10,7 @@ description: Database Optimization
 - **[Partition (database) — Wikipedia](<https://en.wikipedia.org/wiki/Partition_(database)>)**
 - **Chapter 6, Designing Data Intensive Applications — Martin Kleppmann**
 
-[Query language](/database-system/query-language), typically being a declarative language, allows it to make its own optimization. It is up to the database engine how will it perform the database operation. Query language doesn't rely on specific instruction from the programmer, this makes the compiler able to produce a highly optimized query in a controlled way.
+[Query language](/cs-notes/database-system/query-language), typically being a declarative language, allows it to make its own optimization. It is up to the database engine how will it perform the database operation. Query language doesn't rely on specific instruction from the programmer, this makes the compiler able to produce a highly optimized query in a controlled way.
 
 ### Query Optimization
 
@@ -28,7 +28,7 @@ WHERE table1.column = 'value'
 There are three ways to join both table:
 
 - **Nested Loop Join**: The optimizer scans each row from `table1` and looks up matching rows in `table2`. This plan is suitable when one table is significantly smaller, or when the join condition is selective, meaning it filters out a relatively small portion.
-- **Hash Join**: The optimizer builds [hash tables](/data-structures-and-algorithms/hash-table) for both `table1` and `table2`. The hash table serves as a quick lookup for matching rows between two tables. Hash join can be more efficient when both tables are large and the join condition is not selective.
+- **Hash Join**: The optimizer builds [hash tables](/cs-notes/data-structures-and-algorithms/hash-table) for both `table1` and `table2`. The hash table serves as a quick lookup for matching rows between two tables. Hash join can be more efficient when both tables are large and the join condition is not selective.
 - **Merge Join**: Merge join efficiently merge the sorted data to perform the join. It scans the sorted tables simultaneously, comparing the values of the join columns. Merge join can be efficient when the data is already sorted and the join condition is not selective.
 
 #### Join Ordering
@@ -40,7 +40,7 @@ The query plan is represented as tree.
 ![Query plan tree](./query-plan-tree.png)  
 Source: https://en.wikipedia.org/wiki/Query_optimization
 
-Join order is determined using [dynamic programming](/data-structures-and-algorithms/dynamic-programming) algorithm pioneered by IBM's System R database. This algorithm works in two stages:
+Join order is determined using [dynamic programming](/cs-notes/data-structures-and-algorithms/dynamic-programming) algorithm pioneered by IBM's System R database. This algorithm works in two stages:
 
 1. **Enumeration**: The optimizer generates all possible join order for the given tables.
 2. **Cost-Based Selection**: The algorithm estimates the cost of each generated join order and choose the best way.
@@ -58,12 +58,12 @@ A cost of query plan is estimated by several factors such as disk I/O operations
 The information and metrics collected about the data and structure of a database is stored in a database statistics. These can be table, column, index statistics, which stores data types, size, cardinality, or any other metadata. Statistical summaries such as frequency and distribution of values can also be stored in a histogram.
 
 :::tip
-More about [query processing](/database-system/query-processing) and [query compiler](/database-system/query-compiler).
+More about [query processing](/cs-notes/database-system/query-processing) and [query compiler](/cs-notes/database-system/query-compiler).
 :::
 
 ### Caching
 
-DBMS can introduce [caching](/computer-and-programming-fundamentals/caching) mechanism to improve database queries.
+DBMS can introduce [caching](/cs-notes/computer-and-programming-fundamentals/caching) mechanism to improve database queries.
 
 - **Buffer caching**: Buffer pool is a region of memory that is allocated by the buffer manager as the place to transfer disk blocks. It is basically the "transit" area between the disk storage and the CPU. When query happens, the DBMS may check the buffer pool if the required data is available already.
 - **Query caching**: When a query is executed, the DBMS checks if the same query with the same parameters has been executed before and if the result is already present in the query cache. If the result is found in the cache, it can be directly returned without the need for re-executing the query and accessing the disk, resulting in performance improvement.
@@ -82,7 +82,7 @@ Type of database partitioning:
 2. **List Partitioning**: Divides data based on specific values or a list of values from a chosen attribute. For instance, a database could be partitioned based on region attribute, where each partition contains data related to a specific region.
 3. **Composite Partitioning**: Composite partitioning combines multiple partitioning techniques to create more complex partitioning strategies.
 4. **Round-robin Partitioning**: Round-robin partitioning evenly distributes data across partitions circularly. Each new record is inserted into the next partition cyclically. This technique can be useful when the data distribution is expected to be uniform and there is no specific criterion for partitioning.
-5. **Hash Partitioning**: Hash partitioning distributes the data across partitions based on a [hash function](/computer-security/hash-function) applied to a chosen attribute. The hash function ensures an even distribution of data across partitions, making it useful when there is no natural range or list criterion for partitioning. One technique for this is the [consistent hashing](/cloud-computing-and-distributed-systems/distributed-systems-communication#distributed-hash-tables).
+5. **Hash Partitioning**: Hash partitioning distributes the data across partitions based on a [hash function](/cs-notes/computer-security/hash-function) applied to a chosen attribute. The hash function ensures an even distribution of data across partitions, making it useful when there is no natural range or list criterion for partitioning. One technique for this is the [consistent hashing](/cloud-computing-and-distributed-systems/distributed-systems-communication#distributed-hash-tables).
 
    A scenario where partition is not fair, where one instance hold more than the other, we would call the system _skewed_. Unfair partition would make certain instance experience more workload (being a _hotspots_) and some are potentially idle.
 

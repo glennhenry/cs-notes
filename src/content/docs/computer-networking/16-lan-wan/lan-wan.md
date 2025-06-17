@@ -14,7 +14,7 @@ description: LAN & WAN
 
 **Local Area Network (LAN)** is a computer network that covers small geographic area, typically in single building or group of building that are closes. LANs are commonly used in homes, offices, schools, and other small-scale environments.
 
-LANs connect multiple devices within the network, such as computers, printers, servers, switches, and routers. These devices are interconnected using wired technologies like [Ethernet cables](/computer-networking/ethernet) or wireless technologies like [Wi-Fi](/computer-networking/wi-fi).
+LANs connect multiple devices within the network, such as computers, printers, servers, switches, and routers. These devices are interconnected using wired technologies like [Ethernet cables](/cs-notes/computer-networking/ethernet) or wireless technologies like [Wi-Fi](/cs-notes/computer-networking/wi-fi).
 
 LANs also supports the sharing of resources among connected devices. This includes sharing files, printers, internet access, and other network-connected devices or services.
 
@@ -36,9 +36,9 @@ Source: https://www.sangfor.com/glossary/cloud-and-infrastructure/what-is-wide-a
 
 **Virtual Local Area Network (VLAN)** is a technique used to create logical, isolated networks within a physical local area network (LAN). Devices within a VLAN can communicate with each other as if they were connected to the same physical network, even if they are physically located in different areas or connected to different switches.
 
-By dividing network traffic, VLAN offers simpler network, traffic reduction, and better security. Devices in one VLAN cannot directly communicate with devices in another VLAN unless specific routing or [firewall](/computer-security/network-security#firewall) rules are in place.
+By dividing network traffic, VLAN offers simpler network, traffic reduction, and better security. Devices in one VLAN cannot directly communicate with devices in another VLAN unless specific routing or [firewall](/cs-notes/computer-security/network-security#firewall) rules are in place.
 
-Network division works by assigning VLAN ID or VLAN tag to each VLAN. These IDs are used to uniquely identify which VLAN a network packet or frame belongs to. Network devices such as [switch](/computer-networking/switch) may be configured to associate specific ports with particular VLANs. This association determines which VLAN a device belongs to. Devices connected to the same VLAN-configured ports are considered members of the same VLAN.
+Network division works by assigning VLAN ID or VLAN tag to each VLAN. These IDs are used to uniquely identify which VLAN a network packet or frame belongs to. Network devices such as [switch](/cs-notes/computer-networking/switch) may be configured to associate specific ports with particular VLANs. This association determines which VLAN a device belongs to. Devices connected to the same VLAN-configured ports are considered members of the same VLAN.
 
 ![VLAN divided four computers into two by assigning ID 10 and 20](./vlan.png)  
 Source: https://bardimin.com/network/mengenal-vlan-dalam-jaringan/

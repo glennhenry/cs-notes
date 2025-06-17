@@ -8,9 +8,9 @@ description: PNG
 
 - **[PNG — Wikipedia](https://en.wikipedia.org/wiki/PNG)**
 
-**PNG (Portable Network Graphics)** is a digital image format that uses [lossless compression](/digital-signal-processing/compression#lossless-compression), meaning it stores image without any loss of information, but with bigger file sizes compared to other format like [JPEG](/digital-media-processing/jpg-jpeg).
+**PNG (Portable Network Graphics)** is a digital image format that uses [lossless compression](/cs-notes/digital-signal-processing/compression#lossless-compression), meaning it stores image without any loss of information, but with bigger file sizes compared to other format like [JPEG](/cs-notes/digital-media-processing/jpg-jpeg).
 
-Other characteristic of PNG is that it supports [alpha channel](/computer-graphics/computer-images-part-2#alpha) transparency. In other word, PNG can display transparent areas within an image. Alpha channel is stored alongside the RGB channel, which mean PNG format require an extra 8 bits for each color, making a single pixel took 32 bits.
+Other characteristic of PNG is that it supports [alpha channel](/cs-notes/computer-graphics/computer-images-part-2#alpha) transparency. In other word, PNG can display transparent areas within an image. Alpha channel is stored alongside the RGB channel, which mean PNG format require an extra 8 bits for each color, making a single pixel took 32 bits.
 
 The alpha value vary between 0 (fully invisible) to 255 (fully visible). The transparency enables an image to be placed or combined with other transparent image, this is called alpha blending.
 
@@ -35,7 +35,7 @@ The PNG compression consist of two steps:
    - **Average**: The pixel value is predicted based on the average of the pixel above it and the pixel immediately before it.
    - **Path**: The pixel value is predicted based on a linear combination of the pixel above it, the pixel immediately before it, and the pixel diagonally above it.
 
-2. **DEFLATE**: DEFLATE is a combination of LZ77 and [Huffman encoding](/digital-signal-processing/compression#huffman-encoding) algorithm.
+2. **DEFLATE**: DEFLATE is a combination of LZ77 and [Huffman encoding](/cs-notes/digital-signal-processing/compression#huffman-encoding) algorithm.
 
    - **LZ77**: LZ77 replace repeated sequence of characters with a reference consisting an offset (indicating the distance to the start of the repeated sequence), the length (representing the number of characters in the sequence), and the character itself.
 

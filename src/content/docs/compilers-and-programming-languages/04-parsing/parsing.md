@@ -12,7 +12,7 @@ description: Parsing
 - **[LL(1) Parsing — Neso Academy](https://youtu.be/clkHOgZUGWU?si=-z878_LOxoCrsdBP)**
 - **[What is the difference between LALR and LR parsing? [duplicate] — stackoverflow](https://stackoverflow.com/questions/19663564/what-is-the-difference-between-lalr-and-lr-parsing)**
 
-The parser takes sequence of tokens produced in the [previous step](/compilers-and-programming-languages/scanning). The objective of parser is to analyze whether source code (now in stream of token) is correct syntactically. Parser does this by finding out if it is possible to create a parse tree with given the input and the language grammar.
+The parser takes sequence of tokens produced in the [previous step](/cs-notes/compilers-and-programming-languages/scanning). The objective of parser is to analyze whether source code (now in stream of token) is correct syntactically. Parser does this by finding out if it is possible to create a parse tree with given the input and the language grammar.
 
 :::note
 Recall that parse tree represent the hierarchical structure of how code is derived using various grammar's production rules. If a parse tree can be created without encountering any errors, it implies that the code is syntactically correct.
@@ -65,7 +65,7 @@ It will scan through the input tokens as needed. When an unexpected situation oc
 
 ### Bottom-up Parsing
 
-Bottom-up parser starts from the input instead of the grammar. The parser keeps track a token [stack](/data-structures-and-algorithms/stack), which will be used to store the symbols it has encountered so far.
+Bottom-up parser starts from the input instead of the grammar. The parser keeps track a token [stack](/cs-notes/data-structures-and-algorithms/stack), which will be used to store the symbols it has encountered so far.
 
 ![Bottom-up parsing](./bottom-up-parsing.png)  
 Source: Book 2 page 63
@@ -116,8 +116,8 @@ There are many types of parser. One way to categorize them is based on where it 
 
   LL parsers parses LL grammar, which we need:
 
-  1. Remove [ambiguity](/theory-of-computation-and-automata/context-free-grammar#ambiguity), we can modify the grammar by either rephrasing the production rules or introducing additional non-terminals.
-  2. Eliminate [left-recursion](#choice) by introducing new non-terminals. One example is shown at [Greibach Normal Form step 5](/theory-of-computation-and-automata/context-free-grammar#greibach-normal-form).
+  1. Remove [ambiguity](/cs-notes/theory-of-computation-and-automata/context-free-grammar#ambiguity), we can modify the grammar by either rephrasing the production rules or introducing additional non-terminals.
+  2. Eliminate [left-recursion](#choice) by introducing new non-terminals. One example is shown at [Greibach Normal Form step 5](/cs-notes/theory-of-computation-and-automata/context-free-grammar#greibach-normal-form).
   3. Eliminate common left prefixes, in which multiple production rules has common sequence of symbols, such as:
 
      ```
@@ -165,7 +165,7 @@ Source: Book 2 page 66, 69
 
 Similar to the [list example in top-down parsing](#top-down-parsing), it predicts which production rule to use to replace certain non-terminals based on the input stream. Initially, it chooses to replace `stmt_list` with `stmt stmt_list` rather than an empty string because it sees an input ahead. Then, `stmt` is replaced with `read id` because it encounters `read` and an `id`. The behavior of this parser, which observes the next input, is what makes it an LL(1) parser, as it considers the next token count as one lookahead token.
 
-After parse tree is constructed, it is implied that the input is syntactically correct. The parser can save important information for the next compilation step. The information of parse tree can be represented as node-link data structure such as [graph](/data-structures-and-algorithms/graph), [linked list](/data-structures-and-algorithms/linked-list), or [tree](/data-structures-and-algorithms/tree).
+After parse tree is constructed, it is implied that the input is syntactically correct. The parser can save important information for the next compilation step. The information of parse tree can be represented as node-link data structure such as [graph](/cs-notes/data-structures-and-algorithms/graph), [linked list](/cs-notes/data-structures-and-algorithms/linked-list), or [tree](/cs-notes/data-structures-and-algorithms/tree).
 
 :::info
 Sometimes parser doesn't create full parse tree explicitly, it may create an abstract syntax tree, which is the simpler version of parse tree that omits certain nodes and details that are not relevant to the syntax analysis.
@@ -295,7 +295,7 @@ The parsing pattern is like:
 
 Notice that sometimes we will encounter the similar state. In other word, if we encounter `read` again, the dot on `stmt → read id` will goes from the start to the end again. Then, we will reduce again similar to the previous state. The dots all over the production rule represent the states of the LR parser's parse stack.
 
-The state behavioral of bottom-up parsing makes it depict a [finite automaton](/theory-of-computation-and-automata/finite-automata), it's called **Characteristics Finite State Machine (CSFM)**. This is same for any LR parser, such as SLR and LALR.
+The state behavioral of bottom-up parsing makes it depict a [finite automaton](/cs-notes/theory-of-computation-and-automata/finite-automata), it's called **Characteristics Finite State Machine (CSFM)**. This is same for any LR parser, such as SLR and LALR.
 
 For each different state encountered (i.e., the position of the dot on the stack), we can assign them numbers.
 
@@ -363,7 +363,7 @@ Source: https://youtu.be/OIKL6wFjFOo?si=1JD7d0vdyh7BR5hA&t=775
 - **Top-down Parsers**: Also known as LL parsers, they are classified into with and without backtracking. With backtracking, the parser follows the grammar rules until they encounter issues, such as when the grammar is ambiguous. In such cases, the parser may need to backtrack, i.e., undo certain decisions and try alternative paths to resolve the ambiguity or find a valid parse.
 
   - **Brute forcing**: This is not covered, but this approach is straightforward. The idea is, the parser will generate all the possible parse tree from a particular grammar. It then checks if any of the parse tree produce the same language as the input program.
-  - **Recursive Descent Parsers**: A top-down approach without [backtracking](/data-structures-and-algorithms/backtracking), where each non-terminal is associated with a recursive function that expands all production rule according to the next input token.
+  - **Recursive Descent Parsers**: A top-down approach without [backtracking](/cs-notes/data-structures-and-algorithms/backtracking), where each non-terminal is associated with a recursive function that expands all production rule according to the next input token.
   - **Predictive Parsers**: It is recursive descent parser without backtracking. They incorporate lookahead tokens and use a sophisticated parsing table to consult what action to take next when constructing the parse tree.
 
 - **Bottom-up Parsers**: Typically more powerful than top-down parser, but also more complex and harder to write by hand.
@@ -379,6 +379,6 @@ Source: https://youtu.be/OIKL6wFjFOo?si=1JD7d0vdyh7BR5hA&t=775
 
 The strength of each parser can somewhat be described as follows: $\text{LL}(1) < \text{SLR} < \text{LALR} < \text{LR}(1)$. We can also describe it in terms of the languages it can parse: $\text{LL}(1) ⊂ \text{SLR} ⊂ \text{LALR} ⊂ \text{LR}(1) \subset \text{CFG}$, where the rightmost parser represents a larger subset of the languages it can parse.
 
-When creating a parser, the choices are similar to those when making a [scanner](/compilers-and-programming-languages/scanning). We can use a parser generator (e.g., with programs like Yacc and Bison), which typically generate bottom-up parsers like LALR(1) and LR(1). Similarly, these tools work by generating a parser from the specifications we provide, and we need to integrate the generated parser as well as a scanner (which may be generated as well) with our main function.
+When creating a parser, the choices are similar to those when making a [scanner](/cs-notes/compilers-and-programming-languages/scanning). We can use a parser generator (e.g., with programs like Yacc and Bison), which typically generate bottom-up parsers like LALR(1) and LR(1). Similarly, these tools work by generating a parser from the specifications we provide, and we need to integrate the generated parser as well as a scanner (which may be generated as well) with our main function.
 
 Alternatively, we can choose to make it manually, as we may not have full control over the generated parser, such as not being able to provide the best error messages or finding it harder to understand and modify because we didn't create it. When we make a parser manually, we typically create a top-down parser, with a common implementation being the [recursive descent parser](#recursive-descent-parser). If we were to create an LR parser, we would have to create a table to reflect the correct automaton, which could have a large number of states, resulting in a significantly large automaton.

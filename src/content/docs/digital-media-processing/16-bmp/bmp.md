@@ -8,7 +8,7 @@ description: BMP
 
 - **[BMP file format — Wikipedia](https://en.wikipedia.org/wiki/BMP_file_format)**
 
-**Bitmap (BMP)** is a [raster image format](/computer-graphics/computer-images-part-1) that stores pixel data for an image. BMP stores pixel data in binary format. BMP are generally uncompressed, meaning the original data doesn't undergo [compression](/digital-signal-processing/compression) process.
+**Bitmap (BMP)** is a [raster image format](/cs-notes/computer-graphics/computer-images-part-1) that stores pixel data for an image. BMP stores pixel data in binary format. BMP are generally uncompressed, meaning the original data doesn't undergo [compression](/cs-notes/digital-signal-processing/compression) process.
 
 ![Bitmap binaries data](./bitmap.png)  
 _raw data inside a BMP file_  

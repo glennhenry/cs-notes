@@ -21,12 +21,12 @@ Some aspects of GPU that makes it specialized:
 
 - **Parallel Processing**: GPU are designed with many cores that can execute multiple tasks simultaneously. In contrast, CPU has less core, but each is more powerful. The parallel architecture enables GPUs to process data in parallel, making them highly efficient for tasks that can be broken down into smaller computational units.
 - **Dedicated Memory**: Some GPU have their own dedicated memory called **VRAM (Video RAM)** or **GDDR (Graphics Double Data Rate)** memory. This memory is optimized for high-speed data access and is used to store textures, frame buffers, and other graphics-related data.
-- **Graphics Rendering Optimization**: GPUs are specifically optimized for graphics rendering tasks. They have dedicated hardware components, such as texture mapping units, rasterizers, and shader cores, that accelerate the [rendering pipeline](/computer-graphics/gpu-pipeline).
+- **Graphics Rendering Optimization**: GPUs are specifically optimized for graphics rendering tasks. They have dedicated hardware components, such as texture mapping units, rasterizers, and shader cores, that accelerate the [rendering pipeline](/cs-notes/computer-graphics/gpu-pipeline).
 
 ![GPU vs CPU](./gpu-vs-cpu.png)  
 Source: https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html
 
-Other than graphics processing, GPU is also used for other tasks that involves a lot of computation that can be done on parallel such as [neural networks](/deep-learning/neural-network).
+Other than graphics processing, GPU is also used for other tasks that involves a lot of computation that can be done on parallel such as [neural networks](/cs-notes/deep-learning/neural-network).
 
 #### GPU Components
 
@@ -56,7 +56,7 @@ Source: https://en.wikipedia.org/wiki/Graphics_processing_unit
 - **Frame & Pixel Buffer**: These are temporary memory to store graphical data. The frame buffer represent the complete image on the screen, which is displayed currently, while the pixel buffer store pixel data temporarily during graphics processing tasks. The GPU continuously updates the buffer with new pixel data as it performs calculations and renders the scene.
 
 :::tip
-More about [computer graphics](/computer-graphics)
+More about [computer graphics](/cs-notes/computer-graphics)
 :::
 
 :::note
@@ -110,7 +110,7 @@ Source: https://www.researchgate.net/figure/Simplified-view-of-a-vector-processo
 
 ### TPU
 
-**Tensor processing unit (TPU)** is a specialized hardware accelerator developed by Google for accelerating machine learning workloads, particularly those involving [neural networks](/deep-learning/neural-network).
+**Tensor processing unit (TPU)** is a specialized hardware accelerator developed by Google for accelerating machine learning workloads, particularly those involving [neural networks](/cs-notes/deep-learning/neural-network).
 
 Data used in machine learning based task often represented in matrix, or higher-dimensional array, in conclusion:
 
@@ -120,7 +120,7 @@ Data used in machine learning based task often represented in matrix, or higher-
 
 Some specialization TPU has:
 
-- **Reduced Precision**: TPU are designed to perform computation that doesn't require high precision, such as 8-bit or 16-bit [floating-point formats](/computer-and-programming-fundamentals/floating-number#part-of-floating-number--precision), which is suitable for ML-based tasks. Using lower precision, we can reduce the memory bandwidth and storage requirements, which results in faster data transfer and processing times.
+- **Reduced Precision**: TPU are designed to perform computation that doesn't require high precision, such as 8-bit or 16-bit [floating-point formats](/cs-notes/computer-and-programming-fundamentals/floating-number#part-of-floating-number--precision), which is suitable for ML-based tasks. Using lower precision, we can reduce the memory bandwidth and storage requirements, which results in faster data transfer and processing times.
 - **Specialized Hardware & Architecture**: TPU has hardware specific for doing machine learning tasks, it supports operations like normalization and pooling, which are commonly used in neural networks. TPU has special memory for storing learned weights that may be accessed frequently. Another key component of the hardware is the **Matrix Multiply Unit (MMU)**, it is highly optimized processing unit for matrix computations, including convolution operations.
 
 ![TPU architecture](./tpu.png)  

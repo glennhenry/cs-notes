@@ -7,7 +7,7 @@ description: GRU
 - **[Illustrated Guide to LSTM's and GRU's: A step by step explanation — The AI Hacker](https://youtu.be/8HyCNIVRbSU?si=0rTiM6plo9mgv1gl)**
 - **[Mengenal si GRU — Anak AI](https://youtu.be/mQ5CbaCK_Tg?si=zR552hFKhs_TWgy9)**
 
-**Gated Recurrent Unit (GRU)** is a type of [recurrent neural network (RNN)](/deep-learning/rnn) and also the alternative of [long short-term memory](/deep-learning/lstm). GRU was developed to address LSTM limitation. LSTM has a complex architecture with different cell state and hidden state, making it computationally expensive.
+**Gated Recurrent Unit (GRU)** is a type of [recurrent neural network (RNN)](/cs-notes/deep-learning/rnn) and also the alternative of [long short-term memory](/cs-notes/deep-learning/lstm). GRU was developed to address LSTM limitation. LSTM has a complex architecture with different cell state and hidden state, making it computationally expensive.
 
 ### LSTM vs GRU
 

@@ -6,15 +6,15 @@ description: Device Management
 
 **Main Source:**
 
-- **[Computer Organization & Architecture](/computer-organization-and-architecture)**
+- **[Computer Organization & Architecture](/cs-notes/computer-organization-and-architecture)**
 - **[Chapter 13 I/O Systems - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 - **[Device driver — Wikipedia](https://en.wikipedia.org/wiki/Device_driver)**
 
 **Device Management** is the activities of managing and controlling hardware devices connected to a computer system. It encompasses tasks such as device identification, configuration, allocation, and monitoring. The OS incorporates a **device driver**, they are software components that enable the OS to interact with hardware devices.
 
-I/O devices such as keyboard, mice, hard disk, or network card are connected to the computer physically using **[I/O interfaces](/computer-organization-and-architecture/input-output#interfaces)**. They will be connected to the **[system buses](/computer-organization-and-architecture/von-neumann#system-buses)**, which is the communication pathway that allows data transfer between the CPU, memory, and I/O devices.
+I/O devices such as keyboard, mice, hard disk, or network card are connected to the computer physically using **[I/O interfaces](/cs-notes/computer-organization-and-architecture/input-output#interfaces)**. They will be connected to the **[system buses](/cs-notes/computer-organization-and-architecture/von-neumann#system-buses)**, which is the communication pathway that allows data transfer between the CPU, memory, and I/O devices.
 
-Between the buses and physical I/O connector, there exist a component called **[I/O controller](/computer-organization-and-architecture/input-output#io-controller)**, it is an intermediate hardware component that handles communication between the devices and the computer, protocol conversions, and device-specific operations.
+Between the buses and physical I/O connector, there exist a component called **[I/O controller](/cs-notes/computer-organization-and-architecture/input-output#io-controller)**, it is an intermediate hardware component that handles communication between the devices and the computer, protocol conversions, and device-specific operations.
 
 ![I/O connection to a computer system](./io-connection.png)  
 Source: https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/13_IOSystems.html
@@ -32,10 +32,10 @@ The driver exposes a standardized interface or API to the operating system and a
 
 ### I/O Technique
 
-There are [methods and approaches](/computer-organization-and-architecture/input-output#io-technique) used to handle input and output operations between I/O devices and computer system.
+There are [methods and approaches](/cs-notes/computer-organization-and-architecture/input-output#io-technique) used to handle input and output operations between I/O devices and computer system.
 
 - **Programmed I/O**: In this technique, the CPU directly controls the data transfer between the I/O device and memory. The CPU actively polls or checks the status of the I/O device to initiate or complete data transfers. Programmed I/O is simple to implement but can be inefficient as it ties up the CPU.
-- **Interrupt-Driven I/O**: I/O device initiates an [interrupt signal](/operating-system/interrupt-handling) to the CPU when it is ready to transfer data. The CPU then suspends its current execution, saves its state, and transfers control to an interrupt handler routine. The handler reads or writes data between the I/O device and memory. Interrupt-driven I/O allows the CPU to perform other tasks while waiting for I/O operations to complete, the CPU doesn't need to check periodically.
+- **Interrupt-Driven I/O**: I/O device initiates an [interrupt signal](/cs-notes/operating-system/interrupt-handling) to the CPU when it is ready to transfer data. The CPU then suspends its current execution, saves its state, and transfers control to an interrupt handler routine. The handler reads or writes data between the I/O device and memory. Interrupt-driven I/O allows the CPU to perform other tasks while waiting for I/O operations to complete, the CPU doesn't need to check periodically.
 - **Direct Memory Access (DMA)**: This technique enable data transfers between memory and I/O devices without CPU intervention. Data between I/O devices and CPU are sent to a DMA controller. The controller is responsible for coordinating the data transfer directly between the device and memory.
 - **Memory-mapped I/O**: Memory-mapped I/O treats I/O devices as if they were memory locations. The I/O device is assigned a range of memory addresses, and the CPU can read from or write to these addresses to communicate with the device. Memory-mapped I/O simplifies the programming interface, as the CPU can use standard load and store instructions to access the device.
 
@@ -52,7 +52,7 @@ To create a unified interface for I/O devices, each device is differentiated bas
 
 ### I/O Scheduling
 
-When there are multiple I/O requests, the I/O scheduler decides the sequence in which these requests are processed by the storage devices to optimize performance and fairness. [Some scheduling algorithm for CPU](/operating-system/process-management#scheduling-algorithms) such as FIFO, priority-based, SJF, RR, can also be used in I/O scheduling.
+When there are multiple I/O requests, the I/O scheduler decides the sequence in which these requests are processed by the storage devices to optimize performance and fairness. [Some scheduling algorithm for CPU](/cs-notes/operating-system/process-management#scheduling-algorithms) such as FIFO, priority-based, SJF, RR, can also be used in I/O scheduling.
 
 For scheduling, the OS keep track device status, it maintains a **device status table**. It is a data structure that contains essential details about I/O devices, such as whether it is available, busy, or in an error state, a queue that holds pending I/O requests for the device.
 
@@ -61,7 +61,7 @@ Source: https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/13_IOSystems.
 
 ### Other Concepts
 
-I/O requests from application can be made through [system calls](/operating-system/system-call). System call allows user-level processes to request services from the kernel, which operates at a privileged level, can then perform the requested I/O operations on behalf of the user-level process. Not only for abstraction, this also introduce isolation to prevent user-level processes from directly manipulating or interfering with critical system resources and devices.
+I/O requests from application can be made through [system calls](/cs-notes/operating-system/system-call). System call allows user-level processes to request services from the kernel, which operates at a privileged level, can then perform the requested I/O operations on behalf of the user-level process. Not only for abstraction, this also introduce isolation to prevent user-level processes from directly manipulating or interfering with critical system resources and devices.
 
 #### Buffer
 

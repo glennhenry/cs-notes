@@ -46,9 +46,9 @@ It takes the symbol representation, which may contains the scope. Scope will be 
 
 ### Generating Expressions
 
-To generate an expression, we need to traverse the [AST](/compilers-and-programming-languages/semantic-analysis#abstract-syntax-tree) or [DAG](/compilers-and-programming-languages/intermediate-representation#directed-acyclic-graph).
+To generate an expression, we need to traverse the [AST](/cs-notes/compilers-and-programming-languages/semantic-analysis#abstract-syntax-tree) or [DAG](/cs-notes/compilers-and-programming-languages/intermediate-representation#directed-acyclic-graph).
 
-The AST represents the expression's operands in the left and right child nodes, while the operation performed on them is the parent node itself. A [post-order traversal](/data-structures-and-algorithms/traversal#postorder-traversal) ensures that the left and right child nodes are visited first, so we know what the operands are.
+The AST represents the expression's operands in the left and right child nodes, while the operation performed on them is the parent node itself. A [post-order traversal](/cs-notes/data-structures-and-algorithms/traversal#postorder-traversal) ensures that the left and right child nodes are visited first, so we know what the operands are.
 
 The strategy is to store left and right node's value temporarily in registers. To let the parent node know which register we used, we store an information about it in each node. On each visit to node, we should generate corresponding assembly code.
 
@@ -56,7 +56,7 @@ The strategy is to store left and right node's value temporarily in registers. T
 Source: Book 1 page 184
 
 :::note
-It's generated in [x86 assembly](/computer-organization-and-architecture/assembly-language#x86-assembly-language).
+It's generated in [x86 assembly](/cs-notes/computer-organization-and-architecture/assembly-language#x86-assembly-language).
 :::
 
 Each step correspond to each line of the assembly code.
@@ -120,7 +120,7 @@ Various statements can be encountered, this includes control flow statements. We
 ![Statements generator code](./statement-generator.png)  
 Source: Book 1 page 188
 
-[Recall the AST representation of statements](/compilers-and-programming-languages/semantic-analysis#statements), all information about a statement is encapsulated in the `stmt` struct. The struct includes several optional fields, such as body expression, else expression (if an if statement), declaration (if a declaration).
+[Recall the AST representation of statements](/cs-notes/compilers-and-programming-languages/semantic-analysis#statements), all information about a statement is encapsulated in the `stmt` struct. The struct includes several optional fields, such as body expression, else expression (if an if statement), declaration (if a declaration).
 
 Each statement may call another specific generator.
 

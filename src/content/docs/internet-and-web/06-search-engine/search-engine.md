@@ -17,7 +17,7 @@ These search engines have to determine the relevance of a web page to a particul
 
 Search engine involves several processes:
 
-1. **Crawling**: The first step in the search engine process is crawling. Crawling is the process by which search engines look into web pages. Search engines use automated software known as "spiders" or "bots" to crawl the web and follow links from one page to another. They start with a list of [URLs](/internet-and-web/web-url) and follow any hyperlinks [recursively](/data-structures-and-algorithms/recursion) that exist within each page. The bots collect information about each page they crawl, such as the page title, meta tags, and content. Some website also have `robots.txt` which is a file containing directives for search spiders, telling it which pages to crawl and which pages not to crawl. The bots will stop the crawling process until it meets certain rules, such as enough number of pages, amount of data indexed, or time spent on that website.
+1. **Crawling**: The first step in the search engine process is crawling. Crawling is the process by which search engines look into web pages. Search engines use automated software known as "spiders" or "bots" to crawl the web and follow links from one page to another. They start with a list of [URLs](/cs-notes/internet-and-web/web-url) and follow any hyperlinks [recursively](/cs-notes/data-structures-and-algorithms/recursion) that exist within each page. The bots collect information about each page they crawl, such as the page title, meta tags, and content. Some website also have `robots.txt` which is a file containing directives for search spiders, telling it which pages to crawl and which pages not to crawl. The bots will stop the crawling process until it meets certain rules, such as enough number of pages, amount of data indexed, or time spent on that website.
 
   :::note
    The crawling process may be repeated every period of times based on certain policy (e.g., a fixed time such as every 2 weeks) because of the dynamic nature of internet that changes its content frequently.
@@ -27,7 +27,7 @@ Search engine involves several processes:
    It's worth noting that web crawler is a web visitor just like a human, which mean it can waste the web server's resource if used frequently.
   :::
 
-2. **Indexing**: Once the bots have crawled a web page, they store the information they've collected in a massive database known as an [index](/database-system/database-index). The index is a vast collection of all pages that sometimes work by mapping a word into a list of documents. When the user type a search query, we return the list of documents that contains that query. If the user search for "cow", any documents including webpages, images, videos, or etc. that contains it will be retrieved.
+2. **Indexing**: Once the bots have crawled a web page, they store the information they've collected in a massive database known as an [index](/cs-notes/database-system/database-index). The index is a vast collection of all pages that sometimes work by mapping a word into a list of documents. When the user type a search query, we return the list of documents that contains that query. If the user search for "cow", any documents including webpages, images, videos, or etc. that contains it will be retrieved.
 
    ![Indexing example](./indexing.png)  
    Source: https://en.wikipedia.org/wiki/Search_engine_indexing#Inverted_indices
@@ -60,5 +60,5 @@ The image above is an illustration of the algorithm that shows `A` being linked 
 The output of the PageRank algorithm is a probability of someone will end up on a particular page. The algorithm model itself as a random surfer, meaning it doesn't strictly follow hyperlink when assigning score, but sometimes randomly jumping to unrelated page. This behavior accurately model actual browsing behavior of users, who sometimes type in a new URL or use a search engine to navigate to a new page, rather than just clicking on links. The random surf is affected by something called damping factor.
 
 :::tip
-See also [search engine on backend system](/backend-system/search-engine).
+See also [search engine on backend system](/cs-notes/backend-system/search-engine).
 :::

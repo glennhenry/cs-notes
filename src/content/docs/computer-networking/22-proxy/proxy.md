@@ -38,7 +38,7 @@ The term "reverse" in reverse proxy refers to the direction of the proxying proc
 
 By using reverse proxy, we can achieve:
 
-- **[Load Balancing](/computer-networking/server#server-optimization)**: Reverse proxy server act as the interface from the client to server. It can distribute client requests across multiple backend servers to balance the load and prevent any single server from being overwhelmed.
+- **[Load Balancing](/cs-notes/computer-networking/server#server-optimization)**: Reverse proxy server act as the interface from the client to server. It can distribute client requests across multiple backend servers to balance the load and prevent any single server from being overwhelmed.
 
 - **Security & Privacy**: It can improves security from malicious request from client and will hides server's IP address from the client, the client will only see the proxy server IP address.
 

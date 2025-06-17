@@ -12,7 +12,7 @@ description: Pushdown Automata
 
 ### PDA
 
-A [finite automaton](/theory-of-computation-and-automata/finite-automata) has a very limited memory to keep track its computation. If we were to design an automaton that determine the length of string, a finite automaton wouldn't work. **Pushdown Automata (PDA)** is the extension of finite automaton that has more memory, specifically a [stack memory with the LIFO principle](/data-structures-and-algorithms/stack). A PDA recognizes context-free languages governed by [context-free grammar](/theory-of-computation-and-automata/context-free-grammar). Similar to finite automaton, it can either accept or reject the language.
+A [finite automaton](/cs-notes/theory-of-computation-and-automata/finite-automata) has a very limited memory to keep track its computation. If we were to design an automaton that determine the length of string, a finite automaton wouldn't work. **Pushdown Automata (PDA)** is the extension of finite automaton that has more memory, specifically a [stack memory with the LIFO principle](/cs-notes/data-structures-and-algorithms/stack). A PDA recognizes context-free languages governed by [context-free grammar](/cs-notes/theory-of-computation-and-automata/context-free-grammar). Similar to finite automaton, it can either accept or reject the language.
 
 Component of PDA:
 
@@ -84,7 +84,7 @@ Source: https://youtu.be/BxA-aI2dyRo?si=mmMY52_ormtTd3bB&t=152
 
 We can make assumption that $\epsilon$ symbol appears before and after every input. After that, we can list all possible transition when input has or not $\epsilon$ symbol. We will also include the current state and stack content for each of the path. If at least a single path exist in the list that leads from the start state to the final state, we can say that the PDA accepts the string.
 
-This is similar to [NFA](/theory-of-computation-and-automata/finite-automata#nfa), in which it is possible to transition to every path with any input and theoretically, each transition is done in parallel.
+This is similar to [NFA](/cs-notes/theory-of-computation-and-automata/finite-automata#nfa), in which it is possible to transition to every path with any input and theoretically, each transition is done in parallel.
 
 ![PDA example 2 part 3](./pda-example-2-part-3.png)  
 Source: https://youtu.be/BxA-aI2dyRo?si=K0ysvgZgszM3dMsH&t=555 (combined images)
@@ -93,7 +93,7 @@ Source: https://youtu.be/BxA-aI2dyRo?si=K0ysvgZgszM3dMsH&t=555 (combined images)
 
 As said before, PDA can recognize all context-free languages. Given a context-free grammar, the grammar that governs context-free language, we can construct an equivalent PDA that recognizes the same language.
 
-One way to convert from a CFG to PDA is, we can transform the CFG into a [GNF](/theory-of-computation-and-automata/context-free-grammar#greibach-normal-form) first. This will simplify certain aspects of the conversion process, such as handling left-recursive productions.
+One way to convert from a CFG to PDA is, we can transform the CFG into a [GNF](/cs-notes/theory-of-computation-and-automata/context-free-grammar#greibach-normal-form) first. This will simplify certain aspects of the conversion process, such as handling left-recursive productions.
 
 The PDA simulates the derivation process of the CFG by using its stack from the start symbol to keep track of non-terminals and terminals. In the conversion of CFG in GNF to PDA, the stack will only contain non-terminals, because of the properties of GNF (non-terminals are always on the end of the right-hand side of the production rule).
 

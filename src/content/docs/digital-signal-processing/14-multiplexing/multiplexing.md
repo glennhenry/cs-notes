@@ -17,7 +17,7 @@ description: Multiplexing
 ![Multiple signals are combined, transmitted, and split again into single signal](./multiplexing.png)  
 Source: https://en.wikipedia.org/wiki/Multiplexing
 
-Only a single [medium](/digital-signal-processing/signal-transmission-medium) (also called a channel) is needed to transmit multiple signals. This saves bandwidth, capacity, and the cost of the physical infrastructure required for transmission.
+Only a single [medium](/cs-notes/digital-signal-processing/signal-transmission-medium) (also called a channel) is needed to transmit multiple signals. This saves bandwidth, capacity, and the cost of the physical infrastructure required for transmission.
 
 When combining multiple signals through multiplexing, there is a risk of losing the original individual signals if the process is not done carefully. For the demultiplexer to correctly separate the combined signals back into their original individual signals, it needs to have information about how the signals were originally combined during the multiplexing process.
 
@@ -47,7 +47,7 @@ Source: https://www.spiceworks.com/tech/networking/articles/what-is-tdm/
 
 ### Wavelength Division Multiplexing (WDM)
 
-WDM combines multiple signals onto a single transmission medium by separating each signals by their wavelength. WDM is typically transmitted together through an [optical fiber](/digital-signal-processing/signal-transmission-medium#guided-transmission).
+WDM combines multiple signals onto a single transmission medium by separating each signals by their wavelength. WDM is typically transmitted together through an [optical fiber](/cs-notes/digital-signal-processing/signal-transmission-medium#guided-transmission).
 
 WDM is used in:
 

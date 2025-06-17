@@ -29,8 +29,8 @@ There are 3 common secondary storage:
 
 - **Solid-State Drive (SSD)**:
 
-  - **Structure**: An SSD consists of multiple [flash memory](/computer-organization-and-architecture/coa-fundamentals#flash-memory) chips organized into memory blocks. Each memory block contains multiple memory cells, which are further organized into pages. The SSD also contains a controller that manages the data flow between the flash memory chips and the computer system.
-  - **Working Principle**: SSDs use [flash memory](/computer-organization-and-architecture/coa-fundamentals#flash-memory), a type of non-volatile memory, to store and retrieve data. Flash memory is made up of floating-gate transistors that can hold an electric charge, representing the 0s and 1s of digital data.
+  - **Structure**: An SSD consists of multiple [flash memory](/cs-notes/computer-organization-and-architecture/coa-fundamentals#flash-memory) chips organized into memory blocks. Each memory block contains multiple memory cells, which are further organized into pages. The SSD also contains a controller that manages the data flow between the flash memory chips and the computer system.
+  - **Working Principle**: SSDs use [flash memory](/cs-notes/computer-organization-and-architecture/coa-fundamentals#flash-memory), a type of non-volatile memory, to store and retrieve data. Flash memory is made up of floating-gate transistors that can hold an electric charge, representing the 0s and 1s of digital data.
   - **Data Access**: To write data, the controller sends electrical signals that charge the floating-gate transistors, altering their electrical state and storing the data. To read data, the controller measures the electrical charge in the transistors to determine the stored data. Unlike HDDs, SSDs have no moving parts, allowing for faster data access and improved reliability.
 
 - **Magnetic Tape**:
@@ -47,7 +47,7 @@ There are 3 common secondary storage:
 Disk is divided into several logical components:
 
 - **Track**: A track is a concentric circular path on a disk's platter. It is defined as a complete circle around the disk's surface at a specific radius.
-- **Sector**: A sector is the smallest addressable unit of storage on a disk. It represents a fixed-size section of a track. Sectors are typically formatted to hold a specific amount of data, such as 512 bytes or 4 kilobytes. Data is written to and read from sectors using the disk's read/write heads. These sectors are abstracted logically by [file system](/operating-system/file-system) and grouped together into a unit called **block**. The block size can vary depending on the file system and disk configuration.
+- **Sector**: A sector is the smallest addressable unit of storage on a disk. It represents a fixed-size section of a track. Sectors are typically formatted to hold a specific amount of data, such as 512 bytes or 4 kilobytes. Data is written to and read from sectors using the disk's read/write heads. These sectors are abstracted logically by [file system](/cs-notes/operating-system/file-system) and grouped together into a unit called **block**. The block size can vary depending on the file system and disk configuration.
 - **Cluster**: A cluster, also known as an allocation unit, is a group of blocks that are treated as a single unit by the file system. It is the smallest addressable unit of disk space for file allocation.
 
   ![Disk structure](./disk-structure.png)  
@@ -55,7 +55,7 @@ Disk is divided into several logical components:
 
 ### Disk Scheduling
 
-To read/write data to disk, we will issue [system call](/operating-system/system-call) provided by the operating system. The I/O request require:
+To read/write data to disk, we will issue [system call](/cs-notes/operating-system/system-call) provided by the operating system. The I/O request require:
 
 - **Input or Output**: Specify whether it's an input (read) or output (write) operation.
 - **Disk Address**: Specify the location on the disk including information about the track, sector, and cylinder.
@@ -93,13 +93,13 @@ Disk formatting is the process of preparing a storage device to be used by an op
 
 #### Boot Sector
 
-When the computer goes through the [boot process](/operating-system/booting), it needs an initial program to run. A portion of the program data is stored in a read-only memory (ROM), while another portion resides in the **boot sector**, which is a fixed position on the disk dedicated to storing the initial program.
+When the computer goes through the [boot process](/cs-notes/operating-system/booting), it needs an initial program to run. A portion of the program data is stored in a read-only memory (ROM), while another portion resides in the **boot sector**, which is a fixed position on the disk dedicated to storing the initial program.
 
 ![Boot sector](./boot-sector.png)  
 Source: https://en.wikipedia.org/wiki/Boot_sector#/media/File:GNU_GRUB_components.svg
 
 :::info
-See also **[master boot record (MBR)](/operating-system/booting#master-boot-record-mbr)**.
+See also **[master boot record (MBR)](/cs-notes/operating-system/booting#master-boot-record-mbr)**.
 :::
 
 #### Bad Sector
@@ -124,7 +124,7 @@ The OS can choose various data structure to keep track the free space, the data 
   ![Bit vector](./bit-vector.png)  
   Source: https://www.scaler.com/topics/free-space-management-in-os/
 
-- **[Linked List](/data-structures-and-algorithms/linked-list)**: The system maintains a linked list of free blocks. This approach allow us to get free space efficiently, because all the node in the linked list is already a free space. However, because the pointer to the next block is located inside the block, traversing the list would be inefficient, because it requires I/O operation to read the block.
+- **[Linked List](/cs-notes/data-structures-and-algorithms/linked-list)**: The system maintains a linked list of free blocks. This approach allow us to get free space efficiently, because all the node in the linked list is already a free space. However, because the pointer to the next block is located inside the block, traversing the list would be inefficient, because it requires I/O operation to read the block.
 
   ![Free-space list using linked list](./free-space-linked-list.png)  
   Source: https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/12_FileSystemImplementation.html
@@ -137,12 +137,12 @@ The OS can choose various data structure to keep track the free space, the data 
 
 There are three common method to allocate:
 
-- **Contiguous Allocation**: In this method, files are stored as continuous blocks of data on the storage device. Each file occupies a contiguous section of the storage space. We will then store the location of the block with its length. Contiguous allocation provides fast access to data, but it can suffer from [fragmentation](/operating-system/memory-management#fragmentation) as files are created, modified, and deleted.
+- **Contiguous Allocation**: In this method, files are stored as continuous blocks of data on the storage device. Each file occupies a contiguous section of the storage space. We will then store the location of the block with its length. Contiguous allocation provides fast access to data, but it can suffer from [fragmentation](/cs-notes/operating-system/memory-management#fragmentation) as files are created, modified, and deleted.
 
   ![Contiguous allocation](./contiguous-allocation.png)  
   Source: https://mocki.co/contiguous-allocation/
 
-- **Linked Allocation**: Linked allocation uses linked data structures, such as [linked lists](/data-structures-and-algorithms/linked-list), to manage storage space. Each file is divided into blocks, and each block contains a pointer to the next block. The file system maintains a table or index to keep track of the blocks' locations scattered around. Linked allocation allows for dynamic storage allocation and flexibility, solving fragmentation issue, but can introduce overhead due to the need to traverse the linked structure.
+- **Linked Allocation**: Linked allocation uses linked data structures, such as [linked lists](/cs-notes/data-structures-and-algorithms/linked-list), to manage storage space. Each file is divided into blocks, and each block contains a pointer to the next block. The file system maintains a table or index to keep track of the blocks' locations scattered around. Linked allocation allows for dynamic storage allocation and flexibility, solving fragmentation issue, but can introduce overhead due to the need to traverse the linked structure.
 
   ![Linked allocation](./linked-allocation.png)  
   Source: https://www.geeksforgeeks.org/file-allocation-methods/

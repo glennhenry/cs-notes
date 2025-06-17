@@ -8,7 +8,7 @@ description: MD5
 
 - **[MD5 — Wikipedia](https://en.wikipedia.org/wiki/MD5)**
 
-**Message Digest Algorithm 5 (MD5)** is a cryptographic hash function that produces **fixed-size 128-bit** hash value, typically represented in 32-character [hexadecimal number](/computer-and-programming-fundamentals/number-system#hexadecimal).
+**Message Digest Algorithm 5 (MD5)** is a cryptographic hash function that produces **fixed-size 128-bit** hash value, typically represented in 32-character [hexadecimal number](/cs-notes/computer-and-programming-fundamentals/number-system#hexadecimal).
 
 :::note
 Hexadecimal ranges from 0 to 15 (F), it requires 4 bits for a single character. Having 32 character, it will result in total of $4 \text{ bit} \times 32 = 128$ bit value.
@@ -25,7 +25,7 @@ The high level description of MD5 algorithm:
 
 2. **Initialization**: MD5 uses four 32-bit registers (A, B, C, and D) as its internal state. These registers are used to store intermediate values during the processing of the input message blocks, they are initialized with predefined values.
 
-3. **Processing**: For each block, a series of rounds are performed, which involve [bitwise logical operations](/computer-and-programming-fundamentals/bitwise-operation), [modular addition](/computer-security/math-concepts#modular-addition--subtraction), and non-linear functions. The rounds modify the internal state (registers) of the algorithm.
+3. **Processing**: For each block, a series of rounds are performed, which involve [bitwise logical operations](/cs-notes/computer-and-programming-fundamentals/bitwise-operation), [modular addition](/cs-notes/computer-security/math-concepts#modular-addition--subtraction), and non-linear functions. The rounds modify the internal state (registers) of the algorithm.
 
    ![The bitwise logic](./logical-operation.png)  
    Source: https://en.wikipedia.org/wiki/MD5#algorithm

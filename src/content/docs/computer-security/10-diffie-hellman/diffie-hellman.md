@@ -8,11 +8,11 @@ description: Diffie-Hellman
 
 - **[Diffie–Hellman key exchange — Wikipedia](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)**
 
-**Diffie-Hellman [Key Exchange](/computer-security/encryption#key-exchange)** is a cryptographic protocol to securely exchange a secret key over a public communication. It was one of the earliest example of [public-key cryptography](/computer-security/encryption#public--private-key) or [asymmetric cryptography](/computer-security/encryption#symmetric--asymmetric-encryption).
+**Diffie-Hellman [Key Exchange](/cs-notes/computer-security/encryption#key-exchange)** is a cryptographic protocol to securely exchange a secret key over a public communication. It was one of the earliest example of [public-key cryptography](/cs-notes/computer-security/encryption#public--private-key) or [asymmetric cryptography](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption).
 
 ### Explanation
 
-The Diffie-Hellman key exchange is based on mathematical concepts including the [modular exponentiation](/computer-security/math-concepts#modular-exponentiation) and the difficulty of the discrete logarithm problem. The protocol relies on mathematical operations performed in a finite field.
+The Diffie-Hellman key exchange is based on mathematical concepts including the [modular exponentiation](/cs-notes/computer-security/math-concepts#modular-exponentiation) and the difficulty of the discrete logarithm problem. The protocol relies on mathematical operations performed in a finite field.
 
 1. **Public Key Agreement**: Each party, often denoted as **Alice** and **Bob**, agree on two number: $p$, which is a prime number and $g$, which is the base value.
 2. **Key Generation**: Both parties choose their own private key (an integer), let's say Alice's private key is $a$ and Bob's private key is $b$.
@@ -39,6 +39,6 @@ Source: https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#/media
 
 #### Security
 
-If an attacker were to [brute force](/computer-security/other-attack-and-exploit#brute-forcing) the secret key, the attacker would need to compute the secret key formula, which is $(g^a \text{ mod } p)^b \text{ mod } p$ or $(g^b \text{ mod } p)^a \text{ mod } p$. Note that only $a$ and $b$ are kept secret, all the other values such as $p$, $g$, $g^a \text{ mod } p$, and $g^b \text{ mod } p$ are sent in clear.
+If an attacker were to [brute force](/cs-notes/computer-security/other-attack-and-exploit#brute-forcing) the secret key, the attacker would need to compute the secret key formula, which is $(g^a \text{ mod } p)^b \text{ mod } p$ or $(g^b \text{ mod } p)^a \text{ mod } p$. Note that only $a$ and $b$ are kept secret, all the other values such as $p$, $g$, $g^a \text{ mod } p$, and $g^b \text{ mod } p$ are sent in clear.
 
 The hacker would need to solve for $g^{ab} \text{ mod } p = g^{ba} \text{ mod } p$, which is equal to the secret key formula. As $a$, $b$, $p$ grow larger, the complexity grows exponentially, making it computationally infeasible for large values. Therefore, it is crucial to select larger values to ensure the security of the Diffie-Hellman key exchange.

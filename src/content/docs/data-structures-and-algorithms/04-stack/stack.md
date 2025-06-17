@@ -24,7 +24,7 @@ Stack is a fairly simple data structure, the general implementation typically on
 - **Push**: Push is when we add an element to the stack, which is to the top.
 - **Pop**: Pop is when we remove an element from the stack, which is the topmost element.
 
-Stack data structure can be implemented using an [array](/data-structures-and-algorithms/array) or [linked list](/data-structures-and-algorithms/linked-list), the important thing is we need to follow the LIFO principle. Even if array allow random access and linked list allow insertion in the middle, we can't use these.
+Stack data structure can be implemented using an [array](/cs-notes/data-structures-and-algorithms/array) or [linked list](/cs-notes/data-structures-and-algorithms/linked-list), the important thing is we need to follow the LIFO principle. Even if array allow random access and linked list allow insertion in the middle, we can't use these.
 
 Stack operation is done in O(1) or constant time, no matter what the element is, no matter how large the stack is, removing or adding element always performs the same.
 

@@ -10,7 +10,7 @@ description: Containerization
 - **[What Is Containerization? — AWS](https://aws.amazon.com/what-is/containerization/)**
 - **[OS-level virtualization — Wikipedia](https://en.wikipedia.org/wiki/OS-level_virtualization)**
 
-During application development, developers often use various libraries and modules, each with its own dependencies, this can create a complex [dependency management](/software-engineering/build-and-package-management#dependency) as the app gets larger. The server running the app will need all the required dependencies, including libraries, frameworks, runtime environments, packages, and operating system requirements in order to run the application.
+During application development, developers often use various libraries and modules, each with its own dependencies, this can create a complex [dependency management](/cs-notes/software-engineering/build-and-package-management#dependency) as the app gets larger. The server running the app will need all the required dependencies, including libraries, frameworks, runtime environments, packages, and operating system requirements in order to run the application.
 
 **Containerization** is a technique used to bundle an application along with all its required packages into a single unit known as a **container**. A container is isolated and self-contained, which helps prevent dependency conflicts in the case of single computer with different version of library installed run different application. All the necessary dependencies are specified within a **container image** (not an actual image file).
 

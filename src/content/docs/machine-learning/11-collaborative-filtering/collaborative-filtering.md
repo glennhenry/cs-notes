@@ -56,17 +56,17 @@ The numbers will first be random generated, and will also be represented in matr
 ![Dot product between user and movie latent factors](./user-based-filtering.png)  
 Source: https://youtu.be/p4ZZq0736Po?si=OpsMAfAoQ0-6Aak8&t=4307
 
-But this won't be an accurate prediction, considering the latent factor used are random generated. This is where machine learning comes, these numbers will be adjusted. We will first calculate the loss function e.g. Mean Squared Error (MSE), where we sum all the difference between predicted rating and actual rating squared and divided it by the number of ratings. We can then use optimizer like [gradient descent](/machine-learning/linear-regression#gradient-descent).
+But this won't be an accurate prediction, considering the latent factor used are random generated. This is where machine learning comes, these numbers will be adjusted. We will first calculate the loss function e.g. Mean Squared Error (MSE), where we sum all the difference between predicted rating and actual rating squared and divided it by the number of ratings. We can then use optimizer like [gradient descent](/cs-notes/machine-learning/linear-regression#gradient-descent).
 
-We can also add some bias terms or extra constant value to the user and movie ratings and use [activation function](/deep-learning/deep-learning-foundation#activation-function) like sigmoid, this is used to capture relationship between them that are not captured by latent factors.
+We can also add some bias terms or extra constant value to the user and movie ratings and use [activation function](/cs-notes/deep-learning/deep-learning-foundation#activation-function) like sigmoid, this is used to capture relationship between them that are not captured by latent factors.
 
-We can even visualize this in graph, because latent factors or the features are in form of vector (matrix). Higher dimensional features can be reduced using technique like [PCA](/machine-learning/principal-component-analysis). During the training process, the model will be trained to group similar items together.
+We can even visualize this in graph, because latent factors or the features are in form of vector (matrix). Higher dimensional features can be reduced using technique like [PCA](/cs-notes/machine-learning/principal-component-analysis). During the training process, the model will be trained to group similar items together.
 
 ![Book embedding](./embedding.png)  
 Source: https://devopedia.org/word-embedding
 
 :::tip
-This recommendation system is based on **dot product model**, where the model predict using dot product. Making recommendation system using [deep learning](/deep-learning) technique like [deep neural network](/deep-learning/neural-network) is also possible.
+This recommendation system is based on **dot product model**, where the model predict using dot product. Making recommendation system using [deep learning](/cs-notes/deep-learning) technique like [deep neural network](/cs-notes/deep-learning/neural-network) is also possible.
 :::
 
 #### Compression

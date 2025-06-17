@@ -17,7 +17,7 @@ description: Distributed Systems Model
 ### Terminology
 
 - **Node**: Node is the individual computer or device that make up the distributed system. Each node has its own processing capabilities and can communicate with other nodes in the distributed system.
-- **Link**: A link represent a communication channel or connection between nodes in a distributed system. It can be a physical link, which uses physical medium, such as [Ethernet cables](/computer-networking/ethernet), [fiber optic cables](/digital-signal-processing/signal-transmission-medium#guided-transmission), or [wireless communication](/computer-networking/wi-fi). Or a logical link, which is an abstraction or virtual representation of a communication channel.
+- **Link**: A link represent a communication channel or connection between nodes in a distributed system. It can be a physical link, which uses physical medium, such as [Ethernet cables](/cs-notes/computer-networking/ethernet), [fiber optic cables](/cs-notes/digital-signal-processing/signal-transmission-medium#guided-transmission), or [wireless communication](/cs-notes/computer-networking/wi-fi). Or a logical link, which is an abstraction or virtual representation of a communication channel.
 
   Types of links:
 
@@ -25,14 +25,14 @@ description: Distributed Systems Model
   - **Broadcast Links**: A channel for simultaneously sending a message to all other nodes connected to the link in the system.
   - **Multicast Links**: A channel for sending a message to a specific group of nodes. Multicast links operate concurrently, thus requiring a specific collision protocol, unlike broadcast links, which facilitate one-to-many communication.
 
-- **Resource**: Resource is anything that is managed or utilized by nodes. It can be computational resources (e.g., processing units), network resources (e.g., [routers](/computer-networking/router), [switches](/computer-networking/switch)), or data resources, which are the data accessed and manipulated by nodes.
-- **Topology**: The structure of computers connected together forms a [network topology](/computer-networking/network-topology). The network topology defines the physical or logical arrangement of the nodes and the communication links between them, which can have an impact on factors such as performance, fault tolerance, scalability, and communication patterns within the distributed system.
+- **Resource**: Resource is anything that is managed or utilized by nodes. It can be computational resources (e.g., processing units), network resources (e.g., [routers](/cs-notes/computer-networking/router), [switches](/cs-notes/computer-networking/switch)), or data resources, which are the data accessed and manipulated by nodes.
+- **Topology**: The structure of computers connected together forms a [network topology](/cs-notes/computer-networking/network-topology). The network topology defines the physical or logical arrangement of the nodes and the communication links between them, which can have an impact on factors such as performance, fault tolerance, scalability, and communication patterns within the distributed system.
 
   For example, a bus topology, in which nodes are connected into a common communication channel can be beneficial for data sharing system. Each node can share data in the common bus. On the other hand, a ring topology, in which nodes are arranged in a ring-like structure may be inefficient, as the data must pass through all the intermediate nodes, causing delays and potential bottlenecks.
 
   ![Topology](./topology.png)
 
-- **Network Partition**: Network partition is a phenomenon in which nodes are disconnected, making the overall network divided into multiple subnetworks due to a loss of connectivity. In fact, this is a common issues even in modern systems with many factors causing it, such as hardware failures, network congestion, or any other configuration errors. Network partition can impact the running application, such as reducing availability, as explained in [CAP theorem](/software-engineering/system-design#cap-theorem).
+- **Network Partition**: Network partition is a phenomenon in which nodes are disconnected, making the overall network divided into multiple subnetworks due to a loss of connectivity. In fact, this is a common issues even in modern systems with many factors causing it, such as hardware failures, network congestion, or any other configuration errors. Network partition can impact the running application, such as reducing availability, as explained in [CAP theorem](/cs-notes/software-engineering/system-design#cap-theorem).
 - **Types of Failures**: Apart from the general hardware, software, and network failure, other types of failures are follows.
   - **Crash Failures**: A component or process in a system abruptly stops or becomes unresponsive.
   - **Omission Failures**: A component fails to perform a required action or respond to a request, resulting a loss of information.
@@ -41,11 +41,11 @@ description: Distributed Systems Model
 
 ### Theoretical Model
 
-We call each computer or device in the distributed systems as a node, in fact we can model a distributed systems as a [graph](/data-structures-and-algorithms/graph).
+We call each computer or device in the distributed systems as a node, in fact we can model a distributed systems as a [graph](/cs-notes/data-structures-and-algorithms/graph).
 
 By modeling the distributed system as a graph, we can utilize graph theory as the foundational model for studying distributed systems. Graph-based models allow us to abstract complex systems and provide various properties and algorithms associated with graph theory.
 
-For example, the network partition explained before can be thought as a [union find](/data-structures-and-algorithms/union-find) data structure, also known as disjoint-set data structure. We can consider each node as an element of set, and the partitions as disjoint sets.
+For example, the network partition explained before can be thought as a [union find](/cs-notes/data-structures-and-algorithms/union-find) data structure, also known as disjoint-set data structure. We can consider each node as an element of set, and the partitions as disjoint sets.
 
 Consider there are three nodes in the network, $1$, $2$, and $3$. Initially they are connected to each other, meaning they are in a common set $A = \{1, 2, 3\}$. When a partition occurs, a node will lose connection with the others, efficiently splitting the set into its own separate set. When the $3$ is partitioned, the set becomes $A = \{1, 2\}$ and $B = \{3\}$.
 
@@ -129,7 +129,7 @@ Physical model is the hardware and infrastructure components that make up the di
 
 Based on the organization, there are two paradigms of distributed computing:
 
-- **Cluster computing**: Cluster computing consist of interconnected computers that work together as a single system called cluster. The nodes in a cluster are typically located in proximity to one another and are connected through a high-speed [local area network (LAN)](/computer-networking/lan-wan).
+- **Cluster computing**: Cluster computing consist of interconnected computers that work together as a single system called cluster. The nodes in a cluster are typically located in proximity to one another and are connected through a high-speed [local area network (LAN)](/cs-notes/computer-networking/lan-wan).
 
   ![Cluster computing](./cluster-computing.png)  
   Source: Book page 28

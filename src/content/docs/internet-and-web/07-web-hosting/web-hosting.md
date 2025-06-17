@@ -10,7 +10,7 @@ description: Web Hosting
 - **[Static web page — Wikipedia](https://en.wikipedia.org/wiki/Static_web_page)**
 - **[Dynamic web page — Wikipedia](https://en.wikipedia.org/wiki/Dynamic_web_page)**
 
-**Web hosting** is a service that allows you to store your website's files and data on a server that is connected to the internet. A web is typically hosted in a [server](/computer-networking/server), a web hosting service means that we pay someone to keep their computers on and process request and respond to any user who wants to visit our website. This make anyone who communicate with the server possible to access or visit your website.
+**Web hosting** is a service that allows you to store your website's files and data on a server that is connected to the internet. A web is typically hosted in a [server](/cs-notes/computer-networking/server), a web hosting service means that we pay someone to keep their computers on and process request and respond to any user who wants to visit our website. This make anyone who communicate with the server possible to access or visit your website.
 
 When someone access a server from their web browser, it sends a request to the server where your website is hosted, and the server responds by sending the necessary files and data back to the user's browser, which displays the website on their screen.
 

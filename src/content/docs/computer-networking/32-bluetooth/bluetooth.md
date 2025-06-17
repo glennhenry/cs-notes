@@ -11,10 +11,10 @@ description: Bluetooth
 
 **Bluetooth** is a wireless communication technology that allows devices to connect and exchange data over short distances. It is commonly used for connecting devices such as smartphones, tablets, laptops, and peripherals like keyboards, mice, and speakers.
 
-Establishing a connection between two bluetooth device is called **pairing**. Same as [Wi-Fi](/computer-networking/wi-fi), bluetooth operates within the 2.4 GHz frequency range and uses radio waves.
+Establishing a connection between two bluetooth device is called **pairing**. Same as [Wi-Fi](/cs-notes/computer-networking/wi-fi), bluetooth operates within the 2.4 GHz frequency range and uses radio waves.
 
 :::tip
-The difference between bluetooth and [Wi-Fi](/computer-networking/wi-fi) is bluetooth is typically used for connecting device while Wi-Fi is used to connect to the network such as internet.
+The difference between bluetooth and [Wi-Fi](/cs-notes/computer-networking/wi-fi) is bluetooth is typically used for connecting device while Wi-Fi is used to connect to the network such as internet.
 :::
 
 ![Bluetooth connection](./bluetooth-connection.png)  

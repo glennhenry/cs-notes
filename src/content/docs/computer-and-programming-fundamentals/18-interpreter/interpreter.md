@@ -15,15 +15,15 @@ description: Interpreter
 
 ### Compiler vs Interpreter
 
-A compiler takes high-level source code and translate it to lower-level language, without running it. On the other hand, an interpreter takes high-level source code, which doesn't need to be [machine language](/computer-and-programming-fundamentals/compilation#language-abstraction) and directly runs it.
+A compiler takes high-level source code and translate it to lower-level language, without running it. On the other hand, an interpreter takes high-level source code, which doesn't need to be [machine language](/cs-notes/computer-and-programming-fundamentals/compilation#language-abstraction) and directly runs it.
 
 An interpreter executes each statement in the source code line by line, without the need for prior translation into machine code like a compiler. The speed of execution in an interpreter can vary depending on the context. When frequently running a specific piece of code, an interpreter may execute it faster since it avoids the overhead of entire source code compilation. In contrast, a compiler initially takes time to translate the entire source code, but the resulting compiled code can execute more quickly afterwards.
 
-Compiler solely translates code, in some case it will need an interpreter. For instance, in the case of the Java programming language, the source code is compiled into [bytecode](/computer-and-programming-fundamentals/compilation#language-abstraction), which is an intermediate representation. This bytecode is then interpreted by the **Java Virtual Machine (JVM)**.
+Compiler solely translates code, in some case it will need an interpreter. For instance, in the case of the Java programming language, the source code is compiled into [bytecode](/cs-notes/computer-and-programming-fundamentals/compilation#language-abstraction), which is an intermediate representation. This bytecode is then interpreted by the **Java Virtual Machine (JVM)**.
 
 ### Interpreter Process
 
-Some steps are quite similar to [compilation process](/computer-and-programming-fundamentals/compilation#compilation-process).
+Some steps are quite similar to [compilation process](/cs-notes/computer-and-programming-fundamentals/compilation#compilation-process).
 
 1. **Lexical Analysis**: The interpreter starts by performing lexical analysis or the **tokenization process**. It breaks down the source code into a sequence of tokens, such as keywords, identifiers, operators, and literals. It removes whitespace, comments, and other non-essential characters.
 

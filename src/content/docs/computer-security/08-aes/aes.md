@@ -8,13 +8,13 @@ description: AES
 
 - **[Advanced Encryption Standard — Wikipedia](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)**
 
-**Advanced Encryption Standard (AES)** is a widely used [symmetric encryption](/computer-security/encryption#symmetric--asymmetric-encryption) algorithm, it is the replacement for [DES algorithm](/computer-security/des). By symmetric encryption, a shared [private key](/computer-security/encryption#public--private-key) is used to encrypt and decrypt the data. AES itself supports 128, 192, or 256-bit key, where the security of an AES system increases exponentially with key length.
+**Advanced Encryption Standard (AES)** is a widely used [symmetric encryption](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption) algorithm, it is the replacement for [DES algorithm](/cs-notes/computer-security/des). By symmetric encryption, a shared [private key](/cs-notes/computer-security/encryption#public--private-key) is used to encrypt and decrypt the data. AES itself supports 128, 192, or 256-bit key, where the security of an AES system increases exponentially with key length.
 
 - 128-bit key size: $2^{128}$ possible keys, which is approximately $3.4 \times 10^{38}$.
 - 192-bit key size: $2^{192}$ possible keys, which is approximately $6.3 \times 10^{57}$.
 - 256-bit key size: $2^{256}$ possible keys, which is approximately $1.2 \times 10^{77}$.
 
-The larger the key size, the more combinations an attacker needs to try, which is more resistant to [brute-force attacks](/computer-security/other-attack-and-exploit#brute-forcing).
+The larger the key size, the more combinations an attacker needs to try, which is more resistant to [brute-force attacks](/cs-notes/computer-security/other-attack-and-exploit#brute-forcing).
 
 ### Algorithm
 
@@ -31,7 +31,7 @@ Here is the high-level overview of AES:
 
 1. **Key Expansion**: The chosen encryption key is divided into a set of **round keys**, which will be used in the SPN process. Each word being 32 bits long in AES, 4 words for 128-bit keys, 6 words for 192-bit keys, and 8 words for 256-bit keys.
 
-2. **Initial Round**: The input data (plaintext) is combined with the first round key using a [bitwise XOR operation](/computer-and-programming-fundamentals/bitwise-operation#xor).
+2. **Initial Round**: The input data (plaintext) is combined with the first round key using a [bitwise XOR operation](/cs-notes/computer-and-programming-fundamentals/bitwise-operation#xor).
 
 3. **Rounds**: Each round consists of four sub-steps: **SubBytes**, **ShiftRows**, **MixColumns**, and **AddRoundKey**.
 

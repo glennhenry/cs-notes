@@ -24,7 +24,7 @@ description: COA Fundamentals
   - **Cache**: Cache is a small, high-speed memory that are typically located closer to the CPU than main memory. Cache reduce the time required to fetch instructions and data from the main memory. Caches exist in multiple levels, such as L1, L2, and L3, with each level providing progressively larger storage capacity but at slightly slower access speeds.
   - **Secondary Memory**: Secondary memory is the opposite of main memory, it is non-volatile (requires no power) and it provides long-term storage for programs, data, and files. They are devices like hard disk drives (HDDs) or solid-state drives (SSDs).
 - **Registers**: Registers are small, high-speed memory units located within the CPU. They are used to store data that the CPU is currently using for its operations. Registers can store intermediate results, memory addresses, and control information. For example, a register can be used for **program counter**, which is a component to holds the memory address of the next instruction to be fetched and executed.
-- **Arithmetic Logic Unit (ALU)**: ALU is the component that is responsible for performing arithmetic operations (addition, subtraction, multiplication, and division) and logical operations (such as comparisons, [bitwise operations](/computer-and-programming-fundamentals/bitwise-operation), and [boolean operations](/computer-organization-and-architecture/boolean-logic)). The ALU operates on data retrieved from registers and produces results that are stored back in registers.
+- **Arithmetic Logic Unit (ALU)**: ALU is the component that is responsible for performing arithmetic operations (addition, subtraction, multiplication, and division) and logical operations (such as comparisons, [bitwise operations](/cs-notes/computer-and-programming-fundamentals/bitwise-operation), and [boolean operations](/cs-notes/computer-organization-and-architecture/boolean-logic)). The ALU operates on data retrieved from registers and produces results that are stored back in registers.
 
 Regarding instructions, they are made through the source code from the high-level programming language. These source code are translated to machine language which is recognized by the CPU as instruction. Those instructions will be stored in memory sequentially, along with the variables or any other data used in the program.
 
@@ -55,7 +55,7 @@ Source: https://www.researchgate.net/figure/Fig3-internal-structure-of-RAM_fig2_
 
 ROM can be used for:
 
-- **[Bootstrap Loader](/operating-system/booting)**: It is the initial instruction for computer to boot or start up.
+- **[Bootstrap Loader](/cs-notes/operating-system/booting)**: It is the initial instruction for computer to boot or start up.
 - **Firmware**: Firmware is software code embedded in hardware devices. It consists of basic machine instructions for hardware to do common task with other software in the device.
 - **Embedded Systems**: Embedded systems are devices included with a dedicated computer systems to perform specific tasks or functions. They often rely on pre-programmed instructions stored in ROM to perform their intended functions.
 
@@ -132,7 +132,7 @@ Source: https://www.escotal.com/soundcard.html
 
 **Network Interface Card (NIC)** or **network adapter**, is a hardware component that enables a computer to connect to a network. It provides the necessary physical interface and communication protocols for a computer to transmit and receive data over a network.
 
-The NIC is physically connected with the computer through network port like [Ethernet](/computer-networking/ethernet). When the computer needs to send data over the network, it passes the data to the NIC. The NIC converts the digital data into appropriate electrical signals or radio waves, depending on the type of network medium being used (wired or wireless). Before the transmission, NIC also handles the protocols or the rules for transmitting data. It then transmits these signals over the network medium.
+The NIC is physically connected with the computer through network port like [Ethernet](/cs-notes/computer-networking/ethernet). When the computer needs to send data over the network, it passes the data to the NIC. The NIC converts the digital data into appropriate electrical signals or radio waves, depending on the type of network medium being used (wired or wireless). Before the transmission, NIC also handles the protocols or the rules for transmitting data. It then transmits these signals over the network medium.
 
 ![NIC](./nic.png)  
 Source: http://www.cs.uni.edu/~jacobson/secure/NICnacMAC.htm
@@ -155,10 +155,10 @@ Source: https://en.wikipedia.org/wiki/PCI-X
 
 Computer represent data in various way, to know more about it, see below notes:
 
-- [Binary number system](/computer-and-programming-fundamentals/number-system#binary), includes how can we store and represent number with binary.
-- [Binary representation](/computer-and-programming-fundamentals/binary-representation), includes binary operation.
-- [Floating-number representation](/computer-and-programming-fundamentals/floating-number), includes how can computer represent real number.
-- [Data representation](/computer-and-programming-fundamentals/data-representation), includes how computers represent data like character (e.g., ASCII, UTF), color, database.
+- [Binary number system](/cs-notes/computer-and-programming-fundamentals/number-system#binary), includes how can we store and represent number with binary.
+- [Binary representation](/cs-notes/computer-and-programming-fundamentals/binary-representation), includes binary operation.
+- [Floating-number representation](/cs-notes/computer-and-programming-fundamentals/floating-number), includes how can computer represent real number.
+- [Data representation](/cs-notes/computer-and-programming-fundamentals/data-representation), includes how computers represent data like character (e.g., ASCII, UTF), color, database.
 
 ### Terminology
 

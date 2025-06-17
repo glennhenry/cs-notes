@@ -82,15 +82,15 @@ Here are commonly used data structures:
 
   Under the hood, hash table uses an array to store the element. An array has a constant time complexity to access an element, however, in some cases the index of the element we are looking for is not known. Sometimes, the index of the element also changes overtime when we remove an element from the array.
 
-  The idea of hash table is, we do not directly use index to access an element, we instead use a key as a unique identifier that will never change and always known by the programmer. To determine in which position of the array would the element be stored, hash table takes the key and input it in function called **[hash function](/data-structures-and-algorithms/hash-table#hash-function)**. The hash function is a mathematical function that takes input and output a **hash code**, which is an integer value that can be used as the index of the element in the array. The array used in hash table is typically fixed in size, the hash function will be configured such that it will always return a value in the range of the array size.
+  The idea of hash table is, we do not directly use index to access an element, we instead use a key as a unique identifier that will never change and always known by the programmer. To determine in which position of the array would the element be stored, hash table takes the key and input it in function called **[hash function](/cs-notes/data-structures-and-algorithms/hash-table#hash-function)**. The hash function is a mathematical function that takes input and output a **hash code**, which is an integer value that can be used as the index of the element in the array. The array used in hash table is typically fixed in size, the hash function will be configured such that it will always return a value in the range of the array size.
 
   So, to add an element to a hash table, we will need a key and the value which is the element we are going to store. Hash table does the same way to access the element, given a key, transform it into hash code from the hash function, then use the result to access the element from the array. The hash function typically has a constant time complexity, making it a very efficient data structure to quickly access element.
 
-  However, in some cases, the hash function may return the same hash code for different key, this is called **[collision](/data-structures-and-algorithms/hash-table#collision)** and it's a common problem in hash table. Technique such as **chaining** is employed to mitigate this problem.
+  However, in some cases, the hash function may return the same hash code for different key, this is called **[collision](/cs-notes/data-structures-and-algorithms/hash-table#collision)** and it's a common problem in hash table. Technique such as **chaining** is employed to mitigate this problem.
 
   ![Array, stack, and hash table data structures](./data-structure.png)  
   Source: [array](https://www.geeksforgeeks.org/when-to-use-array-over-a-list/), [stack](https://www.trivusi.web.id/2022/07/struktur-data-stack.html), [hash table](https://khalilstemmler.com/blogs/data-structures-algorithms/hash-tables/)
 
 :::tip
-Refer to [data structures and algorithm](/data-structures-and-algorithms) for more detailed explanation
+Refer to [data structures and algorithm](/cs-notes/data-structures-and-algorithms) for more detailed explanation
 :::

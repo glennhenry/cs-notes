@@ -22,7 +22,7 @@ CLI is a text-based interface, which means you enter specific command as text, a
 ![Example of CLI, Windows command prompt](./cli.png)  
 Source: https://avc.com/2015/09/the-return-of-the-command-line-interface/
 
-When a command is entered, the computer will need to interpret the command. The program that interpret the command is called a **shell**. Example of shell in [Unix-like systems](/operating-system/unix) include **Bash**. The shell interpret the command by searching the corresponding executable program to execute that command. The command is typically the program's name. Once the program is found, the shell loads it into memory and executes it, passing any required arguments. The program performs its task and produces output, which is sent back to the terminal for display.
+When a command is entered, the computer will need to interpret the command. The program that interpret the command is called a **shell**. Example of shell in [Unix-like systems](/cs-notes/operating-system/unix) include **Bash**. The shell interpret the command by searching the corresponding executable program to execute that command. The command is typically the program's name. Once the program is found, the shell loads it into memory and executes it, passing any required arguments. The program performs its task and produces output, which is sent back to the terminal for display.
 
 The programs for shell is typically stored in the directories specified in the system's PATH environment variable. Environment variables are dynamic values that can affect the behavior of the system or individual programs. Environment variables store information such as system paths, user preferences, or configuration settings.
 
@@ -30,7 +30,7 @@ The programs for shell is typically stored in the directories specified in the s
 Source: https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa
 
 :::info
-See also [command line vs shell](/computer-and-programming-fundamentals/computer-and-programming-terminology#command-line-command-prompt-shell-bash-terminal-console)
+See also [command line vs shell](/cs-notes/computer-and-programming-fundamentals/computer-and-programming-terminology#command-line-command-prompt-shell-bash-terminal-console)
 :::
 
 ### GUI
@@ -48,7 +48,7 @@ The GUI systems will monitor for user input such as mouse clicks, keyboard input
 
 #### MVC
 
-One of the popular pattern for designing a GUI system is the **[Model-View-Controller (MVC)](/software-engineering/other-architecture-patterns#mvc)** pattern. This pattern design GUI system in three separate components.
+One of the popular pattern for designing a GUI system is the **[Model-View-Controller (MVC)](/cs-notes/software-engineering/other-architecture-patterns#mvc)** pattern. This pattern design GUI system in three separate components.
 
 The model represents the data and the logic within the application. It would handle tasks such as data retrieval, storage, manipulation, and any other operations specific to certain tasks.
 

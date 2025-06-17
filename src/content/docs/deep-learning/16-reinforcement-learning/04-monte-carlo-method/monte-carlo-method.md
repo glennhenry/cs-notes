@@ -8,7 +8,7 @@ description: Monte Carlo Method
 
 - **[Monte Carlo for Reinforcement Learning with example by Mehul Gupta — Medium](https://medium.com/data-science-in-your-pocket/monte-carlo-for-reinforcement-learning-with-example-1754439dd628)**
 
-**Monte Carlo Method** is a technique to estimate a [value](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#value-function) of a state or state-action pairs based on the experiences gained through interactions with the environment. Monte Carlo method is a [model-free](/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#model-based--model-free) method, meaning we don't need information or prior knowledge about the environment such as the transition probabilities and the rewards associated with each state and action.
+**Monte Carlo Method** is a technique to estimate a [value](/cs-notes/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#value-function) of a state or state-action pairs based on the experiences gained through interactions with the environment. Monte Carlo method is a [model-free](/cs-notes/deep-learning/reinforcement-learning/reinforcement-learning-fundamental#model-based--model-free) method, meaning we don't need information or prior knowledge about the environment such as the transition probabilities and the rewards associated with each state and action.
 
 The question is:
 

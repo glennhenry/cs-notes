@@ -16,9 +16,9 @@ Decentralize is a concept where central authority is not needed for recording an
 
 ### Explanation
 
-A single record of transaction is called a **block**, each block has a reference to other block, these blocks are chained together to create a chain of block. The chaining mechanism in blockchain is similar to [linked list](/data-structures-and-algorithms/linked-list) data structure.
+A single record of transaction is called a **block**, each block has a reference to other block, these blocks are chained together to create a chain of block. The chaining mechanism in blockchain is similar to [linked list](/cs-notes/data-structures-and-algorithms/linked-list) data structure.
 
-In linked list, each element is considered as a node, each node has memory reference to the next node. However, blockchain is more advanced than that, blocks are chained together using [cryptographic hash functions](/computer-security/hash-function).
+In linked list, each element is considered as a node, each node has memory reference to the next node. However, blockchain is more advanced than that, blocks are chained together using [cryptographic hash functions](/cs-notes/computer-security/hash-function).
 
 #### Block Structure
 
@@ -33,7 +33,7 @@ Header:
 
 When a block is hashed, the entire block is converted into specific format that can be processed by hash function. The resulting hash serve as a unique identifier for a block in the chain.
 
-The chaining mechanism in blockchain ensure the immutability of the data stored in a blockchain. If any data in a block is modified, it will result in a change in the block's hash value (due to [avalanche effect](/computer-security/hash-function#properties--example)). As a result, the subsequent blocks in the chain will have invalid references to the altered block, indicating that the blockchain has been tampered with. Another thing to note is blockchain is a decentralized platform, the ledger is distributed among multiple participants who maintain their own copies of the blockchain. This distributed nature ensures that any changes made to a particular block or transaction would need to be replicated across the entire network to maintain consensus and consistency.
+The chaining mechanism in blockchain ensure the immutability of the data stored in a blockchain. If any data in a block is modified, it will result in a change in the block's hash value (due to [avalanche effect](/cs-notes/computer-security/hash-function#properties--example)). As a result, the subsequent blocks in the chain will have invalid references to the altered block, indicating that the blockchain has been tampered with. Another thing to note is blockchain is a decentralized platform, the ledger is distributed among multiple participants who maintain their own copies of the blockchain. This distributed nature ensures that any changes made to a particular block or transaction would need to be replicated across the entire network to maintain consensus and consistency.
 
 Body:
 
@@ -54,7 +54,7 @@ One of the popular consensus mechanism is the **Proof of Work (PoW)**. This mech
 
 Miners attempt to find the solution to the puzzle through a trial-and-error process. They repeatedly modify the nonce value, calculate the hash of the block, and check if it meets the required criteria. Since the output of a cryptographic hash function is essentially unpredictable, miners must make many attempts until they find a suitable nonce that satisfies the puzzle's difficulty criteria. The difficulty depends on the blockchain system, the system may make it to be easy to increase the block creation rate or hard to decrease it.
 
-For example, the puzzle may require miners to find a nonce value that, when combined with the block data, produces a hash value that starts with three zeros (000) when hashed using a cryptographic hash function like [SHA-256](/computer-security/sha#sha-2). So we will need to find hash such that: `Hash = SHA-256(Block Data + Nonce) = 000...`. After a miner found a solution, the other participants will verify the solution by doing the same calculation with the given nonce solution. If it's valid, the nonce will be used for creating new block, the miner that found the solution will also be rewarded with something like cryptographic currency or tokens.
+For example, the puzzle may require miners to find a nonce value that, when combined with the block data, produces a hash value that starts with three zeros (000) when hashed using a cryptographic hash function like [SHA-256](/cs-notes/computer-security/sha#sha-2). So we will need to find hash such that: `Hash = SHA-256(Block Data + Nonce) = 000...`. After a miner found a solution, the other participants will verify the solution by doing the same calculation with the given nonce solution. If it's valid, the nonce will be used for creating new block, the miner that found the solution will also be rewarded with something like cryptographic currency or tokens.
 
 This also applies when you modify certain block, when you modify the block, you will also change the hash of the block. Let's say you are changing certain block, the previous block that refer to it will need to be changed as well. When you want to change that other block, you will need to complete the PoW again to satisfy the block's difficulty criteria.
 

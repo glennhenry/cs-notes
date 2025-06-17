@@ -8,9 +8,9 @@ description: DSA
 
 - **[Digital Signature Algorithm — Wikipedia](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm)**
 
-**Digital Signature Algorithm (DSA)** is a [public key cryptography](/computer-security/encryption#public--private-key) or [asymmetric cryptography](/computer-security/encryption#symmetric--asymmetric-encryption) algorithm used for digital signatures. Digital signature is like a real physical signature, it is used to ensure integrity and origin of digital data.
+**Digital Signature Algorithm (DSA)** is a [public key cryptography](/cs-notes/computer-security/encryption#public--private-key) or [asymmetric cryptography](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption) algorithm used for digital signatures. Digital signature is like a real physical signature, it is used to ensure integrity and origin of digital data.
 
-DSA is based on the mathematical concept of [modular exponentiation](/computer-security/math-concepts#modular-exponentiation) and the difficulty of solving the discrete logarithm problem. DSA and [Diffie-Hellman key exchange](/computer-security/diffie-hellman) both rely on the computational difficulty of the discrete logarithm problem.
+DSA is based on the mathematical concept of [modular exponentiation](/cs-notes/computer-security/math-concepts#modular-exponentiation) and the difficulty of solving the discrete logarithm problem. DSA and [Diffie-Hellman key exchange](/cs-notes/computer-security/diffie-hellman) both rely on the computational difficulty of the discrete logarithm problem.
 
 ### Explanation
 
@@ -22,7 +22,7 @@ Here is a more detailed explanation of DSA:
 
    - Choose parameters:
 
-     - Choose a [hash function](/computer-security/hash-function) $H$ with output length of $|H|$ bits (e.g., [SHA-1](/computer-security/sha#sha-1) or [SHA-2](/computer-security/sha#sha-2)).
+     - Choose a [hash function](/cs-notes/computer-security/hash-function) $H$ with output length of $|H|$ bits (e.g., [SHA-1](/cs-notes/computer-security/sha#sha-1) or [SHA-2](/cs-notes/computer-security/sha#sha-2)).
      - Choose key length $L$, it should be multiple of 64 between 512 bits and 1024 bits inclusive (or even larger).
      - Choose modulus length $N$, should be lower than key length and hash function's output. For example, $L$ and $N$ can be (1024, 160), (2048, 224).
      - Choose $N$-bit prime $q$ and $L$-bit prime $p$, such that $p - 1$ is a multiple of $q$

@@ -119,7 +119,7 @@ For example, if we were to make a `Customers` table, it should consist of column
 
 ### Query
 
-**Query** is a request or command made to retrieve or manipulate data stored in a database. It is a structured statement or set of instructions written in a [database query language](/database-system/query-language), used to communicate with an RDBMS.
+**Query** is a request or command made to retrieve or manipulate data stored in a database. It is a structured statement or set of instructions written in a [database query language](/cs-notes/database-system/query-language), used to communicate with an RDBMS.
 
 While querying, we can retrieve data based on specific criteria. For example, a query can be used to retrieve all customers who have made a purchase in the last month.
 
@@ -147,5 +147,5 @@ We can perform various operation on our query, some examples are:
 - **Intersection**: Retrieves only the common rows between two or more queries, keeping only the rows that appear in all result sets.
 
 :::info
-More about [operation](/database-system/query-language#other-operations).
+More about [operation](/cs-notes/database-system/query-language#other-operations).
 :::

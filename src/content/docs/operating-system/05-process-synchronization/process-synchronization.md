@@ -9,11 +9,11 @@ description: Process Synchronization
 - **[Chapter 5 Process Synchronization - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 - **[Chapter 7 Deadlocks - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 
-Process synchronization is concerned with the coordination and control of concurrent processes or threads in a system. The goal is to ensure that processes can safely access shared resources, communicate with each other, and avoid other [concurrency-related issues](/operating-system/multithreading#multithreading-problems).
+Process synchronization is concerned with the coordination and control of concurrent processes or threads in a system. The goal is to ensure that processes can safely access shared resources, communicate with each other, and avoid other [concurrency-related issues](/cs-notes/operating-system/multithreading#multithreading-problems).
 
 ### Synchronization Techniques
 
-Some concept of synchronization for process is similar to [thread synchronization](/operating-system/multithreading#thread-synchronization), that is using synchronization tools such as mutexes, condition variables, semaphores, etc.
+Some concept of synchronization for process is similar to [thread synchronization](/cs-notes/operating-system/multithreading#thread-synchronization), that is using synchronization tools such as mutexes, condition variables, semaphores, etc.
 
 #### Peterson’s Solution
 
@@ -43,7 +43,7 @@ Source: https://www.geeksforgeeks.org/introduction-of-process-synchronization/
 
 Readers-Writers problem is a scenario where there exist multiple processes, one is reader (process that access data), and another is writer (process that writes data), which are trying to access a shared resource simultaneously.
 
-Having multiple process that reads at the same time is not a problem, because every reader will always read the same data. However, in a case where a reader and a writer access the data at a time, this will obviously be a problem, it may result in [race condition](/operating-system/multithreading#multithreading-problems).
+Having multiple process that reads at the same time is not a problem, because every reader will always read the same data. However, in a case where a reader and a writer access the data at a time, this will obviously be a problem, it may result in [race condition](/cs-notes/operating-system/multithreading#multithreading-problems).
 
 There are two variants of readers-writers problem:
 
@@ -96,14 +96,14 @@ while true:
 ```
 
 - The `read_lock` and `write_lock` variable indicates the mutex for reader and writer, respectively.
-- The `wait()` and `signal()` function is the implementation of semaphores, it will enable/disable the access. [Semaphore](/operating-system/multithreading#semaphores) keeps a count, it will only allow access if the count is greater than 0. Passing a lock to the `wait()` function will decrement the lock's count, which effectively block any other reader/writer for accessing. On the other hand, `signal()` is the opposite of `wait()`, which will increment the count, effectively notifies other reader/writer.
+- The `wait()` and `signal()` function is the implementation of semaphores, it will enable/disable the access. [Semaphore](/cs-notes/operating-system/multithreading#semaphores) keeps a count, it will only allow access if the count is greater than 0. Passing a lock to the `wait()` function will decrement the lock's count, which effectively block any other reader/writer for accessing. On the other hand, `signal()` is the opposite of `wait()`, which will increment the count, effectively notifies other reader/writer.
 - The process of incrementing and decrementing reader count is synchronized with lock, when reading, we will not use the lock, we will allow multiple reader to read simultaneously.
 - When `readers_count` reaches 0, we will allow the writer to write by signaling the lock.
 - When writing, we will also use `wait()` and `signal()` before and after the writing is done, to ensure only one writer writes.
 
 #### Dining Philosophers
 
-The dining philosophers problem illustrate the [deadlock](/operating-system/multithreading#multithreading-problems).
+The dining philosophers problem illustrate the [deadlock](/cs-notes/operating-system/multithreading#multithreading-problems).
 
 ![Dining philosophers problem](./dining-philosopher.png)  
 Source: https://www.scaler.com/topics/operating-system/dining-philosophers-problem-in-os/
@@ -115,7 +115,7 @@ Source: https://www.scaler.com/topics/operating-system/dining-philosophers-probl
 - Once they are done eating, they put the chopsticks back.
 - The problem demonstrates the challenges of allocating resources to multiple processes, with the primary goal of enabling all philosophers to eat while avoiding deadlock and starvation.
 
-The solution for this problem uses [monitors](/operating-system/multithreading#monitor--condition-variables):
+The solution for this problem uses [monitors](/cs-notes/operating-system/multithreading#monitor--condition-variables):
 
 ```
 monitor DiningPhilosophers {

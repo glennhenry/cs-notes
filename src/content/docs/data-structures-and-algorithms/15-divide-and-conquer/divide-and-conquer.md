@@ -8,7 +8,7 @@ description: Divide And Conquer
 
 - **[Divide-and-conquer algorithm — Wikipedia](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm)**
 
-**Divide and Conquer** is a problem-solving strategy that uses [recursion](/data-structures-and-algorithms/recursion) and involves breaking down a complex problem into smaller, more manageable subproblems, solving them independently, and then combining the solutions to solve the original problem.
+**Divide and Conquer** is a problem-solving strategy that uses [recursion](/cs-notes/data-structures-and-algorithms/recursion) and involves breaking down a complex problem into smaller, more manageable subproblems, solving them independently, and then combining the solutions to solve the original problem.
 
 Divide and conquer involves three steps:
 
@@ -21,7 +21,7 @@ Source: https://data-notes.co/divide-and-conquer-algorithms-b135681d08fc
 
 ### Merge Sort
 
-Merge sort is a [sorting algorithm](/data-structures-and-algorithms/sorting) that follows divide and conquer strategy to sort a collection of elements.
+Merge sort is a [sorting algorithm](/cs-notes/data-structures-and-algorithms/sorting) that follows divide and conquer strategy to sort a collection of elements.
 
 The idea is, sorting a large array must involve a lot of comparison, which result in a harder problem. Merge sort divides the array into smaller subarrays, sorting them individually, and then merging the sorted subarrays, which effectively reduces the number of comparisons needed.
 

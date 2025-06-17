@@ -29,7 +29,7 @@ The second step is to simplify each state equation.
 ![NFA to regular expression part 2](./nfa-to-re-part-2.png)  
 Source: https://youtu.be/OKFrju0HB7k?si=s5PWuHMUz19Q9HlF&t=609
 
-Some step substitute other terms, some also use [regular expression identities](/theory-of-computation-and-automata/regular-languages-part-1#regular-expression-identities), and [Arden's theorem](/theory-of-computation-and-automata/regular-languages-part-1#ardens-theorem).
+Some step substitute other terms, some also use [regular expression identities](/cs-notes/theory-of-computation-and-automata/regular-languages-part-1#regular-expression-identities), and [Arden's theorem](/cs-notes/theory-of-computation-and-automata/regular-languages-part-1#ardens-theorem).
 
 The last is to substitute other non-final states to the final state, so that the regular expression is produced.
 
@@ -88,7 +88,7 @@ The conditions for language to be regular:
 Two structures are said to be _isomorphic_ if they have the same underlying structure, although they may have different names or representations. Isomorphism can be determined if there exists a mapping (or transformation) between one and another that can convert between them while preserving their behavior and language recognition capabilities.
 :::
 
-This theorem is also related to the [DFA minimization](/theory-of-computation-and-automata/finite-automata#minimization). In DFA minimization, we used the method of listing equivalence class to minimize a DFA. In fact, the similar method can be used to prove if the number of equivalence class is finite (but thorough an exhaustive case).
+This theorem is also related to the [DFA minimization](/cs-notes/theory-of-computation-and-automata/finite-automata#minimization). In DFA minimization, we used the method of listing equivalence class to minimize a DFA. In fact, the similar method can be used to prove if the number of equivalence class is finite (but thorough an exhaustive case).
 
 The third condition simply mean that the transition in the minimal DFA should correspond to the set in the equivalence classes. This is why when we minimize DFA, we are required to combine state that belong to the same set within the equivalence classes.
 

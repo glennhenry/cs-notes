@@ -11,7 +11,7 @@ description: Siamese Network
 - **[Triplet Loss: Intro, Implementation, Use Cases](https://www.v7labs.com/blog/triplet-loss)**
 - **[Siamese Networks Introduction and Implementation by Aditya Dutt — Medium](https://towardsdatascience.com/siamese-networks-introduction-and-implementation-2140e3443dee)**
 
-**Siamese Network** is a type of [neural network](/deep-learning/neural-network) architecture designed to compare and measure similarity between pair of input data, one of the use case is to verify signature like fingerprint.
+**Siamese Network** is a type of [neural network](/cs-notes/deep-learning/neural-network) architecture designed to compare and measure similarity between pair of input data, one of the use case is to verify signature like fingerprint.
 
 ### Basic Idea
 
@@ -24,7 +24,7 @@ Source: https://pyimagesearch.com/2020/11/30/siamese-networks-with-keras-tensorf
 
 ### Architecture
 
-Siamese networks share the same architecture, if the task is to recognize similar image, then they will have the identical [convolutional networks](/deep-learning/cnn). The convolution network will flatten its data at the last layer before it goes into the fully-connected layer, same as the original CNN. However, the classifier in the fully-connected layer will not be included. It will go into the next layer called **embedding layer**.
+Siamese networks share the same architecture, if the task is to recognize similar image, then they will have the identical [convolutional networks](/cs-notes/deep-learning/cnn). The convolution network will flatten its data at the last layer before it goes into the fully-connected layer, same as the original CNN. However, the classifier in the fully-connected layer will not be included. It will go into the next layer called **embedding layer**.
 
 #### Embedding Layer
 
@@ -32,7 +32,7 @@ This is where we give each input its corresponding score, it works by mapping th
 
 The input which comes from the previous layer will be represented in vectors. They will be transformed into vector by applying a normalization operation, which is an operation to transform data into some scale. The normalization is called **L2 normalization** or **Euclidean normalization**.
 
-This process is also called **image encoding**, where we transform input into a compact representation or embedding that captures its charateristics. The embedding process is similar to the embedding in [NLP](/deep-learning/deep-learning-tasks#natural-language-processing-nlp).
+This process is also called **image encoding**, where we transform input into a compact representation or embedding that captures its charateristics. The embedding process is similar to the embedding in [NLP](/cs-notes/deep-learning/deep-learning-tasks#natural-language-processing-nlp).
 
 ![Siamese layers](./siamese-layers.png)  
 Source: https://towardsdatascience.com/illustrated-guide-to-siamese-network-3939da1b0c9d

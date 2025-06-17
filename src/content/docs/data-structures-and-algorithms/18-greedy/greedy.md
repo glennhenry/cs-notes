@@ -10,7 +10,7 @@ description: Greedy
 
 **Greedy algorithm** is a problem-solving approach that involve selecting the currently optimal solution at each step. It is a simple and intuitive algorithm that "greedily" selects the best available option without considering the complete solution or future consequences.
 
-Greedy strategy is typically used in a problem where we must maximize or minimize certain objective with respect to some constraint. In some problem, getting the most optimal solution is impossible or takes a lot of time. It is true that greedy approach can't guarantee us the most optimal solution, however, by selecting the currently optimal solution without the need for complex computational or [backtracking](/data-structures-and-algorithms/backtracking), we may achieve a good enough solution with reasonable amount of time.
+Greedy strategy is typically used in a problem where we must maximize or minimize certain objective with respect to some constraint. In some problem, getting the most optimal solution is impossible or takes a lot of time. It is true that greedy approach can't guarantee us the most optimal solution, however, by selecting the currently optimal solution without the need for complex computational or [backtracking](/cs-notes/data-structures-and-algorithms/backtracking), we may achieve a good enough solution with reasonable amount of time.
 
 ### Coin Change
 

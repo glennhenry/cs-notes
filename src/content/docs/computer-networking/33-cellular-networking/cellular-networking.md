@@ -19,7 +19,7 @@ Cellular towers are a freestanding tower designed to support wireless communicat
 ![Hexagon shaped area in cell tower](./hexagon-cell.jpeg)  
 Source: https://www.rfwireless-world.com/Tutorials/cell-phone-tower-basics-and-cell-phone-tower-types.html
 
-Each tower are connected physically, typically using [fiber optic cable](/digital-signal-processing/signal-transmission-medium#guided-transmission). By using fiber optic cable, we can overcome the limitation of electromagnetic signal. The tower will communicate with each other to forward the data received from the sender in the form of light pulse. The tower may receive help from Mobile Switching Center (MSC). MSC will handle a request and determines the appropriate destination or which cell tower to send the data.
+Each tower are connected physically, typically using [fiber optic cable](/cs-notes/digital-signal-processing/signal-transmission-medium#guided-transmission). By using fiber optic cable, we can overcome the limitation of electromagnetic signal. The tower will communicate with each other to forward the data received from the sender in the form of light pulse. The tower may receive help from Mobile Switching Center (MSC). MSC will handle a request and determines the appropriate destination or which cell tower to send the data.
 
 ![Cellular tower communication](./cell-tower-communication.png)  
 Source: https://www.researchgate.net/figure/Cellular-network-architecture-for-a-mobile-distributed-system_fig1_323861058

@@ -14,7 +14,7 @@ description: Dynamic Programming
 
 Both are very similar in terms of the approach. However, both are unique approach and may not be applicable to all problems interchangeably.
 
-The difference is, [divide and conquer](/data-structures-and-algorithms/divide-and-conquer) approach divides the problem into non-overlapping subproblems that are solved independently. In other word, each subproblem doesn't depend on each other, we can't apply the solution of a subproblem into another subproblem.
+The difference is, [divide and conquer](/cs-notes/data-structures-and-algorithms/divide-and-conquer) approach divides the problem into non-overlapping subproblems that are solved independently. In other word, each subproblem doesn't depend on each other, we can't apply the solution of a subproblem into another subproblem.
 
 On the other hand, dynamic programming may contain overlapping subproblem that depends on each other. The idea is, if the problem exhibits overlapping subproblems, instead of solving each of the subproblem, we just need to solve it once and store the solution for another subproblem. This characteristics of dynamic programming makes it efficient than just brute forcing.
 
@@ -22,7 +22,7 @@ On the other hand, dynamic programming may contain overlapping subproblem that d
 
 Dynamic programming can be done in two approach, **top-down** and **bottom-up**.
 
-In the top-down approach, we will start with the original problem and breaks it down into smaller subproblems. We will then solve these subproblems [recursively](/data-structures-and-algorithms/recursion).
+In the top-down approach, we will start with the original problem and breaks it down into smaller subproblems. We will then solve these subproblems [recursively](/cs-notes/data-structures-and-algorithms/recursion).
 
 #### Fibonacci
 
@@ -63,14 +63,14 @@ The pseudocode above is a naive solution that recursively computes the sequence 
 
 The pseudocode above results in $O(2^n)$ time complexity, this is because, for each `n` we will always calculate the two preceding Fibonacci numbers, `n - 1` and `n - 2`. Each of those calls, in turn, calls the function for their preceding Fibonacci numbers, and so on. As a result, the number of function calls grows exponentially with the input value `n`. Specifically, for each Fibonacci number, two additional function calls are made, resulting in a branching factor of 2. Therefore, the total number of function calls follows a recursive pattern where the number of calls doubles with each increase in `n`.
 
-Memoization is a technique used in dynamic programming, specifically in the top-down approach to improve the algorithm efficiency. Memoization optimize the execution by storing (or **[caching](/computer-and-programming-fundamentals/caching)**) the result of function calls for specific input values and reusing them when the same inputs occur again.
+Memoization is a technique used in dynamic programming, specifically in the top-down approach to improve the algorithm efficiency. Memoization optimize the execution by storing (or **[caching](/cs-notes/computer-and-programming-fundamentals/caching)**) the result of function calls for specific input values and reusing them when the same inputs occur again.
 
 We know that when we input `n = 2`, we will always obtain 1. If we store the result of F(2), we can eliminate some repeated work, therefore improving the overall efficiency.
 
 ![Memoization](./memoization.png)  
 Source: https://avikdas.com/2019/04/15/a-graphical-introduction-to-dynamic-programming.html (with modification)
 
-The memoization technique stores all the result of every Fibonacci's sequence in some data structure that can be random accessed efficiently like [array](/data-structures-and-algorithms/array) or [hash map](/data-structures-and-algorithms/hash-table).
+The memoization technique stores all the result of every Fibonacci's sequence in some data structure that can be random accessed efficiently like [array](/cs-notes/data-structures-and-algorithms/array) or [hash map](/cs-notes/data-structures-and-algorithms/hash-table).
 
 Here is the improved version of the previous pseudocode:
 

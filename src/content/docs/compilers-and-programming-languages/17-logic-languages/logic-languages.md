@@ -9,14 +9,14 @@ description: Logic Languages
 - **Book 2 chapter 11**
 - **[Logic programming — Wikipedia](https://en.wikipedia.org/wiki/Logic_programming)**
 
-Logic programming is programming based on formal logic, providing a declarative way to solve problem. Logic languages are [declarative](/computer-and-programming-fundamentals/declarative-functional-programming#declarative-programming), meaning that we specify what we want to achieve rather than how to achieve it. This is achieved by specifying logical relationship, then the language inference engine derive a solution. One major logic language is Prolog, most of them are used for AI and database.
+Logic programming is programming based on formal logic, providing a declarative way to solve problem. Logic languages are [declarative](/cs-notes/computer-and-programming-fundamentals/declarative-functional-programming#declarative-programming), meaning that we specify what we want to achieve rather than how to achieve it. This is achieved by specifying logical relationship, then the language inference engine derive a solution. One major logic language is Prolog, most of them are used for AI and database.
 
 The basic idea is:
 
 1. Basic building blocks are logical statements. These statements are expressed in terms of **facts** and **rules**. Facts represent simple assertions about the world, while rules define relationships and dependencies between facts.
 2. The logic language store all the facts and rules in a knowledge base.
 3. To actually find a solution, we will need to query to the knowledge base.
-4. The language engine typically uses [backtracking](/data-structures-and-algorithms/backtracking) to explore different possibilities and find multiple solutions to a query. Then, it uses logical reasoning and deduction techniques to manipulate the statements in the knowledge base as well as applying rule to derive new facts or make conclusions.
+4. The language engine typically uses [backtracking](/cs-notes/data-structures-and-algorithms/backtracking) to explore different possibilities and find multiple solutions to a query. Then, it uses logical reasoning and deduction techniques to manipulate the statements in the knowledge base as well as applying rule to derive new facts or make conclusions.
 
 ### Prolog
 
@@ -113,7 +113,7 @@ We know that the inference engine search for possible solution over the knowledg
 
 When there are many rules, but the less number of facts, forward chaining can be faster than backward chaining. Prolog uses backward chaining.
 
-Starting from the goal, the interpreter searches through the available clauses in the program to find a clause whose head unifies with the current goal. When a clause match, that clause is expanded. The expansion of clause forms a search tree. Basically, this search tree will be traversed in [DFS](/data-structures-and-algorithms/traversal#depth-first-search-dfs) left-to-right manner. When traversing certain node then the clause fails to match, then the interpreter will [backtrack](/data-structures-and-algorithms/backtracking) and reconsider alternative choices.
+Starting from the goal, the interpreter searches through the available clauses in the program to find a clause whose head unifies with the current goal. When a clause match, that clause is expanded. The expansion of clause forms a search tree. Basically, this search tree will be traversed in [DFS](/cs-notes/data-structures-and-algorithms/traversal#depth-first-search-dfs) left-to-right manner. When traversing certain node then the clause fails to match, then the interpreter will [backtrack](/cs-notes/data-structures-and-algorithms/backtracking) and reconsider alternative choices.
 
 ![Backtracking search](./backtracking.png)  
 Source: Book 2 page 567

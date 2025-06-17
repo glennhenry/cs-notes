@@ -42,7 +42,7 @@ Source: https://itnext.io/getting-started-with-docker-facts-you-should-know-d000
 
 While Docker is used to build containerized applications, **Kubernetes**, on the other hand, is a container orchestration platform—or simply, a platform that helps manage and automate the deployment, scaling, and management of containerized applications.
 
-Kubernetes becomes useful when application is containerized at scale, across multiple nodes or machines. This includes task scheduling of containers, ease of adding or removing containers, a way to monitor the health of containers, as well as restarting or replacing them. Additionally, Kubernetes provides a [load balancing](/software-engineering/system-design#load-balancer) service, capable of distributing incoming traffic across the available replicas of the service.
+Kubernetes becomes useful when application is containerized at scale, across multiple nodes or machines. This includes task scheduling of containers, ease of adding or removing containers, a way to monitor the health of containers, as well as restarting or replacing them. Additionally, Kubernetes provides a [load balancing](/cs-notes/software-engineering/system-design#load-balancer) service, capable of distributing incoming traffic across the available replicas of the service.
 
 #### Concepts
 

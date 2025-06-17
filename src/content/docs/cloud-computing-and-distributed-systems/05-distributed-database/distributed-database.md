@@ -14,7 +14,7 @@ Distributed Database is a database system that is spread across multiple nodes o
 
 In order for distributed database to be useful, each node being able to serve content, it should be up-to-date.
 
-- **[Replication](/database-system/logging-and-recovery#replication)**: Every change in one node, all other nodes should replicate the change by following some protocol. This process can be intensive and time-consuming as the size of data and the number of nodes in the system increase.
+- **[Replication](/cs-notes/database-system/logging-and-recovery#replication)**: Every change in one node, all other nodes should replicate the change by following some protocol. This process can be intensive and time-consuming as the size of data and the number of nodes in the system increase.
 - **Duplication**: Duplication don't actively copy data from one to another. In duplication, there will be a node acting as a master (related to [master-slave architecture](/cloud-computing-and-distributed-systems/master-slave)). Periodically, the master database will be duplicated to other slave nodes. When making changes to database, only the master can be mutated.
 
 ### Database Sharding
@@ -22,14 +22,14 @@ In order for distributed database to be useful, each node being able to serve co
 Database sharding is a technique used to horizontally partition a database into multiple smaller and independent pieces called **shards**. Horizontal partitioning involves splitting a large dataset with a high number of rows into smaller shards, each consisting of a subset of the rows. These shards can be hosted on separate servers or nodes in a distributed system.
 
 :::info
-In contrast, a vertical partition split the dataset by columns, and what [normalization](/database-system/normalization) also does similarly.
+In contrast, a vertical partition split the dataset by columns, and what [normalization](/cs-notes/database-system/normalization) also does similarly.
 :::
 
 To actually know which node stores a particular data, we can use [consistent hashing](/cloud-computing-and-distributed-systems/distributed-systems-communication#consistent-hashing) technique.
 
 Benefits of sharding:
 
-- **Performance**: Less number of rows means the reduction in [index](/database-system/database-index) size, which potentially improves search performance.
+- **Performance**: Less number of rows means the reduction in [index](/cs-notes/database-system/database-index) size, which potentially improves search performance.
 - **Scalability**: We can scale the system horizontally by adding more nodes and shards.
 - **Availability & Fault Tolerance**: If one shard becomes unavailable or experiences a failure, the remaining shards continue to function, minimizing the impact on the overall system.
 
@@ -56,7 +56,7 @@ With a bunch of nodes communicating and potentially sharing data, concurrency wi
 
 A data operation can be classified as **read** or **write**. A read retrieves the value of a data item from a storage location or a shared resource, without modifying. A write operation modifies the value of a data item, updating or overwriting the existing value. A concurrency problem typically occurs when there are two nodes accessing the same resource, and one of them are writing operation.
 
-Consider a scenario of node A and node B, where node A writes and node B reads, both accessing the resource C. Assume that node A and B execute their operation at the same time. Even if their operation is started at the same time, the end result depend on the actual execution. If the initial value of C is 100, B is supposed to read 100, but if node A executed first, then it will read whatever node A was writing. This scenario is often called [race condition](/operating-system/multithreading#multithreading-problems), and may lead to unexpected results.
+Consider a scenario of node A and node B, where node A writes and node B reads, both accessing the resource C. Assume that node A and B execute their operation at the same time. Even if their operation is started at the same time, the end result depend on the actual execution. If the initial value of C is 100, B is supposed to read 100, but if node A executed first, then it will read whatever node A was writing. This scenario is often called [race condition](/cs-notes/operating-system/multithreading#multithreading-problems), and may lead to unexpected results.
 
 #### Locking
 
@@ -65,12 +65,12 @@ Access of resource by nodes are exclusive, meaning a resource can only be access
 The component that holds the resource should implement the locking mechanism, keeping track of which node is currently acquiring the lock. When a node wants to access a resource, it will need to request the lock to the lock tracker. If there's another node acquiring the lock, then the access request will simply be delayed. Otherwise, that particular node will now acquire the lock and gain access to the resource.
 
 :::tip
-See also [mutual exclusion](/operating-system/multithreading#locks--mutex) and [two-phase locking](/database-system/concurrency-control#two-phase-locking).
+See also [mutual exclusion](/cs-notes/operating-system/multithreading#locks--mutex) and [two-phase locking](/cs-notes/database-system/concurrency-control#two-phase-locking).
 :::
 
 ### Distributed Transactions
 
-[Transactions](/database-system/transactions) done in traditional database system can also be applied to distributed database. A transaction is a logical unit of work that consists of multiple operations that need to be executed atomically, or as an indivisible unit.
+[Transactions](/cs-notes/database-system/transactions) done in traditional database system can also be applied to distributed database. A transaction is a logical unit of work that consists of multiple operations that need to be executed atomically, or as an indivisible unit.
 
 #### Atomic Commit
 
@@ -89,5 +89,5 @@ One implementation of atomic commit is the **two-phase commit (2PC)** protocol. 
 Source: https://medium.com/geekculture/distributed-transactions-two-phase-commit-c82752d69324
 
 :::tip
-See also similar topic about [concurrency control in database system](/database-system/concurrency-control).
+See also similar topic about [concurrency control in database system](/cs-notes/database-system/concurrency-control).
 :::

@@ -15,22 +15,22 @@ description: Complexity Theory
 
 Some concepts are:
 
-- [Time Complexity](/data-structures-and-algorithms/analysis-of-algorithms#time--space-complexity): The amount of time required by an algorithm to solve a problem as a function of the input size.
-- [Space Complexity](/data-structures-and-algorithms/analysis-of-algorithms#time--space-complexity): The amount of memory or storage space required by an algorithm to solve a problem as a function of the input size.
-- [Big-O Notation](/data-structures-and-algorithms/analysis-of-algorithms#big-o-notation): Mathematical notation used to describe the upper bound or worst-case behavior of an algorithm as the input size increases.
-- [Reduction](/theory-of-computation-and-automata/)
+- [Time Complexity](/cs-notes/data-structures-and-algorithms/analysis-of-algorithms#time--space-complexity): The amount of time required by an algorithm to solve a problem as a function of the input size.
+- [Space Complexity](/cs-notes/data-structures-and-algorithms/analysis-of-algorithms#time--space-complexity): The amount of memory or storage space required by an algorithm to solve a problem as a function of the input size.
+- [Big-O Notation](/cs-notes/data-structures-and-algorithms/analysis-of-algorithms#big-o-notation): Mathematical notation used to describe the upper bound or worst-case behavior of an algorithm as the input size increases.
+- [Reduction](/cs-notes/theory-of-computation-and-automata/)
 - [Complexity Class](#complexity-class)
 - [P vs NP Problem](#p-vs-np-problem)
 
 ### Complexity Class
 
-Complexity class is the classification of problems into a common level of computational complexity. Grouping together similar problems in terms of complexity could help us to solve them. To analyze the behavior and the complexity of algorithms, [Turing machine](/theory-of-computation-and-automata/turing-machine) is often used.
+Complexity class is the classification of problems into a common level of computational complexity. Grouping together similar problems in terms of complexity could help us to solve them. To analyze the behavior and the complexity of algorithms, [Turing machine](/cs-notes/theory-of-computation-and-automata/turing-machine) is often used.
 
 Terminology:
 
 - **Decision problems**: Problem that requires yes-or-no answer. For example, determining whether number 7 is prime or not is a decision problem.
 - **Polynomial time**: Mathematical expression that involves one or more variables raised to non-negative integer powers, multiplied by coefficients. For example, $n^1$ or simply $n$, $n^2$, $n^3$, $3n^2 + 3$. When we say a problem can be run in polynomial time, it means the running time of the algorithm for the problem grows no faster than a polynomial function of the input size.
-- **[Reduction](/theory-of-computation-and-automata/undecidability#pcp-proof)**: Reduction is a concept where we transform one problem into other problem. The purpose of this is to use the solution of another solved problem. For example, we have solved problem B, but haven't solved problem A. If we can somehow reduce problem A to problem B, then we can use the same solution of problem B to solve problem A.
+- **[Reduction](/cs-notes/theory-of-computation-and-automata/undecidability#pcp-proof)**: Reduction is a concept where we transform one problem into other problem. The purpose of this is to use the solution of another solved problem. For example, we have solved problem B, but haven't solved problem A. If we can somehow reduce problem A to problem B, then we can use the same solution of problem B to solve problem A.
 
 #### Time Complexity
 
@@ -39,15 +39,15 @@ The time complexity class is classified into five.
 ##### P
 
 - P: Polynomial Time
-- P is the complexity class that consists of decision problems that can be solved by a [deterministic Turing machine](/theory-of-computation-and-automata/turing-machine#turing-machine) in polynomial time. In other word, it can be solved relatively quickly.
+- P is the complexity class that consists of decision problems that can be solved by a [deterministic Turing machine](/cs-notes/theory-of-computation-and-automata/turing-machine#turing-machine) in polynomial time. In other word, it can be solved relatively quickly.
 - P problem's solution are also easy to find.
-- Example of P algorithms includes [sorting algorithm](/data-structures-and-algorithms/sorting), it can be solved quickly and can be checked easily.
+- Example of P algorithms includes [sorting algorithm](/cs-notes/data-structures-and-algorithms/sorting), it can be solved quickly and can be checked easily.
 
 ##### NP
 
 - NP: Nondeterministic Polynomial Time
-- NP is the complexity class that consists of decision problems that can be solved by a [nondeterministic Turing machine](/theory-of-computation-and-automata/turing-machine#nondeterministic-turing-machine) in polynomial time.
-- The "yes" solution of an NP problem can be verified efficiently in polynomial time using [deterministic Turing machine](/theory-of-computation-and-automata/turing-machine#turing-machine).
+- NP is the complexity class that consists of decision problems that can be solved by a [nondeterministic Turing machine](/cs-notes/theory-of-computation-and-automata/turing-machine#nondeterministic-turing-machine) in polynomial time.
+- The "yes" solution of an NP problem can be verified efficiently in polynomial time using [deterministic Turing machine](/cs-notes/theory-of-computation-and-automata/turing-machine#turing-machine).
 
 Example of NP problem is the **Subset Sum**.
 
@@ -87,7 +87,7 @@ Source: https://makeagif.com/gif/traveling-salesman-problem-visualization-GZeMvl
 - If a polynomial-time algorithm exists for any NP-Complete problem, it implies that a polynomial-time algorithm exists for all problems in NP.
 - NP-Complete problems are considered to be of equal difficulty, meaning that solving one NP-Complete problem would effectively solve them all. This property is known as "completeness" because the complexity of all problems in NP is "complete" with respect to the complexity of NP-Complete problems.
 
-An example of an NP-Complete problem is the **Circuit satisfiability problem (CSAT)**. This problem ask whether a circuit that consist of [boolean gates](/computer-organization-and-architecture/boolean-logic#logic-gates) can produce output 1, while ensuring that the inputs consistently remain as either 0 or 1.
+An example of an NP-Complete problem is the **Circuit satisfiability problem (CSAT)**. This problem ask whether a circuit that consist of [boolean gates](/cs-notes/computer-organization-and-architecture/boolean-logic#logic-gates) can produce output 1, while ensuring that the inputs consistently remain as either 0 or 1.
 
 To know if CSAT is NP-complete, we would need to proof it belongs to NP and NP-hard.
 

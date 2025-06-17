@@ -131,5 +131,5 @@ The big idea of how video compression works:
 Source: [https://www.videoconverterfactory.com/tips/h264-to-mp4.html](https://www.videoconverterfactory.com/tips/h264-to-mp4.html)
 
 :::tip
-Find out more about compression in [here](/digital-signal-processing/compression).
+Find out more about compression in [here](/cs-notes/digital-signal-processing/compression).
 :::

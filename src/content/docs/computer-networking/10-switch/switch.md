@@ -9,11 +9,11 @@ description: Switch
 - **[Hub, Switch, & Router Explained — PowerCert](https://youtu.be/1z0ULvg_pW8?si=6F-oF8maBovN6VnN)**
 - **[Network switch — Wikipedia](https://en.wikipedia.org/wiki/Network_switch)**
 
-**Switch** is a networking device that is very similar as [hub](/computer-networking/hubs), but it is more intelligent as it provides more advanced features such as improved performance, better bandwidth utilization, and enhanced security.
+**Switch** is a networking device that is very similar as [hub](/cs-notes/computer-networking/hubs), but it is more intelligent as it provides more advanced features such as improved performance, better bandwidth utilization, and enhanced security.
 
 #### Switch Table, Selective Forwarding & Collision Isolation
 
-Switch has a memory to store [MAC address](/computer-networking/mac-address) of all devices connected to it. The purpose of storing device addresses is to efficiently forward packets to the correct destination.
+Switch has a memory to store [MAC address](/cs-notes/computer-networking/mac-address) of all devices connected to it. The purpose of storing device addresses is to efficiently forward packets to the correct destination.
 
 For example, computer A wants to send data to computer B. Instead of broadcasting the packet to all connected ports like a hub does, the switch selectively forwards the packet only to the port associated with the destination MAC address.
 
@@ -28,7 +28,7 @@ Switch allows administrators to control access to the network by limiting the de
 
 #### Network Segmentation
 
-Switch also supports network segmentation through the use of [Virtual Local Area Network (VLAN)](/computer-networking/lan-wan#virtual-local-area-network-vlan). VLAN is a a technology that divide a single physical switch into multiple virtual switches or networks. Each VLAN operates as a separate broadcast domain, allowing devices within the same VLAN to communicate as if they were connected to the same physical network, even if they are physically connected to different switch ports. This also reduce the risk of network attacks.
+Switch also supports network segmentation through the use of [Virtual Local Area Network (VLAN)](/cs-notes/computer-networking/lan-wan#virtual-local-area-network-vlan). VLAN is a a technology that divide a single physical switch into multiple virtual switches or networks. Each VLAN operates as a separate broadcast domain, allowing devices within the same VLAN to communicate as if they were connected to the same physical network, even if they are physically connected to different switch ports. This also reduce the risk of network attacks.
 
 ![Configuring a port security](./switch-security.png)  
 Source: https://www.ciscopress.com/articles/article.asp?p=2181836&seqNum=7

@@ -26,7 +26,7 @@ There are different type of polling:
 
 ### Webhook
 
-**Webhook** is a mechanism for two system to communicate with each other in real-time. The system will make an automated [HTTP request](/computer-networking/http-https#http-request--method) containing notification or data to a specific URL (called **Webhook URL**) whenever particular event or trigger occurs. Webhooks are event-driven, it helps to address the continuous request in pooling that waste resource.
+**Webhook** is a mechanism for two system to communicate with each other in real-time. The system will make an automated [HTTP request](/cs-notes/computer-networking/http-https#http-request--method) containing notification or data to a specific URL (called **Webhook URL**) whenever particular event or trigger occurs. Webhooks are event-driven, it helps to address the continuous request in pooling that waste resource.
 
 #### Webhook Process
 
@@ -36,7 +36,7 @@ There are different type of polling:
 
 3. **Monitor Event**: The sender system monitors for specific events or triggers that should initiate a WebHook. These events could be actions performed by users, changes in data, or any other predefined conditions.
 
-4. **WebHook Request**: When an event or trigger occurs, the sender system constructs an HTTP request with relevant data (can be in [JSON](/digital-media-processing/json) format) and sends it to the WebHook URL provided during the configuration step.
+4. **WebHook Request**: When an event or trigger occurs, the sender system constructs an HTTP request with relevant data (can be in [JSON](/cs-notes/digital-media-processing/json) format) and sends it to the WebHook URL provided during the configuration step.
 
 5. **Receiver Processing**: The receiver system receives the WebHook request at the specified URL. It parses the request and process it based on the information received.
 

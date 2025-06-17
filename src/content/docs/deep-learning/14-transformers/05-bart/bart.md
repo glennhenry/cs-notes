@@ -7,13 +7,13 @@ description: BART
 **Main Source:**
 
 - **[BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension — arxiv](https://arxiv.org/abs/1910.13461)**
-- **[Transformers Architecture](/deep-learning/transformers/transformers-architecture)**
+- **[Transformers Architecture](/cs-notes/deep-learning/transformers/transformers-architecture)**
 
-**Bidirectional and Auto-Regressive Transformer (BART)** is a sequence-to-sequence [transformed-based architecture](/deep-learning/transformers/transformers-architecture) that utilizes both encoder and decoder layer. BART can be seen as the combination of [BERT](/deep-learning/transformers/bert) and [GPT](/deep-learning/transformers/gpt) that captures contextual information of input sequence while also having the component to generates new output sequence.
+**Bidirectional and Auto-Regressive Transformer (BART)** is a sequence-to-sequence [transformed-based architecture](/cs-notes/deep-learning/transformers/transformers-architecture) that utilizes both encoder and decoder layer. BART can be seen as the combination of [BERT](/cs-notes/deep-learning/transformers/bert) and [GPT](/cs-notes/deep-learning/transformers/gpt) that captures contextual information of input sequence while also having the component to generates new output sequence.
 
 ### Denoising Auto-Encoding
 
-During the BART pre-training, an objective called **denoising auto-encoding** is used. BART is trained to reconstruct the original text from the corrupted versions of the same text. The corrupted version involve randomly masking or replacing the world in the input text, similar to the [mask language modeling in BART](/deep-learning/transformers/bert#masked-language-modeling-mlm). Then it uses the decoder to generate the original text based on surrounding words, just like GPT.
+During the BART pre-training, an objective called **denoising auto-encoding** is used. BART is trained to reconstruct the original text from the corrupted versions of the same text. The corrupted version involve randomly masking or replacing the world in the input text, similar to the [mask language modeling in BART](/cs-notes/deep-learning/transformers/bert#masked-language-modeling-mlm). Then it uses the decoder to generate the original text based on surrounding words, just like GPT.
 
 ### Architecture
 

@@ -11,11 +11,11 @@ description: Network Topology
 
 **Network Topology** is a physical or logical arrangement of devices in a computer network. It defines how devices are connected and how they communicate with each other. Network topology determines the overall structure, efficiency, and resilience of a network.
 
-Network topology can be wired or wireless. In a wired topology, devices are connected using physical cables such as [ethernet](/computer-networking/ethernet) and [other cable](/digital-signal-processing/signal-transmission-medium#guided-transmission). In a wireless topology, devices uses wireless electromagnetic signal to communicate, this includes [Wi-Fi](/computer-networking/wi-fi), [bluetooth](/computer-networking/bluetooth), and [cellular networks](/computer-networking/cellular-networking).
+Network topology can be wired or wireless. In a wired topology, devices are connected using physical cables such as [ethernet](/cs-notes/computer-networking/ethernet) and [other cable](/cs-notes/digital-signal-processing/signal-transmission-medium#guided-transmission). In a wireless topology, devices uses wireless electromagnetic signal to communicate, this includes [Wi-Fi](/cs-notes/computer-networking/wi-fi), [bluetooth](/cs-notes/computer-networking/bluetooth), and [cellular networks](/cs-notes/computer-networking/cellular-networking).
 
 ### Wired
 
-- **Star Topology**: Device is connected directly to a central device, such as a [switch](/computer-networking/switch) or [hub](/computer-networking/hubs). All data traffic flows through the central device, which manages the communication between devices. If one device fails, it does not affect the rest of the network, but if the central device failes, it affects all devices and it's called single point of failure.
+- **Star Topology**: Device is connected directly to a central device, such as a [switch](/cs-notes/computer-networking/switch) or [hub](/cs-notes/computer-networking/hubs). All data traffic flows through the central device, which manages the communication between devices. If one device fails, it does not affect the rest of the network, but if the central device failes, it affects all devices and it's called single point of failure.
 
 - **Ring Topology**: Devices are connected in a closed loop, where each device is connected to two neighboring devices. Data travels around the ring in one direction, and each device extracts the required data as it passes by. If one device or link fails, the entire network can be affected.
 

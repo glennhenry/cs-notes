@@ -9,7 +9,7 @@ description: Functional Languages
 - **Book 2 chapter 10**
 
 :::tip
-See also [functional programming](/computer-and-programming-fundamentals/declarative-functional-programming#functional-programming).
+See also [functional programming](/cs-notes/computer-and-programming-fundamentals/declarative-functional-programming#functional-programming).
 :::
 
 ### Scheme
@@ -17,7 +17,7 @@ See also [functional programming](/computer-and-programming-fundamentals/declara
 Scheme is an interpreted, functional programming language in the Lisp family.
 
 - **REPL**: In Scheme, users runs program by interacting with the interpreter directly by manually typing expressions into the standard input. The interpreter continuously reads these expressions, evaluates them, and prints the results back to the user in a loop known as the **read-eval-print loop (REPL)**. We can also run a program through input file using the `load` function (e.g., `load "program_name"`).
-- **Prefix Notation**: Expression is written in [prefix notation](/compilers-and-programming-languages/control-flow#expression-evaluation), with input `(+ 3 4)`, the interpreter prints `7`.
+- **Prefix Notation**: Expression is written in [prefix notation](/cs-notes/compilers-and-programming-languages/control-flow#expression-evaluation), with input `(+ 3 4)`, the interpreter prints `7`.
 - **Assignment**: We can assign variable like below.
 
   ```scheme
@@ -132,7 +132,7 @@ This style of modeling I/O system as a stream becomes the foundational model cal
 
 ### Trade-offs
 
-The principle in functional programming that favor immutability and no side effect is achieved through doing transformations and operations on new values instead on existing values. This also means that more objects will be allocated in memory. It will make manual memory management complex, thus functional language typically rely on [garbage collection](/computer-and-programming-fundamentals/memory#garbage-collection).
+The principle in functional programming that favor immutability and no side effect is achieved through doing transformations and operations on new values instead on existing values. This also means that more objects will be allocated in memory. It will make manual memory management complex, thus functional language typically rely on [garbage collection](/cs-notes/computer-and-programming-fundamentals/memory#garbage-collection).
 
 Immutable data structures may require more memory allocation and copying, which can make the program less efficient. On the other side, the property of immutability and no side effect make the program much more predictable, easier to debug, and readable. Furthermore, with the guarantee of data being immutable, it becomes easier to reason about and safely execute code in parallel.
 

@@ -10,13 +10,13 @@ description: CNN
 - **[Convolutional Neural Networks (CNNs) explained — deeplizard](https://youtu.be/YRhxdVk_sIs?si=Y3nwjS7h7hPpLCKa)**
 - **[CNN: Convolutional Neural Networks Explained — Computerphile](https://youtu.be/py5byOOHZM8?si=vOrMlnIPxELIyORA)**
 
-**Convolutional Neural Network(CNN)** is a type of [neural network](/deep-learning/neural-network) that is specifically designed for processing grid-like data such as images.
+**Convolutional Neural Network(CNN)** is a type of [neural network](/cs-notes/deep-learning/neural-network) that is specifically designed for processing grid-like data such as images.
 
 ### Convolution
 
 Convolution is the process of combining two function to produce a third function. In the context of image processing, a mathematical function will be applied to an image and it will produce another image.
 
-The function applied to image is called **kernel** or **[filters](/computer-graphics/signal-processing#image-filters)**. The function is a small square matrix with some numerical values. Convolution operation is when the kernel is applied to image by sliding it and performing a multiplication (dot product) between the number in matrix and the pixel value in the image. The resulting product wil be summed up and it will result in another image.
+The function applied to image is called **kernel** or **[filters](/cs-notes/computer-graphics/signal-processing#image-filters)**. The function is a small square matrix with some numerical values. Convolution operation is when the kernel is applied to image by sliding it and performing a multiplication (dot product) between the number in matrix and the pixel value in the image. The resulting product wil be summed up and it will result in another image.
 
 ![GIF of convolution process](./convolution.gif)  
 Source: https://towardsdatascience.com/computer-vision-convolution-basics-2d0ae3b79346
@@ -59,7 +59,7 @@ CNN is specialized type of neural network used for image analysis, CNN typically
 
 - **Input Layer**: Input of CNN is an image in the form of number which is the representation of the image color. Input layer typically expect: [batch_size, channels, width, height], where width and height is the size of image, channels represent how many color channel in the image (e.g. RGB image means 3 channel), and batch_size is the number of image processed together in a single forward and backward pass.
 
-- **Convolutional Layer**: Which is the layer that performs convolution operation explained above. So instead of multiplying input data by weights as we did in traditional neural network, CNN does convolution process to the input data which is the image in numerical representation then pass it onto the next layer that does convolution again. The convolution layer may also include an [activation function](/deep-learning/deep-learning-foundation#activation-function).
+- **Convolutional Layer**: Which is the layer that performs convolution operation explained above. So instead of multiplying input data by weights as we did in traditional neural network, CNN does convolution process to the input data which is the image in numerical representation then pass it onto the next layer that does convolution again. The convolution layer may also include an [activation function](/cs-notes/deep-learning/deep-learning-foundation#activation-function).
 
 - **Pooling Layer**: Pooling layer that does the pooling process to reduce the image dimension. The pooling layer reduce image size but it also take the representation of the overall image. Each neuron in pooling layer will capture different representation of image depending on the input.
 
@@ -104,7 +104,7 @@ Source: https://youtu.be/pj9-rr1wDhM?si=-7Fnrb2DpTa71Jo8&t=450
 
 After receiving result from the last layer convolution or pooling layer, the fully connected layer will make prediction. The result from previous layer will first be flattened into one-dimensional vector. This will combine the result from all the filter that does different detection.
 
-From now on, how will the network works is same as traditional neural network, it consist of weight, bias, and activation function. After reaching the last layers, it can now make prediction. In this step, [loss function](/deep-learning/deep-learning-foundation#loss-function) will be calculated, the specific function depends on the task.
+From now on, how will the network works is same as traditional neural network, it consist of weight, bias, and activation function. After reaching the last layers, it can now make prediction. In this step, [loss function](/cs-notes/deep-learning/deep-learning-foundation#loss-function) will be calculated, the specific function depends on the task.
 
 After calculating the loss, it's time for the model to learn with backpropagation technique. Gradient of the loss function will be calculated with respect to each parameters, including fully connected layer weights and the coefficient in the filter matrix. Gradients with respect to the filters are calculated and used to update the filter weights.
 

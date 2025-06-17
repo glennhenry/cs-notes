@@ -23,7 +23,7 @@ Source: https://www.sltinfo.com/the-encode-decode-model-of-communication/
 
 Other media data, such as video or images are also represented with binary data, which we can consider as digital signal. They are a collection of discrete digital values that collectively represent something.
 
-After the encoding process, the data can be further processed in its encoded form. This can be a technique like [compression](/digital-signal-processing/compression), which may remove redundancies in its encoded representation to represent it more efficiently.
+After the encoding process, the data can be further processed in its encoded form. This can be a technique like [compression](/cs-notes/digital-signal-processing/compression), which may remove redundancies in its encoded representation to represent it more efficiently.
 
 In the decoding process, the encoded media will be converted back into its original format. In the case of an audio player, the received audio file should be decoded, which may include decompressing specific compression algorithm (i.e., doing their inverse process).
 
@@ -32,7 +32,7 @@ Source: https://www.researchgate.net/figure/The-structure-of-encoding-decoding-a
 
 ### Unit of Data
 
-In the digital world, any sort of information is represented as [binary](/computer-and-programming-fundamentals/number-system#binary) data. Binary is a number system where a digit can only be 0 or 1. A digit of binary is often called **bit**.
+In the digital world, any sort of information is represented as [binary](/cs-notes/computer-and-programming-fundamentals/number-system#binary) data. Binary is a number system where a digit can only be 0 or 1. A digit of binary is often called **bit**.
 
 :::note
 Complex information is possible to be represented in digital world because of each bit is combined to represent a wide range of values and information. For example, a bit can only represent two information (i.e., 0 or 1). If we have two bits, we are able to represent 4 different information (i.e., 00, 01, 10, or 11). As we increase the number of bits, the amount of information possible to be represented increase exponentially by the power of two.
@@ -60,7 +60,7 @@ Below is an ASCII table, which serve as reference table that shows how the 128 c
 !["BLUE" word mapped to byte using ASCII table](./ascii-code.png)  
 Source: https://youtu.be/H4l42nbYmrU
 
-ASCII has limited uses due to only being able to represent 128 different characters. These days, ASCII is no longer used, instead we use other standard called [Unicode](/computer-and-programming-fundamentals/data-representation#unicode).
+ASCII has limited uses due to only being able to represent 128 different characters. These days, ASCII is no longer used, instead we use other standard called [Unicode](/cs-notes/computer-and-programming-fundamentals/data-representation#unicode).
 
 :::info
 The amount of data transferred in a unit of time is called **bandwidth** or **bit rate**.
@@ -71,5 +71,5 @@ The amount of data transferred in a unit of time is called **bandwidth** or **bi
 Image is represented by a grid pixel. Pixel is the smallest unit of information in an image. A pixel typically owns 3 color values which are red, green, and blue. Each color is represented as 1 byte or 8 bit (0-255), which means there are 256 different combination for each color. These three colors are combined to construct a single pixel in an image, making it able to represent 16.777.216 different color.
 
 :::tip
-Find out more about [image and color](/computer-graphics/computer-images-part-1) and about [data representation in computer](/computer-and-programming-fundamentals/data-representation)
+Find out more about [image and color](/cs-notes/computer-graphics/computer-images-part-1) and about [data representation in computer](/cs-notes/computer-and-programming-fundamentals/data-representation)
 :::

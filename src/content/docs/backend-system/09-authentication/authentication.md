@@ -25,7 +25,7 @@ The characteristics of someone's identity can be categorized into 5, these are c
 - **Knowledge Factors**: Knowledge factors rely on something the user knows, such as a password, passphrase, PIN, or answers to security questions.
 - **Possession Factors**: Involve something the user possesses, typically physical object or devices such as smart cards or mobile devices.
 - **Inherence Factors**: Also known as **biometric factors**, these are unique physical or behavioral characteristics of the user. Biometric authentication factors include fingerprint scans, iris or retinal scans, voice recognition, facial recognition, or even typing patterns.
-- **Location Factors**: Location factors takes account the geographic location or network information associated with the user. For example, a system may authenticate a user based on their [IP address](/computer-networking/ip-address), GPS location, or proximity to a specific [Wi-Fi](/computer-networking/wi-fi) network.
+- **Location Factors**: Location factors takes account the geographic location or network information associated with the user. For example, a system may authenticate a user based on their [IP address](/cs-notes/computer-networking/ip-address), GPS location, or proximity to a specific [Wi-Fi](/cs-notes/computer-networking/wi-fi) network.
 - **Behavior Factors**: Behavior factors focus on the user's patterns and habits such as user's typing speed, mouse movements, navigation patterns, or even the timing and frequency of their interactions.
 
 ### Authentication Factor Number
@@ -73,7 +73,7 @@ Source: https://sherryhsu.medium.com/session-vs-token-based-authentication-11a6c
 Session-based authentication has some downsides:
 
 - **Session Management**: The server needs to store each of the user's session ID, in a large-scale application with high user traffic, this can be memory-intensive. The server also need to validate and maintain the session state which require additional processing. In a load balancing server architecture, session data also needs to be shared or replicated across servers to maintain session continuity.
-- **Security Concern**: Session-based authentication can raise some security concern including [cookie hijacking](/computer-security/web-security#cookie-hijacking) and [cross-site request forgery](/computer-security/web-security#cross-site-request-forgery) which steal user's session ID to make request on behalf of the user.
+- **Security Concern**: Session-based authentication can raise some security concern including [cookie hijacking](/cs-notes/computer-security/web-security#cookie-hijacking) and [cross-site request forgery](/cs-notes/computer-security/web-security#cross-site-request-forgery) which steal user's session ID to make request on behalf of the user.
 
 #### Token-based Authentication
 
@@ -83,7 +83,7 @@ In session-based authentication, the user stores session ID and the server also 
 
 ##### JWT
 
-In token-based authentication, JSON Web Token (JWT) is typically used as the implementation. JWT is encoded in [base64](/computer-and-programming-fundamentals/data-representation#base64) uses [JSON](/internet-and-web) as the format for representing the token's actual data. JWT consists of header, payload, and signature.
+In token-based authentication, JSON Web Token (JWT) is typically used as the implementation. JWT is encoded in [base64](/cs-notes/computer-and-programming-fundamentals/data-representation#base64) uses [JSON](/cs-notes/internet-and-web) as the format for representing the token's actual data. JWT consists of header, payload, and signature.
 
 - **Header**: Header specify algorithm used to sign the token and the type of the token (which is "JWT").
 - **Payload**: Payload contains the actual user's data such as username and email.
@@ -114,7 +114,7 @@ In SSO, a **service provider (SP)** is an application that relies on **identity 
 1. **User Accesses an Application**: The user initiates the SSO process by attempting to access an application or service that supports SAML-based SSO.
 2. **Application Redirects to Identity Provider (IdP)**: IdP is a service that authenticate user and provide identity information to other system, it is responsible for verifying user's identity. The application will redirect the user to the chosen IdP.
 3. **User Authentication at IdP**: The user is presented with the IdP's login page or authentication form. The user enters their credentials (e.g., username and password) to authenticate themselves to the IdP.
-4. **IdP Generates SAML Assertion**: Upon successful authentication, the IdP generates a SAML assertion, which contains information about the user's authentication status and attributes. The SAML assertion is digitally signed by the IdP, meaning it is encrypted using a [public/private key encryption](/computer-security/encryption#public--private-key) so that only the IdP and SP itself knows the information to ensure the integrity and origin of the data.
+4. **IdP Generates SAML Assertion**: Upon successful authentication, the IdP generates a SAML assertion, which contains information about the user's authentication status and attributes. The SAML assertion is digitally signed by the IdP, meaning it is encrypted using a [public/private key encryption](/cs-notes/computer-security/encryption#public--private-key) so that only the IdP and SP itself knows the information to ensure the integrity and origin of the data.
 5. **SAML Assertion Sent to Service Provider**: The IdP sends the SAML assertion back to the original application or browser and sent it to the service provider. The assertion is sent to Assertion Consumer Service (ACS) URL, which is a specific endpoint provided by service provider used when the authentication is successful.
 6. **SP Validates the SAML Assertion**: The SP receives the SAML assertion from the IdP. The SP validates the assertion by verifying the digital signature to ensure the assertion's integrity and authenticity.
 7. **User Authorized & Session Established**: Upon successful validation of the SAML assertion, the SP considers the user authenticated and establishes a session for the user. The session allows the user to access the application or service without providing additional credentials, basically the authentication process will be skipped.

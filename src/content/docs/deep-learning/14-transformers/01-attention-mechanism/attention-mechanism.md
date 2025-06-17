@@ -9,9 +9,9 @@ description: Attention Mechanism
 - **[RNN Encoder Decoder + Attention — Anak AI](https://youtu.be/y7YWo6XaVHc?si=4etprkoHN-e3X_vj)**
 - **[Attention in RNNs by Nir Arbel — Medium](https://medium.datadriveninvestor.com/attention-in-rnns-321fbcd64f05)**
 
-Sequence model like [RNN](/deep-learning/rnn), struggle in processing a large or long input sequence. The sequence input keep being processed through the network, the information from earlier steps might lost as it propagates through the recurrent connections. This makes sequence model like RNN struggle to capture long-term dependencies accurately.
+Sequence model like [RNN](/cs-notes/deep-learning/rnn), struggle in processing a large or long input sequence. The sequence input keep being processed through the network, the information from earlier steps might lost as it propagates through the recurrent connections. This makes sequence model like RNN struggle to capture long-term dependencies accurately.
 
-Other type of sequence model such as [LSTM](/deep-learning/lstm) and [GRU](/deep-learning/gru) that address some of RNN limitation still have some issue. These model lack of global context or dependencies that span across long distances in the sequence as it is being processed through each time step. Their computation complexity also grows linearly with the length of input sequence.
+Other type of sequence model such as [LSTM](/cs-notes/deep-learning/lstm) and [GRU](/cs-notes/deep-learning/gru) that address some of RNN limitation still have some issue. These model lack of global context or dependencies that span across long distances in the sequence as it is being processed through each time step. Their computation complexity also grows linearly with the length of input sequence.
 
 ### Attention Mechanism
 
@@ -28,7 +28,7 @@ Source: https://blog.floydhub.com/attention-mechanism/
 
 ### RNN with Attention
 
-The [standard RNN](/deep-learning/rnn) can be equipped with attention mechanism. RNN with attention mechanism typically extend the [RNN encoder-decoder architecture](/deep-learning/rnn#rnn-encoder-decoder), which is the more advanced architecture of RNN used for sequence-to-sequence tasks.
+The [standard RNN](/cs-notes/deep-learning/rnn) can be equipped with attention mechanism. RNN with attention mechanism typically extend the [RNN encoder-decoder architecture](/cs-notes/deep-learning/rnn#rnn-encoder-decoder), which is the more advanced architecture of RNN used for sequence-to-sequence tasks.
 
 #### Standard RNN encoder-decoder
 
@@ -49,7 +49,7 @@ Source: https://youtu.be/y7YWo6XaVHc?si=RM1mtj9tFWSU3vGb&t=122
 
 Each encoder process an input and have its own hidden state. All the hidden state value from encoder will be passed to the attention layer together. Now it's time to determine which information is relevant enough to be passed into the decoder.
 
-The attention vector is determined using probability, hidden state value from encoder is passed to attention layer and it goes into several fully connected layer (where they have shared weights) with tanh activation function on it and all the output will be transformed into probability with the [softmax activation function](/deep-learning/neural-network#softmax-activation-function). The probability output with the one being the highest represent the most important information.
+The attention vector is determined using probability, hidden state value from encoder is passed to attention layer and it goes into several fully connected layer (where they have shared weights) with tanh activation function on it and all the output will be transformed into probability with the [softmax activation function](/cs-notes/deep-learning/neural-network#softmax-activation-function). The probability output with the one being the highest represent the most important information.
 
 ![Attention layer](./attention-layer.png)  
 Source: https://youtu.be/y7YWo6XaVHc?si=-lrYn-yFFkqoiCj7&t=258

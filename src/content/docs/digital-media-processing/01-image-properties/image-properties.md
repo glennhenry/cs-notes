@@ -13,8 +13,8 @@ Computers represent images as a collection pixel, which is the smallest addressa
 :::tip
 More detail about images representation in:
 
-- [Computer Images (Part 1)](/computer-graphics/computer-images-part-1)
-- [Computer Images (Part 2)](/computer-graphics/computer-images-part-2)
+- [Computer Images (Part 1)](/cs-notes/computer-graphics/computer-images-part-1)
+- [Computer Images (Part 2)](/cs-notes/computer-graphics/computer-images-part-2)
  :::
 
 A digital image file stores more than just raw image data. It may include image characteristics and attributes. Some of them are: compression methods, image format, and metadata, which refers to data about the image, such as the image dimensions, resolution, color depth, file format, creation date, and more.
@@ -26,7 +26,7 @@ More detail about image properties:
     ![Comparison of small to high resolution image](./resolution.png)  
     Source: https://vimeo.com/blog/post/the-basics-of-image-resolution/
 
-2.  **Color Space**: Represent how the color are represented, such as RGB, RGBA, CMYK, HSV or grayscale. See also [color representation](/computer-and-programming-fundamentals/data-representation#color).
+2.  **Color Space**: Represent how the color are represented, such as RGB, RGBA, CMYK, HSV or grayscale. See also [color representation](/cs-notes/computer-and-programming-fundamentals/data-representation#color).
 
     ![Color space HSL and HSV](./color-space.png)  
     Source: https://en.wikipedia.org/wiki/HSL_and_HSV
@@ -36,14 +36,14 @@ More detail about image properties:
     ![Show 8 bit, 10 bit, 12 bit depth with the number of possible colors](./bit-depth.png)  
     Source: https://youtu.be/6yXYxp0UiVg
 
-4.  **Image Format**: The image format used, such as [JPEG](/digital-media-processing/jpg-jpeg), [PNG](/digital-media-processing/png), [BMP](/digital-media-processing/bmp), TIFF, [GIF](/digital-media-processing/gif), or RAW. They represent different feature and compression methods (if any).
+4.  **Image Format**: The image format used, such as [JPEG](/cs-notes/digital-media-processing/jpg-jpeg), [PNG](/cs-notes/digital-media-processing/png), [BMP](/cs-notes/digital-media-processing/bmp), TIFF, [GIF](/cs-notes/digital-media-processing/gif), or RAW. They represent different feature and compression methods (if any).
 
 5.  **Spatial Domain**: Properties that describe the spatial characteristics of the image, such as brightness, contrast, sharpness, texture, edges, and patterns.
 
     - **Brightness**: Overall lightness or darkness of an image.
     - **Contrast**: The difference of brightness between the lightest and darkest parts of an image. Higher contrast result in lighter and darker part easier to differentiate.
-    - **[Alpha](/computer-graphics/computer-images-part-2#alpha)**: The transparency or opacity of an image or a specific pixel within an image. Typically, alpha is specified within the RGBA color space, where the value range between 0 (fully transparent) to 1 (fully opaque).
-    - **[Gamma](/computer-graphics/computer-images-part-2#gamma)**: Measure the contrast between the darker and lighter parts of an image. A higher gamma value means that the darker parts of the image will appear darker, while a lower gamma value means that the darker parts of the image will appear lighter. An adjustment called **gamma correction** can be applied to image to compensate for differences in the way human eyes perceive brightness.
+    - **[Alpha](/cs-notes/computer-graphics/computer-images-part-2#alpha)**: The transparency or opacity of an image or a specific pixel within an image. Typically, alpha is specified within the RGBA color space, where the value range between 0 (fully transparent) to 1 (fully opaque).
+    - **[Gamma](/cs-notes/computer-graphics/computer-images-part-2#gamma)**: Measure the contrast between the darker and lighter parts of an image. A higher gamma value means that the darker parts of the image will appear darker, while a lower gamma value means that the darker parts of the image will appear lighter. An adjustment called **gamma correction** can be applied to image to compensate for differences in the way human eyes perceive brightness.
     - **Saturation**: Saturation controls the intensity or purity of colors in an image. A high saturation value produces vibrant and vivid colors, while a low saturation value results in more muted or grayscale-like colors.
     - **Hue**: Represents the color itself, such as red, blue, green, etc. It denotes the position of a color on the color wheel.
     - **Dynamic Range**: Range of brightness levels that can be represented in an image, from the darkest shadows to the brightest highlights.
@@ -61,5 +61,5 @@ More detail about image properties:
     [Color Temperature](https://www.ledrise.eu/blog/color-temperature-explained-lr/)
 
 :::tip
-See also [computer display](/computer-graphics/computer-display).
+See also [computer display](/cs-notes/computer-graphics/computer-display).
 :::

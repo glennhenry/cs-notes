@@ -27,7 +27,7 @@ When a subroutine is called, the program transfers control from the current exec
 Within the call stack, there are two pointers used for managing the stack frames: the **stack pointer (SP)** and the **frame pointer (FP)**. SP keeps track the top of the stack, while FP is the reference point within a stack frame.
 
 :::info
-When a function is being called many times (e.g., in recursion), a potential error called [stack overflow](/data-structures-and-algorithms/recursion#call-stack) may occur. It happens when the call stack becomes full or exceeds its allocated size.
+When a function is being called many times (e.g., in recursion), a potential error called [stack overflow](/cs-notes/data-structures-and-algorithms/recursion#call-stack) may occur. It happens when the call stack becomes full or exceeds its allocated size.
 :::
 
 ### Calling Sequences
@@ -114,7 +114,7 @@ In static typed language, the function return typically has a defined type, indi
 
 ### Generic Subroutines
 
-Generic subroutine refer to subroutine which can operate on different types of data. It could be function that find a maximum value of a container, the container can vary between array, list, sets, etc. This can be achieved through [parametric polymorphism](/compilers-and-programming-languages/data-types#polymorphism) (also known as generics).
+Generic subroutine refer to subroutine which can operate on different types of data. It could be function that find a maximum value of a container, the container can vary between array, list, sets, etc. This can be achieved through [parametric polymorphism](/cs-notes/compilers-and-programming-languages/data-types#polymorphism) (also known as generics).
 
 One implemention of generics is through code generation. The compiler generates specialized versions of the generic code for each type used with the generics. This means that for each different type parameter, a separate copy of the generic code is created.
 
@@ -194,7 +194,7 @@ The two ways to keep track exception handler:
 
 ### Coroutine
 
-[Coroutine](/computer-and-programming-fundamentals/concurrency#coroutine) is feature that enables cooperative multitasking. It allows a program to have multiple independent execution flows, that can be paused and resumed at specific points.
+[Coroutine](/cs-notes/computer-and-programming-fundamentals/concurrency#coroutine) is feature that enables cooperative multitasking. It allows a program to have multiple independent execution flows, that can be paused and resumed at specific points.
 
 Coroutine can be implemented using **continuation**. It is a representation of the program's control flow stored in a data structure accessible within the programming language, rather than being hidden in the runtime environment. A continuation may contain the current point of execution, variable values, and the program's call stack state.
 

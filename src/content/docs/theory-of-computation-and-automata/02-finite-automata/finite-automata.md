@@ -26,7 +26,7 @@ In automata theory, an **automaton** is an abstract model of digital computer. A
    Source: Book page 58
 
 :::info
-When referring to language, string, and other terminologies, we are referring to those explained in [TOC Fundamentals](/theory-of-computation-and-automata/toc-fundamentals).
+When referring to language, string, and other terminologies, we are referring to those explained in [TOC Fundamentals](/cs-notes/theory-of-computation-and-automata/toc-fundamentals).
 :::
 
 ### Finite State Machine
@@ -52,7 +52,7 @@ An automaton that recognizes or accepts certain input strings is called **accept
 
 The purpose of an acceptor is to determine whether the input string belong to certain language. If the input string satisfies the criteria defined by the acceptor, it is accepted. If it does not meet the criteria, it is rejected.
 
-A complex example of acceptors is a [compiler](/compilers-and-programming-languages). It is a program that determine whether a code from certain programming language follows the grammar rules and syntax of that language.
+A complex example of acceptors is a [compiler](/cs-notes/compilers-and-programming-languages). It is a program that determine whether a code from certain programming language follows the grammar rules and syntax of that language.
 
 Finite state machine can be categorized into to, DFA and NFA.
 
@@ -174,14 +174,14 @@ It turns out that this NFA is capable of taking all set of strings over language
 ![NFA example 2 part 1](./nfa-example-2-part-1.png)  
 Source: https://youtu.be/Bcen1W_uFEU?si=eNKSxWqfA_Adi0CD&t=313
 
-This NFA is similar to [this DFA version](/theory-of-computation-and-automata/finite-automata#dfa-with-self-loop-and-dead-state).
+This NFA is similar to [this DFA version](/cs-notes/theory-of-computation-and-automata/finite-automata#dfa-with-self-loop-and-dead-state).
 
 DFA has to be deterministic, it requires us to include all possible input and transition. In contrast, in this NFA, we don't need to include the transition from state $A$ to $C$ with input 1. This is because the nondeterministic nature of NFA that allows for taking input symbol for which there is no defined transition from a particular state. It simply does not take that transition and continues its computation.
 
 ![NFA example 2 part 2](./nfa-example-2-part-2.png)  
 Source: https://youtu.be/Bcen1W_uFEU?si=tPOEujmw6MGqWYoh&t=518
 
-Another example, related to [this](/theory-of-computation-and-automata/finite-automata#dfa-with-the-same-transition-function-across-different-inputs), we don't need to include the dead state beyond state $C$.
+Another example, related to [this](/cs-notes/theory-of-computation-and-automata/finite-automata#dfa-with-the-same-transition-function-across-different-inputs), we don't need to include the dead state beyond state $C$.
 
 ### Equivalence of DFA & NFA
 

@@ -15,7 +15,7 @@ Source: https://www.geeksforgeeks.org/socket-in-computer-network/
 
 ### How does it works (in high level)
 
-The creation of socket takes what type of [IP address](/computer-networking/ip-address) to use (IPv4 or IPv6) and which type of socket to use. The type of socket refers to what protocol is used to transfer data. Socket provide reliable data transfer by using protocols like [Transmission Control Protocol (TCP)](/computer-networking/tcp-protocol) and [User Datagram Protocol (UDP)](/computer-networking/udp).
+The creation of socket takes what type of [IP address](/cs-notes/computer-networking/ip-address) to use (IPv4 or IPv6) and which type of socket to use. The type of socket refers to what protocol is used to transfer data. Socket provide reliable data transfer by using protocols like [Transmission Control Protocol (TCP)](/cs-notes/computer-networking/tcp-protocol) and [User Datagram Protocol (UDP)](/cs-notes/computer-networking/udp).
 
 After the creation, socket need to be bound to a specific IP address and port number. The socket then transition to a listening state, waiting for incoming connection requests. When a client socket wants to communicate, it establish a connection to the corresponding server's IP address and port number.
 

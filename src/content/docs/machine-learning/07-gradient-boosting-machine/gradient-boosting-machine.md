@@ -29,7 +29,7 @@ Source: https://vitalflux.com/gradient-boosting-algorithm-concepts-example/
 
 3. **Compute residuals**: Calculate the residuals, which are the differences between the predicted and actual values of the target variable. These residuals represent the errors made by the current ensemble model. These residuals are calculated by loss function, which is a measure of how well the models perform at one training. Example are MSE, MAE, and cross entropy.
 
-4. **Fit a weak learner to the residuals**: We will try to minimize error or correct mistake made by previous model by training new weak learner on the residuals. The goal is to find a model that can predict the residuals more accurately than the previous model. We can also use [gradient descent](/machine-learning/linear-regression#gradient-descent) for this.
+4. **Fit a weak learner to the residuals**: We will try to minimize error or correct mistake made by previous model by training new weak learner on the residuals. The goal is to find a model that can predict the residuals more accurately than the previous model. We can also use [gradient descent](/cs-notes/machine-learning/linear-regression#gradient-descent) for this.
 
 5. **Update the ensemble**: Add the new weak learner to the ensemble. The weak learner will have a paramater called shrinkage parameter or learning rate. The shrinkage parameter controls the contribution of each weak learner. The parameter also used for deciding the learning rate used in gradient descent.
 

@@ -15,7 +15,7 @@ The amount of data transferred in a unit of time is called **bandwidth** or **bi
 :::
 
 :::note
-Compression is considered a form of [encoding](/digital-signal-processing/encoding-and-decoding), which converts a signal or data into a specific format for transmission or storage, and then involves recovering the original signal or data from its encoded representation.
+Compression is considered a form of [encoding](/cs-notes/digital-signal-processing/encoding-and-decoding), which converts a signal or data into a specific format for transmission or storage, and then involves recovering the original signal or data from its encoded representation.
 :::
 
 Two main types of compression are lossless and lossy.
@@ -35,7 +35,7 @@ Source: https://iq.opengenus.org/run-length-encoding/, https://api.video/what-is
 
 Huffman encoding is a technique that maps each symbol (character or data element) of input data to certain code. The code is chosen based on the character occurrence frequency. A frequently encountered symbol will be mapped to a short code, while less frequent symbol is mapped into a longer code. This way we can represent the overall data in shorter and smaller size.
 
-For example, [ASCII](/digital-signal-processing/encoding-and-decoding#information-interchange) is an encoding standard for representing characters. It assigns a fixed 8-bit binary code to each character. If we have 5 characters, we would need 40 bits to represent them. However, Huffman encoding is a **variable-length encoding** method, which means it can assign shorter binary codewords specific characters. It is possible to represent character "a", which may be the 90% of the content using just the binary code "01".
+For example, [ASCII](/cs-notes/digital-signal-processing/encoding-and-decoding#information-interchange) is an encoding standard for representing characters. It assigns a fixed 8-bit binary code to each character. If we have 5 characters, we would need 40 bits to represent them. However, Huffman encoding is a **variable-length encoding** method, which means it can assign shorter binary codewords specific characters. It is possible to represent character "a", which may be the 90% of the content using just the binary code "01".
 
 ##### Procedure
 
@@ -43,7 +43,7 @@ For example, [ASCII](/digital-signal-processing/encoding-and-decoding#informatio
 
    ![Map of each character to its frequency](./huffman-frequency-table.png)
 
-2. **Huffman Tree Construction**: Using the frequency table, we will construct a [binary tree](/data-structures-and-algorithms/tree#binary-tree), where the child-most node is the less frequent data and the top most is the most frequent data. From the child node, we will merge the two of the lowest frequency to create the parent node that represents their frequency sum. We will keep doing this up to the top most node.
+2. **Huffman Tree Construction**: Using the frequency table, we will construct a [binary tree](/cs-notes/data-structures-and-algorithms/tree#binary-tree), where the child-most node is the less frequent data and the top most is the most frequent data. From the child node, we will merge the two of the lowest frequency to create the parent node that represents their frequency sum. We will keep doing this up to the top most node.
 
    ![Huffman binary tree construction in GIF](./huffman-tree-construction.gif)  
    Source: https://commons.wikimedia.org/wiki/File:Huffman_huff_demo.gif (with speed modification)
@@ -67,11 +67,11 @@ Lossy compression techniques are typically designed and optimized for specific t
 
 #### Transform Coding
 
-Transform coding is a general concept of lossy compression that involves transforming the original data into a different domain or representation. That new representation is then analyzed and processed to achieve desired result. They are algorithm like [discrete cosine transform (DCT)](/digital-signal-processing/discrete-cosine-transform), [discrete Fourier transform (DFT)](/digital-signal-processing/discrete-fourier-transform) and [wavelet transform](/digital-signal-processing/wavelets).
+Transform coding is a general concept of lossy compression that involves transforming the original data into a different domain or representation. That new representation is then analyzed and processed to achieve desired result. They are algorithm like [discrete cosine transform (DCT)](/cs-notes/digital-signal-processing/discrete-cosine-transform), [discrete Fourier transform (DFT)](/cs-notes/digital-signal-processing/discrete-fourier-transform) and [wavelet transform](/cs-notes/digital-signal-processing/wavelets).
 
 ![An image is compressed with 3 different setting with different quality results](./transform-coding.gif)  
 Source: https://www.dspguide.com/ch27/6.htm
 
 :::tip
-Other lossy compression for [images (JPG/JPEG)](/digital-media-processing/jpg-jpeg), [audio (MP3)](/digital-media-processing/mp3), and [video (MP4)](/digital-media-processing/mp4).
+Other lossy compression for [images (JPG/JPEG)](/cs-notes/digital-media-processing/jpg-jpeg), [audio (MP3)](/cs-notes/digital-media-processing/mp3), and [video (MP4)](/cs-notes/digital-media-processing/mp4).
 :::

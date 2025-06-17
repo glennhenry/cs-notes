@@ -17,7 +17,7 @@ Source: https://community.fs.com/blog/tcpip-vs-osi-whats-the-difference-between-
 
 ### OSI Layers
 
-1. **Physical**: It is the stage where data is transmitted through [physical medium](/digital-signal-processing/signal-transmission-medium) such as coaxial cable, optic fiber, radio signal, etc. The data is first encoded and converted into binary digits. Binary digits are then transformed into electrical signal, a simple example would to map 0s to low voltage signal and 1s to high voltage signal. This layer also involves many other signal transmission technique.
+1. **Physical**: It is the stage where data is transmitted through [physical medium](/cs-notes/digital-signal-processing/signal-transmission-medium) such as coaxial cable, optic fiber, radio signal, etc. The data is first encoded and converted into binary digits. Binary digits are then transformed into electrical signal, a simple example would to map 0s to low voltage signal and 1s to high voltage signal. This layer also involves many other signal transmission technique.
 
    ![Sending raw bit from sender through cable to the receiver](./physical-layer.png)  
    Source: https://digitalmediaglobe.com/understanding-the-layers-of-the-osi-model/
@@ -42,7 +42,7 @@ Source: https://community.fs.com/blog/tcpip-vs-osi-whats-the-difference-between-
 
 4. **Transport**: Transport layer ensures again the data is transmitted sent and received correctly and in the proper order by the destination device. The data, again needs to be small enough and doesn't exceed the maximum transmission unit (MTU). The transport layer will divide it into another terms called "segments".
 
-   Transport layer also ensures the same thing as before, it ensures data is correct and error-free, prevent overwhelming between sender and receiver, establish connection-oriented protocols, such as [TCP (Transmission Control Protocol)](/computer-networking/tcp-protocol)
+   Transport layer also ensures the same thing as before, it ensures data is correct and error-free, prevent overwhelming between sender and receiver, establish connection-oriented protocols, such as [TCP (Transmission Control Protocol)](/cs-notes/computer-networking/tcp-protocol)
 
    ![Analogy of transport layer](./transport-layer.jpeg)  
    Source: https://www.lifewire.com/layers-of-the-osi-model-illustrated-818017
@@ -57,7 +57,7 @@ Source: https://community.fs.com/blog/tcpip-vs-osi-whats-the-difference-between-
    ![A text is encoded and encrypted](./presentation-layer.png)  
    Source: https://realpars.com/osi/
 
-7. **Application**: After data is received, it can be presented into user that is able to interpret data received from transmission such as web browser. This layer is responsible for providing network services directly to the end-user or application. It uses internet protocols including [HTTP (Hypertext Transfer Protocol)](/computer-networking/http-https#http) for web browsing, [SMTP (Simple Mail Transfer Protocol)](/computer-networking/email-protocol#smtp) for email communication, [FTP (File Transfer Protocol)](/computer-networking/ftp) for file transfer, and many more.
+7. **Application**: After data is received, it can be presented into user that is able to interpret data received from transmission such as web browser. This layer is responsible for providing network services directly to the end-user or application. It uses internet protocols including [HTTP (Hypertext Transfer Protocol)](/cs-notes/computer-networking/http-https#http) for web browsing, [SMTP (Simple Mail Transfer Protocol)](/cs-notes/computer-networking/email-protocol#smtp) for email communication, [FTP (File Transfer Protocol)](/cs-notes/computer-networking/ftp) for file transfer, and many more.
 
    ![A browser that receives HTML pages from server](./application-layer.png)  
    Source: https://www.corelangs.com/html/introduction/first-page.html, https://jenkov.com/tutorials/html4/the-web.html

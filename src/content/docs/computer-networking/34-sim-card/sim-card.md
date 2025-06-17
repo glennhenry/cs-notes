@@ -8,7 +8,7 @@ description: SIM Card
 
 - **[How do SIM Cards Work? — Techquickie](https://youtu.be/GTCAbmjyEvE?si=_oGqSglZ253CuESu)**
 
-**Subscriber Identity Module (SIM Card)** is a small, portable memory card used in mobile devices such as smartphones, tablets, and certain other devices like smartwatches. It provides necessary information to identify and authenticate the user on a [cellular network](/computer-networking/cellular-networking).
+**Subscriber Identity Module (SIM Card)** is a small, portable memory card used in mobile devices such as smartphones, tablets, and certain other devices like smartwatches. It provides necessary information to identify and authenticate the user on a [cellular network](/cs-notes/computer-networking/cellular-networking).
 
 The SIM card contains a unique identification number called the **International Mobile Subscriber Identity (IMSI)**, which is associated with a specific mobile network operator. It is a 64-bit number which means there are $2^{64}$ unique combination. When a device with a SIM card connects to a cellular network, the network uses the IMSI to validate the user's identity and grant access to the network.
 

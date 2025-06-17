@@ -4,7 +4,7 @@ slug: deep-learning/transformers/vision-transformers
 description: Vision Transformers
 ---
 
-**Vision Transformers (ViT)** is a [transformer-like architecture](/deep-learning/transformers/transformers-architecture) used for computer vision tasks, it is known as the competitor of [CNN](/deep-learning/cnn). Leveraging transformers architecture, ViT treats 2-dimensional images as a flat sequence and then use the self-attention mechanism to capture the relationship within an image.
+**Vision Transformers (ViT)** is a [transformer-like architecture](/cs-notes/deep-learning/transformers/transformers-architecture) used for computer vision tasks, it is known as the competitor of [CNN](/cs-notes/deep-learning/cnn). Leveraging transformers architecture, ViT treats 2-dimensional images as a flat sequence and then use the self-attention mechanism to capture the relationship within an image.
 
 ### Architecture
 

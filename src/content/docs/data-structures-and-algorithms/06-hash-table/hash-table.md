@@ -12,7 +12,7 @@ description: Hash Table
 
 ### Implementation
 
-Hash table is a very efficient data structure in terms of insertion and retrieval, similar to [array](/data-structures-and-algorithms/array). They provide efficient retrieval of an element in a constant $O(1)$ time.
+Hash table is a very efficient data structure in terms of insertion and retrieval, similar to [array](/cs-notes/data-structures-and-algorithms/array). They provide efficient retrieval of an element in a constant $O(1)$ time.
 
 In array, we use an index to retrieve a specific element. The index of an element may change when we modify the array (e.g., inserting an element at the first index may shift the following elements). A hash table differs in its access method by using a unique identifier that never changes and always maps to the same value.
 
@@ -25,14 +25,14 @@ The position of value in the array is decided with a **hash function**.
 Hash function is a mathematical function that takes input and output an integer value called **hash code**. In this case, that hash code can be used as the index of the element in the array.
 
 :::tip
-See [hash function](/computer-security/hash-function).
+See [hash function](/cs-notes/computer-security/hash-function).
 :::
 
 #### Collision Mitigation
 
 Hash function doesn't always produce a unique value for different inputs. In other words, it's possible for two different inputs to generate the same hash code, which would result in the same index in the array.
 
-This is called a [collision](/computer-security/hash-function#collision), and one technique to mitigate it is **chaining**. Chaining places a [linked list](/data-structures-and-algorithms/linked-list) at each position in the array, where collided elements are stored. When a collision occurs, the element is appended to the end of the list.
+This is called a [collision](/cs-notes/computer-security/hash-function#collision), and one technique to mitigate it is **chaining**. Chaining places a [linked list](/cs-notes/data-structures-and-algorithms/linked-list) at each position in the array, where collided elements are stored. When a collision occurs, the element is appended to the end of the list.
 
 Another technique to mitigate collision, which is a trivial one is just increasing the array size. This may work for hash function that consider the size of array, such as the example below.
 

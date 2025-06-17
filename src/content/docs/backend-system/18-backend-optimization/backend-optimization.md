@@ -17,27 +17,27 @@ Backend architecture can be scaled to handle increased traffic and load. They ca
 
 ### Network Optimization
 
-- **Minimize Requests**: Combine multiple requests into a single request or use techniques like [HTTP/2](/computer-networking/http-https#http2) multiplexing to reduce the overhead of establishing multiple connections. Minify responses file, compress or resizing image can reduce amount of data transferred over the network especially for large file.
+- **Minimize Requests**: Combine multiple requests into a single request or use techniques like [HTTP/2](/cs-notes/computer-networking/http-https#http2) multiplexing to reduce the overhead of establishing multiple connections. Minify responses file, compress or resizing image can reduce amount of data transferred over the network especially for large file.
 
-- **[Content Delivery networks (CDN)](/software-engineering/system-design#cdn)**: Distribute static content, such as images, CSS, and JavaScript files, to a CDN. CDN is distributed servers that are strategically placed in different locations worldwide to reach user faster.
+- **[Content Delivery networks (CDN)](/cs-notes/software-engineering/system-design#cdn)**: Distribute static content, such as images, CSS, and JavaScript files, to a CDN. CDN is distributed servers that are strategically placed in different locations worldwide to reach user faster.
 
   ![CDN](./cdn.png)  
   Source: https://www.cloudflare.com/learning/cdn/what-is-a-cdn/
 
 ### Server Optimization
 
-- **Server Caching**: Implement caching mechanisms like [Redis caching](/computer-and-programming-fundamentals/caching#type-of-caching) or [reverse proxies](/computer-networking/proxy#reverse-proxy) to store frequently accessed data closer to the server.
+- **Server Caching**: Implement caching mechanisms like [Redis caching](/cs-notes/computer-and-programming-fundamentals/caching#type-of-caching) or [reverse proxies](/cs-notes/computer-networking/proxy#reverse-proxy) to store frequently accessed data closer to the server.
 
-- **[Load Balancing](/software-engineering/system-design#load-balancer)**: Distribute incoming traffic across multiple servers using load balancers, this will reduce the burden of a single server.
+- **[Load Balancing](/cs-notes/software-engineering/system-design#load-balancer)**: Distribute incoming traffic across multiple servers using load balancers, this will reduce the burden of a single server.
 
   ![Load balancing](./load-balancing.png)  
   Source: https://herza.id/blog/load-balancing-pengertian-cara-kerja-jenis-metode-kelebihan-dan-kekurangan/
 
 ### Resource Optimization
 
-- **Efficient Database Queries**: Optimize database queries by ensuring proper [indexing](/database-system/database-index), avoiding unnecessary joins or subqueries, and optimizing data retrieval.
+- **Efficient Database Queries**: Optimize database queries by ensuring proper [indexing](/cs-notes/database-system/database-index), avoiding unnecessary joins or subqueries, and optimizing data retrieval.
 
-- **Efficient Algorithms and Data Structures**: Use algorithms and data structures that provide efficient operations for your application's use cases. For example, if you frequently search or write data, consider using [hash map](/data-structures-and-algorithms/hash-table).
+- **Efficient Algorithms and Data Structures**: Use algorithms and data structures that provide efficient operations for your application's use cases. For example, if you frequently search or write data, consider using [hash map](/cs-notes/data-structures-and-algorithms/hash-table).
 
 - **Resource Pooling**: Which is the technique of reusing resources by creating a shared repository of resources rather than creating a new resource for each request. This includes sharing database connections, network sockets, or other expensive resources.
 

@@ -18,7 +18,7 @@ Source: https://www.computerhope.com/jargon/c/contunit.htm
 
 Everything is binary in computer, to instruct the CPU to do anything, you would need an instruction in binary format. Instruction are defined in structured way, an instruction should have the opcode, or operation code, which is a binary code that represent a specific operation or instruction to be executed by the CPU. You would also need operand fields, and specify memory address or register to identify the location of the data or the operand involved in the instruction's operation.
 
-During execution, the CPU may use various [type of registers](/computer-organization-and-architecture/registers-and-ram#type-of-registers), such as the **instruction register** to hold the current instruction being executed by the CPU.
+During execution, the CPU may use various [type of registers](/cs-notes/computer-organization-and-architecture/registers-and-ram#type-of-registers), such as the **instruction register** to hold the current instruction being executed by the CPU.
 
 The specification of an instruction for a CPU is typically defined in a table called **instruction table**. It contains opcode values, along with a description of the operation, the number and type of operands, and any specific addressing modes or flags associated with the instruction.
 
@@ -68,7 +68,7 @@ The CPU executes instruction in a cycle, it goes through three main steps: fetch
    ![Control unit with ALU](./control-unit-with-alu.png)  
    Source: https://youtu.be/FZGugFqdr60?si=po5Qm1YG2UPzX5Ur&t=410
 
-   The interaction between control unit and [ALU](/computer-organization-and-architecture/alu), it performs the arithmetic or logical operation according to the control signals and operand received from the control unit. Here's a common example:
+   The interaction between control unit and [ALU](/cs-notes/computer-organization-and-architecture/alu), it performs the arithmetic or logical operation according to the control signals and operand received from the control unit. Here's a common example:
 
    1. First, some binary data (number) is loaded into the register A, using the LOAD_A instruction.
    2. Another binary data is loaded into the register B, using the LOAD_B instruction.
@@ -108,9 +108,9 @@ There are still many instructions that computer can execute, it is to handle mor
 Source: https://youtu.be/zltgXvg6r3k?si=EXDRnkb43OL_tda1&t=201
 
 - **Halt**: The halt instruction is used to explicitly terminate the execution of a program or a specific section of code. It is very important to halt when your program is done executing, to indicates a program has completed its tasks and ready to exit.
-- **Jump**: Also known as goto statement, is an instruction that doesn't continue with the normal sequential flow. You can transfer control to a different part of program, such as "jumping" to specified memory address. Jumps are used to implement [control flow](/computer-and-programming-fundamentals/programming-concepts#control-flow)
-- **Condition**: Condition is anything that refer to expressions or logical statements that evaluate to either true or false. They are used to make decision within program, typically to implement the [if-statement](/computer-and-programming-fundamentals/programming-concepts#conditional-statement). Conditional statement will involve logical operation, such as checking if some number greater than other number using various [logic gates](/computer-organization-and-architecture/boolean-logic#logic-gates).
-- **Looping**: Looping is the act of repeating an instruction multiple times, it is used to implement loop statement like [for-loop](/computer-and-programming-fundamentals/programming-concepts#for-loop) and [while-loop](/computer-and-programming-fundamentals/programming-concepts#while-loop). Instead of repeating certain task several times, loops allows us to automate it. Looping typically uses jump to enable non-sequential execution and simulate looping behavior.
+- **Jump**: Also known as goto statement, is an instruction that doesn't continue with the normal sequential flow. You can transfer control to a different part of program, such as "jumping" to specified memory address. Jumps are used to implement [control flow](/cs-notes/computer-and-programming-fundamentals/programming-concepts#control-flow)
+- **Condition**: Condition is anything that refer to expressions or logical statements that evaluate to either true or false. They are used to make decision within program, typically to implement the [if-statement](/cs-notes/computer-and-programming-fundamentals/programming-concepts#conditional-statement). Conditional statement will involve logical operation, such as checking if some number greater than other number using various [logic gates](/cs-notes/computer-organization-and-architecture/boolean-logic#logic-gates).
+- **Looping**: Looping is the act of repeating an instruction multiple times, it is used to implement loop statement like [for-loop](/cs-notes/computer-and-programming-fundamentals/programming-concepts#for-loop) and [while-loop](/cs-notes/computer-and-programming-fundamentals/programming-concepts#while-loop). Instead of repeating certain task several times, loops allows us to automate it. Looping typically uses jump to enable non-sequential execution and simulate looping behavior.
 
 ##### Example
 

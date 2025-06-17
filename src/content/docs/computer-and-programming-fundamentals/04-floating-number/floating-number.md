@@ -17,9 +17,9 @@ description: Floating Number
 
 Computer can easily represent decimal or whole number using a binary representation consisting of specific number of binary digits, typically in a multiple of 8.
 
-For example, we can use 32 binary digits (bits), which is able to make a 4 billion possible combination. We are able to represent decimal number ranging from 0 to 4.294.967.295. The calculation, which is explained in the [binary number system](/computer-and-programming-fundamentals/number-system#binary), involve summing each binary digits (0 or 1) multiplied by each power of base two based on its positional value in the binary representation.
+For example, we can use 32 binary digits (bits), which is able to make a 4 billion possible combination. We are able to represent decimal number ranging from 0 to 4.294.967.295. The calculation, which is explained in the [binary number system](/cs-notes/computer-and-programming-fundamentals/number-system#binary), involve summing each binary digits (0 or 1) multiplied by each power of base two based on its positional value in the binary representation.
 
-However, that is the case if we don't consider a negative number. To consider negative number, we can use the [most significant bit](/computer-and-programming-fundamentals/binary-representation#least--most-significant-bit) as the [sign bit](/computer-and-programming-fundamentals/binary-representation#signed-magnitude), making us able to represent decimal value from -2.147.483.648 to 2.147.483.647.
+However, that is the case if we don't consider a negative number. To consider negative number, we can use the [most significant bit](/cs-notes/computer-and-programming-fundamentals/binary-representation#least--most-significant-bit) as the [sign bit](/cs-notes/computer-and-programming-fundamentals/binary-representation#signed-magnitude), making us able to represent decimal value from -2.147.483.648 to 2.147.483.647.
 
 ![Decimal representation](./decimal-representation.png)  
 Source: https://medium.com/@luischaparroc/integer-numbers-storage-in-computer-memory-47af4b59009 (cropped)
@@ -119,7 +119,7 @@ Representing the number $3.14$ in floating point standard:
 3. Normalize the binary representation: We can use explicit normalization, we will move binary point to the left until there is only one non-zero digit to the left of the binary point. This results in $1.100100011110101110000101 \times 2^1$.
 4. Determine the exponent: We get that the exponent is $1$.
 
-   In general, the exponent can be negative, but we do not allocate a sign bit for the exponent. If we use 8 bits to represent the exponent, we can represent 256 different exponents ranging from 1 to 254 ([0 and 255 have special meanings](/computer-and-programming-fundamentals/floating-number#special-cases)). To represent negative exponents, we need to adjust the range of the exponent. The standard specifies that we subtract a bias value (often called the **bias exponent**) from the true exponent. For single precision, the **bias value is 127**, which makes the exponent range from -126 to +127.
+   In general, the exponent can be negative, but we do not allocate a sign bit for the exponent. If we use 8 bits to represent the exponent, we can represent 256 different exponents ranging from 1 to 254 ([0 and 255 have special meanings](/cs-notes/computer-and-programming-fundamentals/floating-number#special-cases)). To represent negative exponents, we need to adjust the range of the exponent. The standard specifies that we subtract a bias value (often called the **bias exponent**) from the true exponent. For single precision, the **bias value is 127**, which makes the exponent range from -126 to +127.
 
    To convert the exponent to binary, we need to do the opposite. Since the true exponent is $1$, the biased exponent that will be used is $1 + 127 = 128$. The number $128$ in decimal is equal to $10000000$ in binary. To interpret this, we subtract $127$ (the bias) from the exponent in binary representation: $128 - 127 = 1$, which is the true exponent.
 

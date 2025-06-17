@@ -34,7 +34,7 @@ There are different types of functional dependencies:
 
 Given a relation or table $R$ with attributes $X, Y,$ and $Z$, where $X → Y$ is a functional dependency, and $Z$ is defined as the set difference between $U$, which is some set of $R$ and $XY$, then $R = \prod_{XY}(R) \bowtie \prod_{XZ}(R)$.
 
-Where $\prod$ is a symbol for [projection](/database-system/query-language#projection), and $\bowtie$ is a symbol for natural joins.
+Where $\prod$ is a symbol for [projection](/cs-notes/database-system/query-language#projection), and $\bowtie$ is a symbol for natural joins.
 
 :::info
 Natural join: a join that combines two relations based on matching values in their common attributes, without duplicate columns for the common attributes.
@@ -66,7 +66,7 @@ In **Second Normal Form (2NF)**, the table must **meet 1NF** and **has no partia
 ![2NF normalization](./2nf.png)  
 Source: https://en.wikipedia.org/wiki/Database_normalization#Satisfying_2NF
 
-In the book data above, the [composite key](/database-system/relational-data#other-keys) is title and format. Partial dependency is when one of the column depend on one of the composite key, but not all. For example, the `Price` column depends on format, but not title.
+In the book data above, the [composite key](/cs-notes/database-system/relational-data#other-keys) is title and format. Partial dependency is when one of the column depend on one of the composite key, but not all. For example, the `Price` column depends on format, but not title.
 
 To conform 2NF, all non-key attributes (attributes that are not part of the primary key) must be fully functionally dependent on the entire primary key.
 

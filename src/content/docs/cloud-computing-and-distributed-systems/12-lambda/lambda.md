@@ -36,7 +36,7 @@ Stream processing (or real-time processing) is a method of data processing that 
 A typical process of stream processing:
 
 1. **Data Ingestion**: Data is produced from various data sources, such as sensors, log files, message queues, or external systems. Data is imagined as water that flows through a system continuous and potentially infinite. They are treated as a continuous stream of events or records.
-2. **Windowing**: Data can be processed in [window](/data-structures-and-algorithms/sliding-window), a way to group similar or related data within specific time intervals or fixed-size data subsets.
+2. **Windowing**: Data can be processed in [window](/cs-notes/data-structures-and-algorithms/sliding-window), a way to group similar or related data within specific time intervals or fixed-size data subsets.
 
    In time-based windowing, data may be divided into fixed-duration windows, such as 5-minute, 1-hour, or daily windows. On the other hand, fixed-size window may contain fixed number of events or data points, such as every 100 records or every 1,000 records.
 

@@ -26,11 +26,11 @@ While the first path visits the minimal nodes, it results in the highest cost. T
 
 ### Dijkstra's Algorithm
 
-**Dijkstra's Algorithm** is a popular algorithm to find the shortest path between a source vertex to **all the other vertex** in a [weighted graph](/data-structures-and-algorithms/graph#weighted). Dijkstra's algorithm works by exploring the graph from the source to each target, the cost of each traversal between nodes is kept track.
+**Dijkstra's Algorithm** is a popular algorithm to find the shortest path between a source vertex to **all the other vertex** in a [weighted graph](/cs-notes/data-structures-and-algorithms/graph#weighted). Dijkstra's algorithm works by exploring the graph from the source to each target, the cost of each traversal between nodes is kept track.
 
 Dijkstra's algorithm explores the path systematically. When there are many possible paths, the algorithm prioritize the path with the currently minimum cost. It continues along this path before moving on to others. At the end, the algorithm will explore all the possible paths.
 
-The systematic behavior of Dijkstra's algorithm is similar to [BFS traversal](/data-structures-and-algorithms/traversal#breadth-first-search-bfs), it uses a [queue data structure](/data-structures-and-algorithms/queue), specifically the [priority queue](/data-structures-and-algorithms/queue#priority-queue), which is often implemented using [min-heap](/data-structures-and-algorithms/heap) to keep track of the path with the currently minimum cost. It is also considered as [greedy algorithm](/data-structures-and-algorithms/greedy), because it traverses the optimal path first.
+The systematic behavior of Dijkstra's algorithm is similar to [BFS traversal](/cs-notes/data-structures-and-algorithms/traversal#breadth-first-search-bfs), it uses a [queue data structure](/cs-notes/data-structures-and-algorithms/queue), specifically the [priority queue](/cs-notes/data-structures-and-algorithms/queue#priority-queue), which is often implemented using [min-heap](/cs-notes/data-structures-and-algorithms/heap) to keep track of the path with the currently minimum cost. It is also considered as [greedy algorithm](/cs-notes/data-structures-and-algorithms/greedy), because it traverses the optimal path first.
 
 Here is the pseudocode:
 

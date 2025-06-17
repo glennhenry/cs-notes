@@ -10,7 +10,7 @@ description: Laplace Transform
 
 **Laplace transform** is a mathematical operation that converts a time-domain function $f(t)$ into a complex frequency-domain representation $F(s)$.
 
-Laplace transform can be thought as the generalized [Fourier transform](/digital-signal-processing/fourier-transform). Laplace transform extends the concept of the Fourier transform by allowing the analysis of a broader class of functions, including those functions that are not necessarily periodic or defined over an infinite time interval.
+Laplace transform can be thought as the generalized [Fourier transform](/cs-notes/digital-signal-processing/fourier-transform). Laplace transform extends the concept of the Fourier transform by allowing the analysis of a broader class of functions, including those functions that are not necessarily periodic or defined over an infinite time interval.
 
 Fourier transform uses a complex exponential term to capture sinusoidal waves. This complex variable has only an imaginary part, representing the frequency component of the signal. On the other hand, the Laplace Transform involves both a real and an imaginary part in its complex variable.
 

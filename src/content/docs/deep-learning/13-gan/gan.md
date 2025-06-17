@@ -11,7 +11,7 @@ description: GAN
 - **[VAE-GAN Explained! — Connor Shorten](https://youtu.be/yyqfZfnSzcw?si=WFBY7i7f-yAKT_i9)**
 - **[CycleGAN Explained in 5 Minutes! — Matchue](https://youtu.be/-8hfnlxEPn4?si=nUnHWj5NL1H9Q2DN)**
 
-**Generative Adversarial Network (GAN)** is a machine learning framework specifically used to generate data. GANs are a generative model, similar as [variational autoencoder (VAE)](/deep-learning/variational-autoencoder), meaning they generate new samples that are similar to the training data. We feed some data to the model, the model will capture the pattern and common structure of the data to generate new instance of data.
+**Generative Adversarial Network (GAN)** is a machine learning framework specifically used to generate data. GANs are a generative model, similar as [variational autoencoder (VAE)](/cs-notes/deep-learning/variational-autoencoder), meaning they generate new samples that are similar to the training data. We feed some data to the model, the model will capture the pattern and common structure of the data to generate new instance of data.
 
 GAN can be used to generate new images, audio, video, or generating next word in a sentence.
 
@@ -41,7 +41,7 @@ The generator first takes a random input usually sampled from a normal or unifor
 ![Random noises as input](./random-noise.png)  
 Source: https://www.researchgate.net/figure/The-semi-supervised-GAN-architecture-Random-noise-is-used-by-the-Generator-to-generate_fig4_335359919 (with modification)
 
-The random input will then be transformed into a higher-dimensional representation. They are passed into some neural network architecture such as [convolutional neural network](/deep-learning/cnn) for image related tasks that also include [activation function](/deep-learning/deep-learning-foundation) to enable the network to capture complex patterns.
+The random input will then be transformed into a higher-dimensional representation. They are passed into some neural network architecture such as [convolutional neural network](/cs-notes/deep-learning/cnn) for image related tasks that also include [activation function](/cs-notes/deep-learning/deep-learning-foundation) to enable the network to capture complex patterns.
 
 The final layer of generator produces the generated data, which could be images, text, or any other type of data depending on the application. The generated sample are then fed into discriminator to be classified.
 
@@ -50,7 +50,7 @@ Source: https://towardsdatascience.com/dcgans-deep-convolutional-generative-adve
 
 ### Discriminator
 
-The discriminator can be any network architecture capable of classifying, if it's an image related task, [convolutional neural network](/deep-learning/cnn) can be used. The input data will be combined from the training samples and the generated samples. They will be labeled as fake or real and the discriminator will assign probability or how likely is the data to be real or fake.
+The discriminator can be any network architecture capable of classifying, if it's an image related task, [convolutional neural network](/cs-notes/deep-learning/cnn) can be used. The input data will be combined from the training samples and the generated samples. They will be labeled as fake or real and the discriminator will assign probability or how likely is the data to be real or fake.
 
 #### Training Process
 
@@ -71,7 +71,7 @@ The minimax loss is the loss function used in the original paper that introduced
 ![Minimax loss function formula](./minimax-loss.png)  
 Source: https://developers.google.com/machine-learning/gan/loss
 
-The D and G is commonly used to refer the discriminator and generator, respectively. It is related to the [cross entropy loss function formula](/deep-learning/deep-learning-foundation#cross-entropy). The expected value measure of what we can expect to observe on average when dealing with uncertainty, in this case the uncertainty of the real data $E_x$ and the fake instance $E_z$.
+The D and G is commonly used to refer the discriminator and generator, respectively. It is related to the [cross entropy loss function formula](/cs-notes/deep-learning/deep-learning-foundation#cross-entropy). The expected value measure of what we can expect to observe on average when dealing with uncertainty, in this case the uncertainty of the real data $E_x$ and the fake instance $E_z$.
 
 The first term $E_x[\log(D(x))]$ represents the expected log-likelihood (the logarithm of a probability) of the **discriminator correctly classifying real data as real**. The generator aims to minimize this term to generate data that can "fool" the discriminator.
 
@@ -115,7 +115,7 @@ Source: https://learnopencv.com/conditional-gan-cgan-in-pytorch-and-tensorflow/,
 
 #### Variational Autoencoder GAN (VAE-GAN)
 
-VAE-GAN combines the [variational autoencoder](/deep-learning/variational-autoencoder) with the traditional GAN. The generator in GAN is replaced by the decoder of VAE. The step are:
+VAE-GAN combines the [variational autoencoder](/cs-notes/deep-learning/variational-autoencoder) with the traditional GAN. The generator in GAN is replaced by the decoder of VAE. The step are:
 
 1. Input data goes through encoder, the data will be transformed into latent space representation in the form of probability distribution.
 2. The distribution will be sampled and goes into the decoder, transforming it back to higher-dimensional representation.

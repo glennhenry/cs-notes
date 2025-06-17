@@ -12,7 +12,7 @@ Mobile is another devices that might be a target for attacks. Phone is something
 
 ### Permissions Exploit
 
-In mobile operating system like Android, malicious apps can tricks user into granting excessive permissions to an app, allowing it to access sensitive data or perform unwanted actions. This can happen by tricking user through [social engineering](/computer-security/other-attack-and-exploit#social-engineering).
+In mobile operating system like Android, malicious apps can tricks user into granting excessive permissions to an app, allowing it to access sensitive data or perform unwanted actions. This can happen by tricking user through [social engineering](/cs-notes/computer-security/other-attack-and-exploit#social-engineering).
 
 ### Clickjacking
 

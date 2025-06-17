@@ -10,7 +10,7 @@ description: PDF
 
 **PDF (Portable Document Format)** is a file format developed by Adobe in 1992 used to present documents, text formatting, images, and other interactive media such as, annotation, form-fields, video, etc. PDF is designed to be cross-platform, meaning they can be viewed and accessed on different operating systems and devices with the appropriate PDF reader installed.
 
-The content of PDF itself is in binary format with the ASCII encoding for text contents. PDF uses a variety of compression algorithm such as LZW (Lempel-Ziv-Welch), FLATE (ZIP, in PDF 1.2), and JPEG. PDF also supports encryption with 256-bit [AES encryption](/computer-security/aes) for securing the content of the file.
+The content of PDF itself is in binary format with the ASCII encoding for text contents. PDF uses a variety of compression algorithm such as LZW (Lempel-Ziv-Welch), FLATE (ZIP, in PDF 1.2), and JPEG. PDF also supports encryption with 256-bit [AES encryption](/cs-notes/computer-security/aes) for securing the content of the file.
 
 ![PDF icon and an example of PDF document](./pdf-example.png)  
 Source: https://en.wikipedia.org/wiki/PDF

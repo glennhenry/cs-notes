@@ -6,7 +6,7 @@ description: MAC Address
 
 **Main Source: [MAC Address Explained | PowerCert](https://youtu.be/TIiQiw7fpsU)**
 
-**MAC (Media Access Control) Address** is a unique identifier assigned to a network interface controller (NIC) of a network device. NIC, also known as network adapter, is a hardware component that enables a computer or other device to connect to a network. It is responsible for the transmission and reception of data over a network. It is a hardware address that operates at the [data link layer of the OSI model](/computer-networking/osi-model#osi-layers).
+**MAC (Media Access Control) Address** is a unique identifier assigned to a network interface controller (NIC) of a network device. NIC, also known as network adapter, is a hardware component that enables a computer or other device to connect to a network. It is responsible for the transmission and reception of data over a network. It is a hardware address that operates at the [data link layer of the OSI model](/cs-notes/computer-networking/osi-model#osi-layers).
 
 ### MAC Address Assignment
 
@@ -19,7 +19,7 @@ Source: https://learntomato.flashrouters.com/what-is-a-mac-address-how-to-find-m
 
 ### Purpose of MAC Address
 
-IP address might change sometimes because of various reason such as configuration change or [DHCP](/computer-networking/dhcp). MAC address act as a physical hardware identifier that never changes. As it is assigned permanently by manufacturer, no two devices should have the same MAC address.
+IP address might change sometimes because of various reason such as configuration change or [DHCP](/cs-notes/computer-networking/dhcp). MAC address act as a physical hardware identifier that never changes. As it is assigned permanently by manufacturer, no two devices should have the same MAC address.
 
 IP addresses facilitate communication between devices across networks, while MAC addresses provide physical addressing and facilitate communication within a local network segment. Overall MAC address is used in the data link layer of OSI model while IP address operator on the network layer.
 

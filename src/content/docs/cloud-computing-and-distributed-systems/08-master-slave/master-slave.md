@@ -19,7 +19,7 @@ Source: https://www.researchgate.net/figure/Master-slave-architecture_fig1_31729
 
 ### Example
 
-One common example of the master-slave architecture is [database replication](/database-system/logging-and-recovery#replication). Database stores a bunch of data, having a copy of them would minimize data loss. The concept of database replication is storing all or some subset of data in different device.
+One common example of the master-slave architecture is [database replication](/cs-notes/database-system/logging-and-recovery#replication). Database stores a bunch of data, having a copy of them would minimize data loss. The concept of database replication is storing all or some subset of data in different device.
 
 Any database operation that involves writing new data will only be applied to a single master database. One or more slave databases contains the replicate of the data. They are only responsible for handling read operation. The slave database will synchronize their data with the master over time.
 

@@ -11,23 +11,23 @@ description: AVI
 
 **AVI (Audio Video Interleave)** is a multimedia container format that supports both audio and video files. AVI is an older video format developed by Microsoft in 1992. An AVI file can include compression using various codecs, such as DivX, XviD, or MPEG-4.
 
-There are two types of AVI: Type 1, where audio and video data are [multiplexed](/digital-signal-processing/multiplexing), meaning they are stored and combined in the same file without wasting extra space; and Type 2, where the audio data is saved in a separate audio stream file.
+There are two types of AVI: Type 1, where audio and video data are [multiplexed](/cs-notes/digital-signal-processing/multiplexing), meaning they are stored and combined in the same file without wasting extra space; and Type 2, where the audio data is saved in a separate audio stream file.
 
 ![Icon of AVI format](./avi-icon.png)  
 Source: https://www.samsung.com/in/support/tv-audio-video/what-is-avi-format/
 
 ### AVI Compression
 
-AVI is simply a media [container](/digital-media-processing/ogg-vorbis#media-container) for audio and video data. It can use many codecs to compress both the audio and video.
+AVI is simply a media [container](/cs-notes/digital-media-processing/ogg-vorbis#media-container) for audio and video data. It can use many codecs to compress both the audio and video.
 
 #### DivX Codecs
 
 DivX is the codec for video with lossy compression.
 
 - **Interframe Compression**: Interframe compression is a technique, where the current frame of a video is encoded based on its differences from the previous frame. It takes advantage of the idea that each frame in a video sequence typically doesn't change abruptly from the previous frame, but rather changes gradually over time.
-- **[Quantization](/digital-signal-processing/quantization)**: DivX codecs use quantization to reduce the precision of video data. The range of original video data are compressed into a smaller set of values.
+- **[Quantization](/cs-notes/digital-signal-processing/quantization)**: DivX codecs use quantization to reduce the precision of video data. The range of original video data are compressed into a smaller set of values.
 - **Variable Bit Rate (VBR) Encoding**: Variable bit rate encoding allocates a higher bit rate to complex or high-motion scenes and a lower bit rate to less complex or static scenes.
-- **[Huffman Encoding](/digital-signal-processing/compression#huffman-encoding)**: A [lossless compression](/digital-signal-processing/compression#lossless-compression) technique that assigns shorter codes to frequently occurring data patterns and longer codes to less frequent patterns.
+- **[Huffman Encoding](/cs-notes/digital-signal-processing/compression#huffman-encoding)**: A [lossless compression](/cs-notes/digital-signal-processing/compression#lossless-compression) technique that assigns shorter codes to frequently occurring data patterns and longer codes to less frequent patterns.
 
 ### AVI Structure
 

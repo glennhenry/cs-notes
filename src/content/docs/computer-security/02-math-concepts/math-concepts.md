@@ -56,7 +56,7 @@ There are several methods to find the GCD:
 
 2. **Prime Factorization**: Find the prime factorization of each number. The prime factorization of $12$ is $2^2 \times 3$, prime factorization of $18$ is $2 \times 3^2$. To find the GCD, we will multiply the common factors shared by both numbers. When there are duplicate (e.g., there are $2^2$ and $2$, also $3^2$ and $3$), we will take the lowest one. The common factors are $2$ and $3$, we are ignoring the $2^2$ and $3^2$. Multiplying $2$ and $3$ will result in $6$, which is the GCD.
 
-3. **Euclidean Algorithm**: The Euclidean algorithm is a [recursive](/data-structures-and-algorithms/recursion) formula to find the GCD. The formula is $\text{GCD}(a, b) = \text{GCD}(b, a \text{ mod } b)$, where "mod" represents the **modulus operation**, which gives the remainder when $a$ is divided by $b$. $6$ divided by $4$ will have remainder of $2$, therefore, $6 \text{ mod } 4 = 2$.
+3. **Euclidean Algorithm**: The Euclidean algorithm is a [recursive](/cs-notes/data-structures-and-algorithms/recursion) formula to find the GCD. The formula is $\text{GCD}(a, b) = \text{GCD}(b, a \text{ mod } b)$, where "mod" represents the **modulus operation**, which gives the remainder when $a$ is divided by $b$. $6$ divided by $4$ will have remainder of $2$, therefore, $6 \text{ mod } 4 = 2$.
 
    This algorithm is recursive because it will repeatedly apply the formula until it reaches the base case, which is when any of the number becomes zero. At that point, the algorithm terminates, and the GCD is found to be the non-zero value.
 
@@ -144,7 +144,7 @@ The properties of modular multiplication:
 ![Modular exponentiation](./modular-exponentiation.png)  
 Source: https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/modular-exponentiation
 
-We break down the large power into smaller power and then calculate it independently, at the end, we will multiply them together. This technique is called [divide and conquer](/data-structures-and-algorithms/divide-and-conquer), that is, breaking down a big problem into smaller problem, solving them independently, and then combining the result to solve the overall problem.
+We break down the large power into smaller power and then calculate it independently, at the end, we will multiply them together. This technique is called [divide and conquer](/cs-notes/data-structures-and-algorithms/divide-and-conquer), that is, breaking down a big problem into smaller problem, solving them independently, and then combining the result to solve the overall problem.
 
 There are also more efficient algorithm to calculate the modulo of exponentiation.
 
@@ -177,7 +177,7 @@ The modular inverse of $A \text{ mod } C$ is the $B$ value that makes $A \times 
 
 ##### Extended Euclidean Algorithm
 
-Using the [Euclidean algorithm used to find GCD](/computer-security/math-concepts#greatest-common-divisor-gcd), we can also use the algorithm to find modular inverse more efficiently than the brute force way.
+Using the [Euclidean algorithm used to find GCD](/cs-notes/computer-security/math-concepts#greatest-common-divisor-gcd), we can also use the algorithm to find modular inverse more efficiently than the brute force way.
 
 The properties of Euclidean Algorithm:
 
@@ -185,11 +185,11 @@ The properties of Euclidean Algorithm:
 - $\text{GCD}(0, B) = B$
 - If $A = B \times Q + R$ and $B ≠ 0$ then $\text{GCD}(A, B) = \text{GCD}(B, R)$ where $Q$ is an integer, $R$ is an integer between $0$ and $B - 1$.
 
-For review, the first and second properties is the base case of Euclidean algorithm, the third property is the GCD algorithm formula: $\text{GCD}(a,b) = \text{GCD}(b,a\text{ mod }b)$ combined with the [quotient remainder theorem](/computer-security/math-concepts#quotient-remainder-theorem).
+For review, the first and second properties is the base case of Euclidean algorithm, the third property is the GCD algorithm formula: $\text{GCD}(a,b) = \text{GCD}(b,a\text{ mod }b)$ combined with the [quotient remainder theorem](/cs-notes/computer-security/math-concepts#quotient-remainder-theorem).
 
 ##### Bézout's Identity
 
-**Bézout's Identity** states that for any two integers $a$ and $m$ such that their GCD is equal to 1 (i.e., they are [relatively prime](/computer-security/math-concepts#relative-prime)), there exist integers $x$ and $y$ such that:
+**Bézout's Identity** states that for any two integers $a$ and $m$ such that their GCD is equal to 1 (i.e., they are [relatively prime](/cs-notes/computer-security/math-concepts#relative-prime)), there exist integers $x$ and $y$ such that:
 
 $ax + my = 1$
 

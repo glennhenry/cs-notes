@@ -10,11 +10,11 @@ description: Query Language
 - **[SQL syntax — Wikipedia](https://en.wikipedia.org/wiki/SQL_syntax)**
 - **Chapter 2, 5, 6 - Database Systems - The Complete Book (2nd Edition)**
 
-**Query Language** is a specific programming language designed to make [queries](/database-system/relational-data#query) in a database.
+**Query Language** is a specific programming language designed to make [queries](/cs-notes/database-system/relational-data#query) in a database.
 
 ### SQL
 
-One of the commonly used query language is the **Structured Query Language (SQL)**. SQL is a form of [declarative language](/computer-and-programming-fundamentals/declarative-functional-programming#declarative-programming), meaning users specify what data they want to retrieve or manipulate, rather than the traditional programming that specify what should a program does.
+One of the commonly used query language is the **Structured Query Language (SQL)**. SQL is a form of [declarative language](/cs-notes/computer-and-programming-fundamentals/declarative-functional-programming#declarative-programming), meaning users specify what data they want to retrieve or manipulate, rather than the traditional programming that specify what should a program does.
 
 :::tip
 SQL is just a query language, it is not an actual database. The actual database that is based on relational model (or called relational database) are database like MySQL, Oracle, Microsoft SQL Server, etc. These databases use SQL as the language in their relational database management systems (RDBMS).
@@ -147,7 +147,7 @@ SQL statements are categorized into 4 types based on their functionalities.
 ![Creating a table in SQL](./create-table.webp)  
 Source: https://allthingssql.com/sql-create-table-examples/
 
-The above is an example of creating a table in SQL (`CREATE TABLE` is a form of DDL). We will need to provide the [schema](/database-system/relational-data#schema) of the database, or basically the structure of how the database. For example, there is a column called `CompanyId` with the type of `INTEGER`, and it is defined as the [primary key](/database-system/relational-data#primary--foreign-key).
+The above is an example of creating a table in SQL (`CREATE TABLE` is a form of DDL). We will need to provide the [schema](/cs-notes/database-system/relational-data#schema) of the database, or basically the structure of how the database. For example, there is a column called `CompanyId` with the type of `INTEGER`, and it is defined as the [primary key](/cs-notes/database-system/relational-data#primary--foreign-key).
 
 #### Other Operations
 
@@ -237,7 +237,7 @@ Relational database, relational model, and SQL is originally based on several ma
 - **Relational calculus**: Relational calculus is a formal language for expressing queries in the relational model. It defines the logical and declarative approach to query formulation, where queries are expressed as formulas or rules. There are two types of relational calculus: tuple calculus and domain calculus. Tuple calculus operates on individual tuples, while domain calculus operates on the attributes and values of tuples.
 - **Predicate logics**: Predicate logic is a mathematical system used for formalizing logical statements and reasoning about them. It involves the use of predicates, which are statements that can be true or false depending on the values of their variables. Predicate logic are operators like logical (`AND`, `OR`, `NOT`) and comparison (`=`, `<`, `>`).
 
-Because SQL is [declarative](/computer-and-programming-fundamentals/declarative-functional-programming#declarative-programming), as a user, we will never be concerned in how the engine process the query. Under the hood, given a complex SQL statement, it is common for the database engine to process the operation based on these mathematical principles.
+Because SQL is [declarative](/cs-notes/computer-and-programming-fundamentals/declarative-functional-programming#declarative-programming), as a user, we will never be concerned in how the engine process the query. Under the hood, given a complex SQL statement, it is common for the database engine to process the operation based on these mathematical principles.
 
 For example, the SQL INTERSECTION is an easy example of set theory application. In mathematics, a set is defined as a collection of distinct elements. In SQL, tables can be thought of as sets of rows.
 
@@ -289,9 +289,9 @@ A database query goes to several processes:
    Source: https://www.researchgate.net/figure/A-Relational-Algebra-Tree_fig11_305333879
 
 2. **DDL Commands**: The DDL commands provided by the database administrator, which include the schema of the database will be passed to the DDL compiler, serving information about the database for the query process.
-3. **Transactions & Concurrency Control**: The query and other database operation will be grouped together into one unit of execution, called [transactions](/database-system/transactions). This is done to ensure the execution of all operations as a single unit, preventing the possibility of executing only some of them and being unable to complete the remaining operations due to system failures.
+3. **Transactions & Concurrency Control**: The query and other database operation will be grouped together into one unit of execution, called [transactions](/cs-notes/database-system/transactions). This is done to ensure the execution of all operations as a single unit, preventing the possibility of executing only some of them and being unable to complete the remaining operations due to system failures.
 
-   A piece of transaction is delegated to concurrency control, which is a component that handles concurrency mechanism. Two or more database operations that are reading and writing the same data, needs to be prevented to access it at the same time to prevent [data races](/computer-and-programming-fundamentals/concurrency#race-condition). The information of concurrency is stored in the lock table. The concurrency control decides the execution order and send it to execution engine.
+   A piece of transaction is delegated to concurrency control, which is a component that handles concurrency mechanism. Two or more database operations that are reading and writing the same data, needs to be prevented to access it at the same time to prevent [data races](/cs-notes/computer-and-programming-fundamentals/concurrency#race-condition). The information of concurrency is stored in the lock table. The concurrency control decides the execution order and send it to execution engine.
 
 4. **Execution Engine**: The query will be planned into a sequence of actions that the DBMS will perform. The execution engine is responsible to plan which operation is done first, in the case of multiple operation carried out within single query.
 
@@ -304,4 +304,4 @@ A database query goes to several processes:
 
 5. **Resource Manager**: Execution engine issue commands to the resource manager, which is a component that knows the information about the table and the location of them in the storage.
 6. **Buffer Manager**: Buffer manager is the component that manages memory. The storage stores data in a form of block, which is a fixed-size unit of data for storage. The buffer manager will partition the main memory into buffers, which is a fixed-size unit of data for memory. The buffers serve as the memory region where disk block transfer take place.
-7. **Storage & Storage Manager**: The storage is typically a secondary storage such as hard disk. Disk stores nothing but blocks of data, it will require a component that knows the placement of block in the disk. In other word, the component know the file structure of disk. The component that know it is **storage manager**, it will be responsible for controlling the data transfer between buffer manager and the underlying storage. In simple database system, the storage manager can be the [file system](/operating-system/file-system) of the operating system.
+7. **Storage & Storage Manager**: The storage is typically a secondary storage such as hard disk. Disk stores nothing but blocks of data, it will require a component that knows the placement of block in the disk. In other word, the component know the file structure of disk. The component that know it is **storage manager**, it will be responsible for controlling the data transfer between buffer manager and the underlying storage. In simple database system, the storage manager can be the [file system](/cs-notes/operating-system/file-system) of the operating system.

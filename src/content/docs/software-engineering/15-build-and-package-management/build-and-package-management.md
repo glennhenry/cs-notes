@@ -58,13 +58,13 @@ The functions of package manager:
 
   To actually install library, we need to tell the package manager to retrieve the package. This is done by executing commands provided by the package manager in the command line. They will handle the necessary steps to download, extract, and install the package files, including any additional resources or configurations, similarly for deletion or removal. The package manager also keep tracks the version we are using, and we can use another command to update the package to the latest version.
 
-- **Dependency Resolution**: Package manager analyze each dependency of different packages. They examine the version requirements and constraints specified by each package and attempt to find a compatible set of versions that satisfy all dependencies. It can construct a [directed graph](/data-structures-and-algorithms/graph) to represent the dependency structure. It then uses algorithm such as [cycle detection](/data-structures-and-algorithms/cycle-detection) and [topological sort](/data-structures-and-algorithms/topological-sort) to identify circular dependencies and determine the correct order to install dependencies.
+- **Dependency Resolution**: Package manager analyze each dependency of different packages. They examine the version requirements and constraints specified by each package and attempt to find a compatible set of versions that satisfy all dependencies. It can construct a [directed graph](/cs-notes/data-structures-and-algorithms/graph) to represent the dependency structure. It then uses algorithm such as [cycle detection](/cs-notes/data-structures-and-algorithms/cycle-detection) and [topological sort](/cs-notes/data-structures-and-algorithms/topological-sort) to identify circular dependencies and determine the correct order to install dependencies.
 - **Dependency Locking**: To ensure consistency between dependencies, package managers often generate lock files. These lock files capture the exact versions of the installed packages, including their dependencies. Lock files ensure that dependency version doesn't change suddenly.
 
   Over time, new versions of packages may be released. Without locking the version, it is possible that the package manager accidentally update the package, which may introduce compatibility issue with the existing dependencies.
 
 :::info
-An example of package manager is [npm](/internet-and-web/javascript#npm), which is the default package manager for [Node.js](/internet-and-web/javascript#node-js) projects.
+An example of package manager is [npm](/cs-notes/internet-and-web/javascript#npm), which is the default package manager for [Node.js](/cs-notes/internet-and-web/javascript#node-js) projects.
 :::
 
 :::warning
@@ -92,7 +92,7 @@ In order to run a program, it needs to be compiled, or converted into machine co
 
 A build process includes:
 
-- **[Compilation](/compilers-and-programming-languages/cpl-fundamentals#compiler-toolchain)**: Translating human-readable source code into machine-readable code, or intermediate language in the case of [interpreted languages](/computer-and-programming-fundamentals/interpreter).
+- **[Compilation](/cs-notes/compilers-and-programming-languages/cpl-fundamentals#compiler-toolchain)**: Translating human-readable source code into machine-readable code, or intermediate language in the case of [interpreted languages](/cs-notes/computer-and-programming-fundamentals/interpreter).
 - **Dependency Resolution**: Identifies and resolves the dependencies required by the software project. Ensures that the necessary external libraries, frameworks, or modules are available and compatible with the project. Some build tools such as Gradle includes a package manager for this.
 - **Quality Assurance**: During build process, code quality is tested. This includes doing automated unit tests or analyzing code with integrated static analyzer tools.
 - **Code Packaging**: Packages the necessary files and resources into a distributable format. This may involve creating an executable file, a library, an archive, or a deployable package, depending on the nature of the project.

@@ -8,16 +8,16 @@ description: MP3
 
 - **[MP3 — Wikipedia](https://en.wikipedia.org/wiki/MP3)**
 
-**MP3 (MPEG Audio Layer-3)** is a digital audio format that uses [lossy compression](/digital-signal-processing/compression#lossy-compression), resulting in much smaller file than the uncompressed [WAV](/digital-media-processing/wav).
+**MP3 (MPEG Audio Layer-3)** is a digital audio format that uses [lossy compression](/cs-notes/digital-signal-processing/compression#lossy-compression), resulting in much smaller file than the uncompressed [WAV](/cs-notes/digital-media-processing/wav).
 
 ### MP3 Compression
 
 MP3 is known for its compression to achieve a 75 to 95% reduction in size.
 
-1. **Transform Coding**: MP3 uses the modified [discrete cosine transform](/digital-signal-processing/discrete-cosine-transform) (MDCT), which can handle overlapping signals.
+1. **Transform Coding**: MP3 uses the modified [discrete cosine transform](/cs-notes/digital-signal-processing/discrete-cosine-transform) (MDCT), which can handle overlapping signals.
 2. **Psychoacoustics Modeling**: Psychoacoustic modeling removes less relevant data by analyzing human hearing. This may include removing frequencies and components that are masked by louder or more important sounds.
-3. **[Quantization](/digital-signal-processing/quantization)**: Quantization is the process of assigning a limited number of bits to represent the amplitude of the audio samples. In MP3, quantization process also takes account the psychoacoustic modeling.
-4. **[Huffman Encoding](/digital-signal-processing/compression#huffman-encoding)**: Huffman encoding replace frequently occurring audio values with short code identifier and longer codes to less frequent values, to reduce the overall number of bits required to represent the data.
+3. **[Quantization](/cs-notes/digital-signal-processing/quantization)**: Quantization is the process of assigning a limited number of bits to represent the amplitude of the audio samples. In MP3, quantization process also takes account the psychoacoustic modeling.
+4. **[Huffman Encoding](/cs-notes/digital-signal-processing/compression#huffman-encoding)**: Huffman encoding replace frequently occurring audio values with short code identifier and longer codes to less frequent values, to reduce the overall number of bits required to represent the data.
 
 ![An illustration of psychoacoustics modeling](./psychoacoustics-modeling.jpeg)  
 Source: https://ledgernote.com/blog/q-and-a/how-does-mp3-compression-work/

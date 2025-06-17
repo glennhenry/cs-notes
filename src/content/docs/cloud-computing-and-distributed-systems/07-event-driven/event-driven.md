@@ -7,7 +7,7 @@ description: Event-Driven
 **Main Source:**
 
 - **[Event-driven architecture — Wikipedia](https://en.wikipedia.org/wiki/Event-driven_architecture)**
-- **[Previous notes on reactive programming](/computer-and-programming-fundamentals/concurrency#reactive-programming)**
+- **[Previous notes on reactive programming](/cs-notes/computer-and-programming-fundamentals/concurrency#reactive-programming)**
 
 **Event-Driven** is an architecture that structures an application or system around the production, detection, and consumption of events.
 
@@ -23,7 +23,7 @@ The idea of event-driven architecture is, an entity in the system produces an ev
 
 The entity responsible for generating an event is referred to as a **producer** (or **publisher**, **emitter**). The event is then broadcasted to the system. The entity interested in the event is known as a **consumer** and should **subscribe** to the specific producer to receive notifications whenever an event occurs. Once the event is received, the consumer will then **consume** it.
 
-Broadcast of events are sent to **channel**, which is a medium for publishing and subscribing to events. It serves as a central hub where events are published by event producers and then delivered to the interested event consumers. Channel can be implemented in many ways, such as event bus or [message broker](/backend-system/message-broker).
+Broadcast of events are sent to **channel**, which is a medium for publishing and subscribing to events. It serves as a central hub where events are published by event producers and then delivered to the interested event consumers. Channel can be implemented in many ways, such as event bus or [message broker](/cs-notes/backend-system/message-broker).
 
 ![An event bus](./event-bus.png)  
 Source: https://medium.com/elixirlabs/event-bus-implementation-s-d2854a9fafd5
@@ -34,7 +34,7 @@ Source: https://www.vmware.com/topics/glossary/content/message-brokers.html
 The characteristics of event-driven architecture that decouple producer and consumer make it scalable. Event producers generate events without needing to know if there is someone interested in them. Consumers do not need to periodically check for the occurrence of events; instead, they can be notified about events they are interested in simply by subscribing to the producer.
 
 :::tip
-See also [reactive programming](/computer-and-programming-fundamentals/concurrency#reactive-programming).
+See also [reactive programming](/cs-notes/computer-and-programming-fundamentals/concurrency#reactive-programming).
 :::
 
 ### Example
@@ -106,5 +106,5 @@ fun main() {
 The action we set whenever a button is clicked is to print "Button clicked!". Again, this is a simplified implementation, the actual logic of `didUserClick` may involve asking mouse click from OS.
 
 :::tip
-See also [observer design pattern](/software-engineering/behavioral-patterns#observer).
+See also [observer design pattern](/cs-notes/software-engineering/behavioral-patterns#observer).
 :::
