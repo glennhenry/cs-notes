@@ -928,20 +928,6 @@ export default defineConfig({
             "cloud-computing-and-distributed-systems/cloud-services",
           ],
         },
-
-        // 19. Android OS
-        {
-          label: "Android OS",
-          collapsed: true,
-          items: [],
-        },
-
-        // 20. Android Development
-        {
-          label: "Android Development",
-          collapsed: true,
-          items: [],
-        },
       ],
     }),
   ],
