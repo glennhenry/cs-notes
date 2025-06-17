@@ -8,6 +8,6 @@ import ObsidianSidebar from "starlight-theme-obsidian/overrides/Sidebar.astro";
   const activeLink = document.querySelector('.sidebar a[aria-current="page"]');
 
   if (activeLink && activeLink.scrollIntoView) {
-    activeLink.scrollIntoView();
+    activeLink.scrollIntoView({"block": "center"});
   }
 </script>
