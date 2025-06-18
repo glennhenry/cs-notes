@@ -25,6 +25,7 @@
   --sl-text-4xl: 1.4rem;
   --sl-text-3xl: 1.2rem;
   --sl-text-2xl: 1rem;
+  --sl-text-xs: 1rem;
   --sl-text-code-sm: 0.9rem;
 }
 
@@ -53,13 +54,52 @@
   --sl-text-4xl: 1.8rem;
   --sl-text-3xl: 1.6rem;
   --sl-text-2xl: 1.3rem;
+  --sl-text-xs: 1rem;
   --sl-text-code-sm: 0.9rem;
 }
 
 @layer obsidian {
+  @media (min-width: 50em) {
+    .main-pane {
+      padding-top: 3rem;
+    }
+
+    .sidebar {
+      padding-top: 3rem;
+    }
+
+    .sidebar-content {
+      height: 80%;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .sidebar,
+  .right-sidebar {
+    font-family: "Source Sans 3", ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
   :root[data-theme="dark"] {
     --sl-color-bg: rgb(36, 36, 40);
   }
+}
+
+@layer starlight.core {
+  .top-level > li {
+    padding: 0.1rem var(--sl-sidebar-item-padding-inline);
+  }
+}
+
+.right-sidebar-panel a {
+  padding-top: 0.1rem;
 }
 
 .site-title {
@@ -68,18 +108,6 @@
 
 .content-panel img {
   border: 1px solid black;
-}
-
-.sidebar-content {
-  border-right: 1px solid var(--sl-color-panel-divider);
-}
-
-.content-panel:has(h1) {
-  border-bottom: 1px solid var(--sl-color-panel-divider);
-}
-
-.right-sidebar {
-  border-left: 1px solid var(--sl-color-panel-divider);
 }
 
 .pagination-links {
@@ -96,6 +124,5 @@ footer {
 }
 
 .kudos {
-  margin-top: 0;
-  margin-bottom: 0;
+  align-self: center;
 }
