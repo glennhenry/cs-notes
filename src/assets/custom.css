@@ -2,7 +2,7 @@
 /* https://fevol.github.io/starlight-site-graph/configuration/css/variables/ */
 
 /* Dark mode colors. */
-:root {
+:root[data-theme="dark"] {
   --sl-color-accent-low: #7c597e;
   --sl-color-accent: #de8be0;
   --sl-color-accent-high: #eab1ec;
@@ -15,18 +15,10 @@
   --sl-color-gray-6: #272727;
   --sl-color-black: #2e2e2e;
 
-  /* Custom */
   --sl-color-panel-divider: #454848;
   --slsg-graph-outline-color: #454848;
   --sl-color-hairline: #454848;
-
-  --sl-content-width: 55rem;
-  --sl-text-5xl: 2.2rem;
-  --sl-text-4xl: 1.4rem;
-  --sl-text-3xl: 1.2rem;
-  --sl-text-2xl: 1rem;
-  --sl-text-xs: 1rem;
-  --sl-text-code-sm: 0.9rem;
+  --sl-color-body-highlight: #362e42;
 }
 
 /* Light mode colors. */
@@ -44,11 +36,18 @@
   --sl-color-gray-7: #dfdfdf;
   --sl-color-black: #e6e6e6;
 
-  /* Custom */
   --sl-color-panel-divider: #b7bdc8;
   --slsg-graph-outline-color: #b7bdc8;
   --sl-color-hairline: #b7bdc8;
+  --sl-color-body-highlight: #ecd5ec;
 
+  /* Hover text color only for light theme */
+  .sl-markdown-content a:not(:has(> code)):hover {
+    color: #a86ec4;
+  }
+}
+
+:root {
   --sl-content-width: 55rem;
   --sl-text-5xl: 2.2rem;
   --sl-text-4xl: 1.8rem;
@@ -56,9 +55,27 @@
   --sl-text-2xl: 1.3rem;
   --sl-text-xs: 1rem;
   --sl-text-code-sm: 0.9rem;
+
+  /* Highlighted color behind bold, italic, and hyperlink texts */
+  .sl-markdown-content strong {
+    font-weight: 600;
+  }
+  .sl-markdown-content strong,
+  .sl-markdown-content em,
+  .sl-markdown-content a:not(:has(> code)) {
+    background-color: var(--sl-color-body-highlight);
+    padding: 0.15rem;
+    border-radius: 0.3rem;
+  }
+
+  .sl-markdown-content a[target="_blank"] {
+    display: inline-flex;
+    align-items: center;
+  }
 }
 
 @layer obsidian {
+  /* Spacing: enable blank space vertically on sidebar and main content */
   @media (min-width: 50em) {
     .main-pane {
       padding-top: 3rem;
@@ -73,6 +90,7 @@
     }
   }
 
+  /* Change font for headings, left sidebar, and right sidebar texts */
   h1,
   h2,
   h3,
@@ -88,13 +106,22 @@
   }
 
   :root[data-theme="dark"] {
-    --sl-color-bg: rgb(36, 36, 40);
+    --sl-color-bg: rgb(30, 30, 32);
   }
 }
 
-@layer starlight.core {
-  .top-level > li {
-    padding: 0.1rem var(--sl-sidebar-item-padding-inline);
+@layer starlight {
+  .top-level li {
+    padding-left: var(--sl-sidebar-item-padding-inline);
+    padding-right: var(--sl-sidebar-item-padding-inline);
+  }
+
+  .top-level a {
+    padding-top: 0.1rem;
+  }
+
+  .mobile-preferences {
+    padding-bottom: 1rem;
   }
 }
 
@@ -106,7 +133,7 @@
   height: 50px;
 }
 
-.content-panel img {
+.sl-markdown-content img {
   border: 1px solid black;
 }
 
