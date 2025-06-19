@@ -72,6 +72,10 @@
     display: inline-flex;
     align-items: center;
   }
+
+  .sl-heading-wrapper {
+    margin-top: 1em;
+  }
 }
 
 @layer obsidian {
