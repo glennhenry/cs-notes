@@ -5,6 +5,8 @@ import starlightThemeObsidian from "starlight-theme-obsidian";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeExternalLinks from "rehype-external-links";
+import externalLinkIcon from "./src/assets/externalLinkIcon.js";
+import { fontHeadTags } from "./src/assets/headlinks.js";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,44 +14,11 @@ export default defineConfig({
   base: "cs-notes",
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [
-      rehypeKatex,
-      [
-        rehypeExternalLinks,
-        {
-          content: { type: "text", value: " ↗" },
-          target: "_blank",
-          rel: ["noopener", "noreferrer"],
-        },
-      ],
-    ],
+    rehypePlugins: [rehypeKatex, [rehypeExternalLinks, externalLinkIcon]],
   },
   integrations: [
     starlight({
-      head: [
-        {
-          tag: "link",
-          attrs: {
-            rel: "preconnect",
-            href: "https://fonts.googleapis.com",
-          },
-        },
-        {
-          tag: "link",
-          attrs: {
-            rel: "preconnect",
-            href: "https://fonts.gstatic.com",
-            crossorigin: "",
-          },
-        },
-        {
-          tag: "link",
-          attrs: {
-            rel: "stylesheet",
-            href: "https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap",
-          },
-        },
-      ],
+      head: [...fontHeadTags],
       plugins: [starlightThemeObsidian()],
       customCss: ["./src/assets/custom.css"],
       logo: {
@@ -60,7 +29,6 @@ export default defineConfig({
         baseUrl: "https://github.com/glennhenry/cs-notes/edit/main/",
       },
       credits: true,
-
       title: "CS Notes",
       components: {
         Pagination: "./src/components/Pagination.astro",
