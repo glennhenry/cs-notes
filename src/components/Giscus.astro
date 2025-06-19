@@ -40,9 +40,17 @@
     );
   }
 
+  function is404() {
+    const titleEl = document.querySelector("h1[data-page-title]");
+    const pageTitle = titleEl?.textContent?.trim();
+    return pageTitle === "404";
+  }
+
   window.addEventListener("DOMContentLoaded", () => {
-    const theme = getCurrentTheme();
-    loadGiscus(theme);
+    if (!is404()) {
+      const theme = getCurrentTheme();
+      loadGiscus(theme);
+    }
   });
 
   const observer = new MutationObserver(() => {
