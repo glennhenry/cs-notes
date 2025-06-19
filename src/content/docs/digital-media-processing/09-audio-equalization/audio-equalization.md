@@ -6,7 +6,7 @@ description: Audio Equalization
 
 **Main Source:**
 
-- **[Equalization (audio) — Wikipedia](<https://en.wikipedia.org/wiki/Equalization_(audio)>)**
+- **[Equalization (audio) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Equalization_(audio)>)**
 - **[What Is Equalization? | Simple Explanation For Beginners — C-Threep](https://youtu.be/4FkKiWJfd00)**
 
 **Audio equalization**, often referred to as EQ, is the process of adjusting a specific range of frequency to make it stronger (sounds louder) or weaker (sounds softer).

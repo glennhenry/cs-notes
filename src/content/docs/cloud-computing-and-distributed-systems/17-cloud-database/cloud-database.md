@@ -20,8 +20,8 @@ Benefits:
 
 The two methods to run database on the cloud:
 
-- Cloud provider could provide cloud database by providing a service. The service that provide database as a service is called Database-as-a-service (DBaaS), and is a type of [SaaS](/cloud-computing-and-distributed-systems/cloud-models#common-models).
-- Run database by using [virtual machine](/cloud-computing-and-distributed-systems/virtualization) image. The idea is, a pre-configured template that contains an operating system and any required software, including the database system is packaged into format called image. The format will be uploaded to the cloud service provider, where they will execute the image on a virtual machine.
+- Cloud provider could provide cloud database by providing a service. The service that provide database as a service is called Database-as-a-service (DBaaS), and is a type of [SaaS](/cs-notes/cloud-computing-and-distributed-systems/cloud-models#common-models).
+- Run database by using [virtual machine](/cs-notes/cloud-computing-and-distributed-systems/virtualization) image. The idea is, a pre-configured template that contains an operating system and any required software, including the database system is packaged into format called image. The format will be uploaded to the cloud service provider, where they will execute the image on a virtual machine.
 
 ### Usage
 

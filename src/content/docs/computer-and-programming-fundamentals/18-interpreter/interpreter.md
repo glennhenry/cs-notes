@@ -6,7 +6,7 @@ description: Interpreter
 
 **Main Source:**
 
-- **[Interpreter (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Interpreter_(computing)>)**
+- **[Interpreter (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Interpreter_(computing)>)**
 - **[Just-in-time compilation — Wikipedia](https://en.wikipedia.org/wiki/Just-in-time_compilation)**
 - **[Just in Time Compilation Explained — freeCodeCamp](https://www.freecodecamp.org/news/just-in-time-compilation-explained/)**
 - **[What does a just-in-time (JIT) compiler do? — stackoverflow](https://stackoverflow.com/questions/95635/what-does-a-just-in-time-jit-compiler-do)**

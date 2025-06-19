@@ -6,8 +6,8 @@ description: Concurrency
 
 **Main Source:**
 
-- **[Process (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Process_(computing)>)**
-- **[Thread (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Thread_(computing)>)**
+- **[Process (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Process_(computing)>)**
+- **[Thread (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Thread_(computing)>)**
 - **[Multiprocessing — Wikipedia](https://en.wikipedia.org/wiki/Multiprocessing)**
 - **[Blocking threads, suspending coroutines by Roman Elizarov — Medium](https://elizarov.medium.com/blocking-threads-suspending-coroutines-d33e11bf4761)**
 - **[Asynchronous programming techniques — Kotlin Docs](https://kotlinlang.org/docs/async-programming.html)**

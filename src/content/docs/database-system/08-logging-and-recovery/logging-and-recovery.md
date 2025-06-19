@@ -6,10 +6,10 @@ description: Logging & Recovery
 
 **Main Source:**
 
-- **[Logging (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Logging_(computing)>)**
+- **[Logging (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Logging_(computing)>)**
 - **[Transaction log — Wikipedia](https://en.wikipedia.org/wiki/Transaction_log)**
 - **[Write-ahead logging — Wikipedia](https://en.wikipedia.org/wiki/Write-ahead_logging)**
-- **[Replication (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Replication_(computing)>)**
+- **[Replication (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Replication_(computing)>)**
 - **[Schema migration — Wikipedia](https://en.wikipedia.org/wiki/Schema_migration)**
 - **Chapter 5, Designing Data Intensive Applications — Martin Kleppmann**
 
@@ -48,7 +48,7 @@ The transaction and logging usually happens periodically. Transaction are writte
 
 ### Replication
 
-**Replication** is the process of maintaining a copy of data for improved availability, fault-tolerance, and serving more request. When one instance of database fails, we can use the others. Furthermore, with more instance being present, they can help to serve multiple database request. This can be done locally or in a [distributed database](/cloud-computing-and-distributed-systems/distributed-database).
+**Replication** is the process of maintaining a copy of data for improved availability, fault-tolerance, and serving more request. When one instance of database fails, we can use the others. Furthermore, with more instance being present, they can help to serve multiple database request. This can be done locally or in a [distributed database](/cs-notes/cloud-computing-and-distributed-systems/distributed-database).
 
 Key concept of data replication:
 
@@ -61,7 +61,7 @@ Some techniques of replication:
 
 - **Master-Slave Replication**: Also known as leader-follower replication, this approach rely on two types of node. A _master_ database handles write operations, while one or more _slave_ databases replicate the data from the master. The slaves are intended to be read-only, they can only serve read queries from clients. The master should be responsible for propagating the changes to the slaves asynchronously or synchronously in some amount of time.
 
-  The downside of using single master is, it could be overwhelmed by all the write request. Furthermore, it can lead to a single point of failures when the master fails. For that reason, when a master fails, it may be needed to select a new master through algorithm like [leader election](/cloud-computing-and-distributed-systems/distributed-systems-model#leader-election).
+  The downside of using single master is, it could be overwhelmed by all the write request. Furthermore, it can lead to a single point of failures when the master fails. For that reason, when a master fails, it may be needed to select a new master through algorithm like [leader election](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-model#leader-election).
 
 - **Multi-Master Replication**: In this approach, multiple master are present in the system. Each master can handle write operations independently, and changes made on one master are replicated to the other masters.
 

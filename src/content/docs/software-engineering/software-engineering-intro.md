@@ -1,6 +1,6 @@
 ---
 title: Software Engineering
-slug: software-engineering
+slug: software-engineering-intro
 description: Software Engineering Notes
 ---
 
@@ -36,28 +36,28 @@ A good software is associated with several characteristics:
 
 ### All pages
 
-- [Software Process](software-engineering/software-process)
+- [Software Process](/cs-notes/software-engineering/software-process)
 - Software Design
-  - [Software Principles](software-engineering/software-principles)
-  - [Diagrams](software-engineering/diagrams)
+  - [Software Principles](/cs-notes/software-engineering/software-principles)
+  - [Diagrams](/cs-notes/software-engineering/diagrams)
   - Design Patterns
-    - [Creational Patterns](software-engineering/creational-patterns)
-    - [Structural Patterns](software-engineering/structural-patterns)
-    - [Behavioral Patterns](software-engineering/behavioral-patterns)
+    - [Creational Patterns](/cs-notes/software-engineering/creational-patterns)
+    - [Structural Patterns](/cs-notes/software-engineering/structural-patterns)
+    - [Behavioral Patterns](/cs-notes/software-engineering/behavioral-patterns)
 - Software Architecture
-  - [Client-Server](software-engineering/client-server)
-  - [Event-Driven](software-engineering/event-driven)
-  - [Master-Slave](software-engineering/master-slave)
-  - [Peer-to-Peer](software-engineering/peer-to-peer)
-  - [Layered](software-engineering/layered)
-  - [Other Architecture Patterns](software-engineering/other-architecture-patterns)
+  - [Client-Server](/cs-notes/software-engineering/client-server)
+  - [Event-Driven](/cs-notes/software-engineering/event-driven)
+  - [Master-Slave](/cs-notes/software-engineering/master-slave)
+  - [Peer-to-Peer](/cs-notes/software-engineering/peer-to-peer)
+  - [Layered](/cs-notes/software-engineering/layered)
+  - [Other Architecture Patterns](/cs-notes/software-engineering/other-architecture-patterns)
 - Software Management
-  - [Software Testing](software-engineering/software-testing)
-  - [Software Debugging](software-engineering/software-debugging)
-  - [Build & Package Management](software-engineering/build-and-package-management)
-  - [Version Control](software-engineering/version-control)
-  - [Open Sourcing](software-engineering/open-sourcing)
-  - [Modularization](software-engineering/modularization)
-  - [Software Deployment](software-engineering/software-deployment)
-- [System Design](software-engineering/system-design)
-- [System Design Examples](software-engineering/system-design-examples)
+  - [Software Testing](/cs-notes/software-engineering/software-testing)
+  - [Software Debugging](/cs-notes/software-engineering/software-debugging)
+  - [Build & Package Management](/cs-notes/software-engineering/build-and-package-management)
+  - [Version Control](/cs-notes/software-engineering/version-control)
+  - [Open Sourcing](/cs-notes/software-engineering/open-sourcing)
+  - [Modularization](/cs-notes/software-engineering/modularization)
+  - [Software Deployment](/cs-notes/software-engineering/software-deployment)
+- [System Design](/cs-notes/software-engineering/system-design)
+- [System Design Examples](/cs-notes/software-engineering/system-design-examples)

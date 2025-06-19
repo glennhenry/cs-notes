@@ -6,7 +6,7 @@ description: Server
 
 **Main Source:**
 
-- **[Server (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Server_(computing)>)**
+- **[Server (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Server_(computing)>)**
 - **[What is a Server? Servers vs Desktops Explained — PowerCert](https://youtu.be/UjCDWCeHCzY?si=BsG1UnE7fWlNjpZx)**
 - **[Caching — Simply Explained](https://youtu.be/6FyXURRVmR0?si=xPJK4Vr46tW55wOa)**
 - **[What is a content delivery network (CDN)? | How do CDNs work? — Cloudflare](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)**

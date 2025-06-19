@@ -7,7 +7,7 @@ description: Database Optimization
 **Main Source:**
 
 - **[Query optimization — Wikipedia](https://en.wikipedia.org/wiki/Query_optimization)**
-- **[Partition (database) — Wikipedia](<https://en.wikipedia.org/wiki/Partition_(database)>)**
+- **[Partition (database) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Partition_(database)>)**
 - **Chapter 6, Designing Data Intensive Applications — Martin Kleppmann**
 
 [Query language](/cs-notes/database-system/query-language), typically being a declarative language, allows it to make its own optimization. It is up to the database engine how will it perform the database operation. Query language doesn't rely on specific instruction from the programmer, this makes the compiler able to produce a highly optimized query in a controlled way.
@@ -82,7 +82,7 @@ Type of database partitioning:
 2. **List Partitioning**: Divides data based on specific values or a list of values from a chosen attribute. For instance, a database could be partitioned based on region attribute, where each partition contains data related to a specific region.
 3. **Composite Partitioning**: Composite partitioning combines multiple partitioning techniques to create more complex partitioning strategies.
 4. **Round-robin Partitioning**: Round-robin partitioning evenly distributes data across partitions circularly. Each new record is inserted into the next partition cyclically. This technique can be useful when the data distribution is expected to be uniform and there is no specific criterion for partitioning.
-5. **Hash Partitioning**: Hash partitioning distributes the data across partitions based on a [hash function](/cs-notes/computer-security/hash-function) applied to a chosen attribute. The hash function ensures an even distribution of data across partitions, making it useful when there is no natural range or list criterion for partitioning. One technique for this is the [consistent hashing](/cloud-computing-and-distributed-systems/distributed-systems-communication#distributed-hash-tables).
+5. **Hash Partitioning**: Hash partitioning distributes the data across partitions based on a [hash function](/cs-notes/computer-security/hash-function) applied to a chosen attribute. The hash function ensures an even distribution of data across partitions, making it useful when there is no natural range or list criterion for partitioning. One technique for this is the [consistent hashing](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-communication#distributed-hash-tables).
 
    A scenario where partition is not fair, where one instance hold more than the other, we would call the system _skewed_. Unfair partition would make certain instance experience more workload (being a _hotspots_) and some are potentially idle.
 

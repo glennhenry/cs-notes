@@ -6,7 +6,7 @@ description: Ports
 
 **Main Source:**
 
-- **[Port (computer networking) — Wikipedia](<https://en.wikipedia.org/wiki/Port_(computer_networking)>)**
+- **[Port (computer networking) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Port_(computer_networking)>)**
 - **[Network Ports Explained — PowerCert](https://youtu.be/g2fT-g9PX9o)**
 - **[Port Forwarding Explained — PowerCert](https://youtu.be/2G1ueMDgwxw)**
 - **[Port scanner — Wikipedia](https://en.wikipedia.org/wiki/Port_scanner)**
@@ -28,7 +28,7 @@ A list of used port can be found in this [Wikipedia](https://en.wikipedia.org/wi
 
 Port is used together with IP address to communicate. The IP address is used to know the location of the destination, while port is to specify what type of communication we want to do. For example, an HTTP request is made to `http://www.google.com`, the IP address of `google.com` is `215.114.85.17`, with the port 80 it will become `215.114.85.17:80`.
 
-**Port Forwarding** is a technique used to redirect network traffic from one IP address and port combination to another IP address and port combination. It allows incoming connections or data packets destined for a specific port on a [router](/cs-notes/computer-networking/router) or [firewall](//computer-security/network-security#firewall) to be forwarded to a different port or device on the local network.
+**Port Forwarding** is a technique used to redirect network traffic from one IP address and port combination to another IP address and port combination. It allows incoming connections or data packets destined for a specific port on a [router](/cs-notes/computer-networking/router) or [firewall](/cs-notes/computer-security/network-security#firewall) to be forwarded to a different port or device on the local network.
 
 Our router receives data from external network along with our router's IP address as the destination and also a port. Port forwarding can be thought as the router translating the IP address with the port, so it will be redirected to local device on the network.
 

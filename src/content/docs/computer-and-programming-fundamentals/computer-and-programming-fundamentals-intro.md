@@ -1,6 +1,6 @@
 ---
 title: Computer & Programming Fundamentals
-slug: computer-and-programming-fundamentals
+slug: computer-and-programming-fundamentals-intro
 description: Computer & Programming Fundamentals Notes
 ---
 
@@ -13,30 +13,30 @@ Although the topic seems introductory, it actually assumes certain programming k
 ### All pages
 
 - Computer Representation
-  - [Number System](computer-and-programming-fundamentals/number-system)
-  - [Binary Representation](computer-and-programming-fundamentals/binary-representation)
-  - [Bitwise Operation](computer-and-programming-fundamentals/bitwise-operation)
-  - [Floating Number](computer-and-programming-fundamentals/floating-number)
-  - [Data Representation](computer-and-programming-fundamentals/data-representation)
+  - [Number System](/cs-notes/computer-and-programming-fundamentals/number-system)
+  - [Binary Representation](/cs-notes/computer-and-programming-fundamentals/binary-representation)
+  - [Bitwise Operation](/cs-notes/computer-and-programming-fundamentals/bitwise-operation)
+  - [Floating Number](/cs-notes/computer-and-programming-fundamentals/floating-number)
+  - [Data Representation](/cs-notes/computer-and-programming-fundamentals/data-representation)
 - Computer Fundamentals
-  - [Operating System](computer-and-programming-fundamentals/operating-system)
-  - [Memory](computer-and-programming-fundamentals/memory)
+  - [Operating System](/cs-notes/computer-and-programming-fundamentals/operating-system)
+  - [Memory](/cs-notes/computer-and-programming-fundamentals/memory)
 - Programming Fundamentals
-  - [Programming Concepts](computer-and-programming-fundamentals/programming-concepts)
-  - [Data Structures & Algorithms](computer-and-programming-fundamentals/data-structures-and-algorithms)
+  - [Programming Concepts](/cs-notes/computer-and-programming-fundamentals/programming-concepts)
+  - [Data Structures & Algorithms](/cs-notes/computer-and-programming-fundamentals/data-structures-and-algorithms)
   - Programming Paradigm
     - Imperative
-      - [Imperative & Procedural Programming](computer-and-programming-fundamentals/imperative-procedural-programming)
-      - [Object-Oriented Programming](computer-and-programming-fundamentals/object-oriented-programming)
+      - [Imperative & Procedural Programming](/cs-notes/computer-and-programming-fundamentals/imperative-procedural-programming)
+      - [Object-Oriented Programming](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming)
     - Declarative
-      - [Declarative & Functional Programming](computer-and-programming-fundamentals/declarative-functional-programming)
-      - [Query Language](computer-and-programming-fundamentals/query-language)
-      - [Logic Programming](computer-and-programming-fundamentals/logic-programming)
+      - [Declarative & Functional Programming](/cs-notes/computer-and-programming-fundamentals/declarative-functional-programming)
+      - [Query Language](/cs-notes/computer-and-programming-fundamentals/query-language)
+      - [Logic Programming](/cs-notes/computer-and-programming-fundamentals/logic-programming)
   - General Concepts
-    - [Concurrency](computer-and-programming-fundamentals/concurrency)
-    - [Caching](computer-and-programming-fundamentals/caching)
+    - [Concurrency](/cs-notes/computer-and-programming-fundamentals/concurrency)
+    - [Caching](/cs-notes/computer-and-programming-fundamentals/caching)
 - Code Execution
-  - [Compilation](computer-and-programming-fundamentals/compilation)
-  - [Interpreter](computer-and-programming-fundamentals/interpreter)
-  - [Runtime Environment](computer-and-programming-fundamentals/runtime-environment)
-- [Computer & Programming Terminology](computer-and-programming-fundamentals/computer-and-programming-terminology)
+  - [Compilation](/cs-notes/computer-and-programming-fundamentals/compilation)
+  - [Interpreter](/cs-notes/computer-and-programming-fundamentals/interpreter)
+  - [Runtime Environment](/cs-notes/computer-and-programming-fundamentals/runtime-environment)
+- [Computer & Programming Terminology](/cs-notes/computer-and-programming-fundamentals/computer-and-programming-terminology)

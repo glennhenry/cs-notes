@@ -1,6 +1,6 @@
 ---
 title: Compilers & Programming Languages
-slug: compilers-and-programming-languages
+slug: compilers-and-programming-languages-intro
 description: Compilers & Programming Languages
 ---
 
@@ -19,26 +19,26 @@ Originally, compilers and programming language (formerly called programming lang
 
 ### All pages
 
-- [CPL Fundamentals](compilers-and-programming-languages/cpl-fundamentals)
+- [CPL Fundamentals](/cs-notes/compilers-and-programming-languages/cpl-fundamentals)
 - Compiler Frontend
-  - [Syntax](compilers-and-programming-languages/syntax)
-  - [Scanning](compilers-and-programming-languages/scanning)
-  - [Parsing](compilers-and-programming-languages/parsing)
-  - [Semantic Analysis](compilers-and-programming-languages/semantic-analysis)
+  - [Syntax](/cs-notes/compilers-and-programming-languages/syntax)
+  - [Scanning](/cs-notes/compilers-and-programming-languages/scanning)
+  - [Parsing](/cs-notes/compilers-and-programming-languages/parsing)
+  - [Semantic Analysis](/cs-notes/compilers-and-programming-languages/semantic-analysis)
 - Programming Languages Constructs
-  - [Names, Scopes, Bindings](compilers-and-programming-languages/names-scopes-bindings)
-  - [Control Flow](compilers-and-programming-languages/control-flow)
-  - [Data Types](compilers-and-programming-languages/data-types)
-  - [Subroutines](compilers-and-programming-languages/subroutines)
-  - [Data Abstraction](compilers-and-programming-languages/data-abstraction)
+  - [Names, Scopes, Bindings](/cs-notes/compilers-and-programming-languages/names-scopes-bindings)
+  - [Control Flow](/cs-notes/compilers-and-programming-languages/control-flow)
+  - [Data Types](/cs-notes/compilers-and-programming-languages/data-types)
+  - [Subroutines](/cs-notes/compilers-and-programming-languages/subroutines)
+  - [Data Abstraction](/cs-notes/compilers-and-programming-languages/data-abstraction)
 - Compiler Backend
-  - [Target Architecture](compilers-and-programming-languages/target-architecture)
-  - [Intermediate Representation](compilers-and-programming-languages/intermediate-representation)
-  - [Assembly Language](compilers-and-programming-languages/assembly-language)
-  - [Code Generation](compilers-and-programming-languages/code-generation)
-  - [Compiler Optimization](compilers-and-programming-languages/compiler-optimization)
+  - [Target Architecture](/cs-notes/compilers-and-programming-languages/target-architecture)
+  - [Intermediate Representation](/cs-notes/compilers-and-programming-languages/intermediate-representation)
+  - [Assembly Language](/cs-notes/compilers-and-programming-languages/assembly-language)
+  - [Code Generation](/cs-notes/compilers-and-programming-languages/code-generation)
+  - [Compiler Optimization](/cs-notes/compilers-and-programming-languages/compiler-optimization)
 - Other Programming Model
-  - [Functional Languages](compilers-and-programming-languages/functional-languages)
-  - [Logic Languages](compilers-and-programming-languages/logic-languages)
-  - [Concurrency](compilers-and-programming-languages/concurrency)
-  - [Scripting Languages](compilers-and-programming-languages/scripting-languages)
+  - [Functional Languages](/cs-notes/compilers-and-programming-languages/functional-languages)
+  - [Logic Languages](/cs-notes/compilers-and-programming-languages/logic-languages)
+  - [Concurrency](/cs-notes/compilers-and-programming-languages/concurrency)
+  - [Scripting Languages](/cs-notes/compilers-and-programming-languages/scripting-languages)

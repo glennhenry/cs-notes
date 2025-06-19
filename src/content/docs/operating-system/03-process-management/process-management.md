@@ -6,9 +6,9 @@ description: Process Management
 
 **Main Source:**
 
-- **[Process (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Process_management_(computing)>)**
+- **[Process (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Process_management_(computing)>)**
 - **[Process management (computing) — Wikipedia](https://en.wikipedia.org/wiki/Process_management)**
-- **[Scheduling (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Scheduling_(computing)>)**
+- **[Scheduling (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Scheduling_(computing)>)**
 - **[Context switch — Wikipedia](https://en.wikipedia.org/wiki/Context_switch)**
 - **[Chapter 6 CPU Scheduling - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 

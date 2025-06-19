@@ -11,7 +11,7 @@ description: Concurrency Control
 
 Database operations are grouped into a transaction unit. The execution of each transaction unit is scheduled by the **scheduler** of DBMS. This is to ensure database operations executed in controller manner, avoiding concurrency issues such as [data races](/cs-notes/computer-and-programming-fundamentals/concurrency#race-condition). The overall process of handling concurrency is called **concurrency control**.
 
-The three property of concurrency control (whether in local database or [distributed database](/cloud-computing-and-distributed-systems/distributed-database)):
+The three property of concurrency control (whether in local database or [distributed database](/cs-notes/cloud-computing-and-distributed-systems/distributed-database)):
 
 - **Serializability**: Serializability is a property of a schedule in concurrent transactions that guarantees the execution to produces the same outcome as if they had executed in other sequential order, without any overlap. In other word, a database system with serializability means that even if we execute multiple transaction simultaneously, we can guarantee that the end result of executing those transactions is equivalent to some serial execution of the transactions (i.e., as if they had executed one after another in a specific order).
 - **Linearizability**: Also known as strict serializability, is a strong consistency condition, where execution of operations appears as if they occurred atomically and in a specific global order, even though they may be executed concurrently across different processes or devices. We could describe it in an example.

@@ -7,11 +7,11 @@ description: JavaScript
 **Main Source:**
 
 - **[JavaScript — Wikipedia](https://en.wikipedia.org/wiki/JavaScript)**
-- **[V8 (JavaScript Engine) — Wikipedia](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>)**
+- **[V8 (JavaScript Engine) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>)**
 - **[V8 Hidden Classes by Chameera Dulanga — Medium](https://blog.bitsrc.io/secret-behind-javascript-performance-v8-hidden-classes-ba4d0ebfb89d)**
 - **[Node JS — Wikipedia](https://en.wikipedia.org/wiki/Node.js)**
 - **[npm — Wikipedia](https://en.wikipedia.org/wiki/Npm)**
-- **[React (software) — Wikipedia](<https://en.wikipedia.org/wiki/React_(software)>)**
+- **[React (software) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/React_(software)>)**
 
 **JavaScript** is a high-level programming language first introduced in 1995, it is mostly used for web development. JavaScript was specifically created to be run in web browsers, which means it can integrate with the browser and access the [DOM](/cs-notes/internet-and-web/html#html-dom) to change or manipulate it such as adding or deleting elements, changing style like color, modify content, etc.
 
@@ -51,7 +51,7 @@ Another mechanism to manage the execution is the **event loop**. When the call s
 ![JavaScript event loops consisting call stack, callback queue and the web API](./event-loop.png)
 
 :::note
-The execution of JavaScript code is [event-driven](/cloud-computing-and-distributed-systems/event-driven), meaning it does thing whenever an event occur.
+The execution of JavaScript code is [event-driven](/cs-notes/cloud-computing-and-distributed-systems/event-driven), meaning it does thing whenever an event occur.
 :::
 
 #### Node JS

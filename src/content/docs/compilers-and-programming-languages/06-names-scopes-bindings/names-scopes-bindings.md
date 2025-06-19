@@ -68,7 +68,7 @@ Scope rules are the rules about visibility and accessibility of variables, funct
 
 We call the languages that determine scope of an identifier in compile-time based on the lexical structure of the program as **static scope** or **lexical scope**. Example of statically scoped languages are C, C++, Java, Python, and most programming languages in general.
 
-For example, below are code taken from [Wikipedia](<https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope>). The lexical structure of program refers to the arrangement of its code into blocks, functions, and other nested structures. Each block or function introduces a new scope.
+For example, below are code taken from [Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope>). The lexical structure of program refers to the arrangement of its code into blocks, functions, and other nested structures. Each block or function introduces a new scope.
 
 ```javascript
 program A;

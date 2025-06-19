@@ -7,7 +7,7 @@ description: Gateway
 **Main Source:**
 
 - **[Default Gateway Explained — PowerCert](https://youtu.be/pCcJFdYNamc)**
-- **[Gateway (telecommunications) — Wikipedia](<https://en.wikipedia.org/wiki/Gateway_(telecommunications)>)**
+- **[Gateway (telecommunications) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Gateway_(telecommunications)>)**
 
 **Gateway** is a networking device or software component that serves as an entry point or exit point between two different networks. It acts as a bridge or translator, enabling data to flow between networks that use different protocols, addressing schemes, or communication technologies.
 

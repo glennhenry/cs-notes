@@ -8,24 +8,24 @@ My computer science notes from various online courses, tutorial, books, blogs, W
 
 ### Main Topics
 
-- **[Computer & Programming Fundamentals](computer-and-programming-fundamentals)**
-- **[Digital Signal Processing](digital-signal-processing)**
-- **[Digital Media Processing](digital-media-processing)**
-- **[Computer Networking](computer-networking)**
-- **[Data Structures & Algorithms](data-structures-and-algorithms)**
-- **[Computer Organization & Architecture](computer-organization-and-architecture)**
-- **[Operating System](operating-system)**
-- **[Theory of Computation & Automata](theory-of-computation-and-automata)**
-- **[Compilers & Programming Language](compilers-and-programming-languages)**
-- **[Database System](database-system)**
-- **[Computer Graphics](computer-graphics)**
-- **[Internet & Web](internet-and-web)**
-- **[Backend System](backend-system)**
-- **[Computer Security](computer-security)**
-- **[Machine Learning](machine-learning)**
-- **[Deep Learning](deep-learning)**
-- **[Software Engineering](software-engineering)**
-- **[Cloud Computing & Distributed Systems](cloud-computing-and-distributed-systems)**
+- **[Computer & Programming Fundamentals](/cs-notes/computer-and-programming-fundamentals)**
+- **[Digital Signal Processing](/cs-notes/digital-signal-processing)**
+- **[Digital Media Processing](/cs-notes/digital-media-processing)**
+- **[Computer Networking](/cs-notes/computer-networking)**
+- **[Data Structures & Algorithms](/cs-notes/data-structures-and-algorithms)**
+- **[Computer Organization & Architecture](/cs-notes/computer-organization-and-architecture)**
+- **[Operating System](/cs-notes/operating-system)**
+- **[Theory of Computation & Automata](/cs-notes/theory-of-computation-and-automata)**
+- **[Compilers & Programming Language](/cs-notes/compilers-and-programming-languages)**
+- **[Database System](/cs-notes/database-system)**
+- **[Computer Graphics](/cs-notes/computer-graphics)**
+- **[Internet & Web](/cs-notes/internet-and-web)**
+- **[Backend System](/cs-notes/backend-system)**
+- **[Computer Security](/cs-notes/computer-security)**
+- **[Machine Learning](/cs-notes/machine-learning)**
+- **[Deep Learning](/cs-notes/deep-learning)**
+- **[Software Engineering](/cs-notes/software-engineering)**
+- **[Cloud Computing & Distributed Systems](/cs-notes/cloud-computing-and-distributed-systems)**
 
 These topics are all completed, though they are subject to minor or major changes in the future. Change includes grammar or typo fix, clarification, correcting misinformation, and adding more notes. Mostly, they are listed under [TO-DOs](#to-dos).
 
@@ -33,18 +33,18 @@ These topics are all completed, though they are subject to minor or major change
 
 These two are intended to be written and updated from time to time.
 
-- [Android OS](android-os)
-- [Android Development](android-development)
+- [Android OS](/cs-notes/android-os)
+- [Android Development](/cs-notes/android-development)
 
 ### Longest Notes
 
-- [File System](operating-system/file-system) (36282 char)
+- [File System](/cs-notes/operating-system/file-system) (36282 char)
 - [Parsing](/cs-notes/compilers-and-programming-languages/parsing) (33647 char)
-- [Software Principles](software-engineering/software-principles) (32161 char, due to many code examples)
-- [Memory Management](operating-system/memory-management) (27368 char)
-- [Diffusion Model](deep-learning/diffusion-model) (27316 char)
+- [Software Principles](/cs-notes/software-engineering/software-principles) (32161 char, due to many code examples)
+- [Memory Management](/cs-notes/operating-system/memory-management) (27368 char)
+- [Diffusion Model](/cs-notes/deep-learning/diffusion-model) (27316 char)
 
-Excluding the [index page](/index).
+Excluding the [index page](/cs-notes/index).
 
 ### Credits
 
@@ -92,7 +92,7 @@ For simplicity, TO-DOs are placed here instead of something like GitHub issues.
 8. **[update]** [/backend-system/websocket](/cs-notes/backend-system/websocket)#data-exchange: add web socket payload, frame, ping, pong, fin, rsv, close, timeout.
 9. **[update]** [/backend-system/microservice](/cs-notes/backend-system/microservice): clarify possible wrong information.
 10. **[update]** [/backend-system/soa](/cs-notes/backend-system/soa): clarify possible wrong information (emphasize more on its difference with microservice).
-11. **[add]** [/cloud-computing-and-distributed-systems](/cloud-computing-and-distributed-systems)/distributed-systems-failure-detection-and-recovery: should add more about distributed failure detection and recovery mechanism.
+11. **[add]** [/cloud-computing-and-distributed-systems](/cs-notes/cloud-computing-and-distributed-systems)/distributed-systems-failure-detection-and-recovery: should add more about distributed failure detection and recovery mechanism.
     - Additional note:
       - replication, redundancy, reassignment, checkpointing, restart.
       - heartbeat mechanism, timeout, neighbour-based, gossip.
@@ -103,7 +103,7 @@ For simplicity, TO-DOs are placed here instead of something like GitHub issues.
 15. **[ref]** [/backend-system/rpc#protocol-buffers](/cs-notes/backend-system/rpc#protocol-buffers): ref to the previous serialization method, namely protocol buffer.
 16. **[update]** [/data-structures-and-algorithms/hash-table](/cs-notes/data-structures-and-algorithms/hash-table)#log-structured-hash-table: add log-structured hash table, which is a hash table stored in a file system. Just explain basic idea of how it works, then explain how a more scalable data structure is the idea of common data structure for database index, made with b-tree.
 17. **[update]** [/database-system/logging-and-recovery#migration](/cs-notes/database-system/logging-and-recovery#migration): add more about migration, particularly how it works.
-18. **[update]**: [/cloud-computing-and-distributed-systems/distributed-systems-model#consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus) add about Byzantine failures, Two Generals' Problem.
+18. **[update]**: [/cloud-computing-and-distributed-systems/distributed-systems-model#consensus](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-model#consensus) add about Byzantine failures, Two Generals' Problem.
 19. **[update]** [/data-structures-and-algorithms/graph](/cs-notes/data-structures-and-algorithms/graph)#graph-problems: add common problem about graph, such as graph coloring.
 20. **[ref]** [/compilers-and-programming-languages/compiler-optimization](/cs-notes/compilers-and-programming-languages/compiler-optimization): ref to graph coloring.
 21. **[update]** [/computer-organization-and-architecture](/cs-notes/computer-organization-and-architecture): add about low level instruction, actual example of simple processor like 8080 with emulation as the example.

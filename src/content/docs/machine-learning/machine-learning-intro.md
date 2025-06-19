@@ -1,6 +1,6 @@
 ---
 title: Machine Learning
-slug: machine-learning
+slug: machine-learning-intro
 description: Machine Learning Notes
 ---
 
@@ -25,14 +25,14 @@ This notes will include explanation about traditional ML algorithms (implementat
 
 ### All pages
 
-- [Linear Regression](machine-learning/linear-regression)
-- [Logistic Regression](machine-learning/logistic-regression)
-- [Naive Bayes](machine-learning/naive-bayes)
-- [K-Nearest Neighbors](machine-learning/k-nearest-neighbors)
-- [Decision Trees](machine-learning/decision-trees)
-- [Random Forest](machine-learning/random-forest)
-- [Gradient Boosting Machines](machine-learning/gradient-boosting-machine)
-- [Support Vector Machine](machine-learning/support-vector-machine)
-- [Principal Component Analysis](machine-learning/principal-component-analysis)
-- [k-Means Clustering](machine-learning/k-means-clustering)
-- [Collaborative Filtering](machine-learning/collaborative-filtering)
+- [Linear Regression](/cs-notes/machine-learning/linear-regression)
+- [Logistic Regression](/cs-notes/machine-learning/logistic-regression)
+- [Naive Bayes](/cs-notes/machine-learning/naive-bayes)
+- [K-Nearest Neighbors](/cs-notes/machine-learning/k-nearest-neighbors)
+- [Decision Trees](/cs-notes/machine-learning/decision-trees)
+- [Random Forest](/cs-notes/machine-learning/random-forest)
+- [Gradient Boosting Machines](/cs-notes/machine-learning/gradient-boosting-machine)
+- [Support Vector Machine](/cs-notes/machine-learning/support-vector-machine)
+- [Principal Component Analysis](/cs-notes/machine-learning/principal-component-analysis)
+- [k-Means Clustering](/cs-notes/machine-learning/k-means-clustering)
+- [Collaborative Filtering](/cs-notes/machine-learning/collaborative-filtering)

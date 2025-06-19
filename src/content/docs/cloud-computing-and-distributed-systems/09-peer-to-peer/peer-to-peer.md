@@ -38,7 +38,7 @@ Some target and challenge of P2P architecture:
 
 The specific architecture of P2P define how peers are connected to each other. The network topology can be structured, unstructured, or hybrid.
 
-- **Structured**: Peers are organized in a specific structured topology, using a [distributed hash table (DHT)](/cloud-computing-and-distributed-systems/distributed-systems-communication#distributed-hash-tables). Unique identifier is associated to each peer and resources or data onto the identifier space. So, when a peer are looking for particular resource, they will connect to specific peer that stores it.
+- **Structured**: Peers are organized in a specific structured topology, using a [distributed hash table (DHT)](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-communication#distributed-hash-tables). Unique identifier is associated to each peer and resources or data onto the identifier space. So, when a peer are looking for particular resource, they will connect to specific peer that stores it.
 
   ![Structured P2P](./structured.png)  
    Source: https://en.wikipedia.org/wiki/Peer-to-peer#/media/File:Structured_(DHT)_peer-to-peer_network_diagram.png
@@ -57,7 +57,7 @@ In reality, app or services that uses P2P architecture is not always completely 
 Overall, there are three variants of P2P:
 
 - **Pure P2P**: A fully P2P model where all peers are equivalent in terms of computation.
-- **Centralized**: Centralized in a sense of not a complete [client-server](/cloud-computing-and-distributed-systems/), it may keep track global information to facilitate efficient search and discovery.
+- **Centralized**: Centralized in a sense of not a complete [client-server](/cs-notes/cloud-computing-and-distributed-systems/), it may keep track global information to facilitate efficient search and discovery.
 - **Hierarchical**: Some peers may be selected to be a _super node_ in the P2P network. It may coordinate or manage the lower-level peers. For example, a host in an online meeting app could keep track some useful meeting information. Super node often have more resources, higher processing power, or better connectivity compared to others.
 
 ### Routing

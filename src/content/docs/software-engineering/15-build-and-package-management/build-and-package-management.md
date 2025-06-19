@@ -6,7 +6,7 @@ description: Build & Package Management
 
 **Main Source:**
 
-- **[Library (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Library_(computing)>)**
+- **[Library (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Library_(computing)>)**
 - **[Package manager — Wikipedia](https://en.wikipedia.org/wiki/Package_manager)**
 - **[Software repository — Wikipedia](https://en.wikipedia.org/wiki/Software_repository)**
 - **[Semantic Versioning 2.0 — semver](https://semver.org/)**

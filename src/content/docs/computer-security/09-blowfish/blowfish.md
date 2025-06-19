@@ -6,7 +6,7 @@ description: Blowfish
 
 **Main Source:**
 
-- **[Blowfish (cipher) — Wikipedia](<https://en.wikipedia.org/wiki/Blowfish_(cipher)>)**
+- **[Blowfish (cipher) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Blowfish_(cipher)>)**
 - **[bcrypt — Wikipedia](https://en.wikipedia.org/wiki/Bcrypt)**
 
 **Blowfish** is another [symmetric encryption](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption) algorithm. While [AES](/cs-notes/computer-security/aes) is more secure, blowfish is considered faster, it also supports key size with variable length.

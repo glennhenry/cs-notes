@@ -6,7 +6,7 @@ description: Set
 
 **Main Source:**
 
-- **[Set (abstract data type) — Wikipedia](<https://en.wikipedia.org/wiki/Set_(abstract_data_type)>)**
+- **[Set (abstract data type) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Set_(abstract_data_type)>)**
 
 **Set** is a data structure that stores unique elements. Some characteristics of a set:
 

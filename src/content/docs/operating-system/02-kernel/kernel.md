@@ -6,7 +6,7 @@ description: Kernel
 
 **Main Source:**
 
-- **[Kernel — Wikipedia](<https://en.wikipedia.org/wiki/Kernel_(operating_system)>)**
+- **[Kernel — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Kernel_(operating_system)>)**
 - **[What is an OS kernel ? How does it differ from an operating system? [closed] — stackoverflow](https://stackoverflow.com/questions/2013937/what-is-an-os-kernel-how-does-it-differ-from-an-operating-system)**
 
 **Kernel** is the core of an operating system (OS), it is the component of OS that manages hardware resources, provide system service, handle communication between processes, etc. It has a complete control over the system and interact directly with the hardware.

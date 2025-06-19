@@ -16,7 +16,7 @@ During application development, developers often use various libraries and modul
 
 ### Container Engine
 
-Containers are already fully-functional and can be executed directly in isolated instances using a **container engine** (e.g., [Docker](/cloud-computing-and-distributed-systems/docker-and-kubernetes#docker)). The container engine is responsible for managing and running containers on a system. It achieves this by leveraging [virtualization](/cloud-computing-and-distributed-systems/virtualization) techniques, where the container engine sits on top of the operating system (OS) and provides [OS-level virtualization](/cloud-computing-and-distributed-systems/virtualization#level-implementation). The container engine will then interact with the OS to execute the libraries and application in the container.
+Containers are already fully-functional and can be executed directly in isolated instances using a **container engine** (e.g., [Docker](/cs-notes/cloud-computing-and-distributed-systems/docker-and-kubernetes#docker)). The container engine is responsible for managing and running containers on a system. It achieves this by leveraging [virtualization](/cs-notes/cloud-computing-and-distributed-systems/virtualization) techniques, where the container engine sits on top of the operating system (OS) and provides [OS-level virtualization](/cs-notes/cloud-computing-and-distributed-systems/virtualization#level-implementation). The container engine will then interact with the OS to execute the libraries and application in the container.
 
 ![Containerization 1](./container.png)  
 Source: https://bito.ai/blog/containerization-a-beginners-guide-to-its-impact-on-software-development/

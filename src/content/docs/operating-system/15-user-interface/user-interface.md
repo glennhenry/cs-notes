@@ -9,7 +9,7 @@ description: User Interface
 - **[Chapter 2 Operating-System Structures - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 - **[Operating system, User interface — Wikipedia](https://en.wikipedia.org/wiki/Operating_system#User_interface)**
 - **[Graphical user interface — Wikipedia](https://en.wikipedia.org/wiki/Graphical_user_interface)**
-- **[Shell (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Shell_(computing)>)**
+- **[Shell (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Shell_(computing)>)**
 
 For human to operate with computer system, a user interface (UI) is required. The user interface serves as a bridge between the user and the underlying system, allowing users to issues command to the computer for performing tasks by providing input.
 

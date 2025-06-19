@@ -17,7 +17,7 @@ description: Software Principles
 - **[SOLID — Wikipedia](https://en.wikipedia.org/wiki/SOLID) and the 5 articles**
 - **[Difference Between Cohesion and Coupling — stackoverflow](https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling)**
 
-**Software Principles** are collection of guidelines, styles, tips, good practices, by various software and engineers to help to guide the process of developing a good software. By good software, it means they are reliable, maintainable, scalable, and many more listed in [software characteristics](/software-engineering#software-characteristics).
+**Software Principles** are collection of guidelines, styles, tips, good practices, by various software and engineers to help to guide the process of developing a good software. By good software, it means they are reliable, maintainable, scalable, and many more listed in [software characteristics](/cs-notes/software-engineering#software-characteristics).
 
 ### OOP
 

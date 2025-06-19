@@ -6,7 +6,7 @@ description: Stack
 
 **Main Source:**
 
-- **[Stack (abstract data type) — Wikipedia](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)**
+- **[Stack (abstract data type) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)**
 
 **Stack** is a data structure where the elements are stacked on top of each other. In stack data structure, we can add and remove element, the behavior of adding and removing element follows the **Last-In-First-Out (LIFO)** principle. This principle says that the last element added to the stack is the first one to be removed.
 

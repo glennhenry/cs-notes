@@ -27,7 +27,7 @@ Some security concerns from the customer:
 - **Data Encryption**: Customer data should be encrypted both in transit and at rest.
 - **Authentication**: Implement a strong authentication system, such as enforcing strong passwords, adding a [multifactor authentication](/cs-notes/backend-system/authentication#authentication-factor-number), and using role-based access control (RBAC), in which users are given specific role that makes them eligible to access certain resources.
 
-Cloud computing use [virtualization](/cloud-computing-and-distributed-systems/virtualization) technology heavily. It provides a good isolation even when multiple applications are being run on single host. This isolation helps prevent interference between applications, thereby reducing the potential for the malicious activities of one app to affect the system, which could, in turn, impact others.
+Cloud computing use [virtualization](/cs-notes/cloud-computing-and-distributed-systems/virtualization) technology heavily. It provides a good isolation even when multiple applications are being run on single host. This isolation helps prevent interference between applications, thereby reducing the potential for the malicious activities of one app to affect the system, which could, in turn, impact others.
 
 Therefore, it's important for the technology to be implemented correctly. The one that manages virtual machines, hypervisor, must be regularly updated to protect against vulnerabilities and potential attacks.
 

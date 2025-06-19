@@ -11,7 +11,7 @@ description: Serverless
 
 **Serverless** is an architecture where developers build and run application without needing to manage servers. This is done by letting cloud provider that host our server handles and manages it. The provider will also handle the scaling of our server architecture as the number of request increase, the payment will be based on the resources consumed by our application.
 
-Serverless is also known as [Function as a Service platforms (FaaS)](/cloud-computing-and-distributed-systems/cloud-models#more-models), and it relies on cloud provider, such as AWS Lambda, Azure Functions, or Google Cloud Functions. They provide place to run a self-contained function that performs specific task or operation. Functions in FaaS are event-driven, so whenever a specific event occurs in our application, the function will be triggered.
+Serverless is also known as [Function as a Service platforms (FaaS)](/cs-notes/cloud-computing-and-distributed-systems/cloud-models#more-models), and it relies on cloud provider, such as AWS Lambda, Azure Functions, or Google Cloud Functions. They provide place to run a self-contained function that performs specific task or operation. Functions in FaaS are event-driven, so whenever a specific event occurs in our application, the function will be triggered.
 
 For example, in an authentication process in a web app, when a user registers, the registration form will be sent to specific API endpoint, and it will trigger a serverless function that receives the registration data. The function will validate the form and store it in database, the function used to store to database may also trigger actions such as sending confirmation email to the user.
 

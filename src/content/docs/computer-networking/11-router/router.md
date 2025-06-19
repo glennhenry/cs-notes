@@ -6,7 +6,7 @@ description: Router
 
 **Main Source:**
 
-- **[Router (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Router_(computing)>)**
+- **[Router (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Router_(computing)>)**
 - **[Hub, Switch, & Router Explained — PowerCert](https://youtu.be/1z0ULvg_pW8?si=6F-oF8maBovN6VnN)**
 
 **Router** is a networking device that connects multiple computer networks together, and directs network traffic between them. It uses [IP addresses](/cs-notes/computer-networking/ip-address) to make decisions on how to forward data packets across networks.

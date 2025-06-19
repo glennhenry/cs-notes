@@ -24,12 +24,14 @@ export default defineConfig({
       logo: {
         src: "./src/assets/logo.jpg",
       },
-      favicon: "./src/assets/favicon.ico",
+      favicon: "/favicon.ico",
       editLink: {
         baseUrl: "https://github.com/glennhenry/cs-notes/edit/main/",
       },
       credits: true,
       title: "CS Notes",
+      lastUpdated: true,
+
       components: {
         Pagination: "./src/components/Pagination.astro",
         PageFrame: "./src/components/PageFrame.astro",
@@ -54,6 +56,10 @@ export default defineConfig({
           label: "Computer and Programming Fundamentals",
           collapsed: true,
           items: [
+            {
+              label: "Overview",
+              slug: "computer-and-programming-fundamentals-intro",
+            },
             {
               label: "Computer Representation",
               collapsed: true,
@@ -130,6 +136,7 @@ export default defineConfig({
           label: "Digital Signal Processing",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "digital-signal-processing-intro" },
             "digital-signal-processing/signal",
             {
               label: "Fourier Analysis",
@@ -174,6 +181,7 @@ export default defineConfig({
           label: "Digital Media Processing",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "digital-media-processing-intro" },
             {
               label: "Image Processing",
               collapsed: true,
@@ -268,6 +276,7 @@ export default defineConfig({
           label: "Computer Networking",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "computer-networking-intro" },
             {
               label: "Network Standard",
               collapsed: true,
@@ -363,6 +372,7 @@ export default defineConfig({
           label: "Data Structures & Algorithms",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "data-structures-and-algorithms-intro" },
             "data-structures-and-algorithms/analysis-of-algorithms",
             {
               label: "Data Structures",
@@ -428,6 +438,10 @@ export default defineConfig({
           label: "Computer Organization & Architecture",
           collapsed: true,
           items: [
+            {
+              label: "Overview",
+              slug: "computer-organization-and-architecture-intro",
+            },
             "computer-organization-and-architecture/coa-fundamentals",
             "computer-organization-and-architecture/boolean-logic",
             {
@@ -460,6 +474,7 @@ export default defineConfig({
           label: "Operating System",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "operating-system-intro" },
             "operating-system/os-fundamentals",
             "operating-system/kernel",
             "operating-system/process-management",
@@ -498,6 +513,10 @@ export default defineConfig({
           label: "Theory of Computation & Automata",
           collapsed: true,
           items: [
+            {
+              label: "Overview",
+              slug: "theory-of-computation-and-automata-intro",
+            },
             "theory-of-computation-and-automata/toc-fundamentals",
             "theory-of-computation-and-automata/finite-automata",
             "theory-of-computation-and-automata/regular-languages-part-1",
@@ -517,6 +536,10 @@ export default defineConfig({
           label: "Compilers & Programming Languages",
           collapsed: true,
           items: [
+            {
+              label: "Overview",
+              slug: "compilers-and-programming-languages-intro",
+            },
             "compilers-and-programming-languages/cpl-fundamentals",
             {
               label: "Compiler Frontend",
@@ -568,6 +591,7 @@ export default defineConfig({
           label: "Database System",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "database-system-intro" },
             "database-system/relational-data",
             "database-system/query-language",
             {
@@ -609,6 +633,7 @@ export default defineConfig({
           label: "Computer Graphics",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "computer-graphics-intro" },
             "computer-graphics/computer-images-part-1",
             "computer-graphics/computer-images-part-2",
             "computer-graphics/2d-transformation",
@@ -640,6 +665,7 @@ export default defineConfig({
           label: "Internet & Web",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "internet-and-web-intro" },
             "internet-and-web/html",
             "internet-and-web/css",
             "internet-and-web/javascript",
@@ -655,6 +681,7 @@ export default defineConfig({
           label: "Backend System",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "backend-system-intro" },
             "backend-system/web-server",
             {
               label: "APIs",
@@ -693,6 +720,7 @@ export default defineConfig({
           label: "Computer Security",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "computer-security-intro" },
             "computer-security/computer-security-fundamentals",
             {
               label: "Cryptography",
@@ -747,6 +775,7 @@ export default defineConfig({
           label: "Machine Learning",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "machine-learning-intro" },
             "machine-learning/linear-regression",
             "machine-learning/logistic-regression",
             "machine-learning/naive-bayes",
@@ -766,6 +795,7 @@ export default defineConfig({
           label: "Deep Learning",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "deep-learning-intro" },
             "deep-learning/deep-learning-foundation",
             "deep-learning/deep-learning-tasks",
             "deep-learning/neural-network",
@@ -829,6 +859,7 @@ export default defineConfig({
           label: "Software Engineering",
           collapsed: true,
           items: [
+            { label: "Overview", slug: "software-engineering-intro" },
             "software-engineering/software-process",
             {
               label: "Software Design",
@@ -882,6 +913,10 @@ export default defineConfig({
           label: "Cloud Computing & Distributed Systems",
           collapsed: true,
           items: [
+            {
+              label: "Overview",
+              slug: "cloud-computing-and-distributed-systems-intro",
+            },
             "cloud-computing-and-distributed-systems/fundamentals",
             {
               label: "Distributed Systems",

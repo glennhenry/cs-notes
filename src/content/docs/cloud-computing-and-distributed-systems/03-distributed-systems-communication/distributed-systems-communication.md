@@ -22,8 +22,8 @@ There are numerous coordination concerns in a distributed system. These include 
 
 This includes:
 
-- To avoid [concurrency issues, such as race condition](/cs-notes/operating-system/multithreading#multithreading-problems), we can utilize [locking mechanism](/cloud-computing-and-distributed-systems/distributed-database#locking) to treat resource access as exclusive. With exclusive access, we restrict a resource to be accessed by only a single node.
-- When a node generates a value, maybe from executing business logic or processing data, all other nodes need to be aware of it. In other words, all nodes should maintain a synchronized view of the shared data to achieve consistency. Such techniques can be employed with techniques like [consensus](/cloud-computing-and-distributed-systems/distributed-systems-model#consensus), with one implementation being the [Paxos protocol](/cloud-computing-and-distributed-systems/distributed-systems-model#paxos).
+- To avoid [concurrency issues, such as race condition](/cs-notes/operating-system/multithreading#multithreading-problems), we can utilize [locking mechanism](/cs-notes/cloud-computing-and-distributed-systems/distributed-database#locking) to treat resource access as exclusive. With exclusive access, we restrict a resource to be accessed by only a single node.
+- When a node generates a value, maybe from executing business logic or processing data, all other nodes need to be aware of it. In other words, all nodes should maintain a synchronized view of the shared data to achieve consistency. Such techniques can be employed with techniques like [consensus](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-model#consensus), with one implementation being the [Paxos protocol](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-model#paxos).
 
 #### Task Assignment
 
@@ -33,7 +33,7 @@ Based on "who" will assign the task:
 
 - **Centralized**: A central controller or scheduler is responsible for receiving task requests and making assignment and scheduling decisions. The central controller maintains information about the state and availability of nodes and assigns tasks based on predefined policies or algorithms. It is possible to optimize task assignment because the centralized system have a system-wide knowledge, but it can also introduce a single point of failure and scalability challenges.
 
-  The controller can be chosen with [leader election algorithm](/cloud-computing-and-distributed-systems/distributed-systems-model#leader-election), with one example being the [Bully algorithm](/cloud-computing-and-distributed-systems/distributed-systems-model#bully-algorithm).
+  The controller can be chosen with [leader election algorithm](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-model#leader-election), with one example being the [Bully algorithm](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-model#bully-algorithm).
 
 - **Decentralized**: In decentralized approach, each node makes its own decisions regarding task assignment and scheduling. Nodes can communicate with each other to exchange information about their capabilities, workload, and availability. This approach provides more fault tolerance and scalability but may require communication overhead within nodes. One algorithm for decentralized approach is the [distributed hash table](#distributed-hash-tables).
 

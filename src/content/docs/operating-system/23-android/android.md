@@ -6,7 +6,7 @@ description: Android
 
 **Main Source:**
 
-- **[Android (operating system) — Wikipedia](<https://en.wikipedia.org/wiki/Android_(operating_system)>)**
+- **[Android (operating system) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Android_(operating_system)>)**
 - **[CASE STUDY 1: UNIX, LINUX, AND ANDROID, SEC 10.8 - Andrew S. Tanenbaum - Modern Operating Systems]**
 
 **Android** is an open-source operating system designed primarily for mobile devices such as smartphones and tablets, but it is also increasingly used as the embedded OS for dedicated devices that require a graphical user interface (GUI) such as VOIP phones, smartwatches, automotive dashboards, medical devices, and home appliances.

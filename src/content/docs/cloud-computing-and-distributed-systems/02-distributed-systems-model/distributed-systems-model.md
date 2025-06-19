@@ -9,8 +9,8 @@ description: Distributed Systems Model
 - **[Distributed Computing System Models — GeeksforGeeks](https://www.geeksforgeeks.org/distributed-computing-system-models/)**
 - **[Distributed algorithm — Wikipedia](https://en.wikipedia.org/wiki/Distributed_algorithm)**
 - **[Atomic commit — Wikipedia](https://en.wikipedia.org/wiki/Atomic_commit)**
-- **[Consensus (computer science) — Wikipedia](<https://en.wikipedia.org/wiki/Consensus_(computer_science)>)**
-- **[Paxos (computer science), Basic Paxos — Wikipedia](<https://en.wikipedia.org/wiki/Paxos_(computer_science)#Basic_Paxos>)**
+- **[Consensus (computer science) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Consensus_(computer_science)>)**
+- **[Paxos (computer science), Basic Paxos — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Paxos_(computer_science)#Basic_Paxos>)**
 - **[Leader election — Wikipedia](https://en.wikipedia.org/wiki/Leader_election)**
 - **[Bully algorithm — Wikipedia](https://en.wikipedia.org/wiki/Bully_algorithm)**
 
@@ -57,7 +57,7 @@ There are more algorithms related to distributed systems that uses theoretical m
 
 ##### Concurrency Mechanism
 
-See **[Concurrency Mechanism](/cloud-computing-and-distributed-systems/distributed-database#concurrency-mechanism)**.
+See **[Concurrency Mechanism](/cs-notes/cloud-computing-and-distributed-systems/distributed-database#concurrency-mechanism)**.
 
 ##### Consensus
 
@@ -143,7 +143,7 @@ Based on the organization, there are two paradigms of distributed computing:
 
 Architectural model describe the high-level design and structure of the system, including the arrangement and interaction of its components. Some of architectural model (see other notes):
 
-- [Client-Server](/cloud-computing-and-distributed-systems/client-server)
-- [Event-Driven](/cloud-computing-and-distributed-systems/event-driven)
-- [Master-Slave](/cloud-computing-and-distributed-systems/master-slave)
-- [Peer-to-Peer](/cloud-computing-and-distributed-systems/peer-to-peer)
+- [Client-Server](/cs-notes/cloud-computing-and-distributed-systems/client-server)
+- [Event-Driven](/cs-notes/cloud-computing-and-distributed-systems/event-driven)
+- [Master-Slave](/cs-notes/cloud-computing-and-distributed-systems/master-slave)
+- [Peer-to-Peer](/cs-notes/cloud-computing-and-distributed-systems/peer-to-peer)

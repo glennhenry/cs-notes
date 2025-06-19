@@ -1,6 +1,6 @@
 ---
 title: Backend System
-slug: backend-system
+slug: backend-system-intro
 description: Backend System Notes
 ---
 
@@ -8,23 +8,23 @@ Backend development is the process of creating a backend system, which is the se
 
 ### All pages
 
-- [Web Server](backend-system/web-server)
+- [Web Server](/cs-notes/backend-system/web-server)
 - APIs
-  - [APIs & Server Logic](backend-system/apis-server-logic)
-  - [REST API](backend-system/rest-api)
-  - [SOAP](backend-system/soap)
-  - [GraphQL](backend-system/graphql)
-  - [RPC](backend-system/rpc)
-  - [Webhook](backend-system/webhook)
-  - [WebSocket](backend-system/websocket)
-- [Authentication](backend-system/authentication)
-- [Authorization](backend-system/authorization)
-- [Search Engine](backend-system/search-engine)
-- [Message Broker](backend-system/message-broker)
+  - [APIs & Server Logic](/cs-notes/backend-system/apis-server-logic)
+  - [REST API](/cs-notes/backend-system/rest-api)
+  - [SOAP](/cs-notes/backend-system/soap)
+  - [GraphQL](/cs-notes/backend-system/graphql)
+  - [RPC](/cs-notes/backend-system/rpc)
+  - [Webhook](/cs-notes/backend-system/webhook)
+  - [WebSocket](/cs-notes/backend-system/websocket)
+- [Authentication](/cs-notes/backend-system/authentication)
+- [Authorization](/cs-notes/backend-system/authorization)
+- [Search Engine](/cs-notes/backend-system/search-engine)
+- [Message Broker](/cs-notes/backend-system/message-broker)
 - Architecture
-  - [Monolithic](backend-system/monolithic)
-  - [Microservice](backend-system/microservice)
-  - [SOA](backend-system/soa)
-  - [Serverless](backend-system/serverless)
-- [Backend & Server Security](backend-system/backend-server-security)
-- [Backend Optimization](backend-system/backend-optimization)
+  - [Monolithic](/cs-notes/backend-system/monolithic)
+  - [Microservice](/cs-notes/backend-system/microservice)
+  - [SOA](/cs-notes/backend-system/soa)
+  - [Serverless](/cs-notes/backend-system/serverless)
+- [Backend & Server Security](/cs-notes/backend-system/backend-server-security)
+- [Backend Optimization](/cs-notes/backend-system/backend-optimization)

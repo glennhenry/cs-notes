@@ -11,13 +11,13 @@ import find_operation from "./find.mp4";
 - **[Disjoint-set data structure — Wikipedia](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)**
 - **[Union Find in 5 minutes — Data Structures & Algorithms - Potato Coders](https://youtu.be/ayW5B2W9hfo?si=pf1XvhDNEkhI2Nm8)**
 
-**Union Find**, also called **disjoint-set**, is a data structure that help solving connectivity problem. It maintains a collection of disjoint sets, which is a collection of [sets](/data-structures-and-algorithms/set) where no two sets have any elements in common. In other word, it stores a collection of elements, where each collection doesn't contain an element that other collection has.
+**Union Find**, also called **disjoint-set**, is a data structure that help solving connectivity problem. It maintains a collection of disjoint sets, which is a collection of [sets](/cs-notes/data-structures-and-algorithms/set) where no two sets have any elements in common. In other word, it stores a collection of elements, where each collection doesn't contain an element that other collection has.
 
 ### Operation
 
 Apart from being data structure, it also provides a way to determine whether two elements belong to the same set and allows us to merge two sets containing some elements into a single set.
 
-Union find organizes its sets in a [tree-like structure](/data-structures-and-algorithms/tree), where each node represents an element, the root is called the **representative element**, which serves as the identifier or representative for the entire set. This identifier will help us to determine whether two elements belong to the same set easily. The idea is, if two elements belong to the same set, their root node must be the same.
+Union find organizes its sets in a [tree-like structure](/cs-notes/data-structures-and-algorithms/tree), where each node represents an element, the root is called the **representative element**, which serves as the identifier or representative for the entire set. This identifier will help us to determine whether two elements belong to the same set easily. The idea is, if two elements belong to the same set, their root node must be the same.
 
 ![Union find](./union-find.png)
 
@@ -31,7 +31,7 @@ The size and rank is used to which one should be the representative, as the repr
 
 #### Find
 
-Given a node, `Find` is a function that should return the representative. The `Find` function is [recursive](/data-structures-and-algorithms/recursion), it will find the parent of some node, the parent of that node again, up to the root node.
+Given a node, `Find` is a function that should return the representative. The `Find` function is [recursive](/cs-notes/data-structures-and-algorithms/recursion), it will find the parent of some node, the parent of that node again, up to the root node.
 
 ```
 function Find(x):

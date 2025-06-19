@@ -12,7 +12,7 @@ description: OSI Model
 
 In OSI model, the process are divided into several abstraction layers. Each of the layer has responsibility to handle communication depending on the layer level. From the lowest physical layer where we send raw bit as electrical signal using physical media such as cables up to the application layer where it interacts directly with the user.
 
-[All OSI layers with example](./osi-layers.png)  
+[All OSI layers with example](/cs-notes/./osi-layers.png)  
 Source: https://community.fs.com/blog/tcpip-vs-osi-whats-the-difference-between-the-two-models.html
 
 ### OSI Layers

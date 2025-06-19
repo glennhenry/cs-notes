@@ -8,14 +8,14 @@ description: Distributed Database
 
 - **[Distributed database — Wikipedia](https://en.wikipedia.org/wiki/Distributed_database)**
 - **[Distributed transaction — Wikipedia](https://en.wikipedia.org/wiki/Distributed_transaction)**
-- **[Query Processing in Distributed Database System — IEEE Transactions on Software Engineering](<https://www.pdma.gov.pk/sub/uploads/query%20proceessing%20(1).pdf>)**
+- **[Query Processing in Distributed Database System — IEEE Transactions on Software Engineering](/cs-notes/<https://www.pdma.gov.pk/sub/uploads/query%20proceessing%20(1).pdf>)**
 
 Distributed Database is a database system that is spread across multiple nodes or servers, often located in different physical locations or connected through a network. Data is partitioned and stored on multiple nodes, allowing for parallel processing and improved scalability, fault tolerance, and performance.
 
 In order for distributed database to be useful, each node being able to serve content, it should be up-to-date.
 
 - **[Replication](/cs-notes/database-system/logging-and-recovery#replication)**: Every change in one node, all other nodes should replicate the change by following some protocol. This process can be intensive and time-consuming as the size of data and the number of nodes in the system increase.
-- **Duplication**: Duplication don't actively copy data from one to another. In duplication, there will be a node acting as a master (related to [master-slave architecture](/cloud-computing-and-distributed-systems/master-slave)). Periodically, the master database will be duplicated to other slave nodes. When making changes to database, only the master can be mutated.
+- **Duplication**: Duplication don't actively copy data from one to another. In duplication, there will be a node acting as a master (related to [master-slave architecture](/cs-notes/cloud-computing-and-distributed-systems/master-slave)). Periodically, the master database will be duplicated to other slave nodes. When making changes to database, only the master can be mutated.
 
 ### Database Sharding
 
@@ -25,7 +25,7 @@ Database sharding is a technique used to horizontally partition a database into 
 In contrast, a vertical partition split the dataset by columns, and what [normalization](/cs-notes/database-system/normalization) also does similarly.
 :::
 
-To actually know which node stores a particular data, we can use [consistent hashing](/cloud-computing-and-distributed-systems/distributed-systems-communication#consistent-hashing) technique.
+To actually know which node stores a particular data, we can use [consistent hashing](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-communication#consistent-hashing) technique.
 
 Benefits of sharding:
 

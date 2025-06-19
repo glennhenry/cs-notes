@@ -1,6 +1,6 @@
 ---
 title: Digital Signal Processing
-slug: digital-signal-processing
+slug: digital-signal-processing-intro
 description: Digital Signal Processing Notes
 ---
 
@@ -8,24 +8,24 @@ description: Digital Signal Processing Notes
 
 ### All pages
 
-- [Signal](digital-signal-processing/signal)
+- [Signal](/cs-notes/digital-signal-processing/signal)
 - Fourier Analysis
-  - [Fourier Series](digital-signal-processing/fourier-series)
-  - [Fourier Transform](digital-signal-processing/fourier-transform)
-  - [Convolution](digital-signal-processing/convolution)
-  - [Discrete Fourier Transform](digital-signal-processing/discrete-fourier-transform)
-  - [Fast Fourier Transform](digital-signal-processing/fast-fourier-transform)
-  - [Discrete Cosine Transform](digital-signal-processing/discrete-cosine-transform)
-  - [Wavelets](digital-signal-processing/wavelets)
-  - [Laplace Transform](digital-signal-processing/laplace-transform)
-  - [Z Transform](digital-signal-processing/z-transform)
+  - [Fourier Series](/cs-notes/digital-signal-processing/fourier-series)
+  - [Fourier Transform](/cs-notes/digital-signal-processing/fourier-transform)
+  - [Convolution](/cs-notes/digital-signal-processing/convolution)
+  - [Discrete Fourier Transform](/cs-notes/digital-signal-processing/discrete-fourier-transform)
+  - [Fast Fourier Transform](/cs-notes/digital-signal-processing/fast-fourier-transform)
+  - [Discrete Cosine Transform](/cs-notes/digital-signal-processing/discrete-cosine-transform)
+  - [Wavelets](/cs-notes/digital-signal-processing/wavelets)
+  - [Laplace Transform](/cs-notes/digital-signal-processing/laplace-transform)
+  - [Z Transform](/cs-notes/digital-signal-processing/z-transform)
 - Signal Transmission
-  - [Sampling](digital-signal-processing/sampling)
-  - [Quantization](digital-signal-processing/quantization)
-  - [Encoding & Decoding](digital-signal-processing/encoding-and-decoding)
-  - [Multiplexing](digital-signal-processing/multiplexing)
-  - [Signal Transmission Medium](digital-signal-processing/signal-transmission-medium)
+  - [Sampling](/cs-notes/digital-signal-processing/sampling)
+  - [Quantization](/cs-notes/digital-signal-processing/quantization)
+  - [Encoding & Decoding](/cs-notes/digital-signal-processing/encoding-and-decoding)
+  - [Multiplexing](/cs-notes/digital-signal-processing/multiplexing)
+  - [Signal Transmission Medium](/cs-notes/digital-signal-processing/signal-transmission-medium)
 - Signal Processing
-  - [Filtering](digital-signal-processing/filtering)
-  - [Compression](digital-signal-processing/compression)
-  - [Denoising](digital-signal-processing/denoising)
+  - [Filtering](/cs-notes/digital-signal-processing/filtering)
+  - [Compression](/cs-notes/digital-signal-processing/compression)
+  - [Denoising](/cs-notes/digital-signal-processing/denoising)

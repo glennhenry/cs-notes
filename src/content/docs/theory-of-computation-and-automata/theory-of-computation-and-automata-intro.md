@@ -1,6 +1,6 @@
 ---
 title: Theory of Computation & Automata
-slug: theory-of-computation-and-automata
+slug: theory-of-computation-and-automata-intro
 description: Theory of Computation & Automata Notes
 ---
 
@@ -11,14 +11,14 @@ description: Theory of Computation & Automata Notes
 
 ### All pages
 
-- [TOC Fundamentals](theory-of-computation-and-automata/toc-fundamentals)
-- [Finite Automata](theory-of-computation-and-automata/finite-automata)
-- [Regular Languages (Part 1)](theory-of-computation-and-automata/regular-languages-part-1)
-- [Advanced Automata](theory-of-computation-and-automata/advanced-automata)
-- [Regular Languages (Part 2)](theory-of-computation-and-automata/regular-languages-part-2)
-- [Formal Grammar](theory-of-computation-and-automata/formal-grammar)
-- [Context-Free Grammar](theory-of-computation-and-automata/context-free-grammar)
-- [Pushdown Automata](theory-of-computation-and-automata/pushdown-automata)
-- [Turing Machine](theory-of-computation-and-automata/turing-machine)
-- [Undecidability](theory-of-computation-and-automata/undecidability)
-- [Complexity Theory](theory-of-computation-and-automata/complexity-theory)
+- [TOC Fundamentals](/cs-notes/theory-of-computation-and-automata/toc-fundamentals)
+- [Finite Automata](/cs-notes/theory-of-computation-and-automata/finite-automata)
+- [Regular Languages (Part 1)](/cs-notes/theory-of-computation-and-automata/regular-languages-part-1)
+- [Advanced Automata](/cs-notes/theory-of-computation-and-automata/advanced-automata)
+- [Regular Languages (Part 2)](/cs-notes/theory-of-computation-and-automata/regular-languages-part-2)
+- [Formal Grammar](/cs-notes/theory-of-computation-and-automata/formal-grammar)
+- [Context-Free Grammar](/cs-notes/theory-of-computation-and-automata/context-free-grammar)
+- [Pushdown Automata](/cs-notes/theory-of-computation-and-automata/pushdown-automata)
+- [Turing Machine](/cs-notes/theory-of-computation-and-automata/turing-machine)
+- [Undecidability](/cs-notes/theory-of-computation-and-automata/undecidability)
+- [Complexity Theory](/cs-notes/theory-of-computation-and-automata/complexity-theory)

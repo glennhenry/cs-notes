@@ -59,7 +59,7 @@ Cloud providers offer some pricing model:
 
 - **Pay-as-you-go (On-Demand)**: Charges customer based on usage, typically on an hourly or per-minute basis. This model offers flexibility and cost-effectiveness as customers only pay for what they use.
 - **Reserved Instances**: Customers can commit to a specific usage level for a contracted period (usually one to three years) and receive discounted pricing compared to pay-as-you-go rates. This model is suitable for predictable or steady workloads.
-- **Function Pricing**: For [FaaS](/cloud-computing-and-distributed-systems/cloud-models#more-models) services, the pricing can be based on the number of function invocations and the execution duration.
+- **Function Pricing**: For [FaaS](/cs-notes/cloud-computing-and-distributed-systems/cloud-models#more-models) services, the pricing can be based on the number of function invocations and the execution duration.
 
 #### Configuration
 
@@ -88,7 +88,7 @@ The top three cloud services are Amazon Web Services (AWS), Google Cloud Platfor
 - **Amazon Route 53**: Scalable [domain name system (DNS)](/cs-notes/computer-networking/dns) web service
 - **Amazon Lambda**: [Serverless](/cs-notes/backend-system/serverless) compute service
 - **Amazon Redshift**: Fully managed data warehouse
-- **Amazon Elastic Beanstalk**: [Platform as a Service (PaaS)](/cloud-computing-and-distributed-systems/cloud-models#common-models) for deploying and managing applications
+- **Amazon Elastic Beanstalk**: [Platform as a Service (PaaS)](/cs-notes/cloud-computing-and-distributed-systems/cloud-models#common-models) for deploying and managing applications
 - **Amazon CloudWatch**: Monitoring and observability service
 - **Amazon Glacier**: Low-cost archival storage service
 
@@ -96,7 +96,7 @@ The top three cloud services are Amazon Web Services (AWS), Google Cloud Platfor
 
 - **Google Compute Engine**: Virtual machines in the cloud
 - **Google App Engine**: Platform as a Service (PaaS) for building and deploying applications
-- **Google Kubernetes Engine**: Managed [Kubernetes](/cloud-computing-and-distributed-systems/docker-and-kubernetes#kubernetes) service for container orchestration
+- **Google Kubernetes Engine**: Managed [Kubernetes](/cs-notes/cloud-computing-and-distributed-systems/docker-and-kubernetes#kubernetes) service for container orchestration
 - **Google Cloud Storage**: Object storage service
 - **Google Cloud SQL**: Fully managed relational database service
 - **Google Cloud Firestore**: Flexible, scalable NoSQL document database

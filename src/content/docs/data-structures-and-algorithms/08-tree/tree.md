@@ -6,7 +6,7 @@ description: Tree
 
 **Main Source:**
 
-- **[Tree (data structure) — Wikipedia](<https://en.wikipedia.org/wiki/Tree_(data_structure)>)**
+- **[Tree (data structure) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Tree_(data_structure)>)**
 - **[Red–black tree — Wikipedia](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree)**
 - **[AVL tree — Wikipedia](https://en.wikipedia.org/wiki/AVL_tree)**
 - **[B-tree — Wikipedia](https://en.wikipedia.org/wiki/B-tree)**

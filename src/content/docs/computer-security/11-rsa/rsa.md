@@ -6,7 +6,7 @@ description: RSA
 
 **Main Source:**
 
-- **[RSA (cryptosystem) — Wikipedia](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>)**
+- **[RSA (cryptosystem) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>)**
 - **[Carmichael function — Wikipedia](https://en.wikipedia.org/wiki/Carmichael_function)**
 - **[What's the difference between RSA and Diffie-Hellman? [duplicate] — cryptography stackexchange](https://crypto.stackexchange.com/questions/42180/whats-the-difference-between-rsa-and-diffie-hellman)**
 

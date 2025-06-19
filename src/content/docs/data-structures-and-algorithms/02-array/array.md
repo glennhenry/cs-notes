@@ -6,7 +6,7 @@ description: Array
 
 **Main Source:**
 
-- **[Array (data structure) — Wikipedia](<https://en.wikipedia.org/wiki/Array_(data_structure)>)**
+- **[Array (data structure) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Array_(data_structure)>)**
 - **[Dynamic array — Wikipedia](https://en.wikipedia.org/wiki/Dynamic_array)**
 
 **Array** is a data structure that stores a **fixed-size** of element of the **same type**. In memory, array is located within a contiguous block of memory locations. It is a fundamental and elementary data structure that serves as a building block for constructing more complex data structures.

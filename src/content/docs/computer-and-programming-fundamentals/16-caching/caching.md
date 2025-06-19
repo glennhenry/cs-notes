@@ -97,7 +97,7 @@ The reason a hash map is suitable for caching is that, in a hash map, data is st
 
 More than a hash-map, Redis can be used to store other data structure, such as lists, sets, sorted sets, strings, bitmaps, etc.
 
-One important thing about Redis is, its distributed nature. Redis supports [sharding](/cloud-computing-and-distributed-systems/distributed-database#database-sharding) and [replication](/cs-notes/database-system/logging-and-recovery#replication), it allows developers to distribute data across multiple Redis instances deployed on multiple servers for improved scalability and fault tolerance. This can be beneficial for applications that need to handle large amounts of data or high traffic loads. In contrast, a traditional hash maps typically operate within a single process or machine.
+One important thing about Redis is, its distributed nature. Redis supports [sharding](/cs-notes/cloud-computing-and-distributed-systems/distributed-database#database-sharding) and [replication](/cs-notes/database-system/logging-and-recovery#replication), it allows developers to distribute data across multiple Redis instances deployed on multiple servers for improved scalability and fault tolerance. This can be beneficial for applications that need to handle large amounts of data or high traffic loads. In contrast, a traditional hash maps typically operate within a single process or machine.
 
 For example, a backend application is deployed across multiple distinct servers. The application is supposed to serve request from anywhere around the world. If the application uses a traditional hash-map for storing data and serving the request, then all the instances would have inconsistent data.
 
@@ -107,7 +107,7 @@ This is because traditional hash maps don't have a synchronization mechanism imp
 Source: https://blog.hackajob.com/how-to-implement-redis-in-go/
 
 :::tip
-See also [distributed systems](/cloud-computing-and-distributed-systems).
+See also [distributed systems](/cs-notes/cloud-computing-and-distributed-systems).
 :::
 
 - data locality

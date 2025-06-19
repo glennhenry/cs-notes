@@ -31,7 +31,7 @@ Computer executes the lowest-level codes, which is binary instruction. Programme
 
     In general, instructions of IR are basic and fundamental to the machine. Even a single line of code can result in a few lines of instruction. The characteristic of bytecode is that an instruction is identified with a one-byte opcode, followed by several parameters.
 
-    Bytecode is designed to be executed in a [virtual machine](/cloud-computing-and-distributed-systems/virtualization).
+    Bytecode is designed to be executed in a [virtual machine](/cs-notes/cloud-computing-and-distributed-systems/virtualization).
 
    :::note
     A virtual machine can be thought of as a virtualized computer system. It isn't a real computer, but can be thought of as one. In simple term, we don't call it a real computer system because technically it doesn't consist of typical constructs like a CPU, but rather something that simulates it. In the context of code execution, it isn't actually executing machine code.

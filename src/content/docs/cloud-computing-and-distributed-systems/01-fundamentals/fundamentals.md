@@ -26,7 +26,7 @@ Benefits of distributed systems:
 
 - **Performance**: A task or problem can be divided into many subtasks, which is assigned to each node in the distributed system. This is useful when the problem is large and can be decomposed into smaller parts. This approach is called **task partitioning** or **task parallelism**, in which one task is distributed to multiple nodes, making the overall execution faster.
 
-- **Scalability**: Another way of distributing load is assigning one task only to one node, this is called **task distribution**. There are [various ways to assign task](/cloud-computing-and-distributed-systems/distributed-systems-communication#coordination) to each node, but the point is to distribute the workload evenly across the nodes. It's useful when dealing with large number of tasks, and each task do not require coordination or communication with other tasks (e.g., a web server serving webpages). This allows the system to be [scaled horizontally](/cs-notes/software-engineering/system-design#scalability), meaning we can increase the number of nodes in the system to scale the overall performance.
+- **Scalability**: Another way of distributing load is assigning one task only to one node, this is called **task distribution**. There are [various ways to assign task](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-communication#coordination) to each node, but the point is to distribute the workload evenly across the nodes. It's useful when dealing with large number of tasks, and each task do not require coordination or communication with other tasks (e.g., a web server serving webpages). This allows the system to be [scaled horizontally](/cs-notes/software-engineering/system-design#scalability), meaning we can increase the number of nodes in the system to scale the overall performance.
 
 - **Fault Tolerance**: In a centralized system, a typical scenario involves a client sending a request to the server, and the server responds to it. However, if the system experiences a failure, it won't be able to respond to clients anymore. All clients relying on that centralized server would be affected.
 
@@ -36,7 +36,7 @@ Benefits of distributed systems:
 
 A distributed system differs with parallel system. A parallel system computes a task by dividing it into smaller subtasks that can be executed simultaneously on multiple processing units (in essence, a node is processing unit). These processing units typically share memory and communicate with each other through shared memory.
 
-On the other hand, a distributed system operates independently (i.e., they have separate memory), and communicate through dedicated [message passing](/cloud-computing-and-distributed-systems/distributed-systems-communication#message-passing) mechanism.
+On the other hand, a distributed system operates independently (i.e., they have separate memory), and communicate through dedicated [message passing](/cs-notes/cloud-computing-and-distributed-systems/distributed-systems-communication#message-passing) mechanism.
 
 ![Distributed vs parallel systems](./distributed-vs-parallel.png)  
 (a) and (b) are distributed system, while (c) is a parallel system  

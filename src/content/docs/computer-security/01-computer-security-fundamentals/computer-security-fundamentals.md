@@ -87,7 +87,7 @@ Many new attacks and exploits are discovered all the time, the attacks that are 
 
 When accessing specific systems, often times they are potentially harmful. For example, downloading specific file from untrusted website, it may contain malicious software inside. **Sandboxing** is the process of mitigating potential impact of malicious or vulnerable software.
 
-It isolates an application or process from the rest of the system or network environment. It creates a controlled and restricted environment where an application can run, limiting its access to system resources and potentially harmful actions. Sandboxing can be implemented using [virtualization](/cloud-computing-and-distributed-systems/virtualization) or [containerization](/cloud-computing-and-distributed-systems/containerization).
+It isolates an application or process from the rest of the system or network environment. It creates a controlled and restricted environment where an application can run, limiting its access to system resources and potentially harmful actions. Sandboxing can be implemented using [virtualization](/cs-notes/cloud-computing-and-distributed-systems/virtualization) or [containerization](/cs-notes/cloud-computing-and-distributed-systems/containerization).
 
 #### Obfuscation
 

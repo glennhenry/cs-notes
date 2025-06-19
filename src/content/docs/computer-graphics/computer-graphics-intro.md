@@ -1,6 +1,6 @@
 ---
 title: Computer Graphics
-slug: computer-graphics
+slug: computer-graphics-intro
 description: Computer Graphics Notes
 ---
 
@@ -84,26 +84,26 @@ The overview of computer graphics process involve these 3:
 
 ### All pages
 
-- [Computer Images (Part 1)](computer-graphics/computer-images-part-1)
-- [Computer Images (Part 2)](computer-graphics/computer-images-part-2)
-- [2D Transformation](computer-graphics/2d-transformation)
-- [3D Transformation](computer-graphics/3d-transformation)
-- [GPU Pipeline](computer-graphics/gpu-pipeline)
-- [Low Level Graphics](computer-graphics/low-level-graphics)
-- [Curves](computer-graphics/curves)
-- [Surfaces](computer-graphics/surfaces)
-- [Textures (Part 1)](computer-graphics/textures-part-1)
-- [Textures (Part 2)](computer-graphics/textures-part-2)
-- [Shading (Part 1)](computer-graphics/shading-part-1)
-- [Shading (Part 2)](computer-graphics/shading-part-2)
-- [Rendering (Part 1)](computer-graphics/rendering-part-1)
-- [Rendering (Part 2)](computer-graphics/rendering-part-2)
-- [Ray Tracing](computer-graphics/ray-tracing)
-- [Shadows](computer-graphics/shadows)
-- [Reflections](computer-graphics/reflections)
-- [Sampling](computer-graphics/sampling)
-- [Signal Processing](computer-graphics/signal-processing)
-- [Computer Display](computer-graphics/computer-display)
-- [Computer Animation](computer-graphics/computer-animation)
-- [Physics-Based Animation](computer-graphics/physics-based-animation)
-- [Simulation](computer-graphics/simulation)
+- [Computer Images (Part 1)](/cs-notes/computer-graphics/computer-images-part-1)
+- [Computer Images (Part 2)](/cs-notes/computer-graphics/computer-images-part-2)
+- [2D Transformation](/cs-notes/computer-graphics/2d-transformation)
+- [3D Transformation](/cs-notes/computer-graphics/3d-transformation)
+- [GPU Pipeline](/cs-notes/computer-graphics/gpu-pipeline)
+- [Low Level Graphics](/cs-notes/computer-graphics/low-level-graphics)
+- [Curves](/cs-notes/computer-graphics/curves)
+- [Surfaces](/cs-notes/computer-graphics/surfaces)
+- [Textures (Part 1)](/cs-notes/computer-graphics/textures-part-1)
+- [Textures (Part 2)](/cs-notes/computer-graphics/textures-part-2)
+- [Shading (Part 1)](/cs-notes/computer-graphics/shading-part-1)
+- [Shading (Part 2)](/cs-notes/computer-graphics/shading-part-2)
+- [Rendering (Part 1)](/cs-notes/computer-graphics/rendering-part-1)
+- [Rendering (Part 2)](/cs-notes/computer-graphics/rendering-part-2)
+- [Ray Tracing](/cs-notes/computer-graphics/ray-tracing)
+- [Shadows](/cs-notes/computer-graphics/shadows)
+- [Reflections](/cs-notes/computer-graphics/reflections)
+- [Sampling](/cs-notes/computer-graphics/sampling)
+- [Signal Processing](/cs-notes/computer-graphics/signal-processing)
+- [Computer Display](/cs-notes/computer-graphics/computer-display)
+- [Computer Animation](/cs-notes/computer-graphics/computer-animation)
+- [Physics-Based Animation](/cs-notes/computer-graphics/physics-based-animation)
+- [Simulation](/cs-notes/computer-graphics/simulation)

@@ -1,6 +1,6 @@
 ---
 title: Computer Networking
-slug: computer-networking
+slug: computer-networking-intro
 description: Computer Networking Notes
 ---
 
@@ -14,47 +14,47 @@ description: Computer Networking Notes
 ### All pages
 
 - Network Standard
-  - [OSI Model](computer-networking/osi-model)
-  - [TCP/IP Model](computer-networking/tcp-ip-model)
+  - [OSI Model](/cs-notes/computer-networking/osi-model)
+  - [TCP/IP Model](/cs-notes/computer-networking/tcp-ip-model)
 - Network Fundamental
   - Network Addressing
-    - [IP Address](computer-networking/ip-address)
-    - [Subnet Mask](computer-networking/subnet-mask)
-    - [MAC Address](computer-networking/mac-address)
-    - [Routing](computer-networking/routing)
-    - [Gateway](computer-networking/gateway)
-    - [Ports](computer-networking/ports)
+    - [IP Address](/cs-notes/computer-networking/ip-address)
+    - [Subnet Mask](/cs-notes/computer-networking/subnet-mask)
+    - [MAC Address](/cs-notes/computer-networking/mac-address)
+    - [Routing](/cs-notes/computer-networking/routing)
+    - [Gateway](/cs-notes/computer-networking/gateway)
+    - [Ports](/cs-notes/computer-networking/ports)
   - Network Device
-    - [Hubs](computer-networking/hubs)
-    - [Switch](computer-networking/switch)
-    - [Router](computer-networking/router)
-    - [Dial-up Modem](computer-networking/dial-up-modem)
+    - [Hubs](/cs-notes/computer-networking/hubs)
+    - [Switch](/cs-notes/computer-networking/switch)
+    - [Router](/cs-notes/computer-networking/router)
+    - [Dial-up Modem](/cs-notes/computer-networking/dial-up-modem)
   - Computer Connection
-    - [Socket](computer-networking/socket)
-    - [Broadband](computer-networking/broadband)
-    - [Ethernet](computer-networking/ethernet)
-    - [LAN & WAN](computer-networking/lan-wan)
-    - [Server](computer-networking/server)
-  - [Network Topology](computer-networking/network-topology)
+    - [Socket](/cs-notes/computer-networking/socket)
+    - [Broadband](/cs-notes/computer-networking/broadband)
+    - [Ethernet](/cs-notes/computer-networking/ethernet)
+    - [LAN & WAN](/cs-notes/computer-networking/lan-wan)
+    - [Server](/cs-notes/computer-networking/server)
+  - [Network Topology](/cs-notes/computer-networking/network-topology)
 - Network Services & Protocol
-  - [DNS](computer-networking/dns)
-  - [DHCP](computer-networking/dhcp)
-  - [NAT](computer-networking/nat)
-  - [Proxy](computer-networking/proxy)
-  - [VPN](computer-networking/vpn)
+  - [DNS](/cs-notes/computer-networking/dns)
+  - [DHCP](/cs-notes/computer-networking/dhcp)
+  - [NAT](/cs-notes/computer-networking/nat)
+  - [Proxy](/cs-notes/computer-networking/proxy)
+  - [VPN](/cs-notes/computer-networking/vpn)
   - Network Protocol
-    - [TCP Protocol](computer-networking/tcp-protocol)
-    - [UDP](computer-networking/udp)
-    - [FTP](computer-networking/ftp)
-    - [Email Protocol](computer-networking/email-protocol)
-    - [RTP](computer-networking/rtp)
-    - [RTC](computer-networking/rtc)
-    - [HTTP & HTTPS](computer-networking/http-https)
+    - [TCP Protocol](/cs-notes/computer-networking/tcp-protocol)
+    - [UDP](/cs-notes/computer-networking/udp)
+    - [FTP](/cs-notes/computer-networking/ftp)
+    - [Email Protocol](/cs-notes/computer-networking/email-protocol)
+    - [RTP](/cs-notes/computer-networking/rtp)
+    - [RTC](/cs-notes/computer-networking/rtc)
+    - [HTTP & HTTPS](/cs-notes/computer-networking/http-https)
 - Wireless & Mobile Networking
-  - [Wi-Fi](computer-networking/wi-fi)
-  - [Bluetooth](computer-networking/bluetooth)
-  - [Cellular Networks](computer-networking/cellular-networking)
-  - [Sim Card](computer-networking/sim-card)
-- [Network Security](computer-networking/network-security)
-- [Network Encryption](computer-networking/network-encryption)
-- [Networking Command](computer-networking/networking-command)
+  - [Wi-Fi](/cs-notes/computer-networking/wi-fi)
+  - [Bluetooth](/cs-notes/computer-networking/bluetooth)
+  - [Cellular Networks](/cs-notes/computer-networking/cellular-networking)
+  - [Sim Card](/cs-notes/computer-networking/sim-card)
+- [Network Security](/cs-notes/computer-networking/network-security)
+- [Network Encryption](/cs-notes/computer-networking/network-encryption)
+- [Networking Command](/cs-notes/computer-networking/networking-command)
