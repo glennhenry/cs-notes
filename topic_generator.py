@@ -1,4 +1,6 @@
 # Python script to generate empty note with its folder, sidebar entries, and topic links.
+# Output for file will be in .temp folder. Sidebar entries and topic links will be outputted in .temp/link.txt or .temp/sidebar.txt
+# Run the script in terminal with input of 0, 1, or 2 (generate_folder_file, generate_topic_links, generate_topic_sidebars) e.g., `python notes_generator.py 0`
 
 import os
 
@@ -67,19 +69,26 @@ def to_title_case(kebab):
 
 def generate_topic_links():
     """
-    Print topic links on console.
+    Generate topic links (to put in topic's intro). Still need to list sub-topics manually.
     """
-    for i, kebab_title in enumerate(pages_id, start=0):
-        print(f"- [{pages_title[i]}]({topic_title}/{kebab_title})")
+    os.makedirs(".temp", exist_ok=True)
+    with open(os.path.join(".temp", "link.txt"), "w") as f:
+        for i, kebab_title in enumerate(pages_id):
+            a = f"- [{pages_title[i]}](/cs-notes/{topic_title}/{kebab_title})\n"
+            f.write(a)
+            print("Generated: ", a[:len(a) - 1])
 
 
 def generate_topic_sidebars():
     """
-    Print sidebar entries on console.
+    Generate sidebar entires (to put in astro.config.mjs). Still need to list create sidebar group for the topic and sub-topics manually.
     """
-    for i, kebab_title in enumerate(pages_id, start=0):
-        title = to_title_case(kebab_title)
-        print(f'"{topic_title}/{kebab_title}/{kebab_title}",')
+    os.makedirs(".temp", exist_ok=True)
+    with open(os.path.join(".temp", "sidebar.txt"), "w") as f:
+        for kebab_title in pages_id:
+            a = f"\"{topic_title}/{kebab_title}/{kebab_title}\",\n"
+            f.write(a)
+            print("Generated: ", a[:len(a) - 1])
 
 
 def generate_folder_file():
@@ -92,7 +101,7 @@ def generate_folder_file():
 
         # Folder numbering system: 01-title, 02-title, 03-title ... 99-title
         folder_name = f"{i:02d}-{kebab_title}"
-        folder_path = os.path.join("temp", folder_name)
+        folder_path = os.path.join(".temp", folder_name)
         os.makedirs(folder_path, exist_ok=True)
 
         md_file_name = f"{kebab_title}.md"
@@ -103,25 +112,33 @@ def generate_folder_file():
 
             # Write YAML header
             md_file.write(f"---\n")
-            md_file.write(f"slug: /{topic_title}/{kebab_title}\n")
-            md_file.write(f"id: {kebab_title}\n")
             md_file.write(f"title: {title}\n")
+            md_file.write(f"slug: {topic_title}/{kebab_title}\n")
             md_file.write(f"description: {title}\n")
             md_file.write(f"---\n\n")
 
-            # Write default template
+            # Write default template (main source on the bottom)
+            md_file.write(f"{title} page\n\n")
             md_file.write(f"**Main Source:**\n\n")
-            md_file.write(f"- [] \n\n")
-            md_file.write(f"{title} page\n")
+            md_file.write(f"- [] \n")
 
-    print("Project structure and MD files created successfully!")
+            print("Generated: ", folder_name)
 
 
 if __name__ == "__main__":
     # Temp folder for generate_folder_file output
-    os.makedirs("temp", exist_ok=True)
+    os.makedirs(".temp", exist_ok=True)
 
-    generate_folder_file()
-    # generate_topic_links()
-    # generate_topic_sidebars()
-    pass
+    import sys
+
+    if len(sys.argv) > 1 and 0 <= int(sys.argv[1]) <= 2:
+        option = int(sys.argv[1])
+        if option == 0:
+            generate_folder_file()
+        if option == 1:
+            generate_topic_links()
+        if option == 2:
+            generate_topic_sidebars()
+    else:
+        print("Invalid input")
+        sys.exit(0)
