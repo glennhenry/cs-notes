@@ -90,7 +90,11 @@
     }
 
     .sidebar-content {
-      height: 80%;
+      height: auto;
+    }
+
+    #starlight__sidebar {
+      height: 85%;
     }
   }
 
@@ -139,6 +143,12 @@
 
 .sl-markdown-content img {
   border: 1px solid black;
+}
+
+br {
+  display: block;
+  content: " ";
+  margin-top: 4px;
 }
 
 .pagination-links {
