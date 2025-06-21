@@ -56,7 +56,7 @@ Source: https://en.wikipedia.org/wiki/Graphics_processing_unit
 - **Frame & Pixel Buffer**: These are temporary memory to store graphical data. The frame buffer represent the complete image on the screen, which is displayed currently, while the pixel buffer store pixel data temporarily during graphics processing tasks. The GPU continuously updates the buffer with new pixel data as it performs calculations and renders the scene.
 
 :::tip
-More about [computer graphics](/cs-notes/computer-graphics)
+More about [computer graphics](/cs-notes/computer-graphics-intro)
 :::
 
 :::note

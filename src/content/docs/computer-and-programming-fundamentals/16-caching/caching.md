@@ -107,7 +107,7 @@ This is because traditional hash maps don't have a synchronization mechanism imp
 Source: https://blog.hackajob.com/how-to-implement-redis-in-go/
 
 :::tip
-See also [distributed systems](/cs-notes/cloud-computing-and-distributed-systems).
+See also [distributed systems](/cs-notes/cloud-computing-and-distributed-systems-intro).
 :::
 
 - data locality

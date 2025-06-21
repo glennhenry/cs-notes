@@ -66,7 +66,7 @@ We can even visualize this in graph, because latent factors or the features are 
 Source: https://devopedia.org/word-embedding
 
 :::tip
-This recommendation system is based on **dot product model**, where the model predict using dot product. Making recommendation system using [deep learning](/cs-notes/deep-learning) technique like [deep neural network](/cs-notes/deep-learning/neural-network) is also possible.
+This recommendation system is based on **dot product model**, where the model predict using dot product. Making recommendation system using [deep learning](/cs-notes/deep-learning-intro) technique like [deep neural network](/cs-notes/deep-learning/neural-network) is also possible.
 :::
 
 #### Compression

@@ -49,7 +49,7 @@ In [Unix](/cs-notes/operating-system/unix), [files have protection code associat
 
 Some common security threats: Malicious software, such as viruses, worms, Trojans, ransomware, and spyware. Unauthorized access which happen through brute-force attacks, password cracking, or exploiting weak authentication mechanisms. Social engineering technique such as phishing, pretexting, or impersonation.
 
-See [computer security](/cs-notes/computer-security) and [other attack & exploit](/cs-notes/computer-security/other-attack-and-exploit) for more.
+See [computer security](/cs-notes/computer-security-intro) and [other attack & exploit](/cs-notes/computer-security/other-attack-and-exploit) for more.
 
 #### Example: Stoned
 

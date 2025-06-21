@@ -92,7 +92,7 @@ Advantages & Disadvantages:
 
 Vector database stores data in a mathematical object called **vectors**. Vectors are mathematical representations of objects or data points in a multidimensional space. Each dimension of the vector corresponds to a specific attribute of the object (called **features**). The location of vector in the multidimensional space represent their characteristics.
 
-The process of turning data, such as words, phrases, documents, images, audio, or any other data, is called **embedding**. Each data is transformed into a numerical representation. Embedding involves mapping all numerical representation of the data into a common representation in the single multidimensional space. The embedding process typically uses [machine or deep learning techniques](/cs-notes/machine-learning).
+The process of turning data, such as words, phrases, documents, images, audio, or any other data, is called **embedding**. Each data is transformed into a numerical representation. Embedding involves mapping all numerical representation of the data into a common representation in the single multidimensional space. The embedding process typically uses [machine or deep learning techniques](/cs-notes/machine-learning-intro).
 
 ![Vector database](./vector.png)  
 Source: https://www.elastic.co/what-is/vector-database

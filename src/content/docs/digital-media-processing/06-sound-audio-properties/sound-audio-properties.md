@@ -82,5 +82,5 @@ Digital audio can undergo additional processing or modified with special effects
   ![An audio player that provides audio editing](./audio-properties.png)
 
 :::tip
-See also [digital signal processing](/cs-notes/digital-signal-processing), [audio effects](/cs-notes/digital-media-processing/audio-effects), and [audio equalization](/cs-notes/digital-media-processing/audio-equalization).
+See also [digital signal processing](/cs-notes/digital-signal-processing-intro), [audio effects](/cs-notes/digital-media-processing/audio-effects), and [audio equalization](/cs-notes/digital-media-processing/audio-equalization).
 :::

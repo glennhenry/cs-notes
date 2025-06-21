@@ -92,5 +92,5 @@ Here are commonly used data structures:
   Source: [array](https://www.geeksforgeeks.org/when-to-use-array-over-a-list/), [stack](https://www.trivusi.web.id/2022/07/struktur-data-stack.html), [hash table](https://khalilstemmler.com/blogs/data-structures-algorithms/hash-tables/)
 
 :::tip
-Refer to [data structures and algorithm](/cs-notes/data-structures-and-algorithms) for more detailed explanation
+Refer to [data structures and algorithm](/cs-notes/data-structures-and-algorithms-intro) for more detailed explanation
 :::

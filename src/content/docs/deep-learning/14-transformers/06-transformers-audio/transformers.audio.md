@@ -26,7 +26,7 @@ Another way to represent audio is using **waveform**, the representation shows h
 Source: https://www.researchgate.net/figure/Waveform-spectrogram-and-mel-spectrogram-of-a-10-s-speech-segment-obtained-from-Google_fig1_333834541
 
 :::tip
-Find more about [signal processing](/cs-notes/digital-signal-processing) or about [audio](/cs-notes/digital-media-processing/sound-audio-properties).
+Find more about [signal processing](/cs-notes/digital-signal-processing-intro) or about [audio](/cs-notes/digital-media-processing/sound-audio-properties).
 :::
 
 #### Input & Output

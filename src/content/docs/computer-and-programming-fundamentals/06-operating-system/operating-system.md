@@ -63,5 +63,5 @@ Some characteristics of Unix:
 Popular operating system such as Linux and macOS are considered as Unix-like, meaning they have similarities with the original Unix operating system.
 
 :::tip
-Refer to [operating system](/cs-notes/operating-system) for more detailed explanation
+Refer to [operating system](/cs-notes/operating-system-intro) for more detailed explanation
 :::

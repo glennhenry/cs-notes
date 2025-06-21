@@ -32,5 +32,5 @@ Cloud computing use [virtualization](/cs-notes/cloud-computing-and-distributed-s
 Therefore, it's important for the technology to be implemented correctly. The one that manages virtual machines, hypervisor, must be regularly updated to protect against vulnerabilities and potential attacks.
 
 :::tip
-Cloud security is just a subdomain of a larger umbrella, see also [computer security](/cs-notes/computer-security).
+Cloud security is just a subdomain of a larger umbrella, see also [computer security](/cs-notes/computer-security-intro).
 :::

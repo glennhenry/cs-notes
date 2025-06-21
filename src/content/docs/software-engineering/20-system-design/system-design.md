@@ -122,7 +122,7 @@ This leaves us with two possible system:
 Source: https://en.wikipedia.org/wiki/CAP_theorem#/media/File:CAP_Theorem_Venn_Diagram.png
 
 :::tip
-More about [distributed systems](/cs-notes/cloud-computing-and-distributed-systems).
+More about [distributed systems](/cs-notes/cloud-computing-and-distributed-systems-intro).
 :::
 
 ### Infrastructure
@@ -197,7 +197,7 @@ Ways to improve security:
 
 - Implement [authentication](/cs-notes/backend-system/authentication) and [authorization](/cs-notes/backend-system/authorization) mechanism.
 - Use secure protocols such as [SSL/TLS](/cs-notes/computer-networking/network-encryption#ssltls).
-- Avoid [various security vulnerability](/cs-notes/computer-security) and apply best practices.
+- Avoid [various security vulnerability](/cs-notes/computer-security-intro) and apply best practices.
 - Maintain IP whitelists and blacklists to allow or block traffic from specific IP addresses or ranges.
 - Implement rate limiting to control the amount of incoming traffic, preventing [DoS](/cs-notes/computer-security/network-security#ddos-attack).
 

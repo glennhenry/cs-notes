@@ -8,24 +8,24 @@ My computer science notes from various online courses, tutorial, books, blogs, W
 
 ### Main Topics
 
-- **[Computer & Programming Fundamentals](/cs-notes/computer-and-programming-fundamentals)**
-- **[Digital Signal Processing](/cs-notes/digital-signal-processing)**
-- **[Digital Media Processing](/cs-notes/digital-media-processing)**
-- **[Computer Networking](/cs-notes/computer-networking)**
-- **[Data Structures & Algorithms](/cs-notes/data-structures-and-algorithms)**
-- **[Computer Organization & Architecture](/cs-notes/computer-organization-and-architecture)**
-- **[Operating System](/cs-notes/operating-system)**
-- **[Theory of Computation & Automata](/cs-notes/theory-of-computation-and-automata)**
-- **[Compilers & Programming Language](/cs-notes/compilers-and-programming-languages)**
-- **[Database System](/cs-notes/database-system)**
-- **[Computer Graphics](/cs-notes/computer-graphics)**
-- **[Internet & Web](/cs-notes/internet-and-web)**
-- **[Backend System](/cs-notes/backend-system)**
-- **[Computer Security](/cs-notes/computer-security)**
-- **[Machine Learning](/cs-notes/machine-learning)**
-- **[Deep Learning](/cs-notes/deep-learning)**
-- **[Software Engineering](/cs-notes/software-engineering)**
-- **[Cloud Computing & Distributed Systems](/cs-notes/cloud-computing-and-distributed-systems)**
+- **[Computer & Programming Fundamentals](/cs-notes/computer-and-programming-fundamentals-intro)**
+- **[Digital Signal Processing](/cs-notes/digital-signal-processing-intro)**
+- **[Digital Media Processing](/cs-notes/digital-media-processing-intro)**
+- **[Computer Networking](/cs-notes/computer-networking-intro)**
+- **[Data Structures & Algorithms](/cs-notes/data-structures-and-algorithms-intro)**
+- **[Computer Organization & Architecture](/cs-notes/computer-organization-and-architecture-intro)**
+- **[Operating System](/cs-notes/operating-system-intro)**
+- **[Theory of Computation & Automata](/cs-notes/theory-of-computation-and-automata-intro)**
+- **[Compilers & Programming Language](/cs-notes/compilers-and-programming-languages-intro)**
+- **[Database System](/cs-notes/database-system-intro)**
+- **[Computer Graphics](/cs-notes/computer-graphics-intro)**
+- **[Internet & Web](/cs-notes/internet-and-web-intro)**
+- **[Backend System](/cs-notes/backend-system-intro)**
+- **[Computer Security](/cs-notes/computer-security-intro)**
+- **[Machine Learning](/cs-notes/machine-learning-intro)**
+- **[Deep Learning](/cs-notes/deep-learning-intro)**
+- **[Software Engineering](/cs-notes/software-engineering-intro)**
+- **[Cloud Computing & Distributed Systems](/cs-notes/cloud-computing-and-distributed-systems-intro)**
 
 These topics are all completed, though they are subject to minor or major changes in the future. Change includes grammar or typo fix, clarification, correcting misinformation, and adding more notes. Mostly, they are listed under [TO-DOs](#to-dos).
 

@@ -6,7 +6,7 @@ description: Networking
 
 **Main Source:**
 
-- **[Computer Networking](/cs-notes/computer-networking)**
+- **[Computer Networking](/cs-notes/computer-networking-intro)**
 - **[Chapter 17 Distributed Systems - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 
 OS bridges hardware and software applications by providing APIs, including networking APIs. When software application want to make a network request, the OS will handle the low-level networking capabilities. This includes tasks such as establishing network connections, managing network sockets, packet transmission, and handling network protocols.

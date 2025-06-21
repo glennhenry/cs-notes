@@ -34,7 +34,7 @@ The specific format or type of files is typically associated within the name as 
 Source: https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/11_FileSystemInterface.html
 
 :::tip
-More about the [structure of specific file format](/cs-notes/digital-media-processing)
+More about the [structure of specific file format](/cs-notes/digital-media-processing-intro)
 :::
 
 #### File Attributes

@@ -8,7 +8,7 @@ description: Speech Processing
 
 - **Various source from Google and YouTube**
 
-**Speech processing** is the analysis, synthesis, and understanding of spoken language. It involves various techniques and algorithms including speech recognition, speech synthesis, speaker recognition, and speech enhancement. Speech processing involves a lot of [machine learning](/cs-notes/machine-learning) and [deep learning](/cs-notes/deep-learning) techniques.
+**Speech processing** is the analysis, synthesis, and understanding of spoken language. It involves various techniques and algorithms including speech recognition, speech synthesis, speaker recognition, and speech enhancement. Speech processing involves a lot of [machine learning](/cs-notes/machine-learning-intro) and [deep learning](/cs-notes/deep-learning-intro) techniques.
 
 Speech processing involves some steps, here is a high-level overview:
 

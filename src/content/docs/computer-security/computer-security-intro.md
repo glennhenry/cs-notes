@@ -5,7 +5,7 @@ description: Computer Security Notes
 ---
 
 :::tip
-Highly recommend seeing [computer networking](/cs-notes/computer-networking) first. This includes the various network protocol and terminology.
+Highly recommend seeing [computer networking](/cs-notes/computer-networking-intro) first. This includes the various network protocol and terminology.
 :::
 
 ### All pages

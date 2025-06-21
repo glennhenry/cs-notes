@@ -8,8 +8,8 @@ description: Data Representation
 
 - **[Units of information — Wikipedia](https://en.wikipedia.org/wiki/Units_of_information)**
 - **[Computer Graphics Images (part 1)](/cs-notes/computer-graphics/computer-images-part-1)**
-- **[Digital Signal Processing](/cs-notes/digital-signal-processing)**
-- **[Digital Media Processing](/cs-notes/digital-media-processing)**
+- **[Digital Signal Processing](/cs-notes/digital-signal-processing-intro)**
+- **[Digital Media Processing](/cs-notes/digital-media-processing-intro)**
 - **[What is ASCII — TechTarget](https://www.techtarget.com/whatis/definition/ASCII-American-Standard-Code-for-Information-Interchange)**
 - **[How Unicode Works: What Every Developer Needs to Know About Strings and 🦄 by Peter Tasker](https://deliciousbrains.com/how-unicode-works/)**
 - **[Base64 — Wikipedia](https://en.wikipedia.org/wiki/Base64)**
@@ -43,7 +43,7 @@ In computer, a file is a collection of data or information stored on a storage d
 
 A file format defines how a file is structured and organized. A file format describes how data is stored, encoded, and interpreted in a computer file. For example, a document file may include what font used in the document so that the computer that reads it know what to display.
 
-Various amount of file format can be found in [digital media processing](/cs-notes/digital-media-processing), digital media formats section.
+Various amount of file format can be found in [digital media processing](/cs-notes/digital-media-processing-intro), digital media formats section.
 
 ### Data Representation
 
@@ -101,7 +101,7 @@ As explained before, the stored file will be in a specific file format. In the c
 Source: https://www.teachwithict.com/binary-representation-of-sound.html
 
 :::tip
-Know more about wave in computer in [digital signal processing](/cs-notes/digital-signal-processing), especially the signal transmission part. More about [digital media processing](/cs-notes/digital-media-processing).
+Know more about wave in computer in [digital signal processing](/cs-notes/digital-signal-processing-intro), especially the signal transmission part. More about [digital media processing](/cs-notes/digital-media-processing-intro).
 :::
 
 #### Database
@@ -116,7 +116,7 @@ A database file is typically divided into fixed-size chunk that contains a speci
 Source: https://www.javatpoint.com/what-is-rdbms
 
 :::tip
-See also [database system](/cs-notes/database-system).
+See also [database system](/cs-notes/database-system-intro).
 :::
 
 ### Character Encoding

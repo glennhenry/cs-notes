@@ -6,7 +6,7 @@ description: Device Management
 
 **Main Source:**
 
-- **[Computer Organization & Architecture](/cs-notes/computer-organization-and-architecture)**
+- **[Computer Organization & Architecture](/cs-notes/computer-organization-and-architecture-intro)**
 - **[Chapter 13 I/O Systems - Abraham Silberschatz-Operating System Concepts (9th,2012_12)]**
 - **[Device driver — Wikipedia](https://en.wikipedia.org/wiki/Device_driver)**
 

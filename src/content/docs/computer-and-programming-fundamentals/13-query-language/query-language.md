@@ -24,5 +24,5 @@ Source: https://www.w3resource.com/sql/sql-syntax.php
 Another example of SQL statement which is selecting only the "country_id" and "country_name" from "countries" table, where their "region_id" is 1 and the column should be ordered by "country_name".
 
 :::tip
-Find out more about **[database system](/cs-notes/database-system)**.
+Find out more about **[database system](/cs-notes/database-system-intro)**.
 :::

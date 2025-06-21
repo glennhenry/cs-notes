@@ -93,7 +93,7 @@ Firewall examines the packets of data passing through them and make decisions ab
 ![Firewall access control list](./firewall-control.png)  
 Source: https://youtu.be/kDEX1HXybrU?si=iRlxiRyRBPYrG90I&t=137
 
-A firewall can be implemented in both hardware and software forms. A hardware firewall protects the entire network, typically in a standalone form or built-in to the [router](/cs-notes/computer-networking). A software firewall, also known as host-based firewall, is implemented on individual computers or servers. For example, Windows operating system has a built-in firewall called Microsoft Defender Firewall.
+A firewall can be implemented in both hardware and software forms. A hardware firewall protects the entire network, typically in a standalone form or built-in to the [router](/cs-notes/computer-networking-intro). A software firewall, also known as host-based firewall, is implemented on individual computers or servers. For example, Windows operating system has a built-in firewall called Microsoft Defender Firewall.
 
 ![Hardware and software firewall](./hardware-software-firewall.jpeg)  
 Source: https://shop3213.sosoutremer.org/category?name=hardware%20vs%20software%20firewall
