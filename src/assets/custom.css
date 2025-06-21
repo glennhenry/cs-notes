@@ -60,7 +60,7 @@
   .sl-markdown-content strong {
     font-weight: 600;
   }
-  .sl-markdown-content strong,
+  .sl-markdown-content strong:not(:has(> code)),
   .sl-markdown-content em,
   .sl-markdown-content a:not(:has(> code)) {
     background-color: var(--sl-color-body-highlight);
