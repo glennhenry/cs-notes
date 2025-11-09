@@ -45,15 +45,23 @@
   .sl-markdown-content a:not(:has(> code)):hover {
     color: #a86ec4;
   }
+
+  :where(.right-sidebar a[aria-current="true"]) {
+    background-color: #f0e6f4;
+  }
+
+  :where(.sidebar a[aria-current="page"]) {
+    background-color: #f0e6f4;
+  }
 }
 
 :root {
-  --sl-content-width: 55rem;
+  --sl-content-width: 65rem;
   --sl-text-5xl: 2.2rem;
   --sl-text-4xl: 1.8rem;
   --sl-text-3xl: 1.6rem;
   --sl-text-2xl: 1.3rem;
-  --sl-text-xs: 1rem;
+  --sl-text-xs: 0.9rem;
   --sl-text-code-sm: 0.9rem;
 
   /* Highlighted color behind bold, italic, and hyperlink texts */
@@ -76,45 +84,59 @@
   .sl-heading-wrapper {
     margin-top: 1em;
   }
+
+  .content-panel {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  :where(.sidebar a[aria-current="page"]) {
+    background-color: #282828;
+  }
+
+  :where(.right-sidebar a[aria-current="true"]) {
+    background-color: #282828;
+  }
 }
 
 @layer obsidian {
   /* Spacing: enable blank space vertically on sidebar and main content */
   @media (min-width: 50em) {
     .main-pane {
-      padding-top: 3rem;
-    }
-
-    .sidebar {
-      padding-top: 3rem;
+      padding-top: 1rem;
     }
 
     .sidebar-content {
       height: auto;
     }
-
-    #starlight__sidebar {
-      height: 85%;
-    }
-  }
-
-  /* Change font for headings, left sidebar, and right sidebar texts */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .sidebar,
-  .right-sidebar {
-    font-family: "Source Sans 3", ui-sans-serif, system-ui, -apple-system,
-      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   :root[data-theme="dark"] {
     --sl-color-bg: rgb(30, 30, 32);
+
+    .main-frame {
+      background-color: #1a1a1c;
+    }
+
+    .right-sidebar {
+      border-left: solid 1px #28282b;
+    }
+
+    .sidebar-content {
+      border-right: solid 1px #28282b;
+    }
+  }
+
+  .main-frame {
+    background-color: #fff;
+  }
+
+  .right-sidebar {
+    border-left: solid 1px #edeef3;
+  }
+
+  .sidebar-content {
+    border-right: solid 1px #edeef3;
   }
 }
 
@@ -131,10 +153,18 @@
   .mobile-preferences {
     padding-bottom: 1rem;
   }
+
+  .right-sidebar-container {
+    min-width: 15rem;
+  }
 }
 
 .right-sidebar-panel a {
   padding-top: 0.1rem;
+}
+
+.backlink a:hover {
+  color: var(--slsg-text-color-accent);
 }
 
 .site-title {
