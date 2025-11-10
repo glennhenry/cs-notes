@@ -3,7 +3,7 @@
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: var(--sl-color-accent);
+    background: var(--sl-color-accent-low);
     color: white;
     border: none;
     border-radius: 20%;
@@ -13,11 +13,16 @@
     cursor: pointer;
     opacity: 0;
     pointer-events: none;
+	  z-index: 999999;
   }
 
   .scroll-to-top.visible {
     opacity: 1;
     pointer-events: auto;
+  }
+  
+  .scroll-to-top:hover {
+    background: var(--sl-color-accent);
   }
 </style>
 
