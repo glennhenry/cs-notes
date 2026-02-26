@@ -109,7 +109,6 @@
   }
 
   .top-level {
-    border: 1px solid var(--custom-border-color);
     padding: 8px;
   }
 
@@ -144,8 +143,6 @@
     }
 
     .right-sidebar-container {
-      border: 1px solid var(--custom-border-color);
-      background-color: var(--custom-inside-color);
       margin: 1rem;
       height: auto;
       right: 0;
@@ -190,10 +187,9 @@
   }
 
   .sidebar-top {
-    border: 1px solid var(--custom-border-color);
+    background-color: var(--custom-outside-color);
     padding: 1rem;
     margin-top: 1rem;
-    background-color: var(--custom-inside-color);
   }
 
   .sidebar-pane {
@@ -201,7 +197,7 @@
   }
 
   .top-level {
-    background-color: var(--custom-inside-color);
+    background-color: var(--custom-outside-color);
   }
 
   .sidebar-content {
@@ -224,10 +220,6 @@
   .mobile-header {
     background-color: var(--custom-outside-color);
     box-shadow: -1px 1px 1px var(--custom-mobile-header-shadow-color);
-  }
-
-  #starlight__mobile-toc {
-    background-color: var(--custom-outside-color);
   }
 }
 
