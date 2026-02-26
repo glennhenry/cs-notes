@@ -37,11 +37,11 @@ I also want to add more information to specific notes that are still lacking (se
 
 #### Static Site Generator
 
-Instead of using something simpler like OneNote, Notion, or Obsidian, it uses a static site generator. It resembles technical documentation (like for API, library, or programming language). The use of SSG allows for easy and free static deployment, so I can see my notes everywhere and anytime from a website. It relies on `.md` file for making the notes and git as the version control.
+Instead of using tools like OneNote, Notion, or Obsidian, I chose a static site generator. It resembles a technical documentation (like for API, library, or programming language). The use of SSG allows for easy and free static deployment, so I can see my notes everywhere and anytime from a browser. I relied on `.md` file to write notes and Git as the version control.
 
-The site begins with me writing my notes in Notion. It was hard to organize as I wrote more detailed notes. Then, I switched to Docusaurus and used it for a very long time.
+The site begins from Notion. I realized it was hard to organize as I wrote more notes. Then, I switched to Docusaurus and used it for a very long time.
 
-Although I don't write much after completing all the notes, I wish my site looked better. I didn't bother styling Docusaurus because the site design was too far from my expectations. I tried many SSG and the best design to my preference is Quartz, but it fails to fulfill many of my use cases, and Starlight with Obsidian theme just happen to be my second best.
+Docusaurus's site design was too far from my expectations, so I had to change to something closer to my preference, and that is Quartz; though it fails to fulfill many of my use cases, and Starlight with Obsidian theme (I tweaked the base theme a lot) just happen to be my second best.
 
 ### Credits
 
@@ -70,6 +70,8 @@ The site is currently still lacking:
   - We shall find a way to make graph and backlinks to work without changing the original structure.
   - Alternately, we may need to withdraw our expectation, that is by removing numbered folder (but still have separate folder for each note images). This means we also need to change all markdown image reference.
   - The effortless solution is to ignore graph and backlinks. They don't affect the overall site anyway.
+  - Possible solution, use the new sitemap with slug binding.
+-  **Latex formula rendered double**. This is probably just a markdown format problem that used to work in Docusaurus but not in Starlight. Would also change font-size of katex class to 1.1 rem.
 
 Notes TODO:
 
