@@ -209,12 +209,11 @@
   }
 
   .main-pane {
-    border: 1px solid var(--custom-border-color);
     background-color: var(--custom-inside-color);
   }
 
   .main-frame {
-    background-color: var(--custom-outside-color);
+    background-color: var(--custom-inside-color);
   }
 
   .mobile-header {
