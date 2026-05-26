@@ -220,6 +220,29 @@
     background-color: var(--custom-outside-color);
     box-shadow: -1px 1px 1px var(--custom-mobile-header-shadow-color);
   }
+
+  .starlight-aside {
+    border: unset;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-radius: 4px;
+  }
+
+  .starlight-aside--note {
+    border-left-color: var(--sl-color-blue);
+  }
+
+  .starlight-aside--tip {
+    border-left-color: var(--sl-color-purple);
+  }
+
+  .starlight-aside--caution {
+    border-left-color: var(--sl-color-orange);
+  }
+
+  .starlight-aside--danger {
+    border-left-color: var(--sl-color-red);
+  }
 }
 
 .site-title {
@@ -235,7 +258,8 @@
 }
 
 .sl-markdown-content img {
-  border: 1px solid black;
+  border: 1px solid var(--custom-border-color);
+  border-radius: 4px;
 }
 
 br {
