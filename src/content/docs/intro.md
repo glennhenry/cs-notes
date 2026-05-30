@@ -52,10 +52,6 @@ Docusaurus's site design was too far from my expectations, so I had to change to
 - [Perchance](https://perchance.org/ai-icon-generator) — favicon.ico generator.
 - And last but not least, **various online learning resources** which are included in each note.
 
-> personal computer science notes website (art style waifu) by [@Perchance](https://perchance.org/ai-icon-generator)
-
-![CS waifu](./cs-waifu.jpg)
-
 ### TO-DOs
 
 For simplicity, TO-DOs are placed here instead of something like GitHub issues.
