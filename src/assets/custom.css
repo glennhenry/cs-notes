@@ -21,6 +21,18 @@
   --custom-border-color: #454848;
   --custom-mobile-header-shadow-color: rgba(255, 255, 255, 0.3);
   --custom-body-highlight-color: #2d262d;
+
+  .sl-markdown-content strong:not(:has(> code)),
+  .sl-markdown-content em,
+  .sl-markdown-content a:not(:has(> code)) {
+    background-color: var(--custom-body-highlight-color);
+    padding: 0.15rem;
+    border-radius: 0.3rem;
+    border: 1px solid #4c4b4b;
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
 }
 
 /* Light mode colors. */
@@ -83,6 +95,26 @@
     background-color: var(--custom-body-highlight-color);
     padding: 0.15rem;
     border-radius: 0.3rem;
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .sl-markdown-content a:not(:has(> code)) span {
+    display: inline-flex;
+    vertical-align: center;
+    align-self: center;
+    margin-left: 0.25rem;
+  }
+
+  .sl-markdown-content strong > a:not(:has(> code)),
+  .sl-markdown-content a:not(:has(> code)) > strong {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    -webkit-box-decoration-break: initial !important;
+    box-decoration-break: initial !important;
   }
 
   .sl-markdown-content a[target="_blank"] {
