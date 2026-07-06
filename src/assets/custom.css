@@ -25,13 +25,7 @@
   .sl-markdown-content strong:not(:has(> code)),
   .sl-markdown-content em,
   .sl-markdown-content a:not(:has(> code)) {
-    background-color: var(--custom-body-highlight-color);
-    padding: 0.15rem;
-    border-radius: 0.3rem;
     border: 1px solid #4c4b4b;
-    display: inline;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
   }
 }
 
