@@ -6,10 +6,10 @@ description: Logging & Recovery
 
 **Main Source:**
 
-- **[Logging (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Logging_(computing)>)**
+- **[Logging (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Logging_(computing)>)**
 - **[Transaction log — Wikipedia](https://en.wikipedia.org/wiki/Transaction_log)**
 - **[Write-ahead logging — Wikipedia](https://en.wikipedia.org/wiki/Write-ahead_logging)**
-- **[Replication (computing) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Replication_(computing)>)**
+- **[Replication (computing) — Wikipedia](<https://en.wikipedia.org/wiki/Replication_(computing)>)**
 - **[Schema migration — Wikipedia](https://en.wikipedia.org/wiki/Schema_migration)**
 - **Chapter 5, Designing Data Intensive Applications — Martin Kleppmann**
 

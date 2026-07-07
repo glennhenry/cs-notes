@@ -9,8 +9,8 @@ description: Distributed Systems Model
 - **[Distributed Computing System Models — GeeksforGeeks](https://www.geeksforgeeks.org/distributed-computing-system-models/)**
 - **[Distributed algorithm — Wikipedia](https://en.wikipedia.org/wiki/Distributed_algorithm)**
 - **[Atomic commit — Wikipedia](https://en.wikipedia.org/wiki/Atomic_commit)**
-- **[Consensus (computer science) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Consensus_(computer_science)>)**
-- **[Paxos (computer science), Basic Paxos — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Paxos_(computer_science)#Basic_Paxos>)**
+- **[Consensus (computer science) — Wikipedia](<https://en.wikipedia.org/wiki/Consensus_(computer_science)>)**
+- **[Paxos (computer science), Basic Paxos — Wikipedia](<https://en.wikipedia.org/wiki/Paxos_(computer_science)#Basic_Paxos>)**
 - **[Leader election — Wikipedia](https://en.wikipedia.org/wiki/Leader_election)**
 - **[Bully algorithm — Wikipedia](https://en.wikipedia.org/wiki/Bully_algorithm)**
 
@@ -20,7 +20,6 @@ description: Distributed Systems Model
 - **Link**: A link represent a communication channel or connection between nodes in a distributed system. It can be a physical link, which uses physical medium, such as [Ethernet cables](/cs-notes/computer-networking/ethernet), [fiber optic cables](/cs-notes/digital-signal-processing/signal-transmission-medium#guided-transmission), or [wireless communication](/cs-notes/computer-networking/wi-fi). Or a logical link, which is an abstraction or virtual representation of a communication channel.
 
   Types of links:
-
   - **Point-to-Point Links**: Direct communication channel between two nodes.
   - **Broadcast Links**: A channel for simultaneously sending a message to all other nodes connected to the link in the system.
   - **Multicast Links**: A channel for sending a message to a specific group of nodes. Multicast links operate concurrently, thus requiring a specific collision protocol, unlike broadcast links, which facilitate one-to-many communication.
@@ -61,7 +60,7 @@ See **[Concurrency Mechanism](/cs-notes/cloud-computing-and-distributed-systems/
 
 ##### Consensus
 
-Consensus is a process of reaching agreement or a shared decision on a single value among a group of participants in a distributed system. By making decision, it can be anything from agreeing on specific  configurations, shared state, data value, order of operations, etc. A consensus algorithm must be fault-tolerant and capable of reaching a final decision even in the case of node failures.
+Consensus is a process of reaching agreement or a shared decision on a single value among a group of participants in a distributed system. By making decision, it can be anything from agreeing on specific configurations, shared state, data value, order of operations, etc. A consensus algorithm must be fault-tolerant and capable of reaching a final decision even in the case of node failures.
 
 Properties of consensus algorithms that must be satisfied:
 
@@ -74,7 +73,7 @@ Properties of consensus algorithms that must be satisfied:
 
 One example of family of protocols for solving consensus is **Paxos**. The one we are discussing is the basic variant of Paxos.
 
-Paxos achieves consistency across multiple nodes by informing them of a value and asking their agreement. The value is only accepted if a sufficient number of nodes agree on it.  It can be thought as candidate proposing and voters that vote the proposal.
+Paxos achieves consistency across multiple nodes by informing them of a value and asking their agreement. The value is only accepted if a sufficient number of nodes agree on it. It can be thought as candidate proposing and voters that vote the proposal.
 
 It consists of the two phases, divided into another two subphases:
 
@@ -90,7 +89,7 @@ Paxos can be designed synchronously with fixed voting time or asynchronously. Bo
 
 ##### Leader Election
 
-A leader or coordinator in a distributed system coordinates the activities of other nodes. This includes  allocating resources, distributing tasks, monitoring their workload, detecting other nodes failures, and sometimes routing messages or requests from other nodes to the appropriate destinations.
+A leader or coordinator in a distributed system coordinates the activities of other nodes. This includes allocating resources, distributing tasks, monitoring their workload, detecting other nodes failures, and sometimes routing messages or requests from other nodes to the appropriate destinations.
 
 A leader may also fail, and the type of algorithm used to select a new leader among a group of nodes (also called processes) in a distributed system is called **leader election**.
 
@@ -119,7 +118,7 @@ The algorithm:
 1. Each process is assigned a unique identifier or process ID. The process with the highest ID is considered the highest-ranked process and assumes the role of the leader initially.
 2. When a process detects that the leader is unresponsive or fails, it initiates an election by sending an election message to all processes with higher IDs.
 3. Upon receiving an election message, a process with a higher ID responds with an _Alive_ message to acknowledge the election.
-4. If a process *does not* receive any response after sending the election message, it assumes that it has the highest ID among the active processes and declares itself as the new leader. Otherwise, it sends no further message and wait for the next steps.
+4. If a process _does not_ receive any response after sending the election message, it assumes that it has the highest ID among the active processes and declares itself as the new leader. Otherwise, it sends no further message and wait for the next steps.
 5. The newly elected leader should broadcast a coordinator (victory) message to inform all other processes of its leadership status.
 6. If a process receives a coordinator message, it recognizes the new leader and updates its internal state accordingly.
 
@@ -150,4 +149,4 @@ Architectural model describe the high-level design and structure of the system, 
 
 #### Process
 
-*don't mind this heading as it forces the graph view to render*
+_don't mind this heading as it forces the graph view to render_

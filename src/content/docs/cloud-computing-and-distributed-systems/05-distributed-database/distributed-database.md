@@ -8,7 +8,7 @@ description: Distributed Database
 
 - **[Distributed database — Wikipedia](https://en.wikipedia.org/wiki/Distributed_database)**
 - **[Distributed transaction — Wikipedia](https://en.wikipedia.org/wiki/Distributed_transaction)**
-- **[Query Processing in Distributed Database System — IEEE Transactions on Software Engineering](/cs-notes/<https://www.pdma.gov.pk/sub/uploads/query%20proceessing%20(1).pdf>)**
+- **[Query Processing in Distributed Database System — IEEE Transactions on Software Engineering](</https://www.pdma.gov.pk/sub/uploads/query%20proceessing%20(1).pdf>)**
 
 Distributed Database is a database system that is spread across multiple nodes or servers, often located in different physical locations or connected through a network. Data is partitioned and stored on multiple nodes, allowing for parallel processing and improved scalability, fault tolerance, and performance.
 
@@ -94,4 +94,4 @@ See also similar topic about [concurrency control in database system](/cs-notes/
 
 #### Process
 
-*don't mind this heading as it forces the graph view to render*
+_don't mind this heading as it forces the graph view to render_

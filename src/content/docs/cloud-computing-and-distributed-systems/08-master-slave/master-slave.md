@@ -6,7 +6,7 @@ description: Master-Slave
 
 **Main Source:**
 
-- **[Master–slave (technology) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Master%E2%80%93slave_(technology)>)**
+- **[Master–slave (technology) — Wikipedia](<https://en.wikipedia.org/wiki/Master%E2%80%93slave_(technology)>)**
 
 **Master-Slave** architecture is a system architecture in which one component, called the **master**, controls one or more other components, called **slaves**.
 
@@ -29,4 +29,4 @@ Not only increasing fault tolerance, this also increase read performance, as we 
 
 #### Process
 
-*don't mind this heading as it forces the graph view to render*
+_don't mind this heading as it forces the graph view to render_

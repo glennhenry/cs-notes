@@ -7,7 +7,7 @@ description: Database Optimization
 **Main Source:**
 
 - **[Query optimization — Wikipedia](https://en.wikipedia.org/wiki/Query_optimization)**
-- **[Partition (database) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Partition_(database)>)**
+- **[Partition (database) — Wikipedia](<https://en.wikipedia.org/wiki/Partition_(database)>)**
 - **Chapter 6, Designing Data Intensive Applications — Martin Kleppmann**
 
 [Query language](/cs-notes/database-system/query-language), typically being a declarative language, allows it to make its own optimization. It is up to the database engine how will it perform the database operation. Query language doesn't rely on specific instruction from the programmer, this makes the compiler able to produce a highly optimized query in a controlled way.

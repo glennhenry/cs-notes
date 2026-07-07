@@ -6,7 +6,7 @@ description: Ports
 
 **Main Source:**
 
-- **[Port (computer networking) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Port_(computer_networking)>)**
+- **[Port (computer networking) — Wikipedia](<https://en.wikipedia.org/wiki/Port_(computer_networking)>)**
 - **[Network Ports Explained — PowerCert](https://youtu.be/g2fT-g9PX9o)**
 - **[Port Forwarding Explained — PowerCert](https://youtu.be/2G1ueMDgwxw)**
 - **[Port scanner — Wikipedia](https://en.wikipedia.org/wiki/Port_scanner)**

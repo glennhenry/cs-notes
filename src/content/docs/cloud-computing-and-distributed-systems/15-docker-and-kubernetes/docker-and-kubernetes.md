@@ -6,7 +6,7 @@ description: Docker & Kubernetes
 
 **Main Source:**
 
-- **[Docker (software) — Wikipedia](/cs-notes/<https://en.wikipedia.org/wiki/Docker_(software)>)**
+- **[Docker (software) — Wikipedia](<https://en.wikipedia.org/wiki/Docker_(software)>)**
 - **[Kubernetes — Wikipedia](https://en.wikipedia.org/wiki/Kubernetes)**
 
 ### Docker
@@ -67,4 +67,4 @@ Source: https://www.nginx.com/resources/glossary/kubernetes/
 
 #### Process
 
-*don't mind this heading as it forces the graph view to render*
+_don't mind this heading as it forces the graph view to render_
