@@ -2,8 +2,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightThemeObsidian from "starlight-theme-obsidian";
-import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
+import { starlightKatex } from "starlight-katex";
 import rehypeExternalLinks from "rehype-external-links";
 import externalLinkIcon from "./src/assets/externalLinkIcon.js";
 import { fontHeadTags } from "./src/assets/headlinks.js";
@@ -13,13 +12,12 @@ export default defineConfig({
   site: "https://glennhenry.github.io",
   base: "cs-notes",
   markdown: {
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex, [rehypeExternalLinks, externalLinkIcon]],
+    rehypePlugins: [[rehypeExternalLinks, externalLinkIcon]],
   },
   integrations: [
     starlight({
       head: [...fontHeadTags],
-      plugins: [starlightThemeObsidian()],
+      plugins: [starlightKatex(), starlightThemeObsidian()],
       customCss: ["./src/assets/custom.css"],
       logo: {
         src: "./src/assets/logo.jpg",
