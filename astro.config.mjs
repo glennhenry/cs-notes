@@ -30,6 +30,7 @@ export default defineConfig({
       },
       credits: true,
       title: "CS Notes",
+      description: "Computer science notes",
       lastUpdated: true,
 
       components: {
