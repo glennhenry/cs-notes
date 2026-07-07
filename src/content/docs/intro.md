@@ -4,7 +4,7 @@ slug: index
 description: CS Notes
 ---
 
-My computer science notes from various online courses, tutorial, books, blogs, Wikipedia pages, and lectures. When learning something serious, I write it down here.
+My computer science notes from online courses, tutorial, books, blogs, Wikipedia pages, lectures, and many other online sources.
 
 ### Main Topics
 
@@ -27,22 +27,6 @@ My computer science notes from various online courses, tutorial, books, blogs, W
 - **[Software Engineering](/cs-notes/software-engineering-intro)**
 - **[Cloud Computing & Distributed Systems](/cs-notes/cloud-computing-and-distributed-systems-intro)**
 
-### About The Site
-
-This notes site is basically complete, it covered most of the important topics in computer science. They were written over time, which has led to variations in writing style, formatting, and possibly some inaccuracies that I didn't recognize earlier.
-
-My motivation for writing these notes was to learn all the topics in computer science. Additionally, the theoretical part of CS is diverse and needs to be written for easy lookup in the future. As I finish each topic, my motivation to rewrite them decreases, especially if it involves merely rephrasing or modifying the format.
-
-I also want to add more information to specific notes that are still lacking (see [TODO](#to-dos)). However, I can't guarantee that I'll be able to do this, as I may not need that knowledge and might not want to spend time writing it out in detail.
-
-#### Static Site Generator
-
-Instead of using tools like OneNote, Notion, or Obsidian, I chose a static site generator. It resembles a technical documentation (like for API, library, or programming language). The use of SSG allows for easy and free static deployment, so I can see my notes everywhere and anytime from a browser. I relied on `.md` file to write notes and Git as the version control.
-
-The site begins from Notion. I realized it was hard to organize as I wrote more notes. Then, I switched to Docusaurus and used it for a very long time.
-
-Docusaurus's site design was too far from my expectations, so I had to change to something closer to my preference, and that is Quartz; though it fails to fulfill many of my use cases, and Starlight with Obsidian theme (I tweaked the base theme a lot) just happen to be my second best.
-
 ### Credits
 
 - This site is made using [Starlight](https://starlight.astro.build/) with the customized [Obsidian theme](https://fevol.github.io/starlight-theme-obsidian/).
@@ -54,22 +38,9 @@ Docusaurus's site design was too far from my expectations, so I had to change to
 
 ### TO-DOs
 
-For simplicity, TO-DOs are placed here instead of something like GitHub issues.
-
-- **[add]**: add new note, which add a page in a topic.
-- **[update]**: update existing notes, whether it is grammar/typo correction, correcting misinformation, clarifying, or adding more information to particular note.
-- **[ref]**: add reference (hyperlink) to particular notes.
-
-The site is currently still lacking:
-
-- **Graph and backlinks don't work**. They find pages and build its structure based on the actual file system structure (as opposed to starlight nav which we can configure manually using overrided slug). Our notes structure relies on extra folder for each `.md` file to order them in the file system and to separate each note images.
-  - We shall find a way to make graph and backlinks to work without changing the original structure.
-  - Alternately, we may need to withdraw our expectation, that is by removing numbered folder (but still have separate folder for each note images). This means we also need to change all markdown image reference.
-  - The effortless solution is to ignore graph and backlinks. They don't affect the overall site anyway.
-  - Possible solution, use the new sitemap with slug binding.
--  **Latex formula rendered double**. This is probably just a markdown format problem that used to work in Docusaurus but not in Starlight. Would also change font-size of katex class to 1.1 rem.
-
-Notes TODO:
+- **[add]**: to add a new note.
+- **[update]**: update existing notes.
+- **[ref]**: add reference to particular notes.
 
 1. **[update]** Revisit all notes to fix English, typo, minor update/edit information, reformat to the latest writing styles, and add references to newly added notes. Any major update to note will be listed in separate to-dos.
 2. **[update]** [/computer-graphics](/cs-notes/computer-graphics): Major update with new topics. Combine old note with new details from a textbook.
