@@ -4,28 +4,31 @@ slug: index
 description: CS Notes
 ---
 
-My computer science notes from online courses, tutorial, books, blogs, Wikipedia pages, lectures, and many other online sources.
+This website is a personal computer science notes produced from various online courses, tutorial, books, blogs, Wikipedia pages, lectures, and many other online sources.
 
 ### Main Topics
 
-- **[Computer & Programming Fundamentals](/cs-notes/computer-and-programming-fundamentals-intro)**
-- **[Digital Signal Processing](/cs-notes/digital-signal-processing-intro)**
-- **[Digital Media Processing](/cs-notes/digital-media-processing-intro)**
-- **[Computer Networking](/cs-notes/computer-networking-intro)**
-- **[Data Structures & Algorithms](/cs-notes/data-structures-and-algorithms-intro)**
-- **[Computer Organization & Architecture](/cs-notes/computer-organization-and-architecture-intro)**
-- **[Operating System](/cs-notes/operating-system-intro)**
-- **[Theory of Computation & Automata](/cs-notes/theory-of-computation-and-automata-intro)**
-- **[Compilers & Programming Language](/cs-notes/compilers-and-programming-languages-intro)**
-- **[Database System](/cs-notes/database-system-intro)**
-- **[Computer Graphics](/cs-notes/computer-graphics-intro)**
-- **[Internet & Web](/cs-notes/internet-and-web-intro)**
-- **[Backend System](/cs-notes/backend-system-intro)**
-- **[Computer Security](/cs-notes/computer-security-intro)**
-- **[Machine Learning](/cs-notes/machine-learning-intro)**
-- **[Deep Learning](/cs-notes/deep-learning-intro)**
-- **[Software Engineering](/cs-notes/software-engineering-intro)**
-- **[Cloud Computing & Distributed Systems](/cs-notes/cloud-computing-and-distributed-systems-intro)**
+- CS Notes, main computer science notes:
+  - **[Computer & Programming Fundamentals](/cs-notes/computer-and-programming-fundamentals-intro)**
+  - **[Digital Signal Processing](/cs-notes/digital-signal-processing-intro)**
+  - **[Digital Media Processing](/cs-notes/digital-media-processing-intro)**
+  - **[Computer Networking](/cs-notes/computer-networking-intro)**
+  - **[Data Structures & Algorithms](/cs-notes/data-structures-and-algorithms-intro)**
+  - **[Computer Organization & Architecture](/cs-notes/computer-organization-and-architecture-intro)**
+  - **[Operating System](/cs-notes/operating-system-intro)**
+  - **[Theory of Computation & Automata](/cs-notes/theory-of-computation-and-automata-intro)**
+  - **[Compilers & Programming Language](/cs-notes/compilers-and-programming-languages-intro)**
+  - **[Database System](/cs-notes/database-system-intro)**
+  - **[Computer Graphics](/cs-notes/computer-graphics-intro)**
+  - **[Internet & Web](/cs-notes/internet-and-web-intro)**
+  - **[Backend System](/cs-notes/backend-system-intro)**
+  - **[Computer Security](/cs-notes/computer-security-intro)**
+  - **[Machine Learning](/cs-notes/machine-learning-intro)**
+  - **[Deep Learning](/cs-notes/deep-learning-intro)**
+  - **[Software Engineering](/cs-notes/software-engineering-intro)**
+  - **[Cloud Computing & Distributed Systems](/cs-notes/cloud-computing-and-distributed-systems-intro)**
+- Reverse Engineer Notes, notes mainly focusing on reverse engineering:
+  - [Intro](/cs-notes/reverse-engineer-intro)
 
 ### Credits
 
@@ -85,4 +88,4 @@ My computer science notes from online courses, tutorial, books, blogs, Wikipedia
 
 #### Process
 
-*don't mind this heading as it forces the graph view to render*
+_don't mind this heading as it forces the graph view to render_
