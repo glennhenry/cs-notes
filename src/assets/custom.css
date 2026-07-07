@@ -19,13 +19,13 @@
   --custom-inside-color: #1e1e20;
   --custom-outside-color: #1a1a1c;
   --custom-border-color: #454848;
+  --custom-sidebar-border-color: #323232;
   --custom-mobile-header-shadow-color: rgba(255, 255, 255, 0.3);
   --custom-body-highlight-color: #2d262d;
 
-  .sl-markdown-content strong:not(:has(> code)),
-  .sl-markdown-content em,
-  .sl-markdown-content a:not(:has(> code)) {
-    border: 1px solid #4c4b4b;
+  .sl-markdown-content a:not(:has(> code)):hover {
+    text-decoration-thickness: 2px;
+    color: var(--sl-color-accent-high);
   }
 }
 
@@ -49,15 +49,11 @@
   --sl-color-hairline: #b7bdc8;
 
   --custom-inside-color: #fff;
-  --custom-outside-color: #f9f9f9;
+  --custom-outside-color: #fafafa;
   --custom-border-color: #aaa;
+  --custom-sidebar-border-color: #e6e6e6;
   --custom-mobile-header-shadow-color: rgba(0, 0, 0, 0.3);
   --custom-body-highlight-color: #eee6ee;
-
-  /* Hover text color only for light theme */
-  .sl-markdown-content a:not(:has(> code)):hover {
-    color: #a86ec4;
-  }
 
   :where(.right-sidebar a[aria-current="true"]) {
     background-color: #f0e6f4;
@@ -66,10 +62,15 @@
   :where(.sidebar a[aria-current="page"]) {
     background-color: #f0e6f4;
   }
+
+  .sl-markdown-content a:not(:has(> code)):hover {
+    text-decoration-thickness: 2px;
+    color: var(--sl-color-accent);
+  }
 }
 
 :root {
-  --sl-content-width: 60rem;
+  --sl-content-width: 55rem;
   --sl-text-5xl: 2.2rem;
   --sl-text-4xl: 1.8rem;
   --sl-text-3xl: 1.6rem;
@@ -79,41 +80,12 @@
   --sl-text-sm: 0.85rem;
   --sl-text-base: 0.9rem;
 
-  /* Highlighted color behind bold, italic, and hyperlink texts */
   .sl-markdown-content strong {
     font-weight: 600;
   }
-  .sl-markdown-content strong:not(:has(> code)),
-  .sl-markdown-content em,
-  .sl-markdown-content a:not(:has(> code)) {
-    background-color: var(--custom-body-highlight-color);
-    padding: 0.15rem;
-    border-radius: 0.3rem;
-    display: inline;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-  }
-
   .sl-markdown-content a:not(:has(> code)) span {
     display: inline-flex;
     vertical-align: center;
-    align-self: center;
-    margin-left: 0.25rem;
-  }
-
-  .sl-markdown-content strong > a:not(:has(> code)),
-  .sl-markdown-content a:not(:has(> code)) > strong {
-    border: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    -webkit-box-decoration-break: initial !important;
-    box-decoration-break: initial !important;
-  }
-
-  .sl-markdown-content a[target="_blank"] {
-    display: inline-flex;
-    align-items: center;
   }
 
   .sl-heading-wrapper {
@@ -220,6 +192,7 @@
 
   .sidebar-pane {
     background-color: var(--custom-outside-color);
+    border-right: 1px solid var(--custom-sidebar-border-color);
   }
 
   .top-level {
