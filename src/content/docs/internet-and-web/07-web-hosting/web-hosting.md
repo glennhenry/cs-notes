@@ -66,3 +66,7 @@ The markdown will then be processed and HTML file containing the markdown conten
 
 ![Static site generator that takes content, assets, and layout settings to produce a complete website](./static-generator.png)  
 Source: https://cloudcannon.com/blog/what-is-a-static-site-generator/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

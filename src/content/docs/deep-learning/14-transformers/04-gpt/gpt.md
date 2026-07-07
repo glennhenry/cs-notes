@@ -42,3 +42,7 @@ GPT has introduced improvements and advancements over its predecessors:
 - **GPT-3.5**: Released in March 2022 and used for [ChatGPT](https://chat.openai.com/) which is the fine tuned model from GPT-3.5 series released in November 2022.
 
 - **GPT-4**: The latest model released in March 2023, it was pre-trained on a combination of public data and fine tuned with reinforcement learning for a better feedback for human.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

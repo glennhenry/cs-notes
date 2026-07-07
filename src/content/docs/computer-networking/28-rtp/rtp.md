@@ -25,3 +25,7 @@ RTP is used for media transmission, so before the transmission happens, these me
 
    ![High level process of RTP](./rtp-flow.png)  
    Source: https://www.oreilly.com/library/view/advanced-infrastructure-penetration/9781788624480/5ce761e5-1024-4556-a0b0-0864a1856de1.xhtml
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -30,3 +30,7 @@ There are several type of gateway, here are some common types:
 
 ![Protocol gateway](./protocol-gateway.png)  
 Source: https://labcomsistemas.com.br/en/applications/protocol-gateway/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

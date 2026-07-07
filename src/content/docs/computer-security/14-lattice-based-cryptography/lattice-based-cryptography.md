@@ -60,3 +60,7 @@ Both sender and recipient will have a pair of public and private key. The privat
 To securely share the lattice structure, the private key (the "good" basis vector) is not used. Instead, a set of "bad" vectors is used to define the lattice structure.
 
 When sending a message, it is encoded as a lattice point. The recipient, equipped with the private key (the "good" vector), can easily locate and retrieve that specific lattice point. However, an attacker, knowing only the lattice structure but lacking the private key, would face difficulties in reaching the desired lattice point.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

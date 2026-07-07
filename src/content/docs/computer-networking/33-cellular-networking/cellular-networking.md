@@ -40,3 +40,7 @@ Cellular networking has go through different stage or generation of the technolo
 
 ![Cellular generation comparison](./cellular-generation.png)  
 Source: https://slideplayer.com/slide/16305995/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

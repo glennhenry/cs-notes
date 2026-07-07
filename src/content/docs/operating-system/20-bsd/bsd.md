@@ -30,3 +30,7 @@ FreeBSD features:
 - **Networking**: FreeBSD has a robust networking stack that includes support for [TCP/IP](/cs-notes/computer-networking/tcp-protocol), [IPv6](/cs-notes/computer-networking/ip-address#ipv6), [routing](/cs-notes/computer-networking/routing), [firewall](/cs-notes/computer-security/network-security#firewall), and [Wi-Fi](/cs-notes/computer-networking/wi-fi).
 - **Jails**: FreeBSD introduced the concept of "jails," which are a form of [operating system-level](/cs-notes/cloud-computing-and-distributed-systems/virtualization#level-implementation) [virtualization](/cs-notes/cloud-computing-and-distributed-systems/virtualization). Jails allow the creation of isolated environments within a single FreeBSD installation, providing secure separation of processes, file systems, and network stacks.
 - **Ports Collection**: FreeBSD has an extensive and well-maintained Ports Collection, which is a collection of software packages and their build scripts. The Ports Collection simplifies the installation and management of third-party software, allowing users to easily add and update applications from a vast selection of packages.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

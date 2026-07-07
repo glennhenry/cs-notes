@@ -64,3 +64,7 @@ When there is a set of nodes that run containerized applications, these are call
 
 ![Kubernetes diagram showing a client controls a Kubernetes cluster containing several nodes](./kubernetes-diagram.png)  
 Source: https://www.nginx.com/resources/glossary/kubernetes/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

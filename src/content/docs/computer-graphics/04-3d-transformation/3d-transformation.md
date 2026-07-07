@@ -28,3 +28,7 @@ There are several technique for projecting 3D scene onto computer screen, such a
 
 ![Perspective and ortographic camera projection comparison](./camera-projection.png)  
 Source: [https://stackoverflow.com/questions/36573283/from-perspective-picture-to-orthographic-picture](https://stackoverflow.com/questions/36573283/from-perspective-picture-to-orthographic-picture)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -24,3 +24,7 @@ Some common filtering includes:
 
 ![Common filter type including low-pass, high-pass, band-stop, and band-pass](./filter-type.png)  
 Source: https://en.wikipedia.org/wiki/Filter_(signal_processing)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

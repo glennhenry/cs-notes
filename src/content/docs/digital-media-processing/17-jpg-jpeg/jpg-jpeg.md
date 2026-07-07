@@ -50,3 +50,7 @@ JPG file are divided into several segments, each begins with a marker as the ind
 
 ![JPG content](./jpg-content.jpg)  
 Source: https://stackoverflow.com/questions/48669812/how-do-i-read-and-compare-single-bytes-from-jpeg-file-in-c
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

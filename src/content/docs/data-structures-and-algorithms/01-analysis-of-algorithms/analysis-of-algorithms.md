@@ -81,3 +81,7 @@ Source: https://tarunjain07.medium.com/complexity-asymptotic-analysis-e9cd6d4b76
 While the big O notation provides a way to evaluate an algorithm time and space complexity, it does a lot of simplification such as removing coefficients, lower-order term, and constant terms. Theoretically with big O notation, an algorithm with time complexity of $O(100n)$, which will be simplified to $O(n)$ will have the same time complexity with an algorithm that has time complexity of just $O(n)$.
 
 While they have the same performance analytically, in the real computation, they probably take different amount of time and memory in the execution. **Runtime complexity** is the more precise measurement of an algorithm's performance. The runtime or actual execution time can be achieved through technique like **profiling** and **benchmarking**. Profiling involves collecting data on how much time is spent executing different parts of the program. On the other hand, benchmarking involves running the program or algorithm on different inputs and measuring the execution time.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

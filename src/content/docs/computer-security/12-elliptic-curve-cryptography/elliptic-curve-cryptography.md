@@ -79,3 +79,7 @@ Just like the traditional Diffie-Hellman, two parties are going to share the sam
 #### Security
 
 The security of ECDH relates to the ECDLP problem. Even if the attacker intercepts the base point $G$ and the public key $A$ or $B$, which is equal to $aG$ or $bG$, it will be hard to find the value of $a$ or $b$. Finding $a$ or $b$ is the same as finding the value of integer $k$.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

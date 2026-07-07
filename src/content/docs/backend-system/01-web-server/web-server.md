@@ -34,3 +34,7 @@ The previous explanation explain about a simple web server, in reality a web ser
 - **[Other server optimization technique](/cs-notes/computer-networking/server#server-optimization)**: Other technique such as caching, CDN, and load balancing.
 
 Most popular example of web server are Apache and NGINX. Apache follows a process-based model where each incoming request is handled by a separate process. Nginx uses an event-driven model, where a small number of processes can handle multiple connections simultaneously.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

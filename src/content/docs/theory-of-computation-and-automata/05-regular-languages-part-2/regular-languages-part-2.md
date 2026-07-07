@@ -143,3 +143,7 @@ Choosing a $P$ and the string $S$.
 Source: https://youtu.be/Ty9tpikilAo?si=TfK_BtM6FaSXlD9-&t=794
 
 Considering all the case to divide $S$ into $x$, $y$, and $z$, as well as checking if any of the cases satisfy the first pumping lemma condition, that is, the formed $xy^iz$ string needs to be in the language. The string needs to be $a^P b^P$, but the $xy^iz$ in the case 1 does not satisfy it. Lastly, we need to show that none of the cases can satisfy all the 3 pumping conditions at the same time. The second condition is satisfied but not the third condition.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

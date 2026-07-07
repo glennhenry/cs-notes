@@ -100,3 +100,7 @@ Source: [Bitmap index](https://www.semanticscholar.org/paper/A-Data-Mining-Appro
 :::tip
 See [index implementation](/cs-notes/database-system/index-implementation) for more detail about index and their implementation.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -63,3 +63,7 @@ Checksums differ from hash functions. The purpose of a hash function is to map a
 
 ![Checksum](./checksum.png)  
 Source: https://en.wikipedia.org/wiki/Checksum#/media/File:Checksum.svg
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

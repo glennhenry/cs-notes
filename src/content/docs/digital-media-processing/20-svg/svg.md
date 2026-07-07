@@ -50,3 +50,7 @@ For example, this is an SVG file that defines a red filled heart shape:
 ```
 
 - `<path>`: We specify the path we want to draw using the `d` attribute, which indicates the drawing command. The path uses letters as commands to draw different types of paths or curves, including move-to (M), line-to (L), curve-to (C), and close-path (Z). Numbers are used to specify coordinates, with `-` indicating negative values. Uppercase letters indicate movement to absolute coordinates, while lowercase letters indicate movement relative to the last drawing coordinate.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

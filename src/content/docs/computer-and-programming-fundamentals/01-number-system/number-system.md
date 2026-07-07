@@ -68,3 +68,7 @@ Source: https://drstienecker.com/tech-332/1-numbering-systems-and-conversions/
 
 ![The three number system comparison](./number-system-comparison.png)  
 Source: https://kenanhancer.com/2020/08/25/binary-hexadecimal-and-decimal-number-systems/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

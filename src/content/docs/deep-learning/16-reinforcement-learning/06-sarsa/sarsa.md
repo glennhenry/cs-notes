@@ -29,3 +29,7 @@ TD is a general framework to estimate value based on the observed rewards and th
     The new Q-value is updated based on the current Q-value estimate, the observed reward, the estimated future Q-value, and the learning rate as the weight to control the update influence.
 
 5.  **Repeat**: We start choosing and taking action again, transition to new state, and then update the Q-value again.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

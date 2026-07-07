@@ -46,3 +46,7 @@ The architecture of iOS can be divided into several key components:
 3. **Media**: Media layer consist of multimedia-related functionalities. It includes frameworks for audio, video, and graphics. Core Audio provides audio playback and recording capabilities, Core Animation for animations and transitions, Core Text for text rendering, Core Image for image processing, and AVFoundation framework for working with multimedia features like video editing and capture.
 4. **Cocoa**: Cocoa is the framework specifically designed for building iOS applications. It provides a set of high-level APIs and tools for developing user interfaces, handling touch input, and managing application lifecycle. Cocoa Touch includes UIKit, which is responsible for building the UI, handling user interactions, and managing navigation between screens.
 5. **Application Layer**: Layer where developers build their iOS applications. It includes the apps themselves, which are developed using the iOS SDK and various frameworks mentioned above.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

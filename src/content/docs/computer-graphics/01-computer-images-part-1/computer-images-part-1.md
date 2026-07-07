@@ -39,3 +39,7 @@ There are 2 different type of monitor based on different levels of brightness an
 
 - **LDR (Low Dynamic Range)**, which typically have a brightness range of 100 to 300 bits and a color depth of 8 bits per channel (24-bit color).
 - **HDR (High Dynamic Range)**, HDR monitors typically have a brightness range of 400 to 1000 bits or higher, and a color depth of 10 bits per channel (30-bit color) or higher.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

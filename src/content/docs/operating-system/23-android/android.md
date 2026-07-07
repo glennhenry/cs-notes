@@ -60,3 +60,7 @@ Starting from the bottom:
 4. **Service**: A service is a component that runs in the background, performing long-running operations without a user interface. Services can be categorized into foreground and background. Foreground service is shown to user, typically through notification, this can be an act of downloading files or playing music. On the other hand, background service is not shown to user, this can be an operation to sync local data to remote server.
 
 5. **Intent**: Intents are a messaging mechanism in Android that allow components (such as activities, services, and receivers) to communicate with each other. An intent can be used to start an activity, launch a service, or send a broadcast to a receiver. It carries information such as the action to be performed and the data to be used. Intents can be explicit, specifying the target component, or implicit, allowing the system to determine the appropriate component based on the intent's action and data (e.g., default gallery app to open photos).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

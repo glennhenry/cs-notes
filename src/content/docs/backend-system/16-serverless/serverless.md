@@ -37,3 +37,7 @@ Serverless can be beneficial for inconsistent app that have little or no traffic
 
 ![Serverless vs microservices](./serverless-vs-microservices.webp)  
 Source: https://pueblerino.info/serverless-functions-vs-microservices
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

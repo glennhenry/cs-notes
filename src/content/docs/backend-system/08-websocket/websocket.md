@@ -25,3 +25,7 @@ WebSocket has different use case with [Webhook](/cs-notes/backend-system/webhook
 
 ![Websocket process](./websocket.png)  
 Source: https://www.wallarm.com/what/a-simple-explanation-of-what-a-websocket-is
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

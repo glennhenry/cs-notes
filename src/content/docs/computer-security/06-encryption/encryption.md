@@ -98,3 +98,7 @@ Source: https://open.oregonstate.education/defenddissent/chapter/exchanging-keys
 The key exchange protocol involve various mathematical properties, to analogy, it can be thought as combining color. Colors can be combined to create new colors by adding the intensity of each color component. Even if we add different color, because of the additive properties of color, they will end up with the same color.
 
 Similar to the actual key exchange protocol, both parties pick some number and use mathematical properties to derive the key at the end.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

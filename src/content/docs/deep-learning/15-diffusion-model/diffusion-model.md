@@ -274,3 +274,7 @@ For example in an image classification tasks, an image is fed into the encoder, 
 :::note
 CLIP objective is used in text-to-image models model like [DALL-E](https://en.wikipedia.org/wiki/DALL-E).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

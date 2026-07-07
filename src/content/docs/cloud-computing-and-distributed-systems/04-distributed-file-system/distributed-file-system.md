@@ -48,3 +48,7 @@ HDFS is built with [master-slave architecture](/cs-notes/cloud-computing-and-dis
 :::tip
 In contrast to distributed/clustered file system that typically uses [master-slave architecture](/cs-notes/cloud-computing-and-distributed-systems/master-slave), a file system that uses [client-server architecture](/cs-notes/cloud-computing-and-distributed-systems/client-server) typically called network file system (NFS). NFS provide a remote file access mechanism where clients mount remote file systems to local environment provided by the server.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

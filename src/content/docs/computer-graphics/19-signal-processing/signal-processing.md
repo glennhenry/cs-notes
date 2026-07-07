@@ -86,3 +86,7 @@ Common methods includes:
 
   ![House and wall edges are detected using different methods](./edge-detection.jpeg)  
   Source: https://www.researchgate.net/figure/Edge-detection-by-different-methods-a-Test-image-b-Cannys-method-c-Sobel-method_fig3_314204625
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -42,3 +42,7 @@ Source: https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#/media
 If an attacker were to [brute force](/cs-notes/computer-security/other-attack-and-exploit#brute-forcing) the secret key, the attacker would need to compute the secret key formula, which is $(g^a \text{ mod } p)^b \text{ mod } p$ or $(g^b \text{ mod } p)^a \text{ mod } p$. Note that only $a$ and $b$ are kept secret, all the other values such as $p$, $g$, $g^a \text{ mod } p$, and $g^b \text{ mod } p$ are sent in clear.
 
 The hacker would need to solve for $g^{ab} \text{ mod } p = g^{ba} \text{ mod } p$, which is equal to the secret key formula. As $a$, $b$, $p$ grow larger, the complexity grows exponentially, making it computationally infeasible for large values. Therefore, it is crucial to select larger values to ensure the security of the Diffie-Hellman key exchange.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

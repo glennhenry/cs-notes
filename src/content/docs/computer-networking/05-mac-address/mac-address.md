@@ -25,3 +25,7 @@ IP addresses facilitate communication between devices across networks, while MAC
 
 ![MAC address facilitate communication between local network while IP communicate directly to the destination](./mac-address-purpose.png)  
 Source: https://youtu.be/TIiQiw7fpsU?t=416
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

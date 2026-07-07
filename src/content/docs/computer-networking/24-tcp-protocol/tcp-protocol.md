@@ -59,3 +59,7 @@ Here's a simplified explanation of how TCP works:
 
     ![TCP finishing handshake](./tcp-finished.png)  
     Source: https://www.ionos.com/digitalguide/server/know-how/introduction-to-tcp/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

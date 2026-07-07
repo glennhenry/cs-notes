@@ -53,3 +53,7 @@ Source: https://datascience.eu/machine-learning/gradient-boosting-what-you-need-
 - **Computation Capabilites**: XGBoost supports parallel processing, it optimizes the computation by parallelizing the construction of individual trees and parallelizing the evaluation of split candidates during tree building.
 
 - **Handling Missing Values**: XGBoost has built-in capabilities to handle missing values in the dataset. It automatically learns how to handle missing values in a decision tree by assigning missing values based on available data.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

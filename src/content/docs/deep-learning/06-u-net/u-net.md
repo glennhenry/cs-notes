@@ -34,3 +34,7 @@ The output of U-Net is a segmentation mask or a probability map that indicates t
 Source: https://catchzeng.medium.com/the-easiest-way-to-train-a-u-net-image-segmentation-model-using-tensorflow-and-labelme-fe130de45a19
 
 The loss is calculated by comparing the output of U-Net with the ground truth segmentation masks. This mean we need labeled segmentation masks for each input we have. The loss will then backpropagated through the network and the gradients with respect to network's parameters will be adjusted.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

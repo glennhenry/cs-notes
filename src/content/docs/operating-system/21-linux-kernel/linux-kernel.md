@@ -79,3 +79,7 @@ The Linux kernel is based on [Unix](/cs-notes/operating-system/unix), they have 
 
 - To ensure security of user accounts, Linux implements authentication mechanism. The authentication process in Linux is primarily based on the use of login names and passwords. When a user attempts to log in, the login program prompts for a login name and a password. The password is then encrypted and compared against the encrypted password stored in the password file, usually located at `/etc/passwd`. If the encrypted passwords match, the login is allowed; otherwise, it is rejected.
 - Linux implements a file and directory access permissions. The kernel supports [Access Control Lists (ACLs)](/cs-notes/operating-system/protection-and-security#access-control) and Security-Enhanced Linux (SELinux), which provide additional layers of access control and security policies.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

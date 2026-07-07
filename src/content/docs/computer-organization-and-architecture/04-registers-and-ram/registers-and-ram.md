@@ -185,3 +185,7 @@ Source: https://www.tutorialandexample.com/registers
 
 ![Memory hierarchy](./memory-hierarchy.png)  
 Source: https://www.geeksforgeeks.org/memory-hierarchy-design-and-its-characteristics/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -234,3 +234,7 @@ When an error is thrown and is not handled, the program executor will try to fin
 
 ![Flowchart of a try-catch block](./try-catch.jpeg)  
 Source: https://www.wikitechy.com/tutorials/java/java-try-catch-finally-blocks
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

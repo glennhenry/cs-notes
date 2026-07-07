@@ -70,3 +70,7 @@ Source: [https://www.pinterest.com/pin/7740630584610634/](https://www.pinterest.
 :::tip
 Find out more about image properties in [here](/cs-notes/digital-media-processing/image-properties)
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

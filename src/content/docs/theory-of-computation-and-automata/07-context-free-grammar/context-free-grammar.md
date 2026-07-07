@@ -270,3 +270,7 @@ Source: https://youtu.be/eQ0XkUk3qGk?si=RyCf4AbLvHGW-yxr&t=700
 
 2. Consider some case of language such that $uv^ixy^iz \notin A$ for some $i$. Remember that the language must be in the form of $a^nb^nc^n$ according to the original language.
 3. It is shown that in either two case, both fail to satisfy the three pumping lemma condition at the same time, so the language is proven to not be a context-free.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

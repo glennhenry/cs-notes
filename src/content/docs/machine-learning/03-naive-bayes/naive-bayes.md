@@ -47,3 +47,7 @@ In naive bayes classifier, we assume in a naive way that all the features are in
 
 ![Naive bayes prediction](./naive-bayes.png)  
 Source: https://youtu.be/lFJbZ6LVxN8?si=St8QN9YRZJvRcjn_&t=516
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

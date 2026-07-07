@@ -167,3 +167,7 @@ If we call the state where the removal of "w" take place as "r", then the produc
 :::tip
 Other thing to note, a self-loop transition that doesn't consume any input symbols and without making any changes to the stack will be in form of $A_{pp} \rightarrow \epsilon$.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

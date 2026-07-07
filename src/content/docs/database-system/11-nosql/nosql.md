@@ -130,3 +130,7 @@ NoSQL typically lacks strong consistency and true transactions compared to relat
 - **Eventually consistent (E)**: Eventually consistency means that the system will eventually reach a consistent state across all system or replicas. While updates may take some time to propagate and synchronize, the system guarantees that, given enough time and absence of further updates, all replicas will converge to a consistent state.
 
 We can infer that NoSQL tends to prioritize availability over consistency.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -100,3 +100,7 @@ Implementation vary of the operating system kernel, the general steps are:
 5. **Kernel Execution**: If the system call is valid, the handler executes the requested operation on behalf of the user program, depending on the request.
 6. **Result Return**: After the system call handler completes its execution, the kernel returns the result of the operation back to the user program. This can include return values, error codes, or other relevant information.
 7. **User-Space Resumption**: The control is transferred back to the user program, and it continues execution from where it left off, now with the result of the system call available.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

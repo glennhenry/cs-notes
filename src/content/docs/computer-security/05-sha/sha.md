@@ -70,3 +70,7 @@ The absorbed data undergoes a permutation operation to introduce more complexity
 
 ![SHA-3](./sha-3.png)  
 Source: https://codesigningstore.com/hash-algorithm-comparison
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

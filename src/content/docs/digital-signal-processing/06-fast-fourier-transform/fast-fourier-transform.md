@@ -41,3 +41,7 @@ Source: https://towardsdatascience.com/fast-fourier-transform-937926e591cb
 :::info
 FFT algorithm use the [divide-and-conquer algorithm strategy](/cs-notes/data-structures-and-algorithms/divide-and-conquer). FFT divides problem into smaller subproblems and solve it recursively, which makes computation more efficient.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

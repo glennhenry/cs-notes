@@ -71,3 +71,7 @@ After the interrupt handler completes its execution, control is returned to the 
 
 ![Interrupt handling](./interrupt-handling.png)  
 Source: https://www.scaler.com/topics/operating-system/interrupt-handling/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

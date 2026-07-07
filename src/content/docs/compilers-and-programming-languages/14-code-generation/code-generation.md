@@ -240,3 +240,7 @@ Overall, the relationship of the code generator functions can be summarized as f
 
 ![Relationship between code generation functions](./code-generation-functions.png)  
 Source: Book 1 page 182
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

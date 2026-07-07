@@ -59,3 +59,7 @@ PCA takes account all feature in high dimension and transform it into 2D where t
 
 ![First and second component of PCA](./first-second-component.gif)  
 Source: https://medium.com/@raghavan99o/principal-component-analysis-pca-explained-and-implemented-eeab7cb73b72
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

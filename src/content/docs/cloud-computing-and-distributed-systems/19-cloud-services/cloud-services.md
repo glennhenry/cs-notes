@@ -122,3 +122,7 @@ The top three cloud services are Amazon Web Services (AWS), Google Cloud Platfor
 - **Azure Log Analytics**: Centralized logging and analytics for collecting and analyzing data
 - **Azure Machine Learning**: Cloud-based machine learning service for building and deploying models
 - **Azure Databricks**: Unified analytics platform for big data and machine learning
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

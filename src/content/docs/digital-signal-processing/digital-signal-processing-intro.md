@@ -29,3 +29,7 @@ description: Digital Signal Processing Notes
   - [Filtering](/cs-notes/digital-signal-processing/filtering)
   - [Compression](/cs-notes/digital-signal-processing/compression)
   - [Denoising](/cs-notes/digital-signal-processing/denoising)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

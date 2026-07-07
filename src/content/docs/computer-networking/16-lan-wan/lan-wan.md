@@ -42,3 +42,7 @@ Network division works by assigning VLAN ID or VLAN tag to each VLAN. These IDs 
 
 ![VLAN divided four computers into two by assigning ID 10 and 20](./vlan.png)  
 Source: https://bardimin.com/network/mengenal-vlan-dalam-jaringan/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

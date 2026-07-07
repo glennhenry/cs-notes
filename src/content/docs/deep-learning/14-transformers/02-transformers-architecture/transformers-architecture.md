@@ -136,3 +136,7 @@ Transformers consists of encoder and decoder, however, they are not necesarry us
 They are often used together for sequence-to-sequence tasks like text translation that require understanding of input data and the output generation.
 
 Transformers model is considered as semi-supervised learning. The semi-supervised learning involve techniques like pre-training and fine tuning. The pre-training technique mean the model is trained on unlabeled data. During the pre-training process, the model learns the general language representation and capture how each word relate with each other. It will then be fine tuned, a smaller labeled dataset will be fed to the model to adapt it on specific tasks or specific topic (the method is also called **transfer learning**).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

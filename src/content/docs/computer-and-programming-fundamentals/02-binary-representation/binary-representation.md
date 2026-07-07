@@ -101,3 +101,7 @@ To actually determine the decimal value of a binary number in two complement, we
 Source: https://youtu.be/sJXTo3EZoxM?si=j67uhtI6_sfZauME&t=457
 
 7 is represented as `0111` in binary, the two complement is `1001`. To calculate `1001`, we will do ($1 \times 2^0$) + ($0 \times 2^1$) + ($0 \times 2^2$) + ($1 \times -(2^3)$), which is equal to 1 + 0 + 0 + (-8) = -7.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

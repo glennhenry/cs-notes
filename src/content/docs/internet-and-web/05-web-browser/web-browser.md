@@ -58,3 +58,7 @@ Browser also provide useful feature for user such as:
 
 ![Browser features such as navigation, web search, refresh button, bookmarks, address bar](./browser-features.png)  
 Source: https://classnotes.ng/lesson/the-internet-browser/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

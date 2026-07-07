@@ -221,3 +221,7 @@ loop(_).
 The first and third rule define base case for the loop. First rule is base case for loop variable reaching 0, while the third is when the loop variable reaches some number below 0. The second rule is where actual loop happen.
 
 It checks if `N > 0`, if yes, it writes `N` to the console through the `writeln`. Then, it subtracts `N` with 1 and assign it to new variable called `N1`. The next step is to fail the rule. This is done so that the interpreter can backtrack to the solution again but now with the `N` value being decremented. It will stop when it reaches any of the base cases.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

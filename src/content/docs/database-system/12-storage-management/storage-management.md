@@ -82,3 +82,7 @@ If fast real-time access is required, it may be necessary to distribute BLOB acr
 - **Insertion**: In the case of unsorted table, we can find an empty space and insert the record there. To maintain sorted table on insertion, we will need to find where the record should be placed and potentially sliding the records around the block. If we can't find enough space to insert record in a particular block, we can either reorganize the record with the adjacent block or create another block (called **overflow block**) and associate that block with a pointer in the original block.
 - **Deletion**: We can delete a record and slide the block. If we cannot do it, we may maintain an available-space list in the block header. We will store a marker that indicates whether a block is free or not. Another thing is, there could be pointer associated with the particular deleted block, so it is necessary to keep information within the block associated with the record. The information is called **tombstone**, it is a permanent bit which must exist until database is reconstructed.
 - **Update**: If the resulting record size after update is same, then there is no issue. Otherwise, we will need to create more space on the block, then the problem becomes similar to insertion.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

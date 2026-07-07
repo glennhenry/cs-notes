@@ -48,3 +48,7 @@ Source: https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/2_Structures.
 
 - [**Inter-process Communication**](/cs-notes/operating-system/inter-process-communication): Uses of [pipes](/cs-notes/operating-system/inter-process-communication#message-passing) as its IPC mechanism. For example, the command `command1 | command2` creates a pipe between `command1` and `command2`, where the output of `command1` is piped directly as input to `command2`.
 - **System Calls**: See [type of system calls & example](/cs-notes/operating-system/system-call#type-of-system-calls--example).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

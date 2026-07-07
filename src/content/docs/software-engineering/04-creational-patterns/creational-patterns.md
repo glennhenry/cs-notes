@@ -316,3 +316,7 @@ fun main() {
 ```
 
 Having factory class become even more useful if the construction of object is complex, just like the previous Factory example.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

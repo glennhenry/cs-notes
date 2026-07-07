@@ -116,3 +116,7 @@ The input in the fully connected layer is based on the previous layer, the previ
 
 ![Dropout deactivting neurons](./dropout.png)  
 Source: https://www.researchgate.net/figure/9-An-illustration-of-the-dropout-mechanism-within-the-proposed-CNN-a-Shows-a_fig23_317277576
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

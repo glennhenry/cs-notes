@@ -134,3 +134,7 @@ For example, the logic unit is responsible for making logical decisions based on
 We will assume that we are using the [two complement representation](/cs-notes/computer-and-programming-fundamentals/binary-representation#two-complement). The leftmost bit will be the sign bit, we will check the sign by doing the logical AND operation with some arbitrary binary number that has "1" as its leftmost bit, and "0" for the remaining bit. When the input is negative number "1\_\_\_" (the latter bit can be anything), doing the logical AND with binary "1000" will result in "1000", because the result is not 0, we can conclude that the sign bit is 1, indicating a negative number.
 
 On the other hand, when the input is positive number "0\_\_\_", doing logical AND with binary "1000" will result in 0, which indicates a positive number.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

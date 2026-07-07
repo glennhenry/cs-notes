@@ -102,3 +102,7 @@ The `low` and `high` represent the range of the array. The `Partition` function 
 Source: https://en.m.wikipedia.org/wiki/File:Quicksort-example.gif (with speed modification)
 
 Quick sort achieves the same in the best and average scenario with merge sort, which is $O(n \log n)$. The worst-case scenario results in $O(n^2)$ time complexity, when the pivot is consistently chosen poorly (e.g., already sorted array or sorted in reverse order). Quick sort has an advantage in terms of space complexity, requiring only $O(\log n)$ memory, as the recursive calls are made on smaller subarrays.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -43,3 +43,7 @@ Backend architecture can be scaled to handle increased traffic and load. They ca
 
   ![Resource pooling](./resource-pooling.png)  
   Source: https://www.thecrazyprogrammer.com/2022/01/resource-pooling-in-cloud-computing.html
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

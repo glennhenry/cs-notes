@@ -100,3 +100,7 @@ An API gateway may provide some functionality including:
 
 ![API Gateway illustration](./api-gateway.png)  
 Source: https://stackoverflow.com/questions/53477140/asp-net-core-api-gateway-middleware
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

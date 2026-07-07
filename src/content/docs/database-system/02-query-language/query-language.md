@@ -305,3 +305,7 @@ A database query goes to several processes:
 5. **Resource Manager**: Execution engine issue commands to the resource manager, which is a component that knows the information about the table and the location of them in the storage.
 6. **Buffer Manager**: Buffer manager is the component that manages memory. The storage stores data in a form of block, which is a fixed-size unit of data for storage. The buffer manager will partition the main memory into buffers, which is a fixed-size unit of data for memory. The buffers serve as the memory region where disk block transfer take place.
 7. **Storage & Storage Manager**: The storage is typically a secondary storage such as hard disk. Disk stores nothing but blocks of data, it will require a component that knows the placement of block in the disk. In other word, the component know the file structure of disk. The component that know it is **storage manager**, it will be responsible for controlling the data transfer between buffer manager and the underlying storage. In simple database system, the storage manager can be the [file system](/cs-notes/operating-system/file-system) of the operating system.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

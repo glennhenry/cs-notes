@@ -59,3 +59,7 @@ Source: https://developer.android.com/topic/modularization/patterns#communicatio
 Modules should communicate with interfaces and depend on abstraction, following the dependency inversion that states "High-level modules should not depend on low-level modules."
 
 See [Dependency inversion principle (DIP)](/cs-notes/software-engineering/software-principles#dependency-inversion-principle-dip).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

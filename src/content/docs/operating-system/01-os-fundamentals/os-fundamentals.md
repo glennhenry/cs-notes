@@ -117,3 +117,7 @@ Source: https://www.britannica.com/technology/graphical-user-interface
   Source: https://www.javatpoint.com/layered-structure-of-operating-system
 
 - **[Client-Server Architecture](/cs-notes/software-engineering/client-server)**: A client-server architecture is a design model in which a client and server processes exist. The component within an OS with client-server architecture treat each other just like a client and server. Client is the one that provide user interface and request specific services or resources from the OS. The server is responsible for providing those services or resources by executing the requested operations and returning the results to the client processes. For example, a file explorer can be thought as a client, which request file information to the file system, acting as a server. This architecture is typically used for distributed computing or peer-to-peer network, which may use communication protocol like [RPC](/cs-notes/operating-system/inter-process-communication#rpc).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -43,3 +43,7 @@ Here is an example of monotonic stack:
 Source: https://itnext.io/monotonic-stack-identify-pattern-3da2d491a61e (with modification)
 
 We have an array of numbers, we want to turn it into a non-decreasing monotonic stack. We will push the element from the array to the stack as long as the element we encounter keep increasing. When we encounter an element smaller than the topmost element in the stack, we will remove every element in the stack that is larger than it.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

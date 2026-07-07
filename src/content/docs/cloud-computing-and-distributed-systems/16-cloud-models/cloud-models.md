@@ -43,3 +43,7 @@ Cloud deployment model refer to the ways in which how cloud computing resources 
 
   ![Cloud deployment models](./cloud-deployment-models.png)  
   Source: https://www.interhyve.com/what-are-the-cloud-computing-deployment-models/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

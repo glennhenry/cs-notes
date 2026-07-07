@@ -45,3 +45,7 @@ Deep learning is suited for task which uses complex data that is hard to describ
     - [Policy Gradient](/cs-notes/deep-learning/reinforcement-learning/policy-gradient)
     - [Imitation Learning](/cs-notes/deep-learning/reinforcement-learning/imitation-learning)
   - [Multi-Agent](/cs-notes/deep-learning/reinforcement-learning/multi-agent)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

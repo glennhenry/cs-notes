@@ -185,3 +185,7 @@ One way to mitigate is the **priority inheritance** technique, which temporarily
 
 ![Priority inversion and priority inheritance](./priority-inversion.png)  
 Source: https://www.digikey.com/en/maker/projects/introduction-to-rtos-solution-to-part-11-priority-inversion/abf4b8f7cd4a4c70bece35678d178321
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -167,3 +167,7 @@ B-tree can be unbalanced after insertion or deletion operation, the balance is a
 - **Merging**: Merging occurs when a node becomes underfull, meaning it has fewer keys than the minimum required. In this case, the underfull node is merged with a sibling node, effectively reducing the number of nodes in the tree.
 
 Inserting a new key involves finding the appropriate position in the tree to insert. Deleting a key from a B-tree involves finding the key and removing it.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

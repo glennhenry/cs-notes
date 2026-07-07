@@ -55,3 +55,7 @@ The data and instructions are stored in the same memory, the retrieval of data i
 The problem come from the limitation of the bus, a bus can't be accessed multiple times simultaneously, due to some physical and electrical characteristics. The bottleneck occurs because the bus has limited bandwidth and can only transfer a certain amount of data at a time. This limitation can slow down the overall performance of the system. When the CPU needs to fetch data or instructions from memory, it has to wait for the bus to be available. Similarly, when the CPU wants to write data back to memory, it needs to wait for the bus to be free.
 
 One way to mitigate the performance bottleneck is providing a [cache memory](/cs-notes/computer-organization-and-architecture/cpu-design#cache--memory) between the CPU and the main memory. The cache memory is located closer to the CPU, it stores frequently accessed data and instructions. By having a faster cache memory, the CPU can access data and instructions more quickly, reducing the need to access the main memory via the bus.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

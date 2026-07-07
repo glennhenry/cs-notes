@@ -71,3 +71,7 @@ Two processes can establish a sequence of communication. Connections can be eith
 In a connection-oriented approach, a dedicated communication channel is established between the sender and receiver before data transmission. Protocols like [TCP](/cs-notes/computer-networking/tcp-protocol) follow a connection-oriented approach. In short, TCP guarantee that packet will not lost in transmission, this is participant of TCP must ensure they are connected reliably. Upon sending message, the sender must send an **ACK (acknowledgment)** message, which can be thought as an indicator of whether data transmission should continue.
 
 On the other hand, connectionless communication does not establish a dedicated connection and each message is sent independently. Protocols like [UDP](/cs-notes/computer-networking/udp) follow a connectionless approach. UDP doesn't require sender to send the ACK message, it doesn't have built-in mechanisms for error recovery, retransmission, making UDP generally faster.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

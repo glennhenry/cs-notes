@@ -93,3 +93,7 @@ Source: https://en.wikipedia.org/wiki/Architecture_of_Windows_NT
 - **Networking**: Windows supports both peer-to-peer and client-server networking. It provides various networking components that facilitate data transport, [inter-process communication](/cs-notes/operating-system/inter-process-communication), file sharing, and the ability to send print jobs to remote printers. Networking is standardized in two interfaces: **Network Device Interface Specification (NDIS)** and the **Transport Driver Interface (TDI)**. NDIS operates between data link (layer 2) and network layer (layer 3), it separates network adapters from transport protocols, allowing either component to be changed independently without affecting the other. TDI, on the other hand, operates between transport (layer 4) and session layer (layer 5).
 
   Windows provides several networking features. For example, Windows supports [DNS](/cs-notes/computer-networking/dns), [DHCP](/cs-notes/computer-networking/dhcp), and Windows Internet Name Service (WINS), which help in managing IP addresses and name resolution on networks. For protocol, Windows implement [TCP/IP](/cs-notes/computer-networking/tcp-protocol) and [HTTP](/cs-notes/computer-networking/http-https). Windows also support the [RPC](/cs-notes/operating-system/inter-process-communication#rpc) mechanism for making procedure call on other machine across the network. All networking in Windows is provided via the **Winsock API (Windows Sockets)**.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

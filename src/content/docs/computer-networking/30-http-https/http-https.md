@@ -176,3 +176,7 @@ Source: https://blog.bytebytego.com/p/how-does-https-work-episode-6
 :::tip
 Find more about general [encryption](/cs-notes/computer-security/encryption) and its terminology including [public and private key](/cs-notes/computer-security/encryption#public--private-key), [key exchange](/cs-notes/computer-security/encryption#key-exchange). Also, about [symmetric and asymmetric encryption](/cs-notes/computer-security/encryption#symmetric--asymmetric-encryption).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -180,3 +180,7 @@ Both strategy is very important in machine learning, we need to balance the expl
 First, we choose the value of epsilon ($\mathcal{E}$), the epsilon represent the probability of exploring, the exploration include selecting random action. The probability to exploit is determined by 1 - $\mathcal{E}$, the agent will select the highest estimated value based on its current policy.
 
 A higher value of $\mathcal{E}$ encourages more exploration, while a lower value of $\mathcal{E}$ favors exploitation. The $\mathcal{E}$ can be decreased gradually, over time, the agent can transition from initially exploring extensively to eventually exploiting the learned knowledge more frequently.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

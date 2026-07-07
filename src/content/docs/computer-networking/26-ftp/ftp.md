@@ -52,3 +52,7 @@ SFTP uses [Secure Shell (SSH)](/cs-notes/computer-networking/network-encryption#
 
 ![Security comparison between FTP and SFTP](./ftp-vs-sftp.png)  
 Source: https://www.educba.com/ftp-vs-sftp/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -28,3 +28,7 @@ Image can also be restored using AI technology. The AI model will be trained wit
 
 ![Removing noise from a human eyes](./image-restoration-ai.png)  
 Source: https://developer.nvidia.com/blog/ai-can-now-fix-your-grainy-photos-by-only-looking-at-grainy-photos/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

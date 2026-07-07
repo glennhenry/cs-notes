@@ -63,3 +63,7 @@ More detail about image properties:
 :::tip
 See also [computer display](/cs-notes/computer-graphics/computer-display).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -45,3 +45,7 @@ In this code, it is implemented using DFS, in the `visit` function. For each nei
 We will also need to return the reverse order of the stack, to ensure that the top element of the stack represents the first vertex in the topological ordering.
 
 The time complexity for topological sort is $O(V + E)$, where $V$ and $E$ is the number of vertices and edges, respectively. We will need to traverse the whole graph in order to obtain the vertices ordering. The space complexity is $O(V)$ to store the visited vertices.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

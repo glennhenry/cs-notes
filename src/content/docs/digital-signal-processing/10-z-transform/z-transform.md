@@ -25,3 +25,7 @@ Discrete sum $\sum$ is used instead of continuous integration. The sum goes from
 ### How does it work
 
 Z-transform is just the discrete version of Laplace transform, the way of how it works is similar as the [discrete Fourier transform](/cs-notes/digital-signal-processing/discrete-fourier-transform) to [Fourier transform](/cs-notes/digital-signal-processing/fourier-transform). By multiplying each discrete sample by the complex variable $z^{-n}$, we are essentially converting the sample from the time domain to the frequency domain by shifting the sample to a different frequency. The shifts depend on the power of $n$ that vary between samples.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

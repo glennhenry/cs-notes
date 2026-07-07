@@ -60,3 +60,7 @@ Examples of enhancement:
 
    ![An image with random dots/noise that disrupts the image is removed](./noise-reduction.jpeg)  
    Source: https://www.dvdfab.cn/resource/video/denoise
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

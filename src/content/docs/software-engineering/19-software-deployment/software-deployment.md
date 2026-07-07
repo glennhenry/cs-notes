@@ -90,3 +90,7 @@ One practice of DevOps involves automating the deployment process, ensuring that
 
 - **Continuous Integration (CI)**: CI is a development practice that involves frequently integrating code changes from multiple developers into a shared repository. Developer can use [version control system](/cs-notes/software-engineering/version-control), such as Git to manage and track code changes. Whenever code changes are committed to the repository, an automated build process can be triggered to compile the code, run unit tests, and generate build artifacts.
 - **Continuous Delivery (CD)**: CD focuses on automating the entire software release process up to the point of deployment. For example, GitHub Actions, specifically the GitHub Workflow, allows us to define a deployment pipeline. It is a stages and actions that will be executed whenever a particular event happened. For example, a common pipeline would be defining a task to build, test, package, and deploy the application whenever code is pushed to the main branch.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

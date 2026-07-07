@@ -442,3 +442,7 @@ Jumping to a function is done with `BL` instruction. Example of C function and i
 
 ![C function in ARM](./arm-function.png)  
 Source: Book 1 page 174, 175
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

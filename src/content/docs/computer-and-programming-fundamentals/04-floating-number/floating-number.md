@@ -125,3 +125,7 @@ Representing the number $3.14$ in floating point standard:
 
 5. Determine the mantissa: The mantissa is just the right-hand side of the normalized binary representation, which is the $100100011110101110000101$.
 6. Putting it all together: Combining the sign bit, exponent, and mantissa, we can represent $3.14$ in binary using floating point standard with: $0$ $10000000$ $100100011110101110000101$.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

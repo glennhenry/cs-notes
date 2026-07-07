@@ -143,3 +143,7 @@ Source: https://www.scaler.com/topics/operating-system/difference-between-multic
 Overall, the primary difference is about how they share resources.
 
 Multiple unit of processing in hardware-level plays a role for concurrency in the software-level. [Threading](/cs-notes/computer-and-programming-fundamentals/concurrency#process--thread), is implemented in the hardware-level by having specific hardware that capable of processing concurrently, and utilized in the software-level by operating system to schedule their execution.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

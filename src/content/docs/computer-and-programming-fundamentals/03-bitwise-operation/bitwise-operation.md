@@ -116,3 +116,7 @@ Bit masking is the process of selectively manipulate or extract specific bits wi
   ------------------- AND
   Result:  10100000
   ```
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

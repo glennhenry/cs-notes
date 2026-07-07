@@ -49,3 +49,7 @@ Vorbis is the specific codecs for audio data in OGG file. Vorbis codec divide au
 3. **[Quantization](/cs-notes/digital-signal-processing/quantization)**: The transformed audio data is quantized, meaning the amplitudes of the frequency components are approximated and represented with fewer bits.
 4. **Encoding**: The quantized audio data is further processed and encoded using variable bit rate encoding. The codec allocates more bits to preserve important audio details and fewer bits for less important parts, based on the psychoacoustic analysis.
 5. **Bit stream Generation**: The encoded audio data, along with metadata such as track information and tags, is packaged into a bit stream or sequence of bit to the OGG container format.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

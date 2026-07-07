@@ -30,3 +30,7 @@ Source: https://inst.eecs.berkeley.edu/~ee225b/sp14/lectures/wavelets-g&w.pdf
 A shifting operation by $k$.
 
 Wavelet basis functions are multiplied by the original signal to obtain wavelet coefficients. Similar to the Fourier transform, this process effectively measures the contribution of each wavelet to the signal. We can efficiently represent signals using these wavelet coefficients. These coefficients can now be used to filter noise, compression, or etc. by discarding specific frequency of the signal.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

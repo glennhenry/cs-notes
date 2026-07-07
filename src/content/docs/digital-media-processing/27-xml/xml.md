@@ -112,3 +112,7 @@ XML file follows a hierarchical tree-like structure. It consists of elements, at
 :::info
 Another approach to parse XML is **event-based parsing**. In event-based parsing, the parser generates events as it encounters XML tokens. An event can be the start of an element, end of an element, attribute values, and text content. This approach can be more memory-efficient compared to traditional tree-based parsing, especially in cases where the application does not need to process the full XML content, but only needs to extract specific information.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

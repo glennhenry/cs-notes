@@ -40,3 +40,7 @@ FT is a continuous-time transform that involves integration over an infinite tim
 In DFT, with input signal and the exponential term being represented in vector, the multiplication between them result in a matrix multiplication. With a straightforward algorithm, DFT can be computed in $O(N^2)$ time, where $N$ is the number of samples in the signal.
 
 Next topic is an improvement for DFT algorithm which is the [Fast Fourier transform (FFT) algorithm](/cs-notes/digital-signal-processing/fast-fourier-transform).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

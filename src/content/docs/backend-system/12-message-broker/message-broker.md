@@ -81,3 +81,7 @@ Apache Kafka on the other hand, is designed to be more scalable for real-time da
 
 ![Apache Kafka](./apache-kafka.png)  
 Source: https://www.projectpro.io/article/apache-kafka-architecture-/442
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

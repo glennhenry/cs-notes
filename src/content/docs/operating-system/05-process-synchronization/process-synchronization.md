@@ -212,3 +212,7 @@ If a deadlock occurs after detection, there are some method to recover from it:
 - **Process Termination**: One approach is to terminate one or more processes involved in the deadlock. By terminating a process, the resources held by that process are released and become available for other processes. The terminated process may need to restart or reattempt its task after the deadlock is resolved.
 
 - **Resource Preemption**: In some cases, it may be possible to preempt or forcibly reclaim resources from one or more processes to break the deadlock. The preemption can be achieved by rolling back the process to a checkpoint or by freeing resources that are less critical to the process. Preempted resources can then be allocated to other processes to allow them to proceed.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

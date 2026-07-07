@@ -58,3 +58,7 @@ The controller acts as an intermediary between the Model and the View. It receiv
 
 ![MVC](./mvc.png)  
 Source: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

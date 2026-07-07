@@ -155,3 +155,7 @@ The process is same for the other discriminator.
 Source: https://www.oreilly.com/library/view/hands-on-artificial-intelligence/9781788836067/c2e7d914-4e45-4528-8627-c590d19107ef.xhtml
 
 There are two loss function used, the same adversarial/GAN loss which is obtained from the discriminator classification (classify whether image is real or fake). Another loss is the **cycle consistency loss**, which is loss introduced to ensure the translation from A to B and then from B to A or vice versa reconstructs the original image.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

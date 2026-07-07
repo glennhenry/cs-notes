@@ -64,3 +64,7 @@ The purpose of private IP address is to uniquely identify device while also redu
 
 ![Several device with private IP address connects to router that has public IP address](./public-private-ip-address.png)  
 Source: https://www.avg.com/en/signal/public-vs-private-ip-address
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

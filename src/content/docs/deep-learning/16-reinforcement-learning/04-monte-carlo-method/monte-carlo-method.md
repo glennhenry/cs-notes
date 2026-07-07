@@ -30,3 +30,7 @@ Source: https://youtu.be/o8XGKkIA1gE?si=NpJ_6VxZwT06ZHta
 For example, consider a maze problem. In this case, we don't know the information about the environment including its state, action, and rewards. We don't know where we at, we don't know if we should move in definite direction (e.g. left, right, up, or down). The goal of the problem may also be unknown, it is purely driven by rewards.
 
 The agent starts exploring the maze randomly in any direction. During the visits, we also record the states it observed to improve the simulation and the rewards it received. For each state it visited, update the value estimate by averaging the returns obtained after visiting that states. Based on the value estimation, we will also update the policy. This process is done in a single episode and will be repeated for multiple times.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -49,3 +49,7 @@ Source: https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-st
 Below are the gif animation of GRU process  
 Source: [Stacked_HG_CoordConvGRU - ayushgaud](https://ayushgaud.github.io/Stacked_HG_CoordConvGRU/)
 ![GRU process animation](./gru-animation.gif)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

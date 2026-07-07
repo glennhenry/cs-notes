@@ -109,3 +109,7 @@ The last step to turn logical query plan into physical query plan are:
   - Materialization involves creating the entire intermediate result and storing it on disk, which can be useful when the result is large or needs to be reused later.
   - Pipelining involves creating the intermediate result only in main memory, without necessarily keeping it in its entirety at any given time.
 - **Physical Plan Implementation**: The specific details regarding access methods for stored relations and algorithms for implementing relational-algebra operators. Access methods refer to the techniques used to retrieve tuples from stored relations, such as [table scans, index scans, or sort scans](/cs-notes/database-system/query-processing#physical-query-plan-operators).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

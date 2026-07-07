@@ -122,3 +122,7 @@ If there are more than one parse tree generated for the same string, we can say 
 :::tip
 See also [context-free grammar](/cs-notes/theory-of-computation-and-automata/context-free-grammar).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

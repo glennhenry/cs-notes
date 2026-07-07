@@ -23,3 +23,7 @@ Source: https://towardsdatascience.com/using-transformers-for-computer-vision-6f
 2. **Transformers or Encoder Block**: The embedded patches are fed into the transformers encoder block, consisting multi-head self-attention, fully connected layer, and add & norm layer. The ViT model stack several encoder block together. Transformers architecture make it possible to capture the global information about the image, compared to CNN that captures only the local patterns.
 
 3. **Output**: The output is a sequence of patch embedding that captured the global representation of the image. Depending on the task, the output processing may be different. In a classification tasks, the output goes to a fully connected layer to produce probability distribution over different classes or labels.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

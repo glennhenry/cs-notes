@@ -146,3 +146,7 @@ Similar to activity diagram, the start and end of the diagram is represented as 
 **Entity Relationship (ER) Diagram** is a flowchart that illustrates entities (or objects), relationships, attributes, and constraints within a database.
 
 See [E/R model](/cs-notes/database-system/database-model#er-model).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -28,3 +28,7 @@ $\gamma$: Discount factor.
 $\alpha$: Learning rate.
 
 After calculating the error, we will then update the value with the formula on the right. The formula says that the new value will be the current value plus the error multiplied by some constant called **learning rate**, basically it controls how big do we want to update the value. Value can increase or decrease depending on the TD error, which can be positive or negative. The update process is very similar to [gradient descent](/cs-notes/machine-learning/linear-regression#gradient-descent).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

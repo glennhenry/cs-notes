@@ -148,3 +148,7 @@ Some common environment variable:
 
 ![Environment variables](./environment-variable.gif)  
 Source: https://docs.oracle.com/cd/E83411_01/OREAD/creating-and-modifying-environment-variables-on-windows.htm
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

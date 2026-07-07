@@ -121,3 +121,7 @@ After filling up the table, determining which one will be the final state in the
 
 ![Epsilon conversion part 3, converted NFA](./epsilon-conversion-3.png)  
 Source: https://youtu.be/WSGcmaHNBFM?si=pqyzMwwDEl0nLr3w&t=567
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -70,3 +70,7 @@ Source: https://www.scaler.com/topics/microkernel-operating-system/
 
 ![Hybrid kernels](./hybrid.png)  
 Source: https://en.wikipedia.org/wiki/Hybrid_kernel#/media/File:OS-structure2.svg
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

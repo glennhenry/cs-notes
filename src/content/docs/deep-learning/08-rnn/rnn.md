@@ -131,3 +131,7 @@ Source: https://towardsdatascience.com/understanding-encoder-decoder-sequence-to
 :::note
 By standard RNN model, it can also be other type of RNN like [LSTM](/cs-notes/deep-learning/lstm) and [GRU](/cs-notes/deep-learning/gru).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

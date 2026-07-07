@@ -43,3 +43,7 @@ The computer takes screenshot at regular intervals, such as 24 or 60 times per s
 Livestreaming is a real-time broadcasting of video and audio content over the internet. Livestreaming involves capturing user's screen just like screencasting, but the result of video is not saved locally. Instead, it is sent over the network to the livestreaming service, such as YouTube. The livestreaming service will then broadcast it to user anywhere.
 
 The audio and video data is sent gradually, divided into smaller network packets for the transmission over the network. The network protocol used for transmission can be a real-time protocol like [RTC](/cs-notes/computer-networking/rtc).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

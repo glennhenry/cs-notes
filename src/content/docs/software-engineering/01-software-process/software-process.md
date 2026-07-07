@@ -130,3 +130,7 @@ Making a software project can be overwhelming if we don't have the plan. It is e
 
 4. **Testing**: Write [automated tests](/cs-notes/software-engineering/software-testing#automated) to verify the software and to prevent functionality from becoming incorrect when code is modified.
 5. **Keep Going**: After creating the minimum viable product and testing it, we should identify any problems or areas for improvement. We can create a list of TODOs that may include bug fixes, new features, corrections, etc. We can prioritize each task on the To-do list and determine the next steps accordingly. If the bug significantly affect the app, we can fix them. If working on a new feature, we can start again the process from step 1 by creating the high-level design of the new feature, developing it incrementally, and targeting the MVP, and so on going iteratively.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

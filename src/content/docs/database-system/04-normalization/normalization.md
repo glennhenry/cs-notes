@@ -120,3 +120,7 @@ Normalization reduce data redundancy by eliminating duplicate data by separating
 :::tip
 Denormalization is different with unnormalized form. Unnormalized form means that the table is not normalized yet.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

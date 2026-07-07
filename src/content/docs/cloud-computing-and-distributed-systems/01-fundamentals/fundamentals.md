@@ -67,3 +67,7 @@ Benefits of cloud computing:
 - **Flexibility & Agility**: Developers can deploy their application on a server easily with cloud services. They don't need to set up or configure physical servers, as these are the concern of the cloud providers. Furthermore, developers can dynamically change and customize their infrastructure to suit the application needs.
 - **Scalability**: Developers can easily scale up or down the resources allocated to their applications based on demand. For example, in weekend, the number of user visiting your website increase. Then, we can add more storage capacity or increase network bandwidth. Cloud providers also offer auto-scaling features that automatically adjust resources based on predefined rules or metrics.
 - **Security**: Developers and users don't need to invest or be concerned in security. Cloud providers often have dedicated security teams and compliance certifications, ensuring that applications hosted in the cloud adhere to industry security standards.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

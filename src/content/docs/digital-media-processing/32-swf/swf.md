@@ -21,3 +21,7 @@ Flash player content are stored in a file with `.swf` format. Developer creates 
 A browser must have an engine that can interpret SWF file and run its content. Some flash player engine can be "plugged-in" onto the browser, or built-in within the browser. The flash player itself and the SWF file structure is complex. In high-level, the binaries in the SWF file is supposed to be [parsed](/cs-notes/compilers-and-programming-languages/parsing), interpreted, then translated into corresponding code to render its content. Here, the flash player engine or plugin know how to do this.
 
 The rendering process may involve low-level instruction from the SWF, such as drawing triangle and coloring it, placing them in the correct position, loading certain images, or playing audio. They will be converted into high-level instruction governed by the browser API.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

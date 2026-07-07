@@ -111,3 +111,7 @@ Texture may have limited amount of texels that it doesn’t fulfill to map all o
 
 ![Comparison of texture tiling](./texture-tiling.png)  
 Source: [https://community.khronos.org/t/how-to-get-gl-clamp-to-border-effect/104085](https://community.khronos.org/t/how-to-get-gl-clamp-to-border-effect/104085)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

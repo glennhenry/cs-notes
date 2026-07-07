@@ -58,3 +58,7 @@ MapReduce system typically consist of three operations or steps:
 - **Performance**: As emphasized before, MapReduce operation is done in parallel, dedicated to handle large data datasets and complex computations.
 - **Scalability**: Allows for horizontal scale, increasing more machines to enhance the parallel processing.
 - **Fault Tolerance**: Classic benefits of distributed system, when a node fails during processing, we can redistribute the work to other available nodes, ensuring fault tolerance and continuous execution.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

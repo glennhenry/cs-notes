@@ -51,3 +51,7 @@ That certain point is typically 3 or 4, the "elbow" in the plot refers to the po
 
 ![Elbow method](./elbow-method.png)  
 Source: https://www.datanovia.com/en/lessons/determining-the-optimal-number-of-clusters-3-must-know-methods/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

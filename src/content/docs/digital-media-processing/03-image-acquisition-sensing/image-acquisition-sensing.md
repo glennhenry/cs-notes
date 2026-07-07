@@ -77,3 +77,7 @@ There are two main approaches in image segmentation:
 
 ![Grass, cat, tree, and sky is segmented into four distinct region](./image-segmentation.png)  
 Source: https://data-flair.training/blogs/image-segmentation-machine-learning/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

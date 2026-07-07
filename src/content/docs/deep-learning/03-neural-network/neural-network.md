@@ -137,3 +137,7 @@ To assign probability to each class, we will use that particular class output as
 Source: https://youtu.be/8ah-qhvaQqU?si=3ogI3IgJnZZXLkZC&t=103
 
 And the highest probability is the one that the model believes to be the most likely prediction for the given input.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

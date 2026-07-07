@@ -84,3 +84,7 @@ Digital audio can undergo additional processing or modified with special effects
 :::tip
 See also [digital signal processing](/cs-notes/digital-signal-processing-intro), [audio effects](/cs-notes/digital-media-processing/audio-effects), and [audio equalization](/cs-notes/digital-media-processing/audio-equalization).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

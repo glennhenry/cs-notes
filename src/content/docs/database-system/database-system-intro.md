@@ -48,3 +48,7 @@ Source: https://medium.com/@saad.jameel1992/graph-vs-relational-databases-62ecc5
   - [Index Implementation](/cs-notes/database-system/index-implementation)
   - [Query Processing](/cs-notes/database-system/query-processing)
   - [Query Compiler](/cs-notes/database-system/query-compiler)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

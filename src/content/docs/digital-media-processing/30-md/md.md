@@ -26,3 +26,7 @@ Markdown files with its format element is [parsed](/cs-notes/compilers-and-progr
 
 ![The general parsing process](./parsing-process.png)  
 Source: https://accu.org/journals/overload/26/146/balaam_2532/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

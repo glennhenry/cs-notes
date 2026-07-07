@@ -32,3 +32,7 @@ The action is the movement of the agent (e.g. left, right, up, down) and also ma
 The agent should have proper coordination in order to efficiently move scattered object. A mechanism like sharing task to each agent can be useful, this will enable them to communicate their intentions to handle specific objects. The agents should prioritize handling objects that are closer to their own positions and allow other agents to handle objects that are further away.
 
 ![Example of multi-agent problem](./example.png)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

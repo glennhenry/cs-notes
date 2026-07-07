@@ -62,3 +62,7 @@ The Blinn/Phong material model is a simplified version of the BRDF function The 
 
 ![Many directions of light source is reflected from plane to camera](./blinn-phong.png)  
 Source: [https://youtu.be/GOfzX7kRwys?t=2928](https://youtu.be/GOfzX7kRwys?t=2928)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

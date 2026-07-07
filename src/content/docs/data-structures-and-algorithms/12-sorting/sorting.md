@@ -90,3 +90,7 @@ Insertion sort results in best of $O(n)$ time, average and worst in $O(n^2)$ tim
 
 ![Insertion sort](./insertion-sort.gif)  
 Source: Mark Bowman Chapter_15.01
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

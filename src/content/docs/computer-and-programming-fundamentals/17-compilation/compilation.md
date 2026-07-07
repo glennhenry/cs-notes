@@ -79,3 +79,7 @@ The compilation process typically involves the following stages:
 :::tip
 More detailed [compilation process](/cs-notes/compilers-and-programming-languages/cpl-fundamentals#compiler-toolchain).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

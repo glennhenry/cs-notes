@@ -37,3 +37,7 @@ ICE also helps overcoming firewall by utilizing TURN (Traversal Using Relays aro
 
 ![WebRTC's architecture](./webrtc.png)  
 Source: https://www.techtarget.com/searchunifiedcommunications/definition/WebRTC-Web-Real-Time-Communications
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

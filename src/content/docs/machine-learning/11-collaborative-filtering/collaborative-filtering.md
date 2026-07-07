@@ -74,3 +74,7 @@ This recommendation system is based on **dot product model**, where the model pr
 Now, after all the technique used, the latent factors is all we need to predict user rating. We can keep calculating the dot product and fill out the empty rating table. These latent factors are able to capture pattern of user's rating.
 
 The latent factors technique is not only used in collaborative filtering, it can also be used as compression method. If we think the movie's rating as a color of image represented in matrix, taking the dot product between the latent factors will give us original image back.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

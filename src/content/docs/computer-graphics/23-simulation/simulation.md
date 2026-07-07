@@ -61,3 +61,7 @@ Source: [https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics](https://
 
 ![The results of SPH technique throwing a blue into water](./sph-technique-2.png)  
 Source: [https://www.kitware.com/sph-fluid-simulation-in-imstk/](https://www.kitware.com/sph-fluid-simulation-in-imstk/)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

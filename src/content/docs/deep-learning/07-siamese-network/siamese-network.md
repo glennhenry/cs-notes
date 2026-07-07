@@ -93,3 +93,7 @@ Three category based on how hard is the train triplet:
 - **Semi-Hard Triplet Mining**: Negative is close to the anchor, but not a zero distance.
 - **Easy Triplet Mining**: Positive sample is close to anchor while negative is far.
 - **Random Triplet Mining**: Randomly selected without considering their distance.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

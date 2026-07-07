@@ -84,3 +84,7 @@ The REYES algorithm works by dividing the scene into small patches, typically 16
 
 ![A texture is mapped using a micropolygon](./reyes.png)  
 Source: [https://www.semanticscholar.org/paper/The-Reyes-image-rendering-architecture-Cook-Carpenter/9477daf6e5cfc58d0daa41c893391d1eee8097e8](https://www.semanticscholar.org/paper/The-Reyes-image-rendering-architecture-Cook-Carpenter/9477daf6e5cfc58d0daa41c893391d1eee8097e8)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

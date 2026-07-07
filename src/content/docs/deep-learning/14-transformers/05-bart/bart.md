@@ -40,3 +40,7 @@ Source: https://paperswithcode.com/method/bart
 4. **Output**: The output is the most likely next word at each step, based on its learned knowledge and the context.
 
 After the pre-training process, BART will be fine tuned and have different objective depending on its tasks. The labeled dataset is used to train BART on the task-specific objective. In tasks like text classification or summarization, the objective may involve minimizing the cross-entropy loss between the model's predicted outputs and the ground truth labels.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

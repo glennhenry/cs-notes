@@ -133,3 +133,7 @@ After creating the set of dominoes from all the symbols and transition, we can t
 Source: https://youtu.be/7w9elZjJ9Ko?si=S9GLpkgV-mYALp9_&t=1554
 
 It is shown that we can solve a particular PCP with this model reduced from a Turing machine. We have successfully converted an instance of the Turing machine into an equivalent instance of the PCP. We know that the halting problem has no general algorithmic solution, so we can conclude that the **PCP is also undecidable**.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

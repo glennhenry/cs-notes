@@ -65,3 +65,7 @@ The choice of which element we choose as the skip pointer can happen in probabil
 
 ![Skip list](./skip-list.gif)  
 Source: https://en.m.wikipedia.org/wiki/File:Skip_list_add_element-en.gif
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

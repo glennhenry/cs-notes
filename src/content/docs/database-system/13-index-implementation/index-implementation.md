@@ -175,3 +175,7 @@ Multidimensional index is useful for queries like:
 As the dimension get larger, the number of bucket grows exponentially, and may not be well distributed. The number of disk I/O operation depends on the dimensions and the type of query.
 
 For example, in partial-match query, such as "find all customers aged 50", we will need to look either at the row or column of the grid. The number of disk I/O can be quite high if there are many buckets in a row or column, but only a small fraction of all the buckets will be accessed.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

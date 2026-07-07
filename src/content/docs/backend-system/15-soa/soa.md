@@ -42,3 +42,7 @@ Overall, SOA architecture are suitable for complex application where it needs to
 
 ![SOA vs microservices](./soa-vs-microservice.png)  
 Source: https://www.integrate.io/blog/soa-vs-microservices/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

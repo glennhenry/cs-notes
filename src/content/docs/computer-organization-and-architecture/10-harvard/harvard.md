@@ -31,3 +31,7 @@ Modified Harvard architecture has less strict separation between the instruction
 
 - **Split-cache**: Modified Harvard architecture has a cache system for both instruction and data memory. The instructions and data caches are combined, which means they have a single address space. Although they may share the same physical cache memory, they are organized and accessed as separate caches.
 - **Data-Instruction Interchangeability**: We can treat data in the data memory as instruction, and treat instruction in instruction memory as data. This allows for instruction generated from data, or instruction driven by data.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

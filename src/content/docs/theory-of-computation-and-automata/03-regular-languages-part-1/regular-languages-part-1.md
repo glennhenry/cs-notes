@@ -83,3 +83,7 @@ Arden's theorem can be proved by using several regular expression identity:
 Source: https://youtu.be/Idl_0mPzZjE?si=OyVyX6JPE4VhDaz2&t=430
 
 The proof consist of two part, the first part proves that $R$ is equal to $QP^*$, and the second part proves that $QP^*$ is the unique solution for the equation $R = Q + RP$, by substituting and expanding the $R$ with the $QP^*$. It mostly uses the distributive property of regular expressions.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

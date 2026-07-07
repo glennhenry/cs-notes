@@ -63,3 +63,7 @@ If we say the document is $a$, the hashed document is $b$, and the hashed docume
 
 ![DSA algorithm](./dsa.png)  
 Source: https://medium.com/@21_000_000/digital-signature-algorithm-60c8318cf9b6
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

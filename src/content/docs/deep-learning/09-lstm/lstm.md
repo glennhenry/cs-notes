@@ -76,3 +76,7 @@ Source: [Introduction to Long Short-Term Memory (LSTM) by Archit Saxena — Medi
 ![LSTM process gif](./lstm-process.gif)
 
 After all the process and the model produced the final output, the similar learning process will be done to adjust all the parameter including the weights and bias on each the gate. The model will adjust the weights to improve the gating mechanism, to forget the unrelevant information, store, or sent the relevant information to the next time step.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

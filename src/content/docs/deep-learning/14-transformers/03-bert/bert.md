@@ -43,3 +43,7 @@ Source: https://towardsdatascience.com/bert-explained-state-of-the-art-language-
 3. **Output**: The output goes into classification layer that consist of fully connected layer, GELU activation function, and a normalization layer. The result of that layer will be embedded back to actual vocabulary. The actual output is the vocab that has highest probability produced by the softmax activation function.
 
 The output processing may vary depending on the task, we may need other kind of output processing for other task beyond MLM. For example, in sentiment analysis, we might want the output to be a label. The model may also be fine tuned to be adapted into a more specific task.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

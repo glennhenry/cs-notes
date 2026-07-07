@@ -44,3 +44,7 @@ By using reverse proxy, we can achieve:
 
 ![Comparison between forward and reverse proxy](./reverse-proxy.png)  
 Source: https://securityboulevard.com/2023/04/what-is-reverse-proxy-how-does-it-works-and-what-are-its-benefits/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

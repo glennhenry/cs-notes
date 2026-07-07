@@ -17,3 +17,7 @@ Source: https://study-ccna.com/network-hubs-explained/
 
 ![An animation of hub sending data](./hub-animation.gif)  
 Source: https://www.fiber-optic-solutions.com/buy-ethernet-switch-hub.html
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

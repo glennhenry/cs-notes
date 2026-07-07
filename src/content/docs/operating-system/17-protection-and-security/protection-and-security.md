@@ -60,3 +60,7 @@ One example of a virus is **stoned**, it's a dangerous virus that attacks the [b
 - The Stoned virus's primary purpose is to display a humorous or taunting message on the screen once the computer boots up. The specific message displayed varies between different variants of the virus but often includes phrases related to drug use or legalization.
 
 Unlike some other viruses, the Stoned virus does not typically cause significant damage or data loss. Its main impact is the display of the message, which is more of a nuisance than a destructive action.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

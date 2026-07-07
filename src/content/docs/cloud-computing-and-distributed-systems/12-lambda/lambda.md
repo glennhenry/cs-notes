@@ -61,3 +61,7 @@ The combination of batch processing which is slower due to the need to wait for 
 
 ![Lambda architecture](./lambda-architecture.png)  
 Source: https://medium.com/@bryzgaloff/how-to-implement-lambda-architecture-using-clickhouse-9109e78c718b
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

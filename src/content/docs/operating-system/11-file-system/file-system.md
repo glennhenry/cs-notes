@@ -340,3 +340,7 @@ ext4 supports larger file systems and file sizes compared to ext3. ext4 allows s
 ext4 enhances the allocation algorithms, it introduces **multiblock allocation**, which allows for allocation of multiple blocks at once. In contrast, ext3 calls block allocator, once for each block.
 
 ext4 implements **delayed allocation**, also known as **allocate-on-flush**. This technique improves write performance by delaying the allocation and writing of data blocks until they are actually needed. This technique allow writing larger amount of data at once, reducing unnecessary disk I/O operations.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

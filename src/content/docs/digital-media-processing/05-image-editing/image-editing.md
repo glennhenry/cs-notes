@@ -36,3 +36,7 @@ Photoshop has a tool called **selection tool**, which is used to isolate specifi
 
 ![A person standing in white background is changed to blue background](./photoshop-change-background.jpeg)  
 Source: https://www.bwillcreative.com/how-to-change-background-color-in-photoshop/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

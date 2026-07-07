@@ -230,3 +230,7 @@ When the CPU needs to read data from or write data to the main memory, it first 
 
 ![Caching in memory](./cache.png)  
 Source: https://witscad.com/course/computer-architecture/chapter/cache-memory
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

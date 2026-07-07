@@ -34,3 +34,7 @@ Key characteristics of imperative programming include:
 Procedural programming has more dedicated feature compared to imperative programming. In imperative programming which is used for lower-level language, some control flow are implemented using the `goto` statement, which transfers the program execution to a labeled statement elsewhere in the code. The use of `goto` statement may cause the program to become hard to maintain.
 
 In contrast, procedural programming which is used in higher-level language, control flow has dedicated block scopes for control flow (e.g., while loop, if-else statement). A scope refers to the visibility and accessibility of variables within different parts of a program, it determines where a variable can be accessed and used within the program. Having dedicated scope allows the program to have more predictable and understandable control flow.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

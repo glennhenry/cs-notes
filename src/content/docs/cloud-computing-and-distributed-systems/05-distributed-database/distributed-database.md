@@ -91,3 +91,7 @@ Source: https://medium.com/geekculture/distributed-transactions-two-phase-commit
 :::tip
 See also similar topic about [concurrency control in database system](/cs-notes/database-system/concurrency-control).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

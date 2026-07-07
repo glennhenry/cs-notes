@@ -93,3 +93,7 @@ In linear regression, we try constructing a line with particular slope and calcu
 Source: https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/maximum-likelihood.html (with modification)
 
 Overall the loss function (function used to measure how well a model performs) used for logistic regression is the log likelihood. The log likelihood is also known as the [binary cross entropy loss](/cs-notes/deep-learning/deep-learning-foundation#binary-cross-entropy-loss).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -598,3 +598,7 @@ The `NotificationService` now depend on the `MessageSender` interface, which can
 
 ![Dependency inversion](./dependency-inversion.png)  
  Source: https://levelup.gitconnected.com/solid-programming-for-arduino-the-dependency-inversion-principle-4ce3bdb787d1
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -97,3 +97,7 @@ A migration is needed when a specific changes applied to a database alters its s
 - **Data Transformations**: This may include data conversions, normalization, denormalization, etc.
 - **Version Upgrades**: When upgrading the DBMS to a newer version, a migration is often required to ensure compatibility with the new database software.
 - **System Upgrades**: Scenario of system upgrades, or when moving data to a different platform, such as migrating from an on-premises database to a cloud-based solution.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -382,3 +382,7 @@ The strength of each parser can somewhat be described as follows: $\text{LL}(1) 
 When creating a parser, the choices are similar to those when making a [scanner](/cs-notes/compilers-and-programming-languages/scanning). We can use a parser generator (e.g., with programs like Yacc and Bison), which typically generate bottom-up parsers like LALR(1) and LR(1). Similarly, these tools work by generating a parser from the specifications we provide, and we need to integrate the generated parser as well as a scanner (which may be generated as well) with our main function.
 
 Alternatively, we can choose to make it manually, as we may not have full control over the generated parser, such as not being able to provide the best error messages or finding it harder to understand and modify because we didn't create it. When we make a parser manually, we typically create a top-down parser, with a common implementation being the [recursive descent parser](#recursive-descent-parser). If we were to create an LR parser, we would have to create a table to reflect the correct automaton, which could have a large number of states, resulting in a significantly large automaton.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -68,3 +68,7 @@ Source: https://www.researchgate.net/figure/Algorithm-and-procedure-of-the-JPEG-
 :::tip
 Find out more about [JPG compression](/cs-notes/digital-media-processing/jpg-jpeg)
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

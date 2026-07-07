@@ -390,3 +390,7 @@ class Computer {
 ```
 
 Now that these pieces of hardware implement a common interface, we can treat them as a single unit. We can calculate the total cost by calling `getTotalCost()`, which will calculate each cost of individual hardware with `getCost()`.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

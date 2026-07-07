@@ -122,3 +122,7 @@ In SSO, a **service provider (SP)** is an application that relies on **identity 
 
 ![SSO SAML process](./sso.png)  
 Source: https://support.google.com/a/answer/6262987?hl=id
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

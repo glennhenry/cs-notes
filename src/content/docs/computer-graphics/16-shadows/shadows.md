@@ -49,3 +49,7 @@ To store the information, a depth map which is **two-dimensional image that stor
 
 ![A technique to creates shadow using z-buffer](./shadow-mapping.png)  
 Source: [https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping](https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

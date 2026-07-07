@@ -52,3 +52,7 @@ See also [digital signal processing](/cs-notes/digital-signal-processing-intro).
     - [MD](/cs-notes/digital-media-processing/md)
     - [TXT](/cs-notes/digital-media-processing/txt)
     - [PDF](/cs-notes/digital-media-processing/pdf)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

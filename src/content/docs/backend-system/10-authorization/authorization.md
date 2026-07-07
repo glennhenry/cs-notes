@@ -57,3 +57,7 @@ This is the process of OAuth:
 
    ![Workflow of OAuth](./oauth-workflow.png)  
    Source: https://youtu.be/CPbvxxslDTU?si=2EZK6waoD46nbE8U&t=251
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

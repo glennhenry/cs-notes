@@ -26,3 +26,7 @@ Another example of SQL statement which is selecting only the "country_id" and "c
 :::tip
 Find out more about **[database system](/cs-notes/database-system-intro)**.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

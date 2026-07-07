@@ -92,3 +92,7 @@ There is also a much more lighter version of ray tracing, this is called **Ray C
 
 ![Ray casting creates an illusion of depth in a 2D wall](./ray-casting.png)  
 Source: https://id.wikipedia.org/wiki/Raycasting
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

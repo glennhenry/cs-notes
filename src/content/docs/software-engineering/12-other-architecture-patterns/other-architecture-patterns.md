@@ -94,3 +94,7 @@ Source: https://blog.mindorks.com/mvi-architecture-android-tutorial-for-beginner
 
 ![VIPER](./viper.png)  
 Source: https://twitter.com/sahnlam/status/1734090361105244533
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

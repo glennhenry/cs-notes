@@ -53,3 +53,7 @@ Example of signal:
 
   ![Analog signal such as sine wave represents voltage and digital signal shows square wave varying only between 0 volts and 5 volts](./signal-representation.png)  
   Source: https://instrumentationtools.com/what-are-analog-and-digital-signals-differences-examples/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -192,3 +192,7 @@ Source: https://youtu.be/0D7yInuKvKs?si=DmhXS_NOnGgAYbWt&t=774
 3. **Decidable or Recursive Language**: This language can be recognized by a Turing machine, but the machine will always halt on any input. For example, it is always possible to determine if a string belongs to a recursive language, such as giving a "yes" or "no" answer.
 4. **Partially Decidable or Recursively Enumerable Language**: It is also known as Turing recognizable, but the machine may or may not halt on all inputs. For strings not belonging to the language, the Turing machine may either reject them or run indefinitely without halting.
 5. **Undecidable**: Additionally, anything outside the scope of the previous language is not recognized by the Turing machine, and the machine always halts for any inputs. One example of undecidable language is the [Halting Problem](/cs-notes/theory-of-computation-and-automata/undecidability#halting-problem) (see next notes).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -72,3 +72,7 @@ SSH supports password-based authentication and public key encryption, it encrypt
 
 ![SSH encryption process](./ssh-encryption.png)  
 Source: https://course-net.com/blog/ssh-adalah/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

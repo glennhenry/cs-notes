@@ -128,3 +128,7 @@ function DFS(node):
 Source: https://commons.wikimedia.org/wiki/File:Postorder-traversal.gif
 
 Depending on the task, the order of visiting nodes matters. For example, inorder traversal can be used to visits the nodes in ascending order in the case of a binary search tree.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

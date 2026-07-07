@@ -290,3 +290,7 @@ This tree grammar can also be included with attribute grammar like below.
 Source: Book 2 page 185-187
 
 Each attribute is associated with fragment of code to evaluate them. Some even contains control flow, checking symbol table (`symtab`), and error reporting. One thing to note is, it catches error by making a dummy type called `error`. This error type is associated with an error message in the symbol table.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

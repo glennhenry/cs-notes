@@ -216,3 +216,7 @@ On the other hand, UEFI is a newer firmware interface that was introduced as a s
 
 ![BIOS and UEFI](./bios-uefi.png)  
 Source: https://www.onlogic.com/company/io-hub/uefi-vs-bios-building-a-better-firmware/ (BIOS on the left)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

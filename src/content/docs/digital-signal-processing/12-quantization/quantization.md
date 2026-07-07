@@ -34,3 +34,7 @@ These two are techniques to quantize signals.
 
 ![Uniform and non-uniform quantization comparison](./uniform-nonuniform-quantization.png)  
 Source: https://analogquantized.wordpress.com/tag/non-uniform-quantization/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

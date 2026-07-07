@@ -84,3 +84,7 @@ In systems like Git & GitHub, another common terminology are:
 :::tip
 See also [open sourcing](/cs-notes/software-engineering/open-sourcing) for more information about collaboration and contributing.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

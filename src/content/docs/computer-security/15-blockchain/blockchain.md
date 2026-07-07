@@ -60,3 +60,7 @@ This also applies when you modify certain block, when you modify the block, you 
 
 ![PoW](./pow.png)  
 Source: https://www.ledger.com/academy/blockchain/what-is-proof-of-work
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

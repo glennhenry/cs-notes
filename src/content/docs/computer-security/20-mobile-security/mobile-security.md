@@ -28,3 +28,7 @@ In the image above, the malicious app cover up the system window that ask for pe
 Biometrics is the measurement of unique physical or behavioral characteristics of individuals. Biometrics are commonly used for identification or authentication, as it is unique to each person, and it will always available. Example of biometrics measurement are fingerprint, facial recognition, iris, retina, voice.
 
 **Biometric spoofing** is a technique to trick the biometric authentication system by various methods such as using high-resolution photos, artificial fingerprints, 3D models, or identify the weakness of system that recognize them.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

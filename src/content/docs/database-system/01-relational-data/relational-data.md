@@ -149,3 +149,7 @@ We can perform various operation on our query, some examples are:
 :::info
 More about [operation](/cs-notes/database-system/query-language#other-operations).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

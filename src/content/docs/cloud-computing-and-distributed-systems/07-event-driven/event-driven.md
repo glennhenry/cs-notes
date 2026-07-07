@@ -108,3 +108,7 @@ The action we set whenever a button is clicked is to print "Button clicked!". Ag
 :::tip
 See also [observer design pattern](/cs-notes/software-engineering/behavioral-patterns#observer).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

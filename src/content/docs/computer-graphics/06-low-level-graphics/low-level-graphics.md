@@ -58,3 +58,7 @@ A buffer is a block of memory thats temporilaly holds data. In graphics, buffer 
 
 ![Frame buffer](./frame-buffer.jpg)  
 Source: https://ecomputernotes.com/computer-graphics/basic-of-computer-graphics/what-is-frame-buffer
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

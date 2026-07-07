@@ -36,3 +36,7 @@ Hubs and switches can be thought as the device you use to make network, while ro
 
 ![Several local networks connected with switch and externally connected with router](./hub-switch-vs-router.png)  
 Source: https://youtu.be/1z0ULvg_pW8?si=GkDgO98d3d0uKt43&t=401
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

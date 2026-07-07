@@ -107,3 +107,7 @@ The overview of computer graphics process involve these 3:
 - [Computer Animation](/cs-notes/computer-graphics/computer-animation)
 - [Physics-Based Animation](/cs-notes/computer-graphics/physics-based-animation)
 - [Simulation](/cs-notes/computer-graphics/simulation)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

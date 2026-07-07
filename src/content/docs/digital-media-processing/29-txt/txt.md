@@ -37,3 +37,7 @@ The file system that handles it will reverse the process, turning the hexadecima
 
 ![TXT file in binary form](./txt-file-binary.gif)  
 Source: https://www.thecrazyprogrammer.com/2018/05/difference-between-text-file-and-binary-file.html
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

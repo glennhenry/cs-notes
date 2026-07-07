@@ -5,3 +5,7 @@ description: Master-Slave
 ---
 
 See **[Cloud Computing > Master-Slave](/cs-notes/cloud-computing-and-distributed-systems/master-slave)**
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

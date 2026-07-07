@@ -48,3 +48,7 @@ Atoms have variable sizes and specific types. The minimum size of an atom is 8 b
 
 ![Structure of MP4 file](./mp4-structure.png)  
 Source: https://www.trekview.org/blog/2022/injecting-camm-gpmd-telemetry-videos-part-2-mp4-overview/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -36,3 +36,7 @@ This notes will include explanation about traditional ML algorithms (implementat
 - [Principal Component Analysis](/cs-notes/machine-learning/principal-component-analysis)
 - [k-Means Clustering](/cs-notes/machine-learning/k-means-clustering)
 - [Collaborative Filtering](/cs-notes/machine-learning/collaborative-filtering)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

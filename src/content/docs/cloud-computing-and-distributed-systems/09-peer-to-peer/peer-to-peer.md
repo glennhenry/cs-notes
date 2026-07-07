@@ -76,3 +76,7 @@ P2P architectures are used in various applications:
 - **[Content Delivery](/cs-notes/computer-networking/server#server-optimization)**: P2P architectures are also used in content delivery networks (CDNs) to distribute and deliver content efficiently. P2P CDNs are particularly useful for distributing large media files, software updates, and streaming video content.
 - **Communication**: [Real-Time Communication (RTC) protocol](/cs-notes/computer-networking/rtc), such as [WebRTC](/cs-notes/computer-networking/rtc#webrtc) uses P2P architecture under the hood. However, they are not a complete P2P connection, as it relies on servers during the initial connection setup phase.
 - **[Blockchain](/cs-notes/computer-security/blockchain)**: Blockchain networks, such as Bitcoin and Ethereum, are built upon P2P architectures. In these decentralized systems, peers (or nodes) maintain a distributed ledger, validate transactions, and reach consensus without relying on a central authority.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

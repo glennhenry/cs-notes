@@ -97,3 +97,7 @@ The rational which involves the use of weights in the function make curve smooth
 
 ![Example of NURBS forming a hill like curve](./nurbs.png)  
 Source: [https://en.wikipedia.org/wiki/Non-uniform_rational_B-spline](https://en.wikipedia.org/wiki/Non-uniform_rational_B-spline)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

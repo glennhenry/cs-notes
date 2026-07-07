@@ -57,3 +57,7 @@ Source: https://huggingface.co/learn/audio-course/chapter3/seq2seq
 7. **Decoder Output**: The decoder outputs a token, the token can be converted back into text or converted into spectogram with further processing depending on the use case. The decoder will then use it for the next output step.
 
 Overall, the transformers architecture for audio is similar to the standard transformers, the difference falls in the input processing.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

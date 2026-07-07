@@ -41,3 +41,7 @@ Some techniques are:
 
 ![Autoencoders network](./autoencoder.png)  
 Source: https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

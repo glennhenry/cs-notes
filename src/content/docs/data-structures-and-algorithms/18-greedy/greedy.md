@@ -40,3 +40,7 @@ function coinChange(coins, amount):
 The greedy approach always select the largest worth of coin available (as long as it doesn't exceed the amount) and use that coin to make the change. While this approach seems to be working all the time, there are some case where this solution doesn't give us the most optimal solution.
 
 In the case of having a coin set of [1, 6, 10] and a target amount of 12, the greedy solution would choose the largest coin, which is 10, and then add 2 coins of 1 cent, resulting in a total of 3 coins. However, it's worth noting that by using two 6-cent coins, we can achieve the target amount of 12 with only 2 coins.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

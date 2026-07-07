@@ -185,3 +185,7 @@ Types of compilers:
 - **Decompiler**: Takes an executable or binary file as input and attempts to reconstruct the original source code from which the executable was compiled. It is the reverse of compilation, going from low-level language to a higher-level language. Another term is disassembler, which is the reverse of assembler, converting machine code (e.g., in hex) back to its assembly language instruction.
 - **Transpiler**: Also known as **source-to-source compiler**, it is a compiler that translate source language to an equivalent source code in the same or different language. This includes tools like obfuscator (transform source code into a less readable and more difficult-to-understand form), minimizer (reduces the size of the source code by removing unnecessary characters such as, whitespace, and comments), and optimizer (analyzes source code and optimize it).
 - **[Just-In-Time (JIT)](/cs-notes/computer-and-programming-fundamentals/interpreter#jit-compilation) Compiler**: A compiler that compiles code just-in-time it is executed. It dynamically compiles and optimizes code while the program is running.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

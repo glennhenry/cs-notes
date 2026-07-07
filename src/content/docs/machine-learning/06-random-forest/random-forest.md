@@ -49,3 +49,7 @@ Source: https://youtu.be/v6VJ2RO66Ag?si=SeQePcebnrmx20fW&t=346
 The concept of using random forest as regression is the same as random forest for classifying. The difference is we use decision tree regressor instead. At the end of predictions of the individual decision trees, the result are typically averaged or combined to obtain the final regression prediction.
 
 Each decision tree in the Random Forest predicts a continuous numerical value, and the final prediction is calculated as the average or median of the predictions from all the individual trees.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

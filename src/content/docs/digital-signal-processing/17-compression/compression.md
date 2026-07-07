@@ -75,3 +75,7 @@ Source: https://www.dspguide.com/ch27/6.htm
 :::tip
 Other lossy compression for [images (JPG/JPEG)](/cs-notes/digital-media-processing/jpg-jpeg), [audio (MP3)](/cs-notes/digital-media-processing/mp3), and [video (MP4)](/cs-notes/digital-media-processing/mp4).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -109,3 +109,7 @@ Commonly used in applications such as video games, virtual reality, and architec
 
 ![A sphere showing a realistic reflection from physical environment](./image-based-lightning.png)  
 Source: [https://developer.playcanvas.com/en/user-manual/graphics/physical-rendering/image-based-lighting/](https://developer.playcanvas.com/en/user-manual/graphics/physical-rendering/image-based-lighting/)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -44,3 +44,7 @@ Source: https://www.sharetechnote.com/html/RF_Handbook_TimeDomain_FrequencyDomai
 :::note
 This theorem can be useful to efficiently compute the convolution of two function in the frequency domain, that is by multiplying the Fourier transform of each function, then doing an inverse Fourier transform.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

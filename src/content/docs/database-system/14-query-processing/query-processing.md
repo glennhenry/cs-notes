@@ -121,3 +121,7 @@ Buffer manager has several strategies to control the use of buffers, it decides 
 
   ![Clock algorithm](./clock.png)  
   Source: Book page 749
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

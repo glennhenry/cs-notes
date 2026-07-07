@@ -52,3 +52,7 @@ Spatial audio uses multiple channels (sources) to produce sound. Some techniques
 
   ![A listener has some radius and angle from audio source](./ambisonics.png)  
    Source: https://en.wikipedia.org/wiki/3D_audio_effect
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

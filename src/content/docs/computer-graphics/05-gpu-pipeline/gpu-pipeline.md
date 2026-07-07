@@ -58,3 +58,7 @@ For example in the image below, there is a triangle that is formed by 3 vertices
 
 ![A triangle is interpolated between three colors](./fragment-shader.png)  
 Source: [https://unsoundscapes.com/slides/2017-06-08-bringing-the-fun-to-graphics-programming/](https://unsoundscapes.com/slides/2017-06-08-bringing-the-fun-to-graphics-programming/)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

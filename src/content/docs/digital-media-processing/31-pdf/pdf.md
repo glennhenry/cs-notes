@@ -26,3 +26,7 @@ PDF has 4 main components, where the body is the actual content of the document.
 
 ![Structure of PDF file](./pdf-structure.png)  
 Source: https://www.researchgate.net/figure/An-example-of-a-simple-PDF-file-structure-that-consists-of-one-page-that-contains-a_fig1_326102942
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -27,3 +27,7 @@ Speech processing involves some steps, here is a high-level overview:
 :::tip
 See also [natural language processing (NLP)](/cs-notes/deep-learning/deep-learning-tasks#natural-language-processing-nlp).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

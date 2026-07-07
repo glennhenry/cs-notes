@@ -42,3 +42,7 @@ If we draw a curve that approximate what should the next data point will be at b
 
 ![k-NN regression curve approximation](./k-nn-regression-result.png)  
 Source: https://youtu.be/3lp5CmSwrHI?si=uuU8ht_VprtTEX4Y&t=161
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

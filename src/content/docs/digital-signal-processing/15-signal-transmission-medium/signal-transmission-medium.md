@@ -55,3 +55,7 @@ Light is then bounced from source tower through the atmosphere or satellite to t
 
 ![Shows how light is bounced from source tower through the ionosphere to the receiver tower](./unguided-media-transmission.png)  
 Source: https://www.javatpoint.com/unguided-transmission-media
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

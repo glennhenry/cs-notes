@@ -158,3 +158,7 @@ Each database element is associated with two timestamps and a **commit bit**. Th
 The commit bit gives an information to prevent a situation where one transaction reads data written by another transaction that subsequently aborts (dirty read).
 
 Timestamp ordering can be considered optimistic because it assumes that conflicts between transactions are rare. Transactions are allowed to execute concurrently based on their timestamps, without acquiring locks. If conflicts occur, we can allow the transaction with the earlier timestamp to proceed, while the transaction with the later timestamp may be rolled back and restarted or delayed.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

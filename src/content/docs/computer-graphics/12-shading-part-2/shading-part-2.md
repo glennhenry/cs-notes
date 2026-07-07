@@ -75,3 +75,7 @@ Shading transformation works by applying a special matrix tranformation which is
 
 ![The inverse transpose matrix](./inverse-transpose-matrix.png)  
 Source: [https://youtu.be/Q_TYQvZS6WE?t=3214](https://youtu.be/Q_TYQvZS6WE?t=3214)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

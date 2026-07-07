@@ -125,3 +125,7 @@ Some specialization TPU has:
 
 ![TPU architecture](./tpu.png)  
 Source: https://semiengineering.com/knowledge_centers/integrated-circuit/ic-types/processors/tensor-processing-unit-tpu/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

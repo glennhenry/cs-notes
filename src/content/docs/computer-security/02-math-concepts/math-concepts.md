@@ -230,3 +230,7 @@ Primality test is a method or algorithm used to determine whether a given number
 One of the more efficient method is the **Fermat's Primality Test**, it is based on **Fermat's Little Theorem**. It states that if $p$ is a prime number and $a$ is any positive integer less than $p$, then $a^{(p-1)} \equiv 1 \space (\text{mod } p)$.
 
 The test randomly selects values of $a$ and checks if the equality holds. If it fails for any value, the number is composite; otherwise, it is likely prime. This method is a probabilistic primality test, it offers a good balance between efficiency and accuracy when determining the primality of large numbers.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

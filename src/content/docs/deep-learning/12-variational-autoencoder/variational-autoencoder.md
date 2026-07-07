@@ -72,3 +72,7 @@ This is where an epsilon ($\epsilon$) vector is introduced. Epsilon vector is ra
 
 ![Reparameterization before and after](./reparameterization.png)  
 Source: https://stats.stackexchange.com/questions/199605/how-does-the-reparameterization-trick-for-vaes-work-and-why-is-it-important
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

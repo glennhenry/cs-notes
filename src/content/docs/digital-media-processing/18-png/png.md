@@ -61,3 +61,7 @@ PNG structures its data in chunks.
 
   ![Structure of PNG image](./png-structure.png)  
   Source: https://github.com/HugoJH/HideIntoPNG
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

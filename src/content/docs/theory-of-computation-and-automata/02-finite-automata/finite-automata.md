@@ -266,3 +266,7 @@ The above is a DFA with multiple final states. After listing out the equivalence
 
 ![Minimization example 2 part 2, the result](./minimization-example-2-part-2.png)  
 Source: https://youtu.be/DV8cZp-2VmM?si=f2Kx9Li0LJ7Dkh-F&t=530
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

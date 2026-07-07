@@ -95,3 +95,7 @@ This example uses an intermediate representation called [three-address code (TAC
 :::tip
 More about [register allocation](/cs-notes/compilers-and-programming-languages/compiler-optimization#register-allocation).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

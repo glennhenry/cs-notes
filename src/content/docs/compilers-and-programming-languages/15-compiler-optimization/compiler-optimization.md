@@ -225,3 +225,7 @@ This conflict graph describes a [graph coloring problem](/cs-notes/data-structur
 :::note
 If register allocation were to be performed in global or multiple local block, then we just need to take account more piece of code. We can follow the control flow and construct the conflict graph based on it.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

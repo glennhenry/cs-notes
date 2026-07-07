@@ -77,3 +77,7 @@ Has 3 rows and 2 columns
 Accessing a multidimensional array is similar to one-dimensional array. We will need to provide multiple index to access a single element. Consider the `[[1, 2], [3, 4], [5, 6]]` array, we want to access number 4. Before accessing the number 4, we will need to access the second array first, which can be accessed using index 1. After accessing the array inside, we can access number 4 directly by index 1. Therefore, accessing 4 would be: `arr[1][1]`.
 
 ### String as an Array
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -51,3 +51,7 @@ Source: https://www.javatpoint.com/ds-priority-queue
 :::note
 Priority queue is conceptually different with [heap](/cs-notes/data-structures-and-algorithms/heap), a priority queue is just a concept where each element has some priority. Heap is often used to implement a priority queue, it is a specific implementation of priority queue using [binary tree](/cs-notes/data-structures-and-algorithms/tree#binary-tree).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

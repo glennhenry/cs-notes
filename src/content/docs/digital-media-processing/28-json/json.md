@@ -46,3 +46,7 @@ JSON is defined as text format that consists of key-value pairs, where keys are 
 Source: [Wikipedia JSON example](https://en.wikipedia.org/wiki/JSON#Syntax)
 
 The way we use it on application depends on how the programming language or library process it. For example, it is common for programming languages to parse the JSON data and then generate equivalent code in [OOP classes](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming). This JSON example could be turned into a `Person` class with properties like `firstName` (string type), `lastName` (string type), `isAlive` (with boolean type), and so on. Another class could be generated for nested data like `phoneNumbers` has. 
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

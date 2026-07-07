@@ -46,3 +46,7 @@ The alternating nature of processing the left and right halves in each round pro
 
 ![DES algorithm](./des.gif)  
 Source: https://medium.com/@murshedsk135/cryptographic-evolution-from-feistel-cipher-to-triple-des-and-beyond-3aa0f8e08541
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

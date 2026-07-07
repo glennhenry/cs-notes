@@ -49,3 +49,7 @@ This image below compare the normal network architecture with the ResNet-34 arch
 
 ![ResNet architecture compared with plain network pass](./resnet_architecture.png)  
 Source: https://towardsdatascience.com/understanding-and-visualizing-resnets-442284831be8
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

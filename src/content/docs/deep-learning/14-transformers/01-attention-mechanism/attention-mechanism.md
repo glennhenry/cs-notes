@@ -74,3 +74,7 @@ In fact, the model doesn't recognize a word is subject or predicate, as every in
 
 ![RNN with attention mechanism](./rnn-attention.png)  
 Source: https://medium.datadriveninvestor.com/attention-in-rnns-321fbcd64f05 (with modification)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

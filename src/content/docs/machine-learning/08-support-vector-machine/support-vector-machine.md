@@ -53,3 +53,7 @@ For example, a 2-dimensional data may be non-linearly separable, by using kernel
 
 ![Kernel trick mapping](./kernel-trick.png)  
 Source: https://medium.com/@zxr.nju/what-is-the-kernel-trick-why-is-it-important-98a98db0961d
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

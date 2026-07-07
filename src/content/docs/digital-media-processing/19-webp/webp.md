@@ -41,3 +41,7 @@ WebP uses similar technique as [JPG compression](/cs-notes/digital-media-process
      - **Metadata Chunk**: WebP files can include metadata chunks for storing additional information, such as EXIF data, XMP data, or custom metadata.
      
 5. **File Footer**: The WebP file may end with an optional file footer that contains additional information or markers related to the WebP file.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

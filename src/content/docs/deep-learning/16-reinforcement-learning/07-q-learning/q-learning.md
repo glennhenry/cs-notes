@@ -68,3 +68,7 @@ The tight coupling can be reduced by introducing separate target network. The us
 
 ![Target network](./target-network.png)  
 Source: https://arshren.medium.com/deep-q-learning-a-deep-reinforcement-learning-algorithm-f1366cf1b53d
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

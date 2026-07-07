@@ -38,3 +38,7 @@ We may define a color palette with 256 possible color. Therefore, we will need a
 Source: https://en.wikipedia.org/wiki/Indexed_color
 
 This image above represent the 5×5 grid using 2-bit color palette. This means it needs 2-bit to index a color, and can represent up to $2^2 = 4$ color.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

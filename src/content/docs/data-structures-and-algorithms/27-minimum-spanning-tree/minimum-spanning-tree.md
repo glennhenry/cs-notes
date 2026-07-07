@@ -53,3 +53,7 @@ Similar to [Dijkstra's algorithm](/cs-notes/data-structures-and-algorithms/short
 Source: https://en.wikipedia.org/wiki/Prim%27s_algorithm
 
 The complexity depends on the graph representation (e.g., adjacency list or adjacency matrix) and the priority queue implementation (e.g, binary heap or Fibonacci heap). Using adjacency list and binary heap, we can obtain $O(E \log V)$ time complexity. Updating a key in the heap takes $O(\log V)$, updating it for each edge takes $O(E \log V)$. The space complexity would be $O(V)$, which comes from the visited set storing the visited vertices and the heap itself.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

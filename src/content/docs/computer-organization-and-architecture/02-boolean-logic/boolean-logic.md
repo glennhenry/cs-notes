@@ -59,3 +59,7 @@ For example, the OR gate can be constructed using two transistors. The two trans
 
 ![Simplified architecture of AND and OR gates](./and-or-gate.png)  
 Source: https://www.pctechguide.com/cpu-architecture/principles-of-cpu-architecture-logic-gates-mosfets-and-voltage (with modification)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

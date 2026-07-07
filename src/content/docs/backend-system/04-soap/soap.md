@@ -40,3 +40,7 @@ The `soap:Envelope` is the root element of a SOAP message, it defines the namesp
 :::info
 SOAP is not very used in modern days, using XML may add complexity for a relatively simple use case. [REST API](/cs-notes/backend-system/rest-api) is more used due to its better performance, XML parsing can be slower than [JSON](/cs-notes/digital-media-processing/json) data format as JSON has a simpler structure and syntax.
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

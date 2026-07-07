@@ -133,3 +133,7 @@ Source: [https://www.videoconverterfactory.com/tips/h264-to-mp4.html](https://ww
 :::tip
 Find out more about compression in [here](/cs-notes/digital-signal-processing/compression).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

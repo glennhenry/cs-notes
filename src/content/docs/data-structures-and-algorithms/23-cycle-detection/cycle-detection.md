@@ -51,3 +51,7 @@ When the pointer becomes null, it indicates the end of the list. If the loop com
 Source: https://turboyourcode.com/algorithm/floyd-s-cycle-finding
 
 This algorithm can also be modified to find the start of the cycle. The start of the cycle can be found by resetting the slow pointer to the head and keep the fast pointer as it is. Both pointer will traverse again normally, **in addition with the same pace, one step at a time**. When they meet again, that meeting point is the starting point of the cycle.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

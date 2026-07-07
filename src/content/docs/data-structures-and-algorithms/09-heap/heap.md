@@ -74,3 +74,7 @@ Heapify operations after deleting or inserting in a min-max heap are more comple
 
 ![Min-max heap](./min-max-heap.png)  
 Source: https://stackoverflow.com/questions/53888694/try-to-understand-delete-min-of-min-max-heap
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

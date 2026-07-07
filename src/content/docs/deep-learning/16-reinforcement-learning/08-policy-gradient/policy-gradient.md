@@ -30,3 +30,7 @@ Source: https://spinningup.openai.com/en/latest/algorithms/vpg.html
 4. **Update Policy Parameters**: The policy parameters will be updated with the [gradient descent algorithm](/cs-notes/machine-learning/linear-regression#gradient-descent).
 
 5. **Value Function Update**: The value function, which estimates the expected return, can be fitted using regression techniques such as [linear regression](/cs-notes/machine-learning/linear-regression). This involves minimizing the difference between the predicted values and the observed returns by using the mean squared error loss function and the gradient descent algorithm.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

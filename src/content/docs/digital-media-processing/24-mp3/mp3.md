@@ -34,3 +34,7 @@ MP3 file is made up of a sequence of frames, each of which consists of a header 
 
 ![Structure of MP3 audio file](./mp3-structure.png)  
 Source: https://en.wikipedia.org/wiki/MP3
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

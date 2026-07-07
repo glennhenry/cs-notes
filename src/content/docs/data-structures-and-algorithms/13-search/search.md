@@ -64,3 +64,7 @@ Similar to linear search, binary search require constant memory space. No matter
 
 ![Comparison of linear or sequential and binary search](./search-algorithm-comparison.gif)  
 Source: https://tenor.com/view/binary-search-sequence-search-gif-20595028
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

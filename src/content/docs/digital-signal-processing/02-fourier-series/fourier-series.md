@@ -83,3 +83,7 @@ Where $n$ is frequency and $i$ is the imaginary terms.
 
 ![Sine wave converted to circle using Euler's formula involving exponential function](./complex-representation.png)  
 Source: https://pidlaboratory.com/4-complex-fourier-series/ (With modification)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -172,3 +172,7 @@ The complexity of a* search algorithm, again, it depends on the heuristic functi
 The priority queue operation (e.g., using heap) requires $O(\log V)$ time to remove an element. In the worst case, the number of elements in the priority queue can be proportional to the number of edges, resulting in $O(E \log V)$ time complexity. The space required is $O(V)$, the algorithm needs to store information in the `openSet`, and other data structures such as the `cameFrom`, `gScore`, and `fScore` maps.
 
 Another way to represent the complexity of a\* algorithm is using **branching factor (b)** and **depth of the solution (d)**. (b) represents the average number of neighbors that a node has in a graph. (d) is the length or number of steps required to reach the goal or desired solution from the starting point. Using these, the overall worst-case time complexity becomes $O(b^d)$.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

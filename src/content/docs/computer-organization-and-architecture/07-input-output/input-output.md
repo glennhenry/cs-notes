@@ -76,3 +76,7 @@ When the CPU issues a read/write operation to a memory address, there will be an
 
 ![Memory mapped I/O](./memory-mapped-io.png)  
 Source: https://embeddedsystemvn.wordpress.com/2021/08/07/memory-mapped-i-o/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

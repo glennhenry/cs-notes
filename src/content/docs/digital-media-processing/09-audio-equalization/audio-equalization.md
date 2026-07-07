@@ -41,3 +41,7 @@ The range of adjusted surrounding frequency is called Q-factor. A lower Q or sma
 Source: https://youtu.be/4FkKiWJfd00?t=179
 
 ![An audio player software that has equalizer](./equalization-example.png)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

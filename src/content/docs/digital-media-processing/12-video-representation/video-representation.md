@@ -40,3 +40,7 @@ A low bit rate means we need to represent the video in a limited amount of bits.
 
 ![A comparison between high and low bit rate](./bit-rate.png)  
 Source: https://restream.io/blog/what-is-video-bitrate/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

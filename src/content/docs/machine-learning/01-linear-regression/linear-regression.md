@@ -138,3 +138,7 @@ There are various form of regression along with the optimization and the cost fu
 
   ![Polynomial regression compared to linear regression](./polynomial-regression.png)  
    Source: https://www.javatpoint.com/machine-learning-polynomial-regression
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

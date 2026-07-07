@@ -97,3 +97,7 @@ That's all I currently have in mind. Additional properties, methods, and endpoin
 - **Horizontal Scaling**: We can indeed scale the system horizontally by adding more meeting server. By default, we should connect user to the nearest meeting server. In some cases, we may sacrifice proximity by using a load balancer to balance the workload.
 - **Availability**: The important thing is the meeting server, they should have high availability. We can implement failover mechanism to redirect traffic to healthy instances in case of server failures. Use service like AWS backup to back up important data such as meeting recording.
 - **Caching**: Cacheable data such as web page static assets, meeting information, and profile photo can be cached to CDN server.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

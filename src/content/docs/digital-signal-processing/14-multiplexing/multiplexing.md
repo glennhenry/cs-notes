@@ -72,3 +72,7 @@ CDM is used in:
 
 ![Each signal is coded uniquely and combined](./cdm.png)  
 Source: https://www.semanticscholar.org/paper/Wide-Bandwidth%2C-High-Frame-Rate-Electrical-a-Code-McEwan-Holder/551f0f673fa93e8cfa3a9deee0ea2189ff057b12/figure/0
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -44,3 +44,7 @@ Multiplying the original signal $f(t)$ with the exponential term would give us a
 A product represents the contribution of the frequency component at frequency $\omega$ to the original signal $f(t)$. In order to know the contribution of the whole signal function, we can multiply the signal over time. This is where integral comes to play. Essentially, taking the integral for all values of $t$ measures the amount of overlap between the original signal and the oscillating function at frequency $\omega$.
 
 All this produces the $F(\omega)$ function, which is a complex-valued function that will take frequency $\omega$ and shows the amplitude and phase of each frequency component present in $f(t)$.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

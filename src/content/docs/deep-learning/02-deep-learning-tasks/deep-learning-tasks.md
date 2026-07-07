@@ -72,3 +72,7 @@ Here are the high-level overview of NLP:
    Source: https://devopedia.org/word-embedding
 
 5. **Deep Learning Model**: After all the preprocessing technique, we can now use the sequence of word in number as input for the deep learning model. The exact process of how will it works depends on the model architecture.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

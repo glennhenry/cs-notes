@@ -55,3 +55,7 @@ This is an example of using Flex to generate scanner. Flex takes a specification
 Obviously, potential error will occur during scanning, this is called **lexical error**. It can arise from invalid characters, unrecognized character sequences, or violations of the language's lexical rules. The scanner may stop the scanning and report the error to user or ignoring the invalid token and continuing the scanning process.
 
 Although using generator sounds easy and reduce efforts, making it manually is actually trivial. Furthermore, generator often doesn't provide helpful error message based on the actual context. Handwritten scanner allows for better control, customization, optimization, etc.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

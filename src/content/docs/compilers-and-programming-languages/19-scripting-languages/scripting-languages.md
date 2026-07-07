@@ -145,3 +145,7 @@ The script above uses **Common Gateway Interface (CGI)**. It is a protocol that 
 The client-side would send an HTTP request to the server posting the username form. The script then retrieves it and check based on defined business logic on the server side. The `checkUsernameAvailability` is a placeholder function that may query the database for availability.
 
 The last two lines of code changes the content-type of the response and print it. The response is actually supposed to be sent back to the client.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

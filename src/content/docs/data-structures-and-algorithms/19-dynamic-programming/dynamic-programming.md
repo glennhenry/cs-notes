@@ -155,3 +155,7 @@ In a more complex problem, the problem may depend multidimensionally (**2-D dyna
 **Tabulation** is a technique used in dynamic programming to solve problems by iteratively filling up a table or a matrix of precomputed values.
 
 ![Tabulation](./tabulation.png)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

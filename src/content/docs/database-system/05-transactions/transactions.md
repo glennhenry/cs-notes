@@ -51,3 +51,7 @@ The ability to roll back is possible because when transaction begins, the DBMS k
 - **Consistency**: Consistency ensures that a transaction brings the database from one consistent state to another. It means that the data must satisfy certain constraints defined by the database schema before and after the transaction.
 - **Isolation**: Isolation ensures that concurrent transactions do not interfere with each other. Each transaction operates as if it is the only transaction running on the database, and the intermediate states of a transaction are not visible to other transactions until it is committed.
 - **Durability**: Durability ensures that once a transaction is committed, its effects are permanent and will survive any subsequent failures, such as power outages or system crashes. The changes made by the committed transaction are stored in non-volatile memory (such as a hard disk) to make it persistent.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

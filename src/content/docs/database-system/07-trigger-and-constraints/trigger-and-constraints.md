@@ -55,3 +55,7 @@ END;
 ```
 
 One of the use of trigger is to log some information. We have a table called `Employees` that contains information about employees in a company. Whenever a new employee is inserted into the table, we will log the employee's information into `EmployeeAudit` table.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

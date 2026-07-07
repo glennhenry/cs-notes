@@ -86,3 +86,7 @@ query ($userId: ID!, $withPosts: Boolean!) {
 We defined the variable `userId` with types of `ID!`. The query fields is based on the server schema, we also specify argument id that uses the `userId` variable defined before. `user` field includes name and email nested on it. The email field uses directive `@include` which specify the response should include something, in this case it should include posts.
 
 By making the request flexible, GraphQL help to address REST API issues, sometimes the client may receive some data they don't need in a GET request, this is called **overfetch**. Another the client may not receive enough data in a single GET request, therefore making him need to make another network request which can waste resource, this is called **underfetch**.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

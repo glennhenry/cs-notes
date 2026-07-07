@@ -174,3 +174,7 @@ Source: https://medium.com/@shrutijadon/survey-on-activation-functions-for-deep-
 - **Batch Normalization**: Batch normalization is the process of normalizing data in a batch, they are done by adding extra layer that does normalization process in the networks.
 
 - **Standarization**: If normalization scale the data to a specific range, standarization, also known as z-score normalization, transforms the data to have a mean of 0 and standard deviation of 1. By centering the data around the mean and scales it based on the standard deviation, standardization make the data less affected by outliers while also preserving the shape of distribution.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

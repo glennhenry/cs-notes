@@ -66,3 +66,7 @@ Private hotspots, also known as tethering, are Wi-Fi networks created by individ
 
 ![Hotspot in a coffee shop](./hotspot.png)  
 Source: https://youtu.be/ktxC3vDukbc?si=K5IbUJW8XUiRNbuB&t=85
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

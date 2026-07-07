@@ -26,3 +26,7 @@ Any database operation that involves writing new data will only be applied to a 
 Not only increasing fault tolerance, this also increase read performance, as we have multiple device that is capable of serving read operations.
 
 ![Database replication using master-slave architecture](./master-slave-replication.png)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

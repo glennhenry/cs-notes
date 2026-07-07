@@ -47,3 +47,7 @@ JIT compilation does have a downside related to increased startup time. This is 
 
 ![JIT compilation](./jit.png)  
 Source: https://aboullaite.me/understanding-jit-compiler-just-in-time-compiler/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -83,3 +83,7 @@ Bezier Patches uses bezier curve to defined surface. The advantage is they can b
 
 ![A net-like object is modeled using bezier patches](./beizer-patches.png)  
 Source: [https://en.wikipedia.org/wiki/Bézier_surface](https://en.wikipedia.org/wiki/B%C3%A9zier_surface)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

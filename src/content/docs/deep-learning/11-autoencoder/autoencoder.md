@@ -45,3 +45,7 @@ The final layer of decoder is responsible for outputting or reconstructing the i
 
 ![Decoder, which is symmetric to encoder](./decoder.png)  
 Source: https://analyticsindiamag.com/how-to-implement-convolutional-autoencoder-in-pytorch-with-cuda/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

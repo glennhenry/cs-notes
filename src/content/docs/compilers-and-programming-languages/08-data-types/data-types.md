@@ -320,3 +320,7 @@ Pointer and array are closely linked in C/C++. See these [two](/cs-notes/data-st
 ### Lists
 
 List is by concept, a data structure that stores a collection of elements in a specific order. List in programming language can be implemented in many ways. One typical implementation is through [linked list](/cs-notes/data-structures-and-algorithms/linked-list), [array](/cs-notes/data-structures-and-algorithms/array), or [dynamic array](/cs-notes/data-structures-and-algorithms/array#dynamic-array).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -41,3 +41,7 @@ This authentication process is called **Challenge-Response Authentication (CRA)*
 
 ![SIM card connection](./sim-card-connection.jpg)  
 Source: https://www.wharftt.com/identifying-and-fixing-a-damaged-sim-card-know-the-signs-and-solutions/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

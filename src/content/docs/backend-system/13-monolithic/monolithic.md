@@ -48,3 +48,7 @@ Overall, monolithic architecture is typically suited for smaller applications wi
 
 ![Monolithic architecture](./monolithic.png)  
 Source: https://techaffinity.com/blog/microservices-architecture-vs-monolithic-architecture/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

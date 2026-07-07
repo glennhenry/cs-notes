@@ -183,3 +183,7 @@ During the derivation process, we call intermediate strings produced a **sentent
 :::tip
 See also [Formal grammar](/cs-notes/theory-of-computation-and-automata/formal-grammar).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

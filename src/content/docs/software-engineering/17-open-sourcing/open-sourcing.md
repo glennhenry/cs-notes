@@ -111,3 +111,7 @@ Pull request contains:
 - **Testing**: Some project may require new changes to past the automated tests in order to validate the correctness.
 - **Documentation**: If the changes impact the project's documentation, the pull request may include updates or additions to the relevant documentation files.
 - **Related Issues**: If the pull request addresses a specific issue or feature request, it is common to reference the corresponding issue or feature request number.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

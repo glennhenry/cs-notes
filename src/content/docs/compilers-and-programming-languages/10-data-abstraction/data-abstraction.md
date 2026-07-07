@@ -183,3 +183,7 @@ class Diamond: public DerivedClass1, public DerivedClass2 {
 In this example, both `DerivedClass1` and `DerivedClass2` inherit virtually from `BaseClass` using the virtual keyword. Using this, a shared base class for both class is constructed only once to avoid duplicate member issues.
 
 Then, `Diamond` inherits from both `DerivedClass1` and `DerivedClass2`. With virtual inheritance, there is only one instance of `BaseClass` in `Diamond`, preventing the diamond problem.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

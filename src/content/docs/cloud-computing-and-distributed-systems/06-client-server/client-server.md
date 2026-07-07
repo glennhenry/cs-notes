@@ -68,3 +68,7 @@ Content-Length: 1234
 ```
 
 The response is an HTML page, which the browser will render and show it to us.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

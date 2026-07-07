@@ -245,3 +245,7 @@ There are four approaches:
 - Allocate the stack frames on the heap instead of the call stack.
 - Allocate stack frames in chunks, one subroutine could have multiple chunks. If the chunk is not needed anymore, then it will be removed from the subroutine.
 - In scenario where multiple coroutine is possible in single scope, then we can allocate a shared stack frame for the coroutines.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

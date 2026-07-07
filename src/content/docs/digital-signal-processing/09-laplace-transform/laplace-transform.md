@@ -36,3 +36,7 @@ Laplace transform is typically represented in 3D graph, where x-axis represents 
 Source: https://www.sharetechnote.com/html/EngMath_LaplaceTransform.html
 
 Some regions may go to infinity, indicating that the corresponding frequency exhibits exponential growth or decay without limit. The presence of holes suggests that the function has discontinuities or exhibits oscillatory behavior.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

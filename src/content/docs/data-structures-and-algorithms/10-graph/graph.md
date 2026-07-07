@@ -113,3 +113,7 @@ Here is the comparison of the time complexity of adjacency matrix and list, wher
 
 ![Comparison of the time complexity of adjacency matrix and list](./graph-complexity.png)  
 Source: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

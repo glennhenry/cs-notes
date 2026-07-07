@@ -18,3 +18,7 @@ NAT acts as a service that translates the public IP owned by the router into pri
 
 ![Example of NAT that assign private address from one public address](./nat-example.png)  
 Source: https://community.fs.com/blog/what-is-nat-and-what-are-the-benefits-of-nat-firewalls.html
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

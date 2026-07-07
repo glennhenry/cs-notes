@@ -84,3 +84,7 @@ The code checks if the given linked list node is null (known as `None` in Python
 :::tip
 The recursive nature of linked list is similar to the [Matryoshka doll](https://en.wikipedia.org/wiki/Matryoshka_doll).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

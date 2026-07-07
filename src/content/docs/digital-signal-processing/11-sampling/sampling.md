@@ -77,3 +77,7 @@ Upsampling and downsampling are signal processing operations that involve changi
 :::tip
 See also [sampling in digital image](/cs-notes/computer-graphics/sampling).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

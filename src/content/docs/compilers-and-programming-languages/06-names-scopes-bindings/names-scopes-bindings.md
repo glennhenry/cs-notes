@@ -217,3 +217,7 @@ Sometimes there can be multiple names (but different objects) in a single scope.
 - **Overloading**: The ability to define multiple functions or methods (or even operators) with the same name but different parameter lists or types. It is possible for user to add their definition of adding a string with an integer, although there are some languages that provide this as feature.
   The resolution of overloading functions depends on the arguments provided during function calls. Some languages determine this during compile-time, they are referred as **static overloading**, while deferring it until runtime when the actual function call is made is referred as **dynamic overloading**.
 - **[Polymorphism](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming#polymorphism)**: The ability of treating an object or function as multiple forms or types. There are several resolutions, some language resolve this by implicitly converting argument type to the parameter type (referred as **coercion** or implicit type convertion), some implement the object or function during runtime based on the actual type encountered ([dynamic polymorphism](/cs-notes/computer-and-programming-fundamentals/object-oriented-programming#polymorphism)), and others explicitly create a copy of the function during compile-time for each type and its implementation after performing type checking (referred as **generics**).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

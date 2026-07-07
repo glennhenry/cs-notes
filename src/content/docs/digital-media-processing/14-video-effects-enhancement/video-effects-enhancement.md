@@ -47,3 +47,7 @@ Example of video effects:
 :::tip
 See also [computer animation](/cs-notes/computer-graphics/computer-animation) and [computer simulation](/cs-notes/computer-graphics/simulation).
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

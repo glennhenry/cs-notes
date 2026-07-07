@@ -108,3 +108,7 @@ class Repository {
 2. The domain layer holds a repository, it will create the appropriate request to the data layer based on the `sortSetting` parameter.
 3. The data layer contains two data sources, a local database and remote data source, which is an HTTP client.
 4. When a query request is received, it initially retrieves the data from the local database. If the data is not null, meaning its available, it is immediately returned. Otherwise, the data must be obtained from a remote source. An HTTP request is made to a specific URL and endpoint, and the resulting data is saved to the local database. Finally, the retrieved data is returned to the domain layer.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

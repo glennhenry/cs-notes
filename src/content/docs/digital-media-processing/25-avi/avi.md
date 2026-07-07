@@ -42,3 +42,7 @@ AVI is a subset of the Resource Interchange File Format (RIFF), meaning it follo
 
 ![Structure of an AVI file](./avi-structure.png)  
 Source: https://www.filefix.org/format/avi.html
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

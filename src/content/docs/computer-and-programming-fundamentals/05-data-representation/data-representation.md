@@ -191,3 +191,7 @@ The process to get binary data back from a string encoded in Base64 will be the 
 Source: https://en.wikipedia.org/wiki/Base64
 
 For example, consider ASCII characters: "Man", which has 8-bit binary values of `01001101`, `01100001`, and `01101110`, respectively. Each byte will be joined together resulting in `010011010110000101101110`. We will then split it into 6-bit chunk `010011 010110 000101 101110`. Each 6-bit chunk maps to `T`, `W`, `F`, `u`, respectively. Thus, "Man" in ASCII is equivalent to "TWFu" in Base64 encoded.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

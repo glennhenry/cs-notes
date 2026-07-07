@@ -89,3 +89,7 @@ In contrast, IMAP allows for online access to email, clients can create, delete,
 
    ![IMAP that syncs through all devices compared to POP3](./imap-vs-pop3.png)  
    Source: https://www.researchgate.net/figure/MAP-and-POP-protocols_fig1_329881682
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

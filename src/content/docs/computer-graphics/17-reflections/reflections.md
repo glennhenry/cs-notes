@@ -37,3 +37,7 @@ The algorithm computes the angle of incidence of the incoming light ray, and the
 
 ![A refraction occur in the rocky lake](./refraction.png)  
 Source: [https://youtu.be/l_iVdRbA_4s?t=3265](https://youtu.be/l_iVdRbA_4s?t=3265), [https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/reflection-refraction-fresnel.html](https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/reflection-refraction-fresnel.html)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

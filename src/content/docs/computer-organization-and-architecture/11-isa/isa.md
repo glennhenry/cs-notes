@@ -130,3 +130,7 @@ Example of ARM processors:
   - **ARM Cortex-A57**: High-performance processor often paired with Cortex-A53 for a balance of power efficiency and performance.
   - **ARM Cortex-A72**: Advanced processor with high performance and efficiency for flagship devices.
   - **ARM Cortex-A73**: Successor to Cortex-A72, offering improved performance and power efficiency.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

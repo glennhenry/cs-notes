@@ -56,3 +56,7 @@ After identifying them, we can apply the corresponding algorithms or filter. For
 
 ![Identifying unwanted elements in digital audio](./audio-restoration.png)  
 Source: https://youtu.be/fWQ86r14Ei0
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

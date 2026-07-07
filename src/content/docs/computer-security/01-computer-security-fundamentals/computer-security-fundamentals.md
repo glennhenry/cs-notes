@@ -113,3 +113,7 @@ The inserted information will need to be encoded in number as well, the point is
 
 ![Steganography](./steganography.jpeg)  
 Source: https://www.quora.com/What-is-steganography-and-what-is-it-used-for
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

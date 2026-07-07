@@ -5,3 +5,7 @@ description: Assembly Language
 ---
 
 See **[Computer Organization & Architecture > Assembly Language](/cs-notes/computer-organization-and-architecture/assembly-language)**.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

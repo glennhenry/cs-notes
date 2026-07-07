@@ -57,3 +57,7 @@ WAV is a subset of Resource Interchange File Format (RIFF), meaning WAV follows 
 
    ![Structure of a WAV file](./wav-structure.png)  
    Source: http://soundfile.sapp.org/doc/WaveFormat/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

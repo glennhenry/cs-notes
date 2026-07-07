@@ -24,3 +24,7 @@ Once a connection is established, both the client and server sockets can send an
 ![Socket communication illustration](./socket-illustration.png)  
 Source: https://www.cloudnweb.dev/2019/6/what-are-web-sockets-implementing-web-sockets-in-node-js
 (WebSocket that uses TCP protocol)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -65,3 +65,7 @@ As said before, we can even use our own computer as server. We can use it as a p
 Localhost need an IP address as well as normal website, the IP is `127.0.0.1`. We can also specify a port, for example, `localhost:4000` or `127.0.0.1:3500` if using the actual IP address. These ports are used to identify specific services or applications running on your device.
 
 ![Example of localhost that shows this cs notes website](./localhost-example.png)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

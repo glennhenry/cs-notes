@@ -30,3 +30,7 @@ Same as behavioral cloning, IRL takes state-action pair from the expert, it also
 This process is repeated until the learned policy is close enough to the expert's policy. Overall, IRL is valuable in scenarios where the reward function is hard to define.
 
 An IRL problem can be divided into two, the first case is when we know the environment **(model-based)**, and the other case is when we do not have explicit model of environment **(model-free)**. The model-free case relies on trial and error approach, it can potentially have large state-action spaces.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

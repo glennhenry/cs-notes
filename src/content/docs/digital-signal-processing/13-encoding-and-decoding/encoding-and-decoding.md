@@ -73,3 +73,7 @@ Image is represented by a grid pixel. Pixel is the smallest unit of information 
 :::tip
 Find out more about [image and color](/cs-notes/computer-graphics/computer-images-part-1) and about [data representation in computer](/cs-notes/computer-and-programming-fundamentals/data-representation)
 :::
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

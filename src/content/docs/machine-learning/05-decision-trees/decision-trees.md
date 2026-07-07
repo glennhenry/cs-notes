@@ -85,3 +85,7 @@ The splitting process in a regression decision tree involves selecting a feature
 
 ![Variance reduction calculation](./variance-calculation.png)  
 Source: https://youtu.be/UhY5vPfQIrA?si=S5jc_TZ0jmgT3ceS&t=496
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

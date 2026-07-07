@@ -95,3 +95,7 @@ Source: https://blog.jetbrains.com/idea/2020/05/debugger-basics-in-intellij-idea
 - **Activity tracing**: Activity tracing focuses on tracking the overall time spent by the processor executing specific code segments. It helps identify areas of inefficient processor time allocation or faulty program logic that may require optimization.
 - **Divide and conquer**: Systematically narrowing down the scope of investigation to locate the problematic section of code. It involves dividing the codebase or problem into smaller, manageable parts to isolate and identify the source of a bug or issue.
 - **Time travel debugging**: Some tools allow to revert the execution of program, which mean we can try different inputs to change the result and see the response.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

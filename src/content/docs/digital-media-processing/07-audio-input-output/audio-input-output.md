@@ -88,3 +88,7 @@ Source: https://www.how2shout.com/what-is/what-is-speaker-and-how-it-functions.h
 
 ![A GIF animation of how speaker works](./speaker.gif)  
 Source: https://soundcertified.com/how-do-speakers-work/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

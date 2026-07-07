@@ -47,3 +47,7 @@ For example, when we have `key = 10` and the `array size = 1000`, the hash code 
 ![Hash table illustration](./hash-table-illustration.png)
 
 Lastly, we also need to put the key inside the node of the list in the array, so that we can identify which key does a value belong to.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

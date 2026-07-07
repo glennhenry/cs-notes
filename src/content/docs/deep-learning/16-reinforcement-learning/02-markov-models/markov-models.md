@@ -130,3 +130,7 @@ Thus the final equation becomes:
 
 ![Final equation](./final-equation.png)  
 Source: https://youtu.be/RWkHJnFj5rY?si=TgSCI_wcvnsbghl6&t=530
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

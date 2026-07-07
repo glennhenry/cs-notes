@@ -51,3 +51,7 @@ There are some algorithm to **de-noise** the image, which uses machine learning 
 
 ![A noised images](./noised-image.png)  
 Source: [https://youtu.be/qgdDu-K0pZ4?t=3112](https://youtu.be/qgdDu-K0pZ4?t=3112)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -111,3 +111,7 @@ Notes TODO:
 23. **[add]** [/digital-media-processing-intro](/cs-notes/digital-media-processing-intro)/zip: add ZIP archive as "other" digital media formats.
 24. **[ref]** [/digital-media-processing/mime-type](/cs-notes/digital-media-processing/mime-type): ref to ZIP archive.
 25. **[ref]** [/digital-media-processing/xml#xml-schema](/cs-notes/digital-media-processing/xml#xml-schema): ref to URI.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

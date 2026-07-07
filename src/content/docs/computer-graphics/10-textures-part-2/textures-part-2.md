@@ -40,3 +40,7 @@ Texture mapping involves calculating the texture coordinates that are used to lo
 
 ![Showing GPU pipeline consisting vertex shader, rasterizer, and fragment shader. Texture unit is in fragment shader but it points to vertex shader](./texture-unit-access.png)  
 Source: [https://youtu.be/WULOKMqEGA0?t=2543](https://youtu.be/WULOKMqEGA0?t=2543)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

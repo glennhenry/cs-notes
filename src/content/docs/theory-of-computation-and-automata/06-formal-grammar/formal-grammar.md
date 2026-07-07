@@ -72,3 +72,7 @@ The "|" in the notation $S \rightarrow A|a$ is a shorthand to describe two $S \r
 ### Context-Free Grammar
 
 See the [next topic](/cs-notes/theory-of-computation-and-automata/context-free-grammar).
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

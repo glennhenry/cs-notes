@@ -40,3 +40,7 @@ The Bluetooth standard divides this band into 79 individual channels, each with 
 
 ![Bluetooth channel](./bluetooth-channel.png)  
 Source: https://youtu.be/1I1vxu5qIUM?si=43742PCya8lVvX0r&t=526
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

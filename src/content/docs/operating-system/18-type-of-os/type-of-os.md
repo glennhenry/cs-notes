@@ -26,3 +26,7 @@ There are many types of OSes:
 - **Distributed OS**: Distributed operating systems run on multiple machines and coordinate their activities to appear as a single unified system. They are used in clusters, cloud computing, and distributed computing environments. Examples include Google's Chrome OS and Amoeba.
 - **Embedded OS**: Embedded operating systems are designed to run on embedded systems with limited resources, such as microcontrollers or IoT devices. They are typically lightweight, compact, and tailored for specific hardware platforms. Examples are Embedded Linux, and ThreadX.
 - **Virtualization OS**: These operating systems provide [virtualization](/cs-notes/cloud-computing-and-distributed-systems/virtualization) capabilities to enable multiple virtual machines to run on a single physical machine. Examples include VMware ESXi, Microsoft Hyper-V, and Xen.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

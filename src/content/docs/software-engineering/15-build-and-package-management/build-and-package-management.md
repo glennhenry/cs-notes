@@ -101,3 +101,7 @@ A build process includes:
 More specifically, a build process produces a **software artifact**, which is a general concept that refers to any output or result of the software development process. An artifact can be executable, which contains all the necessary instruction, packaged with dependencies for end-user to execute.
 
 A build process can be **full** or **incremental**. A full build involves building the entire software project from scratch, while incremental build only builds the portions of the software project that have changed since the last build.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

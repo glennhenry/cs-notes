@@ -47,3 +47,7 @@ Overall, microservices architecture are suitable for complex application where e
 
 ![Microservice vs monolithic architecture](./microservice-vs-monolithic.png)  
 Source: https://medium.com/hengky-sanjaya-blog/monolith-vs-microservices-b3953650dfd
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -45,3 +45,7 @@ MBR is a data structure located in the first sector (or [boot sector](/cs-notes/
 
 ![MBR](./mbr.png)  
 Source: https://www.ionos.ca/digitalguide/server/configuration/what-is-mbr/
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

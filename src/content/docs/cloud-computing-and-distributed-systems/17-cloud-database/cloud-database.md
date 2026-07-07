@@ -72,3 +72,7 @@ Getting the collection using `getCollection` method passing in the collection na
 Furthermore, some cloud provider provide a way to inspect and manage databases hosted on their platforms. We can see what collections and documents are available, monitor traffic, setting up access for security purposes, and adding or deleting a document directly from there is also possible.
 
 ![Browsing collections in MongoDB](./monitoring.png)
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

@@ -58,3 +58,7 @@ solveMaze(0, 0)
 ```
 
 This backtracking solution uses depth-first search (DFS) to traverse the maze. The constraint is quite simple, basically we must navigate to the exit while avoiding wall obstacles.
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*

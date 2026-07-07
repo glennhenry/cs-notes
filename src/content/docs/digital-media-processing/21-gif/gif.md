@@ -85,3 +85,7 @@ The interlacing process rearranges how image data is loaded and rendered in a di
 
 ![Example of interlacing](./interlacing-demo.gif)  
 Source: https://commons.wikimedia.org/wiki/File:Interlacing_demo.gif
+
+#### Process
+
+*don't mind this heading as it forces the graph view to render*
