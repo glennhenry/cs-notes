@@ -18,3 +18,5 @@ Most notes are typically structured in layer:
 - **Observable layer**: Documents what users or players can directly observe. This layer is factual and resembles a game wiki or user documentation.
 - **Behavioral model**: Describes the inferred rules and interactions of the system. This layer forms hypotheses that consistently explain the observed behavior.
 - **Design interpretation**: Explores the possible implementation approaches. The goal is not to determine how the original system is actually implemented, but to develop a technically reasonable design that explains the observed behavior.
+
+#### Process
