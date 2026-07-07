@@ -45,13 +45,14 @@ See also [digital signal processing](/cs-notes/digital-signal-processing-intro).
   - Video
     - [AVI](/cs-notes/digital-media-processing/avi)
     - [MP4](/cs-notes/digital-media-processing/mp4)
-    - [SWF](/cs-notes/digital-media-processing/swf)
   - Document
     - [XML](/cs-notes/digital-media-processing/xml)
     - [JSON](/cs-notes/digital-media-processing/json)
     - [MD](/cs-notes/digital-media-processing/md)
     - [TXT](/cs-notes/digital-media-processing/txt)
     - [PDF](/cs-notes/digital-media-processing/pdf)
+  - Other
+    - [SWF](/cs-notes/digital-media-processing/swf)
 
 #### Process
 
