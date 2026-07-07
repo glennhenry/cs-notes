@@ -969,7 +969,7 @@ export default defineConfig({
         // Reverse Engineer Notes
         {
           label: "Reverse Engineer Notes",
-          items: [{ label: "test", slug: "test" }],
+          items: [{ label: "Intro", slug: "reverse-engineer-intro" }],
         },
       ],
     }),
